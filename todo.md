@@ -5,10 +5,10 @@ List of ideas for this project
 * Change the font for the IPython notebook. Code OK,
   Look Some good-looking sans serif
 
-* `Getting Started` should have:
+### `Getting Started` should have:
 
 + a quick intro
-+ the Plotly logo embedded
++ the Plotly logo embedded (find the histogram one)
 
 + Table of Contents with links and full description 
     (including layout/style options covered, e.g. examples include )
@@ -25,16 +25,22 @@ object, numpy) ...
 + Feedback!
 + mention that all files are available in a github repo!
 + links to similar documentation for R, Matlab, etc.
++ Every notebook (or section) is intended to be a ''lecture''
++ mention the https://github.com/jiffyclub/open-in-nbviewer Chrome extension
 
+### Jack wants: 1 notebook for each of Plotly''s plot types
 
-* 1 notebook for each of Plotly''s plot types
++ 1) Line & Scatter Plots:
+      a simple first plot, 
+      dictionaries/customization (plot type, color, style, title, 
+      axis/legend labels), *** add ref to text chart plot type ** 
+      file setting (file name, output, overwrite)
+      plotly homepage (screenshot )
+      formal syntax!
 
-+ Line & Scatter Plots:
-    a simple first plot, 
-    dictionaries/customization (plot type, color, style, title, axis/legend
-    labels), 
-    file setting (file name, output, overwrite)
-    plotly homepage (...)
+      - fig 1: Simplest line plot
+      - fig 2: Line and marker plot
+      - fig 3: Line and marker plot + a few layout options
 
 + Bar Charts and Error Bars: 
     find a good example/ dataset on plot.ly 
@@ -42,11 +48,12 @@ object, numpy) ...
     tick label in text( Jan, Feb, ...)
 
     - fig 4: simple bar chart (T_avg and T_std, vertical montreal)
-    - fig 5: Horizontal bar+ error_x (value) (P_avg, P_ext (stack) for vancouver)
-    - fig 6: Montreal vs. Vancouver T_avg and P_avg (2-panels or multi-axes??)
+    - fig 5: Horizontal bar+ error_x (value) (T_min, T_avg, T_max for JJA)
+    - fig 6: Montreal vs. Vancouver T_avg and P_avg 
+            (2-panels, custom grid, tilt axis label, marker/line colors)
 
-    - Ask jack about Bar bottom, 
-      look up github to nbviewer before, cleanup folder
+     Ask jack about Bar bottom and error_x
+     cleanup folders 
     
 + Histogram, where?? Want to show how to make the Plotly logo??
     talk about 'barmode': 'stack' in here maybe?
@@ -57,8 +64,7 @@ object, numpy) ...
     example a retrieving data from plot. with browser!
     Do a multiple axes in Bar Charts (i.e. Temp and Precip) ???
 
-+ Error bars (now with Bar Charts)
-+ Histograms (maybe with Bar Charts??)
++ A few misc. 1-D plots (Bubble charts, histograms, box plots)
 
 + Box plots
 + Heatmaps, 2d Histograms & color scales (use your function for polar_vortex)
@@ -85,7 +91,7 @@ object, numpy) ...
 chapters (maybe only ''prev'' and ''next'') --> code that!
 
 
-* How to incorporate documentation on plot.ly/api/docs/:
+### How to incorporate documentation on plot.ly/api/docs/:
 
 + Line and Scatter (s1)
 + Error Bars
@@ -107,7 +113,7 @@ chapters (maybe only ''prev'' and ''next'') --> code that!
 + File Settings: Privacy, File Sharing, Overwrite (s1), Append, Extend, Setting
   Layout, File Naming, Setting Style, Formal Syntax.
 
-* From Matt (April 02):
+### From Matt (April 02):
 
 + Part of training should have a quick and easy 'plug and play' for the Python
 API and matplotlib wrapper that would let the user read a csv and make plots
@@ -125,6 +131,24 @@ so lines of code and get a graph.
 
 + So, basically Matt would love a 'Template' section (possible in the appendix)
 
+### Misc info
+
++ Available fonts in Plotly: 
+  -  Arial, sans-serif,
+  -  Courier New, monospace
+  -  Droid Sans, sans-serif
+  -  Droid Serif, serif
+  -  Droid Sans Mono, sans-serif
+  -  Georgia, serif
+  -  Gravitas One, cursive
+  -  Impact, Charcoal, sans-serif
+  -  Lucida Console, Monaco, monospace
+  -  Old Standard TT, serif
+  -  Open Sans, sans-serif
+  -  PT Sans Narrow, sans-serif
+  -  Raleway, sans-serif
+  -  Times New Roman, Times, serif
+  -  Verdana, sans-serif
 
 
 
