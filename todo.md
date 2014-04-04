@@ -42,35 +42,42 @@ object, numpy) ...
       - fig 2: Line and marker plot
       - fig 3: Line and marker plot + a few layout options
 
-+ Bar Charts and Error Bars: 
-    find a good example/ dataset on plot.ly 
-    attention to horizontal error bars
-    tick label in text( Jan, Feb, ...)
+      - Maybe add 'text' option to fig 3. ('text': "maybe an out-lier") 
+      - Will have to include info the 'help' function once it is online
 
-    - fig 4: simple bar chart (T_avg and T_std, vertical montreal)
-    - fig 5: Horizontal bar+ error_x (value) (T_min, T_avg, T_max for JJA)
-    - fig 6: Montreal vs. Vancouver T_avg and P_avg 
-            (2-panels, custom grid, tilt axis label, marker/line colors)
++ 2) Bar Charts and Error Bars: 
+      Example of csv reader (with Climate data from Environment Canada),
+      Simplest bar chart, error bar, 
+      horizontal bar charts, 
+      2-panels, fully custom (maker/line color, gap, font size) bar chart, 
+      annotation
 
-     Ask jack about Bar bottom and error_x
+      - fig 4: simple bar chart (T_avg and T_std, vertical)
+      - fig 5: Horizontal bar+ error_x (value) (T_min, T_avg, T_max for JJA)
+      - fig 6: Montreal vs. Vancouver T_avg and P_avg 
+            (2-panels, tilt axis label, marker/line colors)
+
+     Ask Jack about `Bar bottom` and `error_x` 
      cleanup folders 
-    
-+ Histogram, where?? Want to show how to make the Plotly logo??
-    talk about 'barmode': 'stack' in here maybe?
 
-+ Box Plots, where?? With Histogram??
++ 3) Bubble charts and (and Pandas)
+      (use Jack''s nbviewer!!)
 
-+ Subplots & Small Multiples (Multiple Axes, Subplots, Insets)
+      - fig 7: bubble chart with pandas retrieval
+      - fig 8. bubble chart 
+
++ 4) Histograms and box plots
+      Want to show how to make the Plotly logo??
+      Talk about 'barmode': 'stack' in here maybe?
+
++ 5) Heatmaps, 2d Histograms & color scales (use your function for polar_vortex)
+
++ Multiples axes and Insets (Multiple Axes, Subplots, Insets)
     example a retrieving data from plot. with browser!
-    Do a multiple axes in Bar Charts (i.e. Temp and Precip) ???
+    maybe talk about matplotlib converter
 
-+ A few misc. 1-D plots (Bubble charts, histograms, box plots)
+    - A couple example of multiple axes in Feb28 plotly email
 
-+ Box plots
-+ Heatmaps, 2d Histograms & color scales (use your function for polar_vortex)
-+ Bubble charts (use Jack''s example!!)
-
-+ 2d Histograms (with Heatmaps)
 + Polar Charts (coming soon)
 + Streaming Data
 + Retrieve Data from Plotly
@@ -82,33 +89,32 @@ object, numpy) ...
     --> code that with ''grep''!!!
 +  Troubleshooting and debugging
 
-+ Should I call them ''Chapters'' or something else??
 + Should I call put ''Advanced'' subsection within each of the chapter,
   that beginner could skip without missing the story??
 
 
 * At the bottom of every page (excluding Getting Started) put link to other
-chapters (maybe only ''prev'' and ''next'') --> code that!
+chapters (maybe only ''prev'' and ''next'') --> code that! YES YES
 
 
 ### How to incorporate documentation on plot.ly/api/docs/:
 
 + Line and Scatter (s1)
-+ Error Bars
++ Error Bars (s2)
 + Bubble Charts
 + Area plots
-+ Box Plots
++ Box Plots 
 + Heatmaps
-+ Bar Charts
++ Bar Charts (s2)
 + Histograms
-+ Text Charts
-+ Mixed Types
-+ Time series
++ Text Charts (where ???)
++ Mixed Types (good example online, without in s5 with heatmaps)
++ Time series (in the streaming section)
 
 + Multiple axes, Insets and Subplots
 
 + Layout: Axes, Legends(s1 and ), 
-  Global Font, Annotations, IFrames, Sizing, Labels
+  Global Font (s2), Annotations (s2), IFrames, Sizing (s2), Labels (s1)
 
 + File Settings: Privacy, File Sharing, Overwrite (s1), Append, Extend, Setting
   Layout, File Naming, Setting Style, Formal Syntax.

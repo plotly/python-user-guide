@@ -25,14 +25,20 @@
         margin-right:auto;
     }
     h1 {
-        font-family: Computer Modern, serif;
+        /* font-family: Computer Modern, serif; */
+        color: #333333;
+        font-family: ‘Lucida Console’, Monaco, monospace;
     }
     h4{
+        color: #333333;
+        font-family: ‘Lucida Console’, Monaco, monospace;
         margin-top:12px;
         margin-bottom: 3px;
        }
     div.text_cell_render{
-        font-family: Computer Modern, "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+     /*   font-family: Computer Modern, "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif; */
+        color: #333333;
+        font-family: ‘Palatino Linotype’, ‘Book Antiqua’, Palatino, serif;
         line-height: 145%;
         font-size: 130%;
         width: 1000px;
