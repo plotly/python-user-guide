@@ -45,9 +45,9 @@ object, numpy) ...
       - fig 2: Line and marker plot
       - fig 3: Line and marker plot + a few layout options
 
-      - Maybe add 'text' option to fig 3. ('text': "maybe an out-lier") 
-        
       - Will have to include info the 'help' function once it is online
+      
+      - Maybe add 'text' option to fig 3. ('text': "outlier") Maybe not ...
 
 + 2) Bar Charts and Error Bars: 
       Example of csv reader (with Climate data from Environment Canada),
@@ -56,7 +56,7 @@ object, numpy) ...
       2-panels, fully custom (maker/line color, gap, font size) bar chart, 
       annotation
 
-      - fig 4: simple bar chart (T_avg and T_std, vertical)
+      - fig 4: simple bar chart (T_avg and T_std, vertical) **ticker error_Y??**
       - fig 5: Horizontal bar+ error_x (value) (T_min, T_avg, T_max for JJA)
       - fig 6: Montreal vs. Vancouver T_avg and P_avg 
             (2-panels, tilt axis label, marker/line colors)
@@ -66,6 +66,8 @@ object, numpy) ...
 
      Maybe add a ''stack'' bar chart with cumulative rainfall in MTL and Van
      (maybe make that one horizontal and have fig 5 be a simple vertical)
+
+     Mention also that the 'text' trace dictionary key does not work
 
 + 3) Bubble charts and (and Pandas)
       (use Jack''s nbviewer!!)
@@ -89,18 +91,23 @@ object, numpy) ...
 
       no need (I think) to go over marker: [color, line]  and bardir: ['h']
 
-      type: [box],  boxpoints: [all], jitter, pointpos
+      type: [box],  boxpoints: [all,outliers,False], jitter, pointpos
 
       maybe a gaussian fit example
 
       - fig 9: compare final exam grade, midterm grade (overlay)
-      - fig 10: Add guassian fit to prev 
+      - fig 10: compare histnorm values (2x2 panel plot)
+      - fig 10: autobinx: False
                 (a few style options: highlight mean, mode, median, manual bins)
-      - fig 11: subplot assignments, midterm, final, course (maybe ...)
-      - fig 12: box plot assignments, midterm, final, course
+                maybe Gaussian fit
+      - fig 11: box plot assignments, midterm, final, course
 
 
-+ 5) Heatmaps, 2d Histograms & color scales (use your function for polar_vortex)
++ 5) Heatmaps, 2d Histograms & color scales 
+      use your function for polar_vortex to describe color bar
+    
+      - fig 12:
+      - fig 13:
 
 + Multiples axes and Insets (Multiple Axes, Subplots, Insets)
     example a retrieving data from plot. with browser!
@@ -114,18 +121,36 @@ object, numpy) ...
 + 3d Surface Plots (coming soon)
 + Maps (coming soon)
 
-+ (maybe) an FAQ section
+### Misc. Thoughts
+
++ Make an FAQ section or appendix
+
 + List of Plotly style options with links to examples (in different chapter)! 
     --> code that with ''grep''!!!
-+  Troubleshooting and debugging
+
++  Troubleshooting and debugging appendix
 
 + Should I call put ''Advanced'' subsection within each of the chapter,
   that beginner could skip without missing the story??
 
+* At the bottom of every page (excluding Getting Started):
 
-* At the bottom of every page (excluding Getting Started) put link to other
-chapters (maybe only ''prev'' and ''next'') --> code that! YES YES
+  - put link to  ''prev'', ''next'' and front page 
+  - Add the Plotly logo, contact info!
+  - maybe code that --> `add_footer.sh` 
 
++ Matt (April 07) Package chapters into folders makes sense. 
+
++ remove plotly.__version__ line in Section 2 and up
+
++ remember that not every one is using Unix-like systems.
+
++ make a folder on Plotly folder for documentation figs 
+
++ header comments should all start with Upper case, 
+  inline comment with lower case
+
++ Find a clever way to label figure?
 
 ### How to incorporate documentation on plot.ly/api/docs/:
 
@@ -166,8 +191,6 @@ It's one thing that's sweet about the ggplot2 gallery where I can throw in 5 or
 so lines of code and get a graph.
 
 + So, basically Matt would love a 'Template' section (possible in the appendix)
-
-+ Matt (April 07) Package chapters into folders makes sense. 
 
 ### Form Python User Feedback (April 07):
 
