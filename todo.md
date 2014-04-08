@@ -27,6 +27,9 @@ object, numpy) ...
 + links to similar documentation for R, Matlab, etc.
 + Every notebook (or section) is intended to be a ''lecture''
 + mention the https://github.com/jiffyclub/open-in-nbviewer Chrome extension
++ (Matt on April 07) Make a notebook of all notebooks.
+
++ When will the new version -- with help() -- be released?
 
 ### Jack wants: 1 notebook for each of Plotly''s plot types
 
@@ -43,6 +46,7 @@ object, numpy) ...
       - fig 3: Line and marker plot + a few layout options
 
       - Maybe add 'text' option to fig 3. ('text': "maybe an out-lier") 
+        
       - Will have to include info the 'help' function once it is online
 
 + 2) Bar Charts and Error Bars: 
@@ -60,24 +64,50 @@ object, numpy) ...
      Ask Jack about `Bar bottom` and `error_x` 
      cleanup folders 
 
+     Maybe add a ''stack'' bar chart with cumulative rainfall in MTL and Van
+     (maybe make that one horizontal and have fig 5 be a simple vertical)
+
 + 3) Bubble charts and (and Pandas)
       (use Jack''s nbviewer!!)
 
       - fig 7: bubble chart with pandas retrieval
-      - fig 8. bubble chart 
+      - fig 8. bubble chart (maybe)
+
+      Maybe make this `Bubble charts and Multiple axes` 
+      (GDP and LifeExp vs time, )
+
+      Maybe add an `area plot` (i.e. filled)
 
 + 4) Histograms and box plots
       Want to show how to make the Plotly logo??
-      Talk about 'barmode': 'stack' in here maybe?
+      Talk about 'barmode': 'stack' in here maybe? (use ATMS 211 Class marks?)
+
+      type: [histogramx, histogramy, histogram2d] ,
+      barmode: [stack, overlay, group] ,
+      autobinx: [False], xbins: [start,end, size], 
+      histnorm: [count, percent, probability, density, probability density]
+
+      no need (I think) to go over marker: [color, line]  and bardir: ['h']
+
+      type: [box],  boxpoints: [all], jitter, pointpos
+
+      maybe a gaussian fit example
+
+      - fig 9: compare final exam grade, midterm grade (overlay)
+      - fig 10: Add guassian fit to prev 
+                (a few style options: highlight mean, mode, median, manual bins)
+      - fig 11: subplot assignments, midterm, final, course (maybe ...)
+      - fig 12: box plot assignments, midterm, final, course
+
 
 + 5) Heatmaps, 2d Histograms & color scales (use your function for polar_vortex)
 
 + Multiples axes and Insets (Multiple Axes, Subplots, Insets)
     example a retrieving data from plot. with browser!
-    maybe talk about matplotlib converter
 
     - A couple example of multiple axes in Feb28 plotly email
 
++ matplotlib converter
 + Polar Charts (coming soon)
 + Streaming Data
 + Retrieve Data from Plotly
@@ -136,6 +166,33 @@ It's one thing that's sweet about the ggplot2 gallery where I can throw in 5 or
 so lines of code and get a graph.
 
 + So, basically Matt would love a 'Template' section (possible in the appendix)
+
++ Matt (April 07) Package chapters into folders makes sense. 
+
+### Form Python User Feedback (April 07):
+
++ But that''s part of the beauty of Plotly, that the default styling already
+  beats the pants off Matplotlib, right?
+
++ As before, people love that they can make pretty graphs. 
+
++ A few pieced of feedback that were oft mentioned:
+  - People want to show private graphs in an IPython NB (most popular ask, I think).
+  - Exporting graphs with an IPython NB when you export the NB.
+  - Getting grid and column access from the API. (in new version)
+  - Examples to replicate with my own data. (!!! templates ...)
+
++ Others that came up:
+  - Handling more data, loading faster.
+  - Instagraph for styling something in the GUI or with Python and then re-using
+    that styling (in new version)
+  - Being able to delete files (maybe add files to a folder and then delete it).
+  - Sharing a plot directly as part of a API call.
+  - Full description of the API and options available. (in new version)
+  - Pre-defined colormaps. (in new version)
+  - Have `.plotly_settings` file in the home directory and put key/username
+    there so users don''t need to share username and key to share code.
+    (in new version)
 
 ### Misc info
 
