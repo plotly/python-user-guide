@@ -2,8 +2,16 @@
 List of ideas for this project
 ------------------------------
 
-* Change the font for the IPython notebook. Code OK,
-  Look Some good-looking sans serif
+### Tomorrow file
+
++ Make folders! (how to with git)
+
++ Make all notebooks presentable!
+
++ Write a few lines in Readme.md
+
++ Maybe 1 more bar plot, 1 more bubble chart and 1 more histogram
+
 
 ### `Getting Started` should have:
 
@@ -20,6 +28,9 @@ List of ideas for this project
 
 + Except the reader to be familiar with Python terminology (dictionaries,
 object, numpy) ...
+
+* Change the font for the IPython notebook. Code OK,
+  Look Some good-looking sans serif
 
 + Contact info
 + Feedback!
