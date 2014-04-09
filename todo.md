@@ -4,11 +4,11 @@ List of ideas for this project
 
 ### Tomorrow file
 
-+ Make folders! (how to with git)
-
 + Make all notebooks presentable!
+  - s1 mostly done, except for 1.3
+  - 
 
-+ Write a few lines in Readme.md
++ Write a few lines in each Readme.md file
 
 + Maybe 1 more bar plot, 1 more bubble chart and 1 more histogram
 
@@ -22,23 +22,12 @@ List of ideas for this project
     (including layout/style options covered, e.g. examples include )
 
 + Installation guidelines (info on api_key)
-+ Sign up info --> Setup config.json as streaming demos!
++ Sign up info --> Setup config.json as in streaming demos!
 
 + What version of Plotly, Python, IPython is assumed?
 
 + Except the reader to be familiar with Python terminology (dictionaries,
-object, numpy) ...
-
-* Change the font for the IPython notebook. Code OK,
-  Look Some good-looking sans serif
-
-+ Contact info
-+ Feedback!
-+ mention that all files are available in a github repo!
-+ links to similar documentation for R, Matlab, etc.
-+ Every notebook (or section) is intended to be a ''lecture''
-+ mention the https://github.com/jiffyclub/open-in-nbviewer Chrome extension
-+ (Matt on April 07) Make a notebook of all notebooks.
+  object, numpy) ...
 
 + When will the new version -- with help() -- be released?
 
@@ -57,8 +46,6 @@ object, numpy) ...
       - fig 3: Line and marker plot + a few layout options
 
       - Will have to include info the 'help' function once it is online
-      
-      - Maybe add 'text' option to fig 3. ('text': "outlier") Maybe not ...
 
 + 2) Bar Charts and Error Bars: 
       Example of csv reader (with Climate data from Environment Canada),
@@ -83,7 +70,8 @@ object, numpy) ...
 + 3) Bubble charts and (and Pandas)
       (use Jack''s nbviewer!!)
 
-      - fig 7: bubble chart with pandas retrieval
+      - fig 7: bubble chart with pandas retrieval 
+               Set population in million!
       - fig 8. bubble chart (maybe)
 
       Maybe make this `Bubble charts and Multiple axes` 
@@ -134,10 +122,15 @@ object, numpy) ...
 
 ### Misc. Thoughts
 
++ What writing style to use? How about:
+  - Use We/Let''s for demonstrations and thing
+  - Use ''you'' for things not included in the document (e.g. try it!)
+
 + Make an FAQ section or appendix
 
 + List of Plotly style options with links to examples (in different chapter)! 
-    --> code that with ''grep''!!!
+    - code that with ''grep''!!!
+    - like a reference table
 
 +  Troubleshooting and debugging appendix
 
@@ -146,11 +139,9 @@ object, numpy) ...
 
 * At the bottom of every page (excluding Getting Started):
 
-  - put link to  ''prev'', ''next'' and front page 
-  - Add the Plotly logo, contact info!
-  - maybe code that --> `add_footer.sh` 
-
-+ Matt (April 07) Package chapters into folders makes sense. 
+  - put link to  ''prev'', ''next'' and front page  (could be better looking)
+  - Add the Plotly logo, contact info! (not bad)
+  - code that --> `add_footer.sh` 
 
 + remove plotly.__version__ line in Section 2 and up
 
@@ -161,7 +152,7 @@ object, numpy) ...
 + header comments should all start with Upper case, 
   inline comment with lower case
 
-+ Find a clever way to label figure?
++ Find a clever way to label figure and sections?
 
 ### How to incorporate documentation on plot.ly/api/docs/:
 
