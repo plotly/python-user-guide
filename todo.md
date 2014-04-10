@@ -4,10 +4,14 @@ List of ideas for this project
 
 ### The Tomorrow file
 
++ Rendering errors in nbviewer!! (Check Cam)
+
 + Make all notebooks presentable!
   - s0 mostly done, except table of contents
   - s1 mostly done, except for 1.3
   - s2 
+
+
 
 + 1 more bar plot (almost done), 1 more bubble chart and 1 more histogram
 
