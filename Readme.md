@@ -1,12 +1,12 @@
-Plotly''s Python API User Guide
+Plotly's Python API User Guide
 ===============================
 
-Welcome to [Plotly''s](https://plot.ly) Python API User Guide
+Welcome to [Plotly's](https://plot.ly) Python API User Guide
 
 The User Guide was written with the goal of giving Plotly Python (and IPython)
-users extensive documentation on almost all of Plotly''s features. 
+users extensive documentation on almost all of Plotly's features. 
 
-Whereas Plotly''s [web documentation and
+Whereas Plotly's [web documentation and
 gallery](https://plot.ly/api/python/docs) is meant to serve Plotly beginners
 just looking to make a simple plot and experienced users trying out a new plot
 type.  The User Guide intends to make beginner and intermediate Plotly users
@@ -47,7 +47,7 @@ Proposed future sections:
 * and others
 * Appendix A: Complete list of Plotly style options
 * Appendix B: FAQ
-* Appendix C: Useful templates (for users looking to ''plug and play'')
+* Appendix C: Useful templates (for users looking to 'plug and play')
 
 
 Config file and other files in this repo
@@ -59,13 +59,13 @@ Config file and other files in this repo
 
 * `add_footer.sh`, `add_header.sh`: add or update footer and header to notebook
 
-* `make_readme.sh` (maybe)
+* `make_readme.sh`: Makes subfolder `Readme.md` files
 
 * `todo.md`: list of ideas for this project (not official by any means)
 
 * `plotly-python-doc.css`: CSS file for notebook styling
 
-Assumed versions, Installation guidelines and Configuration
+Versions, Installation and Configuration
 -----------------------------------------
 
 * Currently, this project assumes :
@@ -102,23 +102,23 @@ While reading the User Guide, if ever:
 
 * Fork us! All commits are welcomed!
 
+Got Questions and Feedback? 
+---------------------------
 
-<img src="http://upload.wikimedia.org/wikipedia/commons/2/26/Logo_%281%29.png" 
-     height=250px style="float:right;" />
-
-<h4>Got Questions and Feedback? </h4>
-
-* About <a href="https://plot.ly" target="_blank">Plotly</a>: <br> 
+* About [Plotly](https://plot.ly) 
   email at feedback@plot.ly 
-  or tweet at <a href="https://twitter.com/plotlygraphs" target="_blank">@plotlygraphs</a>
+  or tweet at [@plotlygraphs](https://twitter.com/plotlygraphs)
 
-* About the <a href="https://github.com/etpinard/plotly-python-doc" target="_blank">User Guide</a>: <br>
+* About the [User Guide](https://github.com/etpinard/plotly-python-doc) 
   email at etienne.t.pinard@gmail.com
-  or tweet at <a href="https://twitter.com/etpinard" target="_blank">@etpinard</a>
+  or tweet at [@etpinard](https://twitter.com/etpinard)
 
-<h4>Big Thanks to: </h4>
+Big Thanks to
+-------------
 
 * [Cam Davidson-Pilon](http://nbviewer.ipython.org/github/CamDavidsonPilon/Probabilistic-Programming-and-Bayesian-Methods-for-Hackers/blob/master/Prologue/Prologue.ipynb) 
   for notebook styling ideas
-   
-<hr>
+
+
+![Plotly logo](http://upload.wikimedia.org/wikipedia/commons/2/26/Logo_%281%29.png)
+
