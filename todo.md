@@ -2,15 +2,17 @@
 List of ideas for this project
 ------------------------------
 
-### Tomorrow file
+### The Tomorrow file
+
++ Write a few lines in each Readme.md file (link to nbviewer)
 
 + Make all notebooks presentable!
   - s1 mostly done, except for 1.3
-  - 
+  - ...
 
-+ Write a few lines in each Readme.md file
++ 1 more bar plot (almost done), 1 more bubble chart and 1 more histogram
 
-+ Maybe 1 more bar plot, 1 more bubble chart and 1 more histogram
++ clear ./config.json before every push (make script!)
 
 
 ### `Getting Started` should have:
@@ -66,6 +68,9 @@ List of ideas for this project
      (maybe make that one horizontal and have fig 5 be a simple vertical)
 
      Mention also that the 'text' trace dictionary key does not work
+
+     Maybe use the `.plot` method instead of `.iplot` for last plot 
+     with `my_plotly.ioff()`
 
 + 3) Bubble charts and (and Pandas)
       (use Jack''s nbviewer!!)
@@ -125,6 +130,8 @@ List of ideas for this project
 + What writing style to use? How about:
   - Use We/Let''s for demonstrations and thing
   - Use ''you'' for things not included in the document (e.g. try it!)
+
++ Use LaTeX symbols at one point on a plot
 
 + Make an FAQ section or appendix
 
