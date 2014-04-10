@@ -57,7 +57,7 @@ head -n $l_end $tmp > $tmp_footer
 
 ## 2) Substitute model footer for all notebook in $paths
 
-for i in ${all_paths[0]}; do
+for i in ${all_paths[@]}; do
 
   # get line number of start of footer in file $i
   l_start=$(grep -Fn "$model_start" $i | tail -n 1 | cut -d ":" -f 1)
@@ -81,8 +81,10 @@ for i in ${all_paths[0]}; do
   tail -n +$l_end $tmp > $tmp_below
 
   ## concatenate back into $i
+  echo -e "Updating ... $i"
   cat $tmp_above $tmp_footer $tmp_below > $i
 
 done
 
+echo "done"
 # -------------------------------------------------------------------------------

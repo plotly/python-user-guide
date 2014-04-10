@@ -57,7 +57,7 @@ head -n $l_end $tmp > $tmp_header
 
 ## 2) Substitute model header for all notebook in $paths
 
-for i in ${paths[1]}; do
+for i in ${paths[@]}; do
 
   # get line number of start of header in file $i
   l_start=$(grep -Fn "$model_start" $i | head -n 1 | cut -d ":" -f 1)
@@ -81,8 +81,10 @@ for i in ${paths[1]}; do
   tail -n +$l_end $tmp > $tmp_below
 
   ## concatenate back into $i
+  echo -e "Updating ... $i"
   cat $tmp_above $tmp_header $tmp_below > $i
 
 done
 
+echo "done"
 # -------------------------------------------------------------------------------
