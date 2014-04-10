@@ -4,33 +4,34 @@ List of ideas for this project
 
 ### The Tomorrow file
 
-+ Rendering errors in nbviewer!! (Check Cam)
++ Rendering errors in nbviewer:
   
   - Resizing figure does not inside nbviewer
   - As well as the <center> </center> tags
+  - cell width is also tricky (check CSS file)
 
 + Make all notebooks presentable!
 
   - s0 mostly done, except table of contents
   - s1 mostly done, except for 1.3
   - s2 
+  - s3
+  - s4
 
 
 
 + 1 more bar plot (almost done), 1 more bubble chart and 1 more histogram
 
-+ clear ./config.json before every push (make script!)
++ clear ./config.json before every push (in my_git.sh)
 
 
 ### `Getting Started` should have:
-
-+ a quick intro
-+ the Plotly logo embedded (find the histogram one)
 
 + Table of Contents with links and full description 
     (including layout/style options covered, e.g. examples include )
 
 + Installation guidelines (info on api_key)
+
 + Sign up info --> Setup config.json as in streaming demos!
 
 + What version of Plotly, Python, IPython is assumed?
@@ -155,13 +156,12 @@ List of ideas for this project
 
   - put link to  ''prev'', ''next'' and front page  (could be better looking)
   - Add the Plotly logo, contact info! (not bad)
-  - code that --> `add_footer.sh` 
 
 + remove plotly.__version__ line in Section 2 and up
 
 + remember that not every one is using Unix-like systems.
 
-+ make a folder on Plotly folder for documentation figs 
++ make a folder on Plotly folder for documentation figs ??
 
 + header comments should all start with Upper case, 
   inline comment with lower case

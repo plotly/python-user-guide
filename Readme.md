@@ -27,16 +27,16 @@ Current sections:
   Getting Started with Plotly (`s0_getting-started` folder)
 
 * [Section 1:](http://nbviewer.ipython.org/github/etpinard/plotly-python-doc/blob/master/s1_line-scatter/s1_line-scatter.ipynb)
-  Line & Scatter Plots (`s1_line-scatter` folder)
+  Line & Scatter Plots (`s1_line-scatter`)
 
 * [Section 2:](http://nbviewer.ipython.org/github/etpinard/plotly-python-doc/blob/master/s2_bar-charts/s2_bar-charts.ipynb)
-  Bar Charts & Error Bars (`s2_bar-charts` folder)
+  Bar Charts & Error Bars (`s2_bar-charts`)
 
 * [Section 3:](http://nbviewer.ipython.org/github/etpinard/plotly-python-doc/blob/master/s3_bubble-charts/s3_bubble-charts.ipynb)
-  Bubble Charts (`s3_bubble-charts` folder)
+  Bubble Charts (`s3_bubble-charts`)
 
 * [Section 4:](http://nbviewer.ipython.org/github/etpinard/plotly-python-doc/blob/master/s4_histograms/s4_histograms.ipynb)
-  Histograms & box plots (`s4_histograms` folder)
+  Histograms & box plots (`s4_histograms`)
 
 Proposed future sections:
 
@@ -53,11 +53,12 @@ Proposed future sections:
 
 * `config.json`: JSON containing username, api key and stream tokens
 
-* `clear_config.sh`: clears `config.json` before a Github push
+* `my_git.sh`: Git add, commit and push shortcut for this project
 
-* `add_footer.sh`, `add_header.sh`: add or update footer and header to notebook
+* `update_footer.sh`, `update_header.sh`: update footer and header of all notebooks
 
-* `make_readme.sh`: Makes subfolder `Readme.md` files
+* `make_folder.sh`: Makes subfolder `Readme.md` files,
+   print header and footer in notebook 
 
 * `todo.md`: list of ideas for this project (not official by any means)
 
