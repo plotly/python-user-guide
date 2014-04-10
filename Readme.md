@@ -13,14 +13,13 @@ type.  The User Guide intends to make beginner and intermediate Plotly users
 experts.
 
 
-Content
--------
+#### Content
 
-The content of the is entirely written inside [IPython
+The content of the User Guide is entirely written inside [IPython
 notebooks](http://ipython.org/notebook.html). 
 
-The Github repository is divided into folder, where each folder contains 
-one IPython notebook and the required data files.
+The Github repository is divided into folders, where each folder contains 
+one IPython notebook and their required data files.
 
 Current sections:
 
@@ -50,8 +49,7 @@ Proposed future sections:
 * Appendix C: Useful templates (for users looking to 'plug and play')
 
 
-Config file and other files in this repo
------------
+#### Config file and other files in this repo
 
 * `config.json`: JSON containing username, api key and stream tokens
 
@@ -65,10 +63,9 @@ Config file and other files in this repo
 
 * `plotly-python-doc.css`: CSS file for notebook styling
 
-Versions, Installation and Configuration
------------------------------------------
+#### Versions, Installation and Configuration
 
-* Currently, this project assumes :
+* At the moment, this project assumes :
   - plotly version 0.5.13
   - python version 2.7.5+
   - ipython 0.13.2 (but planning on switching to version 1.0)
@@ -89,32 +86,29 @@ Versions, Installation and Configuration
     named `config.json`.
 
 
-Want to improve the User Guide
-------------------------------
+#### Want to improve the User Guide
 
 While reading the User Guide, if ever:
 
 * you have a suggestion for a new chapter, 
-  you would like to include more information about a particular plot option
+  you would like to include more information about a particular plot option,
   you caught some spelling and grammar mistakes 
 
   ... Tell us about it. Or, change it yourself.
 
 * Fork us! All commits are welcomed!
 
-Got Questions and Feedback? 
----------------------------
+#### Got Questions and Feedback? 
 
-* About [Plotly](https://plot.ly) 
+* About Plotly
   email at feedback@plot.ly 
   or tweet at [@plotlygraphs](https://twitter.com/plotlygraphs)
 
-* About the [User Guide](https://github.com/etpinard/plotly-python-doc) 
+* About the User Guide
   email at etienne.t.pinard@gmail.com
   or tweet at [@etpinard](https://twitter.com/etpinard)
 
-Big Thanks to
--------------
+#### Big Thanks to
 
 * [Cam Davidson-Pilon](http://nbviewer.ipython.org/github/CamDavidsonPilon/Probabilistic-Programming-and-Bayesian-Methods-for-Hackers/blob/master/Prologue/Prologue.ipynb) 
   for notebook styling ideas
