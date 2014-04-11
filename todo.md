@@ -9,6 +9,9 @@ List of ideas for this project
   - Resizing figure does not inside nbviewer
   - As well as the <center> </center> tags
   - cell width is also tricky (check CSS file)
+  - the <code> tag too is not supported
+
++ Woo. Plotly now put a legend in even if len(traces)==1 
 
 + Make all notebooks presentable!
 
@@ -18,11 +21,19 @@ List of ideas for this project
   - s3
   - s4
 
++ Mention Color brewer !!
 
++ Convention: 
 
-+ 1 more bar plot (almost done), 1 more bubble chart and 1 more histogram
+  - write doc string for functions to be used in multiples cells, not otherwise 
+  - use same function/variable name if only used in one cell
+  
+
++ 1 more bubble chart (not now) and 1 more histogram (not now)
 
 + clear ./config.json before every push (in my_git.sh)
+
++ CSS hyperlinks and lists (ol and ul)
 
 
 ### `Getting Started` should have:
