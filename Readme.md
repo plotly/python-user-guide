@@ -15,7 +15,7 @@ experts.
 
 #### Content
 
-The content of the User Guide is entirely written inside [IPython
+The User Guide is entirely written inside [IPython
 notebooks](http://ipython.org/notebook.html). 
 
 The Github repository is divided into folders, where each folder contains 
@@ -55,7 +55,9 @@ Proposed future sections:
 
 * `my_git.sh`: Git add, commit and push shortcut for this project
 
-* `update_footer.sh`, `update_header.sh`: update footer and header of all notebooks
+* `update_footer.sh`: update footer of all notebooks
+
+* `update_header.sh`: update header of all notebooks
 
 * `make_folder.sh`: Makes subfolder `Readme.md` files,
    print header and footer in notebook 
@@ -64,12 +66,13 @@ Proposed future sections:
 
 * `plotly-python-doc.css`: CSS file for notebook styling
 
+
 #### Versions, Installation and Configuration
 
 * At the moment, this project assumes :
   - plotly version 0.5.13
   - python version 2.7.5+
-  - ipython 0.13.2 (but planning on switching to version 1.0)
+  - ipython version 2.0.0
 
 * To install Plotly (for Unix-like users): 
   - Either use pip: `$ pip install plotly`

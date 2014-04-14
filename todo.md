@@ -21,7 +21,12 @@ List of ideas for this project
   - s3
   - s4
 
-+ Mention Color brewer !!
++ Mention Color brewer (at one point)
+
++ On April 14, you upgraded IPython to v2.0 and
+
+
++ Add Plotly logo in subfolder Readmes
 
 + Convention: 
 
