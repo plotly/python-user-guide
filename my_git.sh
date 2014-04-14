@@ -4,22 +4,21 @@
 #
 # ===============================================================================
 
-# clean up `config.json` 
-#echo -e ("{ \
-#      \"plotly_streaming_tokens\": [\"\", \"\", \"\"], \
-#      \"plotly_api_key\": \"a35m7g6el5\", \
-#      \"plotly_username\": \"etpinard\" \
-#}" )
-#
-#exit 0 
+# Define temporary file
+tmp="/tmp/my_git"
 
-#
+# Clean up `config.json` 
+cp config.json $tmp
+cat config-stream-sample.json > config.json
+mv $tmp config.json
+
+# Add all files in sub-folders to git
 git add --all
 
-#
+# Add commit message
 git commit -m "$1"
 
-#
+# Push to master branch
 git push origin master
 
 # -------------------------------------------------------------------------------

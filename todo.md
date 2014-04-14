@@ -2,6 +2,7 @@
 List of ideas for this project
 ------------------------------
 
+
 ### The Tomorrow file
 
 + Rendering errors in nbviewer:
@@ -9,9 +10,12 @@ List of ideas for this project
   - Resizing figure does not inside nbviewer
   - As well as the <center> </center> tags
   - cell width is also tricky (check CSS file)
-  - the <code> tag too is not supported
+  - the <code> tag too is not supported (even in v2.0)
+  - can't set text-decoration: none for hyperlinks 
 
 + Woo. Plotly now put a legend in even if len(traces)==1 
+
++ Why does In [] Out [] disappeared after running CSS file
 
 + Make all notebooks presentable!
 
@@ -21,10 +25,7 @@ List of ideas for this project
   - s3
   - s4
 
-+ Mention Color brewer (at one point)
-
-+ On April 14, you upgraded IPython to v2.0 and
-
++ Mention Color brewer (at one point, )
 
 + Add Plotly logo in subfolder Readmes
 
@@ -37,9 +38,6 @@ List of ideas for this project
 + 1 more bubble chart (not now) and 1 more histogram (not now)
 
 + clear ./config.json before every push (in my_git.sh)
-
-+ CSS hyperlinks and lists (ol and ul)
-
 
 ### `Getting Started` should have:
 

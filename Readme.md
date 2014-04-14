@@ -18,7 +18,7 @@ experts.
 The User Guide is entirely written inside [IPython
 notebooks](http://ipython.org/notebook.html). 
 
-The Github repository is divided into folders, where each folder contains 
+This Github repository is divided into folders, where each folder contains 
 one IPython notebook and their required data files.
 
 Current sections:
@@ -51,16 +51,18 @@ Proposed future sections:
 
 #### Config file and other files in this repo
 
-* `config.json`: JSON containing username, api key and stream tokens
+* `config.json`: JSON file containing username, api key and stream tokens
 
-* `my_git.sh`: Git add, commit and push shortcut for this project
+* `config-sample.json`, `config-stream-sample.json: Sample `config.json` files
+
+* `my_git.sh`: Re-init. config.json, git add, commit and push 
 
 * `update_footer.sh`: update footer of all notebooks
 
 * `update_header.sh`: update header of all notebooks
 
 * `make_folder.sh`: Makes subfolder `Readme.md` files,
-   print header and footer in notebook 
+   print header and footer in notebook (to do!)
 
 * `todo.md`: list of ideas for this project (not official by any means)
 
@@ -87,7 +89,7 @@ Proposed future sections:
 
 * Get username and APi key by signing in at [plot.ly](https://plot.ly/)
   - For better code portability, we recommend filling in a JSON file 
-    named `config.json`.
+    named `config.json` (see `config-sample.json` for syntax)
 
 
 #### Want to improve the User Guide
