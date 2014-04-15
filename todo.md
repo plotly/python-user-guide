@@ -5,6 +5,9 @@ List of ideas for this project
 
 ### The Tomorrow file
 
++ Add picture in Getting started as in:
+ http://www.instructables.com/id/How-to-use-Plotly-MATLABOctave-API/?ALLSTEPS
+
 + Rendering errors in nbviewer:
   
   - Resizing figure does not inside nbviewer
@@ -27,7 +30,7 @@ List of ideas for this project
 
 + Mention Color brewer (at one point, )
 
-+ Add Plotly logo in subfolder Readmes
+
 
 + Convention: 
 
@@ -36,8 +39,6 @@ List of ideas for this project
   
 
 + 1 more bubble chart (not now) and 1 more histogram (not now)
-
-+ clear ./config.json before every push (in my_git.sh)
 
 ### `Getting Started` should have:
 

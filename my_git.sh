@@ -10,7 +10,6 @@ tmp="/tmp/my_git"
 # Clean up `config.json` 
 cp config.json $tmp
 cat config-stream-sample.json > config.json
-mv $tmp config.json
 
 # Add all files in sub-folders to git
 git add --all
@@ -21,4 +20,6 @@ git commit -m "$1"
 # Push to master branch
 git push origin master
 
+# Move filled-in config.json back to directory
+mv $tmp config.json
 # -------------------------------------------------------------------------------
