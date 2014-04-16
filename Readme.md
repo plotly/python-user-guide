@@ -120,5 +120,5 @@ While reading the User Guide, if ever:
   for notebook styling ideas
 
 
-![Plotly logo](http://upload.wikimedia.org/wikipedia/commons/2/26/Logo_%281%29.png)
+![Plotly logo](http://i.imgur.com/i6YeveO.png)
 

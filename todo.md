@@ -2,8 +2,13 @@
 List of ideas for this project
 ------------------------------
 
-
 ### The Tomorrow file
+
++ Get started on section 5! Heatmaps, 2d histograms and contours
+ 
+  - leave maps for another sections
+
++ Plotly names the 'traces' list as 'data'. Wanna change that
 
 + Add picture in Getting started as in:
  http://www.instructables.com/id/How-to-use-Plotly-MATLABOctave-API/?ALLSTEPS
@@ -16,43 +21,49 @@ List of ideas for this project
   - the <code> tag too is not supported (even in v2.0)
   - can't set text-decoration: none for hyperlinks 
 
-+ Woo. Plotly now put a legend in even if len(traces)==1 
-
 + Why does In [] Out [] disappeared after running CSS file
 
 + Make all notebooks presentable!
 
   - s0 mostly done, except table of contents
   - s1 mostly done, except for 1.3
-  - s2 
-  - s3
-  - s4
+  - s2 mostly done
+  - s3 one more bubble chart (log, multiple axes, line fit) 
+  - s4 one more histogram (custom bins, area line)
+  - s5 contour plots!
+
++ Have a 'line and scatter revisited' section with new API tools 
 
 + Mention Color brewer (at one point, )
 
++ add last code cell (the CSS one) to `update_footer`
+ Or at least, make them consistent!
 
++ New Python API feautres: 
 
-+ Convention: 
+  See http://nbviewer.ipython.org/github/plotly/python-api/blob/1.0/notebooks/Plotly%20and%20Python.ipynb
 
-  - write doc string for functions to be used in multiples cells, not otherwise 
-  - use same function/variable name if only used in one cell
-  
+  - Classes for each type of dictionary
+  - help()
+  - subplots generating function
+  - get_figure
 
-+ 1 more bubble chart (not now) and 1 more histogram (not now)
++ New Plotly defaults:
+
+  - puts in a legend in even if len(traces)==1 
+  - legend is placed outside axis frame
+  - no axis frame
+  - a much lighter grid
+
 
 ### `Getting Started` should have:
 
 + Table of Contents with links and full description 
     (including layout/style options covered, e.g. examples include )
 
-+ Installation guidelines (info on api_key)
++ Installation guidelines (info on api_key, add pictures!!!)
 
 + Sign up info --> Setup config.json as in streaming demos!
-
-+ What version of Plotly, Python, IPython is assumed?
-
-+ Except the reader to be familiar with Python terminology (dictionaries,
-  object, numpy) ...
 
 + When will the new version -- with help() -- be released?
 
@@ -79,28 +90,20 @@ List of ideas for this project
       2-panels, fully custom (maker/line color, gap, font size) bar chart, 
       annotation
 
-      - fig 4: simple bar chart (T_avg and T_std, vertical) **ticker error_Y??**
-      - fig 5: Horizontal bar+ error_x (value) (T_min, T_avg, T_max for JJA)
-      - fig 6: Montreal vs. Vancouver T_avg and P_avg 
+      - fig 4: simple bar chart (T_avg and T_std, vertical)
+      - fig 5: Direct labels overlaid (T_min, T_avg, T_max for JJA)
+      - fig 6: horizontal stacked (P mtl and van)
+      - fig 7: Montreal vs. Vancouver T_avg and P_avg 
             (2-panels, tilt axis label, marker/line colors)
 
      Ask Jack about `Bar bottom` and `error_x` 
-     cleanup folders 
-
-     Maybe add a ''stack'' bar chart with cumulative rainfall in MTL and Van
-     (maybe make that one horizontal and have fig 5 be a simple vertical)
-
-     Mention also that the 'text' trace dictionary key does not work
-
-     Maybe use the `.plot` method instead of `.iplot` for last plot 
-     with `my_plotly.ioff()`
 
 + 3) Bubble charts and (and Pandas)
       (use Jack''s nbviewer!!)
 
-      - fig 7: bubble chart with pandas retrieval 
+      - fig 8: bubble chart with pandas retrieval 
                Set population in million!
-      - fig 8. bubble chart (maybe)
+      - fig 9. bubble chart (maybe)
 
       Maybe make this `Bubble charts and Multiple axes` 
       (GDP and LifeExp vs time, )
@@ -122,19 +125,20 @@ List of ideas for this project
 
       maybe a gaussian fit example
 
-      - fig 9: compare final exam grade, midterm grade (overlay)
-      - fig 10: compare histnorm values (2x2 panel plot)
-      - fig 10: autobinx: False
+      - fig 10: compare final exam grade, midterm grade (overlay)
+      - fig 11: compare histnorm values (2x2 panel plot)
+      - fig 12: autobinx: False
                 (a few style options: highlight mean, mode, median, manual bins)
                 maybe Gaussian fit
-      - fig 11: box plot assignments, midterm, final, course
+      - fig 14: box plot assignments, midterm, final, course
 
 
 + 5) Heatmaps, 2d Histograms & color scales 
       use your function for polar_vortex to describe color bar
     
-      - fig 12:
-      - fig 13:
+      - fig 15:
+      - fig 16:
+      - fig 17:
 
 + Multiples axes and Insets (Multiple Axes, Subplots, Insets)
     example a retrieving data from plot. with browser!
@@ -146,13 +150,18 @@ List of ideas for this project
 + Streaming Data
 + Retrieve Data from Plotly
 + 3d Surface Plots (coming soon)
-+ Maps (coming soon)
++ Maps (coming soon)  --> with a shapefile maybe
 
 ### Misc. Thoughts
 
 + What writing style to use? How about:
   - Use We/Let''s for demonstrations and thing
   - Use ''you'' for things not included in the document (e.g. try it!)
+
++ Convention: 
+
+  - write doc string for functions to be used in multiples cells, not otherwise 
+  - use same function/variable name if only used in one cell
 
 + Use LaTeX symbols at one point on a plot
 
@@ -182,6 +191,7 @@ List of ideas for this project
   inline comment with lower case
 
 + Find a clever way to label figure and sections?
+
 
 ### How to incorporate documentation on plot.ly/api/docs/:
 
