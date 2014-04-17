@@ -8,6 +8,20 @@ List of ideas for this project
  
   - leave maps for another sections
 
++ New Python API feautres: 
+
+  See http://nbviewer.ipython.org/github/plotly/python-api/blob/1.0/notebooks/Plotly%20and%20Python.ipynb
+
+  - Graph objects, classes for each type of dictionary
+  - help() and .validate()
+  - subplots generating function
+  - get_figure and strip
+  - credentials
+  - get_subplots
+  - Working in Python -> GUI -> back in Python
+  - 
+
+
 + Plotly names the 'traces' list as 'data'. Wanna change that
 
 + Add picture in Getting started as in:
@@ -38,15 +52,6 @@ List of ideas for this project
 
 + add last code cell (the CSS one) to `update_footer`
  Or at least, make them consistent!
-
-+ New Python API feautres: 
-
-  See http://nbviewer.ipython.org/github/plotly/python-api/blob/1.0/notebooks/Plotly%20and%20Python.ipynb
-
-  - Classes for each type of dictionary
-  - help()
-  - subplots generating function
-  - get_figure
 
 + New Plotly defaults:
 

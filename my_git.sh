@@ -2,6 +2,11 @@
 #
 # Shortcut to clean up `config.json`, add, commit and push entire folder
 #
+# Arguments:
+# 
+# 1) git commit message
+# 2) git branch name
+#
 # ===============================================================================
 
 # Define temporary file
@@ -18,7 +23,7 @@ git add --all
 git commit -m "$1"
 
 # Push to master branch
-git push origin master
+git push origin "$2"
 
 # Move filled-in config.json back to directory
 mv $tmp config.json
