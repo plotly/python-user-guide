@@ -38,12 +38,13 @@ Current sections:
 * [Section 4:](http://nbviewer.ipython.org/github/etpinard/plotly-python-doc/blob/master/s4_histograms/s4_histograms.ipynb)
   Histograms & box plots (`s4_histograms`)
 
+* [Section
+* 5:](http://nbviewer.ipython.org/github/etpinard/plotly-python-doc/blob/master/s4_histograms/s5_heatmaps.ipynb)
+  Heatmaps, Contours & 2D Histograms(`s5_heatmaps`)
+
 Proposed future sections:
 
-* Section 5: Heatmaps, 2D histograms
-* Section 6: Contour plots and Maps
-* Section ?: Polor charts, 3D plots, Streaming Data, Retrieve data from Plotly
-* and others
+* Section ?: Maps, Polor charts, 3D plots, Streaming Data, Retrieve data from Plotly
 * Appendix A: Complete list of Plotly style options
 * Appendix B: FAQ
 * Appendix C: Useful templates (for users looking to 'plug and play')
@@ -51,9 +52,6 @@ Proposed future sections:
 
 #### Config file and other files in this repo
 
-* `config.json`: JSON file containing username, api key and stream tokens
-
-* `config-sample.json`, `config-stream-sample.json: Sample `config.json` files
 
 * `my_git.sh`: Re-init. config.json, git add, commit and push 
 
@@ -64,33 +62,69 @@ Proposed future sections:
 * `make_folder.sh`: Makes subfolder `Readme.md` files,
    print header and footer in notebook (to do!)
 
-* `todo.md`: list of ideas for this project (not official by any means)
-
 * `plotly-python-doc.css`: CSS file for notebook styling
 
+* `todo.md`: list of ideas for this project (not official by any means)
 
-#### Versions, Installation and Configuration
 
-* At the moment, this project assumes :
-  - plotly version 0.5.13
-  - python version 2.7.5+
-  - ipython version 2.0.0
+#### Installation guidelines
 
-* To install Plotly (for Unix-like users): 
-  - Either use pip: `$ pip install plotly`
-  - Or try: `$ sudo pip install plotly`
+Step 1. The User Guide assume :
+  
+* Plotly version 1.0 **Important**
+* Python version 2.7.5+
+  - `numpy`, installed for all sections
+  - `pandas`, installed for sections 3 and 5
+* IPython version 2.0.0
 
-* Check version (inside python or ipython): 
+Step 2. To install Plotly, use pip:
+  - `$ pip install plotly` or
+  - `$ sudo pip install plotly`
+
+Step 3. Check version (inside Python or Ipython), upgrade if needed:
   - `>>> import plotly`
   - `>>> print plotly.__version__`
 
-* If not up latest version:
+* If not up latest (`1.0.0`) version:
   - `$ pip install plotly --upgrade`
 
-* Get username and APi key by signing in at [plot.ly](https://plot.ly/)
-  - For better code portability, we recommend filling in a JSON file 
-    named `config.json` (see `config-sample.json` for syntax)
+Step 4. Sign up for Plotly if you don't have an account already:
 
+* Go to [plot.ly](https://plot.ly) and click on the *Sign up* button.
+
+Step 5. Get username and API key:
+
+* After signing in, click the Settings tab,
+* Your API key and username are under Profile.
+
+Step 6. For better code portability, we recommend setting up a credentials file:
+
+* In Python or IPython
+
+  >>> import plotly.tools as tls 
+  >>> tls.set_credentials_file(username="<-->", api_key="<-->")
+
+Where the username and api_key keys are filled in with your own.
+
+This creates a .credentials file in your $HOME/.plotly/ folder storing the
+username and API key locally in JSON file.
+
+* You can access your credentials in Python/IPython with:
+
+>>> my_creds = tls.get_credentials_file()
+
+Step 7. Sign in to Plotly from Python API:
+
+`>>> import plotly.plotly as py`    
+`>>> import plotly.tools as tls`   
+
+`my_creds = tls.get_credentials_file()`
+`py.sign_in(my_creds['username'], my_creds['api_key'])`
+
+And there you go. You are now ready to make plots using Plotly and the Python
+API.  Using the credentials file allows users to share code without having to
+type in (yet along remember) their own username and API key every time they
+want to generate a new Plotly plot.
 
 #### Want to improve the User Guide
 

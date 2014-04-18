@@ -21,11 +21,9 @@ List of ideas for this project
   - Working in Python -> GUI -> back in Python
   - 
 
++ tell users to use pip to install pandas in section 3 and 5
 
 + Plotly names the 'traces' list as 'data'. Wanna change that
-
-+ Add picture in Getting started as in:
- http://www.instructables.com/id/How-to-use-Plotly-MATLABOctave-API/?ALLSTEPS
 
 + Rendering errors in nbviewer:
   
