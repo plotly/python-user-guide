@@ -23,23 +23,22 @@ one IPython notebook and their required data files.
 
 Current sections:
 
-* [Section 0:](http://nbviewer.ipython.org/github/etpinard/plotly-python-doc/blob/master/s0_getting-started/s0_getting-started.ipynb)
+* [Section 0:](http://nbviewer.ipython.org/github/etpinard/plotly-python-doc/tree/1.0/s0_getting-started/s0_getting-started.ipynb)
   Getting Started with Plotly (`s0_getting-started` folder)
 
-* [Section 1:](http://nbviewer.ipython.org/github/etpinard/plotly-python-doc/blob/master/s1_line-scatter/s1_line-scatter.ipynb)
+* [Section 1:](http://nbviewer.ipython.org/github/etpinard/plotly-python-doc/tree/1.0/s1_line-scatter/s1_line-scatter.ipynb)
   Line & Scatter Plots (`s1_line-scatter`)
 
-* [Section 2:](http://nbviewer.ipython.org/github/etpinard/plotly-python-doc/blob/master/s2_bar-charts/s2_bar-charts.ipynb)
+* [Section 2:](http://nbviewer.ipython.org/github/etpinard/plotly-python-doc/tree/1.0/s2_bar-charts/s2_bar-charts.ipynb)
   Bar Charts & Error Bars (`s2_bar-charts`)
 
-* [Section 3:](http://nbviewer.ipython.org/github/etpinard/plotly-python-doc/blob/master/s3_bubble-charts/s3_bubble-charts.ipynb)
+* [Section 3:](http://nbviewer.ipython.org/github/etpinard/plotly-python-doc/tree/1.0/s3_bubble-charts/s3_bubble-charts.ipynb)
   Bubble Charts (`s3_bubble-charts`)
 
-* [Section 4:](http://nbviewer.ipython.org/github/etpinard/plotly-python-doc/blob/master/s4_histograms/s4_histograms.ipynb)
+* [Section 4:](http://nbviewer.ipython.org/github/etpinard/plotly-python-doc/tree/1.0/s4_histograms/s4_histograms.ipynb)
   Histograms & box plots (`s4_histograms`)
 
-* [Section
-* 5:](http://nbviewer.ipython.org/github/etpinard/plotly-python-doc/blob/master/s4_histograms/s5_heatmaps.ipynb)
+* [Section 5:](http://nbviewer.ipython.org/github/etpinard/plotly-python-doc/tree/1.0/s4_histograms/s5_heatmaps.ipynb)
   Heatmaps, Contours & 2D Histograms(`s5_heatmaps`)
 
 Proposed future sections:
@@ -50,10 +49,12 @@ Proposed future sections:
 * Appendix C: Useful templates (for users looking to 'plug and play')
 
 
-#### Config file and other files in this repo
+#### Other files in this repo
 
 
-* `my_git.sh`: Re-init. config.json, git add, commit and push 
+* `plotly-python-doc.css`: CSS file for notebook styling
+
+* `my_git.sh`: git add, commit and push shortcut
 
 * `update_footer.sh`: update footer of all notebooks
 
@@ -61,8 +62,6 @@ Proposed future sections:
 
 * `make_folder.sh`: Makes subfolder `Readme.md` files,
    print header and footer in notebook (to do!)
-
-* `plotly-python-doc.css`: CSS file for notebook styling
 
 * `todo.md`: list of ideas for this project (not official by any means)
 
@@ -81,7 +80,7 @@ Step 2. To install Plotly, use pip:
   - `$ pip install plotly` or
   - `$ sudo pip install plotly`
 
-Step 3. Check version (inside Python or Ipython), upgrade if needed:
+Step 3. Check version (inside Python or IPython), upgrade if needed:
   - `>>> import plotly`
   - `>>> print plotly.__version__`
 
@@ -101,8 +100,8 @@ Step 6. For better code portability, we recommend setting up a credentials file:
 
 * In Python or IPython
 
-  >>> import plotly.tools as tls 
-  >>> tls.set_credentials_file(username="<-->", api_key="<-->")
+  `>>> import plotly.tools as tls`
+  ``>>> tls.set_credentials_file(username="<-->", api_key="<-->")`
 
 Where the username and api_key keys are filled in with your own.
 
@@ -111,15 +110,15 @@ username and API key locally in JSON file.
 
 * You can access your credentials in Python/IPython with:
 
->>> my_creds = tls.get_credentials_file()
+  `>>> my_creds = tls.get_credentials_file()`
 
 Step 7. Sign in to Plotly from Python API:
 
 `>>> import plotly.plotly as py`    
 `>>> import plotly.tools as tls`   
 
-`my_creds = tls.get_credentials_file()`
-`py.sign_in(my_creds['username'], my_creds['api_key'])`
+`>>> my_creds = tls.get_credentials_file()`
+`>>> py.sign_in(my_creds['username'], my_creds['api_key'])`
 
 And there you go. You are now ready to make plots using Plotly and the Python
 API.  Using the credentials file allows users to share code without having to

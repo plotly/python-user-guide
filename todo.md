@@ -23,7 +23,11 @@ List of ideas for this project
 
 + tell users to use pip to install pandas in section 3 and 5
 
-+ Plotly names the 'traces' list as 'data'. Wanna change that
++ Plotly names the 'traces' list as 'data'. Change that!
+
++ Change all URLs to nbviewer from /master/ to /1.0/ !!!
+
++ Should 1.4 be on new workflow and get_figure?? With Andrew's example
 
 + Rendering errors in nbviewer:
   
