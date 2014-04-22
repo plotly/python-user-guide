@@ -9,12 +9,16 @@ List of ideas for this project
   - s00_homepage 
     (first plotly plot, Data, Layout, Figure, help(), 
      workflows (get), validation, trace-generating functions ...
+     the 'type' key in the trace dictionary are obsolete 
   - s0_getting-started
   - s1_ ... and so on  ???
 
   - Find a new dataset (by the end of the week) !!!
 
-+ Add a 'back to top' button at the bottom of each notebook
++ Make a update_navigation.sh script
+ 
+  - Add a 'back to top' button at the bottom of each notebook
+
 
 + Get started on section 5! Heatmaps, 2d histograms and contours
   
