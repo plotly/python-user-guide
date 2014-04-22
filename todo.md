@@ -10,6 +10,7 @@ List of ideas for this project
     (first plotly plot, Data, Layout, Figure, help(), 
      workflows (get), validation, trace-generating functions ...
      the 'type' key in the trace dictionary are obsolete 
+     why graph objects? (show nested dictionary stuff)!
   - s0_getting-started
   - s1_ ... and so on  ???
 
@@ -18,6 +19,11 @@ List of ideas for this project
 + Make a update_navigation.sh script
  
   - Add a 'back to top' button at the bottom of each notebook
+
++ My new conventions:
+
+  - my_fig=Figure(0), my_data=Data(), my_layout=Layout()
+  - figure numbering by subsection: Fig $section,$subsection{,[a-z]}:
 
 
 + Get started on section 5! Heatmaps, 2d histograms and contours
@@ -103,7 +109,7 @@ List of ideas for this project
 
 ### Jack wants: 1 notebook for each of Plotly''s plot types
 
-+ 1) Line & Scatter Plots:
++ 0) Getting Started with Plotly:
       a simple first plot, 
       dictionaries/customization (plot type, color, style, title, 
       axis/legend labels), *** add ref to text chart plot type ** 
@@ -111,11 +117,16 @@ List of ideas for this project
       plotly homepage (screenshot )
       formal syntax!
 
-      - fig 1: Simplest line plot
-      - fig 2: Line and marker plot
-      - fig 3: Line and marker plot + a few layout options
+      - fig 0.1: Simplest line plot
+      - fig 0.2: Line and marker plot
+      - fig 0.3: Line and marker plot + a few layout options
 
       - Will have to include info the 'help' function once it is online
+
++ 1) Line & Scatter Plots:
+
+      - fig 1.1
+
 
 + 2) Bar Charts and Error Bars: 
       Example of csv reader (with Climate data from Environment Canada),
@@ -124,20 +135,19 @@ List of ideas for this project
       2-panels, fully custom (maker/line color, gap, font size) bar chart, 
       annotation
 
-      - fig 4: simple bar chart (T_avg and T_std, vertical)
-      - fig 5: Direct labels overlaid (T_min, T_avg, T_max for JJA)
-      - fig 6: horizontal stacked (P mtl and van)
-      - fig 7: Montreal vs. Vancouver T_avg and P_avg 
-            (2-panels, tilt axis label, marker/line colors)
+      - fig 2.1: simple bar chart (T_avg and T_std, vertical)
+      - fig 2.2: Direct labels overlaid (T_min, T_avg, T_max for JJA)
+      - fig 2.3: horizontal stacked (P mtl and van)
+      - fig 2.4: Montreal vs. Vancouver T_avg and P_avg 
+                 (2-panels, tilt axis label, marker/line colors)
 
      Ask Jack about `Bar bottom` and `error_x` 
 
 + 3) Bubble charts and (and Pandas)
       (use Jack''s nbviewer!!)
 
-      - fig 8: bubble chart with pandas retrieval 
-               Set population in million!
-      - fig 9. bubble chart (maybe)
+      - fig 3.1: bubble chart with pandas retrieval 
+      - fig 3.2. bubble chart (maybe)
 
       Maybe make this `Bubble charts and Multiple axes` 
       (GDP and LifeExp vs time, )
@@ -159,20 +169,22 @@ List of ideas for this project
 
       maybe a gaussian fit example
 
-      - fig 10: compare final exam grade, midterm grade (overlay)
-      - fig 11: compare histnorm values (2x2 panel plot)
-      - fig 12: autobinx: False
+      - fig 4.1: compare final exam grade, midterm grade (overlay)
+      - fig 4.2: compare histnorm values (2x2 panel plot)
+      - fig 4.3: autobinx: False
                 (a few style options: highlight mean, mode, median, manual bins)
                 maybe Gaussian fit
-      - fig 14: box plot assignments, midterm, final, course
+      - fig 4.4a: box plot assignments, midterm, final, course
+      - fig 4.4b: a few modification on former
 
-
-+ 5) Heatmaps, 2d Histograms & color scales 
++ 5) Heatmaps, contours and 2d Histograms 
       use your function for polar_vortex to describe color bar
     
-      - fig 15:
-      - fig 16:
-      - fig 17:
+      - fig 5.1: correlation matrix
+      - fig 5.2: contour 
+      - fig 5.3: 2d histograms
+
+
 
 + Multiples axes and Insets (Multiple Axes, Subplots, Insets)
     example a retrieving data from plot. with browser!
