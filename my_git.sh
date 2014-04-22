@@ -4,8 +4,8 @@
 #
 # Arguments:
 # 
-# 1) git commit message
-# 2) git branch name
+# 1) git branch name
+# 2) git commit message
 #
 # ===============================================================================
 
@@ -13,9 +13,9 @@
 git add --all
 
 # Add commit message
-git commit -m "$1"
+git commit -m "$2"
 
 # Push to master branch
-git push origin "$2"
+git push origin "$1"
 
 # -------------------------------------------------------------------------------

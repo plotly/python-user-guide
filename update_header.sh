@@ -30,7 +30,7 @@ tmp_header="/tmp/update_header-header"
 tmp_above="/tmp/update_header-above"
 tmp_below="/tmp/update_header-below"
 
-# paths to notebooks (all but 's0_*' the first element)
+# paths to notebooks (all but 's00_*' the first element)
 all_paths=($(ls */*.ipynb))
 paths=(${all_paths[@]:1})
 
