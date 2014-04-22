@@ -12,6 +12,16 @@ just looking to make a simple plot and experienced users trying out a new plot
 type.  The User Guide intends to make beginner and intermediate Plotly users
 experts.
 
+The User Guide assume the latest version (v 1.0) of Plotly's Python API verison
+1.0. The latest version features many improvements. For instance: 
+
+* *get* function, to import data and plot options from public figures, 
+* A *help* function, 
+* Easier manipulation and customization of lists and dictionaries through 
+  *graph objects*,
+* Subplot generating function,
+* Credentials setup.
+
 
 #### Content
 
@@ -21,10 +31,13 @@ notebooks](http://ipython.org/notebook.html).
 This Github repository is divided into folders, where each folder contains 
 one IPython notebook and their required data files.
 
+The User Guide homepage is folder `s00_homepage` and the notebook can be found
+[here](http://nbviewer.ipython.org/github/etpinard/plotly-python-doc/tree/1.0/s00_homepage/s00_homepage.ipynb).
+
 Current sections:
 
 * [Section 0:](http://nbviewer.ipython.org/github/etpinard/plotly-python-doc/tree/1.0/s0_getting-started/s0_getting-started.ipynb)
-  Getting Started with Plotly (`s0_getting-started` folder)
+  Getting Started with Plotly (`s0_getting-started`)
 
 * [Section 1:](http://nbviewer.ipython.org/github/etpinard/plotly-python-doc/tree/1.0/s1_line-scatter/s1_line-scatter.ipynb)
   Line & Scatter Plots (`s1_line-scatter`)
@@ -39,7 +52,7 @@ Current sections:
   Histograms & box plots (`s4_histograms`)
 
 * [Section 5:](http://nbviewer.ipython.org/github/etpinard/plotly-python-doc/tree/1.0/s4_histograms/s5_heatmaps.ipynb)
-  Heatmaps, Contours & 2D Histograms(`s5_heatmaps`)
+  Heatmaps, Contours & 2D Histograms (`s5_heatmaps`)
 
 Proposed future sections:
 
@@ -81,8 +94,10 @@ Step 2. To install Plotly, use pip:
   - `$ sudo pip install plotly`
 
 Step 3. Check version (inside Python or IPython), upgrade if needed:
-  - `>>> import plotly`
-  - `>>> print plotly.__version__`
+
+`>>> import plotly`
+
+`>>> print plotly.__version__`
 
 * If not up latest (`1.0.0`) version:
   - `$ pip install plotly --upgrade`
@@ -101,7 +116,8 @@ Step 6. For better code portability, we recommend setting up a credentials file:
 * In Python or IPython
 
   `>>> import plotly.tools as tls`
-  ``>>> tls.set_credentials_file(username="<-->", api_key="<-->")`
+ 
+  `>>> tls.set_credentials_file(username="<-->", api_key="<-->")`
 
 Where the username and api_key keys are filled in with your own.
 
@@ -115,9 +131,11 @@ username and API key locally in JSON file.
 Step 7. Sign in to Plotly from Python API:
 
 `>>> import plotly.plotly as py`    
+
 `>>> import plotly.tools as tls`   
 
 `>>> my_creds = tls.get_credentials_file()`
+
 `>>> py.sign_in(my_creds['username'], my_creds['api_key'])`
 
 And there you go. You are now ready to make plots using Plotly and the Python

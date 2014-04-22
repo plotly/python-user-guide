@@ -4,8 +4,20 @@ List of ideas for this project
 
 ### The Tomorrow file
 
++ Wanna make a section on Plotly basics (a 'real' section 0)
+  
+  - s00_homepage 
+    (first plotly plot, Data, Layout, Figure, help(), 
+     workflows (get), validation, trace-generating functions ...
+  - s0_getting-started
+  - s1_ ... and so on  ???
+
+  - **But** I would have to find a new dataset (by the end of the week ...)
+
++ Add a 'back to top' button at the bottom of each notebook
+
 + Get started on section 5! Heatmaps, 2d histograms and contours
- 
+  
   - leave maps for another sections
 
 + New Python API feautres: 
@@ -19,7 +31,17 @@ List of ideas for this project
   - credentials
   - get_subplots
   - Working in Python -> GUI -> back in Python
-  - 
+  - fileopt='overwrite' by default now
+
++ Use (NEW!) for new 1.0 features and (New syntax!) for new syntax ...
+
++ Except in section 1:
+
+  - from plotly.graph_objs import Data, Layout, Figure (in first code cell)
+  - and the other imports in cell of first use
+  - use `my_data` and `my_layout` for Figure kwargs
+  - write closing object () on different line
+
 
 + tell users to use pip to install pandas in section 3 and 5
 

@@ -4,13 +4,13 @@
 # project.
 #
 # - The footer cell is defined as the last `markdown` cell in the notebook's
-#   .ipynb file, the first cell being the title. 
+#   .ipynb file, the first cell being the code cell importing the CSS file.
 # 
 # - This script takes one arguments, the name of notebook whose footer is to
 #   serve as 'model' for all other footers.
 #
 # - Try to incorporate cell above footer 
-#   (tricker as link depend on the notebook)
+#   (tricker as link depend on the folder)
 #
 # ===============================================================================
 
