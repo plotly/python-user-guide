@@ -170,6 +170,7 @@ While reading the User Guide, if ever:
 * [Cam Davidson-Pilon](http://nbviewer.ipython.org/github/CamDavidsonPilon/Probabilistic-Programming-and-Bayesian-Methods-for-Hackers/blob/master/Prologue/Prologue.ipynb) 
   for notebook styling ideas
 
+* [Lorena A. Barba](http://lorenabarba.com/blog/announcing-aeropython/#.U1ULXdX1LJ4.google_plusone_share)
 
 ![Plotly logo](http://i.imgur.com/i6YeveO.png)
 

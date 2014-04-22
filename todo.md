@@ -12,7 +12,7 @@ List of ideas for this project
   - s0_getting-started
   - s1_ ... and so on  ???
 
-  - **But** I would have to find a new dataset (by the end of the week ...)
+  - Find a new dataset (by the end of the week) !!!
 
 + Add a 'back to top' button at the bottom of each notebook
 
@@ -59,7 +59,8 @@ List of ideas for this project
   - the <code> tag too is not supported (even in v2.0)
   - can't set text-decoration: none for hyperlinks 
 
-+ Why does In [] Out [] disappeared after running CSS file
++ Why does In [] Out [] disappeared after running CSS file 
+  (check ../custom2.css !!!) 
 
 + Make all notebooks presentable!
 
