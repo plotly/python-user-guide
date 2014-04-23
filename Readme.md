@@ -54,13 +54,6 @@ Current sections:
 * [Section 5:](http://nbviewer.ipython.org/github/etpinard/plotly-python-doc/tree/1.0/s4_histograms/s5_heatmaps.ipynb)
   Heatmaps, Contours & 2D Histograms (`s5_heatmaps`)
 
-Proposed future sections:
-
-* Section ?: Maps, Polor charts, 3D plots, Streaming Data, Retrieve data from Plotly
-* Appendix A: Complete list of Plotly style options
-* Appendix B: FAQ
-* Appendix C: Useful templates (for users looking to 'plug and play')
-
 
 #### Other files in this repo
 
@@ -78,6 +71,7 @@ Proposed future sections:
 
 * `todo.md`: list of ideas for this project (not official by any means)
 
+* `api-v1-test.ipnb`: notebook filled with v1.0 tests
 
 #### Installation guidelines
 
@@ -85,8 +79,7 @@ Step 1. The User Guide assume :
   
 * Plotly version 1.0 **Important**
 * Python version 2.7.5+
-  - `numpy`, installed for all sections
-  - `pandas`, installed for sections 3 and 5
+  - with `numpy`, `scipy`, `pandas` installed
 * IPython version 2.0.0
 
 Step 2. To install Plotly, use pip:
