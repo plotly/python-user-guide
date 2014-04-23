@@ -4,35 +4,38 @@ List of ideas for this project
 
 ### The Tomorrow file
 
-+ Wanna make a section on Plotly basics (a 'real' section 0)
++ make a section on Plotly basics (a 'real' section 0)
   
   - s00_homepage 
+  - s0_getting-started
     (first plotly plot, Data, Layout, Figure, help(), 
      workflows (get), validation, trace-generating functions ...
      the 'type' key in the trace dictionary are obsolete 
      why graph objects? (show nested dictionary stuff)!
-  - s0_getting-started
   - s1_ ... and so on  ???
 
   - Find a new dataset (by the end of the week) !!!
 
 + Make a update_navigation.sh script
  
-  - Add a 'back to top' button at the bottom of each notebook
+  - Add a 'back to top' button in this section
+
++ Change my_git.sh into makefile
 
 + My new conventions:
 
   - my_fig=Figure(0), my_data=Data(), my_layout=Layout()
   - figure numbering by subsection: Fig $section,$subsection{,[a-z]}:
+  - from plotly.graph_objs in separate code cell
+  - use my_fig = tls.get_subplots() to setup subplots and put in different cell
 
++ How to introduce subplot?? use fig or ['layout']
 
 + Get started on section 5! Heatmaps, 2d histograms and contours
   
   - leave maps for another sections
 
 + New Python API feautres: 
-
-  See http://nbviewer.ipython.org/github/plotly/python-api/blob/1.0/notebooks/Plotly%20and%20Python.ipynb
 
   - Graph objects, classes for each type of dictionary
   - help() and .validate()
