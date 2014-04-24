@@ -4,6 +4,8 @@ List of ideas for this project
 
 ### The Tomorrow file
 
++ Add a section table of content in notebook header (code that!)
+
 + make a section on Plotly basics (a 'real' section 0)
   
   - s00_homepage 
@@ -12,6 +14,7 @@ List of ideas for this project
      workflows (get), validation, trace-generating functions ...
      the 'type' key in the trace dictionary are obsolete 
      why graph objects? (show nested dictionary stuff)!
+
   - s1_ ... and so on  ???
 
   - Find a new dataset (by the end of the week) !!!
@@ -35,18 +38,10 @@ List of ideas for this project
   
   - leave maps for another sections
 
-+ New Python API feautres: 
-
-  - Graph objects, classes for each type of dictionary
-  - help() and .validate()
-  - subplots generating function
-  - get_figure and strip
-  - credentials
-  - get_subplots
-  - Working in Python -> GUI -> back in Python
-  - fileopt='overwrite' by default now
-
-+ Use (NEW!) for new 1.0 features and (New syntax!) for new syntax ...
++ Get started on streaming API Stuff 
+ 
+  - solve Lorenz equation
+  - solve 2d surface plot stuff
 
 + Except in section 1:
 
@@ -62,8 +57,6 @@ List of ideas for this project
 
 + Change all URLs to nbviewer from /master/ to /1.0/ !!!
 
-+ Should 1.4 be on new workflow and get_figure?? With Andrew's example
-
 + Rendering errors in nbviewer:
   
   - Resizing figure does not inside nbviewer
@@ -71,25 +64,25 @@ List of ideas for this project
   - cell width is also tricky (check CSS file)
   - the <code> tag too is not supported (even in v2.0)
   - can't set text-decoration: none for hyperlinks 
-
-+ Why does In [] Out [] disappeared after running CSS file 
-  (check ../custom2.css !!!) 
+  - Why does In [] Out [] disappeared after running CSS file 
+    (check ../custom2.css !!!) 
 
 + Make all notebooks presentable!
 
-  - s0 mostly done, except table of contents
-  - s1 mostly done, except for 1.3
+  - s00 mostly done, except table of contents
+  - s0 draft done, fill it up!
+  - s1 --- 
   - s2 mostly done
   - s3 one more bubble chart (log, multiple axes, line fit) 
-  - s4 one more histogram (custom bins, area line)
+  - s4 one more histogram (custom bins, area line) almost done
   - s5 contour plots!
-
-+ Have a 'line and scatter revisited' section with new API tools 
+  - s6 streaming API
 
 + Mention Color brewer (at one point, )
 
 + add last code cell (the CSS one) to `update_footer`
- Or at least, make them consistent!
+  
+  - Or at least, make them consistent!
 
 + New Plotly defaults:
 
@@ -97,18 +90,6 @@ List of ideas for this project
   - legend is placed outside axis frame
   - no axis frame
   - a much lighter grid
-
-
-### `Getting Started` should have:
-
-+ Table of Contents with links and full description 
-    (including layout/style options covered, e.g. examples include )
-
-+ Installation guidelines (info on api_key, add pictures!!!)
-
-+ Sign up info --> Setup config.json as in streaming demos!
-
-+ When will the new version -- with help() -- be released?
 
 ### Jack wants: 1 notebook for each of Plotly''s plot types
 
@@ -186,6 +167,10 @@ List of ideas for this project
       - fig 5.1: correlation matrix
       - fig 5.2: contour 
       - fig 5.3: 2d histograms
+
++ 6) Streaming API 
+
+      - fig 6.1
 
 
 
