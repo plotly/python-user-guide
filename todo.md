@@ -4,24 +4,19 @@ List of ideas for this project
 
 ### The Tomorrow file
 
-+ Add a section table of content in notebook header (code that!)
++ URGENT!!!
 
-+ make a section on Plotly basics (a 'real' section 0)
-  
-  - s00_homepage 
-  - s0_getting-started
-    (first plotly plot, Data, Layout, Figure, help(), 
-     workflows (get), validation, trace-generating functions ...
-     the 'type' key in the trace dictionary are obsolete 
-     why graph objects? (show nested dictionary stuff)!
+  - CSS scroll down (pre) cells. Get that right! 
+  - Finish up s0
+  - Finish up s2 (subplot explanations)
 
-  - s1_ ... and so on  ???
-
-  - Find a new dataset (by the end of the week) !!!
++ Find a new dataset for the new section 1 (get inspired by Dreamshot etc)
 
 + Make a update_navigation.sh script
  
   - Add a 'back to top' button in this section
+
++ Add a section table of content in notebook header (code that!)
 
 + Change my_git.sh into makefile
 
@@ -32,8 +27,6 @@ List of ideas for this project
   - from plotly.graph_objs in separate code cell
   - use my_fig = tls.get_subplots() to setup subplots and put in different cell
 
-+ How to introduce subplot?? use fig or ['layout']
-
 + Get started on section 5! Heatmaps, 2d histograms and contours
   
   - leave maps for another sections
@@ -43,19 +36,16 @@ List of ideas for this project
   - solve Lorenz equation
   - solve 2d surface plot stuff
 
-+ Except in section 1:
++ Except in section 0:
 
   - from plotly.graph_objs import Data, Layout, Figure (in first code cell)
   - and the other imports in cell of first use
   - use `my_data` and `my_layout` for Figure kwargs
   - write closing object () on different line
 
-
 + tell users to use pip to install pandas in section 3 and 5
 
 + Plotly names the 'traces' list as 'data'. Change that!
-
-+ Change all URLs to nbviewer from /master/ to /1.0/ !!!
 
 + Rendering errors in nbviewer:
   
@@ -64,8 +54,6 @@ List of ideas for this project
   - cell width is also tricky (check CSS file)
   - the <code> tag too is not supported (even in v2.0)
   - can't set text-decoration: none for hyperlinks 
-  - Why does In [] Out [] disappeared after running CSS file 
-    (check ../custom2.css !!!) 
 
 + Make all notebooks presentable!
 

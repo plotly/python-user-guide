@@ -31,7 +31,7 @@ notebooks](http://ipython.org/notebook.html).
 This Github repository is divided into folders, where each folder contains 
 one IPython notebook and their required data files.
 
-The User Guide homepage is folder `s00_homepage` and the notebook can be found
+The User Guide homepage is folder `s00_homepage` and its notebook can be found
 [here](http://nbviewer.ipython.org/github/etpinard/plotly-python-doc/tree/1.0/s00_homepage/s00_homepage.ipynb).
 
 Current sections:
@@ -58,7 +58,7 @@ Current sections:
 #### Other files in this repo
 
 
-* `plotly-python-doc.css`: CSS file for notebook styling
+* `custom.css`: CSS file for notebook styling
 
 * `my_git.sh`: git add, commit and push shortcut
 
@@ -66,8 +66,8 @@ Current sections:
 
 * `update_header.sh`: update header of all notebooks
 
-* `make_folder.sh`: Makes subfolder `Readme.md` files,
-   print header and footer in notebook (to do!)
+<!-- * `make_folder.sh`: Makes subfolder `Readme.md` files,
+   print header and footer in notebook (to do!) -->
 
 * `todo.md`: list of ideas for this project (not official by any means)
 
@@ -161,9 +161,10 @@ While reading the User Guide, if ever:
 #### Big Thanks to
 
 * [Cam Davidson-Pilon](http://nbviewer.ipython.org/github/CamDavidsonPilon/Probabilistic-Programming-and-Bayesian-Methods-for-Hackers/blob/master/Prologue/Prologue.ipynb) 
-  for notebook styling ideas
 
 * [Lorena A. Barba](http://lorenabarba.com/blog/announcing-aeropython/#.U1ULXdX1LJ4.google_plusone_share)
+  
+  for notebook styling ideas
 
 ![Plotly logo](http://i.imgur.com/i6YeveO.png)
 
