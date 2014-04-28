@@ -91,6 +91,11 @@
         overflow-y: scroll;
         max-height: 400px;
     }
+    div.output_subarea.output_stream.output_stdout.output_text {
+        overflow-x: auto;
+        overflow-y: scroll;
+        max-height: 400px;
+    }
     code{
       /* font-family: "Source Code Pro"; */
       font-size: 78%;
