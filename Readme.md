@@ -31,7 +31,7 @@ notebooks](http://ipython.org/notebook.html).
 This Github repository is divided into folders, where each folder contains 
 one IPython notebook and their required data files.
 
-The User Guide homepage is folder `s00_homepage` and its notebook can be found
+The User Guide homepage is in folder `s00_homepage` and its notebook can be found
 [here](http://nbviewer.ipython.org/github/etpinard/plotly-python-doc/tree/1.0/s00_homepage/s00_homepage.ipynb).
 
 Current sections:
@@ -55,23 +55,9 @@ Current sections:
   Heatmaps, Contours & 2D Histograms (`s5_heatmaps`)
 
 
-#### Other files in this repo
-
+#### Other file(s) in this repo
 
 * `custom.css`: CSS file for notebook styling
-
-* `my_git.sh`: git add, commit and push shortcut
-
-* `update_footer.sh`: update footer of all notebooks
-
-* `update_header.sh`: update header of all notebooks
-
-<!-- * `make_folder.sh`: Makes subfolder `Readme.md` files,
-   print header and footer in notebook (to do!) -->
-
-* `todo.md`: list of ideas for this project (not official by any means)
-
-* `api-v1-test.ipnb`: notebook filled with v1.0 tests
 
 #### Installation guidelines
 
