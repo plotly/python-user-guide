@@ -86,20 +86,10 @@
         text-align:justify;
         text-justify:inter-word;
     }
-    div.output_wrapper {
-        display: -webkit-box;
-        -webkit-box-orient: vertical;
-        -webkit-box-align: stretch;
-        display: -moz-box;
-        -moz-box-orient: vertical;
-        -moz-box-align: stretch;
-        width: 100%;
-        -webkit-box-flex: 1;
-        -moz-box-flex: 1;
-        overflow: auto;
+    div.output_subarea.output_text.output_pyout {
         overflow-x: auto;
         overflow-y: scroll;
-        max-height: 200px;
+        max-height: 400px;
     }
     code{
       /* font-family: "Source Code Pro"; */
