@@ -166,5 +166,5 @@ While reading the User Guide, if ever:
   
   for notebook styling ideas
 
-![Plotly logo](http://i.imgur.com/i6YeveO.png)
+![Plotly logo](http://i.imgur.com/4vwuxdJ.png)
 

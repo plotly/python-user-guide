@@ -167,15 +167,18 @@
       display:block;
       background: #f3f3f3;
       font-family: 'Open sans',verdana,arial,sans-serif;
-      line-height: 135%;
-      font-size: 125%;
       width:610px;
       padding: 15px 15px 15px 15px;
       text-align:justify;
       text-justify:inter-word;
       }
-    element.style {
-    }  
+      blockquote p {
+        margin-bottom: 0;
+        line-height: 125%;
+        font-size: 100%;
+      }
+   /* element.style {
+    } */  
 </style>
 <script>
     MathJax.Hub.Config({

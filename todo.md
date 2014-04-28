@@ -10,6 +10,12 @@ List of ideas for this project
   - Finish up s0
   - Finish up s2 (subplot explanations)
 
++ Merge branch 1.0 to master and update homepage
+
+  - would have to change every link with User Guide URLs
+
++ Try the lazy man's NB spell check again
+
 + Find a new dataset for the new section 1 (get inspired by Dreamshot etc)
 
 + Make a update_navigation.sh script
@@ -22,10 +28,12 @@ List of ideas for this project
 
 + My new conventions:
 
-  - my_fig=Figure(0), my_data=Data(), my_layout=Layout()
+  - my_fig=Figure(), my_data=Data(), my_layout=Layout()
   - figure numbering by subsection: Fig $section,$subsection{,[a-z]}:
-  - from plotly.graph_objs in separate code cell
+  - from plotly.graph_objs in separate code cell,
+    and the other imports in cell of first use
   - use my_fig = tls.get_subplots() to setup subplots and put in different cell
+  - write closing object () on different line (except in section 0)
 
 + Get started on section 5! Heatmaps, 2d histograms and contours
   
@@ -36,16 +44,7 @@ List of ideas for this project
   - solve Lorenz equation
   - solve 2d surface plot stuff
 
-+ Except in section 0:
-
-  - from plotly.graph_objs import Data, Layout, Figure (in first code cell)
-  - and the other imports in cell of first use
-  - use `my_data` and `my_layout` for Figure kwargs
-  - write closing object () on different line
-
 + tell users to use pip to install pandas in section 3 and 5
-
-+ Plotly names the 'traces' list as 'data'. Change that!
 
 + Rendering errors in nbviewer:
   
