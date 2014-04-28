@@ -37,14 +37,11 @@
     } 
     h3 {
         font-family: 'Open sans',verdana,arial,sans-serif;
-     /*   text-indent:0.5em; */
     }
     .text_cell_render h3 {
         font-weight: 300;
         font-size: 18pt;
-        /* font-style: italic; */
         line-height: 100%;
-        /* color: #1d3b84; */
         color:#447adb;
         margin-bottom: 0.5em;
         margin-top: 2em;
@@ -89,15 +86,14 @@
     div.output_subarea.output_text.output_pyout {
         overflow-x: auto;
         overflow-y: scroll;
-        max-height: 400px;
+        max-height: 300px;
     }
     div.output_subarea.output_stream.output_stdout.output_text {
         overflow-x: auto;
         overflow-y: scroll;
-        max-height: 400px;
+        max-height: 300px;
     }
     code{
-      /* font-family: "Source Code Pro"; */
       font-size: 78%;
     }
     ul{
@@ -117,39 +113,49 @@
     /*.prompt{
         display: None;
     } */
-    a:link{
-       text-decoration: none; // does not work in nbviewer
-       font-weight: bold;
-       color:#447adb;
-    }
     ul li{
         padding-left: 0.5em; 
         margin-bottom: 0.5em; 
         margin-top: 0.2em; 
     }
+    a:link{
+       font-weight: bold;
+       color:#447adb;
+    }
     a:visited{
-       text-decoration: none; // does not work in nbviewer
        font-weight: bold;
        color: #1d3b84;
     }
     a:hover{
-       text-decoration: none; // does not work in nbviewer
        font-weight: bold;
        color: #1d3b84;
     }
     a:focus{
-       text-decoration: none; // does not work in nbviewer
        font-weight: bold;
        color:#447adb;
     }
     a:active{
-       text-decoration: none; // does not work in nbviewer
        font-weight: bold;
        color:#447adb;
     }
+    .rendered_html :link {
+       text-decoration: none; 
+    }
+    .rendered_html :hover {
+       text-decoration: none; 
+    }
+    .rendered_html :visited {
+      text-decoration: none;
+    }
+    .rendered_html :focus {
+      text-decoration: none;
+    }
+    .rendered_html :active {
+      text-decoration: none;
+    }
     .warning{
         color: rgb( 240, 20, 20 )
-        } 
+    } 
     hr {
       color: #f3f3f3;
       background-color: #f3f3f3;
