@@ -25,26 +25,26 @@ The User Guide homepage is in folder `s00_homepage` and its notebook can be foun
 
 Current sections:
 
-* [Section 0:](http://nbviewer.ipython.org/github/etpinard/plotly-python-doc/tree/master/s0_getting-started/s0_getting-started.ipynb)
+* [Section 0:](http://nbviewer.ipython.org/github/plotly/python-user-guide/blob/master/s0_getting-started/s0_getting-started.ipynb)
   Getting Started with Plotly (`s0_getting-started`)
 
-* [Section 1:](http://nbviewer.ipython.org/github/etpinard/plotly-python-doc/tree/master/s1_line-scatter/s1_line-scatter.ipynb)
+* [Section 1:](http://nbviewer.ipython.org/github/plotly/python-user-guide/blob/master/s1_line-scatter/s1_line-scatter.ipynb)
   Line & Scatter Plots (`s1_line-scatter`)
 
-* [Section 2:](http://nbviewer.ipython.org/github/etpinard/plotly-python-doc/tree/master/s2_bar-charts/s2_bar-charts.ipynb)
+* [Section 2:](http://nbviewer.ipython.org/github/plotly/python-user-guide/blob/master/s2_bar-charts/s2_bar-charts.ipynb)
   Bar Charts & Error Bars (`s2_bar-charts`)
 
-* [Section 3:](http://nbviewer.ipython.org/github/etpinard/plotly-python-doc/tree/master/s3_bubble-charts/s3_bubble-charts.ipynb)
+* [Section 3:](http://nbviewer.ipython.org/github/plotly/python-user-guide/blob/master/s3_bubble-charts/s3_bubble-charts.ipynb)
   Bubble Charts (`s3_bubble-charts`)
 
-* [Section 4:](http://nbviewer.ipython.org/github/etpinard/plotly-python-doc/tree/master/s4_histograms/s4_histograms.ipynb)
+* [Section 4:](http://nbviewer.ipython.org/github/plotly/python-user-guide/blob/master/s4_histograms/s4_histograms.ipynb)
   Histograms & box plots (`s4_histograms`)
 
-* [Section 5:](http://nbviewer.ipython.org/github/etpinard/plotly-python-doc/tree/master/s4_histograms/s5_heatmaps.ipynb)
+* [Section 5:](http://nbviewer.ipython.org/github/plotly/python-user-guide/blob/master/s4_histograms/s5_heatmaps.ipynb)
   Heatmaps, Contours & 2D Histograms (`s5_heatmaps`)
 
 
-* [Appendix A:](http://nbviewer.ipython.org/github/etpinard/plotly-python-doc/tree/master/sA_python-basics/sA_python-basics.ipynb)
+* [Appendix A:](http://nbviewer.ipython.org/github/plotly/python-user-guide/blob/master/sA_python-basics/sA_python-basics.ipynb)
   Python Basics (`sA_python-basics`)
 
 #### Other file(s) in this repo
