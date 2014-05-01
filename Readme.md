@@ -26,10 +26,10 @@ The User Guide homepage is in folder `s00_homepage` and its notebook can be foun
 Current sections:
 
 * [Section 0:](http://nbviewer.ipython.org/github/plotly/python-user-guide/blob/master/s0_getting-started/s0_getting-started.ipynb)
-  Getting Started with Plotly (`s0_getting-started`)
+  Getting Started with Plotly (`s0_getting-started`) 
 
 * [Section 1:](http://nbviewer.ipython.org/github/plotly/python-user-guide/blob/master/s1_line-scatter/s1_line-scatter.ipynb)
-  Line & Scatter Plots (`s1_line-scatter`)
+  Line & Scatter Plots (`s1_line-scatter`) (in development)
 
 * [Section 2:](http://nbviewer.ipython.org/github/plotly/python-user-guide/blob/master/s2_bar-charts/s2_bar-charts.ipynb)
   Bar Charts & Error Bars (`s2_bar-charts`)
@@ -41,11 +41,11 @@ Current sections:
   Histograms & box plots (`s4_histograms`)
 
 * [Section 5:](http://nbviewer.ipython.org/github/plotly/python-user-guide/blob/master/s4_heatmaps/s5_heatmaps.ipynb)
-  Heatmaps, Contours & 2D Histograms (`s5_heatmaps`)
+  Heatmaps, Contours & 2D Histograms (`s5_heatmaps`) (in development)
 
 
 * [Appendix A:](http://nbviewer.ipython.org/github/plotly/python-user-guide/blob/master/sA_python-basics/sA_python-basics.ipynb)
-  Python Basics (`sA_python-basics`)
+  Python Basics (`sA_python-basics`) (in development)
 
 #### Other file(s) in this repo
 
