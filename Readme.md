@@ -70,7 +70,7 @@ While reading the User Guide, if ever:
   or tweet at [@plotlygraphs](https://twitter.com/plotlygraphs)
 
 * About the User Guide
-  email at etienne.t.pinard@gmail.com
+  email at etienne@plot.ly
   or tweet at [@etpinard](https://twitter.com/etpinard)
 
 #### Big Thanks to
