@@ -45,7 +45,7 @@ Current sections:
 
 
 * [Appendix A:](http://nbviewer.ipython.org/github/etpinard/plotly-python-doc/tree/master/sA_python-basics/sA_python-basics.ipynb)
-  Python Basics (`sA_python-basics)
+  Python Basics (`sA_python-basics`)
 
 #### Other file(s) in this repo
 
