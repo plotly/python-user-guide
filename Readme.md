@@ -40,7 +40,7 @@ Current sections:
 * [Section 4:](http://nbviewer.ipython.org/github/plotly/python-user-guide/blob/master/s4_histograms/s4_histograms.ipynb)
   Histograms & box plots (`s4_histograms`)
 
-* [Section 5:](http://nbviewer.ipython.org/github/plotly/python-user-guide/blob/master/s4_histograms/s5_heatmaps.ipynb)
+* [Section 5:](http://nbviewer.ipython.org/github/plotly/python-user-guide/blob/master/s4_heatmaps/s5_heatmaps.ipynb)
   Heatmaps, Contours & 2D Histograms (`s5_heatmaps`)
 
 
