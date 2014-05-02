@@ -7,7 +7,7 @@ The User Guide was written with the goal of giving Plotly Python (and IPython)
 users extensive documentation on almost all of Plotly's features. 
 
 Whereas Plotly's [web documentation and
-gallery](https://plot.ly/api/python/docs) is meant to serve Plotly beginners
+gallery](https://plot.ly/python) is meant to serve Plotly beginners
 just looking to make a simple plot and experienced users trying out a new plot
 type.  The User Guide intends to make beginner and intermediate Plotly users
 experts.
@@ -21,7 +21,7 @@ This Github repository is divided into folders, where each folder contains
 one IPython notebook and their required data files.
 
 The User Guide homepage is in folder `s00_homepage` and its notebook can be found
-[here](http://nbviewer.ipython.org/github/etpinard/plotly-python-doc/blob/master/s00_homepage/s00_homepage.ipynb).
+[here](http://nbviewer.ipython.org/github/plotly/python-user-guide/blob/master/Index.ipynb).
 
 Current sections:
 
