@@ -21,7 +21,7 @@ This Github repository is divided into folders, where each folder contains
 one IPython notebook and their required data files.
 
 The User Guide homepage is in folder `s00_homepage` and its notebook can be found
-[here](http://nbviewer.ipython.org/github/etpinard/plotly-python-doc/treemasters00_homepage/s00_homepage.ipynb).
+[here](http://nbviewer.ipython.org/github/etpinard/plotly-python-doc/blob/master/s00_homepage/s00_homepage.ipynb).
 
 Current sections:
 
