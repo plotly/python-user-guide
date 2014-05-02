@@ -49,6 +49,8 @@ Current sections:
 
 #### Other file(s) in this repo
 
+* `Index.ipynb`: overview of the notebooks in this repository
+
 * `custom.css`: CSS file for notebook styling
 
 #### Want to improve the User Guide
