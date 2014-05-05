@@ -96,6 +96,9 @@
     code{
       font-size: 78%;
     }
+    .rendered_html code{
+    background-color: transparent;
+    }
     ul{
         /* color:#447adb; */  // colors text too
         margin: 2em;
