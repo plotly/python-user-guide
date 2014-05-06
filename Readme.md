@@ -47,7 +47,7 @@ Current sections:
 * [Appendix A:](http://nbviewer.ipython.org/github/plotly/python-user-guide/blob/master/sA_python-basics/sA_python-basics.ipynb)
   Python Basics (`sA_python-basics`) (in development)
 
-#### Other file(s) in this repo
+#### Other files in this repo
 
 * `Index.ipynb`: overview of the notebooks in this repository
 
