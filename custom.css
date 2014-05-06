@@ -113,6 +113,15 @@
         margin-bottom: 0.2em; 
         margin-top: 0.2em; 
     }
+    ol{
+        /* color:#447adb; */  // colors text too
+        margin: 2em;
+    }
+    ol li{
+        padding-left: 0.5em; 
+        margin-bottom: 0.5em; 
+        margin-top: 0.5em; 
+    }
     /*.prompt{
         display: None;
     } */

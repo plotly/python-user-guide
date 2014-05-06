@@ -28,6 +28,7 @@ Current sections:
 * [Section 0:](http://nbviewer.ipython.org/github/plotly/python-user-guide/blob/master/s0_getting-started/s0_getting-started.ipynb)
   Getting Started with Plotly (`s0_getting-started`) 
 
+
 * [Section 1:](http://nbviewer.ipython.org/github/plotly/python-user-guide/blob/master/s1_line-scatter/s1_line-scatter.ipynb)
   Line & Scatter Plots (`s1_line-scatter`) (in development)
 
@@ -40,8 +41,14 @@ Current sections:
 * [Section 4:](http://nbviewer.ipython.org/github/plotly/python-user-guide/blob/master/s4_histograms/s4_histograms.ipynb)
   Histograms & box plots (`s4_histograms`)
 
-* [Section 5:](http://nbviewer.ipython.org/github/plotly/python-user-guide/blob/master/s4_heatmaps/s5_heatmaps.ipynb)
+* [Section 5:](http://nbviewer.ipython.org/github/plotly/python-user-guide/blob/master/s5_heatmaps/s5_heatmaps.ipynb)
   Heatmaps, Contours & 2D Histograms (`s5_heatmaps`) (in development)
+
+* [Section 6:](http://nbviewer.ipython.org/github/plotly/python-user-guide/blob/master/s6_matplotlylib/s6_matplotlylib.ipynb)
+  Matplotlib + Plotly = Matplotlylib (`s6_matplotlylib`) (in development)
+
+* [Section 7:](http://nbviewer.ipython.org/github/plotly/python-user-guide/blob/master/s7_streaming/s7_streaming.ipynb)
+  Plotly's Streaming API (`s7_streaming`) 
 
 
 * [Appendix A:](http://nbviewer.ipython.org/github/plotly/python-user-guide/blob/master/sA_python-basics/sA_python-basics.ipynb)
