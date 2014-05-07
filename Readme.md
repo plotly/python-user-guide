@@ -18,47 +18,18 @@ The User Guide is entirely written inside [IPython
 notebooks](http://ipython.org/notebook.html). 
 
 This Github repository is divided into folders, where each folder contains 
-one IPython notebook and their required data files.
-
-The User Guide homepage is in folder `s00_homepage` and its notebook can be found
-[here](http://nbviewer.ipython.org/github/plotly/python-user-guide/blob/master/Index.ipynb).
-
-Current sections:
-
-* [Section 0:](http://nbviewer.ipython.org/github/plotly/python-user-guide/blob/master/s0_getting-started/s0_getting-started.ipynb)
-  Getting Started with Plotly (`s0_getting-started`) 
+one IPython notebook and the data files required to run them.
 
 
-* [Section 1:](http://nbviewer.ipython.org/github/plotly/python-user-guide/blob/master/s1_line-scatter/s1_line-scatter.ipynb)
-  Line & Scatter Plots (`s1_line-scatter`) (in development)
-
-* [Section 2:](http://nbviewer.ipython.org/github/plotly/python-user-guide/blob/master/s2_bar-charts/s2_bar-charts.ipynb)
-  Bar Charts & Error Bars (`s2_bar-charts`)
-
-* [Section 3:](http://nbviewer.ipython.org/github/plotly/python-user-guide/blob/master/s3_bubble-charts/s3_bubble-charts.ipynb)
-  Bubble Charts (`s3_bubble-charts`)
-
-* [Section 4:](http://nbviewer.ipython.org/github/plotly/python-user-guide/blob/master/s4_histograms/s4_histograms.ipynb)
-  Histograms & box plots (`s4_histograms`)
-
-* [Section 5:](http://nbviewer.ipython.org/github/plotly/python-user-guide/blob/master/s5_heatmaps/s5_heatmaps.ipynb)
-  Heatmaps, Contours & 2D Histograms (`s5_heatmaps`) (in development)
-
-* [Section 6:](http://nbviewer.ipython.org/github/plotly/python-user-guide/blob/master/s6_matplotlylib/s6_matplotlylib.ipynb)
-  Matplotlib + Plotly = Matplotlylib (`s6_matplotlylib`) (in development)
-
-* [Section 7:](http://nbviewer.ipython.org/github/plotly/python-user-guide/blob/master/s7_streaming/s7_streaming.ipynb)
-  Plotly's Streaming API (`s7_streaming`) 
+Refer to
+[Index.ipynb](http://nbviewer.ipython.org/github/plotly/python-user-guide/blob/master/Index.ipynb)
+for an overview of the notebooks in this repository.
 
 
-* [Appendix A:](http://nbviewer.ipython.org/github/plotly/python-user-guide/blob/master/sA_python-basics/sA_python-basics.ipynb)
-  Python Basics (`sA_python-basics`) (in development)
-
-#### Other files in this repo
-
-* `Index.ipynb`: overview of the notebooks in this repository
+#### Other file(s) in this repo
 
 * `custom.css`: CSS file for notebook styling
+
 
 #### Want to improve the User Guide
 
