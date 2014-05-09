@@ -1,4 +1,4 @@
-Section 6: Matplotlib + Plotly = Matplotlylib
+Section 6: Convert your Matplotlib plots to Plotly
 -------------------------------
 
 See with
