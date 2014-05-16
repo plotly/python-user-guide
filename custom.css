@@ -8,7 +8,7 @@
         margin-right: auto;
     }
     h1 {
-        font-family: 'Open sans',verdana,arial,sans-serif;
+        font-family: "Open sans",verdana,arial,sans-serif;
     }
     .text_cell_render h1 {
         font-weight: 200;
@@ -21,7 +21,7 @@
         white-space: nowrap;
     } 
     h2 {
-        font-family: 'Open sans',verdana,arial,sans-serif;
+        font-family: "Open sans",verdana,arial,sans-serif;
         text-indent:1em;
     }
     .text_cell_render h2 {
@@ -36,7 +36,7 @@
         white-space: nowrap;
     } 
     h3 {
-        font-family: 'Open sans',verdana,arial,sans-serif;
+        font-family: "Open sans",verdana,arial,sans-serif;
     }
     .text_cell_render h3 {
         font-weight: 300;
@@ -49,7 +49,7 @@
         white-space: nowrap;
     }
     h4 {
-        font-family: 'Open sans',verdana,arial,sans-serif;
+        font-family: "Open sans",verdana,arial,sans-serif;
     }
     .text_cell_render h4 {
         font-weight: 300;
@@ -61,7 +61,7 @@
         white-space: nowrap;
     }
     h5 {
-        font-family: 'Open sans',verdana,arial,sans-serif;
+        font-family: "Open sans",verdana,arial,sans-serif;
     }
     .text_cell_render h5 {
         font-weight: 300;
@@ -74,7 +74,7 @@
         white-space: nowrap;
     }
     div.text_cell_render{
-        font-family: 'Open sans',verdana,arial,sans-serif;
+        font-family: "Open sans",verdana,arial,sans-serif;
         line-height: 135%;
         font-size: 125%;
         width:750px;
@@ -176,7 +176,7 @@
     blockquote{
       display:block;
       background: #f3f3f3;
-      font-family: 'Open sans',verdana,arial,sans-serif;
+      font-family: "Open sans",verdana,arial,sans-serif;
       width:610px;
       padding: 15px 15px 15px 15px;
       text-align:justify;
@@ -196,12 +196,12 @@
                            extensions: ["AMSmath.js"]
                            },
                 tex2jax: {
-                    inlineMath: [ ['$','$'], ["\\(","\\)"] ],
-                    displayMath: [ ['$$','$$'], ["\\[","\\]"] ]
+                    inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+                    displayMath: [ ["$$","$$"], ["\\[","\\]"] ]
                 },
-                displayAlign: 'center', // Change this to 'center' to center equations.
+                displayAlign: "center", // Change this to "center" to center equations.
                 "HTML-CSS": {
-                    styles: {'.MathJax_Display': {"margin": 4}}
+                    styles: {".MathJax_Display": {"margin": 4}}
                 }
         });
 </script>
