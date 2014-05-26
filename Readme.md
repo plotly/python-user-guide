@@ -17,9 +17,9 @@ experts.
 The User Guide is entirely written inside [IPython
 notebooks](http://ipython.org/notebook.html). 
 
-This Github repository is divided into folders, where each folder contains 
-one IPython notebook and the data files required to run them.
-
+This Github repository is divided into folders, one for each section or
+appendix. Each folder contains one or several IPython notebooks and the required
+data files to run them.
 
 Refer to
 [Index.ipynb](http://nbviewer.ipython.org/github/plotly/python-user-guide/blob/master/Index.ipynb)
