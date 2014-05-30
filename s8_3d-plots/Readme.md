@@ -1,4 +1,4 @@
-Section 7: 3D Plots
+Section 8: 3D Plots
 -------------------------------
 
 See with
