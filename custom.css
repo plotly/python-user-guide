@@ -99,6 +99,10 @@
       /*  overflow-y: scroll; */
       /*  max-height: 300px;   */
     }
+    div.output_subarea {
+        overflow-x: scroll;
+        max-width: 100%;
+    }
     code{
       font-size: 78%;
     }
@@ -106,7 +110,7 @@
     background-color: transparent;
     }
     ul{
-        /* color:#447adb; */  // colors text too
+        /* color:#447adb; */  
         margin: 2em;
     }
     ul li{
@@ -120,7 +124,7 @@
         margin-top: 0.2em; 
     }
     ol{
-        /* color:#447adb; */  // colors text too
+        /* color:#447adb; */  
         margin: 2em;
     }
     ol li{
