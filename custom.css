@@ -99,10 +99,6 @@
       /*  overflow-y: scroll; */
       /*  max-height: 300px;   */
     }
-    div.output_subarea {
-        overflow-x: scroll;
-        max-width: 100%;
-    }
     code{
       font-size: 78%;
     }
