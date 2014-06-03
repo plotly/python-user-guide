@@ -93,6 +93,12 @@
         overflow-y: scroll;
         max-height: 300px;
     }
+    div.output_subarea.output_html.rendered_html {
+        overflow-x: scroll;
+        max-width: 100%;
+      /*  overflow-y: scroll; */
+      /*  max-height: 300px;   */
+    }
     code{
       font-size: 78%;
     }
