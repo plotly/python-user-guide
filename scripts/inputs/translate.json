@@ -1,0 +1,15 @@
+{
+    "s00_homepage/s00_homepage" : "home",
+    "s0_getting-started/s0_getting-started" : "getting-started",
+    "s1_line-scatter/s1_line-scatter" : "line-scatter",
+    "s2_bar-charts/s2_bar-charts" : "bar-charts",
+    "s3_bubble-charts/s3_bubble-charts" : "bubble-charts",
+    "s4_histograms/s4_histograms" : "histograms",
+    "s5_heatmaps/s5_heatmaps" : "heatmaps-contours-2dhistograms",
+    "s6_matplotlylib/s6_matplotlylib" : "matplotlib-to-plotly",
+    "s7_streaming/s7_streaming" : "streaming-home",
+    "s7_streaming/s7_streaming_p1-first-stream" : "streaming-line",
+    "s7_streaming/s7_streaming_p2-double-pendulum" : "streaming-double-pendulum",
+    "s7_streaming/s7_streaming_p3-bubbles" : "streaming-bubbles",
+    "sA_python-basics/sA_python-basics" : "python-basics"
+}
