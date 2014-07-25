@@ -6,12 +6,6 @@
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Plotly's-Python-API-User-Guide">
-        Plotly's Python API User Guide
-        <a class="anchor-link" href="#Plotly's-Python-API-User-Guide">
-         ¶
-        </a>
-</h1>
 </div>
 </div>
 </div>
@@ -40,12 +34,12 @@
 <blockquote>
 <p>
          Links to the other sections are on the User Guide's
-         <a href="https://plot.ly/python/user-guide/home#Table-of-Contents:">
+         <a href="https://local.plot.ly/python/user-guide/home#Table-of-Contents:">
           homepage
          </a>
 <br/>
          If unfamiliar with Plotly's Python API version 1.0 see
-         <a href="https://plot.ly/python/user-guide/getting-started">
+         <a href="https://local.plot.ly/python/user-guide/getting-started">
           section 0
          </a>
 <br/>
@@ -162,7 +156,7 @@
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>
         See the User Guide's
-        <a href="https://plot.ly/python/user-guide/home#Installation-guidelines" target="_blank">
+        <a href="https://local.plot.ly/python/user-guide/home#Installation-guidelines" target="_blank">
          homepage
         </a>
         for more info on installation and upgrading.
@@ -182,7 +176,7 @@
          get_figure()
         </code>
         function, introduced in
-        <a href="https://plot.ly/python/user-guide/getting-started#0.6-Get-figure-and-new-possible-workflows" target="_blank">
+        <a href="https://local.plot.ly/python/user-guide/getting-started#0.6-Get-figure-and-new-possible-workflows" target="_blank">
          section 0
         </a>
         , once more as well as presenting a hall of fame of Plotly datasets.
@@ -250,7 +244,7 @@ Additionally, we learn about:
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>
         If you are not familiar with credentials files, refer to the User Guide's
-        <a href="https://plot.ly/python/user-guide/home#Step-6" target="_blank">
+        <a href="https://local.plot.ly/python/user-guide/home#Step-6" target="_blank">
          homepage
         </a>
         .
@@ -356,7 +350,7 @@ Additionally, we learn about:
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>
         Our first plot will present that the data using lines and points instead of bars (more on Plotly bar charts in
-        <a href="https://plot.ly/python/user-guide/bar-charts" target="_blank">
+        <a href="https://local.plot.ly/python/user-guide/bar-charts" target="_blank">
          section 2
         </a>
         ).
@@ -2456,7 +2450,7 @@ rgb(255, 255, 255)
        </p>
 <p>
         Later in
-        <a href="https://plot.ly/python/user-guide/bubble-charts">
+        <a href="https://local.plot.ly/python/user-guide/bubble-charts">
          section 3
         </a>
         on Bubble Charts, we will see that the
@@ -2930,25 +2924,25 @@ Both
 <hr/>
 <h4 style="font-size:14pt;">
         Go to
-        <a href="https://plot.ly/python/user-guide/bar-charts">
+        <a href="https://local.plot.ly/python/user-guide/bar-charts">
          Section 2 --- Bar Charts
         </a>
 </h4>
 <h4 style="font-size:14pt;">
         Go to
-        <a href="https://plot.ly/python/user-guide/getting-started">
+        <a href="https://local.plot.ly/python/user-guide/getting-started">
          Section 0 --- Getting Started with Plotly
         </a>
 </h4>
 <h4 style="font-size:14pt;">
         Go to
-        <a href="#Plotly's-Python-API-User-Guide">
+        <a href="#notebook">
          top of page
         </a>
 </h4>
 <h4 style="font-size:14pt;">
         Go to User Guide's
-        <a href="https://plot.ly/python/user-guide/home">
+        <a href="https://local.plot.ly/python/user-guide/home">
          homepage
         </a>
 </h4>
@@ -3048,10 +3042,7 @@ Both
 </div>
 <div class="output_html rendered_html output_subarea ">
 <style>
-          /*body {
-        background-color: #F5F5F5;
-    }*/
-    div.cell{
+          div.cell{
         width: 850px;
         margin-left: 10% !important;
         margin-right: auto;
@@ -3152,7 +3143,8 @@ Both
       font-size: 78%;
     }
     .rendered_html code{
-    background-color: transparent;
+        background-color: transparent;
+        white-space: inherit;   
     }
     ul{
         /* color:#447adb; */  
@@ -3241,6 +3233,7 @@ Both
         margin-bottom: 0;
         line-height: 125%;
         font-size: 100%;
+        text-align: center;
       }
    /* element.style {
     } */

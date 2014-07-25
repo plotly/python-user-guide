@@ -6,12 +6,6 @@
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Plotly's-Python-API-User-Guide">
-        Plotly's Python API User Guide
-        <a class="anchor-link" href="#Plotly's-Python-API-User-Guide">
-         ¶
-        </a>
-</h1>
 </div>
 </div>
 </div>
@@ -40,12 +34,12 @@
 <blockquote>
 <p>
          Links to the other sections are on the User Guide's
-         <a href="https://plot.ly/python/user-guide/home#Table-of-Contents:">
+         <a href="https://local.plot.ly/python/user-guide/home#Table-of-Contents:">
           homepage
          </a>
 <br/>
          If unfamiliar with Plotly's Python API version 1.0 see
-         <a href="https://plot.ly/python/user-guide/getting-started">
+         <a href="https://local.plot.ly/python/user-guide/getting-started">
           section 0
          </a>
 <br/>
@@ -159,7 +153,7 @@
 </div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>
-1.2.2
+1.2.3
 
 </pre>
 </div>
@@ -174,7 +168,7 @@
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>
         See the User Guide's
-        <a href="https://plot.ly/python/user-guide/home#Installation-guidelines" target="_blank">
+        <a href="https://local.plot.ly/python/user-guide/home#Installation-guidelines" target="_blank">
          homepage
         </a>
         for more info on installation and upgrading.
@@ -247,7 +241,7 @@
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>
         If you are not familiar with credentials files, refer to the User Guide's
-        <a href="https://plot.ly/python/user-guide/home#Step-6" target="_blank">
+        <a href="https://local.plot.ly/python/user-guide/home#Step-6" target="_blank">
          homepage
         </a>
         .
@@ -262,7 +256,7 @@
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>
         In similar fashion to
-        <a href="https://plot.ly/python/user-guide/bar-charts">
+        <a href="https://local.plot.ly/python/user-guide/bar-charts">
          section 2
         </a>
         (Bar Charts and Error Bars), we read and plot data from a csv file. The csv file in question
@@ -586,7 +580,7 @@ Final Exam: 63 grades out of 68 entries
 </ul>
 <p>
         For more information on these options, see
-        <a href="https://plot.ly/python/user-guide/bar-charts">
+        <a href="https://local.plot.ly/python/user-guide/bar-charts">
          section 2
         </a>
         of the User Guide.
@@ -1652,7 +1646,7 @@ Figure(
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>
         But, as in
-        <a href="https://plot.ly/python/user-guide/bar-charts" target="blank">
+        <a href="https://local.plot.ly/python/user-guide/bar-charts" target="blank">
          section 2
         </a>
         , we would like to make all subplots share the same x-axis corresponding to grades. So, delete all unnecessary keys:
@@ -2513,10 +2507,12 @@ class Box(PlotlyTrace)
  |      showlegend [required=False] (value=boolean: True | False):
  |          Toggle whether or not this trace will be labeled in the legend.
  |  
- |      stream [required=False] (value=dictionary-like):
+ |      stream [required=False] (value=Stream object | dictionary-like):
  |          The stream dictionary-like object that initializes traces as
  |          writable-streams, for use with the real-time streaming API. Learn
  |          more here: https://plot.ly/python/streaming/
+ |  
+ |          For more, run `help(plotly.graph_objs.Stream)`
  |  
  |      visible [required=False] (value=boolean: True | False):
  |          Toggles whether or not this object will actually be visible in the
@@ -3062,25 +3058,25 @@ class Box(PlotlyTrace)
 <hr/>
 <h4 style="font-size:14pt;">
         Go to
-        <a href="https://plot.ly/python/user-guide/heatmaps-contours-2dhistograms">
+        <a href="https://local.plot.ly/python/user-guide/heatmaps-contours-2dhistograms">
          Section 5 --- Heatmaps, Contours &amp; 2D Histograms
         </a>
 </h4>
 <h4 style="font-size:14pt;">
         Go to
-        <a href="https://plot.ly/python/user-guide/bubble-charts">
+        <a href="https://local.plot.ly/python/user-guide/bubble-charts">
          Section 3 --- Bubble Charts
         </a>
 </h4>
 <h4 style="font-size:14pt;">
         Go back to
-        <a href="#Plotly's-Python-API-User-Guide">
+        <a href="#notebook">
          top of page
         </a>
 </h4>
 <h4 style="font-size:14pt;">
         Go back to User Guide's
-        <a href="https://plot.ly/python/user-guide/home">
+        <a href="https://local.plot.ly/python/user-guide/home">
          homepage
         </a>
 </h4>
@@ -3181,10 +3177,7 @@ class Box(PlotlyTrace)
 </div>
 <div class="output_html rendered_html output_subarea ">
 <style>
-          /*body {
-        background-color: #F5F5F5;
-    }*/
-    div.cell{
+          div.cell{
         width: 850px;
         margin-left: 10% !important;
         margin-right: auto;
@@ -3277,13 +3270,16 @@ class Box(PlotlyTrace)
     }
     div.output_subarea.output_html.rendered_html {
         overflow-x: scroll;
-        max-width: 100%;   
+        max-width: 100%;
+      /*  overflow-y: scroll; */
+      /*  max-height: 300px;   */
     }
     code{
       font-size: 78%;
     }
     .rendered_html code{
-    background-color: transparent;
+        background-color: transparent;
+        white-space: inherit;   
     }
     ul{
         /* color:#447adb; */  
@@ -3372,6 +3368,7 @@ class Box(PlotlyTrace)
         margin-bottom: 0;
         line-height: 125%;
         font-size: 100%;
+        text-align: center;
       }
    /* element.style {
     } */

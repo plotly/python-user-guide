@@ -6,12 +6,6 @@
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Plotly's-Python-API-User-Guide">
-        Plotly's Python API User Guide
-        <a class="anchor-link" href="#Plotly's-Python-API-User-Guide">
-         ¶
-        </a>
-</h1>
 </div>
 </div>
 </div>
@@ -40,12 +34,12 @@
 <blockquote>
 <p>
          Links to the other sections are on the User Guide's
-         <a href="https://plot.ly/python/user-guide/home#Table-of-Contents:">
+         <a href="https://local.plot.ly/python/user-guide/home#Table-of-Contents:">
           homepage
          </a>
 <br/>
          If unfamiliar with Plotly's Python API version 1.0 see
-         <a href="https://plot.ly/python/user-guide/getting-started">
+         <a href="https://local.plot.ly/python/user-guide/getting-started">
           section 0
          </a>
 <br/>
@@ -69,28 +63,28 @@
 <ul>
 <li>
 <p>
-<a href="https://plot.ly/python/user-guide/streaming-home">
+<a href="https://local.plot.ly/python/user-guide/streaming">
            7.0 Streaming API introduction
           </a>
 </p>
 </li>
 <li>
 <p>
-<a href="https://plot.ly/python/user-guide/streaming-line">
+<a href="https://local.plot.ly/python/user-guide/streaming-line">
            7.1 A first Plotly streaming plot
           </a>
 </p>
 </li>
 <li>
 <p>
-<a href="https://plot.ly/python/user-guide/streaming-double-pendulum">
+<a href="https://local.plot.ly/python/user-guide/streaming-double-pendulum">
            7.2 Never-ending double pendulum simulation
           </a>
 </p>
 </li>
 <li>
 <p>
-<a href="https://plot.ly/python/user-guide/s7_streaming/s7_streaming_p3-bubbles.ipynb">
+<a href="https://local.plot.ly/python/user-guide/streaming-bubbles">
            7.3 An animated version of Hans Rosling's bubble chart
           </a>
 </p>
@@ -162,7 +156,7 @@
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>
         See the User Guide's
-        <a href="https://plot.ly/python/user-guide/home#Installation-guidelines" target="_blank">
+        <a href="https://local.plot.ly/python/user-guide/home#Installation-guidelines" target="_blank">
          homepage
         </a>
         for more info on installation and upgrading.
@@ -212,7 +206,7 @@
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>
         If you are not familiar with credentials files, refer to the User Guide's
-        <a href="https://plot.ly/python/user-guide/home#Step-6" target="_blank">
+        <a href="https://local.plot.ly/python/user-guide/home#Step-6" target="_blank">
          homepage
         </a>
         .
@@ -227,7 +221,7 @@
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>
         Finally, retrieve the stream ids in our credentials file as set up in
-        <a href="https://plot.ly/python/user-guide/streaming-home#Get-your-stream-tokens" target="_blank">
+        <a href="https://local.plot.ly/python/user-guide/streaming#Get-your-stream-tokens" target="_blank">
          subsection 7.1
         </a>
         :
@@ -703,28 +697,28 @@
 <ul>
 <li>
 <p>
-<a href="https://plot.ly/python/user-guide/streaming-home">
+<a href="https://local.plot.ly/python/user-guide/streaming">
            7.0 Streaming API introduction
           </a>
 </p>
 </li>
 <li>
 <p>
-<a href="https://plot.ly/python/user-guide/streaming-line">
+<a href="https://local.plot.ly/python/user-guide/streaming-line">
            7.1 A first Plotly streaming plot
           </a>
 </p>
 </li>
 <li>
 <p>
-<a href="https://plot.ly/python/user-guide/streaming-double-pendulum">
+<a href="https://local.plot.ly/python/user-guide/streaming-double-pendulum">
            7.2 Never-ending double pendulum simulation
           </a>
 </p>
 </li>
 <li>
 <p>
-<a href="https://plot.ly/python/user-guide/s7_streaming/s7_streaming_p3-bubbles.ipynb">
+<a href="https://local.plot.ly/python/user-guide/streaming-bubbles">
            7.3 An animated version of Hans Rosling's bubble chart
           </a>
 </p>
@@ -738,13 +732,13 @@
 [Section 2 --- Bar Charts](http://nbviewer.ipython.org/github/plotly/python-user-guide/blob/master/s2_bar-charts/s2_bar-charts.ipynb) </h4> -->
 <h4 style="font-size:14pt; margin-top:1.5em">
         Go to
-        <a href="#Plotly's-Python-API-User-Guide">
+        <a href="#notebook">
          top of page
         </a>
 </h4>
 <h4 style="font-size:14pt">
         Go to User Guide's
-        <a href="https://plot.ly/python/user-guide/home">
+        <a href="https://local.plot.ly/python/user-guide/home">
          homepage
         </a>
 </h4>
@@ -844,10 +838,7 @@
 </div>
 <div class="output_html rendered_html output_subarea ">
 <style>
-          /*body {
-        background-color: #F5F5F5;
-    }*/
-    div.cell{
+          div.cell{
         width: 850px;
         margin-left: 10% !important;
         margin-right: auto;
@@ -940,13 +931,16 @@
     }
     div.output_subarea.output_html.rendered_html {
         overflow-x: scroll;
-        max-width: 100%;   
+        max-width: 100%;
+      /*  overflow-y: scroll; */
+      /*  max-height: 300px;   */
     }
     code{
       font-size: 78%;
     }
     .rendered_html code{
-    background-color: transparent;
+        background-color: transparent;
+        white-space: inherit;   
     }
     ul{
         /* color:#447adb; */  
@@ -1035,6 +1029,7 @@
         margin-bottom: 0;
         line-height: 125%;
         font-size: 100%;
+        text-align: center;
       }
    /* element.style {
     } */

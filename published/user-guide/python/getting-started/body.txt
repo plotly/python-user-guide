@@ -6,12 +6,6 @@
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Plotly's-Python-API-User-Guide">
-        Plotly's Python API User Guide
-        <a class="anchor-link" href="#Plotly's-Python-API-User-Guide">
-         ¶
-        </a>
-</h1>
 </div>
 </div>
 </div>
@@ -40,7 +34,7 @@
 <blockquote>
 <p>
          Links to the other sections are on the User Guide's
-         <a href="https://plot.ly/python/user-guide/home#Table-of-Contents:">
+         <a href="https://local.plot.ly/python/user-guide/home#Table-of-Contents:">
           homepage
          </a>
 <br/>
@@ -148,7 +142,7 @@
 </blockquote>
 <p>
         If you are new to Python or in need of a brush up, we recommand looking over the User Guide's
-        <a href="https://plot.ly/python/user-guide/python-basics">
+        <a href="https://local.plot.ly/python/user-guide/python-basics">
          Appendix A
         </a>
         , where we present valuable information about the Python features most used in the User Guide.
@@ -248,7 +242,7 @@
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>
         The User Guide's
-        <a href="https://plot.ly/python/user-guide/home#Installation-guidelines" target="_blank">
+        <a href="https://local.plot.ly/python/user-guide/home#Installation-guidelines" target="_blank">
          homepage
         </a>
         walks you through the Plotly installation/sign up process.
@@ -284,7 +278,7 @@
 </div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>
-1.2.2
+1.2.3
 
 </pre>
 </div>
@@ -414,7 +408,7 @@
        </p>
 <p>
         For information on how to set up your credentials file (don't panic, it is a two-line process), refer to the User Guide's
-        <a href="https://plot.ly/python/user-guide/home#Step-6" target="_blank">
+        <a href="https://local.plot.ly/python/user-guide/home#Step-6" target="_blank">
          homepage
         </a>
 </p>
@@ -1020,7 +1014,8 @@ class Figure(PlotlyDict)
  |  
  |  Valid keys:
  |  
- |      data [required=False] (value=Data object | dictionary-like):
+ |      data [required=False] (value=Data object | array-like of one or several
+ |      dictionaries):
  |          A list-like array of the data trace(s) that is/are to be visualized.
  |  
  |          For more, run `help(plotly.graph_objs.Data)`
@@ -1579,9 +1574,11 @@ class Layout(PlotlyDict)
  |      title [required=False] (value=string):
  |          The title of the figure.
  |  
- |      titlefont [required=False] (value=string):
+ |      titlefont [required=False] (value=Font object | dictionary-like):
  |          A dictionary-like object describing the font settings of the
  |          figure's title.
+ |  
+ |          For more, run `help(plotly.graph_objs.Font)`
  |  
  |      font [required=False] (value=Font object | dictionary-like):
  |          A dictionary-like object describing the global font settings for
@@ -1630,8 +1627,8 @@ class Layout(PlotlyDict)
  |  
  |          For more, run `help(plotly.graph_objs.Legend)`
  |  
- |      annotations [required=False] (value=Annotations object | dictionary-
- |      like):
+ |      annotations [required=False] (value=Annotations object | array-like of
+ |      one or several dictionaries):
  |          A list-like object that contains one or multiple annotation
  |          dictionaries.
  |  
@@ -2221,10 +2218,12 @@ class Scatter(PlotlyTrace)
  |      showlegend [required=False] (value=boolean: True | False):
  |          Toggle whether or not this trace will be labeled in the legend.
  |  
- |      stream [required=False] (value=dictionary-like):
+ |      stream [required=False] (value=Stream object | dictionary-like):
  |          The stream dictionary-like object that initializes traces as
  |          writable-streams, for use with the real-time streaming API. Learn
  |          more here: https://plot.ly/python/streaming/
+ |  
+ |          For more, run `help(plotly.graph_objs.Stream)`
  |  
  |      visible [required=False] (value=boolean: True | False):
  |          Toggles whether or not this object will actually be visible in the
@@ -2559,7 +2558,7 @@ class Scatter(PlotlyTrace)
          dict()
         </code>
         constructor. For more info see
-        <a href="https://plot.ly/python/user-guide/python-basics#A.3-Dictionaries" target="_blank">
+        <a href="https://local.plot.ly/python/user-guide/python-basics#A.3-Dictionaries" target="_blank">
          Appendix A
         </a>
         .
@@ -2853,9 +2852,11 @@ class XAxis(PlotlyDict)
  |      title [required=False] (value=string):
  |          The x-axis title.
  |  
- |      titlefont [required=False] (value=string):
+ |      titlefont [required=False] (value=Font object | dictionary-like):
  |          A dictionary-like object describing the font settings of the x-axis
  |          title.
+ |  
+ |          For more, run `help(plotly.graph_objs.Font)`
  |  
  |      range [required=False] (value=number array of length 2):
  |          Defines the start and end point of this x axis.
@@ -3734,7 +3735,7 @@ That key is valid only in these objects:
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>
         Python dictionary objects carry an update method that does not nest, but rather swaps out value-for-value (see
-        <a href="https://plot.ly/python/user-guide/python-basics#A.3-Dictionaries" target="_blank">
+        <a href="https://local.plot.ly/python/user-guide/python-basics#A.3-Dictionaries" target="_blank">
          Appendix A
         </a>
         for examples). In contrast, Plotly graph objects fully support nested updating.
@@ -24500,7 +24501,11 @@ Figure(
     ]),
     layout=Layout(
         title=u'A Century of Asteroid Flybys',
-        titlefont={'color': u'', 'family': u'', 'size': 0},
+        titlefont=Font(
+            family=u'',
+            size=0,
+            color=u''
+        ),
         font=Font(
             family=u'Century Gothic',
             size=16,
@@ -24512,7 +24517,11 @@ Figure(
         height=341,
         xaxis=XAxis(
             title=u"Date&lt;br&gt;Data extracted from &lt;a href='http://neo.jpl.nas...",
-            titlefont={'color': u'', 'family': u'', 'size': 0},
+            titlefont=Font(
+                family=u'',
+                size=0,
+                color=u''
+            ),
             range=[2000, 2100],
             domain=[0, 1],
             type=u'linear',
@@ -24551,7 +24560,11 @@ Figure(
         ),
         yaxis=YAxis(
             title=u'Nominal Flyby Distance (Earth Radii)',
-            titlefont={'color': u'', 'family': u'', 'size': 0},
+            titlefont=Font(
+                family=u'',
+                size=0,
+                color=u''
+            ),
             range=[1, 302],
             domain=[0, 1],
             type=u'linear',
@@ -27657,7 +27670,7 @@ w92U6Gp6UAAAAABJRU5ErkJggg==
           Histogram
          </code>
          graph object in version 1.0 of Plotly's Python API. For more info on Plotly histograms see
-         <a href="https://plot.ly/python/user-guide/histograms">
+         <a href="https://local.plot.ly/python/user-guide/histograms">
           section 4
          </a>
          .
@@ -27841,10 +27854,12 @@ class Histogram(PlotlyTrace)
  |      showlegend [required=False] (value=boolean: True | False):
  |          Toggle whether or not this trace will be labeled in the legend.
  |  
- |      stream [required=False] (value=dictionary-like):
+ |      stream [required=False] (value=Stream object | dictionary-like):
  |          The stream dictionary-like object that initializes traces as
  |          writable-streams, for use with the real-time streaming API. Learn
  |          more here: https://plot.ly/python/streaming/
+ |  
+ |          For more, run `help(plotly.graph_objs.Stream)`
  |  
  |      visible [required=False] (value=boolean: True | False):
  |          Toggles whether or not this object will actually be visible in the
@@ -28471,10 +28486,12 @@ class Box(PlotlyTrace)
  |      showlegend [required=False] (value=boolean: True | False):
  |          Toggle whether or not this trace will be labeled in the legend.
  |  
- |      stream [required=False] (value=dictionary-like):
+ |      stream [required=False] (value=Stream object | dictionary-like):
  |          The stream dictionary-like object that initializes traces as
  |          writable-streams, for use with the real-time streaming API. Learn
  |          more here: https://plot.ly/python/streaming/
+ |  
+ |          For more, run `help(plotly.graph_objs.Stream)`
  |  
  |      visible [required=False] (value=boolean: True | False):
  |          Toggles whether or not this object will actually be visible in the
@@ -29181,10 +29198,12 @@ class Histogram2d(PlotlyTrace)
  |      showlegend [required=False] (value=boolean: True | False):
  |          Toggle whether or not this trace will be labeled in the legend.
  |  
- |      stream [required=False] (value=dictionary-like):
+ |      stream [required=False] (value=Stream object | dictionary-like):
  |          The stream dictionary-like object that initializes traces as
  |          writable-streams, for use with the real-time streaming API. Learn
  |          more here: https://plot.ly/python/streaming/
+ |  
+ |          For more, run `help(plotly.graph_objs.Stream)`
  |  
  |      visible [required=False] (value=boolean: True | False):
  |          Toggles whether or not this object will actually be visible in the
@@ -30059,19 +30078,19 @@ Figure(
 <hr/>
 <h4 style="font-size:14pt;">
         Go to
-        <a href="https://plot.ly/python/user-guide/line-scatter">
+        <a href="https://local.plot.ly/python/user-guide/line-scatter">
          Section 1 Line &amp; Scatter Plots
         </a>
 </h4>
 <h4 style="font-size:14pt;">
         Go to
-        <a href="#Plotly's-Python-API-User-Guide">
+        <a href="#notebook">
          top of page
         </a>
 </h4>
 <h4 style="font-size:14pt;">
         Go to User Guide's
-        <a href="https://plot.ly/python/user-guide/home">
+        <a href="https://local.plot.ly/python/user-guide/home">
          homepage
         </a>
 </h4>
@@ -30171,10 +30190,7 @@ Figure(
 </div>
 <div class="output_html rendered_html output_subarea ">
 <style>
-          /*body {
-        background-color: #F5F5F5;
-    }*/
-    div.cell{
+          div.cell{
         width: 850px;
         margin-left: 10% !important;
         margin-right: auto;
@@ -30267,13 +30283,16 @@ Figure(
     }
     div.output_subarea.output_html.rendered_html {
         overflow-x: scroll;
-        max-width: 100%;   
+        max-width: 100%;
+      /*  overflow-y: scroll; */
+      /*  max-height: 300px;   */
     }
     code{
       font-size: 78%;
     }
     .rendered_html code{
-    background-color: transparent;
+        background-color: transparent;
+        white-space: inherit;   
     }
     ul{
         /* color:#447adb; */  
@@ -30362,6 +30381,7 @@ Figure(
         margin-bottom: 0;
         line-height: 125%;
         font-size: 100%;
+        text-align: center;
       }
    /* element.style {
     } */

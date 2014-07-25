@@ -6,12 +6,6 @@
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Plotly's-Python-API-User-Guide">
-        Plotly's Python API User Guide
-        <a class="anchor-link" href="#Plotly's-Python-API-User-Guide">
-         ¶
-        </a>
-</h1>
 </div>
 </div>
 </div>
@@ -40,7 +34,7 @@
 <blockquote>
 <p>
          Links to the other sections are on the User Guide's
-         <a href="https://plot.ly/python/user-guide/home#Table-of-Contents:">
+         <a href="https://local.plot.ly/python/user-guide/home#Table-of-Contents:">
           homepage
          </a>
 <br/>
@@ -1378,7 +1372,7 @@ you can either assign a
 <blockquote>
 <p>
          Plotly engineers think that the default dictionary update method is not optimal when working with Plotly. Therefore, Plotly graph objects are built to perserve nested structures during updates (more on graph objects in
-         <a href="https://plot.ly/python/user-guide/getting-started#0.5-Graph-object-methods" target="">
+         <a href="https://local.plot.ly/python/user-guide/getting-started#0.5-Graph-object-methods" target="">
           section 0
          </a>
          ).
@@ -3428,7 +3422,7 @@ For example, say you have a figure containing 4 subplots,
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>
         For more information on Plotly subplots refer to
-        <a href="https://plot.ly/python/user-guide/getting-started#0.7-Subplots-and-version-1.0-other-additions" target="_blank">
+        <a href="https://local.plot.ly/python/user-guide/getting-started#0.7-Subplots-and-version-1.0-other-additions" target="_blank">
          section 0
         </a>
         of the User Guide.
@@ -3683,13 +3677,13 @@ For example, say you have a figure containing 4 subplots,
 <hr/>
 <h4 style="font-size:14pt;">
         Go to
-        <a href="https://plot.ly/python/user-guide/python-basics#">
+        <a href="https://local.plot.ly/python/user-guide/python-basics#">
          top of page
         </a>
 </h4>
 <h4 style="font-size:14pt;">
         Go to User Guide's
-        <a href="https://plot.ly/python/user-guide/home">
+        <a href="https://local.plot.ly/python/user-guide/home">
          homepage
         </a>
 </h4>
@@ -3791,10 +3785,7 @@ For example, say you have a figure containing 4 subplots,
 </div>
 <div class="output_html rendered_html output_subarea ">
 <style>
-          /*body {
-        background-color: #F5F5F5;
-    }*/
-    div.cell{
+          div.cell{
         width: 850px;
         margin-left: 10% !important;
         margin-right: auto;
@@ -3887,13 +3878,16 @@ For example, say you have a figure containing 4 subplots,
     }
     div.output_subarea.output_html.rendered_html {
         overflow-x: scroll;
-        max-width: 100%;   
+        max-width: 100%;
+      /*  overflow-y: scroll; */
+      /*  max-height: 300px;   */
     }
     code{
       font-size: 78%;
     }
     .rendered_html code{
-    background-color: transparent;
+        background-color: transparent;
+        white-space: inherit;   
     }
     ul{
         /* color:#447adb; */  
@@ -3982,6 +3976,7 @@ For example, say you have a figure containing 4 subplots,
         margin-bottom: 0;
         line-height: 125%;
         font-size: 100%;
+        text-align: center;
       }
    /* element.style {
     } */

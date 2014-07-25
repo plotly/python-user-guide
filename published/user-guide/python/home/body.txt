@@ -6,12 +6,6 @@
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Plotly's-Python-API-User-Guide">
-        Plotly's Python API User Guide
-        <a class="anchor-link" href="#Plotly's-Python-API-User-Guide">
-         ¶
-        </a>
-</h1>
 </div>
 </div>
 </div>
@@ -38,7 +32,7 @@
 <br/>
 </p>
 <p>
-<img alt="Plotly tinkerbell" height="400px/" src="https://plot.ly/static/img/splash/tinkerbell.jpg"/>
+<img alt="Plotly tinkerbell" height="400px/" src="http://imgur.com/DZZfo6T.jpg"/>
 </p>
 <p>
 <br/>
@@ -188,7 +182,7 @@ the User Guide intends to turn beginner and intermediate Plotly users into exper
 <ul>
 <li>
 <p>
-<a href="https://plot.ly/python/user-guide/getting-started">
+<a href="https://local.plot.ly/python/user-guide/getting-started">
            Section 0:
           </a>
           Getting Started with Plotly
@@ -196,7 +190,7 @@ the User Guide intends to turn beginner and intermediate Plotly users into exper
 </li>
 <li>
 <p>
-<a href="https://plot.ly/python/user-guide/line-scatter">
+<a href="https://local.plot.ly/python/user-guide/line-scatter">
            Section 1:
           </a>
           Line &amp; Scatter Plots
@@ -204,7 +198,7 @@ the User Guide intends to turn beginner and intermediate Plotly users into exper
 </li>
 <li>
 <p>
-<a href="https://plot.ly/python/user-guide/bar-charts">
+<a href="https://local.plot.ly/python/user-guide/bar-charts">
            Section 2:
           </a>
           Bar Charts
@@ -212,7 +206,7 @@ the User Guide intends to turn beginner and intermediate Plotly users into exper
 </li>
 <li>
 <p>
-<a href="https://plot.ly/python/user-guide/bubble-charts">
+<a href="https://local.plot.ly/python/user-guide/bubble-charts">
            Section 3:
           </a>
           Bubble Charts
@@ -220,7 +214,7 @@ the User Guide intends to turn beginner and intermediate Plotly users into exper
 </li>
 <li>
 <p>
-<a href="https://plot.ly/python/user-guide/histograms">
+<a href="https://local.plot.ly/python/user-guide/histograms">
            Section 4:
           </a>
           Histograms &amp; Box Plots
@@ -228,7 +222,7 @@ the User Guide intends to turn beginner and intermediate Plotly users into exper
 </li>
 <li>
 <p>
-<a href="https://plot.ly/python/user-guide/heatmaps-contours-2dhistograms">
+<a href="https://local.plot.ly/python/user-guide/heatmaps-contours-2dhistograms">
            Section 5:
           </a>
           Heatmaps, Contour and 2D Histograms
@@ -236,7 +230,7 @@ the User Guide intends to turn beginner and intermediate Plotly users into exper
 </li>
 <li>
 <p>
-<a href="https://plot.ly/python/user-guide/matplotlib-to-plotly">
+<a href="https://local.plot.ly/python/user-guide/matplotlib-to-plotly">
            Section 6:
           </a>
           Convert your Matplotlib plots to Plotly
@@ -244,7 +238,7 @@ the User Guide intends to turn beginner and intermediate Plotly users into exper
 </li>
 <li>
 <p>
-<a href="https://plot.ly/python/user-guide/streaming-home">
+<a href="https://local.plot.ly/python/user-guide/streaming">
            Section 7:
           </a>
           Plotly's Streaming API
@@ -253,7 +247,7 @@ the User Guide intends to turn beginner and intermediate Plotly users into exper
 </ul>
 <ul>
 <li>
-<a href="https://plot.ly/python/user-guide/python-basics">
+<a href="https://local.plot.ly/python/user-guide/python-basics">
           Appendix A:
          </a>
          Python Basics
@@ -486,7 +480,7 @@ the User Guide intends to turn beginner and intermediate Plotly users into exper
 </div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>
-1.1.4
+1.2.3
 
 </pre>
 </div>
@@ -960,7 +954,7 @@ you caught some typos:
        </p>
 <h4 style="font-size:14pt; margin-top:1em">
         Here is the link to
-        <a href="https://plot.ly/python/user-guide/getting-started">
+        <a href="https://local.plot.ly/python/user-guide/getting-started">
          Section 0 --- Getting Started with Plotly
         </a>
 </h4>
@@ -969,13 +963,13 @@ you caught some typos:
        </p>
 <h4 style="font-size:14pt; margin-top:1em">
         Here is the link to
-        <a href="https://plot.ly/python/user-guide/python-basics">
+        <a href="https://local.plot.ly/python/user-guide/python-basics">
          Appendix A --- Python Basics
         </a>
 </h4>
 <h4 style="font-size:14pt; margin-top:1.5em;">
         Go to
-        <a href="#Plotly's-Python-API-User-Guide">
+        <a href="#notebook">
          top of page
         </a>
 </h4>
@@ -1075,10 +1069,7 @@ you caught some typos:
 </div>
 <div class="output_html rendered_html output_subarea ">
 <style>
-          /*body {
-        background-color: #F5F5F5;
-    }*/
-    div.cell{
+          div.cell{
         width: 850px;
         margin-left: 10% !important;
         margin-right: auto;
@@ -1171,13 +1162,16 @@ you caught some typos:
     }
     div.output_subarea.output_html.rendered_html {
         overflow-x: scroll;
-        max-width: 100%;   
+        max-width: 100%;
+      /*  overflow-y: scroll; */
+      /*  max-height: 300px;   */
     }
     code{
       font-size: 78%;
     }
     .rendered_html code{
-    background-color: transparent;
+        background-color: transparent;
+        white-space: inherit;   
     }
     ul{
         /* color:#447adb; */  
@@ -1266,6 +1260,7 @@ you caught some typos:
         margin-bottom: 0;
         line-height: 125%;
         font-size: 100%;
+        text-align: center;
       }
    /* element.style {
     } */

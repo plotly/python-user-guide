@@ -1,7 +1,7 @@
 <head>
 <meta charset="utf-8"/>
 <title>
-   s7_streaming
+   s7_streaming_p3-bubbles
   </title>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js">
 </script>

@@ -47,8 +47,8 @@ def get_tree(file_html, translate):
     branch="published/user-guide/python/"
     file_html_base = os.path.basename(file_html)
     for old, leaf in translate.items():
-        old_base = os.path.basename(old)
-        if old_base in file_html:
+        old_base = os.path.basename(old).replace('.ipynb','.html')
+        if old_base == file_html_base:
             return "{branch}{leaf}/".format(branch=branch,leaf=leaf)
     else:
         print "[{}]".format(NAME), '... URL tail not found in translate.json'
@@ -59,7 +59,7 @@ def make_tree(tree):
         print "[{}]".format(NAME), '... making', tree
         os.makedirs(tree)
     else:
-        print "[{}]".format(NAME), '...', tree, 'already exists'
+        print "[{}]".format(NAME), '...', tree, 'already exists OK'
 
 # Replace (body/head) txt templates
 def replace_templates(body, head, tree):

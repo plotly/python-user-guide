@@ -6,12 +6,6 @@
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Plotly's-Python-API-User-Guide">
-        Plotly's Python API User Guide
-        <a class="anchor-link" href="#Plotly's-Python-API-User-Guide">
-         ¶
-        </a>
-</h1>
 </div>
 </div>
 </div>
@@ -40,12 +34,12 @@
 <blockquote>
 <p>
          Links to the other sections are on the User Guide's
-         <a href="https://plot.ly/python/user-guide/home#Table-of-Contents:">
+         <a href="https://local.plot.ly/python/user-guide/home#Table-of-Contents:">
           homepage
          </a>
 <br/>
          If unfamiliar with Plotly's Python API version 1.0 see
-         <a href="https://plot.ly/python/user-guide/getting-started">
+         <a href="https://local.plot.ly/python/user-guide/getting-started">
           section 0
          </a>
 <br/>
@@ -162,7 +156,7 @@
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>
         See the User Guide's
-        <a href="https://plot.ly/python/user-guide/home#Installation-guidelines" target="_blank">
+        <a href="https://local.plot.ly/python/user-guide/home#Installation-guidelines" target="_blank">
          homepage
         </a>
         for more info on installation and upgrading.
@@ -246,7 +240,7 @@
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>
         If you are not familiar with credentials files, refer to the User Guide's
-        <a href="https://plot.ly/python/user-guide/home#Step-6" target="_blank">
+        <a href="https://local.plot.ly/python/user-guide/home#Step-6" target="_blank">
          homepage
         </a>
         .
@@ -2607,11 +2601,11 @@ class Layout(PlotlyDict)
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>
         If you are feeling adventurous, jump to
-        <a href="https://plot.ly/python/user-guide/streaming-home" target="_blank">
+        <a href="https://local.plot.ly/python/user-guide/streaming" target="_blank">
          section 7
         </a>
         to learn how to make an
-        <a href="https://plot.ly/python/user-guide/s7_streaming/s7_streaming_p3-bubbles.ipynb" target="_blank">
+        <a href="https://local.plot.ly/python/user-guide/streaming-bubbles" target="_blank">
          annimated version
         </a>
         of Hans Rosling's bubble chart with Plotly's streaming API.
@@ -3294,25 +3288,25 @@ This is the format of your plot grid!
 <hr/>
 <h4 style="font-size:14pt;">
         Go to
-        <a href="https://plot.ly/python/user-guide/histograms">
+        <a href="https://local.plot.ly/python/user-guide/histograms">
          Section 4 --- Histograms &amp; Box Plots
         </a>
 </h4>
 <h4 style="font-size:14pt;">
         Go to
-        <a href="https://plot.ly/python/user-guide/bar-charts">
+        <a href="https://local.plot.ly/python/user-guide/bar-charts">
          Section 2 --- Bar Charts
         </a>
 </h4>
 <h4 style="font-size:14pt;">
         Go to
-        <a href="#Plotly's-Python-API-User-Guide">
+        <a href="#notebook">
          top of page
         </a>
 </h4>
 <h4 style="font-size:14pt;">
         Go to User Guide's
-        <a href="https://plot.ly/python/user-guide/home">
+        <a href="https://local.plot.ly/python/user-guide/home">
          homepage
         </a>
 </h4>
@@ -3412,10 +3406,7 @@ This is the format of your plot grid!
 </div>
 <div class="output_html rendered_html output_subarea ">
 <style>
-          /*body {
-        background-color: #F5F5F5;
-    }*/
-    div.cell{
+          div.cell{
         width: 850px;
         margin-left: 10% !important;
         margin-right: auto;
@@ -3516,7 +3507,8 @@ This is the format of your plot grid!
       font-size: 78%;
     }
     .rendered_html code{
-    background-color: transparent;
+        background-color: transparent;
+        white-space: inherit;   
     }
     ul{
         /* color:#447adb; */  
@@ -3605,6 +3597,7 @@ This is the format of your plot grid!
         margin-bottom: 0;
         line-height: 125%;
         font-size: 100%;
+        text-align: center;
       }
    /* element.style {
     } */

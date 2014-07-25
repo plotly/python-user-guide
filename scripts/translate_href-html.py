@@ -6,6 +6,8 @@ import sys
 # 
 # Script that converts inter-User Guide href in HTML NBs 
 #
+# !!! add a 'test' argument in get_domains()
+#
 # -------------------------------------------------------------------------------
 
 NAME="translate_href-html"  # file name
@@ -31,7 +33,8 @@ def get_soup(file_html):
 def get_domains():
     return dict(
         nbviewer="http://nbviewer.ipython.org/github/plotly/python-user-guide/blob/master/",
-        plotly="https://plot.ly/python/user-guide/"
+        #plotly="https://plot.ly/python/user-guide/"
+        plotly="https://local.plot.ly/python/user-guide/"
     )
 
 # Get translate.json, to translate URL tails from 
@@ -51,7 +54,7 @@ def replace_href(soup, domains, translate):
             a['href'] = a['href'].replace(domains['nbviewer'], domains['plotly'])
             for old, new in translate.items():
                 if old in a['href']:
-                    a['href'] = a['href'].replace(old+'.ipynb', new)
+                    a['href'] = a['href'].replace(old, new)
                     break
             else:
                 print "[{}]".format(NAME), '... URL tail not found in translate.json'

@@ -63,7 +63,7 @@
 <ul>
 <li>
 <p>
-<a href="https://local.plot.ly/python/user-guide/streaming-home">
+<a href="https://local.plot.ly/python/user-guide/streaming">
            7.0 Streaming API introduction
           </a>
 </p>
@@ -84,7 +84,7 @@
 </li>
 <li>
 <p>
-<a href="https://local.plot.ly/python/user-guide/s7_streaming/s7_streaming_p3-bubbles.ipynb">
+<a href="https://local.plot.ly/python/user-guide/streaming-bubbles">
            7.3 An animated version of Hans Rosling's bubble chart
           </a>
 </p>
@@ -511,7 +511,7 @@ You can check the content of your credentials file inside a Python/IPython sessi
 </li>
 <li>
 <p>
-<a href="https://local.plot.ly/python/user-guide/s7_streaming/s7_streaming_p3-bubbles.ipynb">
+<a href="https://local.plot.ly/python/user-guide/streaming-bubbles">
            7.3 An animated version of Hans Rosling's bubble chart
           </a>
 </p>
@@ -548,7 +548,7 @@ You can check the content of your credentials file inside a Python/IPython sessi
 [Section 2 --- Bar Charts](http://nbviewer.ipython.org/github/plotly/python-user-guide/blob/master/s2_bar-charts/s2_bar-charts.ipynb) </h4> -->
 <h4 style="font-size:14pt;">
         Go to
-        <a href="#Plotly's-Python-API-User-Guide">
+        <a href="#notebook">
          top of page
         </a>
 </h4>
