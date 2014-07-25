@@ -59,15 +59,12 @@ def replace_href(soup, domains, translate):
     return soup
 
 # Replace HTML file 
-def replace_file_html(new_soup, soup, file_html):
-    if new_soup is not soup:
-        new_html = new_soup.prettify("utf-8")
-        with open(file_html, "wb") as f:
-            print "[{}]".format(NAME), '... overwrites', file_html
-            f.write(new_html)
-    else:
-        print "[{}]".format(NAME), '... no changes to', file_html
-    return
+def replace_file_html(soup, file_html):
+    new_html = soup.prettify("utf-8")
+    with open(file_html, "wb") as f:
+        print "[{}]".format(NAME), '... overwrites', file_html
+        f.write(new_html)
+        return
 
 # -------------------------------------------------------------------------------
 
@@ -79,8 +76,8 @@ def main():
 
     for file_html in files_html:
         soup = get_soup(file_html)
-        new_soup = replace_href(soup, domains, translate)
-        replace_file_html(new_soup, soup, file_html)
+        soup = replace_href(soup, domains, translate)
+        replace_file_html(soup, file_html)
 
 
 if __name__ == "__main__":

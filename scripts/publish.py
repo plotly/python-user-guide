@@ -5,7 +5,8 @@ import os
 
 # -------------------------------------------------------------------------------
 # 
-# Script that 
+# Script that parses HTML files into a <body> and <head> templates 
+# and add these templates to the published/ tree
 #
 # -------------------------------------------------------------------------------
 
