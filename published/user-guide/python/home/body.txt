@@ -182,7 +182,7 @@ the User Guide intends to turn beginner and intermediate Plotly users into exper
 <ul>
 <li>
 <p>
-<a href="https://local.plot.ly/python/user-guide/getting-started">
+<a href="/python/user-guide/getting-started">
            Section 0:
           </a>
           Getting Started with Plotly
@@ -190,7 +190,7 @@ the User Guide intends to turn beginner and intermediate Plotly users into exper
 </li>
 <li>
 <p>
-<a href="https://local.plot.ly/python/user-guide/line-scatter">
+<a href="/python/user-guide/line-scatter">
            Section 1:
           </a>
           Line &amp; Scatter Plots
@@ -198,7 +198,7 @@ the User Guide intends to turn beginner and intermediate Plotly users into exper
 </li>
 <li>
 <p>
-<a href="https://local.plot.ly/python/user-guide/bar-charts">
+<a href="/python/user-guide/bar-charts">
            Section 2:
           </a>
           Bar Charts
@@ -206,7 +206,7 @@ the User Guide intends to turn beginner and intermediate Plotly users into exper
 </li>
 <li>
 <p>
-<a href="https://local.plot.ly/python/user-guide/bubble-charts">
+<a href="/python/user-guide/bubble-charts">
            Section 3:
           </a>
           Bubble Charts
@@ -214,7 +214,7 @@ the User Guide intends to turn beginner and intermediate Plotly users into exper
 </li>
 <li>
 <p>
-<a href="https://local.plot.ly/python/user-guide/histograms">
+<a href="/python/user-guide/histograms">
            Section 4:
           </a>
           Histograms &amp; Box Plots
@@ -222,7 +222,7 @@ the User Guide intends to turn beginner and intermediate Plotly users into exper
 </li>
 <li>
 <p>
-<a href="https://local.plot.ly/python/user-guide/heatmaps-contours-2dhistograms">
+<a href="/python/user-guide/heatmaps-contours-2dhistograms">
            Section 5:
           </a>
           Heatmaps, Contour and 2D Histograms
@@ -230,7 +230,7 @@ the User Guide intends to turn beginner and intermediate Plotly users into exper
 </li>
 <li>
 <p>
-<a href="https://local.plot.ly/python/user-guide/matplotlib-to-plotly">
+<a href="/python/user-guide/matplotlib-to-plotly">
            Section 6:
           </a>
           Convert your Matplotlib plots to Plotly
@@ -238,7 +238,7 @@ the User Guide intends to turn beginner and intermediate Plotly users into exper
 </li>
 <li>
 <p>
-<a href="https://local.plot.ly/python/user-guide/streaming">
+<a href="/python/user-guide/streaming">
            Section 7:
           </a>
           Plotly's Streaming API
@@ -247,7 +247,7 @@ the User Guide intends to turn beginner and intermediate Plotly users into exper
 </ul>
 <ul>
 <li>
-<a href="https://local.plot.ly/python/user-guide/python-basics">
+<a href="/python/user-guide/python-basics">
           Appendix A:
          </a>
          Python Basics
@@ -954,7 +954,7 @@ you caught some typos:
        </p>
 <h4 style="font-size:14pt; margin-top:1em">
         Here is the link to
-        <a href="https://local.plot.ly/python/user-guide/getting-started">
+        <a href="/python/user-guide/getting-started">
          Section 0 --- Getting Started with Plotly
         </a>
 </h4>
@@ -963,7 +963,7 @@ you caught some typos:
        </p>
 <h4 style="font-size:14pt; margin-top:1em">
         Here is the link to
-        <a href="https://local.plot.ly/python/user-guide/python-basics">
+        <a href="/python/user-guide/python-basics">
          Appendix A --- Python Basics
         </a>
 </h4>

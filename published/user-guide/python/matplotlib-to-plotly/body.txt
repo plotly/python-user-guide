@@ -34,12 +34,12 @@
 <blockquote>
 <p>
          Links to the other sections are on the User Guide's
-         <a href="https://local.plot.ly/python/user-guide/home#Table-of-Contents:">
+         <a href="/python/user-guide/home#Table-of-Contents:">
           homepage
          </a>
 <br/>
          If unfamiliar with Plotly's Python API version 1.0 see
-         <a href="https://local.plot.ly/python/user-guide/getting-started">
+         <a href="/python/user-guide/getting-started">
           section 0
          </a>
 <br/>
@@ -166,7 +166,7 @@
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>
         See the User Guide's
-        <a href="https://local.plot.ly/python/user-guide/home#Installation-guidelines" target="_blank">
+        <a href="/python/user-guide/home#Installation-guidelines" target="_blank">
          homepage
         </a>
         for more info on installation and upgrading.
@@ -266,7 +266,7 @@
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>
         If you are not familiar with credentials files, refer to the User Guide's
-        <a href="https://local.plot.ly/python/user-guide/home#Step-6" target="_blank">
+        <a href="/python/user-guide/home#Step-6" target="_blank">
          homepage
         </a>
         .
@@ -5663,13 +5663,13 @@ lP6TJEmSJEmSJEmSJEmSJEmSJEmStFL8H3Iz1zLA7uDpAAAAAElFTkSuQmCC
 <hr/>
 <h4 style="font-size:14pt;">
         Go to
-        <a href="https://local.plot.ly/python/user-guide/streaming">
+        <a href="/python/user-guide/streaming">
          Section 7 --- Plotly's Streaming API
         </a>
 </h4>
 <h4 style="font-size:14pt;">
         Go to
-        <a href="https://local.plot.ly/python/user-guide/heatmaps-contours-2dhistograms">
+        <a href="/python/user-guide/heatmaps-contours-2dhistograms">
          Section 5 --- Heatmaps, Contours and 2D Histograms
         </a>
 </h4>
@@ -5681,7 +5681,7 @@ lP6TJEmSJEmSJEmSJEmSJEmSJEmStFL8H3Iz1zLA7uDpAAAAAElFTkSuQmCC
 </h4>
 <h4 style="font-size:14pt;">
         Go to User Guide's
-        <a href="https://local.plot.ly/python/user-guide/home">
+        <a href="/python/user-guide/home">
          homepage
         </a>
 </h4>

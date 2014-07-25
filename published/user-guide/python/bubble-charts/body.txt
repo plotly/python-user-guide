@@ -34,12 +34,12 @@
 <blockquote>
 <p>
          Links to the other sections are on the User Guide's
-         <a href="https://local.plot.ly/python/user-guide/home#Table-of-Contents:">
+         <a href="/python/user-guide/home#Table-of-Contents:">
           homepage
          </a>
 <br/>
          If unfamiliar with Plotly's Python API version 1.0 see
-         <a href="https://local.plot.ly/python/user-guide/getting-started">
+         <a href="/python/user-guide/getting-started">
           section 0
          </a>
 <br/>
@@ -156,7 +156,7 @@
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>
         See the User Guide's
-        <a href="https://local.plot.ly/python/user-guide/home#Installation-guidelines" target="_blank">
+        <a href="/python/user-guide/home#Installation-guidelines" target="_blank">
          homepage
         </a>
         for more info on installation and upgrading.
@@ -240,7 +240,7 @@
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>
         If you are not familiar with credentials files, refer to the User Guide's
-        <a href="https://local.plot.ly/python/user-guide/home#Step-6" target="_blank">
+        <a href="/python/user-guide/home#Step-6" target="_blank">
          homepage
         </a>
         .
@@ -2601,11 +2601,11 @@ class Layout(PlotlyDict)
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>
         If you are feeling adventurous, jump to
-        <a href="https://local.plot.ly/python/user-guide/streaming" target="_blank">
+        <a href="/python/user-guide/streaming" target="_blank">
          section 7
         </a>
         to learn how to make an
-        <a href="https://local.plot.ly/python/user-guide/streaming-bubbles" target="_blank">
+        <a href="/python/user-guide/streaming-bubbles" target="_blank">
          annimated version
         </a>
         of Hans Rosling's bubble chart with Plotly's streaming API.
@@ -3288,13 +3288,13 @@ This is the format of your plot grid!
 <hr/>
 <h4 style="font-size:14pt;">
         Go to
-        <a href="https://local.plot.ly/python/user-guide/histograms">
+        <a href="/python/user-guide/histograms">
          Section 4 --- Histograms &amp; Box Plots
         </a>
 </h4>
 <h4 style="font-size:14pt;">
         Go to
-        <a href="https://local.plot.ly/python/user-guide/bar-charts">
+        <a href="/python/user-guide/bar-charts">
          Section 2 --- Bar Charts
         </a>
 </h4>
@@ -3306,7 +3306,7 @@ This is the format of your plot grid!
 </h4>
 <h4 style="font-size:14pt;">
         Go to User Guide's
-        <a href="https://local.plot.ly/python/user-guide/home">
+        <a href="/python/user-guide/home">
          homepage
         </a>
 </h4>

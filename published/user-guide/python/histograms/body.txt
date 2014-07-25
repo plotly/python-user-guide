@@ -34,12 +34,12 @@
 <blockquote>
 <p>
          Links to the other sections are on the User Guide's
-         <a href="https://local.plot.ly/python/user-guide/home#Table-of-Contents:">
+         <a href="/python/user-guide/home#Table-of-Contents:">
           homepage
          </a>
 <br/>
          If unfamiliar with Plotly's Python API version 1.0 see
-         <a href="https://local.plot.ly/python/user-guide/getting-started">
+         <a href="/python/user-guide/getting-started">
           section 0
          </a>
 <br/>
@@ -168,7 +168,7 @@
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>
         See the User Guide's
-        <a href="https://local.plot.ly/python/user-guide/home#Installation-guidelines" target="_blank">
+        <a href="/python/user-guide/home#Installation-guidelines" target="_blank">
          homepage
         </a>
         for more info on installation and upgrading.
@@ -241,7 +241,7 @@
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>
         If you are not familiar with credentials files, refer to the User Guide's
-        <a href="https://local.plot.ly/python/user-guide/home#Step-6" target="_blank">
+        <a href="/python/user-guide/home#Step-6" target="_blank">
          homepage
         </a>
         .
@@ -256,7 +256,7 @@
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>
         In similar fashion to
-        <a href="https://local.plot.ly/python/user-guide/bar-charts">
+        <a href="/python/user-guide/bar-charts">
          section 2
         </a>
         (Bar Charts and Error Bars), we read and plot data from a csv file. The csv file in question
@@ -580,7 +580,7 @@ Final Exam: 63 grades out of 68 entries
 </ul>
 <p>
         For more information on these options, see
-        <a href="https://local.plot.ly/python/user-guide/bar-charts">
+        <a href="/python/user-guide/bar-charts">
          section 2
         </a>
         of the User Guide.
@@ -1646,7 +1646,7 @@ Figure(
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>
         But, as in
-        <a href="https://local.plot.ly/python/user-guide/bar-charts" target="blank">
+        <a href="/python/user-guide/bar-charts" target="blank">
          section 2
         </a>
         , we would like to make all subplots share the same x-axis corresponding to grades. So, delete all unnecessary keys:
@@ -3058,13 +3058,13 @@ class Box(PlotlyTrace)
 <hr/>
 <h4 style="font-size:14pt;">
         Go to
-        <a href="https://local.plot.ly/python/user-guide/heatmaps-contours-2dhistograms">
+        <a href="/python/user-guide/heatmaps-contours-2dhistograms">
          Section 5 --- Heatmaps, Contours &amp; 2D Histograms
         </a>
 </h4>
 <h4 style="font-size:14pt;">
         Go to
-        <a href="https://local.plot.ly/python/user-guide/bubble-charts">
+        <a href="/python/user-guide/bubble-charts">
          Section 3 --- Bubble Charts
         </a>
 </h4>
@@ -3076,7 +3076,7 @@ class Box(PlotlyTrace)
 </h4>
 <h4 style="font-size:14pt;">
         Go back to User Guide's
-        <a href="https://local.plot.ly/python/user-guide/home">
+        <a href="/python/user-guide/home">
          homepage
         </a>
 </h4>

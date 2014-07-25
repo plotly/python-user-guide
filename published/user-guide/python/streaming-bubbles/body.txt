@@ -34,12 +34,12 @@
 <blockquote>
 <p>
          Links to the other sections are on the User Guide's
-         <a href="https://local.plot.ly/python/user-guide/home#Table-of-Contents:">
+         <a href="/python/user-guide/home#Table-of-Contents:">
           homepage
          </a>
 <br/>
          If unfamiliar with Plotly's Python API version 1.0 see
-         <a href="https://local.plot.ly/python/user-guide/getting-started">
+         <a href="/python/user-guide/getting-started">
           section 0
          </a>
 <br/>
@@ -63,28 +63,28 @@
 <ul>
 <li>
 <p>
-<a href="https://local.plot.ly/python/user-guide/streaming">
+<a href="/python/user-guide/streaming">
            7.0 Streaming API introduction
           </a>
 </p>
 </li>
 <li>
 <p>
-<a href="https://local.plot.ly/python/user-guide/streaming-line">
+<a href="/python/user-guide/streaming-line">
            7.1 A first Plotly streaming plot
           </a>
 </p>
 </li>
 <li>
 <p>
-<a href="https://local.plot.ly/python/user-guide/streaming-double-pendulum">
+<a href="/python/user-guide/streaming-double-pendulum">
            7.2 Never-ending double pendulum simulation
           </a>
 </p>
 </li>
 <li>
 <p>
-<a href="https://local.plot.ly/python/user-guide/streaming-bubbles">
+<a href="/python/user-guide/streaming-bubbles">
            7.3 An animated version of Hans Rosling's bubble chart
           </a>
 </p>
@@ -156,7 +156,7 @@
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>
         See the User Guide's
-        <a href="https://local.plot.ly/python/user-guide/home#Installation-guidelines" target="_blank">
+        <a href="/python/user-guide/home#Installation-guidelines" target="_blank">
          homepage
         </a>
         for more info on installation and upgrading.
@@ -206,7 +206,7 @@
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>
         If you are not familiar with credentials files, refer to the User Guide's
-        <a href="https://local.plot.ly/python/user-guide/home#Step-6" target="_blank">
+        <a href="/python/user-guide/home#Step-6" target="_blank">
          homepage
         </a>
         .
@@ -221,7 +221,7 @@
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>
         Finally, retrieve the stream ids in our credentials file as set up in
-        <a href="https://local.plot.ly/python/user-guide/streaming#Get-your-stream-tokens" target="_blank">
+        <a href="/python/user-guide/streaming#Get-your-stream-tokens" target="_blank">
          subsection 7.1
         </a>
         :
@@ -265,7 +265,7 @@
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>
         Our next plot is an animated version of Hans Roslin's bubble chart found
-        <a href="https://local.plot.ly/python/user-guide/bubble-charts" target="_blank">
+        <a href="/python/user-guide/bubble-charts" target="_blank">
          section 3
         </a>
         . The GapMinder Data
@@ -485,7 +485,7 @@
        </p>
 <p>
         First, set up a
-        <a href="https://local.plot.ly/python/user-guide/streaming-line#7.1-A-first-Plotly-streaming-plot" target="_blank">
+        <a href="/python/user-guide/streaming-line#7.1-A-first-Plotly-streaming-plot" target="_blank">
          stream id
         </a>
         graph object:
@@ -656,7 +656,7 @@
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>
         Before starting to stream our data, define a few functions to help us build the data object to be streamed. For more complete description of the options used below, refer to
-        <a href="https://local.plot.ly/python/user-guide/bubble-charts" target="_blank">
+        <a href="/python/user-guide/bubble-charts" target="_blank">
          section 3
         </a>
         of the User Guide.
@@ -1002,28 +1002,28 @@ write(self, trace, layout=None, validate=True, reconnect_on=(200, '', 408)) meth
 <ul>
 <li>
 <p>
-<a href="https://local.plot.ly/python/user-guide/streaming">
+<a href="/python/user-guide/streaming">
            7.0 Streaming API introduction
           </a>
 </p>
 </li>
 <li>
 <p>
-<a href="https://local.plot.ly/python/user-guide/streaming-line">
+<a href="/python/user-guide/streaming-line">
            7.1 A first Plotly streaming plot
           </a>
 </p>
 </li>
 <li>
 <p>
-<a href="https://local.plot.ly/python/user-guide/streaming-double-pendulum">
+<a href="/python/user-guide/streaming-double-pendulum">
            7.2 Never-ending double pendulum simulation
           </a>
 </p>
 </li>
 <li>
 <p>
-<a href="https://local.plot.ly/python/user-guide/streaming-bubbles">
+<a href="/python/user-guide/streaming-bubbles">
            7.3 An animated version of Hans Rosling's bubble chart
           </a>
 </p>
@@ -1043,7 +1043,7 @@ write(self, trace, layout=None, validate=True, reconnect_on=(200, '', 408)) meth
 </h4>
 <h4 style="font-size:14pt;">
         Go to User Guide's
-        <a href="https://local.plot.ly/python/user-guide/home">
+        <a href="/python/user-guide/home">
          homepage
         </a>
 </h4>

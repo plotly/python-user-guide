@@ -33,8 +33,7 @@ def get_soup(file_html):
 def get_domains():
     return dict(
         nbviewer="http://nbviewer.ipython.org/github/plotly/python-user-guide/blob/master/",
-        #plotly="https://plot.ly/python/user-guide/"
-        plotly="https://local.plot.ly/python/user-guide/"
+        plotly="/python/user-guide/"
     )
 
 # Get translate.json, to translate URL tails from 
