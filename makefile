@@ -4,14 +4,14 @@ run-all:
 
 convert:
 	ipython nbconvert --to html s*/*.ipynb
+	mv *.html converted/
 
 publish:
-	ipython scripts/strip-html.py *.html
-	ipython scripts/translate_href-html.py *.html
-	ipython scripts/publish.py *.html
+	ipython scripts/translate_href-html.py converted/*.html
+	ipython scripts/publish.py converted/*.html
 
 clean:
-	rm *.html
+	rm -f converted/*
 
 push-to-streambed:
-	cp -R published/user-guide/python/* ../streambed/shelly/api_docs/templates/api_docs/user-guide/python
+	cp -R published/* ../streambed/shelly/api_docs/templates/api_docs/user-guide/python

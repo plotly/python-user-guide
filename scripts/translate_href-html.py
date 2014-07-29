@@ -8,6 +8,8 @@ import sys
 #
 # !!! add a 'test' argument in get_domains()
 #
+# ??? Should this overwrite converted/* or make new file ???
+#
 # -------------------------------------------------------------------------------
 
 NAME="translate_href-html"  # file name
@@ -33,7 +35,7 @@ def get_soup(file_html):
 def get_domains():
     return dict(
         nbviewer="http://nbviewer.ipython.org/github/plotly/python-user-guide/blob/master/",
-        plotly="/python/user-guide/"
+        plotly="/python/"
     )
 
 # Get translate.json, to translate URL tails from 
