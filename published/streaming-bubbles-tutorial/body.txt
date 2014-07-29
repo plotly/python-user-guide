@@ -64,7 +64,7 @@
 <ul>
 <li>
 <p>
-<a href="/python/streaming">
+<a href="/python/streaming-tutorial">
            7.0 Streaming API introduction
           </a>
 </p>
@@ -222,7 +222,7 @@
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>
         Finally, retrieve the stream ids in our credentials file as set up in
-        <a href="/python/streaming#Get-your-stream-tokens" target="_blank">
+        <a href="/python/streaming-tutorial#Get-your-stream-tokens" target="_blank">
          subsection 7.1
         </a>
         :
@@ -1003,7 +1003,7 @@ write(self, trace, layout=None, validate=True, reconnect_on=(200, '', 408)) meth
 <ul>
 <li>
 <p>
-<a href="/python/streaming">
+<a href="/python/streaming-tutorial">
            7.0 Streaming API introduction
           </a>
 </p>

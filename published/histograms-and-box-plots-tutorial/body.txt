@@ -3059,7 +3059,7 @@ class Box(PlotlyTrace)
 <hr/>
 <h4 style="font-size:14pt;">
         Go to
-        <a href="/python/heatmaps-contours-2dhistograms-tutorial">
+        <a href="/python/heatmaps-contours-and-2dhistograms-tutorial">
          Section 5 --- Heatmaps, Contours &amp; 2D Histograms
         </a>
 </h4>

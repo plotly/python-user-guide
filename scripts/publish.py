@@ -87,7 +87,7 @@ def strip_last_pre(body):
     Pre = body.findAll('pre')
     Pre[-1].extract()
     for div in body.findAll('div')[::-1]:
-      if any(i in div['class'] 
+      if all(i in div['class'] 
              for i in ['cell', 'border-box-sizing', 'code_cell', 'rendered']):
         div.extract()
         break

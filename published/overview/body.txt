@@ -27671,7 +27671,7 @@ w92U6Gp6UAAAAABJRU5ErkJggg==
           Histogram
          </code>
          graph object in version 1.0 of Plotly's Python API. For more info on Plotly histograms see
-         <a href="/python/histograms-box-tutorial">
+         <a href="/python/histograms-and-box-plots-tutorial">
           section 4
          </a>
          .
@@ -30079,7 +30079,7 @@ Figure(
 <hr/>
 <h4 style="font-size:14pt;">
         Go to
-        <a href="/python/line-scatter-tutorial">
+        <a href="/python/line-and-scatter-plots-tutorial">
          Section 1 Line &amp; Scatter Plots
         </a>
 </h4>

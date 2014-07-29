@@ -10,8 +10,13 @@ publish:
 	ipython scripts/translate_href-html.py converted/*.html
 	ipython scripts/publish.py converted/*.html
 
-clean:
+clean-converted:
 	rm -f converted/*
+
+clean-published:
+	rm -rf published/*
+
+clean: clean-converted clean-published
 
 push-to-streambed:
 	cp -R published/* ../streambed/shelly/api_docs/templates/api_docs/user-guide/python

@@ -64,7 +64,7 @@
 <ul>
 <li>
 <p>
-<a href="/python/streaming">
+<a href="/python/streaming-tutorial">
            7.0 Streaming API introduction
           </a>
 </p>

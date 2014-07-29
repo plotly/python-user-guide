@@ -5664,13 +5664,13 @@ lP6TJEmSJEmSJEmSJEmSJEmSJEmStFL8H3Iz1zLA7uDpAAAAAElFTkSuQmCC
 <hr/>
 <h4 style="font-size:14pt;">
         Go to
-        <a href="/python/streaming">
+        <a href="/python/streaming-tutorial">
          Section 7 --- Plotly's Streaming API
         </a>
 </h4>
 <h4 style="font-size:14pt;">
         Go to
-        <a href="/python/heatmaps-contours-2dhistograms-tutorial">
+        <a href="/python/heatmaps-contours-and-2dhistograms-tutorial">
          Section 5 --- Heatmaps, Contours and 2D Histograms
         </a>
 </h4>

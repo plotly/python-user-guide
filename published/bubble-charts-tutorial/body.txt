@@ -2602,7 +2602,7 @@ class Layout(PlotlyDict)
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>
         If you are feeling adventurous, jump to
-        <a href="/python/streaming" target="_blank">
+        <a href="/python/streaming-tutorial" target="_blank">
          section 7
         </a>
         to learn how to make an
@@ -3289,7 +3289,7 @@ This is the format of your plot grid!
 <hr/>
 <h4 style="font-size:14pt;">
         Go to
-        <a href="/python/histograms-box-tutorial">
+        <a href="/python/histograms-and-box-plots-tutorial">
          Section 4 --- Histograms &amp; Box Plots
         </a>
 </h4>

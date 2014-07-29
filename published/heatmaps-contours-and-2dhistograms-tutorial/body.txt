@@ -5710,7 +5710,7 @@ class Line(PlotlyDict)
        </p>
 <p>
         As for 1-dimensional histograms (more in
-        <a href="/python/histograms-box-tutorial" target="_blank">
+        <a href="/python/histograms-and-box-plots-tutorial" target="_blank">
          section 4
         </a>
         ), Plotly does the computations for you. All you need to input are the two samples corresponding to the variables of interest (e.g. the daily cyclist count at each site).
@@ -7469,13 +7469,13 @@ class Histogram2dContour(PlotlyTrace)
 </h4>
 <h4 style="font-size:14pt;">
         Go to
-        <a href="/python/histograms-box-tutorial">
+        <a href="/python/histograms-and-box-plots-tutorial">
          Section 4  --- Histograms &amp; Box Plots
         </a>
 </h4>
 <h4 style="font-size:14pt;">
         Go back to
-        <a href="/python/heatmaps-contours-2dhistograms-tutorial#">
+        <a href="/python/heatmaps-contours-and-2dhistograms-tutorial#">
          top of page
         </a>
 </h4>
