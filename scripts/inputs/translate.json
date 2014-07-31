@@ -1,0 +1,15 @@
+{
+    "s00_homepage/s00_homepage.ipynb" : "user-guide",
+    "s0_getting-started/s0_getting-started.ipynb" : "overview",
+    "s1_line-scatter/s1_line-scatter.ipynb" : "line-and-scatter-plots-tutorial",
+    "s2_bar-charts/s2_bar-charts.ipynb" : "bar-charts-tutorial",
+    "s3_bubble-charts/s3_bubble-charts.ipynb" : "bubble-charts-tutorial",
+    "s4_histograms/s4_histograms.ipynb" : "histograms-and-box-plots-tutorial",
+    "s5_heatmaps/s5_heatmaps.ipynb" : "heatmaps-contours-and-2dhistograms-tutorial",
+    "s6_matplotlylib/s6_matplotlylib.ipynb" : "matplotlib-to-plotly-tutorial",
+    "s7_streaming/s7_streaming.ipynb" : "streaming-tutorial",
+    "s7_streaming/s7_streaming_p1-first-stream.ipynb" : "streaming-line-tutorial",
+    "s7_streaming/s7_streaming_p2-double-pendulum.ipynb" : "streaming-double-pendulum-tutorial",
+    "s7_streaming/s7_streaming_p3-bubbles.ipynb" : "streaming-bubbles-tutorial",
+    "sA_python-basics/sA_python-basics.ipynb" : "python-tutorial"
+}

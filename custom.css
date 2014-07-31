@@ -1,7 +1,4 @@
 <style>
-    /*body {
-        background-color: #F5F5F5;
-    }*/
     div.cell{
         width: 850px;
         margin-left: 10% !important;
@@ -103,7 +100,8 @@
       font-size: 78%;
     }
     .rendered_html code{
-    background-color: transparent;
+        background-color: transparent;
+        white-space: inherit;   
     }
     ul{
         /* color:#447adb; */  
@@ -192,6 +190,7 @@
         margin-bottom: 0;
         line-height: 125%;
         font-size: 100%;
+        text-align: center;
       }
    /* element.style {
     } */  

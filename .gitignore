@@ -1,9 +1,4 @@
-*.sh
-
-todo.md
-
 .ipynb_checkpoints/*
-
 */.ipynb_checkpoints/
+converted/*
 
-s5_heatmaps/make_seaborn-alt.py
