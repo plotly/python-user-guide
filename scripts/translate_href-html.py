@@ -4,11 +4,8 @@ import sys
 
 # -------------------------------------------------------------------------------
 # 
-# Script that converts inter-User Guide href in HTML NBs 
-#
-# !!! add a 'test' argument in get_domains()
-#
-# ??? Should this overwrite converted/* or make new file ???
+# Script that converts inter-User Guide href in HTML NBs
+# (using ./inputs/translate.json)
 #
 # -------------------------------------------------------------------------------
 
@@ -35,7 +32,7 @@ def get_soup(file_html):
 def get_domains():
     return dict(
         nbviewer="http://nbviewer.ipython.org/github/plotly/python-user-guide/blob/master/",
-        plotly="/python/"
+        plotly="/python/"  # main branch in Django
     )
 
 # Get translate.json, to translate URL tails from 
