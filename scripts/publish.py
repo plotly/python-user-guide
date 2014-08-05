@@ -103,7 +103,7 @@ def get_translate():
         translate = json.load(f)
     return translate
 
-# Get the directory tree for body.txt and head.txt leaves
+# Get the directory tree for the body.html leaf
 def get_tree(file_html, translate):
     branch="published/"
     file_html_base = os.path.basename(file_html)
@@ -122,9 +122,9 @@ def make_tree(tree):
     else:
         print "[{}]".format(NAME), '...', tree, 'already exists OK'
 
-# Replace body.txt templates
+# Replace body.html templates
 def replace_templates(body, tree):
-    for temp, f_temp in zip([body],['body.txt']):
+    for temp, f_temp in zip([body],['body.html']):
         path_temp = os.path.join(tree, f_temp)
         with open(path_temp, "wb") as f:
             print "[{}]".format(NAME), '... writes in', f_temp

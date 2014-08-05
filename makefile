@@ -1,14 +1,26 @@
+instructions:
+	cat make_instructions.txt
+
+# List of notebooks paths to be used in the plot.ly User Guide
+ug-nbs = s*/*.ipynb
 
 run-all:
 	scripts/nb_execute-all.sh
 
-convert:
-	ipython nbconvert --to html s*/*.ipynb
+convert: $(ug-nbs)
+	ipython nbconvert --to html $(ug-nbs)
 	mv *.html converted/
 
 publish:
 	ipython scripts/translate_href-html.py converted/*.html
 	ipython scripts/publish.py converted/*.html
+	ipython scripts/make_config.py
+
+link-nbs-to-plotly: $(ug-nbs)
+	ipython scripts/translate_href-ipynb.py $(ug-nbs)
+
+push-to-streambed:
+	cp -R published/* ../streambed/shelly/api_docs/templates/api_docs/user-guide/python
 
 clean-converted:
 	rm -f converted/*
@@ -17,6 +29,3 @@ clean-published:
 	rm -rf published/*
 
 clean: clean-converted clean-published
-
-push-to-streambed:
-	cp -R published/* ../streambed/shelly/api_docs/templates/api_docs/user-guide/python

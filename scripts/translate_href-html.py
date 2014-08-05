@@ -28,12 +28,11 @@ def get_soup(file_html):
         print "[{}]".format(NAME), 'Opening', file_html
         return BeautifulSoup(f)
 
-# Get URLs of domains 
+# Get URLs of domains from domains.json
 def get_domains():
-    return dict(
-        nbviewer="http://nbviewer.ipython.org/github/plotly/python-user-guide/blob/master/",
-        plotly="/python/"  # main branch in Django
-    )
+    with open("./scripts/inputs/domains.json") as f:
+        domains = json.load(f)
+    return domains
 
 # Get translate.json, to translate URL tails from 
 # nbviewer to plot.ly domain
@@ -49,7 +48,7 @@ def replace_href(soup, domains, translate):
     for a in soup.findAll('a'):
         if domains['nbviewer'] in a['href']:
             print "[{}]".format(NAME), '... link found:', a['href']
-            a['href'] = a['href'].replace(domains['nbviewer'], domains['plotly'])
+            a['href'] = a['href'].replace(domains['nbviewer'], domains['plotly-int'])
             for old, new in translate.items():
                 if old in a['href']:
                     a['href'] = a['href'].replace(old, new)
