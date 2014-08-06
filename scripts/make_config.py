@@ -4,16 +4,14 @@ import os
 
 # -------------------------------------------------------------------------------
 # 
-# Script that 
-# 
-# (*)  adds this template to the published/ tree (using ./inputs/translate.json)
+# Script that makes a config file for each notebook and sends it
+# to the published/ tree (using ./inputs/translate.json)
 #
 # -------------------------------------------------------------------------------
 
 NAME="make_config"  # name of this script
 
 # Get translate.json, to translate HTML file names to branch names
-# (e.g. s00_homepage/s00_homepage.html to home)
 def get_translate():
     with open('./scripts/inputs/translate.json') as f:
         translate = json.load(f)
@@ -52,9 +50,9 @@ def get_config(chapter):
     if chapter == 'user-guide':
         name = ""
         title = "Python / IPython User Guide | plotly"
-        descrip = "A User Guide for Plotly's Python / IPython API Library"
+        descrip = "A User Guide for plotly and its Python / IPython API Library"
     if chapter == 'overview':
-        descrip = "An overview of Plotly's Python / IPython API Library"
+        descrip = "An overview of plotly and its Python / IPython API Library"
     if chapter == 'matplotlib-to-plotly-tutorial': 
         descrip = (
             'A tutorial on how to convert matplotlib figures '
@@ -96,10 +94,7 @@ def get_config(chapter):
     # Output
     config = dict(
         userguide_chapter_name=name,
-        tags=dict(
-            title=title,
-            meta_description=descrip
-        )
+        tags=dict(title=title,meta_description=descrip)
     )
 
     return config

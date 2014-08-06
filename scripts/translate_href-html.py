@@ -46,17 +46,18 @@ def get_translate():
 # and translate URL tails in HTML soup
 def replace_href(soup, domains, translate):
     for a in soup.findAll('a'):
-        if domains['nbviewer'] in a['href'] or domains['plotly-ext'] in a['href']:
-            print "[{}]".format(NAME), '... link found:', a['href']
-            a['href'] = a['href'].replace(domains['nbviewer'], domains['plotly-int'])
-            a['href'] = a['href'].replace(domains['plotly-ext'], domains['plotly-int'])
-            for old, new in translate.items():
-                if old in a['href']:
-                    a['href'] = a['href'].replace(old, new)
-                    break
-            else:
-                print "[{}]".format(NAME), '... URL tail not found in translate.json'
-            print "[{}]".format(NAME), '... link updated to:', a['href']
+        for domain in [domains['nbviewer'],domains['plotly-ext'],'./']:
+            if a['href'].startswith(domain):
+                print "[{}]".format(NAME), '... link to translate found:', a['href']
+                a['href'] = a['href'].replace(domain, domains['plotly-int'])
+                for old, new in translate.items():
+                    if old in a['href']:
+                        a['href'] = a['href'].replace(old, new)
+                        break
+                else:
+                    print "[{}]".format(NAME), '!!! URL tail not found in translate.json'
+                    print "[{}]".format(NAME), '!!! make sure the translated url exists'
+                print "[{}]".format(NAME), '... link translated to:', a['href']
     return soup
 
 # Replace HTML file 

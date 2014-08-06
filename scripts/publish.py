@@ -87,10 +87,9 @@ def strip_last_pre(body):
     Pre = body.findAll('pre')
     Pre[-1].extract()
     for div in body.findAll('div')[::-1]:
-      if all(i in div['class'] 
-             for i in ['cell', 'border-box-sizing', 'code_cell', 'rendered']):
-        div.extract()
-        break
+        if all(i in div['class'] for i in ['cell','border-box-sizing','code_cell','rendered']):
+            div.extract()
+            break
     print "[{}]".format(NAME), '... strip last <pre> and parent <div> (which inserts CSS into NB)'
     return body
 
@@ -112,7 +111,7 @@ def get_tree(file_html, translate):
         if old_base == file_html_base:
             return "{branch}{leaf}/".format(branch=branch,leaf=leaf)
     else:
-        print "[{}]".format(NAME), '... URL tail not found in translate.json'
+        print "[{}]".format(NAME), '!!! URL tail not found in translate.json'
 
 # Make directory tree
 def make_tree(tree):
