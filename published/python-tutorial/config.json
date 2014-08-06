@@ -1,7 +1,7 @@
 {
-    "name": "Python", 
+    "userguide_chapter_name": "Python Basics", 
     "tags": {
-        "meta_description": "A tutorial on python features used in the User Guide", 
-        "title": "Python Tutorial"
+        "meta_description": "A tutorial on Python features used in the Python / IPython User Guide", 
+        "title": "Python / IPython User Guide | Python Tutorial | plotly"
     }
 }

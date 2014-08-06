@@ -46,9 +46,10 @@ def get_translate():
 # and translate URL tails in HTML soup
 def replace_href(soup, domains, translate):
     for a in soup.findAll('a'):
-        if domains['nbviewer'] in a['href']:
+        if domains['nbviewer'] in a['href'] or domains['plotly-ext'] in a['href']:
             print "[{}]".format(NAME), '... link found:', a['href']
             a['href'] = a['href'].replace(domains['nbviewer'], domains['plotly-int'])
+            a['href'] = a['href'].replace(domains['plotly-ext'], domains['plotly-int'])
             for old, new in translate.items():
                 if old in a['href']:
                     a['href'] = a['href'].replace(old, new)

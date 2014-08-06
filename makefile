@@ -16,11 +16,11 @@ publish:
 	ipython scripts/publish.py converted/*.html
 	ipython scripts/make_config.py
 
-link-nbs-to-plotly: $(ug-nbs)
-	ipython scripts/translate_href-ipynb.py $(ug-nbs)
-
 push-to-streambed:
 	cp -R published/* ../streambed/shelly/api_docs/templates/api_docs/user-guide/python
+
+link-nbs-to-plotly: $(ug-nbs)
+	ipython scripts/translate_href-ipynb.py $(ug-nbs)
 
 clean-converted:
 	rm -f converted/*

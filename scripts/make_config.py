@@ -24,64 +24,83 @@ def get_chapters(translate):
     return translate.values()
 
 # Get config dictionary
-# config.name : breadcrumb header label
+# config.userguide_chapter_name : breadcrumb header label
 # config.tags.title : META title
 # config.tags.meta_description : META description
 def get_config(chapter):
 
-    # Default
-    config = dict(
-        name=chapter.replace('-',' ').replace(' tutorial','').title(),
-        tags=dict(
-            title=chapter.replace('-',' ').title(),
-            meta_description=(
-                "A tutorial on how to make beautiful {} "
-                "with plotly and Python or IPython."
-            ).format(chapter.replace('-',' ').replace(' tutorial',''))
-        )
-    )
+    # Shortcut capitalizing first letter of each word except 'and', 'to' 
+    def titled(s):
+        return s.title().replace('And',"and").replace('To','to')
 
-    # Exceptions
+    # Set base name (without '-')
+    base = chapter.replace('-',' ')
+
+    # Exceptions (base name)
+    if chapter == 'heatmaps-contours-and-2dhistograms-tutorial':
+        base = base.replace('heatmaps','heatmaps,').replace('2dhistograms','2D histograms')
+
+    # Set fields
+    name = titled(base.replace(' tutorial',''))
+    title = "Python / IPython User Guide | {} | plotly".format(titled(base))
+    descrip = (
+        "A tutorial on how to make beautiful {} "
+        "with plotly and Python or IPython."
+    ).format(base.replace(' tutorial',''))
+
+    # Exceptions (fields)
     if chapter == 'user-guide':
-        config['name'] = "Home"
-        config['tags']['title'] = 'Contents'
-        config['tags']['meta_description'] = (
-            'A User Guide for Plotly Python / IPython API Library'
-        )
+        name = ""
+        title = "Python / IPython User Guide | plotly"
+        descrip = "A User Guide for Plotly's Python / IPython API Library"
     if chapter == 'overview':
-        config['tags']['meta_description'] = (
-            'An overview of Plotly Python / IPython API Library'
-        )
+        descrip = "An overview of Plotly's Python / IPython API Library"
     if chapter == 'matplotlib-to-plotly-tutorial': 
-        config['tags']['meta_description'] = (
-            'A tutorial on how to convert matplotlib figure '
-            'to beautiful plotly figures'
+        descrip = (
+            'A tutorial on how to convert matplotlib figures '
+            'to beautiful plotly figures.'
         )
     if chapter == 'streaming-tutorial': 
-        config['tags']['meta_description'] = (
-            'An overview of plotly streaming plots.'
+        name = "Plotly's Streaming API"
+        descrip = (
+            'An overview of plotly streaming plots '
+            'with plotly and Python or IPython.'
         )
     if chapter == 'streaming-line-tutorial': 
-        config['tags']['meta_description'] = (
+        name = "Plotly's Streaming API"
+        descrip = (
             "A tutorial on how to make beautiful streaming line plots "
             "with plotly and Python or IPython."
         )
     if chapter == 'streaming-double-pendulum-tutorial': 
-        config['tags']['meta_description'] = (
+        name = "Plotly's Streaming API"
+        descrip = (
             'A tutorial on how to make a beautiful streaming plot '
             'of a never-ending double pendulum simulation '
             'with plotly and Python or IPython.'
         )
     if chapter == 'streaming-bubbles-tutorial':
-        config['tags']['meta_description'] = (
+        name = "Plotly's Streaming API"
+        descrip = (
             'A tutorial on how to make a beautiful streaming plot '
-            'an animated bubble chart'
+            'of an animated bubble chart '
             'with plotly and Python or IPython.'
         )
     if chapter == 'python-tutorial':
-        config['tags']['meta_description'] = (
-            'A tutorial on python features used in the User Guide'
+        name = "Python Basics"
+        descrip = (
+            'A tutorial on Python features used in the '
+            'Python / IPython User Guide'
         )
+
+    # Output
+    config = dict(
+        userguide_chapter_name=name,
+        tags=dict(
+            title=title,
+            meta_description=descrip
+        )
+    )
 
     return config
 
