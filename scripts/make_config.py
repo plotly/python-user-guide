@@ -93,7 +93,7 @@ def get_config(chapter):
 
     # Output
     config = dict(
-        userguide_chapter_name=name,
+        user_guide_chapter_name=name,
         tags=dict(title=title,meta_description=descrip)
     )
 

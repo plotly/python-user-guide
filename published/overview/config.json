@@ -1,7 +1,7 @@
 {
-    "userguide_chapter_name": "Overview", 
     "tags": {
         "meta_description": "An overview of plotly and its Python / IPython API Library", 
         "title": "Python / IPython User Guide | Overview | plotly"
-    }
+    }, 
+    "user_guide_chapter_name": "Overview"
 }

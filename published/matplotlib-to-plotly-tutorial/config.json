@@ -1,7 +1,7 @@
 {
-    "userguide_chapter_name": "Matplotlib to Plotly", 
     "tags": {
         "meta_description": "A tutorial on how to convert matplotlib figures to beautiful plotly figures.", 
         "title": "Python / IPython User Guide | Matplotlib to Plotly Tutorial | plotly"
-    }
+    }, 
+    "user_guide_chapter_name": "Matplotlib to Plotly"
 }

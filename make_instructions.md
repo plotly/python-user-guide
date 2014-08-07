@@ -15,11 +15,12 @@
 1. List all notebooks to be included in the plot.ly user guide in 
    `./makefile` under the variable `ug-nbs`.
 
-2. Fill in `./scripts/inputs/translate.json` where the keys are the paths 
-   (relative to `./`) to the notebooks to be converted and the 
-   values correspond to the user-guide URL tails on plot.ly. 
+2. Fill in `./scripts/inputs/translate.json` where the keys are the paths
+   (relative to `./`) to the notebooks to be converted and the values correspond
+   to the user-guide URL tails on plot.ly. Make sure the these URL tails are not
+   already taken by other pages on plot.ly!
 
-3. Run `$ make convert` to convert these notebooks to HTML
+3. Run `$ make convert` to convert these notebooks to HTML.
 
 4. Run `$ make publish` to adapt these HTML notebooks for plot.ly!  This make
    call outputs 1 HTML template `body.html` and 1 `config.json` file for each

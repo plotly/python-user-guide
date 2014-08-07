@@ -1,7 +1,7 @@
 {
-    "userguide_chapter_name": "Histograms and Box Plots", 
     "tags": {
         "meta_description": "A tutorial on how to make beautiful histograms and box plots with plotly and Python or IPython.", 
         "title": "Python / IPython User Guide | Histograms and Box Plots Tutorial | plotly"
-    }
+    }, 
+    "user_guide_chapter_name": "Histograms and Box Plots"
 }
