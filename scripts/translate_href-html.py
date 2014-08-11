@@ -54,6 +54,8 @@ def replace_href(soup, domains, translate):
                     if old in a['href']:
                         a['href'] = a['href'].replace(old, new)
                         break
+                    elif new in a['href']:
+                        break
                 else:
                     print "[{}]".format(NAME), '!!! URL tail not found in translate.json'
                     print "[{}]".format(NAME), '!!! make sure the translated url exists'
