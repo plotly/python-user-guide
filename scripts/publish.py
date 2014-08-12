@@ -104,7 +104,7 @@ def get_translate():
 
 # Get the directory tree for the body.html leaf
 def get_tree(file_html, translate):
-    branch="published/"
+    branch="published/includes/"
     file_html_base = os.path.basename(file_html)
     for old, leaf in translate.items():
         old_base = os.path.basename(old).replace('.ipynb','.html')
@@ -123,11 +123,10 @@ def make_tree(tree):
 
 # Replace body.html templates
 def replace_templates(body, tree):
-    for temp, f_temp in zip([body],['body.html']):
-        path_temp = os.path.join(tree, f_temp)
-        with open(path_temp, "wb") as f:
-            print "[{}]".format(NAME), '... writes in', f_temp
-            f.write(str(temp))
+    f_body = os.path.join(tree, "body.html")
+    with open(f_body, "wb") as f:
+        print "[{}]".format(NAME), '... writes in', f_body
+        f.write(str(body))
     return
 
 # -------------------------------------------------------------------------------

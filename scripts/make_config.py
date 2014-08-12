@@ -101,7 +101,7 @@ def get_config(chapter):
 
 # Replace config.json 
 def replace_config(config, chapter):
-    path = os.path.join("./published/", chapter)
+    path = os.path.join("./published/includes/", chapter)
     f_config = os.path.join(path,"config.json")
     with open(f_config, "w") as f:
         print "[{}]".format(NAME), '... writes in', f_config

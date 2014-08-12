@@ -15,9 +15,11 @@ publish:
 	ipython scripts/translate_href-html.py converted/*.html
 	ipython scripts/publish.py converted/*.html
 	ipython scripts/make_config.py
+	ipython scripts/make_urls.py
 
 push-to-streambed:
-	cp -R published/* ../streambed/shelly/templates/api_docs/includes/user-guide/python/
+	cp -R published/includes/* ../streambed/shelly/templates/api_docs/includes/user_guide/python/
+	cp published/python_urls.py ../streambed/shelly/api_docs/urls/user_guide/
 
 link-nbs-to-plotly: $(ug-nbs)
 	ipython scripts/translate_href-ipynb.py $(ug-nbs)
