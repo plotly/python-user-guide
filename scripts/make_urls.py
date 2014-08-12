@@ -22,13 +22,15 @@ def get_chapters(translate):
     return translate.values()
 
 # Get urls patterns
+# N.B.: r'(?P<lang>python)/' is in streambed/shelly/api_docs/__init__.py
 def get_urls(chapters):
     urls = []
     for chapter in chapters:
-        urls += ['(?P<lang>python)/(?P<user_guide_chapter>{})/$'.format(chapter)]
+        urls += [r'(?P<user_guide_chapter>{})/$'.format(chapter)]
     return urls
 
 # Generate python_urls.py file
+# See streambed/api_docs/ for more info
 def get_urls_py(urls):
     urls_py = (
         "from django.conf.urls import patterns, url\n"
@@ -37,7 +39,7 @@ def get_urls_py(urls):
         "   '',\n"
     )
     for url in urls:
-        urls_py += "    url(+r'{}, api_docs.views.user_guide_template)"
+        urls_py += '    url("'+url+'", api_docs.views.user_guide_template)'
         if url != urls[-1]:
             urls_py += ",\n"
     urls_py += "\n)"
