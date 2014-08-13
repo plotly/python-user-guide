@@ -1,5 +1,5 @@
 instructions:
-	cat make_instructions.md
+	cat Contributing.md
 
 # List of notebooks paths to be used in the plot.ly User Guide
 ug-nbs = s*/*.ipynb

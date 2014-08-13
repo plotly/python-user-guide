@@ -50,14 +50,18 @@ on nbviewer to plot.ly (hence redirecting traffic to plot.ly!).
       https://plot.ly/...) to django internal (/python/..) using
       `scripts/inputs/{translate.json,domains.json}`.
     - [scripts/publish.py] strip the HTML body from style tags, remove undesired
-      cells, print results in `./published/<url-tail>/body.html` where
+      cells, print results in `./published/includes/<url-tail>/body.html` where
       <url-tail> is taken from `scripts/inputs/translate.json`.
     - [scripts/make_config.py] generate a config.json for each notebook with
       meta info and etc. 
+    - [scripts/make_urls.py] generate a python file listing all the urls
+      patterns of the published notebooks. 
+    - [scripts/make_sitemaps.py] generate a python file listing all the sitemap
+      items of the published notebooks. 
       
 + `push-to-streambed`:
-    - copy published subdirectories to `streambed` (assuming `streambed/` in 
-      one level down in your path).
+    - copy published files and subdirectories to `streambed` (assuming
+      `streambed/` in one level down in your path).
 
 + `link-nbs-to-plotly`:
     - [scripts/translate_href-ipynb] translate inter-NB hyper-refs pointing to
