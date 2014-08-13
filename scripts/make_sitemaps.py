@@ -63,6 +63,7 @@ def get_sitemaps_py(locations, lmfiles):
     sitemaps_py += (
         "\n    ]"
         "\n    return items"
+        "\n"
     )
     return sitemaps_py
 

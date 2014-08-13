@@ -106,6 +106,7 @@ def replace_config(config, chapter):
     with open(f_config, "w") as f:
         print "[{}]".format(NAME), '... writes in', f_config
         json.dump(config, f, indent=4)
+        f.write("\n")
     return
 
 # -------------------------------------------------------------------------------

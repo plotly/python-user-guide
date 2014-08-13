@@ -27,7 +27,8 @@
    notebook making the user guide.
 
 5. Run `$ make-push-to-streambed` to copy the relevant file structure to 
-   the `streambed/` repo (assumed to be one level down in your path).
+   the `streambed/` repo (assumed to be one level down in your path and 
+   one the desired branch).
 
 Once step 1 to 5 are completed and that `streambed/` is updated, run
 `$ make link-nbs-to-plotly` and update the remote repo to link the notebooks 

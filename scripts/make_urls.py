@@ -42,7 +42,7 @@ def get_urls_py(urls):
         urls_py += '    url("'+url+'", api_docs.views.user_guide_template)'
         if url != urls[-1]:
             urls_py += ",\n"
-    urls_py += "\n)"
+    urls_py += "\n)\n"
     return urls_py
 
 # Replace python_urls.py
