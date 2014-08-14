@@ -1,7 +1,6 @@
 Appendix A: Python Basics
 ---------------------------------
 
-See in
-[nbviewer](http://nbviewer.ipython.org/github/plotly/python-user-guide/blob/master/sA_python-basics/sA_python-basics.ipynb)
+See on [plot.ly](https://plot.ly/python/python-tutorial)
 
 ![Plotly logo](http://i.imgur.com/4vwuxdJ.png)

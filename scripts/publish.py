@@ -87,10 +87,9 @@ def strip_last_pre(body):
     Pre = body.findAll('pre')
     Pre[-1].extract()
     for div in body.findAll('div')[::-1]:
-      if all(i in div['class'] 
-             for i in ['cell', 'border-box-sizing', 'code_cell', 'rendered']):
-        div.extract()
-        break
+        if all(i in div['class'] for i in ['cell','border-box-sizing','code_cell','rendered']):
+            div.extract()
+            break
     print "[{}]".format(NAME), '... strip last <pre> and parent <div> (which inserts CSS into NB)'
     return body
 
@@ -103,16 +102,16 @@ def get_translate():
         translate = json.load(f)
     return translate
 
-# Get the directory tree for body.txt and head.txt leaves
+# Get the directory tree for the body.html leaf
 def get_tree(file_html, translate):
-    branch="published/"
+    branch="published/includes/"
     file_html_base = os.path.basename(file_html)
     for old, leaf in translate.items():
         old_base = os.path.basename(old).replace('.ipynb','.html')
         if old_base == file_html_base:
             return "{branch}{leaf}/".format(branch=branch,leaf=leaf)
     else:
-        print "[{}]".format(NAME), '... URL tail not found in translate.json'
+        print "[{}]".format(NAME), '!!! URL tail not found in translate.json'
 
 # Make directory tree
 def make_tree(tree):
@@ -122,13 +121,12 @@ def make_tree(tree):
     else:
         print "[{}]".format(NAME), '...', tree, 'already exists OK'
 
-# Replace body.txt templates
+# Replace body.html templates
 def replace_templates(body, tree):
-    for temp, f_temp in zip([body],['body.txt']):
-        path_temp = os.path.join(tree, f_temp)
-        with open(path_temp, "wb") as f:
-            print "[{}]".format(NAME), '... writes in', f_temp
-            f.write(str(temp))
+    f_body = os.path.join(tree, "body.html")
+    with open(f_body, "wb") as f:
+        print "[{}]".format(NAME), '... writes in', f_body
+        f.write(str(body))
     return
 
 # -------------------------------------------------------------------------------
