@@ -1,7 +1,7 @@
 {
     "tags": {
         "meta_description": "An overview of plotly streaming plots with plotly and Python or IPython.", 
-        "title": "Python / IPython User Guide | Streaming Tutorial | plotly"
+        "title": "Overview of Streaming Plots | Python User Guide | plotly"
     }, 
-    "user_guide_chapter_name": "Plotly's Streaming API"
+    "user_guide_chapter_name": "Streaming plots"
 }

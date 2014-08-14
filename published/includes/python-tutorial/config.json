@@ -1,7 +1,7 @@
 {
     "tags": {
-        "meta_description": "A tutorial on Python features used in the Python / IPython User Guide", 
-        "title": "Python / IPython User Guide | Python Tutorial | plotly"
+        "meta_description": "A tutorial on Python features most used with plotly in the Python User Guide", 
+        "title": "Python Tutorial | plotly"
     }, 
-    "user_guide_chapter_name": "Python Basics"
+    "user_guide_chapter_name": "Python basics"
 }

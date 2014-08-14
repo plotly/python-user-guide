@@ -1,7 +1,7 @@
 {
     "tags": {
         "meta_description": "A tutorial on how to make beautiful bar charts with plotly and Python or IPython.", 
-        "title": "Python / IPython User Guide | Bar Charts Tutorial | plotly"
+        "title": "Bar Charts Tutorial | Python User Guide | plotly"
     }, 
-    "user_guide_chapter_name": "Bar Charts"
+    "user_guide_chapter_name": "Bar charts"
 }

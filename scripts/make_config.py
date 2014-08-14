@@ -39,8 +39,8 @@ def get_config(chapter):
         base = base.replace('heatmaps','heatmaps,').replace('2dhistograms','2D histograms')
 
     # Set fields
-    name = titled(base.replace(' tutorial',''))
-    title = "Python / IPython User Guide | {} | plotly".format(titled(base))
+    name = base.capitalize().replace(' tutorial','')
+    title = "{} | Python User Guide | plotly".format(titled(base))
     descrip = (
         "A tutorial on how to make beautiful {} "
         "with plotly and Python or IPython."
@@ -49,46 +49,53 @@ def get_config(chapter):
     # Exceptions (fields)
     if chapter == 'user-guide':
         name = ""
-        title = "Python / IPython User Guide | plotly"
-        descrip = "A User Guide for plotly and its Python / IPython API Library"
+        title = "Python User Guide | plotly"
+        descrip = "A User Guide for Plotly and its Python API Library"
     if chapter == 'overview':
-        descrip = "An overview of plotly and its Python / IPython API Library"
+        title = "Overview of Plotly and its Python API Library"
+        descrip = "An overview of plotly and its Python API Library"
     if chapter == 'matplotlib-to-plotly-tutorial': 
+        title = "Convert Matplotlib Graphs to Plotly | Python User Guide | plotly" 
         descrip = (
             'A tutorial on how to convert matplotlib figures '
             'to beautiful plotly figures.'
         )
     if chapter == 'streaming-tutorial': 
-        name = "Plotly's Streaming API"
+        name = "Streaming plots"
+        title = "Overview of Streaming Plots | Python User Guide | plotly" 
         descrip = (
             'An overview of plotly streaming plots '
             'with plotly and Python or IPython.'
         )
     if chapter == 'streaming-line-tutorial': 
-        name = "Plotly's Streaming API"
+        name = "Streaming plots"
+        title = "Streaming Line Plots | Python User Guide | plotly" 
         descrip = (
             "A tutorial on how to make beautiful streaming line plots "
             "with plotly and Python or IPython."
         )
     if chapter == 'streaming-double-pendulum-tutorial': 
-        name = "Plotly's Streaming API"
+        name = "Streaming plots"
+        title = "A Streaming Double Pendulum | Python User Guide | plotly" 
         descrip = (
             'A tutorial on how to make a beautiful streaming plot '
             'of a never-ending double pendulum simulation '
             'with plotly and Python or IPython.'
         )
     if chapter == 'streaming-bubbles-tutorial':
-        name = "Plotly's Streaming API"
+        name = "Streaming plots"
+        title = "Streaming Bubble Charts | Python User Guide | plotly" 
         descrip = (
             'A tutorial on how to make a beautiful streaming plot '
             'of an animated bubble chart '
             'with plotly and Python or IPython.'
         )
     if chapter == 'python-tutorial':
-        name = "Python Basics"
+        name = "Python basics"
+        title = "Python Tutorial | plotly"
         descrip = (
-            'A tutorial on Python features used in the '
-            'Python / IPython User Guide'
+            'A tutorial on Python features most used with plotly in the '
+            'Python User Guide'
         )
 
     # Output

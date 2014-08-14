@@ -1,7 +1,7 @@
 {
     "tags": {
         "meta_description": "A tutorial on how to make beautiful bubble charts with plotly and Python or IPython.", 
-        "title": "Python / IPython User Guide | Bubble Charts Tutorial | plotly"
+        "title": "Bubble Charts Tutorial | Python User Guide | plotly"
     }, 
-    "user_guide_chapter_name": "Bubble Charts"
+    "user_guide_chapter_name": "Bubble charts"
 }
