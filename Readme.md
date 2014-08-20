@@ -15,9 +15,10 @@ This repository is divided into folders, one for each section or
 appendix. Each folder contains one or several IPython notebooks and the required
 data files to run them.
 
-Tis repository implements a handful of scripts (using `makefile`) with the
-purpose of the User Guide's notebook to *publishable* HTML files constituting
-the backbone of the Python API User Guide section of [plot.ly](https://plot.ly).
+This repository implements a handful of scripts (notably using
+[nbconvert](https://github.com/ipython/nbconvert)) with the purpose of the User
+Guide's notebook to *publishable* HTML files constituting the backbone of the
+Python API User Guide section of [plot.ly](https://plot.ly).
 
 The User Guide's homepage resides on
 [plot.ly/python/user-guide](https://plot.ly/python/user-guide/).
@@ -38,7 +39,7 @@ Refer to [`Contributing.md`](./Contributing.md) for more.
 
 * `scripts/` : scripts used in the notebook-to-published HTML process
 
-* `published/` : published content
+* `published/` : plot.ly-ready published content
 
 * `custom.css` : CSS file for notebook styling
 
@@ -51,14 +52,6 @@ Refer to [`Contributing.md`](./Contributing.md) for more.
 * About the User Guide
   email at etienne@plot.ly
   or tweet at [@etpinard](https://twitter.com/etpinard)
-
-#### Big Thanks to
-
-* [Cam Davidson-Pilon](http://nbviewer.ipython.org/github/CamDavidsonPilon/Probabilistic-Programming-and-Bayesian-Methods-for-Hackers/blob/master/Prologue/Prologue.ipynb) 
-
-* [Lorena A. Barba](http://lorenabarba.com/blog/announcing-aeropython/#.U1ULXdX1LJ4.google_plusone_share)
-  
-  for notebook styling ideas
 
 ![Plotly logo](http://i.imgur.com/4vwuxdJ.png)
 
