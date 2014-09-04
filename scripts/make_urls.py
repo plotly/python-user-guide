@@ -10,6 +10,7 @@ import os
 # -------------------------------------------------------------------------------
 
 NAME="make_urls"  # name of this script
+tab = "    "      # tab in space
 
 # Get translate.json, to translate HTML file names to branch names
 def get_translate():
@@ -33,13 +34,16 @@ def get_urls(chapters):
 # See streambed/api_docs/ for more info
 def get_urls_py(urls):
     urls_py = (
-        "from django.conf.urls import patterns, url\n"
-        "import api_docs.views\n\n"
+        "from django.conf.urls import patterns, url\n\n"
+        "import api_docs.views\n\n\n"
         "urlpatterns = patterns(\n"
-        "   '',\n"
-    )
+        "{tab}'',\n"
+    ).format(tab=tab)
     for url in urls:
-        urls_py += '    url("'+url+'", api_docs.views.user_guide_template)'
+        urls_py += (
+            '{tab}url("'+url+'",\n'
+            '{tab}{tab}api_docs.views.user_guide_template)'
+        ).format(tab=tab)
         if url != urls[-1]:
             urls_py += ",\n"
     urls_py += "\n)\n"

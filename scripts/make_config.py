@@ -9,7 +9,7 @@ import os
 #
 # -------------------------------------------------------------------------------
 
-NAME="make_config"  # name of this script
+NAME = "make_config"  # name of this script
 
 # Get translate.json, to translate HTML file names to branch names
 def get_translate():
