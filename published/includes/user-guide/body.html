@@ -182,13 +182,13 @@ the User Guide intends to turn beginner and intermediate Plotly users into exper
        </h4>
 <ul>
 <li>
-<p>
 <a href="/python/overview">
-           Section 0:
-          </a>
-          Getting Started with Plotly
-         </p>
-</li>
+          Section 0:
+         </a>
+         Getting Started with Plotly
+        </li>
+</ul>
+<ul>
 <li>
 <p>
 <a href="/python/line-and-scatter-plots-tutorial">
@@ -245,6 +245,14 @@ the User Guide intends to turn beginner and intermediate Plotly users into exper
           Plotly's Streaming API
          </p>
 </li>
+<li>
+<p>
+<a href="/python/3d-plots-tutorial">
+           Section 8:
+          </a>
+          3D Plots
+         </p>
+</li>
 </ul>
 <ul>
 <li>
@@ -260,7 +268,7 @@ the User Guide intends to turn beginner and intermediate Plotly users into exper
 <ul>
 <li>
 <p>
-          Sections ?: 3D plots, Polar Charts, Maps, ...
+          Sections ?: Polar Charts, Maps, ...
          </p>
 </li>
 <li>
@@ -356,17 +364,10 @@ the User Guide intends to turn beginner and intermediate Plotly users into exper
 </li>
 <li>
 <p>
-          IPython version 2.0.0
+          IPython version 2.1.0
          </p>
 </li>
 </ul>
-<p>
-        Note that the Plotly team has noticed a few small differences between web browsers in the rendering of some Plotly plots and some IPython notebooks features. These are considered bugs (contact us at feedback@plot.ly), as both platforms intend to work across all web browsers. That said, at the moment, we encourage (but do not require) readers of the User Guide to use
-        <a href="https://support.google.com/chrome/answer/95346?hl=en" target="_blank">
-         Google Chrome
-        </a>
-        for the best rendering results.
-       </p>
 </div>
 </div>
 </div>
@@ -481,7 +482,7 @@ the User Guide intends to turn beginner and intermediate Plotly users into exper
 </div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>
-1.2.3
+1.2.7
 
 </pre>
 </div>
@@ -693,14 +694,9 @@ the User Guide intends to turn beginner and intermediate Plotly users into exper
         is your home directory) storing your username and API key locally in JSON file.
        </p>
 <p>
-        You can print your credentials to the stdout, inside Python or IPython, with:
+        Moreover, inside Python or IPython, with:
        </p>
-<pre><code>&gt;&gt;&gt; tls.show_credentials_file()
-</code></pre>
-<p>
-        and
-       </p>
-<pre><code>&gt;&gt;&gt; my_creds = tls.get_credentials_file()
+<pre><code>&gt;&gt;&gt; credentials = tls.get_credentials_file()
 </code></pre>
 <p>
         writes your Plotly credentials into a Python dictionary and assigns it to a variable.

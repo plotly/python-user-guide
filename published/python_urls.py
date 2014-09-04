@@ -30,5 +30,7 @@ urlpatterns = patterns(
     url("(?P<user_guide_chapter>python-tutorial)/$",
         api_docs.views.user_guide_template),
     url("(?P<user_guide_chapter>matplotlib-to-plotly-tutorial)/$",
+        api_docs.views.user_guide_template),
+    url("(?P<user_guide_chapter>3d-plots-tutorial)/$",
         api_docs.views.user_guide_template)
 )
