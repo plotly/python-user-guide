@@ -126,6 +126,9 @@ def replace_templates(body, tree):
     f_body = os.path.join(tree, "body.html")
     with open(f_body, "wb") as f:
         print "[{}]".format(NAME), '... writes in', f_body
+        body = body.prettify().encode('utf8')
+        body = body.replace('<body>','')
+        body = body.replace('</body>','')
         f.write(str(body))
     return
 
