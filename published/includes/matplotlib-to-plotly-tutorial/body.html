@@ -1,250 +1,249 @@
-<body>
-<div class="border-box-sizing" id="notebook" tabindex="-1">
-<div class="container" id="notebook-container">
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
 
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Section-6:-Convert-your-Matplotlib-plots-to-Plotly">
-        Section 6: Convert your Matplotlib plots to Plotly
-        <a class="anchor-link" href="#Section-6:-Convert-your-Matplotlib-plots-to-Plotly">
-         ¶
+ <div class="border-box-sizing" id="notebook" tabindex="-1">
+  <div class="container" id="notebook-container">
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <h2 id="Section-6:-Convert-your-Matplotlib-plots-to-Plotly">
+       Section 6: Convert your Matplotlib plots to Plotly
+       <a class="anchor-link" href="#Section-6:-Convert-your-Matplotlib-plots-to-Plotly">
+        ¶
+       </a>
+      </h2>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       Welcome to Plotly's Python API User Guide.
+      </p>
+      <blockquote>
+       <p>
+        Links to the other sections are on the User Guide's
+        <a href="/python/user-guide#Table-of-Contents:">
+         homepage
         </a>
-</h2>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>
-        Welcome to Plotly's Python API User Guide.
+        <br/>
+        If unfamiliar with Plotly's Python API version 1.0 see
+        <a href="/python/overview">
+         section 0
+        </a>
+        <br/>
+        The Github repository is available
+        <a href="https://github.com/plotly/python-user-guide" target="_blank">
+         here
+        </a>
        </p>
-<blockquote>
-<p>
-         Links to the other sections are on the User Guide's
-         <a href="/python/user-guide#Table-of-Contents:">
-          homepage
+      </blockquote>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       Section 6 is divided as follows:
+      </p>
+      <ul>
+       <li>
+        <p>
+         <a href="#6.1-Matplotlib-to-Plotly-conversion-basics">
+          6.1 Matplotlib to Plotly conversion basics
          </a>
-<br/>
-         If unfamiliar with Plotly's Python API version 1.0 see
-         <a href="/python/overview">
-          section 0
+        </p>
+       </li>
+       <li>
+        <p>
+         <a href="#6.2-Supported-plot-types">
+          6.2 Supported plot types
          </a>
-<br/>
-         The Github repository is available
-         <a href="https://github.com/plotly/python-user-guide" target="_blank">
-          here
+        </p>
+       </li>
+       <li>
+        <p>
+         <a href="#6.3-Converting-subplots">
+          6.3 Converting subplots
          </a>
-</p>
-</blockquote>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>
-        Section 6 is divided as follows:
-       </p>
-<ul>
-<li>
-<p>
-<a href="#6.1-Matplotlib-to-Plotly-conversion-basics">
-           6.1 Matplotlib to Plotly conversion basics
-          </a>
-</p>
-</li>
-<li>
-<p>
-<a href="#6.2-Supported-plot-types">
-           6.2 Supported plot types
-          </a>
-</p>
-</li>
-<li>
-<p>
-<a href="#6.3-Converting-subplots">
-           6.3 Converting subplots
-          </a>
-</p>
-</li>
-<li>
-<p>
-<a href="#6.4-The-nitty-gritty-of-matplotlylib">
-           6.4 The nitty gritty of matplotlylib
-          </a>
-</p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>
-        Quickstart (make Plotly plot from matplotlib figure object):
-       </p>
-<pre><code>&gt;&gt;&gt; import plotly.plotly as py
+        </p>
+       </li>
+       <li>
+        <p>
+         <a href="#6.4-The-nitty-gritty-of-matplotlylib">
+          6.4 The nitty gritty of matplotlylib
+         </a>
+        </p>
+       </li>
+      </ul>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       Quickstart (make Plotly plot from matplotlib figure object):
+      </p>
+      <pre><code>&gt;&gt;&gt; import plotly.plotly as py
 &gt;&gt;&gt; import matplotlib.pyplot as plt
 &gt;&gt;&gt; # auto sign-in with credentials or use py.sign_in()
 &gt;&gt;&gt; mpl_fig_obj= plt.figure()
 &gt;&gt;&gt; # ... make a matplotlib figure ...
 &gt;&gt;&gt; py.plot_mpl(mpl_fig_obj)  
 </code></pre>
-<hr/>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>
-        The User Guide assumes version 1.0 and up of Plotly's Python API.
-       </p>
-<p>
-        Check which version is installed on your machine and please upgrade if needed.
-       </p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-       In [1]:
-      </div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight">
-<pre><span class="c"># (*) Import plotly package</span>
+      <hr/>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       The User Guide assumes version 1.0 and up of Plotly's Python API.
+      </p>
+      <p>
+       Check which version is installed on your machine and please upgrade if needed.
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
+     <div class="prompt input_prompt">
+      In [1]:
+     </div>
+     <div class="inner_cell">
+      <div class="input_area">
+       <div class="highlight">
+        <pre><span class="c"># (*) Import plotly package</span>
 <span class="kn">import</span> <span class="nn">plotly</span>
 
 <span class="c"># Check plolty version (if not latest, please upgrade)</span>
 <span class="k">print</span> <span class="n">plotly</span><span class="o">.</span><span class="n">__version__</span>
 </pre>
-</div>
-</div>
-</div>
-</div>
-<div class="output_wrapper">
-<div class="output">
-<div class="output_area">
-<div class="prompt">
-</div>
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="output_wrapper">
+     <div class="output">
+      <div class="output_area">
+       <div class="prompt">
+       </div>
+       <div class="output_subarea output_stream output_stdout output_text">
+        <pre>
 1.2.3
 
 </pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>
-        See the User Guide's
-        <a href="/python/user-guide#Installation-guidelines" target="_blank">
-         homepage
-        </a>
-        for more info on installation and upgrading.
-       </p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h5 id="matplotlib-plotly-matplotlylib">
-        Matplotlib + Plotly = Matplotlylib
-       </h5>
-<p>
-        The
-        <a href="https://github.com/mpld3/matplotlylib" target="_blank">
-         matplotlylib
-        </a>
-        project is a collaboration between
-        <a href="https://plot.ly/" target="_blank">
-         Plotly
-        </a>
-        ,
-        <a href="http://mpld3.github.io/" target="_blank">
-         mpld3
-        </a>
-        and
-        <a href="https://github.com/jakevdp" target="_blank">
-         Jake Vanderplas
-        </a>
-        that lets you convert matplotlib figures to beautiful
-        <a href="http://d3js.org/" target="_blank">
-         D3.js
-        </a>
-        graphs with Plotly's Python API.
-       </p>
-<p>
-        The goal of mpld3 is to expand Python's matplotlib plotting package use to the browser. Now, together with Plotly, users can share their plots and data sets online, for free.
-       </p>
-<p>
-        While Plotly's Python API gives users access to Plotly directly, users may already have high-quality plots that they want to get online and share. Standing on the shoulders of the
-        <a href="https://github.com/mpld3/mplexporter" target="_blank">
-         mplexporter
-        </a>
-        , matplotlylib allows users to convert matplotlib figures to Plotly figures with a simple function call.
-       </p>
-<p>
-        If your data sets are important to you, they are important to us, and we will help you share them with others. As a bonus, you will be able to use Plotly's awesome interactive web GUI.
-       </p>
-<p>
-        This section showcases the current state of matplotlylib and how you can incorporate it into your workflow.
-       </p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>
-        We first import a few modules and sign in to Plotly using our credentials file
-       </p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-       In [2]:
+       </div>
       </div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight">
-<pre><span class="c"># (*) To communicate with Plotly's server, sign in with credentials file</span>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       See the User Guide's
+       <a href="/python/user-guide#Installation-guidelines" target="_blank">
+        homepage
+       </a>
+       for more info on installation and upgrading.
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <h5 id="matplotlib-plotly-matplotlylib">
+       Matplotlib + Plotly = Matplotlylib
+      </h5>
+      <p>
+       The
+       <a href="https://github.com/mpld3/matplotlylib" target="_blank">
+        matplotlylib
+       </a>
+       project is a collaboration between
+       <a href="https://plot.ly/" target="_blank">
+        Plotly
+       </a>
+       ,
+       <a href="http://mpld3.github.io/" target="_blank">
+        mpld3
+       </a>
+       and
+       <a href="https://github.com/jakevdp" target="_blank">
+        Jake Vanderplas
+       </a>
+       that lets you convert matplotlib figures to beautiful
+       <a href="http://d3js.org/" target="_blank">
+        D3.js
+       </a>
+       graphs with Plotly's Python API.
+      </p>
+      <p>
+       The goal of mpld3 is to expand Python's matplotlib plotting package use to the browser. Now, together with Plotly, users can share their plots and data sets online, for free.
+      </p>
+      <p>
+       While Plotly's Python API gives users access to Plotly directly, users may already have high-quality plots that they want to get online and share. Standing on the shoulders of the
+       <a href="https://github.com/mpld3/mplexporter" target="_blank">
+        mplexporter
+       </a>
+       , matplotlylib allows users to convert matplotlib figures to Plotly figures with a simple function call.
+      </p>
+      <p>
+       If your data sets are important to you, they are important to us, and we will help you share them with others. As a bonus, you will be able to use Plotly's awesome interactive web GUI.
+      </p>
+      <p>
+       This section showcases the current state of matplotlylib and how you can incorporate it into your workflow.
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       We first import a few modules and sign in to Plotly using our credentials file
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
+     <div class="prompt input_prompt">
+      In [2]:
+     </div>
+     <div class="inner_cell">
+      <div class="input_area">
+       <div class="highlight">
+        <pre><span class="c"># (*) To communicate with Plotly's server, sign in with credentials file</span>
 <span class="kn">import</span> <span class="nn">plotly.plotly</span> <span class="kn">as</span> <span class="nn">py</span>  
 
 <span class="c"># (*) Useful Python/Plotly tools</span>
@@ -255,137 +254,137 @@
 
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>  <span class="c"># (*) numpy for math functions and arrays</span>
 </pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>
-        If you are not familiar with credentials files, refer to the User Guide's
-        <a href="/python/user-guide#Step-6" target="_blank">
-         homepage
-        </a>
-        .
-       </p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>
-        We also need to import matplotlib and let's turn on the IPython inline magic to display matplotlib plots directly inside this notebook.
-       </p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-       In [3]:
+       </div>
       </div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight">
-<pre><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span> <span class="c"># (*) import matplotlib</span>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       If you are not familiar with credentials files, refer to the User Guide's
+       <a href="/python/user-guide#Step-6" target="_blank">
+        homepage
+       </a>
+       .
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       We also need to import matplotlib and let's turn on the IPython inline magic to display matplotlib plots directly inside this notebook.
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
+     <div class="prompt input_prompt">
+      In [3]:
+     </div>
+     <div class="inner_cell">
+      <div class="input_area">
+       <div class="highlight">
+        <pre><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span> <span class="c"># (*) import matplotlib</span>
 
 <span class="o">%</span><span class="k">matplotlib</span> <span class="n">inline</span>
 </pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="6.1-Matplotlib-to-Plotly-conversion-basics">
-        6.1 Matplotlib to Plotly conversion basics
-        <a class="anchor-link" href="#6.1-Matplotlib-to-Plotly-conversion-basics">
-         ¶
-        </a>
-</h3>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>
-        To convert a matplotlib figure to a Plotly figure, Python API users now have, in version 1.0, the following three functions made available to them:
-       </p>
-<ul>
-<li>
-<p>
-<code>
-           tls.mpl_to_plotly
-          </code>
-          : takes in a matplotlib figure object (i.e.
-          <code>
-           mpl_fig = plt.figure()
-          </code>
-          ) and returns a Plotly figure object
-         </p>
-</li>
-<li>
-<p>
-<code>
-           py.plot_mpl
-          </code>
-          : takes in  a matplotlib figure object and creates a Plotly plot at a unique URL, and optionally opens a new browser tab at this URL.
-         </p>
-</li>
-<li>
-<p>
-<code>
-           py.iplot_mpl
-          </code>
-          : similar to
-          <code>
-           py.plot_mpl
-          </code>
-          but for IPython notebook use. It displays the returned Plotly figure directly in the IPython notebook in session.
-         </p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>
-        So, let's get started by generating this
-        <a href="http://matplotlib.org/examples/pylab_examples/legend_demo2.html" target="_blank">
-         damped oscillation graph
-        </a>
-        using matplotlib. The following code cell has been adapted from the matplotlib example bank. Thanks!
-       </p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-       In [4]:
+       </div>
       </div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight">
-<pre><span class="c"># Package all mpl plotting commands inside one function</span>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <h3 id="6.1-Matplotlib-to-Plotly-conversion-basics">
+       6.1 Matplotlib to Plotly conversion basics
+       <a class="anchor-link" href="#6.1-Matplotlib-to-Plotly-conversion-basics">
+        ¶
+       </a>
+      </h3>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       To convert a matplotlib figure to a Plotly figure, Python API users now have, in version 1.0, the following three functions made available to them:
+      </p>
+      <ul>
+       <li>
+        <p>
+         <code>
+          tls.mpl_to_plotly
+         </code>
+         : takes in a matplotlib figure object (i.e.
+         <code>
+          mpl_fig = plt.figure()
+         </code>
+         ) and returns a Plotly figure object
+        </p>
+       </li>
+       <li>
+        <p>
+         <code>
+          py.plot_mpl
+         </code>
+         : takes in  a matplotlib figure object and creates a Plotly plot at a unique URL, and optionally opens a new browser tab at this URL.
+        </p>
+       </li>
+       <li>
+        <p>
+         <code>
+          py.iplot_mpl
+         </code>
+         : similar to
+         <code>
+          py.plot_mpl
+         </code>
+         but for IPython notebook use. It displays the returned Plotly figure directly in the IPython notebook in session.
+        </p>
+       </li>
+      </ul>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       So, let's get started by generating this
+       <a href="http://matplotlib.org/examples/pylab_examples/legend_demo2.html" target="_blank">
+        damped oscillation graph
+       </a>
+       using matplotlib. The following code cell has been adapted from the matplotlib example bank. Thanks!
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
+     <div class="prompt input_prompt">
+      In [4]:
+     </div>
+     <div class="inner_cell">
+      <div class="input_area">
+       <div class="highlight">
+        <pre><span class="c"># Package all mpl plotting commands inside one function</span>
 <span class="k">def</span> <span class="nf">plot_mpl_fig</span><span class="p">():</span>
     
     <span class="c"># Make two time arrays</span>
@@ -414,17 +413,17 @@
 <span class="c"># N.B. get matplotlib figure object and assign a variable to it</span>
 <span class="n">mpl_fig1</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">gcf</span><span class="p">()</span>
 </pre>
-</div>
-</div>
-</div>
-</div>
-<div class="output_wrapper">
-<div class="output">
-<div class="output_area">
-<div class="prompt">
-</div>
-<div class="output_png output_subarea ">
-<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAY0AAAEZCAYAAABrUHmEAAAABHNCSVQICAgIfAhkiAAAAAlwSFlz
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="output_wrapper">
+     <div class="output">
+      <div class="output_area">
+       <div class="prompt">
+       </div>
+       <div class="output_png output_subarea ">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAY0AAAEZCAYAAABrUHmEAAAABHNCSVQICAgIfAhkiAAAAAlwSFlz
 AAALEgAACxIB0t1+/AAAIABJREFUeJztvXt8FOW9+P9OgmSDQALhEm6yGj0CRQ1YEK2WqKWi8a70
 KK2HtJ7qaeVyzu+0tj3WMtLLafmec74FtP3am+HUokdt4YhbkRQJar1gJVGjUG1wUYQECCRcchGS
 /f3xzOzOzs5uZpPdnb183nnNa+e2M89OPjOfeT63BwRBEARBEARBEARBEARBEARBEARBEARBEARB
@@ -736,89 +735,89 @@ eRxV+6geeIKQAqlG1fbZDHwALAa+gSqw9wowQt+vHFUz6S/AC8C5KWq3IAiC4AKTCSkK83w1avSz
 uwQh6YjSEIT4aQX+jDI5rSQ0ylmA8BHPrPPG8heBO1HlqhtRYzQLgiAIgiAIgiAIgiAIgiAIgiAI
 giAIgiAIgiAIgiAIgiAIgiAIgiAIgiAIQiT/P7Yi6qmzVPkMAAAAAElFTkSuQmCC
 "/>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>
-        Note that in the above we retrieved the matplotlib figure object after generating the plot, using
-       </p>
-<pre><code>plt.gcf() 
-</code></pre>
-<p>
-        where
-        <code>
-         .gcf()
-        </code>
-        stands for get current figure. Equivalently, we can use
-       </p>
-<pre><code>plt.figure()
-</code></pre>
-<p>
-        to initialize the figure object before the plotting commands. The latter method is used in this section from this point on.
-       </p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h5 id="Convert-a-matplotlib-figure-object-to-a-Plotly-figure-object">
-        Convert a matplotlib figure object to a Plotly figure object
-        <a class="anchor-link" href="#Convert-a-matplotlib-figure-object-to-a-Plotly-figure-object">
-         ¶
-        </a>
-</h5>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>
-        Let's first try out the
-        <code>
-         tls.mpl_to_plotly
-        </code>
-        function.
-       </p>
-<p>
-        As always, a good way to start is to run help on the object in question:
-       </p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-       In [5]:
+       </div>
       </div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight">
-<pre><span class="n">help</span><span class="p">(</span><span class="n">tls</span><span class="o">.</span><span class="n">mpl_to_plotly</span><span class="p">)</span> 
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       Note that in the above we retrieved the matplotlib figure object after generating the plot, using
+      </p>
+      <pre><code>plt.gcf() 
+</code></pre>
+      <p>
+       where
+       <code>
+        .gcf()
+       </code>
+       stands for get current figure. Equivalently, we can use
+      </p>
+      <pre><code>plt.figure()
+</code></pre>
+      <p>
+       to initialize the figure object before the plotting commands. The latter method is used in this section from this point on.
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <h5 id="Convert-a-matplotlib-figure-object-to-a-Plotly-figure-object">
+       Convert a matplotlib figure object to a Plotly figure object
+       <a class="anchor-link" href="#Convert-a-matplotlib-figure-object-to-a-Plotly-figure-object">
+        ¶
+       </a>
+      </h5>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       Let's first try out the
+       <code>
+        tls.mpl_to_plotly
+       </code>
+       function.
+      </p>
+      <p>
+       As always, a good way to start is to run help on the object in question:
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
+     <div class="prompt input_prompt">
+      In [5]:
+     </div>
+     <div class="inner_cell">
+      <div class="input_area">
+       <div class="highlight">
+        <pre><span class="n">help</span><span class="p">(</span><span class="n">tls</span><span class="o">.</span><span class="n">mpl_to_plotly</span><span class="p">)</span> 
 </pre>
-</div>
-</div>
-</div>
-</div>
-<div class="output_wrapper">
-<div class="output">
-<div class="output_area">
-<div class="prompt">
-</div>
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="output_wrapper">
+     <div class="output">
+      <div class="output_area">
+       <div class="prompt">
+       </div>
+       <div class="output_subarea output_stream output_stdout output_text">
+        <pre>
 Help on function mpl_to_plotly in module plotly.tools:
 
 mpl_to_plotly(fig, resize=False, strip_style=False, verbose=False)
@@ -870,43 +869,43 @@ mpl_to_plotly(fig, resize=False, strip_style=False, verbose=False)
 
 
 </pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>
-        So, we convert the matplotlib figure object of our previous figure to a Plotly figure object, with verbose turned on just for fun:
-       </p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-       In [6]:
+       </div>
       </div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight">
-<pre><span class="n">py_fig1</span> <span class="o">=</span> <span class="n">tls</span><span class="o">.</span><span class="n">mpl_to_plotly</span><span class="p">(</span><span class="n">mpl_fig1</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       So, we convert the matplotlib figure object of our previous figure to a Plotly figure object, with verbose turned on just for fun:
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
+     <div class="prompt input_prompt">
+      In [6]:
+     </div>
+     <div class="inner_cell">
+      <div class="input_area">
+       <div class="highlight">
+        <pre><span class="n">py_fig1</span> <span class="o">=</span> <span class="n">tls</span><span class="o">.</span><span class="n">mpl_to_plotly</span><span class="p">(</span><span class="n">mpl_fig1</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
 </pre>
-</div>
-</div>
-</div>
-</div>
-<div class="output_wrapper">
-<div class="output">
-<div class="output_area">
-<div class="prompt">
-</div>
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="output_wrapper">
+     <div class="output">
+      <div class="output_area">
+       <div class="prompt">
+       </div>
+       <div class="output_subarea output_stream output_stdout output_text">
+        <pre>
 Initialized PlotlyRenderer
 Opening figure
   Opening axes
@@ -933,43 +932,43 @@ Closing figure
 
 
 </pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>
-        Now, print the yielded Plotly figure object:
-       </p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-       In [7]:
+       </div>
       </div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight">
-<pre><span class="k">print</span> <span class="n">py_fig1</span><span class="o">.</span><span class="n">to_string</span><span class="p">()</span>  
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       Now, print the yielded Plotly figure object:
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
+     <div class="prompt input_prompt">
+      In [7]:
+     </div>
+     <div class="inner_cell">
+      <div class="input_area">
+       <div class="highlight">
+        <pre><span class="k">print</span> <span class="n">py_fig1</span><span class="o">.</span><span class="n">to_string</span><span class="p">()</span>  
 </pre>
-</div>
-</div>
-</div>
-</div>
-<div class="output_wrapper">
-<div class="output">
-<div class="output_area">
-<div class="prompt">
-</div>
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="output_wrapper">
+     <div class="output">
+      <div class="output_area">
+       <div class="prompt">
+       </div>
+       <div class="output_subarea output_stream output_stdout output_text">
+        <pre>
 Figure(
     data=Data([
         Scatter(
@@ -1117,184 +1116,184 @@ Figure(
 )
 
 </pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>
-        And there it is. A full Plotly figure object corresponding to our matplotlib plot!
-       </p>
-<p>
-        Even though the matplotlib plot only has one x-axis and one y-axis, matplotlylib converted the matplotlib axes to
-        <code>
-         'xaxis1'
-        </code>
-        and
-        <code>
-         'yaxis1'
-        </code>
-        keys in the Plotly layout object, consistent with figure object containing subplots (more in
-        <a href="#6.3-Converting-subplots">
-         subsection 6.3
-        </a>
-        ).
-       </p>
-<p>
-        Moreover, note that
-        <code>
-         tls.mpl_to_plotly
-        </code>
-        comes with a few optional keyword arguments. Namely,
-        <code>
-         resize
-        </code>
-        and
-        <code>
-         strip_style
-        </code>
-        which give users some flexibiliy in the conversion.
-       </p>
-<p>
-        By default, the converted Plotly figure object keeps the original matplotlib figure's size in pixels. These specifications are linked to the
-        <code>
-         'layout'
-        </code>
-        key of the Plotly figure object. More specifically for our first figure:
-       </p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-       In [8]:
+       </div>
       </div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight">
-<pre><span class="c"># Print key-value pairs corresponding to the figure's size</span>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       And there it is. A full Plotly figure object corresponding to our matplotlib plot!
+      </p>
+      <p>
+       Even though the matplotlib plot only has one x-axis and one y-axis, matplotlylib converted the matplotlib axes to
+       <code>
+        'xaxis1'
+       </code>
+       and
+       <code>
+        'yaxis1'
+       </code>
+       keys in the Plotly layout object, consistent with figure object containing subplots (more in
+       <a href="#6.3-Converting-subplots">
+        subsection 6.3
+       </a>
+       ).
+      </p>
+      <p>
+       Moreover, note that
+       <code>
+        tls.mpl_to_plotly
+       </code>
+       comes with a few optional keyword arguments. Namely,
+       <code>
+        resize
+       </code>
+       and
+       <code>
+        strip_style
+       </code>
+       which give users some flexibiliy in the conversion.
+      </p>
+      <p>
+       By default, the converted Plotly figure object keeps the original matplotlib figure's size in pixels. These specifications are linked to the
+       <code>
+        'layout'
+       </code>
+       key of the Plotly figure object. More specifically for our first figure:
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
+     <div class="prompt input_prompt">
+      In [8]:
+     </div>
+     <div class="inner_cell">
+      <div class="input_area">
+       <div class="highlight">
+        <pre><span class="c"># Print key-value pairs corresponding to the figure's size</span>
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="p">[</span><span class="s">'autosize'</span><span class="p">,</span><span class="s">'width'</span><span class="p">,</span><span class="s">'height'</span><span class="p">]:</span>
     <span class="k">print</span> <span class="n">i</span><span class="p">,</span> <span class="n">py_fig1</span><span class="p">[</span><span class="s">'layout'</span><span class="p">][</span><span class="n">i</span><span class="p">]</span>
 </pre>
-</div>
-</div>
-</div>
-</div>
-<div class="output_wrapper">
-<div class="output">
-<div class="output_area">
-<div class="prompt">
-</div>
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="output_wrapper">
+     <div class="output">
+      <div class="output_area">
+       <div class="prompt">
+       </div>
+       <div class="output_subarea output_stream output_stdout output_text">
+        <pre>
 autosize False
 width 480
 height 320
 
 </pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>
-        Then, setting
-        <code>
-         resize
-        </code>
-        to
-        <code>
-         True
-        </code>
-        in the
-        <code>
-         tls.mpl_to_plotly
-        </code>
-        call effectively deletes the three above keys (as the
-        <code>
-         .pop()
-        </code>
-        dictionary method would do). In this case, the converted Plotly figure object acquires Plotly's auto-size functionality when plotted.
-       </p>
-<p>
-        The
-        <code>
-         strip_style
-        </code>
-        argument allows users to convert a matplotlib figure to Plotly's beautiful default style settting without having to manipulation the Plotly figure object. The
-        <code>
-         strip_style
-        </code>
-        argument is in display next.
-       </p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h5 id="Plot-a-matplotlib-figure-in-Plotly">
-        Plot a matplotlib figure in Plotly
-        <a class="anchor-link" href="#Plot-a-matplotlib-figure-in-Plotly">
-         ¶
-        </a>
-</h5>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>
-        Start by running help on
-        <code>
-         py.iplot_mpl
-        </code>
-        (or
-        <code>
-         py.plot_mpl
-        </code>
-        ),
-       </p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-       In [9]:
+       </div>
       </div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight">
-<pre><span class="n">help</span><span class="p">(</span><span class="n">py</span><span class="o">.</span><span class="n">iplot_mpl</span><span class="p">)</span>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       Then, setting
+       <code>
+        resize
+       </code>
+       to
+       <code>
+        True
+       </code>
+       in the
+       <code>
+        tls.mpl_to_plotly
+       </code>
+       call effectively deletes the three above keys (as the
+       <code>
+        .pop()
+       </code>
+       dictionary method would do). In this case, the converted Plotly figure object acquires Plotly's auto-size functionality when plotted.
+      </p>
+      <p>
+       The
+       <code>
+        strip_style
+       </code>
+       argument allows users to convert a matplotlib figure to Plotly's beautiful default style settting without having to manipulation the Plotly figure object. The
+       <code>
+        strip_style
+       </code>
+       argument is in display next.
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <h5 id="Plot-a-matplotlib-figure-in-Plotly">
+       Plot a matplotlib figure in Plotly
+       <a class="anchor-link" href="#Plot-a-matplotlib-figure-in-Plotly">
+        ¶
+       </a>
+      </h5>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       Start by running help on
+       <code>
+        py.iplot_mpl
+       </code>
+       (or
+       <code>
+        py.plot_mpl
+       </code>
+       ),
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
+     <div class="prompt input_prompt">
+      In [9]:
+     </div>
+     <div class="inner_cell">
+      <div class="input_area">
+       <div class="highlight">
+        <pre><span class="n">help</span><span class="p">(</span><span class="n">py</span><span class="o">.</span><span class="n">iplot_mpl</span><span class="p">)</span>
 </pre>
-</div>
-</div>
-</div>
-</div>
-<div class="output_wrapper">
-<div class="output">
-<div class="output_area">
-<div class="prompt">
-</div>
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="output_wrapper">
+     <div class="output">
+      <div class="output_area">
+       <div class="prompt">
+       </div>
+       <div class="output_subarea output_stream output_stdout output_text">
+        <pre>
 Help on function iplot_mpl in module plotly.plotly.plotly:
 
 iplot_mpl(fig, resize=True, strip_style=False, update=None, **plot_options)
@@ -1319,317 +1318,317 @@ iplot_mpl(fig, resize=True, strip_style=False, update=None, **plot_options)
 
 
 </pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>
-        Note that
-        <code>
-         resize
-        </code>
-        keyword argument is set to
-        <code>
-         True
-        </code>
-        by default in
-        <code>
-         py.iplot_mpl
-        </code>
-        (N.B. and for
-        <code>
-         py.plot_mpl
-        </code>
-        ). unlike in
-        <code>
-         tls.mpl_to_plotly
-        </code>
-        .
-       </p>
-<p>
-        Next, we send our matplotlib figure object to
-        <code>
-         py.iplot_mpl
-        </code>
-        , give it a file name as keyword argument likewise to
-        <code>
-         py.iplot
-        </code>
-        and
-        <code>
-         py.plot
-        </code>
-        . This results in:
-       </p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-       In [10]:
+       </div>
       </div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight">
-<pre><span class="n">py</span><span class="o">.</span><span class="n">iplot_mpl</span><span class="p">(</span><span class="n">mpl_fig1</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="s">'s6_damped_oscillation'</span><span class="p">)</span>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       Note that
+       <code>
+        resize
+       </code>
+       keyword argument is set to
+       <code>
+        True
+       </code>
+       by default in
+       <code>
+        py.iplot_mpl
+       </code>
+       (N.B. and for
+       <code>
+        py.plot_mpl
+       </code>
+       ). unlike in
+       <code>
+        tls.mpl_to_plotly
+       </code>
+       .
+      </p>
+      <p>
+       Next, we send our matplotlib figure object to
+       <code>
+        py.iplot_mpl
+       </code>
+       , give it a file name as keyword argument likewise to
+       <code>
+        py.iplot
+       </code>
+       and
+       <code>
+        py.plot
+       </code>
+       . This results in:
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
+     <div class="prompt input_prompt">
+      In [10]:
+     </div>
+     <div class="inner_cell">
+      <div class="input_area">
+       <div class="highlight">
+        <pre><span class="n">py</span><span class="o">.</span><span class="n">iplot_mpl</span><span class="p">(</span><span class="n">mpl_fig1</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="s">'s6_damped_oscillation'</span><span class="p">)</span>
 </pre>
-</div>
-</div>
-</div>
-</div>
-<div class="output_wrapper">
-<div class="output">
-<div class="output_area">
-<div class="prompt">
-</div>
-<div class="output_html rendered_html output_subarea ">
-<iframe height="525" id="igraph" scrolling="no" seamless="seamless" src="https://plot.ly/~etpinard/214" style="border:none;" width="100%">
-</iframe>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>
-        Wow! The difference between a matplotlib plot and a Plotly plot is merely one line of code.
-       </p>
-<p>
-        Our plot has now a unique URL and can, along with the underlying data sets, be shared online. As with all Plotly plots, you can hover, zoom, and pan on the figure. Fantastic.
-       </p>
-<p>
-        Plotly's Python API makes it easy to
-        <em>
-         strip
-        </em>
-        a figure's style options which, in essence, resets all style keys to the beautiful-looking Plotly defaults. This can be done in several ways adapted to your personal workflow. First, by adding a keyword argument in the
-        <code>
-         py.iplot_mpl
-        </code>
-        or
-        <code>
-         py_plot_mpl
-        </code>
-        call:
-       </p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-       In [11]:
+       </div>
       </div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight">
-<pre><span class="c"># (1) Plot mpl figure object as a Plotly plot with default style options</span>
+     </div>
+    </div>
+    <div class="output_wrapper">
+     <div class="output">
+      <div class="output_area">
+       <div class="prompt">
+       </div>
+       <div class="output_html rendered_html output_subarea ">
+        <iframe height="525" id="igraph" scrolling="no" seamless="seamless" src="https://plot.ly/~etpinard/214" style="border:none;" width="100%">
+        </iframe>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       Wow! The difference between a matplotlib plot and a Plotly plot is merely one line of code.
+      </p>
+      <p>
+       Our plot has now a unique URL and can, along with the underlying data sets, be shared online. As with all Plotly plots, you can hover, zoom, and pan on the figure. Fantastic.
+      </p>
+      <p>
+       Plotly's Python API makes it easy to
+       <em>
+        strip
+       </em>
+       a figure's style options which, in essence, resets all style keys to the beautiful-looking Plotly defaults. This can be done in several ways adapted to your personal workflow. First, by adding a keyword argument in the
+       <code>
+        py.iplot_mpl
+       </code>
+       or
+       <code>
+        py_plot_mpl
+       </code>
+       call:
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
+     <div class="prompt input_prompt">
+      In [11]:
+     </div>
+     <div class="inner_cell">
+      <div class="input_area">
+       <div class="highlight">
+        <pre><span class="c"># (1) Plot mpl figure object as a Plotly plot with default style options</span>
 <span class="n">py</span><span class="o">.</span><span class="n">iplot_mpl</span><span class="p">(</span><span class="n">mpl_fig1</span><span class="p">,</span> <span class="n">strip_style</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> 
              <span class="n">filename</span><span class="o">=</span><span class="s">'s6_damped_oscillation-default-style'</span><span class="p">)</span>
 </pre>
-</div>
-</div>
-</div>
-</div>
-<div class="output_wrapper">
-<div class="output">
-<div class="output_area">
-<div class="prompt">
-</div>
-<div class="output_html rendered_html output_subarea ">
-<iframe height="525" id="igraph" scrolling="no" seamless="seamless" src="https://plot.ly/~etpinard/217" style="border:none;" width="100%">
-</iframe>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>
-        Nice!
-       </p>
-<p>
-        Notice that Plotly caught the
-        <code>
-         label
-        </code>
-        keyword argument in the first
-        <code>
-         plt.line
-        </code>
-        call in our
-        <code>
-         plot_mpl_fig
-        </code>
-        funciton. This label is translated to the
-        <code>
-         'name'
-        </code>
-        key in the corresponding trace object; hence, it is displayed on hover and in the legend (as
-        <code>
-         showlegend
-        </code>
-        is set to
-        <code>
-         True
-        </code>
-        by default in Plotly). The other lines which were defined without a
-        <code>
-         label
-        </code>
-        keyword argument are named sequencially with a leading underscore in the same order as in the original matplotlib plot.
-       </p>
-<p>
-        If more convenient for you, the two following code cells yield the same Plotly plot as the above. You are invited to copy and paste the URLs in your browser to check the results.
-       </p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-       In [12]:
+       </div>
       </div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight">
-<pre><span class="c"># (2) Strip style in convertion for mpl fig obj to plotly fig obj, plot</span>
+     </div>
+    </div>
+    <div class="output_wrapper">
+     <div class="output">
+      <div class="output_area">
+       <div class="prompt">
+       </div>
+       <div class="output_html rendered_html output_subarea ">
+        <iframe height="525" id="igraph" scrolling="no" seamless="seamless" src="https://plot.ly/~etpinard/217" style="border:none;" width="100%">
+        </iframe>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       Nice!
+      </p>
+      <p>
+       Notice that Plotly caught the
+       <code>
+        label
+       </code>
+       keyword argument in the first
+       <code>
+        plt.line
+       </code>
+       call in our
+       <code>
+        plot_mpl_fig
+       </code>
+       funciton. This label is translated to the
+       <code>
+        'name'
+       </code>
+       key in the corresponding trace object; hence, it is displayed on hover and in the legend (as
+       <code>
+        showlegend
+       </code>
+       is set to
+       <code>
+        True
+       </code>
+       by default in Plotly). The other lines which were defined without a
+       <code>
+        label
+       </code>
+       keyword argument are named sequencially with a leading underscore in the same order as in the original matplotlib plot.
+      </p>
+      <p>
+       If more convenient for you, the two following code cells yield the same Plotly plot as the above. You are invited to copy and paste the URLs in your browser to check the results.
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
+     <div class="prompt input_prompt">
+      In [12]:
+     </div>
+     <div class="inner_cell">
+      <div class="input_area">
+       <div class="highlight">
+        <pre><span class="c"># (2) Strip style in convertion for mpl fig obj to plotly fig obj, plot</span>
 <span class="n">py_fig1_ss</span> <span class="o">=</span> <span class="n">tls</span><span class="o">.</span><span class="n">mpl_to_plotly</span><span class="p">(</span><span class="n">mpl_fig1</span><span class="p">,</span> <span class="n">strip_style</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
 
 <span class="n">py</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">py_fig1_ss</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="s">'s6_damped_oscillation-default-style2'</span><span class="p">,</span> 
         <span class="n">auto_open</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
 </pre>
-</div>
-</div>
-</div>
-</div>
-<div class="output_wrapper">
-<div class="output">
-<div class="output_area">
-<div class="prompt output_prompt">
-         Out[12]:
-        </div>
-<div class="output_text output_subarea output_pyout">
-<pre>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="output_wrapper">
+     <div class="output">
+      <div class="output_area">
+       <div class="prompt output_prompt">
+        Out[12]:
+       </div>
+       <div class="output_text output_subarea output_pyout">
+        <pre>
 u'https://plot.ly/~etpinard/229'
 </pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-       In [13]:
+       </div>
       </div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight">
-<pre><span class="c"># (3) Strip style in retruned plotly fig obj, plot</span>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
+     <div class="prompt input_prompt">
+      In [13]:
+     </div>
+     <div class="inner_cell">
+      <div class="input_area">
+       <div class="highlight">
+        <pre><span class="c"># (3) Strip style in retruned plotly fig obj, plot</span>
 <span class="n">py_fig1</span><span class="o">.</span><span class="n">strip_style</span><span class="p">()</span>
 
 <span class="n">py</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">py_fig1</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="s">'s6_damped_oscillation-default-style3'</span><span class="p">,</span> 
         <span class="n">auto_open</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
 </pre>
-</div>
-</div>
-</div>
-</div>
-<div class="output_wrapper">
-<div class="output">
-<div class="output_area">
-<div class="prompt output_prompt">
-         Out[13]:
-        </div>
-<div class="output_text output_subarea output_pyout">
-<pre>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="output_wrapper">
+     <div class="output">
+      <div class="output_area">
+       <div class="prompt output_prompt">
+        Out[13]:
+       </div>
+       <div class="output_text output_subarea output_pyout">
+        <pre>
 u'https://plot.ly/~etpinard/230'
 </pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h5 id="Careful,-matplotlib-is-not-perfect-(yet)">
-        Careful, matplotlib is not perfect (yet)
-        <a class="anchor-link" href="#Careful,-matplotlib-is-not-perfect-(yet)">
-         ¶
-        </a>
-</h5>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>
-        Please note that, in the current version of matplotlylib, matplotlib legends do not fully convert to Plotly legends.
-       </p>
-<p>
-        For example,
-       </p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-       In [14]:
+       </div>
       </div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight">
-<pre><span class="c"># Set new mpl figure object</span>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <h5 id="Careful,-matplotlib-is-not-perfect-(yet)">
+       Careful, matplotlib is not perfect (yet)
+       <a class="anchor-link" href="#Careful,-matplotlib-is-not-perfect-(yet)">
+        ¶
+       </a>
+      </h5>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       Please note that, in the current version of matplotlylib, matplotlib legends do not fully convert to Plotly legends.
+      </p>
+      <p>
+       For example,
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
+     <div class="prompt input_prompt">
+      In [14]:
+     </div>
+     <div class="inner_cell">
+      <div class="input_area">
+       <div class="highlight">
+        <pre><span class="c"># Set new mpl figure object</span>
 <span class="n">mpl_fig2</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
 
 <span class="c"># Replot first mpl figure, add legend</span>
 <span class="p">(</span><span class="n">l1</span><span class="p">,</span><span class="n">l2</span><span class="p">,</span><span class="n">l3</span><span class="p">,</span><span class="n">l4</span><span class="p">)</span> <span class="o">=</span> <span class="n">plot_mpl_fig</span><span class="p">()</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span> <span class="p">(</span><span class="n">l2</span><span class="p">,</span> <span class="n">l4</span><span class="p">),</span> <span class="p">(</span><span class="s">'oscillatory'</span><span class="p">,</span> <span class="s">'damped'</span><span class="p">),</span> <span class="s">'upper right'</span><span class="p">)</span>
 </pre>
-</div>
-</div>
-</div>
-</div>
-<div class="output_wrapper">
-<div class="output">
-<div class="output_area">
-<div class="prompt output_prompt">
-         Out[14]:
-        </div>
-<div class="output_text output_subarea output_pyout">
-<pre>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="output_wrapper">
+     <div class="output">
+      <div class="output_area">
+       <div class="prompt output_prompt">
+        Out[14]:
+       </div>
+       <div class="output_text output_subarea output_pyout">
+        <pre>
 &lt;matplotlib.legend.Legend at 0x2b4afd7f0390&gt;
 </pre>
-</div>
-</div>
-<div class="output_area">
-<div class="prompt">
-</div>
-<div class="output_png output_subarea ">
-<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAY0AAAEZCAYAAABrUHmEAAAABHNCSVQICAgIfAhkiAAAAAlwSFlz
+       </div>
+      </div>
+      <div class="output_area">
+       <div class="prompt">
+       </div>
+       <div class="output_png output_subarea ">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAY0AAAEZCAYAAABrUHmEAAAABHNCSVQICAgIfAhkiAAAAAlwSFlz
 AAALEgAACxIB0t1+/AAAIABJREFUeJztnXl8VOW98L9JECYRSMK+Mxq9AqIGKAhWmyBFIgHFBS9g
 KbHc2kWW3mtr7bXIEbvytveWoO1rWzW8Ilq1guIokKrBrYqVRAXBJTggO4RkIGQBkvP+8cyZObMl
 M8ns8/vmcz5ztjnnmZPnnN95fisIgiAIgiAIgiAIgiAIgiAIgiAIgiAIgiAIgiAIgiAIgiAIQkSw
@@ -1982,33 +1981,33 @@ JVCuwtMO0jUyzRSE8CNCQxDCS7NpvtW03Iq639JRVemSog6zkHokSj0NQYgnTgE9QvyOMSI5hbJ3
 3Gpaf3mY2iUIEUeEhiCETg3wNkrltBJ3lTMdz4pn3vPG8u3AQlS66h2oGs2CIAiCIAiCIAiCIAiC
 IAiCIAiCIAiCIAiCIAiCIAiCIAiCIAiCIAiCIAiC4Mv/B80bz4LrEQi1AAAAAElFTkSuQmCC
 "/>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-       In [15]:
+       </div>
       </div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight">
-<pre><span class="c"># Plot mpl figure object as a Plotly plot </span>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
+     <div class="prompt input_prompt">
+      In [15]:
+     </div>
+     <div class="inner_cell">
+      <div class="input_area">
+       <div class="highlight">
+        <pre><span class="c"># Plot mpl figure object as a Plotly plot </span>
 <span class="n">py</span><span class="o">.</span><span class="n">iplot_mpl</span><span class="p">(</span><span class="n">mpl_fig2</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="s">'s6_damped_oscillation-legend'</span><span class="p">)</span>
 </pre>
-</div>
-</div>
-</div>
-</div>
-<div class="output_wrapper">
-<div class="output">
-<div class="output_area">
-<div class="prompt">
-</div>
-<div class="output_subarea output_stream output_stderr output_text">
-<pre>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="output_wrapper">
+     <div class="output">
+      <div class="output_area">
+       <div class="prompt">
+       </div>
+       <div class="output_subarea output_stream output_stderr output_text">
+        <pre>
 /usr/local/lib/python2.7/dist-packages/plotly/matplotlylib/renderer.py:311: UserWarning:
 
 Bummer! Plotly can currently only draw Line2D objects from matplotlib that are in 'data' coordinates!
@@ -2019,42 +2018,42 @@ I found a path object that I don't think is part of a bar chart. Ignoring.
 
 
 </pre>
-</div>
-</div>
-<div class="output_area">
-<div class="prompt">
-</div>
-<div class="output_html rendered_html output_subarea ">
-<iframe height="525" id="igraph" scrolling="no" seamless="seamless" src="https://plot.ly/~etpinard/231" style="border:none;" width="100%">
-</iframe>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>
-        Legends are treated as simple text annotations.
-       </p>
-<p>
-        That said, once you have the Plotly figure in hand, it is pretty straight forward to add a Plotly legend to your Plotly plot:
-       </p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-       In [16]:
+       </div>
       </div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight">
-<pre><span class="c"># Convert mpl fig obj to plotly fig obj, resize to plotly's default</span>
+      <div class="output_area">
+       <div class="prompt">
+       </div>
+       <div class="output_html rendered_html output_subarea ">
+        <iframe height="525" id="igraph" scrolling="no" seamless="seamless" src="https://plot.ly/~etpinard/231" style="border:none;" width="100%">
+        </iframe>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       Legends are treated as simple text annotations.
+      </p>
+      <p>
+       That said, once you have the Plotly figure in hand, it is pretty straight forward to add a Plotly legend to your Plotly plot:
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
+     <div class="prompt input_prompt">
+      In [16]:
+     </div>
+     <div class="inner_cell">
+      <div class="input_area">
+       <div class="highlight">
+        <pre><span class="c"># Convert mpl fig obj to plotly fig obj, resize to plotly's default</span>
 <span class="n">py_fig2</span> <span class="o">=</span> <span class="n">tls</span><span class="o">.</span><span class="n">mpl_to_plotly</span><span class="p">(</span><span class="n">mpl_fig2</span><span class="p">,</span> <span class="n">resize</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
 
 <span class="c"># Delete misplaced legend annotations </span>
@@ -2072,54 +2071,54 @@ I found a path object that I don't think is part of a bar chart. Ignoring.
 <span class="c"># Send updated figure object to Plotly, show result in notebook</span>
 <span class="n">py</span><span class="o">.</span><span class="n">iplot</span><span class="p">(</span><span class="n">py_fig2</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="s">'s6_damped_oscillation-legend2'</span><span class="p">)</span>
 </pre>
-</div>
-</div>
-</div>
-</div>
-<div class="output_wrapper">
-<div class="output">
-<div class="output_area">
-<div class="prompt">
-</div>
-<div class="output_html rendered_html output_subarea ">
-<iframe height="525" id="igraph" scrolling="no" seamless="seamless" src="https://plot.ly/~etpinard/232" style="border:none;" width="100%">
-</iframe>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>
-        Again, Plotly caught the
-        <code>
-         label
-        </code>
-        keyword from the
-        <code>
-         plt.line
-        </code>
-        call.
-       </p>
-<p>
-        To make it look like the original matplotlib plot, we need to add a few key-value pairs to the trace objects:
-       </p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-       In [17]:
+       </div>
       </div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight">
-<pre><span class="c"># Add name to be shown on hover and legend for two of the traces</span>
+     </div>
+    </div>
+    <div class="output_wrapper">
+     <div class="output">
+      <div class="output_area">
+       <div class="prompt">
+       </div>
+       <div class="output_html rendered_html output_subarea ">
+        <iframe height="525" id="igraph" scrolling="no" seamless="seamless" src="https://plot.ly/~etpinard/232" style="border:none;" width="100%">
+        </iframe>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       Again, Plotly caught the
+       <code>
+        label
+       </code>
+       keyword from the
+       <code>
+        plt.line
+       </code>
+       call.
+      </p>
+      <p>
+       To make it look like the original matplotlib plot, we need to add a few key-value pairs to the trace objects:
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
+     <div class="prompt input_prompt">
+      In [17]:
+     </div>
+     <div class="inner_cell">
+      <div class="input_area">
+       <div class="highlight">
+        <pre><span class="c"># Add name to be shown on hover and legend for two of the traces</span>
 <span class="n">py_fig2</span><span class="p">[</span><span class="s">'data'</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s">'oscillatory'</span><span class="p">)</span>
 <span class="n">py_fig2</span><span class="p">[</span><span class="s">'data'</span><span class="p">][</span><span class="mi">3</span><span class="p">]</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s">'damped'</span><span class="p">)</span>
 
@@ -2130,50 +2129,50 @@ I found a path object that I don't think is part of a bar chart. Ignoring.
 <span class="c"># Send updated figure object to Plotly, show result in notebook    </span>
 <span class="n">py</span><span class="o">.</span><span class="n">iplot</span><span class="p">(</span><span class="n">py_fig2</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="s">'s6_damped_oscillation-legend3'</span><span class="p">)</span>
 </pre>
-</div>
-</div>
-</div>
-</div>
-<div class="output_wrapper">
-<div class="output">
-<div class="output_area">
-<div class="prompt">
-</div>
-<div class="output_html rendered_html output_subarea ">
-<iframe height="525" id="igraph" scrolling="no" seamless="seamless" src="https://plot.ly/~etpinard/235" style="border:none;" width="100%">
-</iframe>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>
-        This is much better than the orginal matplotlib figure, right?
-       </p>
-<p>
-        And now, in version 1.0.28 and up of Plotly's Python API, the previous updates can be made by passing a single keyword argument to
-        <code>
-         py.iplot_mpl
-        </code>
-        :
-       </p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-       In [18]:
+       </div>
       </div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight">
-<pre><span class="c"># Update dictionary </span>
+     </div>
+    </div>
+    <div class="output_wrapper">
+     <div class="output">
+      <div class="output_area">
+       <div class="prompt">
+       </div>
+       <div class="output_html rendered_html output_subarea ">
+        <iframe height="525" id="igraph" scrolling="no" seamless="seamless" src="https://plot.ly/~etpinard/235" style="border:none;" width="100%">
+        </iframe>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       This is much better than the orginal matplotlib figure, right?
+      </p>
+      <p>
+       And now, in version 1.0.28 and up of Plotly's Python API, the previous updates can be made by passing a single keyword argument to
+       <code>
+        py.iplot_mpl
+       </code>
+       :
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
+     <div class="prompt input_prompt">
+      In [18]:
+     </div>
+     <div class="inner_cell">
+      <div class="input_area">
+       <div class="highlight">
+        <pre><span class="c"># Update dictionary </span>
 <span class="n">update</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span>
     <span class="n">layout</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span>
         <span class="n">annotations</span><span class="o">=</span><span class="p">[</span><span class="nb">dict</span><span class="p">(</span><span class="n">text</span><span class="o">=</span><span class="s">' '</span><span class="p">)],</span>  <span class="c"># blank text in legend 'annotation'</span>
@@ -2195,117 +2194,117 @@ I found a path object that I don't think is part of a bar chart. Ignoring.
 <span class="n">py</span><span class="o">.</span><span class="n">iplot_mpl</span><span class="p">(</span><span class="n">mpl_fig2</span><span class="p">,</span> <span class="n">resize</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">update</span><span class="o">=</span><span class="n">update</span><span class="p">,</span> 
              <span class="n">filename</span><span class="o">=</span><span class="s">'s6_damped_oscillation-legend4'</span><span class="p">)</span>
 </pre>
-</div>
-</div>
-</div>
-</div>
-<div class="output_wrapper">
-<div class="output">
-<div class="output_area">
-<div class="prompt">
-</div>
-<div class="output_html rendered_html output_subarea ">
-<iframe height="525" id="igraph" scrolling="no" seamless="seamless" src="https://plot.ly/~etpinard/315" style="border:none;" width="100%">
-</iframe>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>
-        Thank you
-        <a href="https://twitter.com/hughesadam87" target="_blank">
-         Adam Hughes
-        </a>
-        for the suggestion.
-       </p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="6.2-Supported-plot-types">
-        6.2 Supported plot types
-        <a class="anchor-link" href="#6.2-Supported-plot-types">
-         ¶
-        </a>
-</h3>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>
-        So far, matplotlylib supports convertions of:
-       </p>
-<ul>
-<li>
-         Scatter Plots (i.e. marker and line plots), as shown in
-         <a href="#6.1-Matplotlib-to-Plotly-conversion-basics">
-          subsection 6.1
-         </a>
-</li>
-<li>
-<a href="#Bar-Charts">
-          Bar Charts
-         </a>
-</li>
-<li>
-<a href="#Histograms">
-          Histograms
-         </a>
-</li>
-<li>
-<a href="#Log-scales">
-          Log scales
-         </a>
-</li>
-<li>
-<a href="#Bubble-Charts">
-          Bubble Charts
-         </a>
-</li>
-</ul>
-<p>
-        Here are a couple examples:
-       </p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h5 id="Bar-Charts">
-        Bar Charts
-        <a class="anchor-link" href="#Bar-Charts">
-         ¶
-        </a>
-</h5>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-       In [19]:
+       </div>
       </div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight">
-<pre><span class="n">mpl_fig_bar</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>  <span class="c"># set new mpl figure object</span>
+     </div>
+    </div>
+    <div class="output_wrapper">
+     <div class="output">
+      <div class="output_area">
+       <div class="prompt">
+       </div>
+       <div class="output_html rendered_html output_subarea ">
+        <iframe height="525" id="igraph" scrolling="no" seamless="seamless" src="https://plot.ly/~etpinard/315" style="border:none;" width="100%">
+        </iframe>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       Thank you
+       <a href="https://twitter.com/hughesadam87" target="_blank">
+        Adam Hughes
+       </a>
+       for the suggestion.
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <h3 id="6.2-Supported-plot-types">
+       6.2 Supported plot types
+       <a class="anchor-link" href="#6.2-Supported-plot-types">
+        ¶
+       </a>
+      </h3>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       So far, matplotlylib supports convertions of:
+      </p>
+      <ul>
+       <li>
+        Scatter Plots (i.e. marker and line plots), as shown in
+        <a href="#6.1-Matplotlib-to-Plotly-conversion-basics">
+         subsection 6.1
+        </a>
+       </li>
+       <li>
+        <a href="#Bar-Charts">
+         Bar Charts
+        </a>
+       </li>
+       <li>
+        <a href="#Histograms">
+         Histograms
+        </a>
+       </li>
+       <li>
+        <a href="#Log-scales">
+         Log scales
+        </a>
+       </li>
+       <li>
+        <a href="#Bubble-Charts">
+         Bubble Charts
+        </a>
+       </li>
+      </ul>
+      <p>
+       Here are a couple examples:
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <h5 id="Bar-Charts">
+       Bar Charts
+       <a class="anchor-link" href="#Bar-Charts">
+        ¶
+       </a>
+      </h5>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
+     <div class="prompt input_prompt">
+      In [19]:
+     </div>
+     <div class="inner_cell">
+      <div class="input_area">
+       <div class="highlight">
+        <pre><span class="n">mpl_fig_bar</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>  <span class="c"># set new mpl figure object</span>
 
 <span class="n">ax</span> <span class="o">=</span> <span class="n">mpl_fig_bar</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">111</span><span class="p">)</span>  <span class="c"># add axis</span>
 
@@ -2316,27 +2315,27 @@ I found a path object that I don't think is part of a bar chart. Ignoring.
 <span class="c"># Plot mpl bar chart, bars have a width of 1 unit</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">locs</span><span class="p">,</span> <span class="n">height</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 </pre>
-</div>
-</div>
-</div>
-</div>
-<div class="output_wrapper">
-<div class="output">
-<div class="output_area">
-<div class="prompt output_prompt">
-         Out[19]:
-        </div>
-<div class="output_text output_subarea output_pyout">
-<pre>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="output_wrapper">
+     <div class="output">
+      <div class="output_area">
+       <div class="prompt output_prompt">
+        Out[19]:
+       </div>
+       <div class="output_text output_subarea output_pyout">
+        <pre>
 &lt;Container object of 7 artists&gt;
 </pre>
-</div>
-</div>
-<div class="output_area">
-<div class="prompt">
-</div>
-<div class="output_png output_subarea ">
-<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAW4AAAEACAYAAACTXJylAAAABHNCSVQICAgIfAhkiAAAAAlwSFlz
+       </div>
+      </div>
+      <div class="output_area">
+       <div class="prompt">
+       </div>
+       <div class="output_png output_subarea ">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAW4AAAEACAYAAACTXJylAAAABHNCSVQICAgIfAhkiAAAAAlwSFlz
 AAALEgAACxIB0t1+/AAADXVJREFUeJzt3WuMXGUdx/HvwFKl0C1UiKjULFarxjQIAiEG7BGLKQaF
 F0YlBhAjb7zfUKsJTHyhMUbBF74RbAMBqgiINBIjKhtJVESkUGhRWUEL2oq00BLjBTu+eA7tsM7O
 5cyZffqffj/JdOdy5swv093fPPvsuYAkSZIkSZIkSZIkSZIkSRpza4HtwKZZ938E2AI8AHxlvkNJ
@@ -2400,81 +2399,81 @@ ms8Xr8FppPnVjezbrGh11kT9W0Gam9xI2iTtkrxxhrKSeFuVHEd67zeSNiWNuGPa8aQR932kUV+0
 rUoOA/7Ovg/QSD7Dvs0Bryb95i9JkiRJkiRJkiRJkiRJkiRJkiRpUP8DeEYolbMBDOEAAAAASUVO
 RK5CYII=
 "/>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-       In [20]:
+       </div>
       </div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight">
-<pre><span class="c"># Convert mpl figure object to Plotly plot </span>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
+     <div class="prompt input_prompt">
+      In [20]:
+     </div>
+     <div class="inner_cell">
+      <div class="input_area">
+       <div class="highlight">
+        <pre><span class="c"># Convert mpl figure object to Plotly plot </span>
 <span class="n">py</span><span class="o">.</span><span class="n">iplot_mpl</span><span class="p">(</span><span class="n">mpl_fig_bar</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="s">'s6_bars'</span><span class="p">)</span>
 </pre>
-</div>
-</div>
-</div>
-</div>
-<div class="output_wrapper">
-<div class="output">
-<div class="output_area">
-<div class="prompt">
-</div>
-<div class="output_html rendered_html output_subarea ">
-<iframe height="525" id="igraph" scrolling="no" seamless="seamless" src="https://plot.ly/~etpinard/218" style="border:none;" width="100%">
-</iframe>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>
-        Recall that, by default,
-        <code>
-         py.plot_mpl
-        </code>
-        and
-        <code>
-         py.iplot_mpl
-        </code>
-        resize the inputted matplotlib figure object.
-       </p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h5 id="Histograms">
-        Histograms
-        <a class="anchor-link" href="#Histograms">
-         ¶
-        </a>
-</h5>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-       In [21]:
+       </div>
       </div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight">
-<pre><span class="n">mpl_fig_hist</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>  <span class="c"># set new mpl figure objects</span>
+     </div>
+    </div>
+    <div class="output_wrapper">
+     <div class="output">
+      <div class="output_area">
+       <div class="prompt">
+       </div>
+       <div class="output_html rendered_html output_subarea ">
+        <iframe height="525" id="igraph" scrolling="no" seamless="seamless" src="https://plot.ly/~etpinard/218" style="border:none;" width="100%">
+        </iframe>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       Recall that, by default,
+       <code>
+        py.plot_mpl
+       </code>
+       and
+       <code>
+        py.iplot_mpl
+       </code>
+       resize the inputted matplotlib figure object.
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <h5 id="Histograms">
+       Histograms
+       <a class="anchor-link" href="#Histograms">
+        ¶
+       </a>
+      </h5>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
+     <div class="prompt input_prompt">
+      In [21]:
+     </div>
+     <div class="inner_cell">
+      <div class="input_area">
+       <div class="highlight">
+        <pre><span class="n">mpl_fig_hist</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>  <span class="c"># set new mpl figure objects</span>
 
 <span class="n">ax</span> <span class="o">=</span> <span class="n">mpl_fig_hist</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">111</span><span class="p">)</span>  <span class="c"># add axis</span>
 
@@ -2493,17 +2492,17 @@ RK5CYII=
 <span class="c"># Plot mpl histogram with 100 bins</span>
 <span class="n">out</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
 </pre>
-</div>
-</div>
-</div>
-</div>
-<div class="output_wrapper">
-<div class="output">
-<div class="output_area">
-<div class="prompt">
-</div>
-<div class="output_png output_subarea ">
-<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAYoAAAERCAYAAABl3+CQAAAABHNCSVQICAgIfAhkiAAAAAlwSFlz
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="output_wrapper">
+     <div class="output">
+      <div class="output_area">
+       <div class="prompt">
+       </div>
+       <div class="output_png output_subarea ">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAYoAAAERCAYAAABl3+CQAAAABHNCSVQICAgIfAhkiAAAAAlwSFlz
 AAALEgAACxIB0t1+/AAAH1ZJREFUeJzt3XuUVOW5oPGnscErDSIGscEgsdEQBNFwUZOxjCNqchRN
 oqDHDFHHY9Sos5zEaByHjh4inrPicbnGy8qJxjZR4yWJQY2KUWppTACDoGiHgIyEmzJL5dIYVJCa
 P77d3dVNdXU13V17V9XzW6tW7dqXqre6q+rd32V/H0iSJEmSJEmSJEmSJEmSJEnqhr2ABcASoBG4
@@ -2647,97 +2646,97 @@ P2ft077nT4ZQ/fIw8Brwe1qrehYD90WP5xN6+7zWwWu2f5yrh1EjYQ7ptYTpefPFmu81Ojvmb8Dl
 0fYBwF3tnqsR+F/A3Oj9zGXX+cqnEpJic4lqFCEx3U5r24okSZIkSZIkSZIkSZIkSZIkSZIkSZIA
 /j/mP3W1op/0PwAAAABJRU5ErkJggg==
 "/>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-       In [22]:
+       </div>
       </div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight">
-<pre><span class="c"># Convert mpl figure object to Plotly plot </span>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
+     <div class="prompt input_prompt">
+      In [22]:
+     </div>
+     <div class="inner_cell">
+      <div class="input_area">
+       <div class="highlight">
+        <pre><span class="c"># Convert mpl figure object to Plotly plot </span>
 <span class="n">py</span><span class="o">.</span><span class="n">iplot_mpl</span><span class="p">(</span><span class="n">mpl_fig_hist</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="s">'s6_histograms'</span><span class="p">)</span>
 </pre>
-</div>
-</div>
-</div>
-</div>
-<div class="output_wrapper">
-<div class="output">
-<div class="output_area">
-<div class="prompt">
-</div>
-<div class="output_html rendered_html output_subarea ">
-<iframe height="525" id="igraph" scrolling="no" seamless="seamless" src="https://plot.ly/~etpinard/236" style="border:none;" width="100%">
-</iframe>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>
-        Nice!
-       </p>
-<p>
-        Matplotlylib is able to convert $\LaTeX$ symbols from matplotlib figure objects as well as text annotations with ease.
-       </p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>
-        Please note that matplotlylib converts matplotlib histograms into Plotly
-        <code>
-         Bar
-        </code>
-        objects (not into Plotly
-        <code>
-         Histogram
-        </code>
-        objects). More clearly,
-       </p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-       In [23]:
+       </div>
       </div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight">
-<pre><span class="c"># Convert mpl figure object to plotly </span>
+     </div>
+    </div>
+    <div class="output_wrapper">
+     <div class="output">
+      <div class="output_area">
+       <div class="prompt">
+       </div>
+       <div class="output_html rendered_html output_subarea ">
+        <iframe height="525" id="igraph" scrolling="no" seamless="seamless" src="https://plot.ly/~etpinard/236" style="border:none;" width="100%">
+        </iframe>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       Nice!
+      </p>
+      <p>
+       Matplotlylib is able to convert $\LaTeX$ symbols from matplotlib figure objects as well as text annotations with ease.
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       Please note that matplotlylib converts matplotlib histograms into Plotly
+       <code>
+        Bar
+       </code>
+       objects (not into Plotly
+       <code>
+        Histogram
+       </code>
+       objects). More clearly,
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
+     <div class="prompt input_prompt">
+      In [23]:
+     </div>
+     <div class="inner_cell">
+      <div class="input_area">
+       <div class="highlight">
+        <pre><span class="c"># Convert mpl figure object to plotly </span>
 <span class="n">py_fig_hist</span> <span class="o">=</span> <span class="n">tls</span><span class="o">.</span><span class="n">mpl_to_plotly</span><span class="p">(</span><span class="n">mpl_fig_hist</span><span class="p">)</span>
 
 <span class="c"># Print the yielded plotly figure object</span>
 <span class="k">print</span> <span class="n">py_fig_hist</span><span class="o">.</span><span class="n">to_string</span><span class="p">()</span>
 </pre>
-</div>
-</div>
-</div>
-</div>
-<div class="output_wrapper">
-<div class="output">
-<div class="output_area">
-<div class="prompt">
-</div>
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="output_wrapper">
+     <div class="output">
+      <div class="output_area">
+       <div class="prompt">
+       </div>
+       <div class="output_subarea output_stream output_stdout output_text">
+        <pre>
 Figure(
     data=Data([
         Bar(
@@ -2833,60 +2832,60 @@ Figure(
 )
 
 </pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>
-        That is, the computation required to plot a histogram from a set of values is not made twice.
-       </p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h5 id="Log-scales">
-        Log scales
-        <a class="anchor-link" href="#Log-scales">
-         ¶
-        </a>
-</h5>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>
-        The following plot was inspired by the
-        <a href="http://matplotlib.org/examples/pylab_examples/log_demo.html" target="_blank">
-         log demo
-        </a>
-        of the matplotlib example bank.
-       </p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-       In [24]:
+       </div>
       </div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight">
-<pre><span class="n">mpl_fig_log</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>  <span class="c"># set new mpl figure object</span>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       That is, the computation required to plot a histogram from a set of values is not made twice.
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <h5 id="Log-scales">
+       Log scales
+       <a class="anchor-link" href="#Log-scales">
+        ¶
+       </a>
+      </h5>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       The following plot was inspired by the
+       <a href="http://matplotlib.org/examples/pylab_examples/log_demo.html" target="_blank">
+        log demo
+       </a>
+       of the matplotlib example bank.
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
+     <div class="prompt input_prompt">
+      In [24]:
+     </div>
+     <div class="inner_cell">
+      <div class="input_area">
+       <div class="highlight">
+        <pre><span class="n">mpl_fig_log</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>  <span class="c"># set new mpl figure object</span>
 
 <span class="n">ax</span> <span class="o">=</span> <span class="n">mpl_fig_log</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">111</span><span class="p">)</span>  <span class="c"># add axis</span>
 
@@ -2902,17 +2901,17 @@ Figure(
 <span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s">'log y-axis'</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="bp">True</span><span class="p">)</span>
 </pre>
-</div>
-</div>
-</div>
-</div>
-<div class="output_wrapper">
-<div class="output">
-<div class="output_area">
-<div class="prompt">
-</div>
-<div class="output_png output_subarea ">
-<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAEfCAYAAABvWZDBAAAABHNCSVQICAgIfAhkiAAAAAlwSFlz
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="output_wrapper">
+     <div class="output">
+      <div class="output_area">
+       <div class="prompt">
+       </div>
+       <div class="output_png output_subarea ">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAEfCAYAAABvWZDBAAAABHNCSVQICAgIfAhkiAAAAAlwSFlz
 AAALEgAACxIB0t1+/AAAIABJREFUeJzt3X+8XFV57/FPSCC1QU2Jxl4wOlYgEKvEewEJhXIUcpXy
 UpCAEgKEH0GML7BN7VXIpQlg+e3lHoELaoAEcsOJ5ootmEaEeEZTaUugBNqCNHAbFEgMJgSNEguc
 3T+ePcw+w8w5e2b/XGt/36/XeXH2nsme9WTCec5az+z1gIiIiIiIiIiIiIiIiIiIiIiIiIiIiIhI
@@ -3065,88 +3064,88 @@ Nd6GJY1Gb+kLgGVtXmsS8EB4/duAfwXeDZxB8+O6u2HLWH1YAnksPH8htoT1CDYDmRg/RBERKcqE
 8L+TsCY8k0d4roj32n1CRETa+y72G/8ewGVY7UJEREREREREREREREREREREREREREREJC//CU/K
 eMbSr8k2AAAAAElFTkSuQmCC
 "/>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-       In [25]:
+       </div>
       </div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight">
-<pre><span class="c"># Convert mpl figure object to Plotly plot </span>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
+     <div class="prompt input_prompt">
+      In [25]:
+     </div>
+     <div class="inner_cell">
+      <div class="input_area">
+       <div class="highlight">
+        <pre><span class="c"># Convert mpl figure object to Plotly plot </span>
 <span class="n">py</span><span class="o">.</span><span class="n">iplot_mpl</span><span class="p">(</span><span class="n">mpl_fig_log</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="s">'s6_log-scales'</span><span class="p">)</span>
 </pre>
-</div>
-</div>
-</div>
-</div>
-<div class="output_wrapper">
-<div class="output">
-<div class="output_area">
-<div class="prompt">
-</div>
-<div class="output_html rendered_html output_subarea ">
-<iframe height="525" id="igraph" scrolling="no" seamless="seamless" src="https://plot.ly/~etpinard/259" style="border:none;" width="100%">
-</iframe>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>
-        The tick labels on the Plotly figure are not exactly the same as on the matplotlib figure. Hopefully, you agree that the converted tick labels look better than the original.
-       </p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h5 id="Bubble-Charts">
-        Bubble Charts
-        <a class="anchor-link" href="#Bubble-Charts">
-         ¶
-        </a>
-</h5>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>
-        The following example was inspired by this
-        <a href="http://glowingpython.blogspot.ca/2011/11/how-to-make-bubble-charts-with.html" target="_blank">
-         post
-        </a>
-        on the Glowing Python blog. Thanks!
-       </p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-       In [26]:
+       </div>
       </div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight">
-<pre><span class="kn">import</span> <span class="nn">urllib2</span>       <span class="c"># (*) urllib2 for in-session downloads</span>
+     </div>
+    </div>
+    <div class="output_wrapper">
+     <div class="output">
+      <div class="output_area">
+       <div class="prompt">
+       </div>
+       <div class="output_html rendered_html output_subarea ">
+        <iframe height="525" id="igraph" scrolling="no" seamless="seamless" src="https://plot.ly/~etpinard/259" style="border:none;" width="100%">
+        </iframe>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       The tick labels on the Plotly figure are not exactly the same as on the matplotlib figure. Hopefully, you agree that the converted tick labels look better than the original.
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <h5 id="Bubble-Charts">
+       Bubble Charts
+       <a class="anchor-link" href="#Bubble-Charts">
+        ¶
+       </a>
+      </h5>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       The following example was inspired by this
+       <a href="http://glowingpython.blogspot.ca/2011/11/how-to-make-bubble-charts-with.html" target="_blank">
+        post
+       </a>
+       on the Glowing Python blog. Thanks!
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
+     <div class="prompt input_prompt">
+      In [26]:
+     </div>
+     <div class="inner_cell">
+      <div class="input_area">
+       <div class="highlight">
+        <pre><span class="kn">import</span> <span class="nn">urllib2</span>       <span class="c"># (*) urllib2 for in-session downloads</span>
 <span class="kn">import</span> <span class="nn">pandas</span> <span class="kn">as</span> <span class="nn">pd</span>  <span class="c"># (*) pandas for dataframe manipulation</span>
 
 <span class="c"># Import data file from URL into pd datafram in session</span>
@@ -3183,17 +3182,17 @@ eMbSr8k2AAAAAElFTkSuQmCC
         <span class="n">horizontalalignment</span><span class="o">=</span><span class="s">'center'</span>
     <span class="p">)</span>
 </pre>
-</div>
-</div>
-</div>
-</div>
-<div class="output_wrapper">
-<div class="output">
-<div class="output_area">
-<div class="prompt">
-</div>
-<div class="output_png output_subarea ">
-<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAYcAAAEKCAYAAAD5MJl4AAAABHNCSVQICAgIfAhkiAAAAAlwSFlz
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="output_wrapper">
+     <div class="output">
+      <div class="output_area">
+       <div class="prompt">
+       </div>
+       <div class="output_png output_subarea ">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAYcAAAEKCAYAAAD5MJl4AAAABHNCSVQICAgIfAhkiAAAAAlwSFlz
 AAALEgAACxIB0t1+/AAAIABJREFUeJzsnXecFOXdwL/PzNbjeoWjg3RpViwozRJRMfbeY2KPiYkm
 bxKJKRpj1GhsMXaNLSoRJVaKKCAC0nvnOK6Xvb2tM8/z/vHsNa6wNAGd7+czt7OzM88+s3v7/J5f
 fcDBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBweGAIA50B/YVw4cPV0uW
@@ -4410,91 +4409,91 @@ Xmdsv5mUuwnkVOmPDvEZFQqFYlSUce5OofwaqdHSeHK6aaYDGc44KqYhKuagmKpMeg3eIfjJBF3n
 XP38CoVCoVAoFAqFQqFQKBQKhUKhUCgUCoVCoVAoFAqFQqFQKBQKhUIxHP8f/1wy7bdnUhMAAAAA
 SUVORK5CYII=
 "/>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-       In [27]:
+       </div>
       </div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight">
-<pre><span class="c"># Convert mpl figure object to Plotly plot </span>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
+     <div class="prompt input_prompt">
+      In [27]:
+     </div>
+     <div class="inner_cell">
+      <div class="input_area">
+       <div class="highlight">
+        <pre><span class="c"># Convert mpl figure object to Plotly plot </span>
 <span class="n">py</span><span class="o">.</span><span class="n">iplot_mpl</span><span class="p">(</span><span class="n">mpl_fig_bubble</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="s">'s6_bubble-chart'</span><span class="p">)</span>
 </pre>
-</div>
-</div>
-</div>
-</div>
-<div class="output_wrapper">
-<div class="output">
-<div class="output_area">
-<div class="prompt">
-</div>
-<div class="output_html rendered_html output_subarea ">
-<iframe height="525" id="igraph" scrolling="no" seamless="seamless" src="https://plot.ly/~etpinard/440" style="border:none;" width="100%">
-</iframe>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>
-        For another matplotlylib examples, refer to our online
-        <a href="https://plot.ly/matplotlib/" target="_blank">
-         documentation
-        </a>
-        .
-       </p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="6.3-Converting-subplots">
-        6.3 Converting subplots
-        <a class="anchor-link" href="#6.3-Converting-subplots">
-         ¶
-        </a>
-</h3>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>
-        Matplotlylib also supports subplot conversions.
-       </p>
-<p>
-        Again, here are a couple examples:
-       </p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-       In [28]:
+       </div>
       </div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight">
-<pre><span class="n">mpl_fig_splt1</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>  <span class="c"># set a new mpl figure object</span>
+     </div>
+    </div>
+    <div class="output_wrapper">
+     <div class="output">
+      <div class="output_area">
+       <div class="prompt">
+       </div>
+       <div class="output_html rendered_html output_subarea ">
+        <iframe height="525" id="igraph" scrolling="no" seamless="seamless" src="https://plot.ly/~etpinard/440" style="border:none;" width="100%">
+        </iframe>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       For another matplotlylib examples, refer to our online
+       <a href="https://plot.ly/matplotlib/" target="_blank">
+        documentation
+       </a>
+       .
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <h3 id="6.3-Converting-subplots">
+       6.3 Converting subplots
+       <a class="anchor-link" href="#6.3-Converting-subplots">
+        ¶
+       </a>
+      </h3>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       Matplotlylib also supports subplot conversions.
+      </p>
+      <p>
+       Again, here are a couple examples:
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
+     <div class="prompt input_prompt">
+      In [28]:
+     </div>
+     <div class="inner_cell">
+      <div class="input_area">
+       <div class="highlight">
+        <pre><span class="n">mpl_fig_splt1</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>  <span class="c"># set a new mpl figure object</span>
 
 <span class="n">t</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mf">0.01</span><span class="p">)</span>  <span class="c"># some time array</span>
 
@@ -4514,17 +4513,17 @@ SUVORK5CYII=
 <span class="n">ax1</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s">'Two sine waves'</span><span class="p">)</span>  
 <span class="n">l</span> <span class="o">=</span> <span class="n">ax2</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s">'time [s]'</span><span class="p">)</span>
 </pre>
-</div>
-</div>
-</div>
-</div>
-<div class="output_wrapper">
-<div class="output">
-<div class="output_area">
-<div class="prompt">
-</div>
-<div class="output_png output_subarea ">
-<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAX4AAAEZCAYAAACQK04eAAAABHNCSVQICAgIfAhkiAAAAAlwSFlz
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="output_wrapper">
+     <div class="output">
+      <div class="output_area">
+       <div class="prompt">
+       </div>
+       <div class="output_png output_subarea ">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAX4AAAEZCAYAAACQK04eAAAABHNCSVQICAgIfAhkiAAAAAlwSFlz
 AAALEgAACxIB0t1+/AAAIABJREFUeJztnXeYE+X2xz/LAipdQEGaC6gUpXmlKAKxUFWKooCIYBcV
 5adesV7Q65XLtSFiQUFFFFFREUEUEEIVFGEpAooUld47Ars7vz/OxAkhu5vsJDOT5HyeJw/zTiYz
 J4fsmXfOe97vC4qiKIqiKIqiKIqiKIqiKIqiKIqiKIqiKIqiKIqiKIqiKI5RDTgApLltiKIoSipw
@@ -4779,132 +4778,132 @@ kqzsQnrcy5FeuIG1HF3wNmG2A+2eyHrHmcAKZFHr/HjAvOZSRD99SsHMVxRFUbxK6OBuXujgruIJ
 tMevKPY4iFQEDcrjmMAErq1OGKQoiqIoiqIoiqIoiqIoiqIoiqIoiqIoiqIoiqIkGv8PSmLo85BC
 PtoAAAAASUVORK5CYII=
 "/>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-       In [29]:
+       </div>
       </div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight">
-<pre><span class="n">py</span><span class="o">.</span><span class="n">iplot_mpl</span><span class="p">(</span><span class="n">mpl_fig_splt1</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="s">'s6_subplots1'</span><span class="p">)</span>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
+     <div class="prompt input_prompt">
+      In [29]:
+     </div>
+     <div class="inner_cell">
+      <div class="input_area">
+       <div class="highlight">
+        <pre><span class="n">py</span><span class="o">.</span><span class="n">iplot_mpl</span><span class="p">(</span><span class="n">mpl_fig_splt1</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="s">'s6_subplots1'</span><span class="p">)</span>
 </pre>
-</div>
-</div>
-</div>
-</div>
-<div class="output_wrapper">
-<div class="output">
-<div class="output_area">
-<div class="prompt">
-</div>
-<div class="output_html rendered_html output_subarea ">
-<iframe height="525" id="igraph" scrolling="no" seamless="seamless" src="https://plot.ly/~etpinard/248" style="border:none;" width="100%">
-</iframe>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>
-        By default, matplotlib subplots don't have common axis elements and so the rendered Plotly plot will reflect this (try panning one of the axes!).
-       </p>
-<p>
-        However, by first converting the matplotlib figure object to a Plotly figure object, we can  easily make a shared-axis version of the above plot.
-       </p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-       In [30]:
+       </div>
       </div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight">
-<pre><span class="c"># Convert mpl figure object to Plotly figure object with default style and size</span>
+     </div>
+    </div>
+    <div class="output_wrapper">
+     <div class="output">
+      <div class="output_area">
+       <div class="prompt">
+       </div>
+       <div class="output_html rendered_html output_subarea ">
+        <iframe height="525" id="igraph" scrolling="no" seamless="seamless" src="https://plot.ly/~etpinard/248" style="border:none;" width="100%">
+        </iframe>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       By default, matplotlib subplots don't have common axis elements and so the rendered Plotly plot will reflect this (try panning one of the axes!).
+      </p>
+      <p>
+       However, by first converting the matplotlib figure object to a Plotly figure object, we can  easily make a shared-axis version of the above plot.
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
+     <div class="prompt input_prompt">
+      In [30]:
+     </div>
+     <div class="inner_cell">
+      <div class="input_area">
+       <div class="highlight">
+        <pre><span class="c"># Convert mpl figure object to Plotly figure object with default style and size</span>
 <span class="n">py_fig_splt1</span> <span class="o">=</span> <span class="n">tls</span><span class="o">.</span><span class="n">mpl_to_plotly</span><span class="p">(</span><span class="n">mpl_fig_splt1</span><span class="p">,</span> <span class="n">strip_style</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">resize</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
 
 <span class="c"># Print the axes' domains</span>
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="p">[</span><span class="s">'xaxis1'</span><span class="p">,</span><span class="s">'yaxis1'</span><span class="p">,</span><span class="s">'xaxis2'</span><span class="p">,</span><span class="s">'yaxis2'</span><span class="p">]:</span>
     <span class="k">print</span> <span class="n">i</span><span class="p">,</span> <span class="n">py_fig_splt1</span><span class="p">[</span><span class="s">'layout'</span><span class="p">][</span><span class="n">i</span><span class="p">][</span><span class="s">'domain'</span><span class="p">]</span>
 </pre>
-</div>
-</div>
-</div>
-</div>
-<div class="output_wrapper">
-<div class="output">
-<div class="output_area">
-<div class="prompt">
-</div>
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="output_wrapper">
+     <div class="output">
+      <div class="output_area">
+       <div class="prompt">
+       </div>
+       <div class="output_subarea output_stream output_stdout output_text">
+        <pre>
 xaxis1 [0.0, 1.0]
 yaxis1 [0.54545454545454553, 1.0]
 xaxis2 [0.0, 1.0]
 yaxis2 [0.0, 0.45454545454545453]
 
 </pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>
-        Notice the
-        <code>
-         'yaxis1'
-        </code>
-        (N.B. not
-        <code>
-         'yaxis'
-        </code>
-        ) is above
-        <code>
-         'yaxis2'
-        </code>
-        which is consistent with our previous matplotlib commands. That said, it is not consistent with
-        <code>
-         tls.get_subplots
-        </code>
-        .
-       </p>
-<p>
-        Next, we delete
-        <code>
-         'xaxis2'
-        </code>
-        and reassign the each trace to the correct axes.
-       </p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-       In [31]:
+       </div>
       </div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight">
-<pre><span class="c"># Delete 'xaxis2' key</span>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       Notice the
+       <code>
+        'yaxis1'
+       </code>
+       (N.B. not
+       <code>
+        'yaxis'
+       </code>
+       ) is above
+       <code>
+        'yaxis2'
+       </code>
+       which is consistent with our previous matplotlib commands. That said, it is not consistent with
+       <code>
+        tls.get_subplots
+       </code>
+       .
+      </p>
+      <p>
+       Next, we delete
+       <code>
+        'xaxis2'
+       </code>
+       and reassign the each trace to the correct axes.
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
+     <div class="prompt input_prompt">
+      In [31]:
+     </div>
+     <div class="inner_cell">
+      <div class="input_area">
+       <div class="highlight">
+        <pre><span class="c"># Delete 'xaxis2' key</span>
 <span class="n">py_fig_splt1</span><span class="p">[</span><span class="s">'layout'</span><span class="p">]</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s">'xaxis2'</span><span class="p">,</span><span class="bp">None</span><span class="p">)</span>
 
 <span class="c"># Delete 'anchor' keys, they have no effet with 'xaxis2'</span>
@@ -4923,43 +4922,43 @@ yaxis2 [0.0, 0.45454545454545453]
 <span class="c"># Send updated figure object to Plotly, show result in notebook</span>
 <span class="n">py</span><span class="o">.</span><span class="n">iplot</span><span class="p">(</span><span class="n">py_fig_splt1</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="s">'s6_subplots1-shared-xaxis'</span><span class="p">)</span>
 </pre>
-</div>
-</div>
-</div>
-</div>
-<div class="output_wrapper">
-<div class="output">
-<div class="output_area">
-<div class="prompt">
-</div>
-<div class="output_html rendered_html output_subarea ">
-<iframe height="525" id="igraph" scrolling="no" seamless="seamless" src="https://plot.ly/~etpinard/247" style="border:none;" width="100%">
-</iframe>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>
-        Matplotlylib can convert more evolved subplot grids as well:
-       </p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-       In [32]:
+       </div>
       </div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight">
-<pre><span class="c"># For a more precise subplot layout</span>
+     </div>
+    </div>
+    <div class="output_wrapper">
+     <div class="output">
+      <div class="output_area">
+       <div class="prompt">
+       </div>
+       <div class="output_html rendered_html output_subarea ">
+        <iframe height="525" id="igraph" scrolling="no" seamless="seamless" src="https://plot.ly/~etpinard/247" style="border:none;" width="100%">
+        </iframe>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       Matplotlylib can convert more evolved subplot grids as well:
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
+     <div class="prompt input_prompt">
+      In [32]:
+     </div>
+     <div class="inner_cell">
+      <div class="input_area">
+       <div class="highlight">
+        <pre><span class="c"># For a more precise subplot layout</span>
 <span class="kn">import</span> <span class="nn">matplotlib.gridspec</span> <span class="kn">as</span> <span class="nn">gridspec</span> 
 
 <span class="n">mpl_fig_splt2</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>  <span class="c"># set new mpl figure object</span>
@@ -4988,27 +4987,27 @@ yaxis2 [0.0, 0.45454545454545453]
 <span class="n">ax5</span> <span class="o">=</span> <span class="n">mpl_fig_splt2</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="n">gs</span><span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">])</span>
 <span class="n">ax5</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">],</span> <span class="s">'c-'</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s">'sbplt 5'</span><span class="p">)</span>
 </pre>
-</div>
-</div>
-</div>
-</div>
-<div class="output_wrapper">
-<div class="output">
-<div class="output_area">
-<div class="prompt output_prompt">
-         Out[32]:
-        </div>
-<div class="output_text output_subarea output_pyout">
-<pre>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="output_wrapper">
+     <div class="output">
+      <div class="output_area">
+       <div class="prompt output_prompt">
+        Out[32]:
+       </div>
+       <div class="output_text output_subarea output_pyout">
+        <pre>
 [&lt;matplotlib.lines.Line2D at 0x2b4b02f64050&gt;]
 </pre>
-</div>
-</div>
-<div class="output_area">
-<div class="prompt">
-</div>
-<div class="output_png output_subarea ">
-<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAXcAAAEACAYAAABI5zaHAAAABHNCSVQICAgIfAhkiAAAAAlwSFlz
+       </div>
+      </div>
+      <div class="output_area">
+       <div class="prompt">
+       </div>
+       <div class="output_png output_subarea ">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAXcAAAEACAYAAABI5zaHAAAABHNCSVQICAgIfAhkiAAAAAlwSFlz
 AAALEgAACxIB0t1+/AAAIABJREFUeJztnXuYFOWV8H8oGBUTEVAQRx1FcIMmqDGAEXU0mmW9PxuT
 CFExZt1EjIJ+uQhGwWx0k80qXjZqXIMfumFigsaAQVdMGPBTQMMtKiIwSPAG4owREYzKvN8fp4op
 ir5Ud79V9Vb1+T1PP9NdXZcz76l6+9SpcwFFURRFURRFURRFURRFURRFURRFURRFURRFURRFUZS6
@@ -5219,126 +5218,126 @@ iHC9Ef/QRORXEKTv5ixPyNXA+8A3Im53HnAZ0ttzC51p78cDFwB/QW5pACYgzZtLHTPKduFjjgf+
 hNzt7AI8APyRHfuKFvv/9kcehpTattj/6OPfgkU5XpLkWefnE013hY5nQ+egeq9Hvbuqc0VRFEVR
 FEVRFEVRFEVRFEVRFEVRFEVRFEVRFEVRFEVRFEVRFEVRlE7+P7+eKiEC4Is6AAAAAElFTkSuQmCC
 "/>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-       In [33]:
+       </div>
       </div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight">
-<pre><span class="c"># Plot as Plotly plot </span>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
+     <div class="prompt input_prompt">
+      In [33]:
+     </div>
+     <div class="inner_cell">
+      <div class="input_area">
+       <div class="highlight">
+        <pre><span class="c"># Plot as Plotly plot </span>
 <span class="n">py</span><span class="o">.</span><span class="n">iplot_mpl</span><span class="p">(</span><span class="n">mpl_fig_splt2</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="s">'s6_subplots2'</span><span class="p">)</span>
 </pre>
-</div>
-</div>
-</div>
-</div>
-<div class="output_wrapper">
-<div class="output">
-<div class="output_area">
-<div class="prompt">
-</div>
-<div class="output_html rendered_html output_subarea ">
-<iframe height="525" id="igraph" scrolling="no" seamless="seamless" src="https://plot.ly/~etpinard/243" style="border:none;" width="100%">
-</iframe>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-       In [34]:
+       </div>
       </div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight">
-<pre><span class="c"># Plot as Plotly plot with default style</span>
+     </div>
+    </div>
+    <div class="output_wrapper">
+     <div class="output">
+      <div class="output_area">
+       <div class="prompt">
+       </div>
+       <div class="output_html rendered_html output_subarea ">
+        <iframe height="525" id="igraph" scrolling="no" seamless="seamless" src="https://plot.ly/~etpinard/243" style="border:none;" width="100%">
+        </iframe>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
+     <div class="prompt input_prompt">
+      In [34]:
+     </div>
+     <div class="inner_cell">
+      <div class="input_area">
+       <div class="highlight">
+        <pre><span class="c"># Plot as Plotly plot with default style</span>
 <span class="n">py</span><span class="o">.</span><span class="n">iplot_mpl</span><span class="p">(</span><span class="n">mpl_fig_splt2</span><span class="p">,</span> <span class="n">strip_style</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="s">'s6_subplots2-default'</span><span class="p">)</span>
 </pre>
-</div>
-</div>
-</div>
-</div>
-<div class="output_wrapper">
-<div class="output">
-<div class="output_area">
-<div class="prompt">
-</div>
-<div class="output_html rendered_html output_subarea ">
-<iframe height="525" id="igraph" scrolling="no" seamless="seamless" src="https://plot.ly/~etpinard/245" style="border:none;" width="100%">
-</iframe>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>
-        Nice!
-       </p>
-<p>
-        Again, if you're fond of matplotlib's syntax, or, you are just feeling like dipping your toes in the Plotly pool for now, a simple call to
-        <code>
-         py.plot_mpl
-        </code>
-        or
-        <code>
-         py.iplot_mpl
-        </code>
-        is all you need.
-       </p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="6.4-The-nitty-gritty-of-matplotlylib">
-        6.4 The nitty gritty of matplotlylib
-        <a class="anchor-link" href="#6.4-The-nitty-gritty-of-matplotlylib">
-         ¶
-        </a>
-</h3>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>
-        Out of curiosity or for the sake of troubleshooting, you might find yourself needing to inspect the dictionaries and possibly even the mplexporter. The following shows how you go about running the PlotlyRenderer and making a manual call to Plotly.
-       </p>
-<p>
-        We start with the simplest of matplotlib plots:
-       </p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-       In [35]:
+       </div>
       </div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight">
-<pre><span class="n">mpl_fig_ng</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>         <span class="c"># set new mpl figure obj.</span>
+     </div>
+    </div>
+    <div class="output_wrapper">
+     <div class="output">
+      <div class="output_area">
+       <div class="prompt">
+       </div>
+       <div class="output_html rendered_html output_subarea ">
+        <iframe height="525" id="igraph" scrolling="no" seamless="seamless" src="https://plot.ly/~etpinard/245" style="border:none;" width="100%">
+        </iframe>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       Nice!
+      </p>
+      <p>
+       Again, if you're fond of matplotlib's syntax, or, you are just feeling like dipping your toes in the Plotly pool for now, a simple call to
+       <code>
+        py.plot_mpl
+       </code>
+       or
+       <code>
+        py.iplot_mpl
+       </code>
+       is all you need.
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <h3 id="6.4-The-nitty-gritty-of-matplotlylib">
+       6.4 The nitty gritty of matplotlylib
+       <a class="anchor-link" href="#6.4-The-nitty-gritty-of-matplotlylib">
+        ¶
+       </a>
+      </h3>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       Out of curiosity or for the sake of troubleshooting, you might find yourself needing to inspect the dictionaries and possibly even the mplexporter. The following shows how you go about running the PlotlyRenderer and making a manual call to Plotly.
+      </p>
+      <p>
+       We start with the simplest of matplotlib plots:
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
+     <div class="prompt input_prompt">
+      In [35]:
+     </div>
+     <div class="inner_cell">
+      <div class="input_area">
+       <div class="highlight">
+        <pre><span class="n">mpl_fig_ng</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>         <span class="c"># set new mpl figure obj.</span>
 <span class="n">ax</span> <span class="o">=</span> <span class="n">mpl_fig_ng</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">111</span><span class="p">)</span>  <span class="c"># add axis</span>
 
 <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="mi">10</span><span class="p">,</span><span class="mi">20</span><span class="p">,</span><span class="mi">30</span><span class="p">],[</span><span class="mi">100</span><span class="p">,</span><span class="mi">200</span><span class="p">,</span><span class="mi">300</span><span class="p">],</span> <span class="s">'bo'</span><span class="p">)</span>  <span class="c"># add a few pts too plot</span>
@@ -5346,27 +5345,27 @@ FEVRFEVRFEVRFEVRFEVRFEVRFEVRFEVRFEVRFEVRFEVRlE7+P7+eKiEC4Is6AAAAAElFTkSuQmCC
 <span class="n">ax</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">35</span><span class="p">)</span>    <span class="c"># set axes limits</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="mi">90</span><span class="p">,</span> <span class="mi">310</span><span class="p">)</span>
 </pre>
-</div>
-</div>
-</div>
-</div>
-<div class="output_wrapper">
-<div class="output">
-<div class="output_area">
-<div class="prompt output_prompt">
-         Out[35]:
-        </div>
-<div class="output_text output_subarea output_pyout">
-<pre>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="output_wrapper">
+     <div class="output">
+      <div class="output_area">
+       <div class="prompt output_prompt">
+        Out[35]:
+       </div>
+       <div class="output_text output_subarea output_pyout">
+        <pre>
 (90, 310)
 </pre>
-</div>
-</div>
-<div class="output_area">
-<div class="prompt">
-</div>
-<div class="output_png output_subarea ">
-<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAXgAAAD7CAYAAABgzo9kAAAABHNCSVQICAgIfAhkiAAAAAlwSFlz
+       </div>
+      </div>
+      <div class="output_area">
+       <div class="prompt">
+       </div>
+       <div class="output_png output_subarea ">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAXgAAAD7CAYAAABgzo9kAAAABHNCSVQICAgIfAhkiAAAAAlwSFlz
 AAALEgAACxIB0t1+/AAADkhJREFUeJzt3W2IXNd9x/HvWGvtxlWpYtxaD1a7ZmOVCIxsUutN/TAJ
 aB0jsOw3rgsFE4cSMOwKQlrroUWjOKKOIcbsQv2mTnFSJCoamsodbK2UerIuxTJ1pPWD7NgaLIjc
 at20TrAxu9VK0xf37u7MaKY7s5qd2fnv9wOXe+fce2fO0Vn99ujcq7kgSZIkSZIkSZIkSZIkSZIU
@@ -5433,90 +5432,90 @@ ayAPfIk4fVdutn1/QJP9186Avw74zXT7N4BBKkeGUcw+zhAqH2cYxfqy7Qfp7j7MkIyAzgDPlJVH
 6PbbtODK9j0K/IDkVtcJkr883TzHeSdwmeRnsvy2swh9WKtt9xGn/24FfkbSvjeAP0vLI/Qd1G9f
 lP6TJEmSJEmSJEmSJEmSJEmSJEmStFL8H3Iz1zLA7uDpAAAAAElFTkSuQmCC
 "/>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>
-        First, we will need access to the Exporter and PlotlyRenderer classes:
-       </p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-       In [36]:
+       </div>
       </div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight">
-<pre><span class="kn">from</span> <span class="nn">plotly.matplotlylib</span> <span class="kn">import</span> <span class="n">Exporter</span><span class="p">,</span> <span class="n">PlotlyRenderer</span>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       First, we will need access to the Exporter and PlotlyRenderer classes:
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
+     <div class="prompt input_prompt">
+      In [36]:
+     </div>
+     <div class="inner_cell">
+      <div class="input_area">
+       <div class="highlight">
+        <pre><span class="kn">from</span> <span class="nn">plotly.matplotlylib</span> <span class="kn">import</span> <span class="n">Exporter</span><span class="p">,</span> <span class="n">PlotlyRenderer</span>
 
 <span class="n">renderer</span> <span class="o">=</span> <span class="n">PlotlyRenderer</span><span class="p">()</span>    <span class="c"># make shorcuts </span>
 <span class="n">exporter</span> <span class="o">=</span> <span class="n">Exporter</span><span class="p">(</span><span class="n">renderer</span><span class="p">)</span>
 </pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>
-        The Exporter crawls through the matplotlib figure, judiciously grabs pertinent information, and invokes the renderer with which it was instantiated. The PlotlyRenderer accepts calls from the Exporter and creates an appropriate JSON dictionary for use with Plotly. So,
-       </p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-       In [37]:
+       </div>
       </div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight">
-<pre><span class="c"># Grab info from matplotlib figure</span>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       The Exporter crawls through the matplotlib figure, judiciously grabs pertinent information, and invokes the renderer with which it was instantiated. The PlotlyRenderer accepts calls from the Exporter and creates an appropriate JSON dictionary for use with Plotly. So,
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
+     <div class="prompt input_prompt">
+      In [37]:
+     </div>
+     <div class="inner_cell">
+      <div class="input_area">
+       <div class="highlight">
+        <pre><span class="c"># Grab info from matplotlib figure</span>
 <span class="n">exporter</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">mpl_fig_ng</span><span class="p">)</span>
 </pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-       In [38]:
+       </div>
       </div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight">
-<pre><span class="c"># Create JSON dictionary for use with Plotly</span>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
+     <div class="prompt input_prompt">
+      In [38]:
+     </div>
+     <div class="inner_cell">
+      <div class="input_area">
+       <div class="highlight">
+        <pre><span class="c"># Create JSON dictionary for use with Plotly</span>
 <span class="n">renderer</span><span class="o">.</span><span class="n">plotly_fig</span>
 </pre>
-</div>
-</div>
-</div>
-</div>
-<div class="output_wrapper">
-<div class="output">
-<div class="output_area">
-<div class="prompt output_prompt">
-         Out[38]:
-        </div>
-<div class="output_text output_subarea output_pyout">
-<pre>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="output_wrapper">
+     <div class="output">
+      <div class="output_area">
+       <div class="prompt output_prompt">
+        Out[38]:
+       </div>
+       <div class="output_text output_subarea output_pyout">
+        <pre>
 {'data': [{'marker': {'color': '#0000FF',
     'line': {'color': '#000000', 'width': 0.5},
     'opacity': 1,
@@ -5560,76 +5559,76 @@ lP6TJEmSJEmSJEmSJEmSJEmSJEmStFL8H3Iz1zLA7uDpAAAAAElFTkSuQmCC
    'type': 'linear',
    'zeroline': False}}}
 </pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>
-        OK.
-       </p>
-<p>
-        Finally, to create the figure in Plotly, call
-        <code>
-         py.iplot
-        </code>
-        :
-       </p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-       In [39]:
+       </div>
       </div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight">
-<pre><span class="n">py</span><span class="o">.</span><span class="n">iplot</span><span class="p">(</span><span class="n">renderer</span><span class="o">.</span><span class="n">plotly_fig</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="s">'s6_nitty-gritty'</span><span class="p">)</span>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       OK.
+      </p>
+      <p>
+       Finally, to create the figure in Plotly, call
+       <code>
+        py.iplot
+       </code>
+       :
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
+     <div class="prompt input_prompt">
+      In [39]:
+     </div>
+     <div class="inner_cell">
+      <div class="input_area">
+       <div class="highlight">
+        <pre><span class="n">py</span><span class="o">.</span><span class="n">iplot</span><span class="p">(</span><span class="n">renderer</span><span class="o">.</span><span class="n">plotly_fig</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="s">'s6_nitty-gritty'</span><span class="p">)</span>
 </pre>
-</div>
-</div>
-</div>
-</div>
-<div class="output_wrapper">
-<div class="output">
-<div class="output_area">
-<div class="prompt">
-</div>
-<div class="output_html rendered_html output_subarea ">
-<iframe height="525" id="igraph" scrolling="no" seamless="seamless" src="https://plot.ly/~etpinard/226" style="border:none;" width="100%">
-</iframe>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>
-        Additionally, you can use this opportunity to add to or modify the data and layout dictionaries. Just as an example, we can change the plot and paper background colors:
-       </p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-       In [40]:
+       </div>
       </div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight">
-<pre><span class="c"># Use Plotly's default auto-size</span>
+     </div>
+    </div>
+    <div class="output_wrapper">
+     <div class="output">
+      <div class="output_area">
+       <div class="prompt">
+       </div>
+       <div class="output_html rendered_html output_subarea ">
+        <iframe height="525" id="igraph" scrolling="no" seamless="seamless" src="https://plot.ly/~etpinard/226" style="border:none;" width="100%">
+        </iframe>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       Additionally, you can use this opportunity to add to or modify the data and layout dictionaries. Just as an example, we can change the plot and paper background colors:
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
+     <div class="prompt input_prompt">
+      In [40]:
+     </div>
+     <div class="inner_cell">
+      <div class="input_area">
+       <div class="highlight">
+        <pre><span class="c"># Use Plotly's default auto-size</span>
 <span class="n">renderer</span><span class="o">.</span><span class="n">resize</span><span class="p">()</span> 
 
 <span class="c"># Add a few layout features to the figure object</span>
@@ -5639,127 +5638,126 @@ lP6TJEmSJEmSJEmSJEmSJEmSJEmStFL8H3Iz1zLA7uDpAAAAAElFTkSuQmCC
 <span class="c"># Send updated figur object</span>
 <span class="n">py</span><span class="o">.</span><span class="n">iplot</span><span class="p">(</span><span class="n">renderer</span><span class="o">.</span><span class="n">plotly_fig</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="s">'s6_nitty-gritty2'</span><span class="p">)</span>
 </pre>
-</div>
-</div>
-</div>
-</div>
-<div class="output_wrapper">
-<div class="output">
-<div class="output_area">
-<div class="prompt">
-</div>
-<div class="output_html rendered_html output_subarea ">
-<iframe height="525" id="igraph" scrolling="no" seamless="seamless" src="https://plot.ly/~etpinard/227" style="border:none;" width="100%">
-</iframe>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<hr/>
-<h4 style="font-size:14pt;">
-        Go to
-        <a href="/python/streaming-tutorial">
-         Section 7 --- Plotly's Streaming API
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="output_wrapper">
+     <div class="output">
+      <div class="output_area">
+       <div class="prompt">
+       </div>
+       <div class="output_html rendered_html output_subarea ">
+        <iframe height="525" id="igraph" scrolling="no" seamless="seamless" src="https://plot.ly/~etpinard/227" style="border:none;" width="100%">
+        </iframe>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <hr/>
+      <h4 style="font-size:14pt;">
+       Go to
+       <a href="/python/streaming-tutorial">
+        Section 7 --- Plotly's Streaming API
+       </a>
+      </h4>
+      <h4 style="font-size:14pt;">
+       Go to
+       <a href="/python/heatmaps-contours-and-2dhistograms-tutorial">
+        Section 5 --- Heatmaps, Contours and 2D Histograms
+       </a>
+      </h4>
+      <h4 style="font-size:14pt;">
+       Go to
+       <a href="#notebook">
+        top of page
+       </a>
+      </h4>
+      <h4 style="font-size:14pt;">
+       Go to User Guide's
+       <a href="/python/user-guide">
+        homepage
+       </a>
+      </h4>
+      <hr/>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <div style="float:right; \">
+       <img align="right" src="http://i.imgur.com/4vwuxdJ.png" style="float:right; margin-left: 5px; margin-top: -10px"/>
+      </div>
+      <h4>
+       Got Questions or Feedback?
+      </h4>
+      <p>
+       About
+       <a href="https://plot.ly" target="_blank">
+        Plotly
+       </a>
+      </p>
+      <ul>
+       <li>
+        email: feedback@plot.ly
+       </li>
+       <li>
+        tweet:
+        <a href="https://twitter.com/plotlygraphs" target="_blank">
+         @plotlygraphs
         </a>
-</h4>
-<h4 style="font-size:14pt;">
-        Go to
-        <a href="/python/heatmaps-contours-and-2dhistograms-tutorial">
-         Section 5 --- Heatmaps, Contours and 2D Histograms
+       </li>
+      </ul>
+      <p>
+       About the
+       <a href="https://github.com/plotly/python-user-guide" target="_blank">
+        User Guide
+       </a>
+      </p>
+      <ul>
+       <li>
+        email: etienne@plot.ly
+       </li>
+       <li>
+        tweet:
+        <a href="https://twitter.com/etpinard" target="_blank">
+         @etpinard
         </a>
-</h4>
-<h4 style="font-size:14pt;">
-        Go to
-        <a href="#notebook">
-         top of page
+       </li>
+      </ul>
+      <h4 style="margin-top:30px;">
+       Notebook styling ideas
+      </h4>
+      <p>
+       Big thanks to
+      </p>
+      <ul>
+       <li>
+        <a href="http://nbviewer.ipython.org/github/CamDavidsonPilon/Probabilistic-Programming-and-Bayesian-Methods-for-Hackers/blob/master/Prologue/Prologue.ipynb" target="_blank">
+         Cam Davidson-Pilon
         </a>
-</h4>
-<h4 style="font-size:14pt;">
-        Go to User Guide's
-        <a href="/python/user-guide">
-         homepage
+       </li>
+       <li>
+        <a href="http://lorenabarba.com/blog/announcing-aeropython/#.U1ULXdX1LJ4.google_plusone_share" target="_blank">
+         Lorena A. Barba
         </a>
-</h4>
-<hr/>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<div style="float:right; \">
-<img align="right" src="http://i.imgur.com/4vwuxdJ.png" style="float:right; margin-left: 5px; margin-top: -10px"/>
-</div>
-<h4>
-        Got Questions or Feedback?
-       </h4>
-<p>
-        About
-        <a href="https://plot.ly" target="_blank">
-         Plotly
-        </a>
-</p>
-<ul>
-<li>
-         email: feedback@plot.ly
-        </li>
-<li>
-         tweet:
-         <a href="https://twitter.com/plotlygraphs" target="_blank">
-          @plotlygraphs
-         </a>
-</li>
-</ul>
-<p>
-        About the
-        <a href="https://github.com/plotly/python-user-guide" target="_blank">
-         User Guide
-        </a>
-</p>
-<ul>
-<li>
-         email: etienne@plot.ly
-        </li>
-<li>
-         tweet:
-         <a href="https://twitter.com/etpinard" target="_blank">
-          @etpinard
-         </a>
-</li>
-</ul>
-<h4 style="margin-top:30px;">
-        Notebook styling ideas
-       </h4>
-<p>
-        Big thanks to
-       </p>
-<ul>
-<li>
-<a href="http://nbviewer.ipython.org/github/CamDavidsonPilon/Probabilistic-Programming-and-Bayesian-Methods-for-Hackers/blob/master/Prologue/Prologue.ipynb" target="_blank">
-          Cam Davidson-Pilon
-         </a>
-</li>
-<li>
-<a href="http://lorenabarba.com/blog/announcing-aeropython/#.U1ULXdX1LJ4.google_plusone_share" target="_blank">
-          Lorena A. Barba
-         </a>
-</li>
-</ul>
-<p>
-<br/>
-</p>
-</div>
-</div>
-</div>
+       </li>
+      </ul>
+      <p>
+       <br/>
+      </p>
+     </div>
+    </div>
+   </div>
+  </div>
+ </div>
 
-</div>
-</div>
-</body>

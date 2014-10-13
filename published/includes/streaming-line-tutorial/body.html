@@ -1,176 +1,175 @@
-<body>
-<div class="border-box-sizing" id="notebook" tabindex="-1">
-<div class="container" id="notebook-container">
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
 
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Section-7:-Plotly's-Streaming-API-part-1">
-        Section 7: Plotly's Streaming API part 1
-        <a class="anchor-link" href="#Section-7:-Plotly's-Streaming-API-part-1">
-         ¶
+ <div class="border-box-sizing" id="notebook" tabindex="-1">
+  <div class="container" id="notebook-container">
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <h2 id="Section-7:-Plotly's-Streaming-API-part-1">
+       Section 7: Plotly's Streaming API part 1
+       <a class="anchor-link" href="#Section-7:-Plotly's-Streaming-API-part-1">
+        ¶
+       </a>
+      </h2>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       Welcome to Plotly's Python API User Guide.
+      </p>
+      <blockquote>
+       <p>
+        Links to the other sections are on the User Guide's
+        <a href="/python/user-guide#Table-of-Contents:">
+         homepage
         </a>
-</h2>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>
-        Welcome to Plotly's Python API User Guide.
+        <br/>
+        If unfamiliar with Plotly's Python API version 1.0 see
+        <a href="/python/overview">
+         section 0
+        </a>
+        <br/>
+        The Github repository is available
+        <a href="https://github.com/plotly/python-user-guide" target="_blank">
+         here
+        </a>
        </p>
-<blockquote>
-<p>
-         Links to the other sections are on the User Guide's
-         <a href="/python/user-guide#Table-of-Contents:">
-          homepage
+      </blockquote>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       Section 7 is divided, into separate notebooks, as follows:
+      </p>
+      <ul>
+       <li>
+        <p>
+         <a href="/python/streaming-tutorial">
+          7.0 Streaming API introduction
          </a>
-<br/>
-         If unfamiliar with Plotly's Python API version 1.0 see
-         <a href="/python/overview">
-          section 0
+        </p>
+       </li>
+       <li>
+        <p>
+         <a href="/python/streaming-line-tutorial">
+          7.1 A first Plotly streaming plot
          </a>
-<br/>
-         The Github repository is available
-         <a href="https://github.com/plotly/python-user-guide" target="_blank">
-          here
+        </p>
+       </li>
+       <li>
+        <p>
+         <a href="/python/streaming-double-pendulum-tutorial">
+          7.2 Never-ending double pendulum simulation
          </a>
-</p>
-</blockquote>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>
-        Section 7 is divided, into separate notebooks, as follows:
-       </p>
-<ul>
-<li>
-<p>
-<a href="/python/streaming-tutorial">
-           7.0 Streaming API introduction
-          </a>
-</p>
-</li>
-<li>
-<p>
-<a href="/python/streaming-line-tutorial">
-           7.1 A first Plotly streaming plot
-          </a>
-</p>
-</li>
-<li>
-<p>
-<a href="/python/streaming-double-pendulum-tutorial">
-           7.2 Never-ending double pendulum simulation
-          </a>
-</p>
-</li>
-<li>
-<p>
-<a href="/python/streaming-bubbles-tutorial">
-           7.3 An animated version of Hans Rosling's bubble chart
-          </a>
-</p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<hr/>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>
-        The User Guide assumes version 1.0 and up of Plotly's Python API.
-       </p>
-<p>
-        Check which version is installed on your machine and please upgrade if needed.
-       </p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-       In [1]:
-      </div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight">
-<pre><span class="c"># (*) Import plotly package</span>
+        </p>
+       </li>
+       <li>
+        <p>
+         <a href="/python/streaming-bubbles-tutorial">
+          7.3 An animated version of Hans Rosling's bubble chart
+         </a>
+        </p>
+       </li>
+      </ul>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <hr/>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       The User Guide assumes version 1.0 and up of Plotly's Python API.
+      </p>
+      <p>
+       Check which version is installed on your machine and please upgrade if needed.
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
+     <div class="prompt input_prompt">
+      In [1]:
+     </div>
+     <div class="inner_cell">
+      <div class="input_area">
+       <div class="highlight">
+        <pre><span class="c"># (*) Import plotly package</span>
 <span class="kn">import</span> <span class="nn">plotly</span>
  
 <span class="c"># Check plolty version (if not latest, please upgrade)</span>
 <span class="k">print</span> <span class="n">plotly</span><span class="o">.</span><span class="n">__version__</span>
 </pre>
-</div>
-</div>
-</div>
-</div>
-<div class="output_wrapper">
-<div class="output">
-<div class="output_area">
-<div class="prompt">
-</div>
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="output_wrapper">
+     <div class="output">
+      <div class="output_area">
+       <div class="prompt">
+       </div>
+       <div class="output_subarea output_stream output_stdout output_text">
+        <pre>
 1.2.3
 
 </pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<hr/>
-<p>
-        Import a few modules and sign in to Plotly using our credentials file:
-       </p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-       In [2]:
+       </div>
       </div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight">
-<pre><span class="c"># (*) To communicate with Plotly's server, sign in with credentials file</span>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <hr/>
+      <p>
+       Import a few modules and sign in to Plotly using our credentials file:
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
+     <div class="prompt input_prompt">
+      In [2]:
+     </div>
+     <div class="inner_cell">
+      <div class="input_area">
+       <div class="highlight">
+        <pre><span class="c"># (*) To communicate with Plotly's server, sign in with credentials file</span>
 <span class="kn">import</span> <span class="nn">plotly.plotly</span> <span class="kn">as</span> <span class="nn">py</span>  
  
 <span class="c"># (*) Useful Python/Plotly tools</span>
@@ -181,166 +180,166 @@
  
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>  <span class="c"># (*) numpy for math functions and arrays</span>
 </pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>
-        If you are not familiar with credentials files, refer to the User Guide's
-        <a href="/python/user-guide#Step-6" target="_blank">
-         homepage
-        </a>
-        .
-       </p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>
-        Finally, retrieve the stream ids in our credentials file as set up in
-        <a href="/python/streaming-tutorial#Get-your-stream-tokens" target="_blank">
-         subsection 7.1
-        </a>
-        :
-       </p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-       In [3]:
+       </div>
       </div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight">
-<pre><span class="n">stream_ids</span> <span class="o">=</span> <span class="n">tls</span><span class="o">.</span><span class="n">get_credentials_file</span><span class="p">()[</span><span class="s">'stream_ids'</span><span class="p">]</span>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       If you are not familiar with credentials files, refer to the User Guide's
+       <a href="/python/user-guide#Step-6" target="_blank">
+        homepage
+       </a>
+       .
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       Finally, retrieve the stream ids in our credentials file as set up in
+       <a href="/python/streaming-tutorial#Get-your-stream-tokens" target="_blank">
+        subsection 7.1
+       </a>
+       :
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
+     <div class="prompt input_prompt">
+      In [3]:
+     </div>
+     <div class="inner_cell">
+      <div class="input_area">
+       <div class="highlight">
+        <pre><span class="n">stream_ids</span> <span class="o">=</span> <span class="n">tls</span><span class="o">.</span><span class="n">get_credentials_file</span><span class="p">()[</span><span class="s">'stream_ids'</span><span class="p">]</span>
 </pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="7.1-A-first-Plotly-streaming-plot">
-        7.1 A first Plotly streaming plot
-        <a class="anchor-link" href="#7.1-A-first-Plotly-streaming-plot">
-         ¶
-        </a>
-</h3>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>
-        Making Plotly streaming plots sums up to working with two objects:
-       </p>
-<ul>
-<li>
-<p>
-          A stream id object (
-          <code>
-           Stream
-          </code>
-          in the
-          <code>
-           plotly.graph_objs
-          </code>
-          module),
-         </p>
-</li>
-<li>
-<p>
-          A stream link object (
-          <code>
-           py.Stream
-          </code>
-          ).
-         </p>
-</li>
-</ul>
-<p>
-        The stream id object is a graph object that embeds a particular stream id to each of your plot's traces. As all graph objects, the stream id object is equipped with extensive
-        <code>
-         help()
-        </code>
-        documentation, key validation and a nested update method. In brief, the stream id object initializes the connection between a trace and a stream.
-       </p>
-<p>
-        Meanwhile, the stream link object, as all objects in the
-        <code>
-         plotly.plotly
-        </code>
-        Plotly module links content in your Python/IPython session to Plotly's servers. More precisely, it is the interface that updates the data in the plotted traces in real-time, as identified with the unique stream id in the stream id object.
-       </p>
-<p>
-        If you find the
-        <code>
-         Stream
-        </code>
-        /
-        <code>
-         py.Stream
-        </code>
-        terminalogy too confusing --- and you do not mind not having access to Plotly graph objects' methods --- you can forgo the use of the stream id object and substitute it by
-        <code>
-         dict()
-        </code>
-        in the following examples.
-       </p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>
-        So, we start by making an instance of the stream id object:
-       </p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-       In [4]:
+       </div>
       </div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight">
-<pre><span class="n">help</span><span class="p">(</span><span class="n">Stream</span><span class="p">)</span>  <span class="c"># call help()!</span>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <h3 id="7.1-A-first-Plotly-streaming-plot">
+       7.1 A first Plotly streaming plot
+       <a class="anchor-link" href="#7.1-A-first-Plotly-streaming-plot">
+        ¶
+       </a>
+      </h3>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       Making Plotly streaming plots sums up to working with two objects:
+      </p>
+      <ul>
+       <li>
+        <p>
+         A stream id object (
+         <code>
+          Stream
+         </code>
+         in the
+         <code>
+          plotly.graph_objs
+         </code>
+         module),
+        </p>
+       </li>
+       <li>
+        <p>
+         A stream link object (
+         <code>
+          py.Stream
+         </code>
+         ).
+        </p>
+       </li>
+      </ul>
+      <p>
+       The stream id object is a graph object that embeds a particular stream id to each of your plot's traces. As all graph objects, the stream id object is equipped with extensive
+       <code>
+        help()
+       </code>
+       documentation, key validation and a nested update method. In brief, the stream id object initializes the connection between a trace and a stream.
+      </p>
+      <p>
+       Meanwhile, the stream link object, as all objects in the
+       <code>
+        plotly.plotly
+       </code>
+       Plotly module links content in your Python/IPython session to Plotly's servers. More precisely, it is the interface that updates the data in the plotted traces in real-time, as identified with the unique stream id in the stream id object.
+      </p>
+      <p>
+       If you find the
+       <code>
+        Stream
+       </code>
+       /
+       <code>
+        py.Stream
+       </code>
+       terminalogy too confusing --- and you do not mind not having access to Plotly graph objects' methods --- you can forgo the use of the stream id object and substitute it by
+       <code>
+        dict()
+       </code>
+       in the following examples.
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       So, we start by making an instance of the stream id object:
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
+     <div class="prompt input_prompt">
+      In [4]:
+     </div>
+     <div class="inner_cell">
+      <div class="input_area">
+       <div class="highlight">
+        <pre><span class="n">help</span><span class="p">(</span><span class="n">Stream</span><span class="p">)</span>  <span class="c"># call help()!</span>
 </pre>
-</div>
-</div>
-</div>
-</div>
-<div class="output_wrapper">
-<div class="output">
-<div class="output_area">
-<div class="prompt">
-</div>
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="output_wrapper">
+     <div class="output">
+      <div class="output_area">
+       <div class="prompt">
+       </div>
+       <div class="output_subarea output_stream output_stdout output_text">
+        <pre>
 Help on class Stream in module plotly.graph_objs.graph_objs:
 
 class Stream(PlotlyDict)
@@ -598,20 +597,20 @@ class Stream(PlotlyDict)
 
 
 </pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-       In [5]:
+       </div>
       </div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight">
-<pre><span class="c"># Get stream id from stream id list </span>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
+     <div class="prompt input_prompt">
+      In [5]:
+     </div>
+     <div class="inner_cell">
+      <div class="input_area">
+       <div class="highlight">
+        <pre><span class="c"># Get stream id from stream id list </span>
 <span class="n">stream_id</span> <span class="o">=</span> <span class="n">stream_ids</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
 
 <span class="c"># Make instance of stream id object </span>
@@ -620,80 +619,80 @@ class Stream(PlotlyDict)
     <span class="n">maxpoints</span><span class="o">=</span><span class="mi">80</span>      <span class="c"># (!) keep a max of 80 pts on screen</span>
 <span class="p">)</span>
 </pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>
-        The
-        <code>
-         'maxpoints'
-        </code>
-        key set the maxiumum number of points to keep on the plot from an incoming stream.
-       </p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>
-        Streaming Plotly plots are initialized with a standard (i.e. REST API) call to
-        <code>
-         py.plot()
-        </code>
-        or
-        <code>
-         py.iplot()
-        </code>
-        that embeds your unique stream ids in each of the plot's traces.
-       </p>
-<p>
-        Each Plotly trace object (e.g.
-        <code>
-         Scatter
-        </code>
-        ,
-        <code>
-         Bar
-        </code>
-        ,
-        <code>
-         Histogram
-        </code>
-        , etc. More in
-        <a href="/python/overview#0.4-Plotly's-graph-objects" target="_blank">
-         Section 0
-        </a>
-        ) has a
-        <code>
-         'stream'
-        </code>
-        key made available to link the trace object in question to a stream.
-       </p>
-<p>
-        In our first example, we link a scatter trace object to the stream:
-       </p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-       In [6]:
+       </div>
       </div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight">
-<pre><span class="c"># Initialize trace of streaming plot by embedding the unique stream_id</span>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       The
+       <code>
+        'maxpoints'
+       </code>
+       key set the maxiumum number of points to keep on the plot from an incoming stream.
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       Streaming Plotly plots are initialized with a standard (i.e. REST API) call to
+       <code>
+        py.plot()
+       </code>
+       or
+       <code>
+        py.iplot()
+       </code>
+       that embeds your unique stream ids in each of the plot's traces.
+      </p>
+      <p>
+       Each Plotly trace object (e.g.
+       <code>
+        Scatter
+       </code>
+       ,
+       <code>
+        Bar
+       </code>
+       ,
+       <code>
+        Histogram
+       </code>
+       , etc. More in
+       <a href="/python/overview#0.4-Plotly's-graph-objects" target="_blank">
+        Section 0
+       </a>
+       ) has a
+       <code>
+        'stream'
+       </code>
+       key made available to link the trace object in question to a stream.
+      </p>
+      <p>
+       In our first example, we link a scatter trace object to the stream:
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
+     <div class="prompt input_prompt">
+      In [6]:
+     </div>
+     <div class="inner_cell">
+      <div class="input_area">
+       <div class="highlight">
+        <pre><span class="c"># Initialize trace of streaming plot by embedding the unique stream_id</span>
 <span class="n">trace1</span> <span class="o">=</span> <span class="n">Scatter</span><span class="p">(</span>
     <span class="n">x</span><span class="o">=</span><span class="p">[],</span>
     <span class="n">y</span><span class="o">=</span><span class="p">[],</span>
@@ -703,31 +702,31 @@ class Stream(PlotlyDict)
 
 <span class="n">data</span> <span class="o">=</span> <span class="n">Data</span><span class="p">([</span><span class="n">trace1</span><span class="p">])</span>
 </pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>
-        Then, add a title to the layout object and initialize your Plotly streaming plot:
-       </p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-       In [7]:
+       </div>
       </div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight">
-<pre><span class="c"># Add title to layout object</span>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       Then, add a title to the layout object and initialize your Plotly streaming plot:
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
+     <div class="prompt input_prompt">
+      In [7]:
+     </div>
+     <div class="inner_cell">
+      <div class="input_area">
+       <div class="highlight">
+        <pre><span class="c"># Add title to layout object</span>
 <span class="n">layout</span> <span class="o">=</span> <span class="n">Layout</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s">'Time Series'</span><span class="p">)</span>
 
 <span class="c"># Make a figure object</span>
@@ -736,59 +735,59 @@ class Stream(PlotlyDict)
 <span class="c"># (@) Send fig to Plotly, initialize streaming plot, open new tab</span>
 <span class="n">unique_url</span> <span class="o">=</span> <span class="n">py</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">fig</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="s">'s7_first-stream'</span><span class="p">)</span>
 </pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>
-        Great! Your Plotly streaming plot is intialized. Here's a screenshot:
-       </p>
-<p>
-<img src="http://i.imgur.com/Lx7ICLI.png"/>
-</p>
-<p>
-<br/>
-</p>
-<p>
-        Now, let's add data on top of it, or more precisely, send a
-        <em>
-         stream
-        </em>
-        of data to it.
-       </p>
-<p>
-        So, first
-       </p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-       In [8]:
+       </div>
       </div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight">
-<pre><span class="n">help</span><span class="p">(</span><span class="n">py</span><span class="o">.</span><span class="n">Stream</span><span class="p">)</span>  <span class="c"># run help() of the Stream link object</span>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       Great! Your Plotly streaming plot is intialized. Here's a screenshot:
+      </p>
+      <p>
+       <img src="http://i.imgur.com/Lx7ICLI.png"/>
+      </p>
+      <p>
+       <br/>
+      </p>
+      <p>
+       Now, let's add data on top of it, or more precisely, send a
+       <em>
+        stream
+       </em>
+       of data to it.
+      </p>
+      <p>
+       So, first
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
+     <div class="prompt input_prompt">
+      In [8]:
+     </div>
+     <div class="inner_cell">
+      <div class="input_area">
+       <div class="highlight">
+        <pre><span class="n">help</span><span class="p">(</span><span class="n">py</span><span class="o">.</span><span class="n">Stream</span><span class="p">)</span>  <span class="c"># run help() of the Stream link object</span>
 </pre>
-</div>
-</div>
-</div>
-</div>
-<div class="output_wrapper">
-<div class="output">
-<div class="output_area">
-<div class="prompt">
-</div>
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="output_wrapper">
+     <div class="output">
+      <div class="output_area">
+       <div class="prompt">
+       </div>
+       <div class="output_subarea output_stream output_stdout output_text">
+        <pre>
 Help on class Stream in module plotly.plotly.plotly:
 
 class Stream
@@ -880,54 +879,54 @@ class Stream
 
 
 </pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-       In [9]:
+       </div>
       </div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight">
-<pre><span class="c"># (@) Make instance of the Stream link object, </span>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
+     <div class="prompt input_prompt">
+      In [9]:
+     </div>
+     <div class="inner_cell">
+      <div class="input_area">
+       <div class="highlight">
+        <pre><span class="c"># (@) Make instance of the Stream link object, </span>
 <span class="c">#     with same stream id as Stream id object</span>
 <span class="n">s</span> <span class="o">=</span> <span class="n">py</span><span class="o">.</span><span class="n">Stream</span><span class="p">(</span><span class="n">stream_id</span><span class="p">)</span>
 
 <span class="c"># (@) Open the stream</span>
 <span class="n">s</span><span class="o">.</span><span class="n">open</span><span class="p">()</span>
 </pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>
-        We now have an interface to send a stream of data to Plotly's servers.
-       </p>
-<p>
-        Next, send a time stream and some random numbers:
-       </p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-       In [10]:
+       </div>
       </div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight">
-<pre><span class="c"># (*) Import module keep track and format current time</span>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       We now have an interface to send a stream of data to Plotly's servers.
+      </p>
+      <p>
+       Next, send a time stream and some random numbers:
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
+     <div class="prompt input_prompt">
+      In [10]:
+     </div>
+     <div class="inner_cell">
+      <div class="input_area">
+       <div class="highlight">
+        <pre><span class="c"># (*) Import module keep track and format current time</span>
 <span class="kn">import</span> <span class="nn">datetime</span> 
 <span class="kn">import</span> <span class="nn">time</span>   
  
@@ -958,323 +957,322 @@ class Stream
 <span class="c"># (@) Close the stream when done plotting</span>
 <span class="n">s</span><span class="o">.</span><span class="n">close</span><span class="p">()</span> 
 </pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>
-        A stream of data totalling 200 points is sent to Plotly's servers in real-time.
-       </p>
-<p>
-        Whatching this unfold in an opened plot.ly tab looks something like:
-       </p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-       In [11]:
+       </div>
       </div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight">
-<pre><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">YouTubeVideo</span>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       A stream of data totalling 200 points is sent to Plotly's servers in real-time.
+      </p>
+      <p>
+       Whatching this unfold in an opened plot.ly tab looks something like:
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
+     <div class="prompt input_prompt">
+      In [11]:
+     </div>
+     <div class="inner_cell">
+      <div class="input_area">
+       <div class="highlight">
+        <pre><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">YouTubeVideo</span>
 <span class="n">YouTubeVideo</span><span class="p">(</span><span class="s">'OVQ2Guypp_M'</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="s">'100%'</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="s">'350'</span><span class="p">)</span>
 </pre>
-</div>
-</div>
-</div>
-</div>
-<div class="output_wrapper">
-<div class="output">
-<div class="output_area">
-<div class="prompt output_prompt">
-         Out[11]:
-        </div>
-<div class="output_html rendered_html output_subarea output_pyout">
-<iframe allowfullscreen="" frameborder="0" height='350"' src="https://www.youtube.com/embed/OVQ2Guypp_M" width="100%">
-</iframe>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>
-        It took Plotly around 15 seconds to plot the 200 data points sent in the stream. After that  the generated plot looks like any other Plotly plot.
-       </p>
-<p>
-        That said, if you have enough computer resources to let a server running indefinitely, why not have
-       </p>
-<pre><code>&gt;&gt;&gt; while True: 
-</code></pre>
-<p>
-        as the while-loop expression and never close the stream.
-       </p>
-<p>
-        Luckily, it turns out that Plotly has access to such computer resources; a simulation generated using the same code as the above has been running since March 2014.
-       </p>
-<p>
-        This plot is embedded below:
-       </p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-       In [12]:
+       </div>
       </div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight">
-<pre><span class="c"># Embed never-ending time series streaming plot</span>
+     </div>
+    </div>
+    <div class="output_wrapper">
+     <div class="output">
+      <div class="output_area">
+       <div class="prompt output_prompt">
+        Out[11]:
+       </div>
+       <div class="output_html rendered_html output_subarea output_pyout">
+        <iframe allowfullscreen="" frameborder="0" height='350"' src="https://www.youtube.com/embed/OVQ2Guypp_M" width="100%">
+        </iframe>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       It took Plotly around 15 seconds to plot the 200 data points sent in the stream. After that  the generated plot looks like any other Plotly plot.
+      </p>
+      <p>
+       That said, if you have enough computer resources to let a server running indefinitely, why not have
+      </p>
+      <pre><code>&gt;&gt;&gt; while True: 
+</code></pre>
+      <p>
+       as the while-loop expression and never close the stream.
+      </p>
+      <p>
+       Luckily, it turns out that Plotly has access to such computer resources; a simulation generated using the same code as the above has been running since March 2014.
+      </p>
+      <p>
+       This plot is embedded below:
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
+     <div class="prompt input_prompt">
+      In [12]:
+     </div>
+     <div class="inner_cell">
+      <div class="input_area">
+       <div class="highlight">
+        <pre><span class="c"># Embed never-ending time series streaming plot</span>
 <span class="n">tls</span><span class="o">.</span><span class="n">embed</span><span class="p">(</span><span class="s">'streaming-demos'</span><span class="p">,</span><span class="s">'12'</span><span class="p">)</span>
 
 <span class="c"># Note that the time point correspond to internal clock of the servers, </span>
 <span class="c"># that is UTC time.</span>
 </pre>
-</div>
-</div>
-</div>
-</div>
-<div class="output_wrapper">
-<div class="output">
-<div class="output_area">
-<div class="prompt">
-</div>
-<div class="output_html rendered_html output_subarea ">
-<iframe height="525" id="igraph" scrolling="no" seamless="seamless" src="https://plot.ly/~streaming-demos/12" style="border:none;" width="100%">
-</iframe>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>
-        Anyone can view your streaming graph in real-time. Viewers see the same data at the same time (try it! Open up this notebook up in two different browser windows and observer
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="output_wrapper">
+     <div class="output">
+      <div class="output_area">
+       <div class="prompt">
+       </div>
+       <div class="output_html rendered_html output_subarea ">
+        <iframe height="525" id="igraph" scrolling="no" seamless="seamless" src="https://plot.ly/~streaming-demos/12" style="border:none;" width="100%">
+        </iframe>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       Anyone can view your streaming graph in real-time. Viewers see the same data at the same time (try it! Open up this notebook up in two different browser windows and observer
 that the graphs are plotting identical data!).
-       </p>
-<p>
-        Simply put, Plotly's streaming API is awesome!
-       </p>
-<p>
-        In brief: to make a Plotly streaming plot:
-       </p>
-<ol>
-<li>
-<p>
-          Make a stream id object (
-          <code>
-           Stream
-          </code>
-          in the
-          <code>
-           plotly.graph_objs
-          </code>
-          module) containing the stream id and (optional) the maximum number of points to be keep on screen.
-         </p>
-</li>
-<li>
-<p>
-          Link this stream id object to the
-          <code>
-           'stream'
-          </code>
-          key in the trace object of choice.
-         </p>
-</li>
-<li>
-<p>
-          Make a stream link object (
-          <code>
-           py.Stream
-          </code>
-          ) containing the same stream id as the stream id object and open the stream with the
-          <code>
-           .open()
-          </code>
-          method.
-         </p>
-</li>
-<li>
-<p>
-          Write data to the stream link object with the
-          <code>
-           .write()
-          </code>
-          method. When done, close the stream with the
-          <code>
-           .close()
-          </code>
-          method.
-         </p>
-</li>
-</ol>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>
-        Subsections of section 7:
-       </p>
-<ul>
-<li>
-<p>
-<a href="/python/streaming-tutorial">
-           7.0 Streaming API introduction
-          </a>
-</p>
-</li>
-<li>
-<p>
-<a href="/python/streaming-line-tutorial">
-           7.1 A first Plotly streaming plot
-          </a>
-</p>
-</li>
-<li>
-<p>
-<a href="/python/streaming-double-pendulum-tutorial">
-           7.2 Never-ending double pendulum simulation
-          </a>
-</p>
-</li>
-<li>
-<p>
-<a href="/python/streaming-bubbles-tutorial">
-           7.3 An animated version of Hans Rosling's bubble chart
-          </a>
-</p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<hr/>
-<h4 style="font-size:14pt;">
-        Go to
-        <a href="/python/3d-plots-tutorial">
-         Section 8  --- 3D Plots
-        </a>
-</h4>
-<h4 style="font-size:14pt;">
-        Go to
-        <a href="/python/matplotlib-to-plotly-tutorial">
-         Section 6  --- Convert your Matplotlib plots to Plotly
-        </a>
-</h4>
-<h4 style="font-size:14pt;">
-        Go to
-        <a href="#notebook">
-         top of page
-        </a>
-</h4>
-<h4 style="font-size:14pt;">
-        Go to User Guide's
-        <a href="/python/user-guide">
-         homepage
-        </a>
-</h4>
-<hr/>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<div style="float:right; \">
-<img align="right" src="http://i.imgur.com/4vwuxdJ.png" style="float:right; margin-left: 5px; margin-top: -10px"/>
-</div>
-<h4>
-        Got Questions or Feedback?
-       </h4>
-<p>
-        About
-        <a href="https://plot.ly" target="_blank">
-         Plotly
-        </a>
-</p>
-<ul>
-<li>
-         email: feedback@plot.ly
-        </li>
-<li>
-         tweet:
-         <a href="https://twitter.com/plotlygraphs" target="_blank">
-          @plotlygraphs
+      </p>
+      <p>
+       Simply put, Plotly's streaming API is awesome!
+      </p>
+      <p>
+       In brief: to make a Plotly streaming plot:
+      </p>
+      <ol>
+       <li>
+        <p>
+         Make a stream id object (
+         <code>
+          Stream
+         </code>
+         in the
+         <code>
+          plotly.graph_objs
+         </code>
+         module) containing the stream id and (optional) the maximum number of points to be keep on screen.
+        </p>
+       </li>
+       <li>
+        <p>
+         Link this stream id object to the
+         <code>
+          'stream'
+         </code>
+         key in the trace object of choice.
+        </p>
+       </li>
+       <li>
+        <p>
+         Make a stream link object (
+         <code>
+          py.Stream
+         </code>
+         ) containing the same stream id as the stream id object and open the stream with the
+         <code>
+          .open()
+         </code>
+         method.
+        </p>
+       </li>
+       <li>
+        <p>
+         Write data to the stream link object with the
+         <code>
+          .write()
+         </code>
+         method. When done, close the stream with the
+         <code>
+          .close()
+         </code>
+         method.
+        </p>
+       </li>
+      </ol>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       Subsections of section 7:
+      </p>
+      <ul>
+       <li>
+        <p>
+         <a href="/python/streaming-tutorial">
+          7.0 Streaming API introduction
          </a>
-</li>
-</ul>
-<p>
-        About the
-        <a href="https://github.com/plotly/python-user-guide" target="_blank">
-         User Guide
+        </p>
+       </li>
+       <li>
+        <p>
+         <a href="/python/streaming-line-tutorial">
+          7.1 A first Plotly streaming plot
+         </a>
+        </p>
+       </li>
+       <li>
+        <p>
+         <a href="/python/streaming-double-pendulum-tutorial">
+          7.2 Never-ending double pendulum simulation
+         </a>
+        </p>
+       </li>
+       <li>
+        <p>
+         <a href="/python/streaming-bubbles-tutorial">
+          7.3 An animated version of Hans Rosling's bubble chart
+         </a>
+        </p>
+       </li>
+      </ul>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <hr/>
+      <h4 style="font-size:14pt;">
+       Go to
+       <a href="/python/3d-plots-tutorial">
+        Section 8  --- 3D Plots
+       </a>
+      </h4>
+      <h4 style="font-size:14pt;">
+       Go to
+       <a href="/python/matplotlib-to-plotly-tutorial">
+        Section 6  --- Convert your Matplotlib plots to Plotly
+       </a>
+      </h4>
+      <h4 style="font-size:14pt;">
+       Go to
+       <a href="#notebook">
+        top of page
+       </a>
+      </h4>
+      <h4 style="font-size:14pt;">
+       Go to User Guide's
+       <a href="/python/user-guide">
+        homepage
+       </a>
+      </h4>
+      <hr/>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <div style="float:right; \">
+       <img align="right" src="http://i.imgur.com/4vwuxdJ.png" style="float:right; margin-left: 5px; margin-top: -10px"/>
+      </div>
+      <h4>
+       Got Questions or Feedback?
+      </h4>
+      <p>
+       About
+       <a href="https://plot.ly" target="_blank">
+        Plotly
+       </a>
+      </p>
+      <ul>
+       <li>
+        email: feedback@plot.ly
+       </li>
+       <li>
+        tweet:
+        <a href="https://twitter.com/plotlygraphs" target="_blank">
+         @plotlygraphs
         </a>
-</p>
-<ul>
-<li>
-         email: etienne@plot.ly
-        </li>
-<li>
-         tweet:
-         <a href="https://twitter.com/etpinard" target="_blank">
-          @etpinard
-         </a>
-</li>
-</ul>
-<h4 style="margin-top:30px;">
-        Notebook styling ideas
-       </h4>
-<p>
-        Big thanks to
-       </p>
-<ul>
-<li>
-<a href="http://nbviewer.ipython.org/github/CamDavidsonPilon/Probabilistic-Programming-and-Bayesian-Methods-for-Hackers/blob/master/Prologue/Prologue.ipynb" target="_blank">
-          Cam Davidson-Pilon
-         </a>
-</li>
-<li>
-<a href="http://lorenabarba.com/blog/announcing-aeropython/#.U1ULXdX1LJ4.google_plusone_share" target="_blank">
-          Lorena A. Barba
-         </a>
-</li>
-</ul>
-<p>
-<br/>
-</p>
-</div>
-</div>
-</div>
+       </li>
+      </ul>
+      <p>
+       About the
+       <a href="https://github.com/plotly/python-user-guide" target="_blank">
+        User Guide
+       </a>
+      </p>
+      <ul>
+       <li>
+        email: etienne@plot.ly
+       </li>
+       <li>
+        tweet:
+        <a href="https://twitter.com/etpinard" target="_blank">
+         @etpinard
+        </a>
+       </li>
+      </ul>
+      <h4 style="margin-top:30px;">
+       Notebook styling ideas
+      </h4>
+      <p>
+       Big thanks to
+      </p>
+      <ul>
+       <li>
+        <a href="http://nbviewer.ipython.org/github/CamDavidsonPilon/Probabilistic-Programming-and-Bayesian-Methods-for-Hackers/blob/master/Prologue/Prologue.ipynb" target="_blank">
+         Cam Davidson-Pilon
+        </a>
+       </li>
+       <li>
+        <a href="http://lorenabarba.com/blog/announcing-aeropython/#.U1ULXdX1LJ4.google_plusone_share" target="_blank">
+         Lorena A. Barba
+        </a>
+       </li>
+      </ul>
+      <p>
+       <br/>
+      </p>
+     </div>
+    </div>
+   </div>
+  </div>
+ </div>
 
-</div>
-</div>
-</body>
