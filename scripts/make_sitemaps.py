@@ -9,19 +9,14 @@ import os
 #
 # -------------------------------------------------------------------------------
 
-NAME="make_sitemaps"  # name of this script
+NAME = "make_sitemaps"  # name of this script
 tab = "    "         # tab in space
 
-
-# Get translate.json, to translate HTML file names to branch names
-def get_translate():
-    with open('./scripts/inputs/translate.json') as f:
-        translate = json.load(f)
-    return translate
 
 # Get chapter names from translate.json
 def get_chapters(translate):
     return translate.values()
+
 
 # Get sitemaps items
 # N.B. To be imported in 
@@ -42,6 +37,7 @@ def get_items(chapters):
             "'body.html')"
         ).format(chapter=chapter,tab=tab)]
     return locations, lmfiles
+
 
 # Generate python_sitemaps.py file
 # See streambed/api_docs/ for more info
@@ -69,6 +65,7 @@ def get_sitemaps_py(locations, lmfiles):
     ).format(tab=tab)
     return sitemaps_py
 
+
 # Replace python_sitemaps.py
 def replace_sitemaps(sitemaps_py):
     f_urls = "./published/python_sitemaps.py"
@@ -79,9 +76,8 @@ def replace_sitemaps(sitemaps_py):
 
 # -------------------------------------------------------------------------------
 
-def main():
+def make_sitemaps(translate):
 
-    translate = get_translate()
     chapters = get_chapters(translate)
 
     locations, lmfiles = get_items(chapters)

@@ -11,15 +11,11 @@ import os
 
 NAME = "make_config"  # name of this script
 
-# Get translate.json, to translate HTML file names to branch names
-def get_translate():
-    with open('./scripts/inputs/translate.json') as f:
-        translate = json.load(f)
-    return translate
 
 # Get chapter names from translate.json
 def get_chapters(translate):
     return translate.values()
+
 
 # Get config dictionary
 # config.userguide_chapter_name : breadcrumb header label
@@ -106,6 +102,7 @@ def get_config(chapter):
 
     return config
 
+
 # Replace config.json 
 def replace_config(config, chapter):
     path = os.path.join("./published/includes/", chapter)
@@ -118,9 +115,9 @@ def replace_config(config, chapter):
 
 # -------------------------------------------------------------------------------
 
-def main():
 
-    translate = get_translate()
+def make_config(translate):
+
     chapters = get_chapters(translate)
 
     for chapter in chapters:
