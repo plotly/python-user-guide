@@ -3,6 +3,7 @@ import json
 import sys
 import os
 
+import image_map
 import translate_href_html
 import update_body
 import make_config
@@ -105,6 +106,8 @@ def main():
     translate = get_translate()
     domains = get_domains()
 
+    img_map = image_map.image_get(files_html, translate)
+
     for file_html in files_html:
 
         soup = get_soup(file_html)
@@ -112,6 +115,7 @@ def main():
 
         body = update_body.update_body(body)
         body = translate_href_html.translate(body, domains, translate)
+        body = image_map.image_replace_src(body, img_map)
 
         tree = get_tree(file_html, translate)
         make_tree(tree)
