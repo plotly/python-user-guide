@@ -1,108 +1,107 @@
-<body>
-<div class="border-box-sizing" id="notebook" tabindex="-1">
-<div class="container" id="notebook-container">
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
 
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Section-2:-Bar-Charts">
-        Section 2: Bar Charts
-        <a class="anchor-link" href="#Section-2:-Bar-Charts">
-         ¶
+ <div class="border-box-sizing" id="notebook" tabindex="-1">
+  <div class="container" id="notebook-container">
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <h2 id="Section-2:-Bar-Charts">
+       Section 2: Bar Charts
+       <a class="anchor-link" href="#Section-2:-Bar-Charts">
+        ¶
+       </a>
+      </h2>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       Welcome to Plotly's Python API User Guide.
+      </p>
+      <blockquote>
+       <p>
+        Links to the other sections are on the User Guide's
+        <a href="/python/user-guide#Table-of-Contents:">
+         homepage
         </a>
-</h2>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>
-        Welcome to Plotly's Python API User Guide.
+        <br/>
+        If unfamiliar with Plotly's Python API version 1.0 see
+        <a href="/python/overview">
+         section 0
+        </a>
+        <br/>
+        The Github repository is available
+        <a href="https://github.com/plotly/python-user-guide" target="_blank">
+         here
+        </a>
        </p>
-<blockquote>
-<p>
-         Links to the other sections are on the User Guide's
-         <a href="/python/user-guide#Table-of-Contents:">
-          homepage
+      </blockquote>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       Section 2 is divided as follows:
+      </p>
+      <ul>
+       <li>
+        <p>
+         <a href="#2.1-A-first-bar-chart-with-error-bars">
+          2.1 A first bar chart with error bars
          </a>
-<br/>
-         If unfamiliar with Plotly's Python API version 1.0 see
-         <a href="/python/overview">
-          section 0
+        </p>
+       </li>
+       <li>
+        <p>
+         <a href="#2.2-Chart-with-overlaid-bars">
+          2.2 Chart with overlaid bars
          </a>
-<br/>
-         The Github repository is available
-         <a href="https://github.com/plotly/python-user-guide" target="_blank">
-          here
+        </p>
+       </li>
+       <li>
+        <p>
+         <a href="#2.3-Horizontal-stacked-bar-chart">
+          2.3 Horizontal stacked bar chart
          </a>
-</p>
-</blockquote>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>
-        Section 2 is divided as follows:
-       </p>
-<ul>
-<li>
-<p>
-<a href="#2.1-A-first-bar-chart-with-error-bars">
-           2.1 A first bar chart with error bars
-          </a>
-</p>
-</li>
-<li>
-<p>
-<a href="#2.2-Chart-with-overlaid-bars">
-           2.2 Chart with overlaid bars
-          </a>
-</p>
-</li>
-<li>
-<p>
-<a href="#2.3-Horizontal-stacked-bar-chart">
-           2.3 Horizontal stacked bar chart
-          </a>
-</p>
-</li>
-<li>
-<p>
-<a href="#2.4-Two-grouped-bar-charts-on-same-plot">
-           2.4 Two grouped bar charts on same plot
-          </a>
-</p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>
-        Quickstart (make a bar chart with 3 bars):
-       </p>
-<pre><code>&gt;&gt;&gt; import plotly.plotly as py
+        </p>
+       </li>
+       <li>
+        <p>
+         <a href="#2.4-Two-grouped-bar-charts-on-same-plot">
+          2.4 Two grouped bar charts on same plot
+         </a>
+        </p>
+       </li>
+      </ul>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       Quickstart (make a bar chart with 3 bars):
+      </p>
+      <pre><code>&gt;&gt;&gt; import plotly.plotly as py
 &gt;&gt;&gt; from plotly.graph_objs import *
 &gt;&gt;&gt; # auto sign-in with credentials or use py.sign_in()
 &gt;&gt;&gt; trace1 = Bar(
@@ -112,128 +111,128 @@
 &gt;&gt;&gt; data = Data([trace1])
 &gt;&gt;&gt; py.plot(data)
 </code></pre>
-<hr/>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>
-        The User Guide assumes version 1.0 and up of Plotly's Python API.
-       </p>
-<p>
-        Check which version is installed on your machine and please upgrade if needed.
-       </p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-       In [1]:
-      </div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight">
-<pre><span class="c"># (*) Import plotly package</span>
+      <hr/>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       The User Guide assumes version 1.0 and up of Plotly's Python API.
+      </p>
+      <p>
+       Check which version is installed on your machine and please upgrade if needed.
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
+     <div class="prompt input_prompt">
+      In [1]:
+     </div>
+     <div class="inner_cell">
+      <div class="input_area">
+       <div class="highlight">
+        <pre><span class="c"># (*) Import plotly package</span>
 <span class="kn">import</span> <span class="nn">plotly</span>
 
 <span class="c"># Check plolty version (if not latest, please upgrade)</span>
 <span class="k">print</span> <span class="n">plotly</span><span class="o">.</span><span class="n">__version__</span>
 </pre>
-</div>
-</div>
-</div>
-</div>
-<div class="output_wrapper">
-<div class="output">
-<div class="output_area">
-<div class="prompt">
-</div>
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="output_wrapper">
+     <div class="output">
+      <div class="output_area">
+       <div class="prompt">
+       </div>
+       <div class="output_subarea output_stream output_stdout output_text">
+        <pre>
 1.2.3
 
 </pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>
-        See the User Guide's
-        <a href="/python/user-guide#Installation-guidelines" target="_blank">
-         homepage
-        </a>
-        for more info on installation and upgrading.
-       </p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<hr/>
-<p>
-        In this section, we compare the climates of Montreal and Vancouver. 
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       See the User Guide's
+       <a href="/python/user-guide#Installation-guidelines" target="_blank">
+        homepage
+       </a>
+       for more info on installation and upgrading.
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <hr/>
+      <p>
+       In this section, we compare the climates of Montreal and Vancouver. 
 The relevant data is read from two csv files and the analysis done primarily using bar charts.
 We also explore
-       </p>
-<ul>
-<li>
-<a href="#Error-Bars-in-bar-charts">
-          Error bars in bar charts
-         </a>
-         ,
-        </li>
-<li>
-<a href="#Annotations-in-Plotly">
-          Annotations in Plotly
-         </a>
-         ,
-        </li>
-<li>
-<a href="#Axis-ticks-in-Plotly">
-          Axis ticks
-         </a>
-</li>
-</ul>
-<p>
-        and numerous other style options.
-       </p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>
-        We first import a few modules and sign in to Plotly using our credential file:
-       </p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-       In [2]:
-      </div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight">
-<pre><span class="c"># (*) To communicate with Plotly's server, sign in with credentials file</span>
+      </p>
+      <ul>
+       <li>
+        <a href="#Error-Bars-in-bar-charts">
+         Error bars in bar charts
+        </a>
+        ,
+       </li>
+       <li>
+        <a href="#Annotations-in-Plotly">
+         Annotations in Plotly
+        </a>
+        ,
+       </li>
+       <li>
+        <a href="#Axis-ticks-in-Plotly">
+         Axis ticks
+        </a>
+       </li>
+      </ul>
+      <p>
+       and numerous other style options.
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       We first import a few modules and sign in to Plotly using our credential file:
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
+     <div class="prompt input_prompt">
+      In [2]:
+     </div>
+     <div class="inner_cell">
+      <div class="input_area">
+       <div class="highlight">
+        <pre><span class="c"># (*) To communicate with Plotly's server, sign in with credentials file</span>
 <span class="kn">import</span> <span class="nn">plotly.plotly</span> <span class="kn">as</span> <span class="nn">py</span>  
 
 <span class="c"># (*) Useful Python/Plotly tools</span>
@@ -244,81 +243,81 @@ We also explore
 
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>  <span class="c"># (*) numpy for math functions and arrays</span>
 </pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>
-        If you are not familiar with credentials files, refer to the User Guide's
-        <a href="/python/user-guide#Step-6" target="_blank">
-         homepage
-        </a>
-        .
-       </p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>
-        We use data stored in two files:
-        <code>
-         montreal.csv
-        </code>
-        contains the data (e.g. temperature, precipitation) for Montreal and
-        <code>
-         vancouver.csv
-        </code>
-        contains the data for Vancouver.
-For readers looking to run this notebook, these files are in this section's Github
-        <a href="https://github.com/plotly/python-user-guide/blob/master/s2_bar-charts" target="_blank">
-         folder
-        </a>
-        . They were originally downloaded from the Environment Canada servers (
-        <a href="http://climate.weather.gc.ca/climate_normals/results_1981_2010_e.html?stnID=5415" target="_blank">
-         here
-        </a>
-        and
-        <a href="http://climate.weather.gc.ca/climate_normals/results_1981_2010_e.html?stnID=889&amp;lang=e&amp;dCode=1&amp;StationName=VANCOUVER&amp;SearchType=Contains&amp;province=ALL&amp;provBut=&amp;month1=0&amp;month2=12" target="_blank">
-         here
-        </a>
-        ).
-       </p>
-<p>
-        In both
-        <code>
-         montreal.csv
-        </code>
-        and
-        <code>
-         vancouver.csv
-        </code>
-        data is stored in rows. The first column are variable labels, the next 12 columns are the climatological values for each month, the second-to-last column is the yearly average and the last column is a quality check grade. (check them yourself!)
-       </p>
-<p>
-        So, let's define a simple csv reader function adapted to these data files:
-       </p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-       In [3]:
+       </div>
       </div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight">
-<pre><span class="c"># (*) csv file read/write</span>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       If you are not familiar with credentials files, refer to the User Guide's
+       <a href="/python/user-guide#Step-6" target="_blank">
+        homepage
+       </a>
+       .
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       We use data stored in two files:
+       <code>
+        montreal.csv
+       </code>
+       contains the data (e.g. temperature, precipitation) for Montreal and
+       <code>
+        vancouver.csv
+       </code>
+       contains the data for Vancouver.
+For readers looking to run this notebook, these files are in this section's Github
+       <a href="https://github.com/plotly/python-user-guide/blob/master/s2_bar-charts" target="_blank">
+        folder
+       </a>
+       . They were originally downloaded from the Environment Canada servers (
+       <a href="http://climate.weather.gc.ca/climate_normals/results_1981_2010_e.html?stnID=5415" target="_blank">
+        here
+       </a>
+       and
+       <a href="http://climate.weather.gc.ca/climate_normals/results_1981_2010_e.html?stnID=889&amp;lang=e&amp;dCode=1&amp;StationName=VANCOUVER&amp;SearchType=Contains&amp;province=ALL&amp;provBut=&amp;month1=0&amp;month2=12" target="_blank">
+        here
+       </a>
+       ).
+      </p>
+      <p>
+       In both
+       <code>
+        montreal.csv
+       </code>
+       and
+       <code>
+        vancouver.csv
+       </code>
+       data is stored in rows. The first column are variable labels, the next 12 columns are the climatological values for each month, the second-to-last column is the yearly average and the last column is a quality check grade. (check them yourself!)
+      </p>
+      <p>
+       So, let's define a simple csv reader function adapted to these data files:
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
+     <div class="prompt input_prompt">
+      In [3]:
+     </div>
+     <div class="inner_cell">
+      <div class="input_area">
+       <div class="highlight">
+        <pre><span class="c"># (*) csv file read/write</span>
 <span class="kn">import</span> <span class="nn">csv</span>         
 
 <span class="c"># Define a csv reader function</span>
@@ -340,82 +339,82 @@ For readers looking to run this notebook, these files are in this section's Gith
 <span class="c"># (-) The 'with' statement automatically closes  </span>
 <span class="c">#    'filepath' at the end of its block of code</span>
 </pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="2.1-A-first-bar-chart-with-error-bars">
-        2.1 A first bar chart with error bars
-        <a class="anchor-link" href="#2.1-A-first-bar-chart-with-error-bars">
-         ¶
-        </a>
-</h3>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>
-        Let's make a simple bar chart of daily average temperature for every month of the year in Montreal. 
-To spice it up a bit, we add error bars designating 1 standard deviation.
-       </p>
-<p>
-        Plotly bar charts are generated using the
-        <code>
-         Bar
-        </code>
-        graph object. 
-Error bars are defined with with
-        <code>
-         ErrorY
-        </code>
-        graph object and 
-they are added on to the bars with the
-        <code>
-         'error_y'
-        </code>
-        key of the
-        <code>
-         Bar
-        </code>
-        graph object (more info
-        <a href="#Error-Bars-in-bar-charts">
-         below
-        </a>
-        ).
-       </p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>
-        First, retrieve the data in question from the csv file:
-       </p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-       In [4]:
+       </div>
       </div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight">
-<pre><span class="c"># Make a list of month names</span>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <h3 id="2.1-A-first-bar-chart-with-error-bars">
+       2.1 A first bar chart with error bars
+       <a class="anchor-link" href="#2.1-A-first-bar-chart-with-error-bars">
+        ¶
+       </a>
+      </h3>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       Let's make a simple bar chart of daily average temperature for every month of the year in Montreal. 
+To spice it up a bit, we add error bars designating 1 standard deviation.
+      </p>
+      <p>
+       Plotly bar charts are generated using the
+       <code>
+        Bar
+       </code>
+       graph object. 
+Error bars are defined with with
+       <code>
+        ErrorY
+       </code>
+       graph object and 
+they are added on to the bars with the
+       <code>
+        'error_y'
+       </code>
+       key of the
+       <code>
+        Bar
+       </code>
+       graph object (more info
+       <a href="#Error-Bars-in-bar-charts">
+        below
+       </a>
+       ).
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       First, retrieve the data in question from the csv file:
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
+     <div class="prompt input_prompt">
+      In [4]:
+     </div>
+     <div class="inner_cell">
+      <div class="input_area">
+       <div class="highlight">
+        <pre><span class="c"># Make a list of month names</span>
 <span class="n">months</span> <span class="o">=</span> <span class="p">[</span><span class="s">'Jan'</span><span class="p">,</span><span class="s">'Feb'</span><span class="p">,</span><span class="s">'Mar'</span><span class="p">,</span><span class="s">'Apr'</span><span class="p">,</span><span class="s">'May'</span><span class="p">,</span><span class="s">'Jun'</span><span class="p">,</span>
           <span class="s">'Jul'</span><span class="p">,</span><span class="s">'Aug'</span><span class="p">,</span><span class="s">'Sep'</span><span class="p">,</span><span class="s">'Oct'</span><span class="p">,</span><span class="s">'Nov'</span><span class="p">,</span><span class="s">'Dec'</span><span class="p">]</span>
 
@@ -426,47 +425,47 @@ they are added on to the bars with the
 <span class="c"># Similarly, get a 1d-array of daily temperature standard deviations</span>
 <span class="n">T_std</span> <span class="o">=</span> <span class="n">get_csv_data</span><span class="p">(</span><span class="s">'montreal.csv'</span><span class="p">,</span><span class="s">'Standard Deviation'</span><span class="p">)</span>
 </pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>
-        Call help on
-        <code>
-         Bar
-        </code>
-        :
-       </p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-       In [5]:
+       </div>
       </div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight">
-<pre><span class="n">help</span><span class="p">(</span><span class="n">Bar</span><span class="p">)</span>  <span class="c"># call help!</span>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       Call help on
+       <code>
+        Bar
+       </code>
+       :
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
+     <div class="prompt input_prompt">
+      In [5]:
+     </div>
+     <div class="inner_cell">
+      <div class="input_area">
+       <div class="highlight">
+        <pre><span class="n">help</span><span class="p">(</span><span class="n">Bar</span><span class="p">)</span>  <span class="c"># call help!</span>
 </pre>
-</div>
-</div>
-</div>
-</div>
-<div class="output_wrapper">
-<div class="output">
-<div class="output_area">
-<div class="prompt">
-</div>
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="output_wrapper">
+     <div class="output">
+      <div class="output_area">
+       <div class="prompt">
+       </div>
+       <div class="output_subarea output_stream output_stdout output_text">
+        <pre>
 Help on class Bar in module plotly.graph_objs.graph_objs:
 
 class Bar(PlotlyTrace)
@@ -840,31 +839,31 @@ class Bar(PlotlyTrace)
 
 
 </pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>
-        Then, make a Plotly figure using this code:
-       </p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-       In [6]:
+       </div>
       </div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight">
-<pre><span class="c"># Make a Bar trace object</span>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       Then, make a Plotly figure using this code:
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
+     <div class="prompt input_prompt">
+      In [6]:
+     </div>
+     <div class="inner_cell">
+      <div class="input_area">
+       <div class="highlight">
+        <pre><span class="c"># Make a Bar trace object</span>
 <span class="n">trace1</span> <span class="o">=</span> <span class="n">Bar</span><span class="p">(</span>
     <span class="n">x</span><span class="o">=</span><span class="n">months</span><span class="p">,</span>  <span class="c"># a list of string as x-coords</span>
     <span class="n">y</span><span class="o">=</span><span class="n">T_avg</span><span class="p">,</span>   <span class="c"># 1d array of numbers as y-coords</span>
@@ -903,138 +902,138 @@ class Bar(PlotlyTrace)
 <span class="c"># (@) Send to Plotly and show in notebook</span>
 <span class="n">py</span><span class="o">.</span><span class="n">iplot</span><span class="p">(</span><span class="n">fig</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="s">'s2_avg-temp'</span><span class="p">)</span>
 </pre>
-</div>
-</div>
-</div>
-</div>
-<div class="output_wrapper">
-<div class="output">
-<div class="output_area">
-<div class="prompt">
-</div>
-<div class="output_html rendered_html output_subarea ">
-<iframe height="525" id="igraph" scrolling="no" seamless="seamless" src="https://plot.ly/~etpinard/76" style="border:none;" width="100%">
-</iframe>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>
-<em>
-         And there you go.
-        </em>
-</p>
-<p>
-        Setting 15 keys in the appropriate Plotly graph objects is all you need to make a gorgeous bar chart.
-       </p>
-<p>
-        Note that Plotly supports list of strings (e.g the
-        <code>
-         months
-        </code>
-        ) as plot coordinates. No need to change the ticks labels here, Plotly does it for you! However, be careful, each entries in the list must be unique to yield the desired results (try running the code with
-        <code>
-         months= [J,F,M,A,M,J,J,A,S,O,N,S]
-        </code>
-        instead and see what happens).
-       </p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h5 id="Error-Bars-in-bar-charts">
-        Error Bars in bar charts
-        <a class="anchor-link" href="#Error-Bars-in-bar-charts">
-         ¶
-        </a>
-</h5>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>
-        The
-        <code>
-         'visible'
-        </code>
-        key in the
-        <code>
-         ErrorY
-        </code>
-        graph object must be set to
-        <code>
-         True
-        </code>
-        in order to see the error bars on the plot.
-       </p>
-<p>
-        Plotly error bars come in four types:
-       </p>
-<ul>
-<li>
-<p>
-          For error bars with values that depend on the x-coordinate (like in fig. 2.1),  set
-          <code>
-           'type': 'data'
-          </code>
-          and assign the data (as a list of number or a numpy array) to the
-          <code>
-           'array'
-          </code>
-          key.
-         </p>
-</li>
-<li>
-<p>
-          For error bars in percent (with respect to the bar height), set
-          <code>
-           'type':'percent'
-          </code>
-          . This is the default type. Set the percentage value to be used with the
-          <code>
-           'value'
-          </code>
-          key.
-         </p>
-</li>
-<li>
-<p>
-          For error bars of constant height, set
-          <code>
-           'type':'constant'
-          </code>
-          and enter the value in the
-          <code>
-           'value'
-          </code>
-          key.
-         </p>
-</li>
-<li>
-<p>
-          Finally, for error bars given by the square root of number of entries in a particular bar, set
-          <code>
-           'type':'sqrt'
-          </code>
-          . This error bar type is useful when plotting histograms.
-         </p>
-</li>
-</ul>
-<!-- Bar colors are set via the `'color'` key linked to `'marker'` in the trace dictionary. Grid colors can be modified with `'gridcolor'` key linked to `'xaxis'` and `'yaxis'` in the layout dictionary. Plot and paper (outside plot) background colors are controlled though the `'plot_bgcolor'` and `'paper_bgcolor'` keys in the layout dictionary.
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="output_wrapper">
+     <div class="output">
+      <div class="output_area">
+       <div class="prompt">
+       </div>
+       <div class="output_html rendered_html output_subarea ">
+        <iframe height="525" id="igraph" scrolling="no" seamless="seamless" src="https://plot.ly/~etpinard/76" style="border:none;" width="100%">
+        </iframe>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       <em>
+        And there you go.
+       </em>
+      </p>
+      <p>
+       Setting 15 keys in the appropriate Plotly graph objects is all you need to make a gorgeous bar chart.
+      </p>
+      <p>
+       Note that Plotly supports list of strings (e.g the
+       <code>
+        months
+       </code>
+       ) as plot coordinates. No need to change the ticks labels here, Plotly does it for you! However, be careful, each entries in the list must be unique to yield the desired results (try running the code with
+       <code>
+        months= [J,F,M,A,M,J,J,A,S,O,N,S]
+       </code>
+       instead and see what happens).
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <h5 id="Error-Bars-in-bar-charts">
+       Error Bars in bar charts
+       <a class="anchor-link" href="#Error-Bars-in-bar-charts">
+        ¶
+       </a>
+      </h5>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       The
+       <code>
+        'visible'
+       </code>
+       key in the
+       <code>
+        ErrorY
+       </code>
+       graph object must be set to
+       <code>
+        True
+       </code>
+       in order to see the error bars on the plot.
+      </p>
+      <p>
+       Plotly error bars come in four types:
+      </p>
+      <ul>
+       <li>
+        <p>
+         For error bars with values that depend on the x-coordinate (like in fig. 2.1),  set
+         <code>
+          'type': 'data'
+         </code>
+         and assign the data (as a list of number or a numpy array) to the
+         <code>
+          'array'
+         </code>
+         key.
+        </p>
+       </li>
+       <li>
+        <p>
+         For error bars in percent (with respect to the bar height), set
+         <code>
+          'type':'percent'
+         </code>
+         . This is the default type. Set the percentage value to be used with the
+         <code>
+          'value'
+         </code>
+         key.
+        </p>
+       </li>
+       <li>
+        <p>
+         For error bars of constant height, set
+         <code>
+          'type':'constant'
+         </code>
+         and enter the value in the
+         <code>
+          'value'
+         </code>
+         key.
+        </p>
+       </li>
+       <li>
+        <p>
+         Finally, for error bars given by the square root of number of entries in a particular bar, set
+         <code>
+          'type':'sqrt'
+         </code>
+         . This error bar type is useful when plotting histograms.
+        </p>
+       </li>
+      </ul>
+      <!-- Bar colors are set via the `'color'` key linked to `'marker'` in the trace dictionary. Grid colors can be modified with `'gridcolor'` key linked to `'xaxis'` and `'yaxis'` in the layout dictionary. Plot and paper (outside plot) background colors are controlled though the `'plot_bgcolor'` and `'paper_bgcolor'` keys in the layout dictionary.
 
 To remove the legend, set the `'showlegend'` key in the layout dictionary to `False`
 
@@ -1042,37 +1041,37 @@ By default, Plotly draws the x=0 and y=0 lines using a bolder font than the othe
 
 Does `'error_x'` exist? (it doesn't appear to work)
      Way to change where bars start? -->
-<p>
-        As always, users are encouraged to run the
-        <code>
-         help()
-        </code>
-        function on graph object to see the available feature and style options.
-       </p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-       In [7]:
-      </div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight">
-<pre><span class="n">help</span><span class="p">(</span><span class="n">ErrorY</span><span class="p">)</span>
+      <p>
+       As always, users are encouraged to run the
+       <code>
+        help()
+       </code>
+       function on graph object to see the available feature and style options.
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
+     <div class="prompt input_prompt">
+      In [7]:
+     </div>
+     <div class="inner_cell">
+      <div class="input_area">
+       <div class="highlight">
+        <pre><span class="n">help</span><span class="p">(</span><span class="n">ErrorY</span><span class="p">)</span>
 </pre>
-</div>
-</div>
-</div>
-</div>
-<div class="output_wrapper">
-<div class="output">
-<div class="output_area">
-<div class="prompt">
-</div>
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="output_wrapper">
+     <div class="output">
+      <div class="output_area">
+       <div class="prompt">
+       </div>
+       <div class="output_subarea output_stream output_stdout output_text">
+        <pre>
 Help on class ErrorY in module plotly.graph_objs.graph_objs:
 
 class ErrorY(PlotlyDict)
@@ -1383,121 +1382,121 @@ class ErrorY(PlotlyDict)
 
 
 </pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="2.2-Chart-with-overlaid-bars">
-        2.2 Chart with overlaid bars
-        <a class="anchor-link" href="#2.2-Chart-with-overlaid-bars">
-         ¶
-        </a>
-</h3>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>
-        Plotting multiple bars for a given x-coordinate in Plotly is easy and intuitive.
-       </p>
-<p>
-        To specify how each bar for a given x-coordinate is laid out, use
-        <code>
-         'barmode'
-        </code>
-        key in the
-        <code>
-         Layout
-        </code>
-        object. Note that
-        <code>
-         'barmode'
-        </code>
-        has no effect when plotting only one trace (like in fig 2.1). In the rest of this section, we give examples of all three values that
-        <code>
-         'barmode'
-        </code>
-        can take:
-       </p>
-<ul>
-<li>
-<code>
-          'overlay'
-         </code>
-         (below in fig 2.2),
-        </li>
-<li>
-<code>
-          'stacked'
-         </code>
-         (in fig 2.3) and finally
-        </li>
-<li>
-<code>
-          'group'
-         </code>
-         (in fig 2.4).
-        </li>
-</ul>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>
-        The following plot shows the daily average minimum, average and maximum temperatures in summer in Montreal. In this example, the three
-        <code>
-         Bar
-        </code>
-        objects have some regularity between them (i.e. they make use of the same keys).
-       </p>
-<p>
-        To faciliate the task of creating each of these
-        <code>
-         Bar
-        </code>
-        object, we make use of a
-        <em>
-         trace-generating function
-        </em>
-        , a concept that is used extensive here on in this section.
-       </p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>
-        Before assembling the appropriate graph objects for this figure, we must first retrieve a few more data arrays:
-       </p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-       In [8]:
+       </div>
       </div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight">
-<pre><span class="c"># (0) Get average daily minima and average daily maxima from 'montreal.csv' </span>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <h3 id="2.2-Chart-with-overlaid-bars">
+       2.2 Chart with overlaid bars
+       <a class="anchor-link" href="#2.2-Chart-with-overlaid-bars">
+        ¶
+       </a>
+      </h3>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       Plotting multiple bars for a given x-coordinate in Plotly is easy and intuitive.
+      </p>
+      <p>
+       To specify how each bar for a given x-coordinate is laid out, use
+       <code>
+        'barmode'
+       </code>
+       key in the
+       <code>
+        Layout
+       </code>
+       object. Note that
+       <code>
+        'barmode'
+       </code>
+       has no effect when plotting only one trace (like in fig 2.1). In the rest of this section, we give examples of all three values that
+       <code>
+        'barmode'
+       </code>
+       can take:
+      </p>
+      <ul>
+       <li>
+        <code>
+         'overlay'
+        </code>
+        (below in fig 2.2),
+       </li>
+       <li>
+        <code>
+         'stacked'
+        </code>
+        (in fig 2.3) and finally
+       </li>
+       <li>
+        <code>
+         'group'
+        </code>
+        (in fig 2.4).
+       </li>
+      </ul>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       The following plot shows the daily average minimum, average and maximum temperatures in summer in Montreal. In this example, the three
+       <code>
+        Bar
+       </code>
+       objects have some regularity between them (i.e. they make use of the same keys).
+      </p>
+      <p>
+       To faciliate the task of creating each of these
+       <code>
+        Bar
+       </code>
+       object, we make use of a
+       <em>
+        trace-generating function
+       </em>
+       , a concept that is used extensive here on in this section.
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       Before assembling the appropriate graph objects for this figure, we must first retrieve a few more data arrays:
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
+     <div class="prompt input_prompt">
+      In [8]:
+     </div>
+     <div class="inner_cell">
+      <div class="input_area">
+       <div class="highlight">
+        <pre><span class="c"># (0) Get average daily minima and average daily maxima from 'montreal.csv' </span>
 <span class="n">T_min</span> <span class="o">=</span> <span class="n">get_csv_data</span><span class="p">(</span><span class="s">'montreal.csv'</span><span class="p">,</span><span class="s">'Daily Minimum'</span><span class="p">)</span>
 <span class="n">T_max</span> <span class="o">=</span> <span class="n">get_csv_data</span><span class="p">(</span><span class="s">'montreal.csv'</span><span class="p">,</span><span class="s">'Daily Maximum'</span><span class="p">)</span>
 
@@ -1506,31 +1505,31 @@ class ErrorY(PlotlyDict)
 <span class="n">T_avg_s</span> <span class="o">=</span> <span class="n">T_avg</span><span class="p">[</span><span class="mi">5</span><span class="p">:</span><span class="mi">8</span><span class="p">]</span>   <span class="c"># (!) T_avg was defined in subsection 2.1</span>
 <span class="n">T_max_s</span> <span class="o">=</span> <span class="n">T_max</span><span class="p">[</span><span class="mi">5</span><span class="p">:</span><span class="mi">8</span><span class="p">]</span>
 </pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>
-        Make a trace-generating function:
-       </p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-       In [9]:
+       </div>
       </div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight">
-<pre><span class="n">summer</span> <span class="o">=</span> <span class="p">[</span><span class="s">'June'</span><span class="p">,</span><span class="s">'July'</span><span class="p">,</span><span class="s">'August'</span><span class="p">]</span>  <span class="c"># list of summer month names</span>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       Make a trace-generating function:
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
+     <div class="prompt input_prompt">
+      In [9]:
+     </div>
+     <div class="inner_cell">
+      <div class="input_area">
+       <div class="highlight">
+        <pre><span class="n">summer</span> <span class="o">=</span> <span class="p">[</span><span class="s">'June'</span><span class="p">,</span><span class="s">'July'</span><span class="p">,</span><span class="s">'August'</span><span class="p">]</span>  <span class="c"># list of summer month names</span>
 
 <span class="c"># Define a trace-generating function (returns a Bar object)</span>
 <span class="k">def</span> <span class="nf">make_trace</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">color</span><span class="p">):</span>
@@ -1547,124 +1546,124 @@ class ErrorY(PlotlyDict)
         <span class="p">)</span>
     <span class="p">)</span>
 </pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>
-        Use this trace-generating to make three
-        <code>
-         Bar
-        </code>
-        objects, one for daily maxima, average and minima respectively. The order in the data object is important in this case:
-        <code>
-         T_max
-        </code>
-        must be plotted first, before
-        <code>
-         T_avg
-        </code>
-        before
-        <code>
-         T_min
-        </code>
-        for each bar to be visible.
-       </p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-       In [10]:
+       </div>
       </div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight">
-<pre><span class="c"># (1) Make Data object using make_trace()</span>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       Use this trace-generating to make three
+       <code>
+        Bar
+       </code>
+       objects, one for daily maxima, average and minima respectively. The order in the data object is important in this case:
+       <code>
+        T_max
+       </code>
+       must be plotted first, before
+       <code>
+        T_avg
+       </code>
+       before
+       <code>
+        T_min
+       </code>
+       for each bar to be visible.
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
+     <div class="prompt input_prompt">
+      In [10]:
+     </div>
+     <div class="inner_cell">
+      <div class="input_area">
+       <div class="highlight">
+        <pre><span class="c"># (1) Make Data object using make_trace()</span>
 <span class="n">data</span> <span class="o">=</span> <span class="n">Data</span><span class="p">([</span>
     <span class="n">make_trace</span><span class="p">(</span><span class="n">T_max_s</span><span class="p">,</span><span class="s">'Daily Maximum'</span><span class="p">,</span><span class="s">'#BD8F22'</span><span class="p">),</span>
     <span class="n">make_trace</span><span class="p">(</span><span class="n">T_avg_s</span><span class="p">,</span><span class="s">'Daily Average'</span><span class="p">,</span><span class="s">'#E3BA22'</span><span class="p">),</span>
     <span class="n">make_trace</span><span class="p">(</span><span class="n">T_min_s</span><span class="p">,</span><span class="s">'Daily Minimum'</span><span class="p">,</span><span class="s">'#F2DA57'</span><span class="p">)</span>
 <span class="p">])</span>
 </pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h5 id="Annotations-in-Plotly">
-        Annotations in Plotly
-        <a class="anchor-link" href="#Annotations-in-Plotly">
-         ¶
-        </a>
-</h5>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>
-        In terms of style, the following bar chart features so-called
-        <em>
-         direct label
-        </em>
-        (more info
-        <a href="http://darkhorseanalytics.com/blog/data-looks-better-naked/">
-         here
-        </a>
-        ). All grid lines and axis tick labels are removed. To label values, annotations are used. 
-They are defined individually with
-        <code>
-         Annotation
-        </code>
-        graph object,
-       </p>
-<p>
-        Again, we will take advantage of the regularity between each annotation by first defining a annotation-generating function. But first, call help on
-        <code>
-         Annotation
-        </code>
-        :
-       </p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-       In [11]:
+       </div>
       </div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight">
-<pre><span class="n">help</span><span class="p">(</span><span class="n">Annotation</span><span class="p">)</span>  <span class="c"># call help()!</span>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <h5 id="Annotations-in-Plotly">
+       Annotations in Plotly
+       <a class="anchor-link" href="#Annotations-in-Plotly">
+        ¶
+       </a>
+      </h5>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       In terms of style, the following bar chart features so-called
+       <em>
+        direct label
+       </em>
+       (more info
+       <a href="http://darkhorseanalytics.com/blog/data-looks-better-naked/">
+        here
+       </a>
+       ). All grid lines and axis tick labels are removed. To label values, annotations are used. 
+They are defined individually with
+       <code>
+        Annotation
+       </code>
+       graph object,
+      </p>
+      <p>
+       Again, we will take advantage of the regularity between each annotation by first defining a annotation-generating function. But first, call help on
+       <code>
+        Annotation
+       </code>
+       :
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
+     <div class="prompt input_prompt">
+      In [11]:
+     </div>
+     <div class="inner_cell">
+      <div class="input_area">
+       <div class="highlight">
+        <pre><span class="n">help</span><span class="p">(</span><span class="n">Annotation</span><span class="p">)</span>  <span class="c"># call help()!</span>
 </pre>
-</div>
-</div>
-</div>
-</div>
-<div class="output_wrapper">
-<div class="output">
-<div class="output_area">
-<div class="prompt">
-</div>
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="output_wrapper">
+     <div class="output">
+      <div class="output_area">
+       <div class="prompt">
+       </div>
+       <div class="output_subarea output_stream output_stdout output_text">
+        <pre>
 Help on class Annotation in module plotly.graph_objs.graph_objs:
 
 class Annotation(PlotlyDict)
@@ -2059,20 +2058,20 @@ class Annotation(PlotlyDict)
 
 
 </pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-       In [12]:
+       </div>
       </div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight">
-<pre><span class="c"># Define an annotation-generating function</span>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
+     <div class="prompt input_prompt">
+      In [12]:
+     </div>
+     <div class="inner_cell">
+      <div class="input_area">
+       <div class="highlight">
+        <pre><span class="c"># Define an annotation-generating function</span>
 <span class="k">def</span> <span class="nf">make_annotation</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>         
     <span class="k">return</span> <span class="n">Annotation</span><span class="p">(</span>
         <span class="n">text</span><span class="o">=</span><span class="nb">str</span><span class="p">(</span><span class="n">y</span><span class="p">),</span>     <span class="c"># text is the y-coord</span>
@@ -2089,93 +2088,93 @@ class Annotation(PlotlyDict)
         <span class="p">)</span>
     <span class="p">)</span>
 </pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>
-        Annotations grouped together with the
-        <code>
-         Annotations
-        </code>
-        graph object (which is list-like) and set using the
-        <code>
-         'annotations'
-        </code>
-        key  (N.B. plural) in the
-        <code>
-         Layout
-        </code>
-        object. In this case, our
-        <code>
-         Annotations
-        </code>
-        object will have 9 items, one for each bar.
-       </p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-       In [13]:
+       </div>
       </div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight">
-<pre><span class="c"># Make Annotations object (list-like) with make_annotation()</span>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       Annotations grouped together with the
+       <code>
+        Annotations
+       </code>
+       graph object (which is list-like) and set using the
+       <code>
+        'annotations'
+       </code>
+       key  (N.B. plural) in the
+       <code>
+        Layout
+       </code>
+       object. In this case, our
+       <code>
+        Annotations
+       </code>
+       object will have 9 items, one for each bar.
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
+     <div class="prompt input_prompt">
+      In [13]:
+     </div>
+     <div class="inner_cell">
+      <div class="input_area">
+       <div class="highlight">
+        <pre><span class="c"># Make Annotations object (list-like) with make_annotation()</span>
 <span class="n">annotations</span> <span class="o">=</span> <span class="n">Annotations</span><span class="p">(</span>
     <span class="p">[</span><span class="n">make_annotation</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span><span class="p">,</span><span class="n">y</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">),</span><span class="n">T_max_s</span><span class="p">)]</span> <span class="o">+</span>
     <span class="p">[</span><span class="n">make_annotation</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span><span class="p">,</span><span class="n">y</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">),</span><span class="n">T_avg_s</span><span class="p">)]</span> <span class="o">+</span> 
     <span class="p">[</span><span class="n">make_annotation</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span><span class="p">,</span><span class="n">y</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">),</span><span class="n">T_min_s</span><span class="p">)]</span>
 <span class="p">)</span>
 </pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>
-        Other styles of annotation are displayed in
-        <a href="#2.4-Two-grouped-bar-charts-on-same-plot">
-         subsection 2.4
-        </a>
-        and throughout the User Guide.
-       </p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>
-        Onto layout,
-       </p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-       In [14]:
+       </div>
       </div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight">
-<pre><span class="n">title</span> <span class="o">=</span> <span class="s">'Fig 2.2: Montreal 1981-2010 </span><span class="se">\</span>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       Other styles of annotation are displayed in
+       <a href="#2.4-Two-grouped-bar-charts-on-same-plot">
+        subsection 2.4
+       </a>
+       and throughout the User Guide.
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       Onto layout,
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
+     <div class="prompt input_prompt">
+      In [14]:
+     </div>
+     <div class="inner_cell">
+      <div class="input_area">
+       <div class="highlight">
+        <pre><span class="n">title</span> <span class="o">=</span> <span class="s">'Fig 2.2: Montreal 1981-2010 </span><span class="se">\</span>
 <span class="s">temperature climatology [in deg. C]&lt;br&gt;'</span>  <span class="c"># plot's title  </span>
 
 <span class="c"># (2) Make Layout object</span>
@@ -2195,178 +2194,178 @@ class Annotation(PlotlyDict)
     <span class="n">annotations</span><span class="o">=</span><span class="n">annotations</span> <span class="c"># link the Annotations object</span>
 <span class="p">)</span>
 </pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>
-        And finally,
-       </p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-       In [15]:
+       </div>
       </div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight">
-<pre><span class="c"># (3) Make Figure object</span>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       And finally,
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
+     <div class="prompt input_prompt">
+      In [15]:
+     </div>
+     <div class="inner_cell">
+      <div class="input_area">
+       <div class="highlight">
+        <pre><span class="c"># (3) Make Figure object</span>
 <span class="n">fig</span> <span class="o">=</span> <span class="n">Figure</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="p">,</span> <span class="n">layout</span><span class="o">=</span><span class="n">layout</span><span class="p">)</span>
 
 <span class="c"># (@) Send to Plotly and show in notebook</span>
 <span class="n">py</span><span class="o">.</span><span class="n">iplot</span><span class="p">(</span><span class="n">fig</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="s">'s2_avg-min-max-temp'</span><span class="p">)</span>
 </pre>
-</div>
-</div>
-</div>
-</div>
-<div class="output_wrapper">
-<div class="output">
-<div class="output_area">
-<div class="prompt">
-</div>
-<div class="output_html rendered_html output_subarea ">
-<iframe height="525" id="igraph" scrolling="no" seamless="seamless" src="https://plot.ly/~etpinard/78" style="border:none;" width="100%">
-</iframe>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>
-        Using the trace-generating function
-        <code>
-         make_trace()
-        </code>
-        and annotation-generating function
-        <code>
-         make_annotation()
-        </code>
-        shortens the code considerably.
-       </p>
-<p>
-        Readers should note that, in the Plotly current release, the
-        <code>
-         'text'
-        </code>
-        key in
-        <code>
-         Bar
-        </code>
-        object refers to text on hover mode only (unlike for
-        <code>
-         Scatter
-        </code>
-        ). This is why we had use annotations in the above figure.
-       </p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="2.3-Horizontal-stacked-bar-chart">
-        2.3 Horizontal stacked bar chart
-        <a class="anchor-link" href="#2.3-Horizontal-stacked-bar-chart">
-         ¶
-        </a>
-</h3>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>
-        Plotly can also stack bars on top of one another, where one bar starts where the previous bar ends. This style of plot can be quite useful for comparing totals and their components.
-       </p>
-<p>
-        The following plot shows average precipitation for Montreal and Vancouver where the 12 months (i.e. 12 traces) are stacked and the total length represents the yearly average.
-       </p>
-<p>
-        In addition, Plotly allow users to easily generate horizontal bar charts simply by adding the
-        <code>
-         'orientation':'h'
-        </code>
-        key-value pair (not
-        <code>
-         'bardir'
-        </code>
-        unlike earlier versions of Plotly's Python API) in each
-        <code>
-         Bar
-        </code>
-        object to be plotted.
-       </p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>
-        Start by retrieving precipitation data from both cites csv files:
-       </p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-       In [16]:
+       </div>
       </div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight">
-<pre><span class="c"># (0) Get precipitation data from csv files</span>
+     </div>
+    </div>
+    <div class="output_wrapper">
+     <div class="output">
+      <div class="output_area">
+       <div class="prompt">
+       </div>
+       <div class="output_html rendered_html output_subarea ">
+        <iframe height="525" id="igraph" scrolling="no" seamless="seamless" src="https://plot.ly/~etpinard/78" style="border:none;" width="100%">
+        </iframe>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       Using the trace-generating function
+       <code>
+        make_trace()
+       </code>
+       and annotation-generating function
+       <code>
+        make_annotation()
+       </code>
+       shortens the code considerably.
+      </p>
+      <p>
+       Readers should note that, in the Plotly current release, the
+       <code>
+        'text'
+       </code>
+       key in
+       <code>
+        Bar
+       </code>
+       object refers to text on hover mode only (unlike for
+       <code>
+        Scatter
+       </code>
+       ). This is why we had use annotations in the above figure.
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <h3 id="2.3-Horizontal-stacked-bar-chart">
+       2.3 Horizontal stacked bar chart
+       <a class="anchor-link" href="#2.3-Horizontal-stacked-bar-chart">
+        ¶
+       </a>
+      </h3>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       Plotly can also stack bars on top of one another, where one bar starts where the previous bar ends. This style of plot can be quite useful for comparing totals and their components.
+      </p>
+      <p>
+       The following plot shows average precipitation for Montreal and Vancouver where the 12 months (i.e. 12 traces) are stacked and the total length represents the yearly average.
+      </p>
+      <p>
+       In addition, Plotly allow users to easily generate horizontal bar charts simply by adding the
+       <code>
+        'orientation':'h'
+       </code>
+       key-value pair (not
+       <code>
+        'bardir'
+       </code>
+       unlike earlier versions of Plotly's Python API) in each
+       <code>
+        Bar
+       </code>
+       object to be plotted.
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       Start by retrieving precipitation data from both cites csv files:
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
+     <div class="prompt input_prompt">
+      In [16]:
+     </div>
+     <div class="inner_cell">
+      <div class="input_area">
+       <div class="highlight">
+        <pre><span class="c"># (0) Get precipitation data from csv files</span>
 <span class="n">mtl_P</span> <span class="o">=</span> <span class="n">get_csv_data</span><span class="p">(</span><span class="s">'montreal.csv'</span><span class="p">,</span><span class="s">'Precipitation (mm)'</span><span class="p">)</span>
 <span class="n">van_P</span> <span class="o">=</span> <span class="n">get_csv_data</span><span class="p">(</span><span class="s">'vancouver.csv'</span><span class="p">,</span><span class="s">'Precipitation (mm)'</span><span class="p">)</span>
 </pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>
-        Then, make a few definitions:
-       </p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-       In [17]:
+       </div>
       </div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight">
-<pre><span class="c"># Use full month names to label each bar</span>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       Then, make a few definitions:
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
+     <div class="prompt input_prompt">
+      In [17]:
+     </div>
+     <div class="inner_cell">
+      <div class="input_area">
+       <div class="highlight">
+        <pre><span class="c"># Use full month names to label each bar</span>
 <span class="n">months_full</span> <span class="o">=</span> <span class="p">[</span><span class="s">'January'</span><span class="p">,</span><span class="s">'February'</span><span class="p">,</span><span class="s">'March'</span><span class="p">,</span><span class="s">'April'</span><span class="p">,</span><span class="s">'May'</span><span class="p">,</span><span class="s">'June'</span><span class="p">,</span>
                <span class="s">'July'</span><span class="p">,</span><span class="s">'August'</span><span class="p">,</span><span class="s">'September'</span><span class="p">,</span><span class="s">'October'</span><span class="p">,</span><span class="s">'November'</span><span class="p">,</span><span class="s">'December'</span><span class="p">]</span>
 
@@ -2376,31 +2375,31 @@ class Annotation(PlotlyDict)
 <span class="c"># City names</span>
 <span class="n">cities</span> <span class="o">=</span> <span class="p">[</span><span class="s">'Montreal'</span><span class="p">,</span> <span class="s">'Vancouver'</span><span class="p">]</span>  
 </pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>
-        Here again, use a trace-generating function:
-       </p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-       In [18]:
+       </div>
       </div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight">
-<pre><span class="c"># Define a trace-generating function (returns a Bar object)</span>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       Here again, use a trace-generating function:
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
+     <div class="prompt input_prompt">
+      In [18]:
+     </div>
+     <div class="inner_cell">
+      <div class="input_area">
+       <div class="highlight">
+        <pre><span class="c"># Define a trace-generating function (returns a Bar object)</span>
 <span class="k">def</span> <span class="nf">make_trace</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">color</span><span class="p">):</span>
     <span class="k">return</span> <span class="n">Bar</span><span class="p">(</span>
         <span class="n">y</span><span class="o">=</span><span class="n">cities</span><span class="p">,</span>   <span class="c"># cities name on the y-axis</span>
@@ -2416,77 +2415,77 @@ class Annotation(PlotlyDict)
         <span class="p">)</span>   
     <span class="p">)</span>
 </pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>
-        Use list comprehension and the above trace-generating function to build the data object:
-       </p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-       In [19]:
+       </div>
       </div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight">
-<pre><span class="c"># (1) Build a data object containing 12 Bar objects (1 for each month)</span>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       Use list comprehension and the above trace-generating function to build the data object:
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
+     <div class="prompt input_prompt">
+      In [19]:
+     </div>
+     <div class="inner_cell">
+      <div class="input_area">
+       <div class="highlight">
+        <pre><span class="c"># (1) Build a data object containing 12 Bar objects (1 for each month)</span>
 <span class="n">data</span> <span class="o">=</span> <span class="n">Data</span><span class="p">([</span>
     <span class="n">make_trace</span><span class="p">([</span><span class="n">mtl_P</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">van_P</span><span class="p">[</span><span class="n">i</span><span class="p">]],</span> <span class="n">months_full</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">colors</span><span class="p">[</span><span class="n">i</span><span class="p">])</span> 
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">12</span><span class="p">)</span>
 <span class="p">])</span>
 </pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>
-        Onto layout with special attention to tick and tick label keys
-        <code>
-         'autotick'
-        </code>
-        ,
-        <code>
-         'dtick'
-        </code>
-        ,
-        <code>
-         'ticklen'
-        </code>
-        and
-        <code>
-         'tickwidth'
-        </code>
-        :
-       </p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-       In [20]:
+       </div>
       </div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight">
-<pre><span class="n">title</span> <span class="o">=</span> <span class="s">"Fig 2.3: Montreal and Vancouver 1981-2010 </span><span class="se">\</span>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       Onto layout with special attention to tick and tick label keys
+       <code>
+        'autotick'
+       </code>
+       ,
+       <code>
+        'dtick'
+       </code>
+       ,
+       <code>
+        'ticklen'
+       </code>
+       and
+       <code>
+        'tickwidth'
+       </code>
+       :
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
+     <div class="prompt input_prompt">
+      In [20]:
+     </div>
+     <div class="inner_cell">
+      <div class="input_area">
+       <div class="highlight">
+        <pre><span class="n">title</span> <span class="o">=</span> <span class="s">"Fig 2.3: Montreal and Vancouver 1981-2010 </span><span class="se">\</span>
 <span class="s">Monthly Average Precipitation&lt;br&gt;</span><span class="se">\</span>
 <span class="s">&lt;i&gt;hover with cursor to see each month's total&lt;/i&gt;"</span>  <span class="c"># plot's title </span>
 
@@ -2510,209 +2509,209 @@ class Annotation(PlotlyDict)
     <span class="n">plot_bgcolor</span><span class="o">=</span><span class="s">'rgb(233,233,233)'</span><span class="p">,</span>  <span class="c"># set plot color to grey</span>
 <span class="p">)</span>     
 </pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>
-        A call to Plotly yields:
-       </p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-       In [21]:
+       </div>
       </div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight">
-<pre><span class="c"># (3) Make Figure object, </span>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       A call to Plotly yields:
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
+     <div class="prompt input_prompt">
+      In [21]:
+     </div>
+     <div class="inner_cell">
+      <div class="input_area">
+       <div class="highlight">
+        <pre><span class="c"># (3) Make Figure object, </span>
 <span class="n">fig</span> <span class="o">=</span> <span class="n">Figure</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="p">,</span> <span class="n">layout</span><span class="o">=</span><span class="n">layout</span><span class="p">)</span>
 
 <span class="c"># Send to Plotly and show in notebook</span>
 <span class="n">py</span><span class="o">.</span><span class="n">iplot</span><span class="p">(</span><span class="n">fig</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="s">'s2_mtl-van-precip'</span><span class="p">)</span>
 </pre>
-</div>
-</div>
-</div>
-</div>
-<div class="output_wrapper">
-<div class="output">
-<div class="output_area">
-<div class="prompt">
-</div>
-<div class="output_html rendered_html output_subarea ">
-<iframe height="525" id="igraph" scrolling="no" seamless="seamless" src="https://plot.ly/~etpinard/120" style="border:none;" width="100%">
-</iframe>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h5>
-        Important!
-       </h5>
-<blockquote>
-<p>
-         In the Plotly's Python API version 1.0 and up, the
-         <code>
-          'x'
-         </code>
-         key in the
-         <code>
-          Bar
-         </code>
-         object is linked to the x-axis variable and
-         <code>
-          'y'
-         </code>
-         key is linked to the y-axis variable, always (unlike in previous versions).
-        </p>
-</blockquote>
-<p>
-        Loosely-speaking, the key-value pair
-        <code>
-         'orientation':'h'
-        </code>
-        , tells Plotly to take the values linked to the
-        <code>
-         'x'
-        </code>
-        key as the dependent variable and the values in
-        <code>
-         'y'
-        </code>
-        as the independent variable.  Inverting
-        <code>
-         'x'
-        </code>
-        and
-        <code>
-         'y'
-        </code>
-        and/or omitting
-        <code>
-         'orientation':'h'
-        </code>
-        would not yield the same result (try it!). Moreover, the
-        <code>
-         'xaxis'
-        </code>
-        key in the
-        <code>
-         Layout
-        </code>
-        objects (still) refers to the horizontal axis and
-        <code>
-         'yaxis'
-        </code>
-        key refers to the vertical axis.
-       </p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h5 id="Axis-ticks-in-Plotly">
-        Axis ticks in Plotly
-        <a class="anchor-link" href="#Axis-ticks-in-Plotly">
-         ¶
-        </a>
-</h5>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>
-        In the above plot, we added ticks with the
-        <code>
-         'ticks'
-        </code>
-        key in the
-        <code>
-         Layout
-        </code>
-        object. With
-        <code>
-         'ticks':'outside'
-        </code>
-        Plotly draws ticks outside the axes whereas with
-        <code>
-         'ticks':'inside'
-        </code>
-        Plotly draws ticks inside the axes. To control the distance between ticks, one must first (N.B.) set
-        <code>
-         'autotick
-        </code>
-        to
-        <code>
-         False
-        </code>
-        and then set the distance with
-        <code>
-         dtick
-        </code>
-        key. Alternatively, one could set the number of ticks along an axis with the
-        <code>
-         'nticks'
-        </code>
-        key.
-       </p>
-<p>
-        Other tick options can be viewed by running help on either
-        <code>
-         XAxis
-        </code>
-        or
-        <code>
-         YAxis
-        </code>
-        :
-       </p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-       In [22]:
+       </div>
       </div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight">
-<pre><span class="n">help</span><span class="p">(</span><span class="n">XAxis</span><span class="p">)</span>  <span class="c"># or help(YAxis)</span>
+     </div>
+    </div>
+    <div class="output_wrapper">
+     <div class="output">
+      <div class="output_area">
+       <div class="prompt">
+       </div>
+       <div class="output_html rendered_html output_subarea ">
+        <iframe height="525" id="igraph" scrolling="no" seamless="seamless" src="https://plot.ly/~etpinard/120" style="border:none;" width="100%">
+        </iframe>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <h5>
+       Important!
+      </h5>
+      <blockquote>
+       <p>
+        In the Plotly's Python API version 1.0 and up, the
+        <code>
+         'x'
+        </code>
+        key in the
+        <code>
+         Bar
+        </code>
+        object is linked to the x-axis variable and
+        <code>
+         'y'
+        </code>
+        key is linked to the y-axis variable, always (unlike in previous versions).
+       </p>
+      </blockquote>
+      <p>
+       Loosely-speaking, the key-value pair
+       <code>
+        'orientation':'h'
+       </code>
+       , tells Plotly to take the values linked to the
+       <code>
+        'x'
+       </code>
+       key as the dependent variable and the values in
+       <code>
+        'y'
+       </code>
+       as the independent variable.  Inverting
+       <code>
+        'x'
+       </code>
+       and
+       <code>
+        'y'
+       </code>
+       and/or omitting
+       <code>
+        'orientation':'h'
+       </code>
+       would not yield the same result (try it!). Moreover, the
+       <code>
+        'xaxis'
+       </code>
+       key in the
+       <code>
+        Layout
+       </code>
+       objects (still) refers to the horizontal axis and
+       <code>
+        'yaxis'
+       </code>
+       key refers to the vertical axis.
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <h5 id="Axis-ticks-in-Plotly">
+       Axis ticks in Plotly
+       <a class="anchor-link" href="#Axis-ticks-in-Plotly">
+        ¶
+       </a>
+      </h5>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       In the above plot, we added ticks with the
+       <code>
+        'ticks'
+       </code>
+       key in the
+       <code>
+        Layout
+       </code>
+       object. With
+       <code>
+        'ticks':'outside'
+       </code>
+       Plotly draws ticks outside the axes whereas with
+       <code>
+        'ticks':'inside'
+       </code>
+       Plotly draws ticks inside the axes. To control the distance between ticks, one must first (N.B.) set
+       <code>
+        'autotick
+       </code>
+       to
+       <code>
+        False
+       </code>
+       and then set the distance with
+       <code>
+        dtick
+       </code>
+       key. Alternatively, one could set the number of ticks along an axis with the
+       <code>
+        'nticks'
+       </code>
+       key.
+      </p>
+      <p>
+       Other tick options can be viewed by running help on either
+       <code>
+        XAxis
+       </code>
+       or
+       <code>
+        YAxis
+       </code>
+       :
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
+     <div class="prompt input_prompt">
+      In [22]:
+     </div>
+     <div class="inner_cell">
+      <div class="input_area">
+       <div class="highlight">
+        <pre><span class="n">help</span><span class="p">(</span><span class="n">XAxis</span><span class="p">)</span>  <span class="c"># or help(YAxis)</span>
 </pre>
-</div>
-</div>
-</div>
-</div>
-<div class="output_wrapper">
-<div class="output">
-<div class="output_area">
-<div class="prompt">
-</div>
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="output_wrapper">
+     <div class="output">
+      <div class="output_area">
+       <div class="prompt">
+       </div>
+       <div class="output_subarea output_stream output_stdout output_text">
+        <pre>
 Help on class XAxis in module plotly.graph_objs.graph_objs:
 
 class XAxis(PlotlyDict)
@@ -3124,71 +3123,71 @@ class XAxis(PlotlyDict)
 
 
 </pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="2.4-Two-grouped-bar-charts-on-same-plot">
-        2.4 Two grouped bar charts on same plot
-        <a class="anchor-link" href="#2.4-Two-grouped-bar-charts-on-same-plot">
-         ¶
-        </a>
-</h3>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>
-        Ok, now that we are warmed up, let's make a publication-worthy figure inspired by the Sunlight Foundation's
-        <a href="https://sunlightfoundation.com/blog/2014/03/12/datavizguide" target="_blank">
-         Data Visualization Style Guidelines
-        </a>
-        . Using again the same data files, we compare the climates of Montreal and Vancouver with one subplot comparing temperatures and one subplot comparing precipitation totals.
-       </p>
-<p>
-        Plotly subplots are generated using a combination of axis keys (in trace graph objects), anchors and domain ranges (in the
-        <code>
-         XAxis
-        </code>
-        and
-        <code>
-         YAxis
-        </code>
-        graph objects). For more information on Plotly subplots, see
-        <a href="/python/overview#0.7-Subplots-and-version-1.0-other-additions">
-         section 0
-        </a>
-        (Getting started with Plotly).
-       </p>
-<p>
-        In version 1.0 and up, Plotly's Python API subplot axes can be easily generated with the
-        <code>
-         get_subplot()
-        </code>
-        function. So, let's generate a Figure object with 2 axes on 2 rows:
-       </p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-       In [23]:
+       </div>
       </div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight">
-<pre><span class="c"># Generate Figure object with 2 axes on 2 rows, print axis grid to stdout</span>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <h3 id="2.4-Two-grouped-bar-charts-on-same-plot">
+       2.4 Two grouped bar charts on same plot
+       <a class="anchor-link" href="#2.4-Two-grouped-bar-charts-on-same-plot">
+        ¶
+       </a>
+      </h3>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       Ok, now that we are warmed up, let's make a publication-worthy figure inspired by the Sunlight Foundation's
+       <a href="https://sunlightfoundation.com/blog/2014/03/12/datavizguide" target="_blank">
+        Data Visualization Style Guidelines
+       </a>
+       . Using again the same data files, we compare the climates of Montreal and Vancouver with one subplot comparing temperatures and one subplot comparing precipitation totals.
+      </p>
+      <p>
+       Plotly subplots are generated using a combination of axis keys (in trace graph objects), anchors and domain ranges (in the
+       <code>
+        XAxis
+       </code>
+       and
+       <code>
+        YAxis
+       </code>
+       graph objects). For more information on Plotly subplots, see
+       <a href="/python/overview#0.7-Subplots-and-version-1.0-other-additions">
+        section 0
+       </a>
+       (Getting started with Plotly).
+      </p>
+      <p>
+       In version 1.0 and up, Plotly's Python API subplot axes can be easily generated with the
+       <code>
+        get_subplot()
+       </code>
+       function. So, let's generate a Figure object with 2 axes on 2 rows:
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
+     <div class="prompt input_prompt">
+      In [23]:
+     </div>
+     <div class="inner_cell">
+      <div class="input_area">
+       <div class="highlight">
+        <pre><span class="c"># Generate Figure object with 2 axes on 2 rows, print axis grid to stdout</span>
 <span class="n">fig</span> <span class="o">=</span> <span class="n">tls</span><span class="o">.</span><span class="n">get_subplots</span><span class="p">(</span>
     <span class="n">rows</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> 
     <span class="n">columns</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> 
@@ -3196,50 +3195,50 @@ class XAxis(PlotlyDict)
     <span class="n">print_grid</span><span class="o">=</span><span class="bp">True</span>         <span class="c"># print subplot grid to stdout</span>
 <span class="p">)</span>
 </pre>
-</div>
-</div>
-</div>
-</div>
-<div class="output_wrapper">
-<div class="output">
-<div class="output_area">
-<div class="prompt">
-</div>
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="output_wrapper">
+     <div class="output">
+      <div class="output_area">
+       <div class="prompt">
+       </div>
+       <div class="output_subarea output_stream output_stdout output_text">
+        <pre>
 This is the format of your plot grid!
 [2]	
 [1]	
 
 
 </pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-       In [24]:
+       </div>
       </div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight">
-<pre><span class="c"># Print Figure object to stdout</span>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
+     <div class="prompt input_prompt">
+      In [24]:
+     </div>
+     <div class="inner_cell">
+      <div class="input_area">
+       <div class="highlight">
+        <pre><span class="c"># Print Figure object to stdout</span>
 <span class="k">print</span> <span class="n">fig</span><span class="o">.</span><span class="n">to_string</span><span class="p">()</span>
 </pre>
-</div>
-</div>
-</div>
-</div>
-<div class="output_wrapper">
-<div class="output">
-<div class="output_area">
-<div class="prompt">
-</div>
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="output_wrapper">
+     <div class="output">
+      <div class="output_area">
+       <div class="prompt">
+       </div>
+       <div class="output_subarea output_stream output_stdout output_text">
+        <pre>
 Figure(
     data=Data(),
     layout=Layout(
@@ -3263,42 +3262,42 @@ Figure(
 )
 
 </pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>
-        Nice.
-       </p>
-<p>
-        But, for our following plot, we would like to make both subplots have the same x-axis corresponding to months of the year. So, delete
-        <code>
-         'xaxis2'
-        </code>
-        as well as all
-        <code>
-         'anchor'
-        </code>
-        keys which have no effect here:
-       </p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-       In [25]:
+       </div>
       </div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight">
-<pre><span class="c"># Delete 'xaxis2' key using the pop() method</span>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       Nice.
+      </p>
+      <p>
+       But, for our following plot, we would like to make both subplots have the same x-axis corresponding to months of the year. So, delete
+       <code>
+        'xaxis2'
+       </code>
+       as well as all
+       <code>
+        'anchor'
+       </code>
+       keys which have no effect here:
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
+     <div class="prompt input_prompt">
+      In [25]:
+     </div>
+     <div class="inner_cell">
+      <div class="input_area">
+       <div class="highlight">
+        <pre><span class="c"># Delete 'xaxis2' key using the pop() method</span>
 <span class="n">fig</span><span class="p">[</span><span class="s">'layout'</span><span class="p">]</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s">'xaxis2'</span><span class="p">,</span><span class="bp">None</span><span class="p">)</span>
 
 <span class="c"># Delete 'anchor' keys</span>
@@ -3308,17 +3307,17 @@ Figure(
 <span class="c"># Print resulting Figure object to screen </span>
 <span class="k">print</span> <span class="n">fig</span><span class="o">.</span><span class="n">to_string</span><span class="p">()</span>
 </pre>
-</div>
-</div>
-</div>
-</div>
-<div class="output_wrapper">
-<div class="output">
-<div class="output_area">
-<div class="prompt">
-</div>
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="output_wrapper">
+     <div class="output">
+      <div class="output_area">
+       <div class="prompt">
+       </div>
+       <div class="output_subarea output_stream output_stdout output_text">
+        <pre>
 Figure(
     data=Data(),
     layout=Layout(
@@ -3335,71 +3334,71 @@ Figure(
 )
 
 </pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>
-        In the following plot, we also explore advanced annotation style options: annotations are used for plot's title and legend as well as on-plot annotations.
-       </p>
-<p>
-        The code is quite long. To make it easier to read, the code cells are split into four sections:
-        <a href="#-0--A-few-definitions">
-         (0)
-        </a>
-        a few definitions,
-        <a href="#-1--Data-and-trace-options">
-         (1)
-        </a>
-        data and trace options,
-        <a href="#-2--Layout-options">
-         (2)
-        </a>
-        layout options and
-        <a href="#-3--Call-to-Plotly">
-         (3)
-        </a>
-        a call to Plotly.
-       </p>
-<p>
-        The following code should serve as an example of Plotly's great flexibility, but is, by no means, the
-        <em>
-         only way
-        </em>
-        to make a nice plot.
-       </p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h5 id="-0--A-few-definitions">
-        -0- A few definitions
-        <a class="anchor-link" href="#-0--A-few-definitions">
-         ¶
-        </a>
-</h5>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-       In [26]:
+       </div>
       </div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight">
-<pre><span class="c"># (0.1) Relabel 'T_avg' and get missing data array</span>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       In the following plot, we also explore advanced annotation style options: annotations are used for plot's title and legend as well as on-plot annotations.
+      </p>
+      <p>
+       The code is quite long. To make it easier to read, the code cells are split into four sections:
+       <a href="#-0--A-few-definitions">
+        (0)
+       </a>
+       a few definitions,
+       <a href="#-1--Data-and-trace-options">
+        (1)
+       </a>
+       data and trace options,
+       <a href="#-2--Layout-options">
+        (2)
+       </a>
+       layout options and
+       <a href="#-3--Call-to-Plotly">
+        (3)
+       </a>
+       a call to Plotly.
+      </p>
+      <p>
+       The following code should serve as an example of Plotly's great flexibility, but is, by no means, the
+       <em>
+        only way
+       </em>
+       to make a nice plot.
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <h5 id="-0--A-few-definitions">
+       -0- A few definitions
+       <a class="anchor-link" href="#-0--A-few-definitions">
+        ¶
+       </a>
+      </h5>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
+     <div class="prompt input_prompt">
+      In [26]:
+     </div>
+     <div class="inner_cell">
+      <div class="input_area">
+       <div class="highlight">
+        <pre><span class="c"># (0.1) Relabel 'T_avg' and get missing data array</span>
 <span class="n">mtl_T_avg</span> <span class="o">=</span> <span class="n">T_avg</span>
 <span class="n">van_T_avg</span> <span class="o">=</span> <span class="n">get_csv_data</span><span class="p">(</span><span class="s">'vancouver.csv'</span><span class="p">,</span><span class="s">'Daily Average'</span><span class="p">)</span>
 
@@ -3412,45 +3411,45 @@ Figure(
 
 <span class="c"># (-) use also month_full defined in subsection 2.3</span>
 </pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h5 id="-1--Data-and-trace-options">
-        -1- Data and trace options
-        <a class="anchor-link" href="#-1--Data-and-trace-options">
-         ¶
-        </a>
-</h5>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>
-        Using a trace-generating function,
-       </p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-       In [27]:
+       </div>
       </div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight">
-<pre><span class="c"># (1.1) Define a trace-generating function (returns a Bar object)</span>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <h5 id="-1--Data-and-trace-options">
+       -1- Data and trace options
+       <a class="anchor-link" href="#-1--Data-and-trace-options">
+        ¶
+       </a>
+      </h5>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       Using a trace-generating function,
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
+     <div class="prompt input_prompt">
+      In [27]:
+     </div>
+     <div class="inner_cell">
+      <div class="input_area">
+       <div class="highlight">
+        <pre><span class="c"># (1.1) Define a trace-generating function (returns a Bar object)</span>
 <span class="k">def</span> <span class="nf">make_trace</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">color</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">sbplt</span><span class="p">):</span>
     <span class="k">return</span> <span class="n">Bar</span><span class="p">(</span>
         <span class="n">x</span><span class="o">=</span><span class="n">months_full</span><span class="p">,</span>  <span class="c"># x-coords are the months' names</span>
@@ -3461,31 +3460,31 @@ Figure(
         <span class="n">yaxis</span><span class="o">=</span><span class="s">'y{}'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">sbplt</span><span class="p">)</span>      <span class="c"># (!) plot on y-axis of 'sbplt'</span>
     <span class="p">)</span>
 </pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>
-        Build the data object:
-       </p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-       In [28]:
+       </div>
       </div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight">
-<pre><span class="c"># (1.1a) Assign temperature traces to 'xaxis2' and 'yaxis2' (top axis)</span>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       Build the data object:
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
+     <div class="prompt input_prompt">
+      In [28]:
+     </div>
+     <div class="inner_cell">
+      <div class="input_area">
+       <div class="highlight">
+        <pre><span class="c"># (1.1a) Assign temperature traces to 'xaxis2' and 'yaxis2' (top axis)</span>
 <span class="n">traces_T</span> <span class="o">=</span> <span class="p">[</span><span class="n">make_trace</span><span class="p">(</span><span class="n">mtl_T_avg</span><span class="p">,</span><span class="n">col_mtl</span><span class="p">,</span><span class="s">'Montreal'</span><span class="p">,</span><span class="mi">2</span><span class="p">),</span>
             <span class="n">make_trace</span><span class="p">(</span><span class="n">van_T_avg</span><span class="p">,</span><span class="n">col_van</span><span class="p">,</span><span class="s">'Vancouver'</span><span class="p">,</span><span class="mi">2</span><span class="p">)]</span>
 
@@ -3497,45 +3496,45 @@ Figure(
 <span class="c">#       and set the 'data' key in the Figure object</span>
 <span class="n">fig</span><span class="p">[</span><span class="s">'data'</span><span class="p">]</span> <span class="o">=</span> <span class="n">Data</span><span class="p">(</span><span class="n">traces_T</span><span class="o">+</span><span class="n">traces_P</span><span class="p">)</span>
 </pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h5 id="-2--Layout-options">
-        -2- Layout options
-        <a class="anchor-link" href="#-2--Layout-options">
-         ¶
-        </a>
-</h5>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>
-        Starting with a few miscellaneous layout features:
-       </p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-       In [29]:
+       </div>
       </div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight">
-<pre><span class="c"># (2.1) Add bar chart options to the 'layout' key in the Figure object</span>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <h5 id="-2--Layout-options">
+       -2- Layout options
+       <a class="anchor-link" href="#-2--Layout-options">
+        ¶
+       </a>
+      </h5>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       Starting with a few miscellaneous layout features:
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
+     <div class="prompt input_prompt">
+      In [29]:
+     </div>
+     <div class="inner_cell">
+      <div class="input_area">
+       <div class="highlight">
+        <pre><span class="c"># (2.1) Add bar chart options to the 'layout' key in the Figure object</span>
 <span class="n">fig</span><span class="p">[</span><span class="s">'layout'</span><span class="p">]</span><span class="o">.</span><span class="n">update</span><span class="p">(</span>
     <span class="n">barmode</span><span class="o">=</span><span class="s">'group'</span><span class="p">,</span>     <span class="c"># (!) bars are in groups on this plot</span>
     <span class="n">bargroupgap</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>       <span class="c"># norm. spacing between group members</span>
@@ -3566,31 +3565,31 @@ Figure(
     <span class="p">)</span>
 <span class="p">)</span>
 </pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>
-        onto the axes
-       </p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-       In [30]:
+       </div>
       </div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight">
-<pre><span class="c"># Define a function for updating up the axes (return a dictionary)</span>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       onto the axes
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
+     <div class="prompt input_prompt">
+      In [30]:
+     </div>
+     <div class="inner_cell">
+      <div class="input_area">
+       <div class="highlight">
+        <pre><span class="c"># Define a function for updating up the axes (return a dictionary)</span>
 <span class="k">def</span> <span class="nf">update_axis</span><span class="p">(</span><span class="n">title</span><span class="p">,</span> <span class="n">tickangle</span><span class="p">):</span>
      <span class="k">return</span> <span class="nb">dict</span><span class="p">(</span>
         <span class="n">title</span><span class="o">=</span><span class="n">title</span><span class="p">,</span>              <span class="c"># axis title</span>
@@ -3615,31 +3614,31 @@ Figure(
     <span class="n">update_axis</span><span class="p">(</span><span class="s">'&lt;b&gt;Precipitation&lt;/b&gt; [mm]'</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
 <span class="p">)</span>
 </pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>
-        onto the annotations
-       </p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-       In [31]:
+       </div>
       </div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight">
-<pre><span class="c"># Define a 1st annotation-generating function (for title and data source)</span>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       onto the annotations
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
+     <div class="prompt input_prompt">
+      In [31]:
+     </div>
+     <div class="inner_cell">
+      <div class="input_area">
+       <div class="highlight">
+        <pre><span class="c"># Define a 1st annotation-generating function (for title and data source)</span>
 <span class="k">def</span> <span class="nf">make_anno1</span><span class="p">(</span><span class="n">text</span><span class="p">,</span> <span class="n">fontsize</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
     <span class="k">return</span> <span class="n">Annotation</span><span class="p">(</span>
         <span class="n">text</span><span class="o">=</span><span class="n">text</span><span class="p">,</span>   <span class="c"># annotation text</span>
@@ -3688,138 +3687,138 @@ Figure(
     <span class="n">annotations</span><span class="o">=</span><span class="n">annotations</span>
 <span class="p">)</span>
 </pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>
-        and finally add an invisible title (linked to
-        <code>
-         'title'
-        </code>
-        in
-        <code>
-         Layout
-        </code>
-        ) so that the plot's URL describes our figure:
-       </p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-       In [32]:
+       </div>
       </div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight">
-<pre><span class="c"># (2.6) Add (an invisible) 'title' to be placed in the plot's URL</span>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       and finally add an invisible title (linked to
+       <code>
+        'title'
+       </code>
+       in
+       <code>
+        Layout
+       </code>
+       ) so that the plot's URL describes our figure:
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
+     <div class="prompt input_prompt">
+      In [32]:
+     </div>
+     <div class="inner_cell">
+      <div class="input_area">
+       <div class="highlight">
+        <pre><span class="c"># (2.6) Add (an invisible) 'title' to be placed in the plot's URL</span>
 <span class="n">fig</span><span class="p">[</span><span class="s">'layout'</span><span class="p">]</span><span class="o">.</span><span class="n">update</span><span class="p">(</span>
     <span class="n">title</span><span class="o">=</span><span class="s">"montreal-vancouver-1981-2010-climates"</span><span class="p">,</span>  <span class="c"># placed in plot's URL</span>
     <span class="n">titlefont</span><span class="o">=</span><span class="n">Font</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s">'rgba(0,0,0,0)'</span><span class="p">)</span>           <span class="c"># (!) invisible color</span>
 <span class="p">)</span>
 </pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h5 id="-3--Call-to-Plotly">
-        -3- Call to Plotly
-        <a class="anchor-link" href="#-3--Call-to-Plotly">
-         ¶
-        </a>
-</h5>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-       In [33]:
+       </div>
       </div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight">
-<pre><span class="c"># (@) Send to Plotly and show in notebook</span>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <h5 id="-3--Call-to-Plotly">
+       -3- Call to Plotly
+       <a class="anchor-link" href="#-3--Call-to-Plotly">
+        ¶
+       </a>
+      </h5>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
+     <div class="prompt input_prompt">
+      In [33]:
+     </div>
+     <div class="inner_cell">
+      <div class="input_area">
+       <div class="highlight">
+        <pre><span class="c"># (@) Send to Plotly and show in notebook</span>
 <span class="n">py</span><span class="o">.</span><span class="n">iplot</span><span class="p">(</span><span class="n">fig</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="s">'s2_mtl-van'</span><span class="p">)</span>
 </pre>
-</div>
-</div>
-</div>
-</div>
-<div class="output_wrapper">
-<div class="output">
-<div class="output_area">
-<div class="prompt">
-</div>
-<div class="output_html rendered_html output_subarea ">
-<iframe height="525" id="igraph" scrolling="no" seamless="seamless" src="https://plot.ly/~etpinard/79" style="border:none;" width="100%">
-</iframe>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>
-<em>
-         A publication-worthy figure.
-        </em>
-</p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h5 id="-4--Some-add-on-features">
-        -4- Some add-on features
-        <a class="anchor-link" href="#-4--Some-add-on-features">
-         ¶
-        </a>
-</h5>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>
-        Just for fun, add two on-plot annotations with arrows, labeling the coldest and wettest months of the year.
-       </p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-       In [34]:
+       </div>
       </div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight">
-<pre><span class="c"># Define a 3rd annotation-generating function (for arrow annotations)</span>
+     </div>
+    </div>
+    <div class="output_wrapper">
+     <div class="output">
+      <div class="output_area">
+       <div class="prompt">
+       </div>
+       <div class="output_html rendered_html output_subarea ">
+        <iframe height="525" id="igraph" scrolling="no" seamless="seamless" src="https://plot.ly/~etpinard/79" style="border:none;" width="100%">
+        </iframe>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       <em>
+        A publication-worthy figure.
+       </em>
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <h5 id="-4--Some-add-on-features">
+       -4- Some add-on features
+       <a class="anchor-link" href="#-4--Some-add-on-features">
+        ¶
+       </a>
+      </h5>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       Just for fun, add two on-plot annotations with arrows, labeling the coldest and wettest months of the year.
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
+     <div class="prompt input_prompt">
+      In [34]:
+     </div>
+     <div class="inner_cell">
+      <div class="input_area">
+       <div class="highlight">
+        <pre><span class="c"># Define a 3rd annotation-generating function (for arrow annotations)</span>
 <span class="k">def</span> <span class="nf">make_anno3</span><span class="p">(</span><span class="n">text</span><span class="p">,</span> <span class="n">yref</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="p">,</span> <span class="n">ax</span><span class="p">,</span> <span class="n">ay</span><span class="p">):</span>
     <span class="k">return</span> <span class="n">Annotation</span><span class="p">(</span>
         <span class="n">text</span><span class="o">=</span><span class="n">text</span><span class="p">,</span>  <span class="c"># annotation text</span>
@@ -3839,20 +3838,20 @@ Figure(
         <span class="n">borderpad</span><span class="o">=</span><span class="mi">4</span>             <span class="c"># set border/text space (in pixels)</span>
     <span class="p">)</span>
 </pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-       In [35]:
+       </div>
       </div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight">
-<pre><span class="c"># (4.1a) Find index and value of coldest month</span>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
+     <div class="prompt input_prompt">
+      In [35]:
+     </div>
+     <div class="inner_cell">
+      <div class="input_area">
+       <div class="highlight">
+        <pre><span class="c"># (4.1a) Find index and value of coldest month</span>
 <span class="n">tmp</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">vstack</span><span class="p">((</span><span class="n">mtl_T_avg</span><span class="p">,</span> <span class="n">van_T_avg</span><span class="p">))</span>
 <span class="n">i_cold</span><span class="p">,</span> <span class="n">cold</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">unravel_index</span><span class="p">(</span><span class="n">tmp</span><span class="o">.</span><span class="n">argmin</span><span class="p">(),</span> <span class="n">tmp</span><span class="o">.</span><span class="n">shape</span><span class="p">)[</span><span class="mi">1</span><span class="p">],</span> <span class="n">tmp</span><span class="o">.</span><span class="n">min</span><span class="p">()</span>
 
@@ -3872,188 +3871,187 @@ Figure(
                <span class="s">'y1'</span><span class="p">,</span> <span class="n">i_wet</span><span class="p">,</span> <span class="n">wet</span><span class="p">,</span> <span class="o">-</span><span class="mi">100</span><span class="p">,</span> <span class="mi">15</span><span class="p">)</span>
 <span class="p">])</span>
 </pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>
-        Before sending the figure object to Plotly, update the plot's title annotation (i.e. the first annotation in
-        <code>
-         Annotation
-        </code>
-        :
-       </p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-       In [36]:
+       </div>
       </div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight">
-<pre><span class="c"># (4.2) Update title annotation (the 1st in Annotations)</span>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       Before sending the figure object to Plotly, update the plot's title annotation (i.e. the first annotation in
+       <code>
+        Annotation
+       </code>
+       :
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
+     <div class="prompt input_prompt">
+      In [36]:
+     </div>
+     <div class="inner_cell">
+      <div class="input_area">
+       <div class="highlight">
+        <pre><span class="c"># (4.2) Update title annotation (the 1st in Annotations)</span>
 <span class="n">fig</span><span class="p">[</span><span class="s">'layout'</span><span class="p">][</span><span class="s">'annotations'</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">text</span><span class="o">=</span><span class="s">'Fig. 2.4b: &lt;b&gt;Climate of 1981-2010&lt;/b&gt;'</span><span class="p">)</span>
 </pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>
-        This gives:
-       </p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-       In [37]:
+       </div>
       </div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight">
-<pre><span class="c"># (@) Send to Plotly and show in notebook</span>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       This gives:
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
+     <div class="prompt input_prompt">
+      In [37]:
+     </div>
+     <div class="inner_cell">
+      <div class="input_area">
+       <div class="highlight">
+        <pre><span class="c"># (@) Send to Plotly and show in notebook</span>
 <span class="n">py</span><span class="o">.</span><span class="n">iplot</span><span class="p">(</span><span class="n">fig</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="s">'s2_mtl-van-arrows'</span><span class="p">)</span>
 </pre>
-</div>
-</div>
-</div>
-</div>
-<div class="output_wrapper">
-<div class="output">
-<div class="output_area">
-<div class="prompt">
-</div>
-<div class="output_html rendered_html output_subarea ">
-<iframe height="525" id="igraph" scrolling="no" seamless="seamless" src="https://plot.ly/~etpinard/195" style="border:none;" width="100%">
-</iframe>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<hr/>
-<h4 style="font-size:14pt;">
-        Go to
-        <a href="/python/bubble-charts-tutorial">
-         Section 3 --- Bubble Charts
-        </a>
-</h4>
-<h4 style="font-size:14pt;">
-        Go to
-        <a href="/python/line-and-scatter-plots-tutorial">
-         Section 1 --- Line and Scatter Plots
-        </a>
-</h4>
-<h4 style="font-size:14pt;">
-        Go to
-        <a href="#notebook">
-         top of page
-        </a>
-</h4>
-<h4 style="font-size:14pt;">
-        Go to User Guide's
-        <a href="/python/user-guide">
-         homepage
-        </a>
-</h4>
-<hr/>
-<!-- <h4 style="font-size:14pt;">Go to
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="output_wrapper">
+     <div class="output">
+      <div class="output_area">
+       <div class="prompt">
+       </div>
+       <div class="output_html rendered_html output_subarea ">
+        <iframe height="525" id="igraph" scrolling="no" seamless="seamless" src="https://plot.ly/~etpinard/195" style="border:none;" width="100%">
+        </iframe>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <hr/>
+      <h4 style="font-size:14pt;">
+       Go to
+       <a href="/python/bubble-charts-tutorial">
+        Section 3 --- Bubble Charts
+       </a>
+      </h4>
+      <h4 style="font-size:14pt;">
+       Go to
+       <a href="/python/line-and-scatter-plots-tutorial">
+        Section 1 --- Line and Scatter Plots
+       </a>
+      </h4>
+      <h4 style="font-size:14pt;">
+       Go to
+       <a href="#notebook">
+        top of page
+       </a>
+      </h4>
+      <h4 style="font-size:14pt;">
+       Go to User Guide's
+       <a href="/python/user-guide">
+        homepage
+       </a>
+      </h4>
+      <hr/>
+      <!-- <h4 style="font-size:14pt;">Go to
 
  </h4> -->
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<div style="float:right; \">
-<img align="right" src="http://i.imgur.com/4vwuxdJ.png" style="float:right; margin-left: 5px; margin-top: -10px"/>
-</div>
-<h4>
-        Got Questions or Feedback?
-       </h4>
-<p>
-        About
-        <a href="https://plot.ly" target="_blank">
-         Plotly
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <div style="float:right; \">
+       <img align="right" src="/static/api_docs/image/user_guide/python/image07.png" style="float:right; margin-left: 5px; margin-top: -10px"/>
+      </div>
+      <h4>
+       Got Questions or Feedback?
+      </h4>
+      <p>
+       About
+       <a href="https://plot.ly" target="_blank">
+        Plotly
+       </a>
+      </p>
+      <ul>
+       <li>
+        email: feedback@plot.ly
+       </li>
+       <li>
+        tweet:
+        <a href="https://twitter.com/plotlygraphs" target="_blank">
+         @plotlygraphs
         </a>
-</p>
-<ul>
-<li>
-         email: feedback@plot.ly
-        </li>
-<li>
-         tweet:
-         <a href="https://twitter.com/plotlygraphs" target="_blank">
-          @plotlygraphs
-         </a>
-</li>
-</ul>
-<p>
-        About the
-        <a href="https://github.com/plotly/python-user-guide" target="_blank">
-         User Guide
+       </li>
+      </ul>
+      <p>
+       About the
+       <a href="https://github.com/plotly/python-user-guide" target="_blank">
+        User Guide
+       </a>
+      </p>
+      <ul>
+       <li>
+        email: etienne@plot.ly
+       </li>
+       <li>
+        tweet:
+        <a href="https://twitter.com/etpinard" target="_blank">
+         @etpinard
         </a>
-</p>
-<ul>
-<li>
-         email: etienne@plot.ly
-        </li>
-<li>
-         tweet:
-         <a href="https://twitter.com/etpinard" target="_blank">
-          @etpinard
-         </a>
-</li>
-</ul>
-<h4 style="margin-top:30px;">
-        Notebook styling ideas
-       </h4>
-<p>
-        Big thanks to
-       </p>
-<ul>
-<li>
-<a href="http://nbviewer.ipython.org/github/CamDavidsonPilon/Probabilistic-Programming-and-Bayesian-Methods-for-Hackers/blob/master/Prologue/Prologue.ipynb" target="_blank">
-          Cam Davidson-Pilon
-         </a>
-</li>
-<li>
-<a href="http://lorenabarba.com/blog/announcing-aeropython/#.U1ULXdX1LJ4.google_plusone_share" target="_blank">
-          Lorena A. Barba
-         </a>
-</li>
-</ul>
-<p>
-<br/>
-</p>
-</div>
-</div>
-</div>
+       </li>
+      </ul>
+      <h4 style="margin-top:30px;">
+       Notebook styling ideas
+      </h4>
+      <p>
+       Big thanks to
+      </p>
+      <ul>
+       <li>
+        <a href="http://nbviewer.ipython.org/github/CamDavidsonPilon/Probabilistic-Programming-and-Bayesian-Methods-for-Hackers/blob/master/Prologue/Prologue.ipynb" target="_blank">
+         Cam Davidson-Pilon
+        </a>
+       </li>
+       <li>
+        <a href="http://lorenabarba.com/blog/announcing-aeropython/#.U1ULXdX1LJ4.google_plusone_share" target="_blank">
+         Lorena A. Barba
+        </a>
+       </li>
+      </ul>
+      <p>
+       <br/>
+      </p>
+     </div>
+    </div>
+   </div>
+  </div>
+ </div>
 
-</div>
-</div>
-</body>

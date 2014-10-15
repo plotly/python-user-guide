@@ -1,94 +1,93 @@
-<body>
-<div class="border-box-sizing" id="notebook" tabindex="-1">
-<div class="container" id="notebook-container">
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
 
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Section-8:-3D-Plots">
-        Section 8: 3D Plots
-        <a class="anchor-link" href="#Section-8:-3D-Plots">
-         ¶
+ <div class="border-box-sizing" id="notebook" tabindex="-1">
+  <div class="container" id="notebook-container">
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <h2 id="Section-8:-3D-Plots">
+       Section 8: 3D Plots
+       <a class="anchor-link" href="#Section-8:-3D-Plots">
+        ¶
+       </a>
+      </h2>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       Welcome to Plotly's Python API User Guide.
+      </p>
+      <blockquote>
+       <p>
+        Links to the other sections are on the User Guide's
+        <a href="/python/user-guide#Table-of-Contents:">
+         homepage
         </a>
-</h2>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>
-        Welcome to Plotly's Python API User Guide.
+        <br/>
+        If unfamiliar with Plotly's Python API version 1.0 see
+        <a href="/python/overview">
+         section 0
+        </a>
+        <br/>
+        The Github repository is available
+        <a href="https://github.com/plotly/python-user-guide" target="_blank">
+         here
+        </a>
        </p>
-<blockquote>
-<p>
-         Links to the other sections are on the User Guide's
-         <a href="/python/user-guide#Table-of-Contents:">
-          homepage
+      </blockquote>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       Section 8 is divided as follows:
+      </p>
+      <ul>
+       <li>
+        <p>
+         <a href="#8.1-A-simple-surface-plot">
+          8.1 A simple surface plot
          </a>
-<br/>
-         If unfamiliar with Plotly's Python API version 1.0 see
-         <a href="/python/overview">
-          section 0
+        </p>
+       </li>
+       <li>
+        <p>
+         <a href="#8.2-A-helix-curve-in-3D">
+          8.2 A helix curve in 3D
          </a>
-<br/>
-         The Github repository is available
-         <a href="https://github.com/plotly/python-user-guide" target="_blank">
-          here
-         </a>
-</p>
-</blockquote>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>
-        Section 8 is divided as follows:
-       </p>
-<ul>
-<li>
-<p>
-<a href="#8.1-A-simple-surface-plot">
-           8.1 A simple surface plot
-          </a>
-</p>
-</li>
-<li>
-<p>
-<a href="#8.2-A-helix-curve-in-3D">
-           8.2 A helix curve in 3D
-          </a>
-</p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>
-        Quickstart (a 3d scatter plot of 3 points):
-       </p>
-<pre><code>&gt;&gt;&gt; import plotly.plotly as py
+        </p>
+       </li>
+      </ul>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       Quickstart (a 3d scatter plot of 3 points):
+      </p>
+      <pre><code>&gt;&gt;&gt; import plotly.plotly as py
 &gt;&gt;&gt; # auto sign-in with credentials or use py.sign_in()
 &gt;&gt;&gt; trace1 = dict(
         type='scatter3d',
@@ -99,104 +98,104 @@
 &gt;&gt;&gt; data = [trace1]
 &gt;&gt;&gt; py.plot(data, validate=False)
 </code></pre>
-<hr/>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>
-        The User Guide assumes version 1.0 and up of Plotly's Python API.
-       </p>
-<p>
-        Check which version is installed on your machine and please upgrade if needed.
-       </p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-       In [1]:
-      </div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight">
-<pre><span class="c"># (*) Import plotly package</span>
+      <hr/>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       The User Guide assumes version 1.0 and up of Plotly's Python API.
+      </p>
+      <p>
+       Check which version is installed on your machine and please upgrade if needed.
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
+     <div class="prompt input_prompt">
+      In [1]:
+     </div>
+     <div class="inner_cell">
+      <div class="input_area">
+       <div class="highlight">
+        <pre><span class="c"># (*) Import plotly package</span>
 <span class="kn">import</span> <span class="nn">plotly</span>
 
 <span class="c"># Check plolty version (if not latest, please upgrade)</span>
 <span class="n">plotly</span><span class="o">.</span><span class="n">__version__</span>
 </pre>
-</div>
-</div>
-</div>
-</div>
-<div class="output_wrapper">
-<div class="output">
-<div class="output_area">
-<div class="prompt output_prompt">
-         Out[1]:
-        </div>
-<div class="output_text output_subarea output_pyout">
-<pre>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="output_wrapper">
+     <div class="output">
+      <div class="output_area">
+       <div class="prompt output_prompt">
+        Out[1]:
+       </div>
+       <div class="output_text output_subarea output_pyout">
+        <pre>
 '1.2.7'
 </pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>
-        See the User Guide's
-        <a href="/python/user-guide#Installation-guidelines" target="_blank">
-         homepage
-        </a>
-        for more info on installation and upgrading.
-       </p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<hr/>
-<p>
-        In this section, we introduce Plotly's 3D plot engine. 3D plots are a new feature to Plotly and this section (in its currently form) only scratches the surface on its possibilities.
-       </p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>
-        We first import a few modules and sign in to Plotly using our credential file:
-       </p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-       In [2]:
+       </div>
       </div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight">
-<pre><span class="c"># (*) To communicate with Plotly's server, sign in with credentials file</span>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       See the User Guide's
+       <a href="/python/user-guide#Installation-guidelines" target="_blank">
+        homepage
+       </a>
+       for more info on installation and upgrading.
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <hr/>
+      <p>
+       In this section, we introduce Plotly's 3D plot engine. 3D plots are a new feature to Plotly and this section (in its currently form) only scratches the surface on its possibilities.
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       We first import a few modules and sign in to Plotly using our credential file:
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
+     <div class="prompt input_prompt">
+      In [2]:
+     </div>
+     <div class="inner_cell">
+      <div class="input_area">
+       <div class="highlight">
+        <pre><span class="c"># (*) To communicate with Plotly's server, sign in with credentials file</span>
 <span class="kn">import</span> <span class="nn">plotly.plotly</span> <span class="kn">as</span> <span class="nn">py</span>  
 
 <span class="c"># (*) Useful Python/Plotly tools</span>
@@ -207,139 +206,139 @@
 
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>  <span class="c"># (*) numpy for math functions and arrays</span>
 </pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>
-        If you are not familiar with credentials files, refer to the User Guide's
-        <a href="/python/user-guide#Step-6" target="_blank">
-         homepage
-        </a>
-        .
-       </p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h5 id="Important">
-        Important
-        <a class="anchor-link" href="#Important">
-         ¶
-        </a>
-</h5>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<blockquote>
-<p>
-         3D plotting is currently not fully integrated into the latest version of Plotly's Python API.
-        </p>
-</blockquote>
-<p>
-        Namely, there are currently no 3D graph objects and the avaiable keys are not documented.
-       </p>
-<p>
-        Therefore, surface and 3D scatter plots must be generated using standard Python dictionaries and lists and bypassing validation within Plotly's Python API (i.e.
-        <code>
-         validate=False
-        </code>
-        ).
-       </p>
-<p>
-        That said, if you are eager to start plotting in 3D, you can, right now! The following examples demonstrate how to do so.
-       </p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="8.1-A-simple-surface-plot">
-        8.1 A simple surface plot
-        <a class="anchor-link" href="#8.1-A-simple-surface-plot">
-         ¶
-        </a>
-</h3>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>
-        Let's try to make a Plotly version of this
-        <a href="http://www.robertocolistete.net/MatPlotLib/surfacefxy.png" target="_blank">
-         plot
-        </a>
-        taken from Roberto Colistete's
-        <a href="http://www.robertocolistete.net" target="_blank">
-         web page
-        </a>
-        .
-        <br/>
-        Big thanks!
-       </p>
-<p>
-        The function to be plotted is:
-       </p>
-<p>
-        $$ f(x,y) = A \cos(\pi x y) e^{-(x^2+y^2)/2} $$
-       </p>
-<p>
-        where $A$ is some number corresponding to the amplitude of the surface. So,
-       </p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-       In [3]:
+       </div>
       </div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight">
-<pre><span class="kn">from</span> <span class="nn">numpy</span> <span class="kn">import</span> <span class="n">pi</span><span class="p">,</span> <span class="n">cos</span><span class="p">,</span> <span class="n">exp</span>  <span class="c"># (*) import the functions needed</span>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       If you are not familiar with credentials files, refer to the User Guide's
+       <a href="/python/user-guide#Step-6" target="_blank">
+        homepage
+       </a>
+       .
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <h5 id="Important">
+       Important
+       <a class="anchor-link" href="#Important">
+        ¶
+       </a>
+      </h5>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <blockquote>
+       <p>
+        3D plotting is currently not fully integrated into the latest version of Plotly's Python API.
+       </p>
+      </blockquote>
+      <p>
+       Namely, there are currently no 3D graph objects and the avaiable keys are not documented.
+      </p>
+      <p>
+       Therefore, surface and 3D scatter plots must be generated using standard Python dictionaries and lists and bypassing validation within Plotly's Python API (i.e.
+       <code>
+        validate=False
+       </code>
+       ).
+      </p>
+      <p>
+       That said, if you are eager to start plotting in 3D, you can, right now! The following examples demonstrate how to do so.
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <h3 id="8.1-A-simple-surface-plot">
+       8.1 A simple surface plot
+       <a class="anchor-link" href="#8.1-A-simple-surface-plot">
+        ¶
+       </a>
+      </h3>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       Let's try to make a Plotly version of this
+       <a href="http://www.robertocolistete.net/MatPlotLib/surfacefxy.png" target="_blank">
+        plot
+       </a>
+       taken from Roberto Colistete's
+       <a href="http://www.robertocolistete.net" target="_blank">
+        web page
+       </a>
+       .
+       <br/>
+       Big thanks!
+      </p>
+      <p>
+       The function to be plotted is:
+      </p>
+      <p>
+       $$ f(x,y) = A \cos(\pi x y) e^{-(x^2+y^2)/2} $$
+      </p>
+      <p>
+       where $A$ is some number corresponding to the amplitude of the surface. So,
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
+     <div class="prompt input_prompt">
+      In [3]:
+     </div>
+     <div class="inner_cell">
+      <div class="input_area">
+       <div class="highlight">
+        <pre><span class="kn">from</span> <span class="nn">numpy</span> <span class="kn">import</span> <span class="n">pi</span><span class="p">,</span> <span class="n">cos</span><span class="p">,</span> <span class="n">exp</span>  <span class="c"># (*) import the functions needed</span>
 
 <span class="c"># Define the function to be plotted</span>
 <span class="k">def</span> <span class="nf">fxy</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
     <span class="n">A</span> <span class="o">=</span> <span class="mi">1</span> <span class="c"># choose a maximum amplitude </span>
     <span class="k">return</span> <span class="n">A</span><span class="o">*</span><span class="p">(</span><span class="n">cos</span><span class="p">(</span><span class="n">pi</span><span class="o">*</span><span class="n">x</span><span class="o">*</span><span class="n">y</span><span class="p">))</span><span class="o">**</span><span class="mi">2</span><span class="o">*</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="p">(</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="o">+</span><span class="n">y</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">/</span><span class="mf">2.</span><span class="p">)</span>
 </pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-       In [4]:
+       </div>
       </div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight">
-<pre><span class="c"># Choose length of square domain, make row and column vectors</span>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
+     <div class="prompt input_prompt">
+      In [4]:
+     </div>
+     <div class="inner_cell">
+      <div class="input_area">
+       <div class="highlight">
+        <pre><span class="c"># Choose length of square domain, make row and column vectors</span>
 <span class="n">L</span> <span class="o">=</span> <span class="mi">4</span>
 <span class="n">x</span> <span class="o">=</span> <span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="o">-</span><span class="n">L</span><span class="o">/</span><span class="mf">2.</span><span class="p">,</span> <span class="n">L</span><span class="o">/</span><span class="mf">2.</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">)</span> <span class="c"># use a mesh spacing of 0.1</span>
 <span class="n">yt</span> <span class="o">=</span> <span class="n">y</span><span class="p">[:,</span><span class="n">np</span><span class="o">.</span><span class="n">newaxis</span><span class="p">]</span> <span class="c"># (!) make column vector</span>
@@ -347,35 +346,35 @@
 <span class="c"># Get surface coordinates!</span>
 <span class="n">z</span> <span class="o">=</span> <span class="n">fxy</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">yt</span><span class="p">)</span>
 </pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>
-        Next, build a trace dictionary containing the
-        <code>
-         'surface'
-        </code>
-        plot type:
-       </p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-       In [5]:
+       </div>
       </div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight">
-<pre><span class="n">trace1</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       Next, build a trace dictionary containing the
+       <code>
+        'surface'
+       </code>
+       plot type:
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
+     <div class="prompt input_prompt">
+      In [5]:
+     </div>
+     <div class="inner_cell">
+      <div class="input_area">
+       <div class="highlight">
+        <pre><span class="n">trace1</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span>
     <span class="nb">type</span><span class="o">=</span><span class="s">'surface'</span><span class="p">,</span> <span class="c"># (!) 'surface' plot type</span>
     <span class="n">z</span><span class="o">=</span><span class="n">z</span><span class="p">,</span>            <span class="c"># link the fxy 2d numpy array</span>
     <span class="n">x</span><span class="o">=</span><span class="n">x</span><span class="p">,</span>            <span class="c"># link 1d numpy array of x coords</span>
@@ -385,31 +384,31 @@
 <span class="c"># Package the trace dictionary into a data list</span>
 <span class="n">data</span> <span class="o">=</span> <span class="p">[</span><span class="n">trace1</span><span class="p">]</span>
 </pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>
-        Add a title and customize the axes:
-       </p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-       In [6]:
+       </div>
       </div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight">
-<pre><span class="c"># Dictionary of style options for all axes</span>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       Add a title and customize the axes:
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
+     <div class="prompt input_prompt">
+      In [6]:
+     </div>
+     <div class="inner_cell">
+      <div class="input_area">
+       <div class="highlight">
+        <pre><span class="c"># Dictionary of style options for all axes</span>
 <span class="n">axis</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span>
     <span class="n">showbackground</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="c"># (!) show axis background</span>
     <span class="n">backgroundcolor</span><span class="o">=</span><span class="s">"rgb(204, 204, 204)"</span><span class="p">,</span> <span class="c"># set background color to grey</span>
@@ -427,179 +426,179 @@
     <span class="p">)</span>
 <span class="p">)</span>
 </pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>
-        Package layout and data into a figure dictionary and call Plotly:
-       </p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-       In [7]:
+       </div>
       </div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight">
-<pre><span class="c"># Make a figure dictionary</span>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       Package layout and data into a figure dictionary and call Plotly:
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
+     <div class="prompt input_prompt">
+      In [7]:
+     </div>
+     <div class="inner_cell">
+      <div class="input_area">
+       <div class="highlight">
+        <pre><span class="c"># Make a figure dictionary</span>
 <span class="n">fig</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="p">,</span> <span class="n">layout</span><span class="o">=</span><span class="n">layout</span><span class="p">)</span>
 
 <span class="c"># (@) Send to Plotly and show in notebook</span>
 <span class="n">py</span><span class="o">.</span><span class="n">iplot</span><span class="p">(</span><span class="n">fig</span><span class="p">,</span> <span class="n">validate</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="s">'s8_surface'</span><span class="p">)</span>
 </pre>
-</div>
-</div>
-</div>
-</div>
-<div class="output_wrapper">
-<div class="output">
-<div class="output_area">
-<div class="prompt output_prompt">
-         Out[7]:
-        </div>
-<div class="output_html rendered_html output_subarea output_pyout">
-<iframe height="525" id="igraph" scrolling="no" seamless="seamless" src="https://plot.ly/~etpinard/464" style="border:none;" width="100%">
-</iframe>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>
-<em>
-         A 3D interacting surface plot
-        </em>
-</p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>
-        Plotly 3D plots have three modes of interaction (togglable from the top right corner of the plot's frame):
-       </p>
-<ol>
-<li>
-         Rotation (leftmost button)
-        </li>
-<li>
-         Zoom (center button)
-        </li>
-<li>
-         Pan (rightmost button)
-        </li>
-</ol>
-<p>
-        You are invited to play around with each of them, Plotly 3D plots are alive like no other.
-       </p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>
-        Moreover, this surface plot can be viewed in full screen at the following unique URL:
-       </p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-       In [8]:
+       </div>
       </div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight">
-<pre><span class="n">py</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">fig</span><span class="p">,</span> <span class="n">validate</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span> <span class="n">auto_open</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="s">'s8_surface'</span><span class="p">)</span>
+     </div>
+    </div>
+    <div class="output_wrapper">
+     <div class="output">
+      <div class="output_area">
+       <div class="prompt output_prompt">
+        Out[7]:
+       </div>
+       <div class="output_html rendered_html output_subarea output_pyout">
+        <iframe height="525" id="igraph" scrolling="no" seamless="seamless" src="https://plot.ly/~etpinard/464" style="border:none;" width="100%">
+        </iframe>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       <em>
+        A 3D interacting surface plot
+       </em>
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       Plotly 3D plots have three modes of interaction (togglable from the top right corner of the plot's frame):
+      </p>
+      <ol>
+       <li>
+        Rotation (leftmost button)
+       </li>
+       <li>
+        Zoom (center button)
+       </li>
+       <li>
+        Pan (rightmost button)
+       </li>
+      </ol>
+      <p>
+       You are invited to play around with each of them, Plotly 3D plots are alive like no other.
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       Moreover, this surface plot can be viewed in full screen at the following unique URL:
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
+     <div class="prompt input_prompt">
+      In [8]:
+     </div>
+     <div class="inner_cell">
+      <div class="input_area">
+       <div class="highlight">
+        <pre><span class="n">py</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">fig</span><span class="p">,</span> <span class="n">validate</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span> <span class="n">auto_open</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="s">'s8_surface'</span><span class="p">)</span>
 </pre>
-</div>
-</div>
-</div>
-</div>
-<div class="output_wrapper">
-<div class="output">
-<div class="output_area">
-<div class="prompt output_prompt">
-         Out[8]:
-        </div>
-<div class="output_text output_subarea output_pyout">
-<pre>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="output_wrapper">
+     <div class="output">
+      <div class="output_area">
+       <div class="prompt output_prompt">
+        Out[8]:
+       </div>
+       <div class="output_text output_subarea output_pyout">
+        <pre>
 u'https://plot.ly/~etpinard/464'
 </pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="8.2-A-helix-curve-in-3D">
-        8.2 A helix curve in 3D
-        <a class="anchor-link" href="#8.2-A-helix-curve-in-3D">
-         ¶
-        </a>
-</h3>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>
-        Our next plot will be a 3-dimensional
-        <a href="http://en.wikipedia.org/wiki/Helix" target="_blank">
-         helix
-        </a>
-        curve.
-       </p>
-<p>
-        A helix curve is described mathematically in cartesian coordinates by:
-       </p>
-<p>
-        $$\begin{align} x(t) &amp;= \cos(t) \\ y(t) &amp;= \sin(t) \\ z(t) &amp;= t \end{align}$$
-       </p>
-<p>
-        where $t$ is some conitnuous variable. So consider,
-       </p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-       In [9]:
+       </div>
       </div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight">
-<pre><span class="kn">from</span> <span class="nn">numpy</span> <span class="kn">import</span> <span class="n">sin</span>  <span class="c"># (*) import sin (cos was imported in 8.1)</span>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <h3 id="8.2-A-helix-curve-in-3D">
+       8.2 A helix curve in 3D
+       <a class="anchor-link" href="#8.2-A-helix-curve-in-3D">
+        ¶
+       </a>
+      </h3>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       Our next plot will be a 3-dimensional
+       <a href="http://en.wikipedia.org/wiki/Helix" target="_blank">
+        helix
+       </a>
+       curve.
+      </p>
+      <p>
+       A helix curve is described mathematically in cartesian coordinates by:
+      </p>
+      <p>
+       $$\begin{align} x(t) &amp;= \cos(t) \\ y(t) &amp;= \sin(t) \\ z(t) &amp;= t \end{align}$$
+      </p>
+      <p>
+       where $t$ is some conitnuous variable. So consider,
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
+     <div class="prompt input_prompt">
+      In [9]:
+     </div>
+     <div class="inner_cell">
+      <div class="input_area">
+       <div class="highlight">
+        <pre><span class="kn">from</span> <span class="nn">numpy</span> <span class="kn">import</span> <span class="n">sin</span>  <span class="c"># (*) import sin (cos was imported in 8.1)</span>
 
 <span class="c"># Define a function generating the helix coordinates</span>
 <span class="k">def</span> <span class="nf">helix</span><span class="p">(</span><span class="n">t</span><span class="p">):</span>
@@ -608,67 +607,67 @@ u'https://plot.ly/~etpinard/464'
     <span class="n">z</span> <span class="o">=</span> <span class="n">t</span>
     <span class="k">return</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span>
 </pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>
-        Next, get the coordinates of the helix:
-       </p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-       In [10]:
+       </div>
       </div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight">
-<pre><span class="c"># Make a linear space from 0 to 4pi (i.e. 2 revolutions), get coords</span>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       Next, get the coordinates of the helix:
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
+     <div class="prompt input_prompt">
+      In [10]:
+     </div>
+     <div class="inner_cell">
+      <div class="input_area">
+       <div class="highlight">
+        <pre><span class="c"># Make a linear space from 0 to 4pi (i.e. 2 revolutions), get coords</span>
 <span class="n">t</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">4</span><span class="o">*</span><span class="n">pi</span><span class="p">,</span> <span class="mi">200</span><span class="p">)</span> <span class="c"># (pi was imported in 8.1)</span>
 <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span> <span class="o">=</span> <span class="n">helix</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
 </pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>
-        Build a trace dictionary with
-        <code>
-         'type'
-        </code>
-        set to
-        <code>
-         'scatter3d'
-        </code>
-        :
-       </p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-       In [11]:
+       </div>
       </div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight">
-<pre><span class="n">trace1</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       Build a trace dictionary with
+       <code>
+        'type'
+       </code>
+       set to
+       <code>
+        'scatter3d'
+       </code>
+       :
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
+     <div class="prompt input_prompt">
+      In [11]:
+     </div>
+     <div class="inner_cell">
+      <div class="input_area">
+       <div class="highlight">
+        <pre><span class="n">trace1</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span>
     <span class="nb">type</span><span class="o">=</span><span class="s">'scatter3d'</span><span class="p">,</span> <span class="c"># (!) 'scatter3d' plot type</span>
     <span class="n">x</span><span class="o">=</span><span class="n">x</span><span class="p">,</span>  <span class="c"># x coords</span>
     <span class="n">y</span><span class="o">=</span><span class="n">y</span><span class="p">,</span>  <span class="c"># y coords</span>
@@ -683,207 +682,206 @@ u'https://plot.ly/~etpinard/464'
 <span class="c"># Package the trace dictionary into a data list</span>
 <span class="n">data</span> <span class="o">=</span> <span class="p">[</span><span class="n">trace1</span><span class="p">]</span>
 </pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>
-        Add a title:
-       </p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-       In [12]:
+       </div>
       </div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight">
-<pre><span class="c"># Make a layout dictionary</span>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       Add a title:
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
+     <div class="prompt input_prompt">
+      In [12]:
+     </div>
+     <div class="inner_cell">
+      <div class="input_area">
+       <div class="highlight">
+        <pre><span class="c"># Make a layout dictionary</span>
 <span class="n">layout</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span>
     <span class="n">title</span><span class="o">=</span><span class="s">'Fig 8.2: Helix curve'</span>
 <span class="p">)</span>
 </pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>
-        And finally,
-       </p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-       In [13]:
+       </div>
       </div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight">
-<pre><span class="c"># Make a figure dictionary</span>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       And finally,
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
+     <div class="prompt input_prompt">
+      In [13]:
+     </div>
+     <div class="inner_cell">
+      <div class="input_area">
+       <div class="highlight">
+        <pre><span class="c"># Make a figure dictionary</span>
 <span class="n">fig</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="p">,</span> <span class="n">layout</span><span class="o">=</span><span class="n">layout</span><span class="p">)</span>
 
 <span class="c"># (@) Send to Plotly and show in notebook</span>
 <span class="n">py</span><span class="o">.</span><span class="n">iplot</span><span class="p">(</span><span class="n">fig</span><span class="p">,</span> <span class="n">validate</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="s">'s8_helix'</span><span class="p">)</span>
 </pre>
-</div>
-</div>
-</div>
-</div>
-<div class="output_wrapper">
-<div class="output">
-<div class="output_area">
-<div class="prompt output_prompt">
-         Out[13]:
-        </div>
-<div class="output_html rendered_html output_subarea output_pyout">
-<iframe height="525" id="igraph" scrolling="no" seamless="seamless" src="https://plot.ly/~etpinard/468" style="border:none;" width="100%">
-</iframe>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>
-        The full screen verison is available at the following URL:
-       </p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-       In [14]:
+       </div>
       </div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight">
-<pre><span class="n">py</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">fig</span><span class="p">,</span> <span class="n">validate</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span> <span class="n">auto_open</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="s">'s8_helix'</span><span class="p">)</span>
+     </div>
+    </div>
+    <div class="output_wrapper">
+     <div class="output">
+      <div class="output_area">
+       <div class="prompt output_prompt">
+        Out[13]:
+       </div>
+       <div class="output_html rendered_html output_subarea output_pyout">
+        <iframe height="525" id="igraph" scrolling="no" seamless="seamless" src="https://plot.ly/~etpinard/468" style="border:none;" width="100%">
+        </iframe>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       The full screen verison is available at the following URL:
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
+     <div class="prompt input_prompt">
+      In [14]:
+     </div>
+     <div class="inner_cell">
+      <div class="input_area">
+       <div class="highlight">
+        <pre><span class="n">py</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">fig</span><span class="p">,</span> <span class="n">validate</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span> <span class="n">auto_open</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="s">'s8_helix'</span><span class="p">)</span>
 </pre>
-</div>
-</div>
-</div>
-</div>
-<div class="output_wrapper">
-<div class="output">
-<div class="output_area">
-<div class="prompt output_prompt">
-         Out[14]:
-        </div>
-<div class="output_text output_subarea output_pyout">
-<pre>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="output_wrapper">
+     <div class="output">
+      <div class="output_area">
+       <div class="prompt output_prompt">
+        Out[14]:
+       </div>
+       <div class="output_text output_subarea output_pyout">
+        <pre>
 u'https://plot.ly/~etpinard/468'
 </pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<hr/>
-<h4 style="font-size:14pt;">
-        Go to
-        <a href="/python/streaming-tutorial/">
-         Section 7 --- Plotly's Streaming API
-        </a>
-</h4>
-<h4 style="font-size:14pt;">
-        Go to
-        <a href="#notebook">
-         top of page
-        </a>
-</h4>
-<h4 style="font-size:14pt;">
-        Go to User Guide's
-        <a href="/python/user-guide">
-         homepage
-        </a>
-</h4>
-<hr/>
-<!-- <h4 style="font-size:14pt;">Go to
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <hr/>
+      <h4 style="font-size:14pt;">
+       Go to
+       <a href="/python/streaming-tutorial/">
+        Section 7 --- Plotly's Streaming API
+       </a>
+      </h4>
+      <h4 style="font-size:14pt;">
+       Go to
+       <a href="#notebook">
+        top of page
+       </a>
+      </h4>
+      <h4 style="font-size:14pt;">
+       Go to User Guide's
+       <a href="/python/user-guide">
+        homepage
+       </a>
+      </h4>
+      <hr/>
+      <!-- <h4 style="font-size:14pt;">Go to
 
  </h4> -->
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<div style="float:right; \">
-<img align="right" src="http://i.imgur.com/4vwuxdJ.png" style="float:right; margin-left: 5px; margin-top: -10px"/>
-</div>
-<h4 style="padding-top:60px;">
-        Got Questions or Feedback?
-       </h4>
-<p>
-        About
-        <a href="https://plot.ly" target="_blank">
-         Plotly
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <div style="float:right; \">
+       <img align="right" src="/static/api_docs/image/user_guide/python/image07.png" style="float:right; margin-left: 5px; margin-top: -10px"/>
+      </div>
+      <h4 style="padding-top:60px;">
+       Got Questions or Feedback?
+      </h4>
+      <p>
+       About
+       <a href="https://plot.ly" target="_blank">
+        Plotly
+       </a>
+      </p>
+      <ul>
+       <li>
+        email: feedback@plot.ly
+       </li>
+       <li>
+        tweet:
+        <a href="https://twitter.com/plotlygraphs" target="_blank">
+         @plotlygraphs
         </a>
-</p>
-<ul>
-<li>
-         email: feedback@plot.ly
-        </li>
-<li>
-         tweet:
-         <a href="https://twitter.com/plotlygraphs" target="_blank">
-          @plotlygraphs
-         </a>
-</li>
-</ul>
-<h4 style="margin-top:50px;">
-        Notebook styling ideas
-       </h4>
-<p>
-        Big thanks to
-       </p>
-<ul>
-<li>
-<a href="http://nbviewer.ipython.org/github/CamDavidsonPilon/Probabilistic-Programming-and-Bayesian-Methods-for-Hackers/blob/master/Prologue/Prologue.ipynb" target="_blank">
-          Cam Davidson-Pilon
-         </a>
-</li>
-<li>
-<a href="http://lorenabarba.com/blog/announcing-aeropython/#.U1ULXdX1LJ4.google_plusone_share" target="_blank">
-          Lorena A. Barba
-         </a>
-</li>
-</ul>
-<p>
-<br/>
-</p>
-</div>
-</div>
-</div>
+       </li>
+      </ul>
+      <h4 style="margin-top:50px;">
+       Notebook styling ideas
+      </h4>
+      <p>
+       Big thanks to
+      </p>
+      <ul>
+       <li>
+        <a href="http://nbviewer.ipython.org/github/CamDavidsonPilon/Probabilistic-Programming-and-Bayesian-Methods-for-Hackers/blob/master/Prologue/Prologue.ipynb" target="_blank">
+         Cam Davidson-Pilon
+        </a>
+       </li>
+       <li>
+        <a href="http://lorenabarba.com/blog/announcing-aeropython/#.U1ULXdX1LJ4.google_plusone_share" target="_blank">
+         Lorena A. Barba
+        </a>
+       </li>
+      </ul>
+      <p>
+       <br/>
+      </p>
+     </div>
+    </div>
+   </div>
+  </div>
+ </div>
 
-</div>
-</div>
-</body>

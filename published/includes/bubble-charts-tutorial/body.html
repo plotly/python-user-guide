@@ -1,90 +1,89 @@
-<body>
-<div class="border-box-sizing" id="notebook" tabindex="-1">
-<div class="container" id="notebook-container">
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
 
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Section-3:-Bubble-Charts">
-        Section 3: Bubble Charts
-        <a class="anchor-link" href="#Section-3:-Bubble-Charts">
-         ¶
+ <div class="border-box-sizing" id="notebook" tabindex="-1">
+  <div class="container" id="notebook-container">
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <h2 id="Section-3:-Bubble-Charts">
+       Section 3: Bubble Charts
+       <a class="anchor-link" href="#Section-3:-Bubble-Charts">
+        ¶
+       </a>
+      </h2>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       Welcome to Plotly's Python API User Guide.
+      </p>
+      <blockquote>
+       <p>
+        Links to the other sections are on the User Guide's
+        <a href="/python/user-guide#Table-of-Contents:">
+         homepage
         </a>
-</h2>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>
-        Welcome to Plotly's Python API User Guide.
+        <br/>
+        If unfamiliar with Plotly's Python API version 1.0 see
+        <a href="/python/overview">
+         section 0
+        </a>
+        <br/>
+        The Github repository is available
+        <a href="https://github.com/plotly/python-user-guide" target="_blank">
+         here
+        </a>
        </p>
-<blockquote>
-<p>
-         Links to the other sections are on the User Guide's
-         <a href="/python/user-guide#Table-of-Contents:">
-          homepage
-         </a>
-<br/>
-         If unfamiliar with Plotly's Python API version 1.0 see
-         <a href="/python/overview">
-          section 0
-         </a>
-<br/>
-         The Github repository is available
-         <a href="https://github.com/plotly/python-user-guide" target="_blank">
-          here
-         </a>
-</p>
-</blockquote>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>
-        Section 3 is divided as follows:
-       </p>
-<ul>
-<li>
-<a href="#3.1-A-Plotly-version-of-Hans-Rosling's-bubble-chart">
-          3.1 A Plotly version of Hans Rosling's bubble chart
-         </a>
-</li>
-<li>
-<a href="#3.2-Small-multiple-bubble-chart">
-          3.2 Small multiple bubble chart
-         </a>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>
-        Quickstart (make a bubble charts of 3 bubbles):
-       </p>
-<pre><code>&gt;&gt;&gt; import plotly.plotly as py
+      </blockquote>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       Section 3 is divided as follows:
+      </p>
+      <ul>
+       <li>
+        <a href="#3.1-A-Plotly-version-of-Hans-Rosling's-bubble-chart">
+         3.1 A Plotly version of Hans Rosling's bubble chart
+        </a>
+       </li>
+       <li>
+        <a href="#3.2-Small-multiple-bubble-chart">
+         3.2 Small multiple bubble chart
+        </a>
+       </li>
+      </ul>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       Quickstart (make a bubble charts of 3 bubbles):
+      </p>
+      <pre><code>&gt;&gt;&gt; import plotly.plotly as py
 &gt;&gt;&gt; from plotly.graph_objs import *
 &gt;&gt;&gt; # auto sign-in with credentials or use py.sign_in()
 &gt;&gt;&gt; trace1 = Scatter(
@@ -99,126 +98,126 @@
 &gt;&gt;&gt; data = Data([trace1])
 &gt;&gt;&gt; py.plot(data)
 </code></pre>
-<hr/>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>
-        The User Guide assumes version 1.0 and up of Plotly's Python API.
-       </p>
-<p>
-        Check which version is installed on your machine and please upgrade if needed.
-       </p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-       In [1]:
-      </div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight">
-<pre><span class="c"># (*) Import plotly package</span>
+      <hr/>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       The User Guide assumes version 1.0 and up of Plotly's Python API.
+      </p>
+      <p>
+       Check which version is installed on your machine and please upgrade if needed.
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
+     <div class="prompt input_prompt">
+      In [1]:
+     </div>
+     <div class="inner_cell">
+      <div class="input_area">
+       <div class="highlight">
+        <pre><span class="c"># (*) Import plotly package</span>
 <span class="kn">import</span> <span class="nn">plotly</span>
 
 <span class="c"># Check plolty version (if not latest, please upgrade)</span>
 <span class="k">print</span> <span class="n">plotly</span><span class="o">.</span><span class="n">__version__</span>
 </pre>
-</div>
-</div>
-</div>
-</div>
-<div class="output_wrapper">
-<div class="output">
-<div class="output_area">
-<div class="prompt">
-</div>
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="output_wrapper">
+     <div class="output">
+      <div class="output_area">
+       <div class="prompt">
+       </div>
+       <div class="output_subarea output_stream output_stdout output_text">
+        <pre>
 1.2.3
 
 </pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>
-        See the User Guide's
-        <a href="/python/user-guide#Installation-guidelines" target="_blank">
-         homepage
-        </a>
-        for more info on installation and upgrading.
-       </p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<hr/>
-<p>
-        In this section, we analyze
-        <a href="http://www.gapminder.org/" target="_blank">
-         GapMinder
-        </a>
-        data of life expectancy and gross domestic product (GDP) of all the world's countries using bubble charts, inspired by
-        <a href="http://en.wikipedia.org/wiki/Hans_Rosling" target="_blank">
-         Hans Rosling's
-        </a>
-        work. We also cover some of Plotly's marker object options,
-       </p>
-<ul>
-<li>
-<a href="#Axis-types">
-          Axis types
-         </a>
-         and
-        </li>
-<li>
-<a href="#Hover-mode-options">
-          Hover-mode options
-         </a>
-         .
-        </li>
-</ul>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>
-        We first import a few modules and sign in to Plotly using our credentials file:
-       </p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-       In [2]:
+       </div>
       </div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight">
-<pre><span class="c"># (*) To communicate with Plotly's server, sign in with credentials file</span>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       See the User Guide's
+       <a href="/python/user-guide#Installation-guidelines" target="_blank">
+        homepage
+       </a>
+       for more info on installation and upgrading.
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <hr/>
+      <p>
+       In this section, we analyze
+       <a href="http://www.gapminder.org/" target="_blank">
+        GapMinder
+       </a>
+       data of life expectancy and gross domestic product (GDP) of all the world's countries using bubble charts, inspired by
+       <a href="http://en.wikipedia.org/wiki/Hans_Rosling" target="_blank">
+        Hans Rosling's
+       </a>
+       work. We also cover some of Plotly's marker object options,
+      </p>
+      <ul>
+       <li>
+        <a href="#Axis-types">
+         Axis types
+        </a>
+        and
+       </li>
+       <li>
+        <a href="#Hover-mode-options">
+         Hover-mode options
+        </a>
+        .
+       </li>
+      </ul>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       We first import a few modules and sign in to Plotly using our credentials file:
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
+     <div class="prompt input_prompt">
+      In [2]:
+     </div>
+     <div class="inner_cell">
+      <div class="input_area">
+       <div class="highlight">
+        <pre><span class="c"># (*) To communicate with Plotly's server, sign in with credentials file</span>
 <span class="kn">import</span> <span class="nn">plotly.plotly</span> <span class="kn">as</span> <span class="nn">py</span>  
 
 <span class="c"># (*) Useful Python/Plotly tools</span>
@@ -229,83 +228,83 @@
 
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>  <span class="c"># (*) numpy for math functions and arrays</span>
 </pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>
-        If you are not familiar with credentials files, refer to the User Guide's
-        <a href="/python/user-guide#Step-6" target="_blank">
-         homepage
-        </a>
-        .
-       </p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>
-        The data is stored in a file called
-        <code>
-         gapminderDataFiveYear.txt
-        </code>
-        . For readers looking to run this notebook, the file is in this section's Github
-        <a href="https://github.com/plotly/python-user-guide/blob/master/s3_bubble-charts" target="_blank">
-         folder
-        </a>
-        . It was originally downloaded
-        <a href="http://www.stat.ubc.ca/~jenny/notOcto/STAT545A/examples/gapminder/data/gapminderDataFiveYear.txt" target="_blank">
-         here
-        </a>
-        , thanks to
-        <a href="http://www.stat.ubc.ca/~jenny/" target="_blank">
-         Jennifer Bryan
-        </a>
-        .
-       </p>
-<p>
-        To help us manipulate the date, we use the
-        <code>
-         pandas
-        </code>
-        module in this section.
-        <br/>
-        You can download the module using pip. Simply run:
-       </p>
-<pre><code>$ pip install pandas
-</code></pre>
-<p>
-        For more info on this module, we recommand Hernán Rojas'
-        <a href="https://bitbucket.org/hrojas/learn-pandas" target="_blank">
-         Pandas tutorial
-        </a>
-        .
-       </p>
-<p>
-        So, first read the data and define a dataframe object:
-       </p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-       In [3]:
+       </div>
       </div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight">
-<pre><span class="c"># (*) Pandas for data manipulation</span>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       If you are not familiar with credentials files, refer to the User Guide's
+       <a href="/python/user-guide#Step-6" target="_blank">
+        homepage
+       </a>
+       .
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       The data is stored in a file called
+       <code>
+        gapminderDataFiveYear.txt
+       </code>
+       . For readers looking to run this notebook, the file is in this section's Github
+       <a href="https://github.com/plotly/python-user-guide/blob/master/s3_bubble-charts" target="_blank">
+        folder
+       </a>
+       . It was originally downloaded
+       <a href="http://www.stat.ubc.ca/~jenny/notOcto/STAT545A/examples/gapminder/data/gapminderDataFiveYear.txt" target="_blank">
+        here
+       </a>
+       , thanks to
+       <a href="http://www.stat.ubc.ca/~jenny/" target="_blank">
+        Jennifer Bryan
+       </a>
+       .
+      </p>
+      <p>
+       To help us manipulate the date, we use the
+       <code>
+        pandas
+       </code>
+       module in this section.
+       <br/>
+       You can download the module using pip. Simply run:
+      </p>
+      <pre><code>$ pip install pandas
+</code></pre>
+      <p>
+       For more info on this module, we recommand Hernán Rojas'
+       <a href="https://bitbucket.org/hrojas/learn-pandas" target="_blank">
+        Pandas tutorial
+       </a>
+       .
+      </p>
+      <p>
+       So, first read the data and define a dataframe object:
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
+     <div class="prompt input_prompt">
+      In [3]:
+     </div>
+     <div class="inner_cell">
+      <div class="input_area">
+       <div class="highlight">
+        <pre><span class="c"># (*) Pandas for data manipulation</span>
 <span class="kn">import</span> <span class="nn">pandas</span> <span class="kn">as</span> <span class="nn">pd</span> 
 
 <span class="c"># Read csv file and define dataframe object (df for dataframe)</span>
@@ -313,302 +312,302 @@
 
 <span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>  <span class="c"># show dataframe header to stdout</span>
 </pre>
-</div>
-</div>
-</div>
-</div>
-<div class="output_wrapper">
-<div class="output">
-<div class="output_area">
-<div class="prompt output_prompt">
-         Out[3]:
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="output_wrapper">
+     <div class="output">
+      <div class="output_area">
+       <div class="prompt output_prompt">
+        Out[3]:
+       </div>
+       <div class="output_html rendered_html output_subarea output_pyout">
+        <div style="max-height:1000px;max-width:1500px;overflow:auto;">
+         <table border="1" class="dataframe">
+          <thead>
+           <tr style="text-align: right;">
+            <th>
+            </th>
+            <th>
+             country
+            </th>
+            <th>
+             year
+            </th>
+            <th>
+             pop
+            </th>
+            <th>
+             continent
+            </th>
+            <th>
+             lifeExp
+            </th>
+            <th>
+             gdpPercap
+            </th>
+           </tr>
+          </thead>
+          <tbody>
+           <tr>
+            <th>
+             0
+            </th>
+            <td>
+             Afghanistan
+            </td>
+            <td>
+             1952
+            </td>
+            <td>
+             8425333
+            </td>
+            <td>
+             Asia
+            </td>
+            <td>
+             28.801
+            </td>
+            <td>
+             779.445314
+            </td>
+           </tr>
+           <tr>
+            <th>
+             1
+            </th>
+            <td>
+             Afghanistan
+            </td>
+            <td>
+             1957
+            </td>
+            <td>
+             9240934
+            </td>
+            <td>
+             Asia
+            </td>
+            <td>
+             30.332
+            </td>
+            <td>
+             820.853030
+            </td>
+           </tr>
+           <tr>
+            <th>
+             2
+            </th>
+            <td>
+             Afghanistan
+            </td>
+            <td>
+             1962
+            </td>
+            <td>
+             10267083
+            </td>
+            <td>
+             Asia
+            </td>
+            <td>
+             31.997
+            </td>
+            <td>
+             853.100710
+            </td>
+           </tr>
+           <tr>
+            <th>
+             3
+            </th>
+            <td>
+             Afghanistan
+            </td>
+            <td>
+             1967
+            </td>
+            <td>
+             11537966
+            </td>
+            <td>
+             Asia
+            </td>
+            <td>
+             34.020
+            </td>
+            <td>
+             836.197138
+            </td>
+           </tr>
+           <tr>
+            <th>
+             4
+            </th>
+            <td>
+             Afghanistan
+            </td>
+            <td>
+             1972
+            </td>
+            <td>
+             13079460
+            </td>
+            <td>
+             Asia
+            </td>
+            <td>
+             36.088
+            </td>
+            <td>
+             739.981106
+            </td>
+           </tr>
+          </tbody>
+         </table>
+         <p>
+          5 rows × 6 columns
+         </p>
         </div>
-<div class="output_html rendered_html output_subarea output_pyout">
-<div style="max-height:1000px;max-width:1500px;overflow:auto;">
-<table border="1" class="dataframe">
-<thead>
-<tr style="text-align: right;">
-<th>
-</th>
-<th>
-              country
-             </th>
-<th>
-              year
-             </th>
-<th>
-              pop
-             </th>
-<th>
-              continent
-             </th>
-<th>
-              lifeExp
-             </th>
-<th>
-              gdpPercap
-             </th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<th>
-              0
-             </th>
-<td>
-              Afghanistan
-             </td>
-<td>
-              1952
-             </td>
-<td>
-              8425333
-             </td>
-<td>
-              Asia
-             </td>
-<td>
-              28.801
-             </td>
-<td>
-              779.445314
-             </td>
-</tr>
-<tr>
-<th>
-              1
-             </th>
-<td>
-              Afghanistan
-             </td>
-<td>
-              1957
-             </td>
-<td>
-              9240934
-             </td>
-<td>
-              Asia
-             </td>
-<td>
-              30.332
-             </td>
-<td>
-              820.853030
-             </td>
-</tr>
-<tr>
-<th>
-              2
-             </th>
-<td>
-              Afghanistan
-             </td>
-<td>
-              1962
-             </td>
-<td>
-              10267083
-             </td>
-<td>
-              Asia
-             </td>
-<td>
-              31.997
-             </td>
-<td>
-              853.100710
-             </td>
-</tr>
-<tr>
-<th>
-              3
-             </th>
-<td>
-              Afghanistan
-             </td>
-<td>
-              1967
-             </td>
-<td>
-              11537966
-             </td>
-<td>
-              Asia
-             </td>
-<td>
-              34.020
-             </td>
-<td>
-              836.197138
-             </td>
-</tr>
-<tr>
-<th>
-              4
-             </th>
-<td>
-              Afghanistan
-             </td>
-<td>
-              1972
-             </td>
-<td>
-              13079460
-             </td>
-<td>
-              Asia
-             </td>
-<td>
-              36.088
-             </td>
-<td>
-              739.981106
-             </td>
-</tr>
-</tbody>
-</table>
-<p>
-           5 rows × 6 columns
-          </p>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>
-        The data file gives us information about life expentancy, GDP per capita and population for several years, continents and conuntry. Would it be too much to ask to condense all this information into a single plot? Using Plotly bubble chart, the answer is no.
-       </p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="3.1-A-Plotly-version-of-Hans-Rosling's-bubble-chart">
-        3.1 A Plotly version of Hans Rosling's bubble chart
-        <a class="anchor-link" href="#3.1-A-Plotly-version-of-Hans-Rosling's-bubble-chart">
-         ¶
-        </a>
-</h4>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>
-        Bubble charts a great for way to show information about several variables on a single plot. Bubble charts in Plotly are generated using the
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       The data file gives us information about life expentancy, GDP per capita and population for several years, continents and conuntry. Would it be too much to ask to condense all this information into a single plot? Using Plotly bubble chart, the answer is no.
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <h4 id="3.1-A-Plotly-version-of-Hans-Rosling's-bubble-chart">
+       3.1 A Plotly version of Hans Rosling's bubble chart
+       <a class="anchor-link" href="#3.1-A-Plotly-version-of-Hans-Rosling's-bubble-chart">
+        ¶
+       </a>
+      </h4>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       Bubble charts a great for way to show information about several variables on a single plot. Bubble charts in Plotly are generated using the
+       <code>
+        Scatter
+       </code>
+       graph object where two variables are plotted against each other following a particular color scheme and marker size distribution (i.e. the bubbles) thus relating up to four different variables.
+      </p>
+      <p>
+       So, let's plot:
+      </p>
+      <ul>
+       <li>
+        Life expentancy versus GDP per capita for a specific year, for all countries in the data file, filling in the
+        <code>
+         'y'
+        </code>
+        and
+        <code>
+         'x'
+        </code>
+        keys in
         <code>
          Scatter
         </code>
-        graph object where two variables are plotted against each other following a particular color scheme and marker size distribution (i.e. the bubbles) thus relating up to four different variables.
-       </p>
-<p>
-        So, let's plot:
-       </p>
-<ul>
-<li>
-         Life expentancy versus GDP per capita for a specific year, for all countries in the data file, filling in the
-         <code>
-          'y'
-         </code>
-         and
-         <code>
-          'x'
-         </code>
-         keys in
-         <code>
-          Scatter
-         </code>
-         .
-        </li>
-<li>
-         Marker sizes incresing with population size (the bubbles!), with the
-         <code>
-          'size'
-         </code>
-         key in the
-         <code>
-          Marker
-         </code>
-         object linked to
-         <code>
-          'marker'
-         </code>
-         in
-         <code>
-          Scatter
-         </code>
-         .
-        </li>
-<li>
-         Marker colors correspond to different continents with the
-         <code>
-          'color'
-         </code>
-         key in the
-         <code>
-          Marker
-         </code>
-         object linked to
-         <code>
-          'marker'
-         </code>
-         in
-         <code>
-          Scatter
-         </code>
-         .
-        </li>
-</ul>
-<p>
-        Finally, to make sure that each bubble is visible, we modify the opacity of each marker. This is done by linking the
+        .
+       </li>
+       <li>
+        Marker sizes incresing with population size (the bubbles!), with the
         <code>
-         'opacity'
+         'size'
         </code>
-        key in
+        key in the
         <code>
          Marker
         </code>
-        to a value between 0 and 1.
-       </p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-       In [4]:
-      </div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight">
-<pre><span class="n">help</span><span class="p">(</span><span class="n">Marker</span><span class="p">)</span>  <span class="c"># call help()</span>
+        object linked to
+        <code>
+         'marker'
+        </code>
+        in
+        <code>
+         Scatter
+        </code>
+        .
+       </li>
+       <li>
+        Marker colors correspond to different continents with the
+        <code>
+         'color'
+        </code>
+        key in the
+        <code>
+         Marker
+        </code>
+        object linked to
+        <code>
+         'marker'
+        </code>
+        in
+        <code>
+         Scatter
+        </code>
+        .
+       </li>
+      </ul>
+      <p>
+       Finally, to make sure that each bubble is visible, we modify the opacity of each marker. This is done by linking the
+       <code>
+        'opacity'
+       </code>
+       key in
+       <code>
+        Marker
+       </code>
+       to a value between 0 and 1.
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
+     <div class="prompt input_prompt">
+      In [4]:
+     </div>
+     <div class="inner_cell">
+      <div class="input_area">
+       <div class="highlight">
+        <pre><span class="n">help</span><span class="p">(</span><span class="n">Marker</span><span class="p">)</span>  <span class="c"># call help()</span>
 
 <span class="c"># notice 'color', 'size', 'sizeref', 'sizemode' and 'opacity'</span>
 </pre>
-</div>
-</div>
-</div>
-</div>
-<div class="output_wrapper">
-<div class="output">
-<div class="output_area">
-<div class="prompt">
-</div>
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="output_wrapper">
+     <div class="output">
+      <div class="output_area">
+       <div class="prompt">
+       </div>
+       <div class="output_subarea output_stream output_stdout output_text">
+        <pre>
 Help on class Marker in module plotly.graph_objs.graph_objs:
 
 class Marker(PlotlyDict)
@@ -963,31 +962,31 @@ class Marker(PlotlyDict)
 
 
 </pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>
-        Next, select one year and slice the dataframe correspondingly:
-       </p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-       In [5]:
+       </div>
       </div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight">
-<pre><span class="c"># Choose a year, find other years with df['year'].unique()</span>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       Next, select one year and slice the dataframe correspondingly:
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
+     <div class="prompt input_prompt">
+      In [5]:
+     </div>
+     <div class="inner_cell">
+      <div class="input_area">
+       <div class="highlight">
+        <pre><span class="c"># Choose a year, find other years with df['year'].unique()</span>
 <span class="n">the_year</span> <span class="o">=</span> <span class="mi">2007</span>   
 
 <span class="c"># Find indices corresponding to 'the_year'</span>
@@ -996,31 +995,31 @@ class Marker(PlotlyDict)
 <span class="c"># Grab all rows correponding to 'the_year'</span>
 <span class="n">df_year</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">i_year</span><span class="p">]</span> 
 </pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>
-        Define a dictionary of colors, one for each continent:
-       </p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-       In [6]:
+       </div>
       </div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight">
-<pre><span class="n">colors</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       Define a dictionary of colors, one for each continent:
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
+     <div class="prompt input_prompt">
+      In [6]:
+     </div>
+     <div class="inner_cell">
+      <div class="input_area">
+       <div class="highlight">
+        <pre><span class="n">colors</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span>
     <span class="n">Asia</span><span class="o">=</span><span class="s">'#1f77b4'</span><span class="p">,</span> 
     <span class="n">Europe</span><span class="o">=</span><span class="s">'#ff7f0e'</span><span class="p">,</span> 
     <span class="n">Africa</span><span class="o">=</span><span class="s">'#2ca02c'</span><span class="p">,</span>
@@ -1028,58 +1027,58 @@ class Marker(PlotlyDict)
     <span class="n">Oceania</span><span class="o">=</span><span class="s">'#9467bd'</span>
 <span class="p">)</span>
 </pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>
-        We choose to plot data associated with each continent as a different trace. To taking advantage of the regularity between each trace, we next define a trace-generating function.
-       </p>
-<p>
-        Here,
-        <code>
-         'size'
-        </code>
-        in
-        <code>
-         Marker
-        </code>
-        will be linked to an array with the population count of each country in a given continent. To fine-tune the map between to the values linked to
-        <code>
-         'size'
-        </code>
-        to rendered pixel size, we use the
-        <code>
-         'sizeref'
-        </code>
-        and
-        <code>
-         'size'
-        </code>
-        in
-        <code>
-         Marker
-        </code>
-        . Consider,
-       </p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-       In [7]:
+       </div>
       </div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight">
-<pre><span class="c"># (!) Set 'size' values to be proportional to rendered area,</span>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       We choose to plot data associated with each continent as a different trace. To taking advantage of the regularity between each trace, we next define a trace-generating function.
+      </p>
+      <p>
+       Here,
+       <code>
+        'size'
+       </code>
+       in
+       <code>
+        Marker
+       </code>
+       will be linked to an array with the population count of each country in a given continent. To fine-tune the map between to the values linked to
+       <code>
+        'size'
+       </code>
+       to rendered pixel size, we use the
+       <code>
+        'sizeref'
+       </code>
+       and
+       <code>
+        'size'
+       </code>
+       in
+       <code>
+        Marker
+       </code>
+       . Consider,
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
+     <div class="prompt input_prompt">
+      In [7]:
+     </div>
+     <div class="inner_cell">
+      <div class="input_area">
+       <div class="highlight">
+        <pre><span class="c"># (!) Set 'size' values to be proportional to rendered area,</span>
 <span class="c">#     instead of diameter. This makes the range of bubble sizes smaller</span>
 <span class="n">sizemode</span><span class="o">=</span><span class="s">'area'</span>       
 
@@ -1104,31 +1103,31 @@ class Marker(PlotlyDict)
         <span class="p">)</span>
     <span class="p">)</span>
 </pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>
-        Next, fill the data objects:
-       </p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-       In [8]:
+       </div>
       </div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight">
-<pre><span class="c"># Initialize data object </span>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       Next, fill the data objects:
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
+     <div class="prompt input_prompt">
+      In [8]:
+     </div>
+     <div class="inner_cell">
+      <div class="input_area">
+       <div class="highlight">
+        <pre><span class="c"># Initialize data object </span>
 <span class="n">data</span> <span class="o">=</span> <span class="n">Data</span><span class="p">()</span>
 
 <span class="c"># Group data frame by continent sub-dataframe (named X), </span>
@@ -1142,31 +1141,31 @@ class Marker(PlotlyDict)
         <span class="n">make_trace</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">continent</span><span class="p">,</span> <span class="n">sizes</span><span class="p">,</span> <span class="n">color</span><span class="p">)</span>  <span class="c"># append trace to data object</span>
     <span class="p">)</span>                             
 </pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>
-        Onto layout:
-       </p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-       In [9]:
+       </div>
       </div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight">
-<pre><span class="c"># Set plot and axis titles</span>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       Onto layout:
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
+     <div class="prompt input_prompt">
+      In [9]:
+     </div>
+     <div class="inner_cell">
+      <div class="input_area">
+       <div class="highlight">
+        <pre><span class="c"># Set plot and axis titles</span>
 <span class="n">title</span> <span class="o">=</span> <span class="s">"Fig 3.1a: Hans Rosling's Bubble Chart for the year {}"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">the_year</span><span class="p">)</span>
 <span class="n">x_title</span> <span class="o">=</span> <span class="s">"Gross Domestic Product per Capita [in USD of the year 2000]"</span>
 <span class="n">y_title</span> <span class="o">=</span> <span class="s">"Life Expentancy [in years]"</span>
@@ -1194,272 +1193,272 @@ class Marker(PlotlyDict)
     <span class="p">)</span>
 <span class="p">)</span>
 </pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>
-        Package the data and layout instances into
-        <code>
-         Figure
-        </code>
-        , send it to Plotly and get a plot:
-       </p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-       In [10]:
+       </div>
       </div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight">
-<pre><span class="c"># Make Figure object</span>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       Package the data and layout instances into
+       <code>
+        Figure
+       </code>
+       , send it to Plotly and get a plot:
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
+     <div class="prompt input_prompt">
+      In [10]:
+     </div>
+     <div class="inner_cell">
+      <div class="input_area">
+       <div class="highlight">
+        <pre><span class="c"># Make Figure object</span>
 <span class="n">fig</span> <span class="o">=</span> <span class="n">Figure</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="p">,</span> <span class="n">layout</span><span class="o">=</span><span class="n">layout</span><span class="p">)</span>
 
 <span class="c"># (@) Send to Plotly and show in notebook</span>
 <span class="n">py</span><span class="o">.</span><span class="n">iplot</span><span class="p">(</span><span class="n">fig</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="s">'s3_life-gdp'</span><span class="p">)</span>
 </pre>
-</div>
-</div>
-</div>
-</div>
-<div class="output_wrapper">
-<div class="output">
-<div class="output_area">
-<div class="prompt">
-</div>
-<div class="output_html rendered_html output_subarea ">
-<iframe height="525" id="igraph" scrolling="no" seamless="seamless" src="https://plot.ly/~etpinard/84" style="border:none;" width="100%">
-</iframe>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>
-        Not bad!
-       </p>
-<p>
-        Notice how Plotly automatically converted the x-axis units to k's (i.e. thousands) of USD. No need to change the ticks' labels here (imagine having tick labels of 0, 10000, 20000, 30000, etc. instead).
-       </p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h5 id="Axis-types">
-        Axis types
-        <a class="anchor-link" href="#Axis-types">
-         ¶
-        </a>
-</h5>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>
-        More generally, Plotly allow users to choose between different
-        <em>
-         exponent format
-        </em>
-        with the
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="output_wrapper">
+     <div class="output">
+      <div class="output_area">
+       <div class="prompt">
+       </div>
+       <div class="output_html rendered_html output_subarea ">
+        <iframe height="525" id="igraph" scrolling="no" seamless="seamless" src="https://plot.ly/~etpinard/84" style="border:none;" width="100%">
+        </iframe>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       Not bad!
+      </p>
+      <p>
+       Notice how Plotly automatically converted the x-axis units to k's (i.e. thousands) of USD. No need to change the ticks' labels here (imagine having tick labels of 0, 10000, 20000, 30000, etc. instead).
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <h5 id="Axis-types">
+       Axis types
+       <a class="anchor-link" href="#Axis-types">
+        ¶
+       </a>
+      </h5>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       More generally, Plotly allow users to choose between different
+       <em>
+        exponent format
+       </em>
+       with the
+       <code>
+        'exponentformat'
+       </code>
+       key in
+       <code>
+        XAxis
+       </code>
+       and
+       <code>
+        YAxis
+       </code>
+       . The available values for
+       <code>
+        'exponentformat'
+       </code>
+       are:
+      </p>
+      <ul>
+       <li>
         <code>
-         'exponentformat'
+         'none'
         </code>
-        key in
+        , for no exponents,
+       </li>
+       <li>
         <code>
-         XAxis
+         'e'
         </code>
-        and
+        , for lower-case exponent form, e.g.
         <code>
-         YAxis
+         1000
         </code>
-        . The available values for
+        is displayed as
         <code>
-         'exponentformat'
+         1e-3
         </code>
-        are:
-       </p>
-<ul>
-<li>
-<code>
-          'none'
-         </code>
-         , for no exponents,
-        </li>
-<li>
-<code>
-          'e'
-         </code>
-         , for lower-case exponent form, e.g.
-         <code>
-          1000
-         </code>
-         is displayed as
-         <code>
-          1e-3
-         </code>
-         ,
-        </li>
-<li>
-<code>
-          'E'
-         </code>
-         , for upper-case exponent form, e.g.
-         <code>
-          1000
-         </code>
-         is displayed as
-         <code>
-          1E-3
-         </code>
-         ,
-        </li>
-<li>
-<code>
-          'power'
-         </code>
-         , for powers of ten exponents, e.g.
-         <code>
-          1000
-         </code>
-         is displayed as $10^3$,
-        </li>
-<li>
-<code>
-          'SI'
-         </code>
-         , for Standard International prefixes, e.g.
-         <code>
-          10,000
-         </code>
-         is
-         <code>
-          10k
-         </code>
-         and 1 billion is
-         <code>
-          1G
-         </code>
-         ,
-        </li>
-<li>
-<code>
-          'B'
-         </code>
-         , for alternative prefixes e.g. 1 billion is
-         <code>
-          1B
-         </code>
-         .
-        </li>
-</ul>
-<p>
-        The key
+        ,
+       </li>
+       <li>
         <code>
-         'showexponent'
+         'E'
         </code>
-        , also in
+        , for upper-case exponent form, e.g.
         <code>
-         XAxis
+         1000
         </code>
-        and
+        is displayed as
         <code>
-         YAxis
+         1E-3
         </code>
-        , determines which ticks labels are displayed in exponent form. The available values for
-        <code>
-         'showexponent'
-        </code>
-        are:
-       </p>
-<ul>
-<li>
-<code>
-          'none'
-         </code>
-         , for no exponents,
-        </li>
-<li>
-<code>
-          'all'
-         </code>
-         , for exponents at all tick labels,
-        </li>
-<li>
-<code>
-          'first'
-         </code>
-         , for an exponent only at the first tick label,
-        </li>
-<li>
-<code>
-          'last'
-         </code>
-         , for an exponent only at the last tick label.
-        </li>
-</ul>
-<p>
-        In our next plot, we'll set all our exponents to
+        ,
+       </li>
+       <li>
         <code>
          'power'
         </code>
-        .
-       </p>
-<p>
-        In addition, as the relationship between GDP per capita and life expentancy appears to be logarithmic, we replot our first bubble chart on log x-axis using the
+        , for powers of ten exponents, e.g.
         <code>
-         type
+         1000
         </code>
-        key.
-       </p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-       In [11]:
-      </div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight">
-<pre><span class="n">help</span><span class="p">(</span><span class="n">XAxis</span><span class="p">)</span> <span class="c"># call help()!</span>
+        is displayed as $10^3$,
+       </li>
+       <li>
+        <code>
+         'SI'
+        </code>
+        , for Standard International prefixes, e.g.
+        <code>
+         10,000
+        </code>
+        is
+        <code>
+         10k
+        </code>
+        and 1 billion is
+        <code>
+         1G
+        </code>
+        ,
+       </li>
+       <li>
+        <code>
+         'B'
+        </code>
+        , for alternative prefixes e.g. 1 billion is
+        <code>
+         1B
+        </code>
+        .
+       </li>
+      </ul>
+      <p>
+       The key
+       <code>
+        'showexponent'
+       </code>
+       , also in
+       <code>
+        XAxis
+       </code>
+       and
+       <code>
+        YAxis
+       </code>
+       , determines which ticks labels are displayed in exponent form. The available values for
+       <code>
+        'showexponent'
+       </code>
+       are:
+      </p>
+      <ul>
+       <li>
+        <code>
+         'none'
+        </code>
+        , for no exponents,
+       </li>
+       <li>
+        <code>
+         'all'
+        </code>
+        , for exponents at all tick labels,
+       </li>
+       <li>
+        <code>
+         'first'
+        </code>
+        , for an exponent only at the first tick label,
+       </li>
+       <li>
+        <code>
+         'last'
+        </code>
+        , for an exponent only at the last tick label.
+       </li>
+      </ul>
+      <p>
+       In our next plot, we'll set all our exponents to
+       <code>
+        'power'
+       </code>
+       .
+      </p>
+      <p>
+       In addition, as the relationship between GDP per capita and life expentancy appears to be logarithmic, we replot our first bubble chart on log x-axis using the
+       <code>
+        type
+       </code>
+       key.
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
+     <div class="prompt input_prompt">
+      In [11]:
+     </div>
+     <div class="inner_cell">
+      <div class="input_area">
+       <div class="highlight">
+        <pre><span class="n">help</span><span class="p">(</span><span class="n">XAxis</span><span class="p">)</span> <span class="c"># call help()!</span>
 
 <span class="c"># notice the 'type' key!</span>
 </pre>
-</div>
-</div>
-</div>
-</div>
-<div class="output_wrapper">
-<div class="output">
-<div class="output_area">
-<div class="prompt">
-</div>
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="output_wrapper">
+     <div class="output">
+      <div class="output_area">
+       <div class="prompt">
+       </div>
+       <div class="output_subarea output_stream output_stdout output_text">
+        <pre>
 Help on class XAxis in module plotly.graph_objs.graph_objs:
 
 class XAxis(PlotlyDict)
@@ -1871,90 +1870,90 @@ class XAxis(PlotlyDict)
 
 
 </pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>
-        So, changing the axis type is as simple as adding a key-value pair in
-        <code>
-         XAxis
-        </code>
-        (or
-        <code>
-         YAxis
-        </code>
-        ).
-       </p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h5 id="Hover-mode-options">
-        Hover-mode options
-        <a class="anchor-link" href="#Hover-mode-options">
-         ¶
-        </a>
-</h5>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>
-        Moreover, let's utilize Plotly's intractability by adding some hover text (the
-        <code>
-         'text'
-        </code>
-        key in
-        <code>
-         Scatter
-        </code>
-        ) and tweaking the plot's
-        <em>
-         hover mode
-        </em>
-        .
-       </p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-       In [12]:
+       </div>
       </div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight">
-<pre><span class="n">help</span><span class="p">(</span><span class="n">Layout</span><span class="p">)</span>  <span class="c"># call help()! </span>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       So, changing the axis type is as simple as adding a key-value pair in
+       <code>
+        XAxis
+       </code>
+       (or
+       <code>
+        YAxis
+       </code>
+       ).
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <h5 id="Hover-mode-options">
+       Hover-mode options
+       <a class="anchor-link" href="#Hover-mode-options">
+        ¶
+       </a>
+      </h5>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       Moreover, let's utilize Plotly's intractability by adding some hover text (the
+       <code>
+        'text'
+       </code>
+       key in
+       <code>
+        Scatter
+       </code>
+       ) and tweaking the plot's
+       <em>
+        hover mode
+       </em>
+       .
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
+     <div class="prompt input_prompt">
+      In [12]:
+     </div>
+     <div class="inner_cell">
+      <div class="input_area">
+       <div class="highlight">
+        <pre><span class="n">help</span><span class="p">(</span><span class="n">Layout</span><span class="p">)</span>  <span class="c"># call help()! </span>
 
 <span class="c"># notice 'hovermode'!</span>
 </pre>
-</div>
-</div>
-</div>
-</div>
-<div class="output_wrapper">
-<div class="output">
-<div class="output_area">
-<div class="prompt">
-</div>
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="output_wrapper">
+     <div class="output">
+      <div class="output_area">
+       <div class="prompt">
+       </div>
+       <div class="output_subarea output_stream output_stdout output_text">
+        <pre>
 Help on class Layout in module plotly.graph_objs.graph_objs:
 
 class Layout(PlotlyDict)
@@ -2369,61 +2368,61 @@ class Layout(PlotlyDict)
 
 
 </pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>
-        By default, when hovering over a data point Plotly prints its y-value near the cursor and its x-value on the x-axis. The default behavior corresponds to
-        <code>
-         'hovermode':'x'
-        </code>
-        in
-        <code>
-         Layout
-        </code>
-        . In contrast, with
-        <code>
-         hovermode':'y'
-        </code>
-        ,  Plotly prints x-values near the cursor and y-values on the y-axis.
-       </p>
-<p>
-        Alternatively, when
-        <code>
-         'hovermode'
-        </code>
-        is set to
-        <code>
-         'closest'
-        </code>
-        , information about the data point closest to where the viewer is hovering appears next to the cursor. Plotly prints this info inside the same text box as the text linked to the
-        <code>
-         'text'
-        </code>
-        key (if defined) of the trace object in question.
-       </p>
-<p>
-        So, we make a few updates to the current figure object:
-       </p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-       In [13]:
+       </div>
       </div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight">
-<pre><span class="c"># Update 'xaxis' key, set it to log type and with a power exponent format</span>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       By default, when hovering over a data point Plotly prints its y-value near the cursor and its x-value on the x-axis. The default behavior corresponds to
+       <code>
+        'hovermode':'x'
+       </code>
+       in
+       <code>
+        Layout
+       </code>
+       . In contrast, with
+       <code>
+        hovermode':'y'
+       </code>
+       ,  Plotly prints x-values near the cursor and y-values on the y-axis.
+      </p>
+      <p>
+       Alternatively, when
+       <code>
+        'hovermode'
+       </code>
+       is set to
+       <code>
+        'closest'
+       </code>
+       , information about the data point closest to where the viewer is hovering appears next to the cursor. Plotly prints this info inside the same text box as the text linked to the
+       <code>
+        'text'
+       </code>
+       key (if defined) of the trace object in question.
+      </p>
+      <p>
+       So, we make a few updates to the current figure object:
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
+     <div class="prompt input_prompt">
+      In [13]:
+     </div>
+     <div class="inner_cell">
+      <div class="input_area">
+       <div class="highlight">
+        <pre><span class="c"># Update 'xaxis' key, set it to log type and with a power exponent format</span>
 <span class="n">fig</span><span class="p">[</span><span class="s">'layout'</span><span class="p">][</span><span class="s">'xaxis'</span><span class="p">]</span><span class="o">.</span><span class="n">update</span><span class="p">(</span>
     <span class="nb">type</span><span class="o">=</span><span class="s">'log'</span><span class="p">,</span>
     <span class="n">exponentformat</span><span class="o">=</span><span class="s">'power'</span><span class="p">,</span>
@@ -2439,31 +2438,31 @@ class Layout(PlotlyDict)
     <span class="n">height</span><span class="o">=</span><span class="mi">500</span><span class="p">,</span>           <span class="c"># plot height</span>
 <span class="p">)</span>
 </pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>
-        Next, add hover text presenting the values of all the variables in the dataset at each data point on our figure. To do so, we need to update each trace object as follows:
-       </p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-       In [14]:
+       </div>
       </div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight">
-<pre><span class="c"># Define a hover-text generating function (returns a list of strings)</span>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       Next, add hover text presenting the values of all the variables in the dataset at each data point on our figure. To do so, we need to update each trace object as follows:
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
+     <div class="prompt input_prompt">
+      In [14]:
+     </div>
+     <div class="inner_cell">
+      <div class="input_area">
+       <div class="highlight">
+        <pre><span class="c"># Define a hover-text generating function (returns a list of strings)</span>
 <span class="k">def</span> <span class="nf">make_text</span><span class="p">(</span><span class="n">X</span><span class="p">):</span>
     <span class="k">return</span> <span class="s">'Country: </span><span class="si">%s</span><span class="se">\</span>
 <span class="s">    &lt;br&gt;Life Expectancy: </span><span class="si">%s</span><span class="s"> years</span><span class="se">\</span>
@@ -2479,46 +2478,46 @@ class Layout(PlotlyDict)
     <span class="n">fig</span><span class="p">[</span><span class="s">'data'</span><span class="p">][</span><span class="n">i_trace</span><span class="p">]</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">text</span><span class="o">=</span><span class="n">text</span><span class="p">)</span>         <span class="c"># update trace i</span>
     <span class="n">i_trace</span> <span class="o">+=</span> <span class="mi">1</span>                                   <span class="c"># inc. trace counter</span>
 </pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>
-        The
-        <code>
-         apply()
-        </code>
-        dataframe method loops through every row (with
-        <code>
-         axis=1
-        </code>
-        ) and calls a given function, in our case
-        <code>
-         make_text()
-        </code>
-        .
-       </p>
-<p>
-        Before sending the figure object to Plotly, add an annotation citing the data source.
-       </p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-       In [15]:
+       </div>
       </div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight">
-<pre><span class="c"># Update layout with an annotation object in 'annotations' (linked to a list)</span>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       The
+       <code>
+        apply()
+       </code>
+       dataframe method loops through every row (with
+       <code>
+        axis=1
+       </code>
+       ) and calls a given function, in our case
+       <code>
+        make_text()
+       </code>
+       .
+      </p>
+      <p>
+       Before sending the figure object to Plotly, add an annotation citing the data source.
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
+     <div class="prompt input_prompt">
+      In [15]:
+     </div>
+     <div class="inner_cell">
+      <div class="input_area">
+       <div class="highlight">
+        <pre><span class="c"># Update layout with an annotation object in 'annotations' (linked to a list)</span>
 <span class="n">fig</span><span class="p">[</span><span class="s">'layout'</span><span class="p">]</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">annotations</span><span class="o">=</span><span class="n">Annotations</span><span class="p">([</span>
     <span class="n">Annotation</span><span class="p">(</span>
         <span class="n">text</span><span class="o">=</span><span class="s">'Data source: GapMinder 2007'</span><span class="p">,</span>  <span class="c"># annotation text</span>
@@ -2537,208 +2536,208 @@ class Layout(PlotlyDict)
 <span class="n">title</span> <span class="o">=</span> <span class="s">"Fig 3.1b: Hans Rosling's Bubble Chart for the year {}"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">the_year</span><span class="p">)</span>
 <span class="n">fig</span><span class="p">[</span><span class="s">'layout'</span><span class="p">]</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="n">title</span><span class="p">)</span>
 </pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>
-        This yields
-       </p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-       In [16]:
+       </div>
       </div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight">
-<pre><span class="c"># (@) Send to Plotly and show in notebook</span>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       This yields
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
+     <div class="prompt input_prompt">
+      In [16]:
+     </div>
+     <div class="inner_cell">
+      <div class="input_area">
+       <div class="highlight">
+        <pre><span class="c"># (@) Send to Plotly and show in notebook</span>
 <span class="n">py</span><span class="o">.</span><span class="n">iplot</span><span class="p">(</span><span class="n">fig</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="s">'s3_life-gdp-log'</span><span class="p">)</span>    
 </pre>
-</div>
-</div>
-</div>
-</div>
-<div class="output_wrapper">
-<div class="output">
-<div class="output_area">
-<div class="prompt">
-</div>
-<div class="output_html rendered_html output_subarea ">
-<iframe height="525" id="igraph" scrolling="no" seamless="seamless" src="https://plot.ly/~etpinard/191" style="border:none;" width="100%">
-</iframe>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>
-        Not a bad-looking plot.
-       </p>
-<p>
-        Spend some time hovering over the bubbles and admire Plotly's interactibility!
-       </p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>
-        If you are feeling adventurous, jump to
-        <a href="/python/streaming-tutorial" target="_blank">
-         section 7
-        </a>
-        to learn how to make an
-        <a href="/python/streaming-bubbles-tutorial" target="_blank">
-         annimated version
-        </a>
-        of Hans Rosling's bubble chart with Plotly's streaming API.
-       </p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="3.2-Small-multiple-bubble-chart">
-        3.2 Small multiple bubble chart
-        <a class="anchor-link" href="#3.2-Small-multiple-bubble-chart">
-         ¶
-        </a>
-</h3>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>
-        Even though we managed to incorporate a lot of information in our first two bubble charts, only one year's worth of data could be displayed. Our next plot will feature the time evolution of the GDP per capita variable in the GapMinder dataset using a
-        <em>
-         small multiple
-        </em>
-        .
-       </p>
-<p>
-        A small multiple is a series of similar graphics or charts plotted as subplots allowing them to be easily compared with one another. In our case, there will be one subplot per country. Each subplot will show GDP per capita versus time where the size of each data point will be a function of the life expectancy of that year.
-       </p>
-<p>
-        So first, find the start and end year as well as the number of countries in the dataset:
-       </p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-       In [17]:
+       </div>
       </div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight">
-<pre><span class="c"># Start year, end year and number of year is dataset</span>
+     </div>
+    </div>
+    <div class="output_wrapper">
+     <div class="output">
+      <div class="output_area">
+       <div class="prompt">
+       </div>
+       <div class="output_html rendered_html output_subarea ">
+        <iframe height="525" id="igraph" scrolling="no" seamless="seamless" src="https://plot.ly/~etpinard/191" style="border:none;" width="100%">
+        </iframe>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       Not a bad-looking plot.
+      </p>
+      <p>
+       Spend some time hovering over the bubbles and admire Plotly's interactibility!
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       If you are feeling adventurous, jump to
+       <a href="/python/streaming-tutorial" target="_blank">
+        section 7
+       </a>
+       to learn how to make an
+       <a href="/python/streaming-bubbles-tutorial" target="_blank">
+        annimated version
+       </a>
+       of Hans Rosling's bubble chart with Plotly's streaming API.
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <h3 id="3.2-Small-multiple-bubble-chart">
+       3.2 Small multiple bubble chart
+       <a class="anchor-link" href="#3.2-Small-multiple-bubble-chart">
+        ¶
+       </a>
+      </h3>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       Even though we managed to incorporate a lot of information in our first two bubble charts, only one year's worth of data could be displayed. Our next plot will feature the time evolution of the GDP per capita variable in the GapMinder dataset using a
+       <em>
+        small multiple
+       </em>
+       .
+      </p>
+      <p>
+       A small multiple is a series of similar graphics or charts plotted as subplots allowing them to be easily compared with one another. In our case, there will be one subplot per country. Each subplot will show GDP per capita versus time where the size of each data point will be a function of the life expectancy of that year.
+      </p>
+      <p>
+       So first, find the start and end year as well as the number of countries in the dataset:
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
+     <div class="prompt input_prompt">
+      In [17]:
+     </div>
+     <div class="inner_cell">
+      <div class="input_area">
+       <div class="highlight">
+        <pre><span class="c"># Start year, end year and number of year is dataset</span>
 <span class="k">print</span> <span class="n">df</span><span class="p">[</span><span class="s">'year'</span><span class="p">]</span><span class="o">.</span><span class="n">min</span><span class="p">(),</span> <span class="n">df</span><span class="p">[</span><span class="s">'year'</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">(),</span> <span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s">'year'</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">())</span>
 </pre>
-</div>
-</div>
-</div>
-</div>
-<div class="output_wrapper">
-<div class="output">
-<div class="output_area">
-<div class="prompt">
-</div>
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="output_wrapper">
+     <div class="output">
+      <div class="output_area">
+       <div class="prompt">
+       </div>
+       <div class="output_subarea output_stream output_stdout output_text">
+        <pre>
 1952 2007 12
 
 </pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-       In [18]:
+       </div>
       </div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight">
-<pre><span class="n">countries</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s">'country'</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span>            <span class="c"># list of countries</span>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
+     <div class="prompt input_prompt">
+      In [18]:
+     </div>
+     <div class="inner_cell">
+      <div class="input_area">
+       <div class="highlight">
+        <pre><span class="n">countries</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s">'country'</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span>            <span class="c"># list of countries</span>
 <span class="n">N_country</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">countries</span><span class="p">)</span>                    <span class="c"># number of countries</span>
 <span class="n">N_rowcol</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">ceil</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">N_country</span><span class="p">)))</span>   <span class="c"># size of the square subplot grid</span>
 
 <span class="k">print</span> <span class="n">N_country</span><span class="p">,</span> <span class="n">N_rowcol</span>  <span class="c"># print to screen</span>
 </pre>
-</div>
-</div>
-</div>
-</div>
-<div class="output_wrapper">
-<div class="output">
-<div class="output_area">
-<div class="prompt">
-</div>
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="output_wrapper">
+     <div class="output">
+      <div class="output_area">
+       <div class="prompt">
+       </div>
+       <div class="output_subarea output_stream output_stdout output_text">
+        <pre>
 142 12
 
 </pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>
-        There are 142 countries in the dataset and therefore, choosing to have a square small multiple for aesthetics, we need a 12 by 12 subplot grid to include every country. Consequently, there will be 2 empty subplots.
-       </p>
-<p>
-        Next, generate a 12 by 12 subplot grid using
-        <code>
-         get_subplots()
-        </code>
-        :
-       </p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-       In [19]:
+       </div>
       </div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight">
-<pre><span class="c"># Generate Figure object with 144 axes (12 rows x 12 columns),</span>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       There are 142 countries in the dataset and therefore, choosing to have a square small multiple for aesthetics, we need a 12 by 12 subplot grid to include every country. Consequently, there will be 2 empty subplots.
+      </p>
+      <p>
+       Next, generate a 12 by 12 subplot grid using
+       <code>
+        get_subplots()
+       </code>
+       :
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
+     <div class="prompt input_prompt">
+      In [19]:
+     </div>
+     <div class="inner_cell">
+      <div class="input_area">
+       <div class="highlight">
+        <pre><span class="c"># Generate Figure object with 144 axes (12 rows x 12 columns),</span>
 <span class="n">fig</span> <span class="o">=</span> <span class="n">tls</span><span class="o">.</span><span class="n">get_subplots</span><span class="p">(</span>
     <span class="n">rows</span><span class="o">=</span> <span class="n">N_rowcol</span><span class="p">,</span>            <span class="c"># number of rows</span>
     <span class="n">columns</span><span class="o">=</span> <span class="n">N_rowcol</span><span class="p">,</span>         <span class="c"># number of columns</span>
@@ -2747,17 +2746,17 @@ class Layout(PlotlyDict)
     <span class="n">print_grid</span><span class="o">=</span><span class="bp">True</span>            <span class="c"># print axis grid ids to screen</span>
 <span class="p">)</span>
 </pre>
-</div>
-</div>
-</div>
-</div>
-<div class="output_wrapper">
-<div class="output">
-<div class="output_area">
-<div class="prompt">
-</div>
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="output_wrapper">
+     <div class="output">
+      <div class="output_area">
+       <div class="prompt">
+       </div>
+       <div class="output_subarea output_stream output_stdout output_text">
+        <pre>
 This is the format of your plot grid!
 [133]	[134]	[135]	[136]	[137]	[138]	[139]	[140]	[141]	[142]	[143]	[144]	
 [121]	[122]	[123]	[124]	[125]	[126]	[127]	[128]	[129]	[130]	[131]	[132]	
@@ -2774,54 +2773,54 @@ This is the format of your plot grid!
 
 
 </pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>
-        In the current version of the Plotly Python package,
-        <code>
-         get_subplots()
-        </code>
-        generates subplots axes row-wise starting from the bottom left corner of the plot. For example, the
-        <code>
-         xaxis1
-        </code>
-        and
-        <code>
-         yaxis1
-        </code>
-        are set at the bottom left corner of the subplot grid and the last
-        <code>
-         xaxis
-        </code>
-        /
-        <code>
-         yaxis
-        </code>
-        pair is at the top right corner.
-       </p>
-<p>
-        For presentation purposes, we will plot all the countries in the dataset in alphabetical order starting the top left corner of the subplot grid. To do so, we choose to modify the configuration of axis ids in the subplot grid. Consider,
-       </p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-       In [20]:
+       </div>
       </div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight">
-<pre><span class="c"># Function to make list of subplot indices</span>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       In the current version of the Plotly Python package,
+       <code>
+        get_subplots()
+       </code>
+       generates subplots axes row-wise starting from the bottom left corner of the plot. For example, the
+       <code>
+        xaxis1
+       </code>
+       and
+       <code>
+        yaxis1
+       </code>
+       are set at the bottom left corner of the subplot grid and the last
+       <code>
+        xaxis
+       </code>
+       /
+       <code>
+        yaxis
+       </code>
+       pair is at the top right corner.
+      </p>
+      <p>
+       For presentation purposes, we will plot all the countries in the dataset in alphabetical order starting the top left corner of the subplot grid. To do so, we choose to modify the configuration of axis ids in the subplot grid. Consider,
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
+     <div class="prompt input_prompt">
+      In [20]:
+     </div>
+     <div class="inner_cell">
+      <div class="input_area">
+       <div class="highlight">
+        <pre><span class="c"># Function to make list of subplot indices</span>
 <span class="k">def</span> <span class="nf">get_splts</span><span class="p">(</span><span class="n">N_rowcol</span><span class="p">,</span> <span class="n">N_country</span><span class="p">):</span>
 
     <span class="n">N_splt</span><span class="o">=</span><span class="n">N_rowcol</span><span class="o">**</span><span class="mi">2</span>         <span class="c"># number of subplots</span>
@@ -2849,76 +2848,76 @@ This is the format of your plot grid!
 
 <span class="k">print</span> <span class="n">splts</span>  <span class="c"># print list</span>
 </pre>
-</div>
-</div>
-</div>
-</div>
-<div class="output_wrapper">
-<div class="output">
-<div class="output_area">
-<div class="prompt">
-</div>
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="output_wrapper">
+     <div class="output">
+      <div class="output_area">
+       <div class="prompt">
+       </div>
+       <div class="output_subarea output_stream output_stdout output_text">
+        <pre>
 [133, 134, 135, 136, 137, 138, 139, 140, 141, 142, 143, 144, 121, 122, 123, 124, 125, 126, 127, 128, 129, 130, 131, 132, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
 </pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>
-        The first item in
-        <code>
-         splts
-        </code>
-        corresponds to the id of the top left axes, the last item is third id from the bottom right corner, leaving two empty sets of axes, and so on. Consequently, given the list of countries in alphabetical order (thanks
-        <code>
-         pandas
-        </code>
-        !), each country's data can be easily matched to the appropriate axes using
-        <code>
-         sbplts
-        </code>
-        .
-       </p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>
-        Next, define a trace-generating function. As before in
-        <a href="#3.1-A-Plotly-version-of-Hans-Rosling's-bubble-chart">
-         subsection 3.1
-        </a>
-        the color of each bubble is determined by the continent and hover text is added using
-        <code>
-         make_text()
-        </code>
-        :
-       </p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-       In [21]:
+       </div>
       </div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight">
-<pre><span class="c"># (!) Set ..</span>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       The first item in
+       <code>
+        splts
+       </code>
+       corresponds to the id of the top left axes, the last item is third id from the bottom right corner, leaving two empty sets of axes, and so on. Consequently, given the list of countries in alphabetical order (thanks
+       <code>
+        pandas
+       </code>
+       !), each country's data can be easily matched to the appropriate axes using
+       <code>
+        sbplts
+       </code>
+       .
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       Next, define a trace-generating function. As before in
+       <a href="#3.1-A-Plotly-version-of-Hans-Rosling's-bubble-chart">
+        subsection 3.1
+       </a>
+       the color of each bubble is determined by the continent and hover text is added using
+       <code>
+        make_text()
+       </code>
+       :
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
+     <div class="prompt input_prompt">
+      In [21]:
+     </div>
+     <div class="inner_cell">
+      <div class="input_area">
+       <div class="highlight">
+        <pre><span class="c"># (!) Set ..</span>
 <span class="n">sizemode</span><span class="o">=</span><span class="s">'dimeter'</span>
 <span class="n">sizeref</span><span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s">'lifeExp'</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">()</span><span class="o">/</span><span class="mi">30</span>
 
@@ -2941,74 +2940,74 @@ This is the format of your plot grid!
         <span class="n">yaxis</span><span class="o">=</span> <span class="s">'y{}'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">splt</span><span class="p">)</span>   <span class="c"># (!) bind coordinate to given y-axis</span>
     <span class="p">)</span>
 </pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>
-        To try to limit the amount of redundant information on the plot, only subplots on the left-hand side of the subplot grid will have labelled y axes and only subplots on the bottom row of the subplot grid will have labelled x axes.
-       </p>
-<p>
-        Additionally, for better comparisons between countries, all subplots will have the same axis range. So, let's get an idea of the range in GDP per capita in the dataset:
-       </p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-       In [22]:
+       </div>
       </div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight">
-<pre><span class="n">df</span><span class="p">[</span><span class="s">'gdpPercap'</span><span class="p">]</span><span class="o">.</span><span class="n">min</span><span class="p">(),</span> <span class="n">df</span><span class="p">[</span><span class="s">'gdpPercap'</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       To try to limit the amount of redundant information on the plot, only subplots on the left-hand side of the subplot grid will have labelled y axes and only subplots on the bottom row of the subplot grid will have labelled x axes.
+      </p>
+      <p>
+       Additionally, for better comparisons between countries, all subplots will have the same axis range. So, let's get an idea of the range in GDP per capita in the dataset:
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
+     <div class="prompt input_prompt">
+      In [22]:
+     </div>
+     <div class="inner_cell">
+      <div class="input_area">
+       <div class="highlight">
+        <pre><span class="n">df</span><span class="p">[</span><span class="s">'gdpPercap'</span><span class="p">]</span><span class="o">.</span><span class="n">min</span><span class="p">(),</span> <span class="n">df</span><span class="p">[</span><span class="s">'gdpPercap'</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
 </pre>
-</div>
-</div>
-</div>
-</div>
-<div class="output_wrapper">
-<div class="output">
-<div class="output_area">
-<div class="prompt output_prompt">
-         Out[22]:
-        </div>
-<div class="output_text output_subarea output_pyout">
-<pre>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="output_wrapper">
+     <div class="output">
+      <div class="output_area">
+       <div class="prompt output_prompt">
+        Out[22]:
+       </div>
+       <div class="output_text output_subarea output_pyout">
+        <pre>
 (241.16587650000002, 113523.1329)
 </pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>
-        Then, define a few axes style dictionaries that will be used to update each axis' style:
-       </p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-       In [23]:
+       </div>
       </div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight">
-<pre><span class="c"># For all x axes</span>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       Then, define a few axes style dictionaries that will be used to update each axis' style:
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
+     <div class="prompt input_prompt">
+      In [23]:
+     </div>
+     <div class="inner_cell">
+      <div class="input_area">
+       <div class="highlight">
+        <pre><span class="c"># For all x axes</span>
 <span class="n">axis_style_x</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="nb">range</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1950</span><span class="p">,</span><span class="mi">2010</span><span class="p">])</span>  <span class="c"># set x-axis range</span>
 
 <span class="c"># For all y axes</span>
@@ -3047,31 +3046,31 @@ This is the format of your plot grid!
     <span class="n">showticklabels</span><span class="o">=</span><span class="bp">False</span>
 <span class="p">)</span>
 </pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>
-        Now, make an annotation-generating function to label the subplots with each country's name:
-       </p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-       In [24]:
+       </div>
       </div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight">
-<pre><span class="c"># Define an annotation-generating function, to label each subplot</span>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       Now, make an annotation-generating function to label the subplots with each country's name:
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
+     <div class="prompt input_prompt">
+      In [24]:
+     </div>
+     <div class="inner_cell">
+      <div class="input_area">
+       <div class="highlight">
+        <pre><span class="c"># Define an annotation-generating function, to label each subplot</span>
 <span class="k">def</span> <span class="nf">make_splt_anno</span><span class="p">(</span><span class="n">splt</span><span class="p">,</span> <span class="n">country</span><span class="p">):</span>
     <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">country</span><span class="p">)</span><span class="o">&gt;</span><span class="mi">14</span><span class="p">:</span>
         <span class="n">country</span> <span class="o">=</span> <span class="n">country</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">14</span><span class="p">]</span><span class="o">+</span><span class="s">'.'</span> <span class="c"># truncate country's name if too long</span>
@@ -3086,31 +3085,31 @@ This is the format of your plot grid!
         <span class="n">font</span><span class="o">=</span> <span class="n">Font</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="mi">14</span><span class="p">),</span>        <span class="c"># font size</span>
     <span class="p">)</span>
 </pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>
-        Add a few keys to the layout object:
-       </p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-       In [25]:
+       </div>
       </div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight">
-<pre><span class="n">width</span><span class="o">=</span><span class="mi">2000</span>   <span class="c"># plot's width </span>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       Add a few keys to the layout object:
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
+     <div class="prompt input_prompt">
+      In [25]:
+     </div>
+     <div class="inner_cell">
+      <div class="input_area">
+       <div class="highlight">
+        <pre><span class="n">width</span><span class="o">=</span><span class="mi">2000</span>   <span class="c"># plot's width </span>
 <span class="n">height</span><span class="o">=</span><span class="mi">1800</span>  <span class="c">#  and height in pixels</span>
 
 <span class="n">title</span> <span class="o">=</span> <span class="s">"Fig 3.2: GDP per Capita from 1952 to 2007 </span><span class="se">\</span>
@@ -3127,31 +3126,31 @@ This is the format of your plot grid!
     
 <span class="n">fig</span><span class="p">[</span><span class="s">'layout'</span><span class="p">][</span><span class="s">'annotations'</span><span class="p">]</span> <span class="o">=</span> <span class="n">Annotations</span><span class="p">([])</span>  <span class="c"># init. 'annotations' key</span>
 </pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>
-        Now, loop through every country in the dataframe and fill in the data object and update each axis' style:
-       </p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-       In [26]:
+       </div>
       </div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight">
-<pre><span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>  <span class="c"># init. subplot counter</span>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       Now, loop through every country in the dataframe and fill in the data object and update each axis' style:
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
+     <div class="prompt input_prompt">
+      In [26]:
+     </div>
+     <div class="inner_cell">
+      <div class="input_area">
+       <div class="highlight">
+        <pre><span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>  <span class="c"># init. subplot counter</span>
 
 <span class="c"># Group dataframe by country in alphabetical order and loop</span>
 <span class="k">for</span> <span class="n">country</span><span class="p">,</span> <span class="n">X</span> <span class="ow">in</span> <span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s">'country'</span><span class="p">):</span>
@@ -3189,202 +3188,201 @@ This is the format of your plot grid!
     
     <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>   <span class="c"># increment counter</span>
 </pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>
-        Before sending the figure object to Plotly, we must also update the axis style of the empty subplots:
-       </p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-       In [27]:
+       </div>
       </div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight">
-<pre><span class="k">for</span> <span class="n">splt</span> <span class="ow">in</span> <span class="n">splts_empty</span><span class="p">:</span>  <span class="c"># loop through list of empty subplot ids</span>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       Before sending the figure object to Plotly, we must also update the axis style of the empty subplots:
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
+     <div class="prompt input_prompt">
+      In [27]:
+     </div>
+     <div class="inner_cell">
+      <div class="input_area">
+       <div class="highlight">
+        <pre><span class="k">for</span> <span class="n">splt</span> <span class="ow">in</span> <span class="n">splts_empty</span><span class="p">:</span>  <span class="c"># loop through list of empty subplot ids</span>
     <span class="n">fig</span><span class="p">[</span><span class="s">'layout'</span><span class="p">][</span><span class="s">'xaxis{}'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">splt</span><span class="p">)]</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">axis_style_empty</span><span class="p">)</span>
     <span class="n">fig</span><span class="p">[</span><span class="s">'layout'</span><span class="p">][</span><span class="s">'yaxis{}'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">splt</span><span class="p">)]</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">axis_style_empty</span><span class="p">)</span>
 </pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>
-        We are now ready to send the figure object to Plotly and see the results:
-       </p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-       In [28]:
+       </div>
       </div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight">
-<pre><span class="c"># (@) Send figure object to Plotly, show plot in notebook</span>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       We are now ready to send the figure object to Plotly and see the results:
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
+     <div class="prompt input_prompt">
+      In [28]:
+     </div>
+     <div class="inner_cell">
+      <div class="input_area">
+       <div class="highlight">
+        <pre><span class="c"># (@) Send figure object to Plotly, show plot in notebook</span>
 <span class="n">py</span><span class="o">.</span><span class="n">iplot</span><span class="p">(</span><span class="n">fig</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="s">'s3_small-multiples'</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="n">height</span><span class="p">)</span>       
 
 <span class="c"># adjust output cell with 'width' and 'height'</span>
 </pre>
-</div>
-</div>
-</div>
-</div>
-<div class="output_wrapper">
-<div class="output">
-<div class="output_area">
-<div class="prompt">
-</div>
-<div class="output_html rendered_html output_subarea ">
-<iframe height="1800" id="igraph" scrolling="no" seamless="seamless" src="https://plot.ly/~etpinard/310/1975/1775" style="border:none;" width="2000">
-</iframe>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>
-        To see this figure in separate tab, use this
-        <a href="https://plot.ly/~etpinard/310" target="_blank">
-         link
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="output_wrapper">
+     <div class="output">
+      <div class="output_area">
+       <div class="prompt">
+       </div>
+       <div class="output_html rendered_html output_subarea ">
+        <iframe height="1800" id="igraph" scrolling="no" seamless="seamless" src="https://plot.ly/~etpinard/310/1975/1775" style="border:none;" width="2000">
+        </iframe>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       To see this figure in separate tab, use this
+       <a href="https://plot.ly/~etpinard/310" target="_blank">
+        link
+       </a>
+       .
+      </p>
+      <p>
+       Who wants to print this on a T-shirt?
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <hr/>
+      <h4 style="font-size:14pt;">
+       Go to
+       <a href="/python/histograms-and-box-plots-tutorial">
+        Section 4 --- Histograms and Box Plots
+       </a>
+      </h4>
+      <h4 style="font-size:14pt;">
+       Go to
+       <a href="/python/bar-charts-tutorial">
+        Section 2 --- Bar Charts
+       </a>
+      </h4>
+      <h4 style="font-size:14pt;">
+       Go to
+       <a href="#notebook">
+        top of page
+       </a>
+      </h4>
+      <h4 style="font-size:14pt;">
+       Go to User Guide's
+       <a href="/python/user-guide">
+        homepage
+       </a>
+      </h4>
+      <hr/>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <div style="float:right; \">
+       <img align="right" src="/static/api_docs/image/user_guide/python/image07.png" style="float:right; margin-left: 5px; margin-top: -10px"/>
+      </div>
+      <h4>
+       Got Questions or Feedback?
+      </h4>
+      <p>
+       About
+       <a href="https://plot.ly" target="_blank">
+        Plotly
+       </a>
+      </p>
+      <ul>
+       <li>
+        email: feedback@plot.ly
+       </li>
+       <li>
+        tweet:
+        <a href="https://twitter.com/plotlygraphs" target="_blank">
+         @plotlygraphs
         </a>
-        .
-       </p>
-<p>
-        Who wants to print this on a T-shirt?
-       </p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<hr/>
-<h4 style="font-size:14pt;">
-        Go to
-        <a href="/python/histograms-and-box-plots-tutorial">
-         Section 4 --- Histograms and Box Plots
+       </li>
+      </ul>
+      <p>
+       About the
+       <a href="https://github.com/plotly/python-user-guide" target="_blank">
+        User Guide
+       </a>
+      </p>
+      <ul>
+       <li>
+        email: etienne@plot.ly
+       </li>
+       <li>
+        tweet:
+        <a href="https://twitter.com/etpinard" target="_blank">
+         @etpinard
         </a>
-</h4>
-<h4 style="font-size:14pt;">
-        Go to
-        <a href="/python/bar-charts-tutorial">
-         Section 2 --- Bar Charts
+       </li>
+      </ul>
+      <h4 style="margin-top:30px;">
+       Notebook styling ideas
+      </h4>
+      <p>
+       Big thanks to
+      </p>
+      <ul>
+       <li>
+        <a href="http://nbviewer.ipython.org/github/CamDavidsonPilon/Probabilistic-Programming-and-Bayesian-Methods-for-Hackers/blob/master/Prologue/Prologue.ipynb" target="_blank">
+         Cam Davidson-Pilon
         </a>
-</h4>
-<h4 style="font-size:14pt;">
-        Go to
-        <a href="#notebook">
-         top of page
+       </li>
+       <li>
+        <a href="http://lorenabarba.com/blog/announcing-aeropython/#.U1ULXdX1LJ4.google_plusone_share" target="_blank">
+         Lorena A. Barba
         </a>
-</h4>
-<h4 style="font-size:14pt;">
-        Go to User Guide's
-        <a href="/python/user-guide">
-         homepage
-        </a>
-</h4>
-<hr/>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<div style="float:right; \">
-<img align="right" src="http://i.imgur.com/4vwuxdJ.png" style="float:right; margin-left: 5px; margin-top: -10px"/>
-</div>
-<h4>
-        Got Questions or Feedback?
-       </h4>
-<p>
-        About
-        <a href="https://plot.ly" target="_blank">
-         Plotly
-        </a>
-</p>
-<ul>
-<li>
-         email: feedback@plot.ly
-        </li>
-<li>
-         tweet:
-         <a href="https://twitter.com/plotlygraphs" target="_blank">
-          @plotlygraphs
-         </a>
-</li>
-</ul>
-<p>
-        About the
-        <a href="https://github.com/plotly/python-user-guide" target="_blank">
-         User Guide
-        </a>
-</p>
-<ul>
-<li>
-         email: etienne@plot.ly
-        </li>
-<li>
-         tweet:
-         <a href="https://twitter.com/etpinard" target="_blank">
-          @etpinard
-         </a>
-</li>
-</ul>
-<h4 style="margin-top:30px;">
-        Notebook styling ideas
-       </h4>
-<p>
-        Big thanks to
-       </p>
-<ul>
-<li>
-<a href="http://nbviewer.ipython.org/github/CamDavidsonPilon/Probabilistic-Programming-and-Bayesian-Methods-for-Hackers/blob/master/Prologue/Prologue.ipynb" target="_blank">
-          Cam Davidson-Pilon
-         </a>
-</li>
-<li>
-<a href="http://lorenabarba.com/blog/announcing-aeropython/#.U1ULXdX1LJ4.google_plusone_share" target="_blank">
-          Lorena A. Barba
-         </a>
-</li>
-</ul>
-<p>
-<br/>
-</p>
-</div>
-</div>
-</div>
+       </li>
+      </ul>
+      <p>
+       <br/>
+      </p>
+     </div>
+    </div>
+   </div>
+  </div>
+ </div>
 
-</div>
-</div>
-</body>

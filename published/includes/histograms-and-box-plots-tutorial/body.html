@@ -1,108 +1,107 @@
-<body>
-<div class="border-box-sizing" id="notebook" tabindex="-1">
-<div class="container" id="notebook-container">
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
 
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Section-4:-Histograms-and-Box-Plots">
-        Section 4: Histograms and Box Plots
-        <a class="anchor-link" href="#Section-4:-Histograms-and-Box-Plots">
-         ¶
+ <div class="border-box-sizing" id="notebook" tabindex="-1">
+  <div class="container" id="notebook-container">
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <h2 id="Section-4:-Histograms-and-Box-Plots">
+       Section 4: Histograms and Box Plots
+       <a class="anchor-link" href="#Section-4:-Histograms-and-Box-Plots">
+        ¶
+       </a>
+      </h2>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       Welcome to Plotly's Python API User Guide.
+      </p>
+      <blockquote>
+       <p>
+        Links to the other sections are on the User Guide's
+        <a href="/python/user-guide#Table-of-Contents:">
+         homepage
         </a>
-</h2>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>
-        Welcome to Plotly's Python API User Guide.
+        <br/>
+        If unfamiliar with Plotly's Python API version 1.0 see
+        <a href="/python/overview">
+         section 0
+        </a>
+        <br/>
+        The Github repository is available
+        <a href="https://github.com/plotly/python-user-guide" target="_blank">
+         here
+        </a>
        </p>
-<blockquote>
-<p>
-         Links to the other sections are on the User Guide's
-         <a href="/python/user-guide#Table-of-Contents:">
-          homepage
+      </blockquote>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       Section 4 is divided as follows:
+      </p>
+      <ul>
+       <li>
+        <p>
+         <a href="#4.1-Overlaid-histograms">
+          4.1 Overlaid histograms
          </a>
-<br/>
-         If unfamiliar with Plotly's Python API version 1.0 see
-         <a href="/python/overview">
-          section 0
+        </p>
+       </li>
+       <li>
+        <p>
+         <a href="#4.2-Histogram-normalization">
+          4.2 Histogram normalization
          </a>
-<br/>
-         The Github repository is available
-         <a href="https://github.com/plotly/python-user-guide" target="_blank">
-          here
+        </p>
+       </li>
+       <li>
+        <p>
+         <a href="#4.3-Custom-histogram-bins">
+          4.3 Custom histogram bins
          </a>
-</p>
-</blockquote>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>
-        Section 4 is divided as follows:
-       </p>
-<ul>
-<li>
-<p>
-<a href="#4.1-Overlaid-histograms">
-           4.1 Overlaid histograms
-          </a>
-</p>
-</li>
-<li>
-<p>
-<a href="#4.2-Histogram-normalization">
-           4.2 Histogram normalization
-          </a>
-</p>
-</li>
-<li>
-<p>
-<a href="#4.3-Custom-histogram-bins">
-           4.3 Custom histogram bins
-          </a>
-</p>
-</li>
-<li>
-<p>
-<a href="#4.4-Box-plots">
-           4.4 Box plots
-          </a>
-</p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>
-        Quickstart (make vertical histogram of 100 normally distributed random numbers):
-       </p>
-<pre><code>&gt;&gt;&gt; import plotly.plotly as py
+        </p>
+       </li>
+       <li>
+        <p>
+         <a href="#4.4-Box-plots">
+          4.4 Box plots
+         </a>
+        </p>
+       </li>
+      </ul>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       Quickstart (make vertical histogram of 100 normally distributed random numbers):
+      </p>
+      <pre><code>&gt;&gt;&gt; import plotly.plotly as py
 &gt;&gt;&gt; from plotly.graph_objs import *
 &gt;&gt;&gt; # auto sign-in with credentials or use py.sign_in()
 &gt;&gt;&gt; import numpy as np
@@ -111,115 +110,115 @@
 &gt;&gt;&gt; data = Data([trace1])
 &gt;&gt;&gt; py.plot(data)
 </code></pre>
-<hr/>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>
-        The User Guide assumes version 1.0 and up of Plotly's Python API.
-       </p>
-<p>
-        Check which version is installed on your machine and please upgrade if needed.
-       </p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-       In [1]:
-      </div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight">
-<pre><span class="c"># (*) Import plotly package</span>
+      <hr/>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       The User Guide assumes version 1.0 and up of Plotly's Python API.
+      </p>
+      <p>
+       Check which version is installed on your machine and please upgrade if needed.
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
+     <div class="prompt input_prompt">
+      In [1]:
+     </div>
+     <div class="inner_cell">
+      <div class="input_area">
+       <div class="highlight">
+        <pre><span class="c"># (*) Import plotly package</span>
 <span class="kn">import</span> <span class="nn">plotly</span>
 
 <span class="c"># Check plolty version (if not latest, please upgrade)</span>
 <span class="k">print</span> <span class="n">plotly</span><span class="o">.</span><span class="n">__version__</span>
 </pre>
-</div>
-</div>
-</div>
-</div>
-<div class="output_wrapper">
-<div class="output">
-<div class="output_area">
-<div class="prompt">
-</div>
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="output_wrapper">
+     <div class="output">
+      <div class="output_area">
+       <div class="prompt">
+       </div>
+       <div class="output_subarea output_stream output_stdout output_text">
+        <pre>
 1.2.3
 
 </pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>
-        See the User Guide's
-        <a href="/python/user-guide#Installation-guidelines" target="_blank">
-         homepage
-        </a>
-        for more info on installation and upgrading.
-       </p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<hr/>
-<p>
-        In this section, imagine that you are a Teaching Assistant. You have the course's grades in a file and you would like to generate basic statistics and analyze them using Plotly histograms and box plots. Moreover, conjointly in subsection
-        <a href="#4.3-Custom-histogram-bins">
-         4.3
-        </a>
-        , we cover:
-       </p>
-<ul>
-<li>
-<a href="#Adding-Gaussian-fits-to-Plotly-histograms">
-          Adding Gaussian fits to Plotly histograms
-         </a>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>
-        We first import a few modules and sign in to Plotly using our credentials file:
-       </p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-       In [2]:
+       </div>
       </div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight">
-<pre><span class="c"># (*) To communicate with Plotly's server, sign in with credentials file</span>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       See the User Guide's
+       <a href="/python/user-guide#Installation-guidelines" target="_blank">
+        homepage
+       </a>
+       for more info on installation and upgrading.
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <hr/>
+      <p>
+       In this section, imagine that you are a Teaching Assistant. You have the course's grades in a file and you would like to generate basic statistics and analyze them using Plotly histograms and box plots. Moreover, conjointly in subsection
+       <a href="#4.3-Custom-histogram-bins">
+        4.3
+       </a>
+       , we cover:
+      </p>
+      <ul>
+       <li>
+        <a href="#Adding-Gaussian-fits-to-Plotly-histograms">
+         Adding Gaussian fits to Plotly histograms
+        </a>
+       </li>
+      </ul>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       We first import a few modules and sign in to Plotly using our credentials file:
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
+     <div class="prompt input_prompt">
+      In [2]:
+     </div>
+     <div class="inner_cell">
+      <div class="input_area">
+       <div class="highlight">
+        <pre><span class="c"># (*) To communicate with Plotly's server, sign in with credentials file</span>
 <span class="kn">import</span> <span class="nn">plotly.plotly</span> <span class="kn">as</span> <span class="nn">py</span>  
 
 <span class="c"># (*) Useful Python/Plotly tools</span>
@@ -230,74 +229,74 @@
 
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>  <span class="c"># (*) numpy for math functions and arrays</span>
 </pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>
-        If you are not familiar with credentials files, refer to the User Guide's
-        <a href="/python/user-guide#Step-6" target="_blank">
-         homepage
-        </a>
-        .
-       </p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>
-        In similar fashion to
-        <a href="/python/bar-charts-tutorial">
-         section 2
-        </a>
-        (Bar Charts and Error Bars), we read and plot data from a csv file. The csv file in question
-        <code>
-         grades.csv
-        </code>
-        can be found in the section's Github
-        <a href="https://github.com/plotly/python-user-guide/blob/master/s4_histograms" target="_blank">
-         folder
-        </a>
-        . It contains students grades in percent.
-In this file, each row corresponds to a student and each column corresponds to a particular component of the total grade. These components (Final, Midterm and Homeworks) are labelled in the top row of the file.
-       </p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>
-        In order to use the data according, let's first define a csv
-        <em>
-         column
-        </em>
-        reader function.
-       </p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-       In [3]:
+       </div>
       </div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight">
-<pre><span class="c"># (*) csv file read/write</span>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       If you are not familiar with credentials files, refer to the User Guide's
+       <a href="/python/user-guide#Step-6" target="_blank">
+        homepage
+       </a>
+       .
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       In similar fashion to
+       <a href="/python/bar-charts-tutorial">
+        section 2
+       </a>
+       (Bar Charts and Error Bars), we read and plot data from a csv file. The csv file in question
+       <code>
+        grades.csv
+       </code>
+       can be found in the section's Github
+       <a href="https://github.com/plotly/python-user-guide/blob/master/s4_histograms" target="_blank">
+        folder
+       </a>
+       . It contains students grades in percent.
+In this file, each row corresponds to a student and each column corresponds to a particular component of the total grade. These components (Final, Midterm and Homeworks) are labelled in the top row of the file.
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       In order to use the data according, let's first define a csv
+       <em>
+        column
+       </em>
+       reader function.
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
+     <div class="prompt input_prompt">
+      In [3]:
+     </div>
+     <div class="inner_cell">
+      <div class="input_area">
+       <div class="highlight">
+        <pre><span class="c"># (*) csv file read/write</span>
 <span class="kn">import</span> <span class="nn">csv</span>          
 
 <span class="c"># Define a csv column reader function</span>
@@ -318,113 +317,113 @@ In this file, each row corresponds to a student and each column corresponds to a
 <span class="c"># (-) The 'with' statement automatically closes  </span>
 <span class="c">#    'filepath' at the end of its block of code</span>
 </pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>
-        Let's extract each column and check how many (non-NaN) grades they contain:
-       </p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-       In [4]:
+       </div>
       </div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight">
-<pre><span class="c"># Extract columns for 'grades.csv' </span>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       Let's extract each column and check how many (non-NaN) grades they contain:
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
+     <div class="prompt input_prompt">
+      In [4]:
+     </div>
+     <div class="inner_cell">
+      <div class="input_area">
+       <div class="highlight">
+        <pre><span class="c"># Extract columns for 'grades.csv' </span>
 <span class="n">homeworks</span> <span class="o">=</span> <span class="n">get_csv_col</span><span class="p">(</span><span class="s">'grades.csv'</span><span class="p">,</span><span class="s">'Homeworks'</span><span class="p">)</span>
 <span class="n">midterm</span> <span class="o">=</span> <span class="n">get_csv_col</span><span class="p">(</span><span class="s">'grades.csv'</span><span class="p">,</span><span class="s">'Midterm Exam'</span><span class="p">)</span>
 <span class="n">final</span> <span class="o">=</span> <span class="n">get_csv_col</span><span class="p">(</span><span class="s">'grades.csv'</span><span class="p">,</span><span class="s">'Final Exam'</span><span class="p">)</span>
 </pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>
-        The data in
-        <code>
-         grades.csv
-        </code>
-        contains some NaNs (not a number) entries. For example,
-       </p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-       In [5]:
+       </div>
       </div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight">
-<pre><span class="n">homeworks</span><span class="p">[</span><span class="mi">11</span><span class="p">:</span><span class="mi">20</span><span class="p">]</span>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       The data in
+       <code>
+        grades.csv
+       </code>
+       contains some NaNs (not a number) entries. For example,
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
+     <div class="prompt input_prompt">
+      In [5]:
+     </div>
+     <div class="inner_cell">
+      <div class="input_area">
+       <div class="highlight">
+        <pre><span class="n">homeworks</span><span class="p">[</span><span class="mi">11</span><span class="p">:</span><span class="mi">20</span><span class="p">]</span>
 </pre>
-</div>
-</div>
-</div>
-</div>
-<div class="output_wrapper">
-<div class="output">
-<div class="output_area">
-<div class="prompt output_prompt">
-         Out[5]:
-        </div>
-<div class="output_text output_subarea output_pyout">
-<pre>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="output_wrapper">
+     <div class="output">
+      <div class="output_area">
+       <div class="prompt output_prompt">
+        Out[5]:
+       </div>
+       <div class="output_text output_subarea output_pyout">
+        <pre>
 array([  82.,   90.,   68.,   85.,   nan,   82.,   40.,  100.,   92.])
 </pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>
-        That said, Plotly makes plotting histograms and box plots with arrays containing NaNs a breeze. 
-Please note that:
-       </p>
-<blockquote>
-<p>
-         All NaNs and string entries are ignored in Plotly's built-in computations.
-        </p>
-</blockquote>
-<p>
-        Check exactly how many NaNs are contained in the arrays with:
-       </p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-       In [6]:
+       </div>
       </div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight">
-<pre><span class="c"># Compare number of non-NaN entries to total number of entries in column</span>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       That said, Plotly makes plotting histograms and box plots with arrays containing NaNs a breeze. 
+Please note that:
+      </p>
+      <blockquote>
+       <p>
+        All NaNs and string entries are ignored in Plotly's built-in computations.
+       </p>
+      </blockquote>
+      <p>
+       Check exactly how many NaNs are contained in the arrays with:
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
+     <div class="prompt input_prompt">
+      In [6]:
+     </div>
+     <div class="inner_cell">
+      <div class="input_area">
+       <div class="highlight">
+        <pre><span class="c"># Compare number of non-NaN entries to total number of entries in column</span>
 <span class="k">def</span> <span class="nf">check_nan</span><span class="p">(</span><span class="n">X</span><span class="p">,</span><span class="n">X_name</span><span class="p">):</span>
     <span class="sd">'''</span>
 <span class="sd">    Identify which item is a NaN, compare to total number of items,</span>
@@ -438,210 +437,210 @@ Please note that:
 <span class="n">check_nan</span><span class="p">(</span><span class="n">midterm</span><span class="p">,</span><span class="s">'Midterm Exam'</span><span class="p">)</span>
 <span class="n">check_nan</span><span class="p">(</span><span class="n">final</span><span class="p">,</span><span class="s">'Final Exam'</span><span class="p">)</span>
 </pre>
-</div>
-</div>
-</div>
-</div>
-<div class="output_wrapper">
-<div class="output">
-<div class="output_area">
-<div class="prompt">
-</div>
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="output_wrapper">
+     <div class="output">
+      <div class="output_area">
+       <div class="prompt">
+       </div>
+       <div class="output_subarea output_stream output_stdout output_text">
+        <pre>
 Homeworks: 62 grades out of 68 entries
 Midterm Exam: 64 grades out of 68 entries
 Final Exam: 63 grades out of 68 entries
 
 </pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="4.1-Overlaid-histograms">
-        4.1 Overlaid histograms
-        <a class="anchor-link" href="#4.1-Overlaid-histograms">
-         ¶
-        </a>
-</h4>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>
-        For our first histogram plot, we compare the grade distributions of the midterm exam and final exam. Plotly allows users to choose the histogram normalization (i.e. the units of the generated y-axis) of each histogram object:
-       </p>
-<blockquote>
-<p>
-         The histogram object key
-         <code>
-          'histnorm'
-         </code>
-         is set to
-         <code>
-          'count'
-         </code>
-         by default, the other possibilities are:
-         <code>
-          'percent'
-         </code>
-         ,
-         <code>
-          'probability'
-         </code>
-         ,
-         <code>
-          'density'
-         </code>
-         ,
-         <code>
-          'probability density'
-         </code>
-         (all in lower case). We compare the different
-         <code>
-          'histnorm'
-         </code>
-         values in fig. 4.2.
-        </p>
-</blockquote>
-<p>
-        Plot customization for the histogram object (named
-        <code>
-         Histogram
-        </code>
-        ) is similar to the customization for the bar object:
-       </p>
-<ul>
-<li>
-<p>
-          Users can select different bar modes (the
-          <code>
-           'barmode'
-          </code>
-          key in the layout object). As for the bar object, the available values are
-          <code>
-           'stack'
-          </code>
-          (default),
-          <code>
-           'overlay'
-          </code>
-          or
-          <code>
-           'group'
-          </code>
-          .
-         </p>
-</li>
-<li>
-<p>
-          Spacing between bars can be modify using
-          <code>
-           'bargap'
-          </code>
-          and
-          <code>
-           'bargroupgap'
-          </code>
-          in the layout object.
-         </p>
-</li>
-<li>
-<p>
-          Users can make an histogram with horizontal bars by setting
-          <code>
-           'orientation'
-          </code>
-          to
-          <code>
-           'h'
-          </code>
-          in histogram object (new syntax in verison 1.0).
-         </p>
-</li>
-<li>
-<p>
-          Note that
-          <code>
-           'text'
-          </code>
-          is not a valid key in the histogram object.
-         </p>
-</li>
-</ul>
-<p>
-        For more information on these options, see
-        <a href="/python/bar-charts-tutorial">
-         section 2
-        </a>
-        of the User Guide.
-       </p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>
-        Our first histogram plot will feature:
-       </p>
-<ul>
-<li>
-         Two overlaid and partly transparent histograms.
-        </li>
-</ul>
-<p>
-        Opacity for histograms is set with the
-        <code>
-         'opacity'
-        </code>
-        key in the
-        <code>
-         Histogram
-        </code>
-        object (not in
-        <code>
-         Marker
-        </code>
-        , unlike for scatter plots),
-       </p>
-<ul>
-<li>
-         The
-         <code>
-          'histnorm'
-         </code>
-         key is set to
-         <code>
-          'count'
-         </code>
-         , as well as all other histogram options are set to their default value.
-        </li>
-</ul>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-       In [7]:
+       </div>
       </div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight">
-<pre><span class="c"># Define colors for the midterm and final histograms</span>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <h4 id="4.1-Overlaid-histograms">
+       4.1 Overlaid histograms
+       <a class="anchor-link" href="#4.1-Overlaid-histograms">
+        ¶
+       </a>
+      </h4>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       For our first histogram plot, we compare the grade distributions of the midterm exam and final exam. Plotly allows users to choose the histogram normalization (i.e. the units of the generated y-axis) of each histogram object:
+      </p>
+      <blockquote>
+       <p>
+        The histogram object key
+        <code>
+         'histnorm'
+        </code>
+        is set to
+        <code>
+         'count'
+        </code>
+        by default, the other possibilities are:
+        <code>
+         'percent'
+        </code>
+        ,
+        <code>
+         'probability'
+        </code>
+        ,
+        <code>
+         'density'
+        </code>
+        ,
+        <code>
+         'probability density'
+        </code>
+        (all in lower case). We compare the different
+        <code>
+         'histnorm'
+        </code>
+        values in fig. 4.2.
+       </p>
+      </blockquote>
+      <p>
+       Plot customization for the histogram object (named
+       <code>
+        Histogram
+       </code>
+       ) is similar to the customization for the bar object:
+      </p>
+      <ul>
+       <li>
+        <p>
+         Users can select different bar modes (the
+         <code>
+          'barmode'
+         </code>
+         key in the layout object). As for the bar object, the available values are
+         <code>
+          'stack'
+         </code>
+         (default),
+         <code>
+          'overlay'
+         </code>
+         or
+         <code>
+          'group'
+         </code>
+         .
+        </p>
+       </li>
+       <li>
+        <p>
+         Spacing between bars can be modify using
+         <code>
+          'bargap'
+         </code>
+         and
+         <code>
+          'bargroupgap'
+         </code>
+         in the layout object.
+        </p>
+       </li>
+       <li>
+        <p>
+         Users can make an histogram with horizontal bars by setting
+         <code>
+          'orientation'
+         </code>
+         to
+         <code>
+          'h'
+         </code>
+         in histogram object (new syntax in verison 1.0).
+        </p>
+       </li>
+       <li>
+        <p>
+         Note that
+         <code>
+          'text'
+         </code>
+         is not a valid key in the histogram object.
+        </p>
+       </li>
+      </ul>
+      <p>
+       For more information on these options, see
+       <a href="/python/bar-charts-tutorial">
+        section 2
+       </a>
+       of the User Guide.
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       Our first histogram plot will feature:
+      </p>
+      <ul>
+       <li>
+        Two overlaid and partly transparent histograms.
+       </li>
+      </ul>
+      <p>
+       Opacity for histograms is set with the
+       <code>
+        'opacity'
+       </code>
+       key in the
+       <code>
+        Histogram
+       </code>
+       object (not in
+       <code>
+        Marker
+       </code>
+       , unlike for scatter plots),
+      </p>
+      <ul>
+       <li>
+        The
+        <code>
+         'histnorm'
+        </code>
+        key is set to
+        <code>
+         'count'
+        </code>
+        , as well as all other histogram options are set to their default value.
+       </li>
+      </ul>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
+     <div class="prompt input_prompt">
+      In [7]:
+     </div>
+     <div class="inner_cell">
+      <div class="input_area">
+       <div class="highlight">
+        <pre><span class="c"># Define colors for the midterm and final histograms</span>
 <span class="n">color_midterm</span><span class="o">=</span><span class="s">'rgb(231,41,138)'</span>  <span class="c"># a nice fuchsia</span>
 <span class="n">color_final</span><span class="o">=</span><span class="s">'rgb(230,171,2)'</span>     <span class="c"># a nice yellow</span>
 
@@ -662,31 +661,31 @@ Final Exam: 63 grades out of 68 entries
     <span class="n">make_trace</span><span class="p">(</span><span class="n">final</span><span class="p">,</span> <span class="s">'Final'</span><span class="p">,</span> <span class="n">color_final</span><span class="p">)</span>
 <span class="p">])</span>
 </pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>
-        Onto layout:
-       </p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-       In [8]:
+       </div>
       </div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight">
-<pre><span class="n">title</span><span class="o">=</span><span class="s">"Fig 4.1: Midterm and Final Exam Grade Distribution"</span> <span class="c"># plot's title</span>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       Onto layout:
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
+     <div class="prompt input_prompt">
+      In [8]:
+     </div>
+     <div class="inner_cell">
+      <div class="input_area">
+       <div class="highlight">
+        <pre><span class="n">title</span><span class="o">=</span><span class="s">"Fig 4.1: Midterm and Final Exam Grade Distribution"</span> <span class="c"># plot's title</span>
 
 <span class="c"># Define dictionary of axis style options</span>
 <span class="n">axis_style</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span>
@@ -717,108 +716,108 @@ Final Exam: 63 grades out of 68 entries
     <span class="n">plot_bgcolor</span><span class="o">=</span><span class="s">'#EFECEA'</span>   <span class="c"># set plot color to grey</span>
 <span class="p">)</span> 
 </pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-       In [9]:
+       </div>
       </div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight">
-<pre><span class="c"># Make Figure object</span>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
+     <div class="prompt input_prompt">
+      In [9]:
+     </div>
+     <div class="inner_cell">
+      <div class="input_area">
+       <div class="highlight">
+        <pre><span class="c"># Make Figure object</span>
 <span class="n">fig</span> <span class="o">=</span> <span class="n">Figure</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="p">,</span> <span class="n">layout</span><span class="o">=</span><span class="n">layout</span><span class="p">)</span>
 
 <span class="c"># (@) Send to Plotly and show in notebook</span>
 <span class="n">py</span><span class="o">.</span><span class="n">iplot</span><span class="p">(</span><span class="n">fig</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="s">'s4_midterm-final'</span><span class="p">)</span>
 </pre>
-</div>
-</div>
-</div>
-</div>
-<div class="output_wrapper">
-<div class="output">
-<div class="output_area">
-<div class="prompt">
-</div>
-<div class="output_html rendered_html output_subarea ">
-<iframe height="525" id="igraph" scrolling="no" seamless="seamless" src="https://plot.ly/~etpinard/88" style="border:none;" width="100%">
-</iframe>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>
-        Reducing the opacity of each histogram together with Plotly's hover capacities makes comparing two sets of data easy.
-       </p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="4.2-Histogram-normalization">
-        4.2 Histogram normalization
-        <a class="anchor-link" href="#4.2-Histogram-normalization">
-         ¶
-        </a>
-</h4>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>
-        In this subsection, we compare Plotly's histogram normalizations.
-       </p>
-<p>
-        Let
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="output_wrapper">
+     <div class="output">
+      <div class="output_area">
+       <div class="prompt">
+       </div>
+       <div class="output_html rendered_html output_subarea ">
+        <iframe height="525" id="igraph" scrolling="no" seamless="seamless" src="https://plot.ly/~etpinard/88" style="border:none;" width="100%">
+        </iframe>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       Reducing the opacity of each histogram together with Plotly's hover capacities makes comparing two sets of data easy.
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <h4 id="4.2-Histogram-normalization">
+       4.2 Histogram normalization
+       <a class="anchor-link" href="#4.2-Histogram-normalization">
+        ¶
+       </a>
+      </h4>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       In this subsection, we compare Plotly's histogram normalizations.
+      </p>
+      <p>
+       Let
 $y_{\text{count}}(i)$ be the number of non-NaN data points in bin $i$,
 $w_i$ be the width of bin $i$ and
 $N$ be the number of data points in the sample. Then, Plotly's available histogram normalizations are:
-       </p>
-<p>
-        $$ y_{\text{probability}}(i) = \frac{1}{N} y_{\text{count}}(i) $$
-       </p>
-<p>
-        $$ y_{\text{percent}}(i) = \frac{1}{N} y_{\text{count}}(i) \times 100 $$
-       </p>
-<p>
-        $$ y_{\text{density}}(i) = \frac{1}{w_i} y_{\text{count}}(i) $$
-       </p>
-<p>
-        $$ y_{\text{prob. density}}(i) = \frac{1}{N} \frac{1}{w_i} y_{\text{count}} $$
-       </p>
-<p>
-        With the same data as the previous plot, let's compare these four histogram normalizations in a 2 by 2 plot. So, first we define a simple subplot grid:
-       </p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-       In [10]:
-      </div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight">
-<pre><span class="c"># Generate a Figure object with 4 axes on 2 rows and 2 columns</span>
+      </p>
+      <p>
+       $$ y_{\text{probability}}(i) = \frac{1}{N} y_{\text{count}}(i) $$
+      </p>
+      <p>
+       $$ y_{\text{percent}}(i) = \frac{1}{N} y_{\text{count}}(i) \times 100 $$
+      </p>
+      <p>
+       $$ y_{\text{density}}(i) = \frac{1}{w_i} y_{\text{count}}(i) $$
+      </p>
+      <p>
+       $$ y_{\text{prob. density}}(i) = \frac{1}{N} \frac{1}{w_i} y_{\text{count}} $$
+      </p>
+      <p>
+       With the same data as the previous plot, let's compare these four histogram normalizations in a 2 by 2 plot. So, first we define a simple subplot grid:
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
+     <div class="prompt input_prompt">
+      In [10]:
+     </div>
+     <div class="inner_cell">
+      <div class="input_area">
+       <div class="highlight">
+        <pre><span class="c"># Generate a Figure object with 4 axes on 2 rows and 2 columns</span>
 <span class="n">fig</span> <span class="o">=</span> <span class="n">tls</span><span class="o">.</span><span class="n">get_subplots</span><span class="p">(</span>
     <span class="n">rows</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
     <span class="n">columns</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> 
@@ -827,50 +826,50 @@ $N$ be the number of data points in the sample. Then, Plotly's available histogr
     <span class="n">print_grid</span><span class="o">=</span><span class="bp">True</span>
 <span class="p">)</span>
 </pre>
-</div>
-</div>
-</div>
-</div>
-<div class="output_wrapper">
-<div class="output">
-<div class="output_area">
-<div class="prompt">
-</div>
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="output_wrapper">
+     <div class="output">
+      <div class="output_area">
+       <div class="prompt">
+       </div>
+       <div class="output_subarea output_stream output_stdout output_text">
+        <pre>
 This is the format of your plot grid!
 [3]	[4]	
 [1]	[2]	
 
 
 </pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-       In [11]:
+       </div>
       </div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight">
-<pre><span class="c"># Print Figure object to stdout</span>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
+     <div class="prompt input_prompt">
+      In [11]:
+     </div>
+     <div class="inner_cell">
+      <div class="input_area">
+       <div class="highlight">
+        <pre><span class="c"># Print Figure object to stdout</span>
 <span class="k">print</span> <span class="n">fig</span><span class="o">.</span><span class="n">to_string</span><span class="p">()</span>
 </pre>
-</div>
-</div>
-</div>
-</div>
-<div class="output_wrapper">
-<div class="output">
-<div class="output_area">
-<div class="prompt">
-</div>
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="output_wrapper">
+     <div class="output">
+      <div class="output_area">
+       <div class="prompt">
+       </div>
+       <div class="output_subarea output_stream output_stdout output_text">
+        <pre>
 Figure(
     data=Data(),
     layout=Layout(
@@ -910,31 +909,31 @@ Figure(
 )
 
 </pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>
-        Make a few definitions
-       </p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-       In [12]:
+       </div>
       </div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight">
-<pre><span class="c"># List of subplot [1],[2],[3],[4] labels</span>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       Make a few definitions
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
+     <div class="prompt input_prompt">
+      In [12]:
+     </div>
+     <div class="inner_cell">
+      <div class="input_area">
+       <div class="highlight">
+        <pre><span class="c"># List of subplot [1],[2],[3],[4] labels</span>
 <span class="n">splts</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span>
 
 <span class="c"># Define a dictionary of histogram normalization </span>
@@ -955,31 +954,31 @@ Figure(
     <span class="mi">4</span><span class="p">:</span> <span class="bp">False</span>
 <span class="p">}</span>
 </pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>
-        Make eight histogram trace objects (with midterm and final data for four histogram normalizations):
-       </p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-       In [13]:
+       </div>
       </div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight">
-<pre><span class="c"># Define a trace-generating function (returns a Histogram object)</span>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       Make eight histogram trace objects (with midterm and final data for four histogram normalizations):
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
+     <div class="prompt input_prompt">
+      In [13]:
+     </div>
+     <div class="inner_cell">
+      <div class="input_area">
+       <div class="highlight">
+        <pre><span class="c"># Define a trace-generating function (returns a Histogram object)</span>
 <span class="k">def</span> <span class="nf">make_trace</span><span class="p">(</span><span class="n">splt</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">color</span><span class="p">):</span>
     <span class="k">return</span> <span class="n">Histogram</span><span class="p">(</span>
         <span class="n">x</span><span class="o">=</span><span class="n">x</span><span class="p">,</span>                      <span class="c"># distribution to be plotted</span>
@@ -999,31 +998,31 @@ Figure(
     <span class="p">[</span><span class="n">make_trace</span><span class="p">(</span><span class="n">splt</span><span class="p">,</span> <span class="n">final</span><span class="p">,</span> <span class="s">'Final'</span><span class="p">,</span> <span class="n">color_final</span><span class="p">)</span> <span class="k">for</span> <span class="n">splt</span> <span class="ow">in</span> <span class="n">splts</span><span class="p">]</span>
 <span class="p">)</span>
 </pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>
-        Add a few layout features:
-       </p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-       In [14]:
+       </div>
       </div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight">
-<pre><span class="c"># (a) Update x and y axis of all subplots</span>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       Add a few layout features:
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
+     <div class="prompt input_prompt">
+      In [14]:
+     </div>
+     <div class="inner_cell">
+      <div class="input_area">
+       <div class="highlight">
+        <pre><span class="c"># (a) Update x and y axis of all subplots</span>
 <span class="c">#     using the axis_style dictionary defined in subsection 4.1</span>
 <span class="n">fig</span><span class="p">[</span><span class="s">'layout'</span><span class="p">]</span><span class="o">.</span><span class="n">update</span><span class="p">(</span>
     <span class="p">{</span><span class="s">'xaxis{}'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">splt</span><span class="p">):</span> <span class="n">axis_style</span> <span class="k">for</span> <span class="n">splt</span> <span class="ow">in</span> <span class="n">splts</span><span class="p">}</span>
@@ -1056,123 +1055,123 @@ Figure(
     <span class="n">plot_bgcolor</span><span class="o">=</span><span class="s">'#EFECEA'</span> <span class="c"># set plot color to grey</span>
 <span class="p">)</span>      
 </pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>
-        And finally,
-       </p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-       In [15]:
+       </div>
       </div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight">
-<pre><span class="c"># (@) Send figure object to Plotly and show in notebook</span>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       And finally,
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
+     <div class="prompt input_prompt">
+      In [15]:
+     </div>
+     <div class="inner_cell">
+      <div class="input_area">
+       <div class="highlight">
+        <pre><span class="c"># (@) Send figure object to Plotly and show in notebook</span>
 <span class="n">py</span><span class="o">.</span><span class="n">iplot</span><span class="p">(</span><span class="n">fig</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="s">'s4_midterm-final-histnorm'</span><span class="p">)</span>
 </pre>
-</div>
-</div>
-</div>
-</div>
-<div class="output_wrapper">
-<div class="output">
-<div class="output_area">
-<div class="prompt">
-</div>
-<div class="output_html rendered_html output_subarea ">
-<iframe height="525" id="igraph" scrolling="no" seamless="seamless" src="https://plot.ly/~etpinard/90" style="border:none;" width="100%">
-</iframe>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="4.3-Custom-histogram-bins">
-        4.3 Custom histogram bins
-        <a class="anchor-link" href="#4.3-Custom-histogram-bins">
-         ¶
-        </a>
-</h4>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>
-        Plotly allows users to generate histograms without having to set every bins' size and location. Quick data visualization is made easy in Plotly. Users looking for more control, can easily modified the bins' options inside Plotly's web GUI.
-       </p>
-<p>
-        Here's a snapshot of the web GUI:
-       </p>
-<p>
-<br/>
-<img alt="Histogram custom" src="http://i.imgur.com/vMKTexx.png"/>
-<br/>
-</p>
-<p>
-        Alternatively, histogram bin options can be modified by first setting
-        <code>
-         'autobinx: False'
-        </code>
-        in histogram graph object and using the
-        <code>
-         XBins
-        </code>
-        graph object (or '
-        <code>
-         autobiny'
-        </code>
-        and
-        <code>
-         YBins
-        </code>
-        for histograms with horizontal bars).
-       </p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-       In [16]:
+       </div>
       </div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight">
-<pre><span class="n">help</span><span class="p">(</span><span class="n">XBins</span><span class="p">)</span>  <span class="c"># call help()!</span>
+     </div>
+    </div>
+    <div class="output_wrapper">
+     <div class="output">
+      <div class="output_area">
+       <div class="prompt">
+       </div>
+       <div class="output_html rendered_html output_subarea ">
+        <iframe height="525" id="igraph" scrolling="no" seamless="seamless" src="https://plot.ly/~etpinard/90" style="border:none;" width="100%">
+        </iframe>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <h4 id="4.3-Custom-histogram-bins">
+       4.3 Custom histogram bins
+       <a class="anchor-link" href="#4.3-Custom-histogram-bins">
+        ¶
+       </a>
+      </h4>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       Plotly allows users to generate histograms without having to set every bins' size and location. Quick data visualization is made easy in Plotly. Users looking for more control, can easily modified the bins' options inside Plotly's web GUI.
+      </p>
+      <p>
+       Here's a snapshot of the web GUI:
+      </p>
+      <p>
+       <br/>
+       <img alt="Histogram custom" src="/static/api_docs/image/user_guide/python/image12.png"/>
+       <br/>
+      </p>
+      <p>
+       Alternatively, histogram bin options can be modified by first setting
+       <code>
+        'autobinx: False'
+       </code>
+       in histogram graph object and using the
+       <code>
+        XBins
+       </code>
+       graph object (or '
+       <code>
+        autobiny'
+       </code>
+       and
+       <code>
+        YBins
+       </code>
+       for histograms with horizontal bars).
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
+     <div class="prompt input_prompt">
+      In [16]:
+     </div>
+     <div class="inner_cell">
+      <div class="input_area">
+       <div class="highlight">
+        <pre><span class="n">help</span><span class="p">(</span><span class="n">XBins</span><span class="p">)</span>  <span class="c"># call help()!</span>
 </pre>
-</div>
-</div>
-</div>
-</div>
-<div class="output_wrapper">
-<div class="output">
-<div class="output_area">
-<div class="prompt">
-</div>
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="output_wrapper">
+     <div class="output">
+      <div class="output_area">
+       <div class="prompt">
+       </div>
+       <div class="output_subarea output_stream output_stdout output_text">
+        <pre>
 Help on class XBins in module plotly.graph_objs.graph_objs:
 
 class XBins(PlotlyDict)
@@ -1427,55 +1426,55 @@ class XBins(PlotlyDict)
 
 
 </pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>
-        Take note:
-       </p>
-<blockquote>
-<p>
-         The
-         <code>
-          'start'
-         </code>
-         key sets the starting point of the first bin and
-         <code>
-          'end'
-         </code>
-         key sets the end point of the final bin.
-        </p>
-</blockquote>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>
-        For our next plot, we compare the grade distribution of the homeworks, the midterm, the final exam as well as the (total) course grade. The first step is to compute the course grade from the three other grades:
-       </p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-       In [17]:
+       </div>
       </div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight">
-<pre><span class="c"># Compute course grade (ignoring NaNs in sum)</span>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       Take note:
+      </p>
+      <blockquote>
+       <p>
+        The
+        <code>
+         'start'
+        </code>
+        key sets the starting point of the first bin and
+        <code>
+         'end'
+        </code>
+        key sets the end point of the final bin.
+       </p>
+      </blockquote>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       For our next plot, we compare the grade distribution of the homeworks, the midterm, the final exam as well as the (total) course grade. The first step is to compute the course grade from the three other grades:
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
+     <div class="prompt input_prompt">
+      In [17]:
+     </div>
+     <div class="inner_cell">
+      <div class="input_area">
+       <div class="highlight">
+        <pre><span class="c"># Compute course grade (ignoring NaNs in sum)</span>
 <span class="k">def</span> <span class="nf">get_course</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">weight</span><span class="p">):</span>
     <span class="n">d</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">vstack</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>  <span class="c"># 2d array, columns rep. each component</span>
     <span class="n">w</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">weight</span><span class="p">)[:,</span> <span class="n">np</span><span class="o">.</span><span class="n">newaxis</span><span class="p">]</span> <span class="c"># 2d array of weight</span>
@@ -1487,62 +1486,62 @@ class XBins(PlotlyDict)
 <span class="c"># Check how many NaN 'course' array</span>
 <span class="n">check_nan</span><span class="p">(</span><span class="n">course</span><span class="p">,</span><span class="s">'Course Grade'</span><span class="p">)</span>
 </pre>
-</div>
-</div>
-</div>
-</div>
-<div class="output_wrapper">
-<div class="output">
-<div class="output_area">
-<div class="prompt">
-</div>
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="output_wrapper">
+     <div class="output">
+      <div class="output_area">
+       <div class="prompt">
+       </div>
+       <div class="output_subarea output_stream output_stdout output_text">
+        <pre>
 Course Grade: 64 grades out of 68 entries
 
 </pre>
-</div>
-</div>
-<div class="output_area">
-<div class="prompt">
-</div>
-<div class="output_subarea output_stream output_stderr output_text">
-<pre>
+       </div>
+      </div>
+      <div class="output_area">
+       <div class="prompt">
+       </div>
+       <div class="output_subarea output_stream output_stderr output_text">
+        <pre>
 /usr/lib/python2.7/dist-packages/numpy/lib/nanfunctions.py:514: FutureWarning:
 
 In Numpy 1.9 the sum along empty slices will be zero.
 
 
 </pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>
-        Now, build a 4 rows, 1 column subplot grid using
-        <code>
-         get_subplot()
-        </code>
-        :
-       </p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-       In [18]:
+       </div>
       </div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight">
-<pre><span class="c"># Generate Figure object with 4 axes on 2 rows and 2 columns</span>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       Now, build a 4 rows, 1 column subplot grid using
+       <code>
+        get_subplot()
+       </code>
+       :
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
+     <div class="prompt input_prompt">
+      In [18]:
+     </div>
+     <div class="inner_cell">
+      <div class="input_area">
+       <div class="highlight">
+        <pre><span class="c"># Generate Figure object with 4 axes on 2 rows and 2 columns</span>
 <span class="n">fig</span> <span class="o">=</span> <span class="n">tls</span><span class="o">.</span><span class="n">get_subplots</span><span class="p">(</span>
     <span class="n">rows</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> 
     <span class="n">columns</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> 
@@ -1550,17 +1549,17 @@ In Numpy 1.9 the sum along empty slices will be zero.
     <span class="n">print_grid</span><span class="o">=</span><span class="bp">True</span>
 <span class="p">)</span>
 </pre>
-</div>
-</div>
-</div>
-</div>
-<div class="output_wrapper">
-<div class="output">
-<div class="output_area">
-<div class="prompt">
-</div>
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="output_wrapper">
+     <div class="output">
+      <div class="output_area">
+       <div class="prompt">
+       </div>
+       <div class="output_subarea output_stream output_stdout output_text">
+        <pre>
 This is the format of your plot grid!
 [4]	
 [3]	
@@ -1569,33 +1568,33 @@ This is the format of your plot grid!
 
 
 </pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-       In [19]:
+       </div>
       </div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight">
-<pre><span class="c"># Print Figure object to stdout</span>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
+     <div class="prompt input_prompt">
+      In [19]:
+     </div>
+     <div class="inner_cell">
+      <div class="input_area">
+       <div class="highlight">
+        <pre><span class="c"># Print Figure object to stdout</span>
 <span class="k">print</span> <span class="n">fig</span><span class="o">.</span><span class="n">to_string</span><span class="p">()</span>
 </pre>
-</div>
-</div>
-</div>
-</div>
-<div class="output_wrapper">
-<div class="output">
-<div class="output_area">
-<div class="prompt">
-</div>
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="output_wrapper">
+     <div class="output">
+      <div class="output_area">
+       <div class="prompt">
+       </div>
+       <div class="output_subarea output_stream output_stdout output_text">
+        <pre>
 Figure(
     data=Data(),
     layout=Layout(
@@ -1635,35 +1634,35 @@ Figure(
 )
 
 </pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>
-        But, as in
-        <a href="/python/bar-charts-tutorial" target="blank">
-         section 2
-        </a>
-        , we would like to make all subplots share the same x-axis corresponding to grades. So, delete all unnecessary keys:
-       </p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-       In [20]:
+       </div>
       </div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight">
-<pre><span class="c"># Delete 'xaxis2', 'xaxis3', 'xaxis4' keys using the pop() method</span>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       But, as in
+       <a href="/python/bar-charts-tutorial" target="blank">
+        section 2
+       </a>
+       , we would like to make all subplots share the same x-axis corresponding to grades. So, delete all unnecessary keys:
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
+     <div class="prompt input_prompt">
+      In [20]:
+     </div>
+     <div class="inner_cell">
+      <div class="input_area">
+       <div class="highlight">
+        <pre><span class="c"># Delete 'xaxis2', 'xaxis3', 'xaxis4' keys using the pop() method</span>
 <span class="k">for</span> <span class="n">ax</span> <span class="ow">in</span> <span class="p">[</span><span class="s">'xaxis2'</span><span class="p">,</span><span class="s">'xaxis3'</span><span class="p">,</span><span class="s">'xaxis4'</span><span class="p">]:</span>
     <span class="n">fig</span><span class="p">[</span><span class="s">'layout'</span><span class="p">]</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="n">ax</span><span class="p">,</span><span class="bp">None</span><span class="p">)</span>
 
@@ -1674,17 +1673,17 @@ Figure(
 <span class="c"># Print resulting Figure object to screen </span>
 <span class="k">print</span> <span class="n">fig</span><span class="o">.</span><span class="n">to_string</span><span class="p">()</span>
 </pre>
-</div>
-</div>
-</div>
-</div>
-<div class="output_wrapper">
-<div class="output">
-<div class="output_area">
-<div class="prompt">
-</div>
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="output_wrapper">
+     <div class="output">
+      <div class="output_area">
+       <div class="prompt">
+       </div>
+       <div class="output_subarea output_stream output_stdout output_text">
+        <pre>
 Figure(
     data=Data(),
     layout=Layout(
@@ -1707,61 +1706,61 @@ Figure(
 )
 
 </pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>
-        Next, we fill in the data and layout objects. The following code cells are split into four sections:
-        <a href="#-0--A-few-definitions">
-         (0)
-        </a>
-        a few definitions,
-        <a href="#-1--Data-and-trace-options">
-         (1)
-        </a>
-        data and trace style options],
-        <a href="#-2--Layout-options">
-         (2)
-        </a>
-        layout options and
-        <a href="#-3--Call-to-Plotly">
-         (3)
-        </a>
-        a call to Plotly.
-       </p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h5 id="-0--A-few-definitions">
-        -0- A few definitions
-        <a class="anchor-link" href="#-0--A-few-definitions">
-         ¶
-        </a>
-</h5>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-       In [21]:
+       </div>
       </div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight">
-<pre><span class="n">splts</span><span class="o">=</span><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span>  <span class="c"># list of subplot [1],[2],[3],[4] labels</span>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       Next, we fill in the data and layout objects. The following code cells are split into four sections:
+       <a href="#-0--A-few-definitions">
+        (0)
+       </a>
+       a few definitions,
+       <a href="#-1--Data-and-trace-options">
+        (1)
+       </a>
+       data and trace style options],
+       <a href="#-2--Layout-options">
+        (2)
+       </a>
+       layout options and
+       <a href="#-3--Call-to-Plotly">
+        (3)
+       </a>
+       a call to Plotly.
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <h5 id="-0--A-few-definitions">
+       -0- A few definitions
+       <a class="anchor-link" href="#-0--A-few-definitions">
+        ¶
+       </a>
+      </h5>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
+     <div class="prompt input_prompt">
+      In [21]:
+     </div>
+     <div class="inner_cell">
+      <div class="input_area">
+       <div class="highlight">
+        <pre><span class="n">splts</span><span class="o">=</span><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span>  <span class="c"># list of subplot [1],[2],[3],[4] labels</span>
 
 <span class="c"># Concatenate all grade arrays</span>
 <span class="n">grades_all</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">((</span><span class="n">homeworks</span><span class="p">,</span><span class="n">midterm</span><span class="p">,</span><span class="n">final</span><span class="p">,</span><span class="n">course</span><span class="p">))</span>
@@ -1778,34 +1777,34 @@ Figure(
 <span class="n">width</span> <span class="o">=</span> <span class="mi">650</span>    <span class="c"># plot width (in pixels)</span>
 <span class="n">height</span> <span class="o">=</span> <span class="mi">800</span>   <span class="c"># plot height (in pixels)</span>
 </pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h5 id="-1--Data-and-trace-options">
-        -1- Data and trace options
-        <a class="anchor-link" href="#-1--Data-and-trace-options">
-         ¶
-        </a>
-</h5>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-       In [22]:
+       </div>
       </div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight">
-<pre><span class="c"># Define a trace-generating function (returns a Histogram object)</span>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <h5 id="-1--Data-and-trace-options">
+       -1- Data and trace options
+       <a class="anchor-link" href="#-1--Data-and-trace-options">
+        ¶
+       </a>
+      </h5>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
+     <div class="prompt input_prompt">
+      In [22]:
+     </div>
+     <div class="inner_cell">
+      <div class="input_area">
+       <div class="highlight">
+        <pre><span class="c"># Define a trace-generating function (returns a Histogram object)</span>
 <span class="k">def</span> <span class="nf">make_trace</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">splt</span><span class="p">):</span>
     <span class="k">return</span> <span class="n">Histogram</span><span class="p">(</span>
         <span class="n">x</span><span class="o">=</span><span class="n">x</span><span class="p">,</span>                <span class="c"># distribution to be plotted</span>
@@ -1830,45 +1829,45 @@ Figure(
     <span class="n">make_trace</span><span class="p">(</span><span class="n">course</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
 <span class="p">])</span>
 </pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h5 id="-2--Layout-options">
-        -2- Layout options
-        <a class="anchor-link" href="#-2--Layout-options">
-         ¶
-        </a>
-</h5>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>
-        We use annotation object to display the plot's and the subplot titles:
-       </p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-       In [23]:
+       </div>
       </div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight">
-<pre><span class="n">title</span> <span class="o">=</span> <span class="s">"Fig. 3.4a: &lt;b&gt;Course Grade Distributions&lt;/b&gt;"</span>  <span class="c"># plot's title</span>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <h5 id="-2--Layout-options">
+       -2- Layout options
+       <a class="anchor-link" href="#-2--Layout-options">
+        ¶
+       </a>
+      </h5>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       We use annotation object to display the plot's and the subplot titles:
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
+     <div class="prompt input_prompt">
+      In [23]:
+     </div>
+     <div class="inner_cell">
+      <div class="input_area">
+       <div class="highlight">
+        <pre><span class="n">title</span> <span class="o">=</span> <span class="s">"Fig. 3.4a: &lt;b&gt;Course Grade Distributions&lt;/b&gt;"</span>  <span class="c"># plot's title</span>
 
 <span class="c"># (2.1) Make 'title' annotation object</span>
 <span class="n">anno_title</span> <span class="o">=</span> <span class="n">Annotation</span><span class="p">(</span>
@@ -1924,31 +1923,31 @@ Figure(
     <span class="n">titlefont</span><span class="o">=</span><span class="n">Font</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s">'rgba(0,0,0,0)'</span><span class="p">)</span> <span class="c"># (!) invisible color</span>
 <span class="p">)</span>
 </pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>
-        onto axis style options
-       </p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-       In [24]:
+       </div>
       </div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight">
-<pre><span class="c"># Define</span>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       onto axis style options
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
+     <div class="prompt input_prompt">
+      In [24]:
+     </div>
+     <div class="inner_cell">
+      <div class="input_area">
+       <div class="highlight">
+        <pre><span class="c"># Define</span>
 <span class="n">axis_style</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span>
     <span class="n">tickfont</span><span class="o">=</span><span class="n">Font</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="mi">14</span><span class="p">),</span>   <span class="c"># font size (default is 12)</span>
     <span class="n">titlefont</span><span class="o">=</span><span class="n">Font</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="mi">14</span><span class="p">),</span>  <span class="c"># title font size (default is 12)</span>
@@ -1983,31 +1982,31 @@ Figure(
     <span class="p">{</span><span class="s">'yaxis{}'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">splt</span><span class="p">):</span> <span class="n">yaxis_style</span> <span class="k">for</span> <span class="n">splt</span> <span class="ow">in</span> <span class="n">splts</span><span class="p">}</span>
 <span class="p">)</span>
 </pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>
-        Set a few other layout features:
-       </p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-       In [25]:
+       </div>
       </div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight">
-<pre><span class="n">fig</span><span class="p">[</span><span class="s">'layout'</span><span class="p">]</span><span class="o">.</span><span class="n">update</span><span class="p">(</span>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       Set a few other layout features:
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
+     <div class="prompt input_prompt">
+      In [25]:
+     </div>
+     <div class="inner_cell">
+      <div class="input_area">
+       <div class="highlight">
+        <pre><span class="n">fig</span><span class="p">[</span><span class="s">'layout'</span><span class="p">]</span><span class="o">.</span><span class="n">update</span><span class="p">(</span>
     <span class="n">bargap</span><span class="o">=</span><span class="mf">0.01</span><span class="p">,</span>     <span class="c"># norm. spacing between bars</span>
     <span class="n">showlegend</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span> <span class="c"># remove legend</span>
     <span class="n">font</span><span class="o">=</span><span class="n">Font</span><span class="p">(</span>
@@ -2027,141 +2026,141 @@ Figure(
     <span class="n">width</span><span class="o">=</span><span class="n">width</span><span class="p">,</span>     <span class="c"># plot's width in pixels (defined in -0-)</span>
 <span class="p">)</span>
 </pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h5 id="-3--Call-to-Plotly">
-        -3- Call to Plotly
-        <a class="anchor-link" href="#-3--Call-to-Plotly">
-         ¶
-        </a>
-</h5>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-       In [26]:
+       </div>
       </div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight">
-<pre><span class="c"># (@) Send figure object to Plotly and show in notebook</span>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <h5 id="-3--Call-to-Plotly">
+       -3- Call to Plotly
+       <a class="anchor-link" href="#-3--Call-to-Plotly">
+        ¶
+       </a>
+      </h5>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
+     <div class="prompt input_prompt">
+      In [26]:
+     </div>
+     <div class="inner_cell">
+      <div class="input_area">
+       <div class="highlight">
+        <pre><span class="c"># (@) Send figure object to Plotly and show in notebook</span>
 <span class="n">py</span><span class="o">.</span><span class="n">iplot</span><span class="p">(</span><span class="n">fig</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="s">'s4_grades-bins'</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="n">height</span><span class="p">)</span>  
 
 <span class="c"># adjust output cell with 'width' and 'height'</span>
 </pre>
-</div>
-</div>
-</div>
-</div>
-<div class="output_wrapper">
-<div class="output">
-<div class="output_area">
-<div class="prompt">
-</div>
-<div class="output_html rendered_html output_subarea ">
-<iframe height="800" id="igraph" scrolling="no" seamless="seamless" src="https://plot.ly/~etpinard/156/625/775" style="border:none;" width="650">
-</iframe>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>
-        Note that Plotly allows users to customize histogram bins in another way: by setting the total number of bins.
-       </p>
-<p>
-        This is done using the
-        <code>
-         'nbinx'
-        </code>
-        key in
-        <code>
-         Histogram
-        </code>
-        (or correspondingly the
-        <code>
-         'nbiny'
-        </code>
-        for histograms with horizontal bars).
-       </p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h5 id="Adding-Gaussian-fits-to-Plotly-histograms">
-        Adding Gaussian fits to Plotly histograms
-        <a class="anchor-link" href="#Adding-Gaussian-fits-to-Plotly-histograms">
-         ¶
-        </a>
-</h5>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>
-        The above figure is pretty good, but let's make it even better by overlaying Gaussian fits on top of the histograms.
-       </p>
-<p>
-        Hover around on the plot above and notice that the x values corresponding to the bins are placed in the middle of each bin. So, after finding the best-fit Gaussian curves, we will evaluate them at these points. This will allow us to compare the probability density values of each bin and the fit by hovering the cursor on the plot.
-       </p>
-<p>
-        The following code make use the
-        <code>
-         scipy
-        </code>
-        module.
-       </p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-       In [27]:
+       </div>
       </div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight">
-<pre><span class="c"># (*) Import normal distribution best fits function from scipy</span>
+     </div>
+    </div>
+    <div class="output_wrapper">
+     <div class="output">
+      <div class="output_area">
+       <div class="prompt">
+       </div>
+       <div class="output_html rendered_html output_subarea ">
+        <iframe height="800" id="igraph" scrolling="no" seamless="seamless" src="https://plot.ly/~etpinard/156/625/775" style="border:none;" width="650">
+        </iframe>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       Note that Plotly allows users to customize histogram bins in another way: by setting the total number of bins.
+      </p>
+      <p>
+       This is done using the
+       <code>
+        'nbinx'
+       </code>
+       key in
+       <code>
+        Histogram
+       </code>
+       (or correspondingly the
+       <code>
+        'nbiny'
+       </code>
+       for histograms with horizontal bars).
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <h5 id="Adding-Gaussian-fits-to-Plotly-histograms">
+       Adding Gaussian fits to Plotly histograms
+       <a class="anchor-link" href="#Adding-Gaussian-fits-to-Plotly-histograms">
+        ¶
+       </a>
+      </h5>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       The above figure is pretty good, but let's make it even better by overlaying Gaussian fits on top of the histograms.
+      </p>
+      <p>
+       Hover around on the plot above and notice that the x values corresponding to the bins are placed in the middle of each bin. So, after finding the best-fit Gaussian curves, we will evaluate them at these points. This will allow us to compare the probability density values of each bin and the fit by hovering the cursor on the plot.
+      </p>
+      <p>
+       The following code make use the
+       <code>
+        scipy
+       </code>
+       module.
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
+     <div class="prompt input_prompt">
+      In [27]:
+     </div>
+     <div class="inner_cell">
+      <div class="input_area">
+       <div class="highlight">
+        <pre><span class="c"># (*) Import normal distribution best fits function from scipy</span>
 <span class="kn">from</span> <span class="nn">scipy.stats</span> <span class="kn">import</span> <span class="n">norm</span>
 </pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-       In [28]:
+       </div>
       </div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight">
-<pre><span class="c"># Space on which Gaussian fit will be evaluated</span>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
+     <div class="prompt input_prompt">
+      In [28]:
+     </div>
+     <div class="inner_cell">
+      <div class="input_area">
+       <div class="highlight">
+        <pre><span class="c"># Space on which Gaussian fit will be evaluated</span>
 <span class="n">x_space</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">xbin_start</span><span class="o">+</span><span class="n">xbin_size</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span><span class="n">xbin_end</span><span class="p">,</span><span class="n">xbin_size</span><span class="p">)</span>
 
 <span class="c"># Gaussian (or Normal) distribution</span>
@@ -2198,171 +2197,171 @@ Figure(
     <span class="n">make_gaussian_trace</span><span class="p">(</span><span class="n">course</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
 <span class="p">])</span>
 </pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>
-        Finally, update the plot's title:
-       </p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-       In [29]:
+       </div>
       </div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight">
-<pre><span class="c"># Update title annotation (1st entry in Annotations)</span>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       Finally, update the plot's title:
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
+     <div class="prompt input_prompt">
+      In [29]:
+     </div>
+     <div class="inner_cell">
+      <div class="input_area">
+       <div class="highlight">
+        <pre><span class="c"># Update title annotation (1st entry in Annotations)</span>
 <span class="n">title</span> <span class="o">=</span> <span class="s">'Fig. 3.5b: &lt;b&gt;Course Grade Distributions&lt;/b&gt;'</span>
 <span class="n">fig</span><span class="p">[</span><span class="s">'layout'</span><span class="p">][</span><span class="s">'annotations'</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">text</span><span class="o">=</span><span class="n">title</span><span class="p">)</span>
 </pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>
-        This gives
-       </p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-       In [30]:
+       </div>
       </div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight">
-<pre><span class="c"># (@) Send figure object to Plotly and show in notebook</span>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       This gives
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
+     <div class="prompt input_prompt">
+      In [30]:
+     </div>
+     <div class="inner_cell">
+      <div class="input_area">
+       <div class="highlight">
+        <pre><span class="c"># (@) Send figure object to Plotly and show in notebook</span>
 <span class="n">py</span><span class="o">.</span><span class="n">iplot</span><span class="p">(</span><span class="n">fig</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="s">'s4_grades-bins-lines'</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="n">height</span><span class="p">)</span>
 </pre>
-</div>
-</div>
-</div>
-</div>
-<div class="output_wrapper">
-<div class="output">
-<div class="output_area">
-<div class="prompt">
-</div>
-<div class="output_html rendered_html output_subarea ">
-<iframe height="800" id="igraph" scrolling="no" seamless="seamless" src="https://plot.ly/~etpinard/193/625/775" style="border:none;" width="650">
-</iframe>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>
-        Someone could win TA of the year with this plot.
-       </p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="4.4-Box-plots">
-        4.4 Box plots
-        <a class="anchor-link" href="#4.4-Box-plots">
-         ¶
-        </a>
-</h4>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>
-        Box plots are a great way to present the distribution of an array of numbers. While the shape of an histogram depends strongly on the specified bin size and locations, box plots have no such parameters, which could be advantageous in some situations.
-       </p>
-<p>
-        For readers unfamiliar with box plots:
-       </p>
-<ul>
-<li>
-         The bottom and top of the box are the first and third quartiles respectively.
-        </li>
-<li>
-         The band inside the box is the second quartile (i.e the median).
-        </li>
-</ul>
-<p>
-        Plotly box plots have whiskers:
-       </p>
-<ul>
-<li>
-         The end of the bottom whisker corresponds to the largest value within:
-        </li>
-</ul>
-<p>
-        $$ Q_1 - 1.5\,(\mathrm{IQR}) \;.$$
-       </p>
-<ul>
-<li>
-         The end of the top whisker corresponds to the smaller value within:
-        </li>
-</ul>
-<p>
-        $$ Q_3 + 1.5\,(\mathrm{IQR}) \;.$$
-       </p>
-<p>
-        Where $Q_1$ is the first quartile, $Q_3$ is the third quartile and $\mathrm{IQR}$ is the interquartile range (defined as $Q_3-Q_1$).
-       </p>
-<p>
-        So, let's first make a simple box plot comparing the course grade distributions:
-       </p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-       In [31]:
+       </div>
       </div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight">
-<pre><span class="n">help</span><span class="p">(</span><span class="n">Box</span><span class="p">)</span>  <span class="c"># call help()!</span>
+     </div>
+    </div>
+    <div class="output_wrapper">
+     <div class="output">
+      <div class="output_area">
+       <div class="prompt">
+       </div>
+       <div class="output_html rendered_html output_subarea ">
+        <iframe height="800" id="igraph" scrolling="no" seamless="seamless" src="https://plot.ly/~etpinard/193/625/775" style="border:none;" width="650">
+        </iframe>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       Someone could win TA of the year with this plot.
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <h4 id="4.4-Box-plots">
+       4.4 Box plots
+       <a class="anchor-link" href="#4.4-Box-plots">
+        ¶
+       </a>
+      </h4>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       Box plots are a great way to present the distribution of an array of numbers. While the shape of an histogram depends strongly on the specified bin size and locations, box plots have no such parameters, which could be advantageous in some situations.
+      </p>
+      <p>
+       For readers unfamiliar with box plots:
+      </p>
+      <ul>
+       <li>
+        The bottom and top of the box are the first and third quartiles respectively.
+       </li>
+       <li>
+        The band inside the box is the second quartile (i.e the median).
+       </li>
+      </ul>
+      <p>
+       Plotly box plots have whiskers:
+      </p>
+      <ul>
+       <li>
+        The end of the bottom whisker corresponds to the largest value within:
+       </li>
+      </ul>
+      <p>
+       $$ Q_1 - 1.5\,(\mathrm{IQR}) \;.$$
+      </p>
+      <ul>
+       <li>
+        The end of the top whisker corresponds to the smaller value within:
+       </li>
+      </ul>
+      <p>
+       $$ Q_3 + 1.5\,(\mathrm{IQR}) \;.$$
+      </p>
+      <p>
+       Where $Q_1$ is the first quartile, $Q_3$ is the third quartile and $\mathrm{IQR}$ is the interquartile range (defined as $Q_3-Q_1$).
+      </p>
+      <p>
+       So, let's first make a simple box plot comparing the course grade distributions:
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
+     <div class="prompt input_prompt">
+      In [31]:
+     </div>
+     <div class="inner_cell">
+      <div class="input_area">
+       <div class="highlight">
+        <pre><span class="n">help</span><span class="p">(</span><span class="n">Box</span><span class="p">)</span>  <span class="c"># call help()!</span>
 </pre>
-</div>
-</div>
-</div>
-</div>
-<div class="output_wrapper">
-<div class="output">
-<div class="output_area">
-<div class="prompt">
-</div>
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="output_wrapper">
+     <div class="output">
+      <div class="output_area">
+       <div class="prompt">
+       </div>
+       <div class="output_subarea output_stream output_stdout output_text">
+        <pre>
 Help on class Box in module plotly.graph_objs.graph_objs:
 
 class Box(PlotlyTrace)
@@ -2757,20 +2756,20 @@ class Box(PlotlyTrace)
 
 
 </pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-       In [32]:
+       </div>
       </div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight">
-<pre><span class="c"># Define a color for the boxes (a nice blue-green)</span>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
+     <div class="prompt input_prompt">
+      In [32]:
+     </div>
+     <div class="inner_cell">
+      <div class="input_area">
+       <div class="highlight">
+        <pre><span class="c"># Define a color for the boxes (a nice blue-green)</span>
 <span class="n">color</span> <span class="o">=</span> <span class="s">'#1c9099'</span>
 
 <span class="c"># Define a trace-generating function (returns a Box object)</span>
@@ -2797,99 +2796,99 @@ class Box(PlotlyTrace)
     <span class="n">showlegend</span><span class="o">=</span><span class="bp">False</span>
 <span class="p">)</span> 
 </pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-       In [33]:
+       </div>
       </div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight">
-<pre><span class="c"># Make Figure object</span>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
+     <div class="prompt input_prompt">
+      In [33]:
+     </div>
+     <div class="inner_cell">
+      <div class="input_area">
+       <div class="highlight">
+        <pre><span class="c"># Make Figure object</span>
 <span class="n">fig</span> <span class="o">=</span> <span class="n">Figure</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="p">,</span> <span class="n">layout</span><span class="o">=</span><span class="n">layout</span><span class="p">)</span>
 
 <span class="c"># (@) Send to Plotly and show in notebook</span>
 <span class="n">py</span><span class="o">.</span><span class="n">iplot</span><span class="p">(</span><span class="n">fig</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="s">'s4_grades-box'</span><span class="p">)</span>
 </pre>
-</div>
-</div>
-</div>
-</div>
-<div class="output_wrapper">
-<div class="output">
-<div class="output_area">
-<div class="prompt">
-</div>
-<div class="output_html rendered_html output_subarea ">
-<iframe height="525" id="igraph" scrolling="no" seamless="seamless" src="https://plot.ly/~etpinard/91" style="border:none;" width="100%">
-</iframe>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>
-        Plotly automatically separates and labels individual
-        <code>
-         Box
-        </code>
-        objects on the x-axis. That said, Plotly also allows users to specify the position of each box using the
-        <code>
-         'x'
-        </code>
-        and
-        <code>
-         'x0'
-        </code>
-        keys. For more info, refer to the
-        <code>
-         help(Box)
-        </code>
-        documentation.
-       </p>
-<p>
-        By default, data points outside the whiskers are plot as scatter point. These
-        <em>
-         outliers
-        </em>
-        can be remove by setting
-        <code>
-         'boxpoints':False
-        </code>
-        in the Box object.
-       </p>
-<p>
-        Plotly box plots have a custom hovermode. Hovering over any part of the box object labels the quartiles and the whiskers. Note that resetting
-        <code>
-         'hovermode'
-        </code>
-        will disable it.
-       </p>
-<p>
-        Now, let's add a couple style options to our box plot:
-       </p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-       In [34]:
+       </div>
       </div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight">
-<pre><span class="c"># Make dictionary of style updates</span>
+     </div>
+    </div>
+    <div class="output_wrapper">
+     <div class="output">
+      <div class="output_area">
+       <div class="prompt">
+       </div>
+       <div class="output_html rendered_html output_subarea ">
+        <iframe height="525" id="igraph" scrolling="no" seamless="seamless" src="https://plot.ly/~etpinard/91" style="border:none;" width="100%">
+        </iframe>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       Plotly automatically separates and labels individual
+       <code>
+        Box
+       </code>
+       objects on the x-axis. That said, Plotly also allows users to specify the position of each box using the
+       <code>
+        'x'
+       </code>
+       and
+       <code>
+        'x0'
+       </code>
+       keys. For more info, refer to the
+       <code>
+        help(Box)
+       </code>
+       documentation.
+      </p>
+      <p>
+       By default, data points outside the whiskers are plot as scatter point. These
+       <em>
+        outliers
+       </em>
+       can be remove by setting
+       <code>
+        'boxpoints':False
+       </code>
+       in the Box object.
+      </p>
+      <p>
+       Plotly box plots have a custom hovermode. Hovering over any part of the box object labels the quartiles and the whiskers. Note that resetting
+       <code>
+        'hovermode'
+       </code>
+       will disable it.
+      </p>
+      <p>
+       Now, let's add a couple style options to our box plot:
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
+     <div class="prompt input_prompt">
+      In [34]:
+     </div>
+     <div class="inner_cell">
+      <div class="input_area">
+       <div class="highlight">
+        <pre><span class="c"># Make dictionary of style updates</span>
 <span class="n">box_style</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span>
     <span class="n">boxpoints</span><span class="o">=</span><span class="s">'all'</span><span class="p">,</span> <span class="c"># show all data pts on plot (default is 'outliers')</span>
     <span class="n">jitter</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span>      <span class="c"># spacing bt. boxpoints (0=no spacing, 1=from box to box)</span>
@@ -2908,84 +2907,84 @@ class Box(PlotlyTrace)
 <span class="c">#   using the graph object update() method</span>
 <span class="n">fig</span><span class="p">[</span><span class="s">'data'</span><span class="p">]</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">box_style</span><span class="p">)</span>
 </pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-       In [35]:
+       </div>
       </div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight">
-<pre><span class="c"># Update plot's title</span>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
+     <div class="prompt input_prompt">
+      In [35]:
+     </div>
+     <div class="inner_cell">
+      <div class="input_area">
+       <div class="highlight">
+        <pre><span class="c"># Update plot's title</span>
 <span class="n">fig</span><span class="p">[</span><span class="s">'layout'</span><span class="p">]</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s">'Fig 4.4b: Course Grade Distributions'</span><span class="p">)</span>
 
 <span class="c"># (@) Send to Plotly and show in notebook</span>
 <span class="n">py</span><span class="o">.</span><span class="n">iplot</span><span class="p">(</span><span class="n">fig</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="s">'s4_grades-box-styled'</span><span class="p">)</span>
 </pre>
-</div>
-</div>
-</div>
-</div>
-<div class="output_wrapper">
-<div class="output">
-<div class="output_area">
-<div class="prompt">
-</div>
-<div class="output_html rendered_html output_subarea ">
-<iframe height="525" id="igraph" scrolling="no" seamless="seamless" src="https://plot.ly/~etpinard/198" style="border:none;" width="100%">
-</iframe>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>
-        Box plots are really a great to visualize data distributions.
-       </p>
-<p>
-        Let's add one more feature. When the
-        <code>
-         'boxmean'
-        </code>
-        key in
-        <code>
-         Box
-        </code>
-        is set to
-        <code>
-         True
-        </code>
-        , Plotly draws a dashed line inside the boxes representing the mean of the distribution. With
-        <code>
-         'boxmean':'sd'
-        </code>
-        , Plotly adds two triangles representing +/- one standard deviation.
-       </p>
-<p>
-        Next, we also take the chance to the style our plot further. Consider
-       </p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-       In [36]:
+       </div>
       </div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight">
-<pre><span class="c"># Add 'boxmean' key (set to True, for just a line a the mean)</span>
+     </div>
+    </div>
+    <div class="output_wrapper">
+     <div class="output">
+      <div class="output_area">
+       <div class="prompt">
+       </div>
+       <div class="output_html rendered_html output_subarea ">
+        <iframe height="525" id="igraph" scrolling="no" seamless="seamless" src="https://plot.ly/~etpinard/198" style="border:none;" width="100%">
+        </iframe>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       Box plots are really a great to visualize data distributions.
+      </p>
+      <p>
+       Let's add one more feature. When the
+       <code>
+        'boxmean'
+       </code>
+       key in
+       <code>
+        Box
+       </code>
+       is set to
+       <code>
+        True
+       </code>
+       , Plotly draws a dashed line inside the boxes representing the mean of the distribution. With
+       <code>
+        'boxmean':'sd'
+       </code>
+       , Plotly adds two triangles representing +/- one standard deviation.
+      </p>
+      <p>
+       Next, we also take the chance to the style our plot further. Consider
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
+     <div class="prompt input_prompt">
+      In [36]:
+     </div>
+     <div class="inner_cell">
+      <div class="input_area">
+       <div class="highlight">
+        <pre><span class="c"># Add 'boxmean' key (set to True, for just a line a the mean)</span>
 <span class="n">fig</span><span class="p">[</span><span class="s">'data'</span><span class="p">]</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="nb">dict</span><span class="p">(</span><span class="n">boxmean</span><span class="o">=</span><span class="s">'sd'</span><span class="p">))</span>  
 
 <span class="c"># (!) boxmean='sd' must be sent inside a dict here as .update() for list-like</span>
@@ -3015,147 +3014,146 @@ class Box(PlotlyTrace)
     <span class="n">height</span><span class="o">=</span><span class="mi">500</span>               <span class="c">#  and height</span>
 <span class="p">)</span>
 </pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-       In [37]:
+       </div>
       </div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight">
-<pre><span class="c"># Update plot's title</span>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
+     <div class="prompt input_prompt">
+      In [37]:
+     </div>
+     <div class="inner_cell">
+      <div class="input_area">
+       <div class="highlight">
+        <pre><span class="c"># Update plot's title</span>
 <span class="n">fig</span><span class="p">[</span><span class="s">'layout'</span><span class="p">]</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s">'Fig 4.4c: Course Grade Distributions'</span><span class="p">)</span>
 
 <span class="c"># (@) Send to Plotly and show in notebook</span>
 <span class="n">py</span><span class="o">.</span><span class="n">iplot</span><span class="p">(</span><span class="n">fig</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="s">'s4_grades-box-styled2'</span><span class="p">)</span>
 </pre>
-</div>
-</div>
-</div>
-</div>
-<div class="output_wrapper">
-<div class="output">
-<div class="output_area">
-<div class="prompt">
-</div>
-<div class="output_html rendered_html output_subarea ">
-<iframe height="525" id="igraph" scrolling="no" seamless="seamless" src="https://plot.ly/~etpinard/199" style="border:none;" width="100%">
-</iframe>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<hr/>
-<h4 style="font-size:14pt;">
-        Go to
-        <a href="/python/heatmaps-contours-and-2dhistograms-tutorial">
-         Section 5 --- Heatmaps, Contours and 2D Histograms
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="output_wrapper">
+     <div class="output">
+      <div class="output_area">
+       <div class="prompt">
+       </div>
+       <div class="output_html rendered_html output_subarea ">
+        <iframe height="525" id="igraph" scrolling="no" seamless="seamless" src="https://plot.ly/~etpinard/199" style="border:none;" width="100%">
+        </iframe>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <hr/>
+      <h4 style="font-size:14pt;">
+       Go to
+       <a href="/python/heatmaps-contours-and-2dhistograms-tutorial">
+        Section 5 --- Heatmaps, Contours and 2D Histograms
+       </a>
+      </h4>
+      <h4 style="font-size:14pt;">
+       Go to
+       <a href="/python/bubble-charts-tutorial">
+        Section 3 --- Bubble Charts
+       </a>
+      </h4>
+      <h4 style="font-size:14pt;">
+       Go back to
+       <a href="#notebook">
+        top of page
+       </a>
+      </h4>
+      <h4 style="font-size:14pt;">
+       Go back to User Guide's
+       <a href="/python/user-guide">
+        homepage
+       </a>
+      </h4>
+      <hr/>
+      <!-- **Go to** [next section](https://plot.ly/python/heatmaps-contours-and-2dhistograms-tutorial) -->
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <div style="float:right; \">
+       <img align="right" src="/static/api_docs/image/user_guide/python/image07.png" style="float:right; margin-left: 5px; margin-top: -10px"/>
+      </div>
+      <h4>
+       Got Questions or Feedback?
+      </h4>
+      <p>
+       About
+       <a href="https://plot.ly" target="_blank">
+        Plotly
+       </a>
+      </p>
+      <ul>
+       <li>
+        email: feedback@plot.ly
+       </li>
+       <li>
+        tweet:
+        <a href="https://twitter.com/plotlygraphs" target="_blank">
+         @plotlygraphs
         </a>
-</h4>
-<h4 style="font-size:14pt;">
-        Go to
-        <a href="/python/bubble-charts-tutorial">
-         Section 3 --- Bubble Charts
+       </li>
+      </ul>
+      <p>
+       About the
+       <a href="https://github.com/plotly/python-user-guide" target="_blank">
+        User Guide
+       </a>
+      </p>
+      <ul>
+       <li>
+        email: etienne@plot.ly
+       </li>
+       <li>
+        tweet:
+        <a href="https://twitter.com/etpinard" target="_blank">
+         @etpinard
         </a>
-</h4>
-<h4 style="font-size:14pt;">
-        Go back to
-        <a href="#notebook">
-         top of page
+       </li>
+      </ul>
+      <h4 style="margin-top:30px;">
+       Notebook styling ideas
+      </h4>
+      <p>
+       Big thanks to
+      </p>
+      <ul>
+       <li>
+        <a href="http://nbviewer.ipython.org/github/CamDavidsonPilon/Probabilistic-Programming-and-Bayesian-Methods-for-Hackers/blob/master/Prologue/Prologue.ipynb" target="_blank">
+         Cam Davidson-Pilon
         </a>
-</h4>
-<h4 style="font-size:14pt;">
-        Go back to User Guide's
-        <a href="/python/user-guide">
-         homepage
+       </li>
+       <li>
+        <a href="http://lorenabarba.com/blog/announcing-aeropython/#.U1ULXdX1LJ4.google_plusone_share" target="_blank">
+         Lorena A. Barba
         </a>
-</h4>
-<hr/>
-<!-- **Go to** [next section](https://plot.ly/python/heatmaps-contours-and-2dhistograms-tutorial) -->
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<div style="float:right; \">
-<img align="right" src="http://i.imgur.com/4vwuxdJ.png" style="float:right; margin-left: 5px; margin-top: -10px"/>
-</div>
-<h4>
-        Got Questions or Feedback?
-       </h4>
-<p>
-        About
-        <a href="https://plot.ly" target="_blank">
-         Plotly
-        </a>
-</p>
-<ul>
-<li>
-         email: feedback@plot.ly
-        </li>
-<li>
-         tweet:
-         <a href="https://twitter.com/plotlygraphs" target="_blank">
-          @plotlygraphs
-         </a>
-</li>
-</ul>
-<p>
-        About the
-        <a href="https://github.com/plotly/python-user-guide" target="_blank">
-         User Guide
-        </a>
-</p>
-<ul>
-<li>
-         email: etienne@plot.ly
-        </li>
-<li>
-         tweet:
-         <a href="https://twitter.com/etpinard" target="_blank">
-          @etpinard
-         </a>
-</li>
-</ul>
-<h4 style="margin-top:30px;">
-        Notebook styling ideas
-       </h4>
-<p>
-        Big thanks to
-       </p>
-<ul>
-<li>
-<a href="http://nbviewer.ipython.org/github/CamDavidsonPilon/Probabilistic-Programming-and-Bayesian-Methods-for-Hackers/blob/master/Prologue/Prologue.ipynb" target="_blank">
-          Cam Davidson-Pilon
-         </a>
-</li>
-<li>
-<a href="http://lorenabarba.com/blog/announcing-aeropython/#.U1ULXdX1LJ4.google_plusone_share" target="_blank">
-          Lorena A. Barba
-         </a>
-</li>
-</ul>
-<p>
-<br/>
-</p>
-</div>
-</div>
-</div>
+       </li>
+      </ul>
+      <p>
+       <br/>
+      </p>
+     </div>
+    </div>
+   </div>
+  </div>
+ </div>
 
-</div>
-</div>
-</body>
