@@ -24,9 +24,9 @@ publish:
 
 push-to-streambed:
 	@rm -rf $(streambed_path)/shelly/templates/api_docs/includes/user_guide/python/*
-	@rm -rf $(streambed_path)/shelly/api_docs/static/image/user_guide/python/*
+	@rm -rf $(streambed_path)/shelly/api_docs/static/api_docs/image/user_guide/python/*
 	@cp -R published/includes/* $(streambed_path)/shelly/templates/api_docs/includes/user_guide/python/
-	@cp -R published/static/image/* $(streambed_path)/shelly/api_docs/static/image/user_guide/python/
+	@cp -R published/static/image/* $(streambed_path)/shelly/api_docs/static/api_docs/image/user_guide/python/
 	@cp published/python_urls.py $(streambed_path)/shelly/api_docs/urls/user_guide/
 	@cp published/python_sitemaps.py $(streambed_path)/shelly/api_docs/sitemaps/user_guide/
 
