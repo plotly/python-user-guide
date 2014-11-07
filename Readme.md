@@ -31,8 +31,6 @@ Refer to [`Contributing.md`](./Contributing.md) for more.
 
 * `Index.ipynb` : notebook listing the content of the user guide
 
-* `templates/` : user guide templates
-
 * `Contributing.md` : instructions for potential contributers
 
 * `makefile` : implements scripts in `scripts/` 
@@ -42,6 +40,8 @@ Refer to [`Contributing.md`](./Contributing.md) for more.
 * `published/` : plot.ly-ready published content
 
 * `custom.css` : CSS file for notebook styling
+
+* `templates/` : user guide templates (coming soon)
 
 #### Got Questions and Feedback? 
 
