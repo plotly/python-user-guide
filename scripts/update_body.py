@@ -119,7 +119,6 @@ def strip(body):
 # Add anchor to In/Out <div> (for easy link sharing)
 def add_anchors(body):
     insert_tag = 'a'
-    a_class = "anchor-link"
     for div in body.findAll('div', {"class": "prompt"}):
         text = div.getText(strip=True, separator=u' ')
         if not text:
@@ -129,7 +128,7 @@ def add_anchors(body):
         div['id'] = _id
         # Add <a href= > around text
         a_href = '#' + _id
-        insert_attrs = {'href': a_href, 'class': a_class}
+        insert_attrs = {'href': a_href, 'class': div['class']}
         inserter(div, insert_tag, insert_attrs, text)
     return body
 
