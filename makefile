@@ -20,7 +20,7 @@ convert: $(ug-nbs)
 
 publish:
 	@rm -f publish.log
-	@ipython scripts/publish.py converted/*.html >> publish.log
+	@ipython scripts/publish.py converted/*.html
 
 push-to-streambed:
 	@rm -rf $(streambed_path)/shelly/templates/api_docs/includes/user_guide/python/*
