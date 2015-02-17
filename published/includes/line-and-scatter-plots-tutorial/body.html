@@ -82,8 +82,8 @@
 &gt;&gt;&gt; from plotly.graph_objs import *
 &gt;&gt;&gt; # auto sign-in with credentials or use py.sign_in()
 &gt;&gt;&gt; trace1 = Scatter(
-        x=[1,2,3],
-        y=[5,6,7],
+        x=[1, 2, 3],
+        y=[5, 6, 7],
         mode='markers',
         marker=Marker(
             color='red',
@@ -1391,9 +1391,9 @@ class Scatter(PlotlyTrace)
        <li>
         With
         <code>
-         'text
+         'text'
         </code>
-        ', text linked to the
+        , text linked to the
         <code>
          'text'
         </code>
@@ -2335,7 +2335,7 @@ class image
       <div class="input_area">
        <div class="highlight">
         <pre><span class="c"># (@) Retrieve figure object using the figure's URL</span>
-<span class="n">fig</span> <span class="o">=</span> <span class="n">py</span><span class="o">.</span><span class="n">get_figure</span><span class="p">(</span><span class="s">"https://plot.ly/~etpinard/329/"</span><span class="p">)</span>
+<span class="n">fig</span> <span class="o">=</span> <span class="n">py</span><span class="o">.</span><span class="n">get_figure</span><span class="p">(</span><span class="s">"https://plot.ly/~etpinard/329"</span><span class="p">)</span>
 </pre>
        </div>
       </div>
@@ -3131,7 +3131,7 @@ Both
       <div class="input_area">
        <div class="highlight">
         <pre><span class="c"># Compute width-heigth ratio</span>
-<span class="n">ratio</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">fig</span><span class="p">[</span><span class="s">'layout'</span><span class="p">][</span><span class="s">'width'</span><span class="p">])</span><span class="o">/</span><span class="n">fig</span><span class="p">[</span><span class="s">'layout'</span><span class="p">][</span><span class="s">'height'</span><span class="p">]</span>
+<span class="n">ratio</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">fig</span><span class="p">[</span><span class="s">'layout'</span><span class="p">][</span><span class="s">'width'</span><span class="p">])</span> <span class="o">/</span> <span class="n">fig</span><span class="p">[</span><span class="s">'layout'</span><span class="p">][</span><span class="s">'height'</span><span class="p">]</span>
 
 <span class="c"># (-) One of the components must be a float so that the division yields a float</span>
 
@@ -3298,35 +3298,6 @@ Both
       <p>
        <br/>
       </p>
-     </div>
-    </div>
-   </div>
-   <div class="cell border-box-sizing code_cell rendered">
-    <div class="input">
-     <div class="prompt input_prompt" id="in-[37]">
-      <a class="prompt input_prompt" href="#in-[37]">
-       In [37]:
-      </a>
-     </div>
-     <div class="inner_cell">
-      <div class="input_area">
-       <div class="highlight">
-        <pre><span class="c"># CSS styling within IPython notebook</span>
-<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">display</span><span class="p">,</span> <span class="n">HTML</span>
-<span class="n">display</span><span class="p">(</span><span class="n">HTML</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="s">'../custom.css'</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()))</span>
-</pre>
-       </div>
-      </div>
-     </div>
-    </div>
-    <div class="output_wrapper">
-     <div class="output">
-      <div class="output_area">
-       <div class="prompt">
-       </div>
-       <div class="output_html rendered_html output_subarea ">
-       </div>
-      </div>
      </div>
     </div>
    </div>

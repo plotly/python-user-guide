@@ -100,7 +100,7 @@
 &gt;&gt;&gt; from plotly.graph_objs import *
 &gt;&gt;&gt; # auto sign-in with credentials or use py.sign_in()
 &gt;&gt;&gt; trace1 = Heatmap(
-        z=[[1,2,3], [4,5,6]]
+        z=[[1, 2, 3], [4, 5, 6]]
     )
 &gt;&gt;&gt; data = Data([trace1])
 &gt;&gt;&gt; py.plot(data)
@@ -610,7 +610,7 @@ You can download the module using pip. Simply run:
         <pre><span class="c"># Sites' full names</span>
 <span class="n">sites</span> <span class="o">=</span> <span class="p">[</span>
     <span class="s">'Berri/&lt;br&gt;de Maisonneuve'</span><span class="p">,</span> <span class="s">'Côte-Ste-Catherine&lt;br&gt;(parc Beaubien)'</span><span class="p">,</span>
-    <span class="s">'de Maisonneuve/&lt;br&gt;Berri'</span><span class="p">,</span><span class="s">'de Maisonneuve/&lt;br&gt;Peel'</span><span class="p">,</span><span class="s">'du Parc/&lt;br&gt;Duluth'</span><span class="p">,</span>
+    <span class="s">'de Maisonneuve/&lt;br&gt;Berri'</span><span class="p">,</span> <span class="s">'de Maisonneuve/&lt;br&gt;Peel'</span><span class="p">,</span> <span class="s">'du Parc/&lt;br&gt;Duluth'</span><span class="p">,</span>
     <span class="s">'Pierre-Dupuy&lt;br&gt;(Habitat 67)'</span><span class="p">,</span> <span class="s">'Rachel/&lt;br&gt;Marquette'</span><span class="p">,</span> <span class="s">'Laurier&lt;br&gt;(métro)'</span>
 <span class="p">]</span>
 </pre>
@@ -1893,10 +1893,10 @@ class Heatmap(PlotlyTrace)
     
     <span class="c"># (2*) Make list of days of the month </span>
     <span class="n">N_the_days</span> <span class="o">=</span> <span class="mi">31</span>
-    <span class="n">the_days</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">N_the_days</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>  <span class="c"># [1, ..., 31]</span>
+    <span class="n">the_days</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">N_the_days</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>  <span class="c"># [1, ..., 31]</span>
     
     <span class="c"># (3.1) Make tmp array filled with NaNs</span>
-    <span class="n">Z_tmp</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">empty</span><span class="p">((</span><span class="n">N_the_days</span><span class="p">,</span><span class="n">N_the_months</span><span class="p">))</span>
+    <span class="n">Z_tmp</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">empty</span><span class="p">((</span><span class="n">N_the_days</span><span class="p">,</span> <span class="n">N_the_months</span><span class="p">))</span>
     <span class="n">Z_tmp</span><span class="o">.</span><span class="n">fill</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">)</span>
     
     <span class="c"># (3.2) Make list of indices to fill in Z_tmp month by month</span>
@@ -1915,7 +1915,7 @@ class Heatmap(PlotlyTrace)
     <span class="k">return</span> <span class="p">(</span><span class="n">the_months</span><span class="p">,</span> <span class="n">the_days</span><span class="p">,</span> <span class="n">Z</span><span class="p">)</span>  <span class="c"># output coordinates for our plot</span>
     
 <span class="c"># Call function, get coordinates for our plot</span>
-<span class="n">the_months_JanAug</span><span class="p">,</span><span class="n">the_days</span><span class="p">,</span><span class="n">Z_dayXmonth_JanAug</span><span class="o">=</span><span class="n">dates_to_dayXmonth</span><span class="p">(</span><span class="n">df_JanAug</span><span class="p">,</span><span class="n">z_JanAug</span><span class="p">)</span>
+<span class="n">the_months_JanAug</span><span class="p">,</span> <span class="n">the_days</span><span class="p">,</span> <span class="n">Z_dayXmonth_JanAug</span> <span class="o">=</span> <span class="n">dates_to_dayXmonth</span><span class="p">(</span><span class="n">df_JanAug</span><span class="p">,</span><span class="n">z_JanAug</span><span class="p">)</span>
 </pre>
        </div>
       </div>
@@ -6370,11 +6370,11 @@ class Histogram2d(PlotlyTrace)
 
 <span class="c"># Get 1st site, remove &lt;br&gt; tag from string</span>
 <span class="n">site1</span> <span class="o">=</span> <span class="n">sites</span><span class="p">[</span><span class="n">ind_least_corr</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s">'&lt;br&gt;'</span><span class="p">,</span> <span class="s">''</span><span class="p">)</span>
-<span class="n">z_day1</span> <span class="o">=</span> <span class="n">Z_dayXsite</span><span class="p">[:,</span><span class="n">ind_least_corr</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span>
+<span class="n">z_day1</span> <span class="o">=</span> <span class="n">Z_dayXsite</span><span class="p">[:,</span> <span class="n">ind_least_corr</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span>
 
 <span class="c"># And similarly for the 2nd site, remove &lt;br&gt; tag from string</span>
 <span class="n">site2</span> <span class="o">=</span> <span class="n">sites</span><span class="p">[</span><span class="n">ind_least_corr</span><span class="p">[</span><span class="mi">1</span><span class="p">]]</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s">'&lt;br&gt;'</span><span class="p">,</span> <span class="s">' '</span><span class="p">)</span>
-<span class="n">z_day2</span> <span class="o">=</span> <span class="n">Z_dayXsite</span><span class="p">[:,</span><span class="n">ind_least_corr</span><span class="p">[</span><span class="mi">1</span><span class="p">]]</span>
+<span class="n">z_day2</span> <span class="o">=</span> <span class="n">Z_dayXsite</span><span class="p">[:,</span> <span class="n">ind_least_corr</span><span class="p">[</span><span class="mi">1</span><span class="p">]]</span>
 </pre>
        </div>
       </div>

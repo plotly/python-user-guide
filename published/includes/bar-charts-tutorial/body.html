@@ -100,8 +100,8 @@
 &gt;&gt;&gt; from plotly.graph_objs import *
 &gt;&gt;&gt; # auto sign-in with credentials or use py.sign_in()
 &gt;&gt;&gt; trace1 = Bar(
-        x=['cats','dogs','monkeys'],
-        y=[20,14,23]
+        x=['cats', 'dogs', 'monkeys'],
+        y=[20, 14, 23]
     )
 &gt;&gt;&gt; data = Data([trace1])
 &gt;&gt;&gt; py.plot(data)
@@ -328,7 +328,7 @@ For readers looking to run this notebook, these files are in this section's Gith
 <span class="sd">    pos. arg (1) filepath: relative path to csv file </span>
 <span class="sd">    pos. arg (2) row_id: id of row requested, found in first column (a string)</span>
 <span class="sd">    '''</span>
-    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">filepath</span><span class="p">,</span><span class="s">'r'</span><span class="p">)</span> <span class="k">as</span> <span class="n">data_file</span><span class="p">:</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">filepath</span><span class="p">,</span> <span class="s">'r'</span><span class="p">)</span> <span class="k">as</span> <span class="n">data_file</span><span class="p">:</span>
         <span class="n">reader</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">reader</span><span class="p">(</span><span class="n">data_file</span><span class="p">)</span>        <span class="c"># define reader object</span>
         <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">reader</span><span class="p">:</span>                    <span class="c"># loop through rows in csv file</span>
             <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">row</span><span class="p">)</span> <span class="ow">and</span> <span class="n">row_id</span> <span class="ow">in</span> <span class="n">row</span><span class="p">[</span><span class="mi">0</span><span class="p">]:</span> <span class="c"># test for empty lines and row id</span>
@@ -417,8 +417,8 @@ they are added on to the bars with the
       <div class="input_area">
        <div class="highlight">
         <pre><span class="c"># Make a list of month names</span>
-<span class="n">months</span> <span class="o">=</span> <span class="p">[</span><span class="s">'Jan'</span><span class="p">,</span><span class="s">'Feb'</span><span class="p">,</span><span class="s">'Mar'</span><span class="p">,</span><span class="s">'Apr'</span><span class="p">,</span><span class="s">'May'</span><span class="p">,</span><span class="s">'Jun'</span><span class="p">,</span>
-          <span class="s">'Jul'</span><span class="p">,</span><span class="s">'Aug'</span><span class="p">,</span><span class="s">'Sep'</span><span class="p">,</span><span class="s">'Oct'</span><span class="p">,</span><span class="s">'Nov'</span><span class="p">,</span><span class="s">'Dec'</span><span class="p">]</span>
+<span class="n">months</span> <span class="o">=</span> <span class="p">[</span><span class="s">'Jan'</span><span class="p">,</span> <span class="s">'Feb'</span><span class="p">,</span> <span class="s">'Mar'</span><span class="p">,</span> <span class="s">'Apr'</span><span class="p">,</span> <span class="s">'May'</span><span class="p">,</span> <span class="s">'Jun'</span><span class="p">,</span>
+          <span class="s">'Jul'</span><span class="p">,</span> <span class="s">'Aug'</span><span class="p">,</span> <span class="s">'Sep'</span><span class="p">,</span> <span class="s">'Oct'</span><span class="p">,</span> <span class="s">'Nov'</span><span class="p">,</span> <span class="s">'Dec'</span><span class="p">]</span>
 
 <span class="c"># Get a 1d-array of daily average temperatures, </span>
 <span class="c">#  1 entry per month using get_csv_data()</span>
@@ -1509,8 +1509,8 @@ class ErrorY(PlotlyDict)
       <div class="input_area">
        <div class="highlight">
         <pre><span class="c"># (0) Get average daily minima and average daily maxima from 'montreal.csv' </span>
-<span class="n">T_min</span> <span class="o">=</span> <span class="n">get_csv_data</span><span class="p">(</span><span class="s">'montreal.csv'</span><span class="p">,</span><span class="s">'Daily Minimum'</span><span class="p">)</span>
-<span class="n">T_max</span> <span class="o">=</span> <span class="n">get_csv_data</span><span class="p">(</span><span class="s">'montreal.csv'</span><span class="p">,</span><span class="s">'Daily Maximum'</span><span class="p">)</span>
+<span class="n">T_min</span> <span class="o">=</span> <span class="n">get_csv_data</span><span class="p">(</span><span class="s">'montreal.csv'</span><span class="p">,</span> <span class="s">'Daily Minimum'</span><span class="p">)</span>
+<span class="n">T_max</span> <span class="o">=</span> <span class="n">get_csv_data</span><span class="p">(</span><span class="s">'montreal.csv'</span><span class="p">,</span> <span class="s">'Daily Maximum'</span><span class="p">)</span>
 
 <span class="c"># Truncate T_* to summer only, convert to list</span>
 <span class="n">T_min_s</span> <span class="o">=</span> <span class="n">T_min</span><span class="p">[</span><span class="mi">5</span><span class="p">:</span><span class="mi">8</span><span class="p">]</span>
@@ -1543,7 +1543,7 @@ class ErrorY(PlotlyDict)
      <div class="inner_cell">
       <div class="input_area">
        <div class="highlight">
-        <pre><span class="n">summer</span> <span class="o">=</span> <span class="p">[</span><span class="s">'June'</span><span class="p">,</span><span class="s">'July'</span><span class="p">,</span><span class="s">'August'</span><span class="p">]</span>  <span class="c"># list of summer month names</span>
+        <pre><span class="n">summer</span> <span class="o">=</span> <span class="p">[</span><span class="s">'June'</span><span class="p">,</span> <span class="s">'July'</span><span class="p">,</span> <span class="s">'August'</span><span class="p">]</span>  <span class="c"># list of summer month names</span>
 
 <span class="c"># Define a trace-generating function (returns a Bar object)</span>
 <span class="k">def</span> <span class="nf">make_trace</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">color</span><span class="p">):</span>
@@ -1604,9 +1604,9 @@ class ErrorY(PlotlyDict)
        <div class="highlight">
         <pre><span class="c"># (1) Make Data object using make_trace()</span>
 <span class="n">data</span> <span class="o">=</span> <span class="n">Data</span><span class="p">([</span>
-    <span class="n">make_trace</span><span class="p">(</span><span class="n">T_max_s</span><span class="p">,</span><span class="s">'Daily Maximum'</span><span class="p">,</span><span class="s">'#BD8F22'</span><span class="p">),</span>
-    <span class="n">make_trace</span><span class="p">(</span><span class="n">T_avg_s</span><span class="p">,</span><span class="s">'Daily Average'</span><span class="p">,</span><span class="s">'#E3BA22'</span><span class="p">),</span>
-    <span class="n">make_trace</span><span class="p">(</span><span class="n">T_min_s</span><span class="p">,</span><span class="s">'Daily Minimum'</span><span class="p">,</span><span class="s">'#F2DA57'</span><span class="p">)</span>
+    <span class="n">make_trace</span><span class="p">(</span><span class="n">T_max_s</span><span class="p">,</span> <span class="s">'Daily Maximum'</span><span class="p">,</span> <span class="s">'#BD8F22'</span><span class="p">),</span>
+    <span class="n">make_trace</span><span class="p">(</span><span class="n">T_avg_s</span><span class="p">,</span> <span class="s">'Daily Average'</span><span class="p">,</span> <span class="s">'#E3BA22'</span><span class="p">),</span>
+    <span class="n">make_trace</span><span class="p">(</span><span class="n">T_min_s</span><span class="p">,</span> <span class="s">'Daily Minimum'</span><span class="p">,</span> <span class="s">'#F2DA57'</span><span class="p">)</span>
 <span class="p">])</span>
 </pre>
        </div>
@@ -2150,9 +2150,9 @@ class Annotation(PlotlyDict)
        <div class="highlight">
         <pre><span class="c"># Make Annotations object (list-like) with make_annotation()</span>
 <span class="n">annotations</span> <span class="o">=</span> <span class="n">Annotations</span><span class="p">(</span>
-    <span class="p">[</span><span class="n">make_annotation</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span><span class="p">,</span><span class="n">y</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">),</span><span class="n">T_max_s</span><span class="p">)]</span> <span class="o">+</span>
-    <span class="p">[</span><span class="n">make_annotation</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span><span class="p">,</span><span class="n">y</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">),</span><span class="n">T_avg_s</span><span class="p">)]</span> <span class="o">+</span> 
-    <span class="p">[</span><span class="n">make_annotation</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span><span class="p">,</span><span class="n">y</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">),</span><span class="n">T_min_s</span><span class="p">)]</span>
+    <span class="p">[</span><span class="n">make_annotation</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">),</span> <span class="n">T_max_s</span><span class="p">)]</span> <span class="o">+</span>
+    <span class="p">[</span><span class="n">make_annotation</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">),</span> <span class="n">T_avg_s</span><span class="p">)]</span> <span class="o">+</span> 
+    <span class="p">[</span><span class="n">make_annotation</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">),</span> <span class="n">T_min_s</span><span class="p">)]</span>
 <span class="p">)</span>
 </pre>
        </div>
@@ -2367,8 +2367,8 @@ class Annotation(PlotlyDict)
       <div class="input_area">
        <div class="highlight">
         <pre><span class="c"># (0) Get precipitation data from csv files</span>
-<span class="n">mtl_P</span> <span class="o">=</span> <span class="n">get_csv_data</span><span class="p">(</span><span class="s">'montreal.csv'</span><span class="p">,</span><span class="s">'Precipitation (mm)'</span><span class="p">)</span>
-<span class="n">van_P</span> <span class="o">=</span> <span class="n">get_csv_data</span><span class="p">(</span><span class="s">'vancouver.csv'</span><span class="p">,</span><span class="s">'Precipitation (mm)'</span><span class="p">)</span>
+<span class="n">mtl_P</span> <span class="o">=</span> <span class="n">get_csv_data</span><span class="p">(</span><span class="s">'montreal.csv'</span><span class="p">,</span> <span class="s">'Precipitation (mm)'</span><span class="p">)</span>
+<span class="n">van_P</span> <span class="o">=</span> <span class="n">get_csv_data</span><span class="p">(</span><span class="s">'vancouver.csv'</span><span class="p">,</span> <span class="s">'Precipitation (mm)'</span><span class="p">)</span>
 </pre>
        </div>
       </div>
@@ -3608,7 +3608,7 @@ Figure(
        <div class="highlight">
         <pre><span class="c"># (0.1) Relabel 'T_avg' and get missing data array</span>
 <span class="n">mtl_T_avg</span> <span class="o">=</span> <span class="n">T_avg</span>
-<span class="n">van_T_avg</span> <span class="o">=</span> <span class="n">get_csv_data</span><span class="p">(</span><span class="s">'vancouver.csv'</span><span class="p">,</span><span class="s">'Daily Average'</span><span class="p">)</span>
+<span class="n">van_T_avg</span> <span class="o">=</span> <span class="n">get_csv_data</span><span class="p">(</span><span class="s">'vancouver.csv'</span><span class="p">,</span> <span class="s">'Daily Average'</span><span class="p">)</span>
 
 <span class="c"># (0.2) Define color for both cities (ref. Sunlight Foundation)</span>
 <span class="n">col_mtl</span> <span class="o">=</span> <span class="s">'#0F8C79'</span>
@@ -3822,7 +3822,7 @@ Figure(
 
 <span class="c"># (2.4b) Update top axis options in Layout options</span>
 <span class="n">fig</span><span class="p">[</span><span class="s">'layout'</span><span class="p">][</span><span class="s">'yaxis2'</span><span class="p">]</span><span class="o">.</span><span class="n">update</span><span class="p">(</span>
-    <span class="n">update_axis</span><span class="p">(</span><span class="s">'&lt;b&gt;Temperature&lt;/b&gt; ['</span><span class="o">+</span><span class="n">degC</span><span class="o">+</span><span class="s">']'</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+    <span class="n">update_axis</span><span class="p">(</span><span class="s">'&lt;b&gt;Temperature&lt;/b&gt; ['</span> <span class="o">+</span> <span class="n">degC</span> <span class="o">+</span> <span class="s">']'</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
 <span class="p">)</span> 
 
 <span class="c"># (2.4c) Update bottom axis options in Layout object</span>
@@ -4095,9 +4095,9 @@ Figure(
 
 <span class="c"># (4.1c) Append annotation list with 2 on-plot annotations</span>
 <span class="n">fig</span><span class="p">[</span><span class="s">'layout'</span><span class="p">][</span><span class="s">'annotations'</span><span class="p">]</span> <span class="o">+=</span> <span class="n">Annotations</span><span class="p">([</span>
-    <span class="n">make_anno3</span><span class="p">(</span><span class="s">'&lt;em&gt;Coldest month&lt;/em&gt;&lt;br&gt;{}'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">cold</span><span class="p">)</span><span class="o">+</span><span class="n">degC</span><span class="p">,</span>
+    <span class="n">make_anno3</span><span class="p">(</span><span class="s">'&lt;em&gt;Coldest month&lt;/em&gt;&lt;br&gt;{}'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">cold</span><span class="p">)</span> <span class="o">+</span> <span class="n">degC</span><span class="p">,</span>
                <span class="s">'y2'</span><span class="p">,</span> <span class="n">i_cold</span><span class="p">,</span> <span class="n">cold</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">15</span><span class="p">),</span>
-    <span class="n">make_anno3</span><span class="p">(</span><span class="s">'&lt;em&gt;Wettest month&lt;/em&gt;&lt;br&gt;{}'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">wet</span><span class="p">)</span><span class="o">+</span><span class="s">' mm'</span><span class="p">,</span>
+    <span class="n">make_anno3</span><span class="p">(</span><span class="s">'&lt;em&gt;Wettest month&lt;/em&gt;&lt;br&gt;{}'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">wet</span><span class="p">)</span> <span class="o">+</span> <span class="s">' mm'</span><span class="p">,</span>
                <span class="s">'y1'</span><span class="p">,</span> <span class="n">i_wet</span><span class="p">,</span> <span class="n">wet</span><span class="p">,</span> <span class="o">-</span><span class="mi">100</span><span class="p">,</span> <span class="mi">15</span><span class="p">)</span>
 <span class="p">])</span>
 </pre>

@@ -82,12 +82,12 @@
 &gt;&gt;&gt; from plotly.graph_objs import *
 &gt;&gt;&gt; # auto sign-in with credentials or use py.sign_in()
 &gt;&gt;&gt; trace1 = Scatter(
-        x=[1,2,3],
-        y=[5,6,7],
+        x=[1, 2, 3],
+        y=[5, 6, 7],
         mode='markers',
         marker=Marker(
-            color=['blue','red','yellow'],
-            size=[10,20,30]
+            color=['blue', 'red', 'yellow'],
+            size=[10, 20, 30]
         )
     )
 &gt;&gt;&gt; data = Data([trace1])
@@ -308,7 +308,7 @@
 <span class="kn">import</span> <span class="nn">pandas</span> <span class="kn">as</span> <span class="nn">pd</span> 
 
 <span class="c"># Read csv file and define dataframe object (df for dataframe)</span>
-<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s">'gapminderDataFiveYear.txt'</span><span class="p">,</span><span class="n">sep</span><span class="o">=</span><span class="s">'</span><span class="se">\t</span><span class="s">'</span><span class="p">)</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s">'gapminderDataFiveYear.txt'</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s">'</span><span class="se">\t</span><span class="s">'</span><span class="p">)</span>
 
 <span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>  <span class="c"># show dataframe header to stdout</span>
 </pre>
@@ -1008,7 +1008,7 @@ class Marker(PlotlyDict)
 <span class="n">the_year</span> <span class="o">=</span> <span class="mi">2007</span>   
 
 <span class="c"># Find indices corresponding to 'the_year'</span>
-<span class="n">i_year</span> <span class="o">=</span> <span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s">'year'</span><span class="p">]</span><span class="o">==</span><span class="n">the_year</span><span class="p">)</span>
+<span class="n">i_year</span> <span class="o">=</span> <span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s">'year'</span><span class="p">]</span> <span class="o">==</span> <span class="n">the_year</span><span class="p">)</span>
 
 <span class="c"># Grab all rows correponding to 'the_year'</span>
 <span class="n">df_year</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">i_year</span><span class="p">]</span> 
@@ -1116,12 +1116,12 @@ class Marker(PlotlyDict)
         <span class="n">name</span><span class="o">=</span><span class="n">continent</span><span class="p">,</span>    <span class="c"># label continent names on hover</span>
         <span class="n">mode</span><span class="o">=</span><span class="s">'markers'</span><span class="p">,</span>    <span class="c"># (!) point markers only on this plot</span>
         <span class="n">marker</span><span class="o">=</span> <span class="n">Marker</span><span class="p">(</span>
-            <span class="n">color</span><span class="o">=</span><span class="n">color</span><span class="p">,</span>           <span class="c"># marker color</span>
-            <span class="n">size</span><span class="o">=</span><span class="n">sizes</span><span class="p">,</span>            <span class="c"># (!) marker sizes (sizes is a list)</span>
-            <span class="n">sizeref</span><span class="o">=</span><span class="n">sizeref</span><span class="p">,</span>       <span class="c"># link sizeref</span>
-            <span class="n">sizemode</span><span class="o">=</span><span class="n">sizemode</span><span class="p">,</span>     <span class="c"># link sizemode</span>
-            <span class="n">opacity</span><span class="o">=</span><span class="mf">0.6</span><span class="p">,</span>           <span class="c"># (!) partly transparent markers</span>
-            <span class="n">line</span><span class="o">=</span> <span class="n">Line</span><span class="p">(</span><span class="n">width</span><span class="o">=</span><span class="mf">0.0</span><span class="p">)</span>  <span class="c"># remove marker borders</span>
+            <span class="n">color</span><span class="o">=</span><span class="n">color</span><span class="p">,</span>          <span class="c"># marker color</span>
+            <span class="n">size</span><span class="o">=</span><span class="n">sizes</span><span class="p">,</span>           <span class="c"># (!) marker sizes (sizes is a list)</span>
+            <span class="n">sizeref</span><span class="o">=</span><span class="n">sizeref</span><span class="p">,</span>      <span class="c"># link sizeref</span>
+            <span class="n">sizemode</span><span class="o">=</span><span class="n">sizemode</span><span class="p">,</span>    <span class="c"># link sizemode</span>
+            <span class="n">opacity</span><span class="o">=</span><span class="mf">0.6</span><span class="p">,</span>          <span class="c"># (!) partly transparent markers</span>
+            <span class="n">line</span><span class="o">=</span><span class="n">Line</span><span class="p">(</span><span class="n">width</span><span class="o">=</span><span class="mf">0.0</span><span class="p">)</span>  <span class="c"># remove marker borders</span>
         <span class="p">)</span>
     <span class="p">)</span>
 </pre>
@@ -2499,7 +2499,7 @@ class Layout(PlotlyDict)
        </code>
        . In contrast, with
        <code>
-        hovermode':'y'
+        'hovermode':'y'
        </code>
        ,  Plotly prints x-values near the cursor and y-values on the y-axis.
       </p>
@@ -2955,7 +2955,7 @@ This is the format of your plot grid:
        <div class="highlight">
         <pre><span class="c"># (!) Set bubble size monde et size reference</span>
 <span class="n">sizemode</span> <span class="o">=</span> <span class="s">'dimeter'</span>
-<span class="n">sizeref</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s">'lifeExp'</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">()</span><span class="o">/</span><span class="mi">30</span>
+<span class="n">sizeref</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s">'lifeExp'</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">()</span> <span class="o">/</span> <span class="mi">30</span>
 
 <span class="c"># Define a trace-generating function (returns a Scatter object)</span>
 <span class="k">def</span> <span class="nf">make_Scatter_gdp</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">,</span> <span class="n">x</span> <span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">color</span><span class="p">,</span> <span class="n">sizes</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">text</span><span class="p">):</span>
