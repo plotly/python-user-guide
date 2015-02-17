@@ -38,11 +38,6 @@
          homepage
         </a>
         <br/>
-        If unfamiliar with Plotly's Python API version 1.0 see
-        <a href="/python/overview">
-         section 0
-        </a>
-        <br/>
         The Github repository is available
         <a href="https://github.com/plotly/python-user-guide" target="_blank">
          here
@@ -105,7 +100,7 @@
 &gt;&gt;&gt; from plotly.graph_objs import *
 &gt;&gt;&gt; # auto sign-in with credentials or use py.sign_in()
 &gt;&gt;&gt; trace1 = Heatmap(
-        z=[[1,2,3],[4,5,6]]
+        z=[[1,2,3], [4,5,6]]
     )
 &gt;&gt;&gt; data = Data([trace1])
 &gt;&gt;&gt; py.plot(data)
@@ -120,9 +115,6 @@
     <div class="inner_cell">
      <div class="text_cell_render border-box-sizing rendered_html">
       <p>
-       The User Guide assumes version 1.0 and up of Plotly's Python API.
-      </p>
-      <p>
        Check which version is installed on your machine and please upgrade if needed.
       </p>
      </div>
@@ -130,8 +122,8 @@
    </div>
    <div class="cell border-box-sizing code_cell rendered">
     <div class="input">
-     <div class="prompt input_prompt" id="in-[1]:">
-      <a class="prompt input_prompt" href="#in-[1]:">
+     <div class="prompt input_prompt" id="in-[1]">
+      <a class="prompt input_prompt" href="#in-[1]">
        In [1]:
       </a>
      </div>
@@ -142,7 +134,7 @@
 <span class="kn">import</span> <span class="nn">plotly</span>
 
 <span class="c"># Check plolty version (if not latest, please upgrade)</span>
-<span class="k">print</span> <span class="n">plotly</span><span class="o">.</span><span class="n">__version__</span>
+<span class="n">plotly</span><span class="o">.</span><span class="n">__version__</span>
 </pre>
        </div>
       </div>
@@ -151,12 +143,14 @@
     <div class="output_wrapper">
      <div class="output">
       <div class="output_area">
-       <div class="prompt">
+       <div class="prompt output_prompt" id="out[1]">
+        <a class="prompt output_prompt" href="#out[1]">
+         Out[1]:
+        </a>
        </div>
-       <div class="output_subarea output_stream output_stdout output_text">
+       <div class="output_text output_subarea output_pyout">
         <pre>
-1.2.3
-
+'1.6.6'
 </pre>
        </div>
       </div>
@@ -241,8 +235,8 @@ Along side learning about the
    </div>
    <div class="cell border-box-sizing code_cell rendered">
     <div class="input">
-     <div class="prompt input_prompt" id="in-[2]:">
-      <a class="prompt input_prompt" href="#in-[2]:">
+     <div class="prompt input_prompt" id="in-[2]">
+      <a class="prompt input_prompt" href="#in-[2]">
        In [2]:
       </a>
      </div>
@@ -328,8 +322,8 @@ You can download the module using pip. Simply run:
    </div>
    <div class="cell border-box-sizing code_cell rendered">
     <div class="input">
-     <div class="prompt input_prompt" id="in-[3]:">
-      <a class="prompt input_prompt" href="#in-[3]:">
+     <div class="prompt input_prompt" id="in-[3]">
+      <a class="prompt input_prompt" href="#in-[3]">
        In [3]:
       </a>
      </div>
@@ -351,8 +345,8 @@ You can download the module using pip. Simply run:
     <div class="output_wrapper">
      <div class="output">
       <div class="output_area">
-       <div class="prompt output_prompt" id="out[3]:">
-        <a class="prompt output_prompt" href="#out[3]:">
+       <div class="prompt output_prompt" id="out[3]">
+        <a class="prompt output_prompt" href="#out[3]">
          Out[3]:
         </a>
        </div>
@@ -605,8 +599,8 @@ You can download the module using pip. Simply run:
    </div>
    <div class="cell border-box-sizing code_cell rendered">
     <div class="input">
-     <div class="prompt input_prompt" id="in-[4]:">
-      <a class="prompt input_prompt" href="#in-[4]:">
+     <div class="prompt input_prompt" id="in-[4]">
+      <a class="prompt input_prompt" href="#in-[4]">
        In [4]:
       </a>
      </div>
@@ -645,8 +639,8 @@ You can download the module using pip. Simply run:
    </div>
    <div class="cell border-box-sizing code_cell rendered">
     <div class="input">
-     <div class="prompt input_prompt" id="in-[5]:">
-      <a class="prompt input_prompt" href="#in-[5]:">
+     <div class="prompt input_prompt" id="in-[5]">
+      <a class="prompt input_prompt" href="#in-[5]">
        In [5]:
       </a>
      </div>
@@ -662,8 +656,8 @@ You can download the module using pip. Simply run:
     <div class="output_wrapper">
      <div class="output">
       <div class="output_area">
-       <div class="prompt output_prompt" id="out[5]:">
-        <a class="prompt output_prompt" href="#out[5]:">
+       <div class="prompt output_prompt" id="out[5]">
+        <a class="prompt output_prompt" href="#out[5]">
          Out[5]:
         </a>
        </div>
@@ -895,15 +889,15 @@ You can download the module using pip. Simply run:
    </div>
    <div class="cell border-box-sizing code_cell rendered">
     <div class="input">
-     <div class="prompt input_prompt" id="in-[6]:">
-      <a class="prompt input_prompt" href="#in-[6]:">
+     <div class="prompt input_prompt" id="in-[6]">
+      <a class="prompt input_prompt" href="#in-[6]">
        In [6]:
       </a>
      </div>
      <div class="inner_cell">
       <div class="input_area">
        <div class="highlight">
-        <pre><span class="k">print</span> <span class="n">df_all</span><span class="o">.</span><span class="n">shape</span>  <span class="c"># df_all does not contain 365 days</span>
+        <pre><span class="n">df_all</span><span class="o">.</span><span class="n">shape</span>  <span class="c"># df_all does not contain 365 days</span>
 </pre>
        </div>
       </div>
@@ -912,12 +906,14 @@ You can download the module using pip. Simply run:
     <div class="output_wrapper">
      <div class="output">
       <div class="output_area">
-       <div class="prompt">
+       <div class="prompt output_prompt" id="out[6]">
+        <a class="prompt output_prompt" href="#out[6]">
+         Out[6]:
+        </a>
        </div>
-       <div class="output_subarea output_stream output_stdout output_text">
+       <div class="output_text output_subarea output_pyout">
         <pre>
 (261, 10)
-
 </pre>
        </div>
       </div>
@@ -937,8 +933,8 @@ You can download the module using pip. Simply run:
    </div>
    <div class="cell border-box-sizing code_cell rendered">
     <div class="input">
-     <div class="prompt input_prompt" id="in-[7]:">
-      <a class="prompt input_prompt" href="#in-[7]:">
+     <div class="prompt input_prompt" id="in-[7]">
+      <a class="prompt input_prompt" href="#in-[7]">
        In [7]:
       </a>
      </div>
@@ -960,8 +956,8 @@ You can download the module using pip. Simply run:
     <div class="output_wrapper">
      <div class="output">
       <div class="output_area">
-       <div class="prompt output_prompt" id="out[7]:">
-        <a class="prompt output_prompt" href="#out[7]:">
+       <div class="prompt output_prompt" id="out[7]">
+        <a class="prompt output_prompt" href="#out[7]">
          Out[7]:
         </a>
        </div>
@@ -1193,16 +1189,18 @@ You can download the module using pip. Simply run:
    </div>
    <div class="cell border-box-sizing code_cell rendered">
     <div class="input">
-     <div class="prompt input_prompt" id="in-[8]:">
-      <a class="prompt input_prompt" href="#in-[8]:">
+     <div class="prompt input_prompt" id="in-[8]">
+      <a class="prompt input_prompt" href="#in-[8]">
        In [8]:
       </a>
      </div>
      <div class="inner_cell">
       <div class="input_area">
        <div class="highlight">
-        <pre><span class="k">print</span> <span class="n">df_JanAug</span><span class="o">.</span><span class="n">shape</span> <span class="c"># rows: 243 days</span>
-                      <span class="c"># cols: 1 date column, 1 empty column and 8 sites</span>
+        <pre><span class="n">df_JanAug</span><span class="o">.</span><span class="n">shape</span> 
+
+<span class="c"># rows: 243 days</span>
+<span class="c"># cols: 1 date column, 1 empty column and 8 sites</span>
 </pre>
        </div>
       </div>
@@ -1211,12 +1209,14 @@ You can download the module using pip. Simply run:
     <div class="output_wrapper">
      <div class="output">
       <div class="output_area">
-       <div class="prompt">
+       <div class="prompt output_prompt" id="out[8]">
+        <a class="prompt output_prompt" href="#out[8]">
+         Out[8]:
+        </a>
        </div>
-       <div class="output_subarea output_stream output_stdout output_text">
+       <div class="output_text output_subarea output_pyout">
         <pre>
 (243, 10)
-
 </pre>
        </div>
       </div>
@@ -1259,8 +1259,8 @@ You can download the module using pip. Simply run:
    </div>
    <div class="cell border-box-sizing code_cell rendered">
     <div class="input">
-     <div class="prompt input_prompt" id="in-[9]:">
-      <a class="prompt input_prompt" href="#in-[9]:">
+     <div class="prompt input_prompt" id="in-[9]">
+      <a class="prompt input_prompt" href="#in-[9]">
        In [9]:
       </a>
      </div>
@@ -1283,18 +1283,18 @@ You can download the module using pip. Simply run:
 Help on class Heatmap in module plotly.graph_objs.graph_objs:
 
 class Heatmap(PlotlyTrace)
- |  A dictionary-like object for representing a heatmap in plotly.
+ |  A dictionary-like object for representing a heatmap trace in plotly.
  |  
- |      Example:
+ |  Example:
  |  
- |          z = [[0, 1, 0, 1, 0],
- |               [1, 0, 1, 0, 1],
- |               [0, 1, 0, 1, 0],]
- |          y = ['a', 'b', 'c']
- |          x = [1, 2, 3, 4, 5]
- |          py.plot([Heatmap(z=z, x=x, y=y)])
+ |      &gt;&gt;&gt; z = [[0, 1, 0, 1, 0], [1, 0, 1, 0, 1], [0, 1, 0, 1, 0]]
+ |      &gt;&gt;&gt; y = ['a', 'b', 'c']
+ |      &gt;&gt;&gt; x = [1, 2, 3, 4, 5]py.plot([Contour(z=z, x=x, y=y)])
  |  
- |      
+ |  Online example:
+ |  
+ |      https://plot.ly/python/heatmaps/
+ |  
  |  Quick method reference:
  |  
  |      Heatmap.update(changes)
@@ -1307,41 +1307,38 @@ class Heatmap(PlotlyTrace)
  |  
  |  Valid keys:
  |  
- |      z [required=True] (value=matrix-like: list of lists, numpy.matrix)
+ |      z [required=True] (value=list of lists or 2d numpy array of numbers)
  |      (streamable):
- |          The data that describes the mapping. The dimensions of the 'z'
- |          matrix are (n x m) where there are 'n' ROWS defining the number of
- |          partitions along the y-axis; this is equal to the length of the 'y'
- |          array. There are 'm' COLUMNS defining the number of partitions along
- |          the x-axis; this is equal to the length of the 'x' array. Therefore,
- |          the color of the cell z[i][j] is mapped to the ith partition of the
- |          y-axis (starting from the bottom of the plot) and the jth partition
- |          of the x-axis (starting from the left of the plot). In Python, a
- |          (non-numpy) matrix is best thought of as a list of lists (of lists,
- |          of lists, etc.). Therefore, running len(z) will give you the number
- |          of ROWS and running len(z[0]) will give you the number of COLUMNS.
- |          If you ARE using numpy, then running z.shape will give you the
- |          tuple, (n, m), e.g., (3, 5).
+ |          Sets the data that describes the heatmap mapping. Say the dimensions
+ |          of the list of lists or 2d numpy array linked to 'z' has n rows and
+ |          m columns then the resulting heatmap will show n partitions along
+ |          the y-axis and m partitions along the x-axis. Therefore, the i-th
+ |          row/ j-th column cell in the list of lists or 2d numpy array linked
+ |          to 'z' is mapped to the i-th partition of the y-axis (starting from
+ |          the bottom of the plot) and the j-th partition of the x-axis
+ |          (starting from the left of the plot).
  |  
- |      x [required=False] (value=array-like of numbers, strings, datetimes)
- |      (streamable):
- |          This array-like value contains the horizontal coordinates referring
- |          to the columns of the 'z' matrix. if strings, the x-labels are
- |          spaced evenly. If the dimensions of z are (n x m), the length of the
- |          'x' array should be 'm'.
+ |      x [required=False] (value=list or 1d numpy array of numbers, strings,
+ |      datetimes) (streamable):
+ |          Sets the horizontal coordinates referring to the columns of the list
+ |          of lists or 2d numpy array linked to 'z'. If the 'z' is a list or 1d
+ |          numpy array of strings, then the x-labels are spaced evenly. If the
+ |          dimensions of the list of lists or 2d numpy array linked to 'z' are
+ |          (n x m), the length of the 'x' array should equal m.
  |  
- |      y [required=False] (value=array-like of numbers, strings, datetimes)
- |      (streamable):
- |          This array-like value contains the vertical coordinates referring to
- |          the rows of the 'z' matrix. If strings, the y-labels are spaced
- |          evenly. If the dimensions of z are (n x m), the length of the 'y'
- |          array should be 'n'.
+ |      y [required=False] (value=list or 1d numpy array of numbers, strings,
+ |      datetimes) (streamable):
+ |          Sets the vertical coordinates referring to the rows of the list of
+ |          lists or 2d numpy array linked to 'z'. If strings, the y-labels are
+ |          spaced evenly. If the dimensions of the list of lists or 2d numpy
+ |          array linked to 'z' are (n x m), the length of the 'y' array should
+ |          equal n.
  |  
- |      name [required=False] (value=string):
+ |      name [required=False] (value=a string):
  |          The label associated with this trace. This name will appear in the
  |          legend, on hover and in the column header in the online spreadsheet.
  |  
- |      zauto [required=False] (value=boolean: True | False):
+ |      zauto [required=False] (value=a boolean: True | False):
  |          Toggle whether or not the default values of 'zmax' and 'zmax' can be
  |          overwritten.
  |  
@@ -1357,35 +1354,38 @@ class Heatmap(PlotlyTrace)
  |          will be used as the maximum in the color scale normalization. For
  |          more info see 'colorscale'.
  |  
- |      colorscale [required=False] (value=array_like of value-color pairs |
- |      'Greys' | 'Greens' | 'Bluered' | 'Hot' | 'Picnic' | 'Portland' | 'Jet' |
- |      'RdBu' | 'Blackbody' | 'Earth' | 'Electric' | 'YIOrRd' | 'YIGnBu'):
+ |      colorscale [required=False] (value=list or 1d numpy array of value-color
+ |      pairs | 'Greys' | 'Greens' | 'Bluered' | 'Hot' | 'Picnic' | 'Portland' |
+ |      'Jet' | 'RdBu' | 'Blackbody' | 'Earth' | 'Electric' | 'YIOrRd' |
+ |      'YIGnBu'):
  |          Sets and/or defines the color scale for this trace. The string
  |          values are pre-defined color scales. For custom color scales, define
- |          a list of color-value pairs where, by default, the first element of
- |          the pair corresponds to a normalized value of z from 0-1, i.e.
- |          (z-zmin)/ (zmax-zmin), and the second element of pair corresponds to
- |          a color. Use with 'zauto', 'zmin' and 'zmax to fine-tune the map
- |          from 'z' to rendered colors.
+ |          a list or 1d numpy array of value-color pairs where, the first
+ |          element of the pair corresponds to a normalized value of z from 0-1,
+ |          i.e. (z-zmin)/ (zmax-zmin), and the second element of pair
+ |          corresponds to a color. Use with 'zauto', 'zmin' and 'zmax to fine-
+ |          tune the map from 'z' to rendered colors.
  |  
  |          Examples:
- |              [u"'Greys'", [[0, u'rgb(0,0,0)'], [0.5, u'rgb(65, 182, 196)'],
- |              [1, u'rgb(255,255,255)']]]
+ |              'Greys' | [[0, 'rgb(0,0,0)'], [0.5, 'rgb(65, 182, 196)'], [1,
+ |              'rgb(255,255,255)']]
  |  
- |      reversescale [required=False] (value=boolean: True | False):
+ |      reversescale [required=False] (value=a boolean: True | False):
  |          Toggle whether or not the color scale will be reversed.
  |  
- |      showscale [required=False] (value=boolean: True | False):
+ |      showscale [required=False] (value=a boolean: True | False):
  |          Toggle whether or not the color scale associated with this mapping
  |          will be shown alongside the figure.
  |  
- |      colorbar [required=False] (value=ColorBar object | dictionary-like):
- |          A dictionary-like object defining the parameters of the color bar
- |          associated with this trace (including its title, length and width).
+ |      colorbar [required=False] (value=ColorBar object | dictionary-like
+ |      object):
+ |          Links a dictionary-like object defining the parameters of the color
+ |          bar associated with this trace (including its title, length and
+ |          width).
  |  
  |          For more, run `help(plotly.graph_objs.ColorBar)`
  |  
- |      zsmooth [required=False] (value= False | 'best' | 'fast' ):
+ |      zsmooth [required=False] (value=False | 'best' | 'fast'):
  |          Choose between algorithms ('best' or 'fast') to smooth data linked
  |          to 'z'. The default value is False corresponding to no smoothing.
  |  
@@ -1397,63 +1397,60 @@ class Heatmap(PlotlyTrace)
  |      xaxis [required=False] (value='x1' | 'x2' | 'x3' | etc.):
  |          This key determines which x-axis the x-coordinates of this trace
  |          will reference in the figure.  Values 'x1' and 'x' reference to
- |          layout['xaxis'], 'x2' references layout['xaxis2'], and so on. Note
- |          that 'x1' will always refer to layout['xaxis'] or layout['xaxis1'],
- |          they are the same.
+ |          'xaxis' in 'layout', 'x2' references to 'xaxis2' in 'layout', and so
+ |          on. Note that 'x1' will always refer to 'xaxis' or 'xaxis1' in
+ |          'layout', they are the same.
  |  
  |      yaxis [required=False] (value='y1' | 'y2' | 'y3' | etc.):
  |          This key determines which y-axis the y-coordinates of this trace
  |          will reference in the figure.  Values 'y1' and 'y' reference to
- |          layout['yaxis'], 'y2' references layout['yaxis2'], and so on. Note
- |          that 'y1' will always refer to layout['yaxis'] or layout['yaxis1'],
- |          they are the same.
+ |          'yaxis' in 'layout', 'y2' references to 'yaxis2' in 'layout', and so
+ |          on. Note that 'y1' will always refer to 'yaxis' or 'yaxis1' in
+ |          'layout', they are the same.
  |  
- |      showlegend [required=False] (value=boolean: True | False):
+ |      showlegend [required=False] (value=a boolean: True | False):
  |          Toggle whether or not this trace will be labeled in the legend.
  |  
- |      stream [required=False] (value=Stream object | dictionary-like):
- |          The stream dictionary-like object that initializes traces as
- |          writable-streams, for use with the real-time streaming API. Learn
- |          more here: https://plot.ly/python/streaming/
+ |      stream [required=False] (value=Stream object | dictionary-like object):
+ |          Links a dictionary-like object that initializes this trace as a
+ |          writable-stream, for use with the streaming API.
  |  
  |          For more, run `help(plotly.graph_objs.Stream)`
  |  
- |      visible [required=False] (value=boolean: True | False):
- |          Toggles whether or not this object will actually be visible in the
- |          rendered figure.
+ |      visible [required=False] (value=a boolean: True | False):
+ |          Toggles whether or not this object will be visible on the rendered
+ |          figure.
  |  
  |      x0 [required=False] (value=number):
  |          The location of the first coordinate of the x-axis. Use with 'dx' an
- |          alternative to an 'x' list/array. Has no effect if 'x' is set.
+ |          alternative to an 'x' list or 1d numpy array. Has no effect if 'x'
+ |          is set.
  |  
  |      dx [required=False] (value=number):
  |          Spacing between x-axis coordinates. Use with 'x0' an alternative to
- |          an 'x' list/array. Has no effect if 'x' is set.
+ |          an 'x' list or 1d numpy array. Has no effect if 'x' is set.
  |  
  |      y0 [required=False] (value=number):
  |          The location of the first coordinate of the y-axis. Use with 'dy' an
- |          alternative to an 'y' list/array. Has no effect if 'y' is set.
+ |          alternative to an 'y' list or 1d numpy array. Has no effect if 'y'
+ |          is set.
  |  
  |      dy [required=False] (value=number):
  |          Spacing between y-axis coordinates. Use with 'y0' an alternative to
- |          an 'y' list/array. Has no effect if 'y' is set.
+ |          an 'y' list or 1d numpy array. Has no effect if 'y' is set.
  |  
- |      xtype [required=False] (value=[u"'array' | 'scaled'"]):
- |          If set to 'scaled' and 'x' is linked to a list/array, then the
- |          horizontal labels are scaled to a list of integers of unit step
- |          starting from 0.
+ |      xtype [required=False] (value='array' | 'scaled'):
+ |          If set to 'scaled' and 'x' is linked to a list or 1d numpy array,
+ |          then the horizontal labels are scaled to a list or 1d numpy array of
+ |          integers of unit step starting from 0.
  |  
- |      ytype [required=False] (value=[u"'array' | 'scaled'"]):
- |          If set to 'scaled' and 'y' is linked to a list/array, then the
- |          vertical labels are scaled to a list of integers of unit step
- |          starting from 0.
+ |      ytype [required=False] (value='array' | 'scaled'):
+ |          If set to 'scaled' and 'y' is linked to a list or 1d numpy array,
+ |          then the vertical labels are scaled to a list or 1d numpy array of
+ |          integers of unit step starting from 0.
  |  
- |      type [required=False] (value=heatmap):
- |          Plotly identifier for this data's trace type.  This defines how this
- |          data dictionary will be handled.  For example, 'scatter' type
- |          expects  x and y data-arrays corresponding to (x, y) coordinates
- |          whereas a 'histogram' only requires a single x or y array  and a
- |          'heatmap' type requires a z matrix.
+ |      type [required=False] (value='heatmap'):
+ |          Plotly identifier for this data's trace type.
  |  
  |  Method resolution order:
  |      Heatmap
@@ -1469,20 +1466,21 @@ class Heatmap(PlotlyTrace)
  |  to_string(self, level=0, indent=4, eol='\n', pretty=True, max_chars=80)
  |      Returns a formatted string showing graph_obj constructors.
  |      
- |              Example:
+ |      Example:
  |      
- |                  print obj.to_string()
+ |          print(obj.to_string())
  |      
- |              Keyword arguments:
- |              level (default = 0) -- set number of indentations to start with
- |              indent (default = 4) -- set indentation amount
- |              eol (default = '
- |      ') -- set end of line character(s)
- |              pretty (default = True) -- curtail long list output with a '...'
- |              max_chars (default = 80) -- set max characters per line
+ |      Keyword arguments:
+ |      level (default = 0) -- set number of indentations to start with
+ |      indent (default = 4) -- set indentation amount
+ |      eol (default = '\n') -- set end of line character(s)
+ |      pretty (default = True) -- curtail long list output with a '...'
+ |      max_chars (default = 80) -- set max characters per line
  |  
  |  ----------------------------------------------------------------------
  |  Methods inherited from PlotlyDict:
+ |  
+ |  __setitem__(self, key, value)
  |  
  |  force_clean(self, caller=True)
  |      Attempts to convert to graph_objs and call force_clean() on values.
@@ -1505,7 +1503,7 @@ class Heatmap(PlotlyTrace)
  |      stripping process, though they made be left empty. This is allowable.
  |      
  |      Keys that will be stripped in this process are tagged with
- |      `'type': 'style'` in the INFO dictionary listed in graph_objs_meta.py.
+ |      `'type': 'style'` in graph_objs_meta.json.
  |      
  |      This process first attempts to convert nested collections from dicts
  |      or lists to subclasses of PlotlyList/PlotlyDict. This process forces
@@ -1555,7 +1553,7 @@ class Heatmap(PlotlyTrace)
  |      Recursively check the validity of the keys in a PlotlyDict.
  |      
  |      The valid keys constitute the entries in each object
- |      dictionary in INFO stored in graph_objs_meta.py.
+ |      dictionary in graph_objs_meta.json
  |      
  |      The validation process first requires that all nested collections be
  |      converted to the appropriate subclass of PlotlyDict/PlotlyList. Then,
@@ -1615,9 +1613,6 @@ class Heatmap(PlotlyTrace)
  |  
  |  __repr__(...)
  |      x.__repr__() &lt;==&gt; repr(x)
- |  
- |  __setitem__(...)
- |      x.__setitem__(i, y) &lt;==&gt; x[i]=y
  |  
  |  __sizeof__(...)
  |      D.__sizeof__() -&gt; size of D in memory, in bytes
@@ -1815,8 +1810,8 @@ class Heatmap(PlotlyTrace)
    </div>
    <div class="cell border-box-sizing code_cell rendered">
     <div class="input">
-     <div class="prompt input_prompt" id="in-[10]:">
-      <a class="prompt input_prompt" href="#in-[10]:">
+     <div class="prompt input_prompt" id="in-[10]">
+      <a class="prompt input_prompt" href="#in-[10]">
        In [10]:
       </a>
      </div>
@@ -1830,7 +1825,7 @@ class Heatmap(PlotlyTrace)
 <span class="c"># while computing the row (with axis=1) sum.</span>
 
 <span class="c"># The resulting array is 1d, 1 entry per date from Jan to Aug</span>
-<span class="k">print</span> <span class="n">z_JanAug</span><span class="o">.</span><span class="n">shape</span>
+<span class="n">z_JanAug</span><span class="o">.</span><span class="n">shape</span>
 </pre>
        </div>
       </div>
@@ -1839,12 +1834,14 @@ class Heatmap(PlotlyTrace)
     <div class="output_wrapper">
      <div class="output">
       <div class="output_area">
-       <div class="prompt">
+       <div class="prompt output_prompt" id="out[10]">
+        <a class="prompt output_prompt" href="#out[10]">
+         Out[10]:
+        </a>
        </div>
-       <div class="output_subarea output_stream output_stdout output_text">
+       <div class="output_text output_subarea output_pyout">
         <pre>
 (243,)
-
 </pre>
        </div>
       </div>
@@ -1867,8 +1864,8 @@ class Heatmap(PlotlyTrace)
    </div>
    <div class="cell border-box-sizing code_cell rendered">
     <div class="input">
-     <div class="prompt input_prompt" id="in-[11]:">
-      <a class="prompt input_prompt" href="#in-[11]:">
+     <div class="prompt input_prompt" id="in-[11]">
+      <a class="prompt input_prompt" href="#in-[11]">
        In [11]:
       </a>
      </div>
@@ -1878,7 +1875,7 @@ class Heatmap(PlotlyTrace)
         <pre><span class="kn">import</span> <span class="nn">datetime</span>  <span class="c"># (*) to manipulate date strings</span>
 
 <span class="c"># Define a convertion function </span>
-<span class="k">def</span> <span class="nf">dates_to_dayXmonth</span><span class="p">(</span><span class="n">df_in</span><span class="p">,</span><span class="n">z_in</span><span class="p">):</span>
+<span class="k">def</span> <span class="nf">dates_to_dayXmonth</span><span class="p">(</span><span class="n">df_in</span><span class="p">,</span> <span class="n">z_in</span><span class="p">):</span>
     
     <span class="n">dates</span> <span class="o">=</span> <span class="n">df_in</span><span class="p">[</span><span class="s">'Date'</span><span class="p">]</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>  <span class="c"># make list of dates in dataframe</span>
 
@@ -1941,8 +1938,8 @@ class Heatmap(PlotlyTrace)
    </div>
    <div class="cell border-box-sizing code_cell rendered">
     <div class="input">
-     <div class="prompt input_prompt" id="in-[12]:">
-      <a class="prompt input_prompt" href="#in-[12]:">
+     <div class="prompt input_prompt" id="in-[12]">
+      <a class="prompt input_prompt" href="#in-[12]">
        In [12]:
       </a>
      </div>
@@ -1950,7 +1947,7 @@ class Heatmap(PlotlyTrace)
       <div class="input_area">
        <div class="highlight">
         <pre><span class="c"># Dimensions of array to be used for our next plot</span>
-<span class="k">print</span> <span class="n">Z_dayXmonth_JanAug</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="n">the_months_JanAug</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="n">the_days</span><span class="o">.</span><span class="n">shape</span>
+<span class="n">Z_dayXmonth_JanAug</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="n">the_months_JanAug</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="n">the_days</span><span class="o">.</span><span class="n">shape</span>
 </pre>
        </div>
       </div>
@@ -1959,12 +1956,14 @@ class Heatmap(PlotlyTrace)
     <div class="output_wrapper">
      <div class="output">
       <div class="output_area">
-       <div class="prompt">
+       <div class="prompt output_prompt" id="out[12]">
+        <a class="prompt output_prompt" href="#out[12]">
+         Out[12]:
+        </a>
        </div>
-       <div class="output_subarea output_stream output_stdout output_text">
+       <div class="output_text output_subarea output_pyout">
         <pre>
-(31, 8) (8,) (31,)
-
+((31, 8), (8,), (31,))
 </pre>
        </div>
       </div>
@@ -2021,7 +2020,7 @@ class Heatmap(PlotlyTrace)
        we define a custom colormap, but for now let's choose one from Plotly's selection of pre-defined colormaps. These are
       </p>
       <p>
-       <img src="/static/api_docs/image/user_guide/python/image13.png"/>
+       <img src="/static/api_docs/image/user_guide/python/image12.png"/>
       </p>
       <p>
        and their associated names from left to right:
@@ -2138,8 +2137,8 @@ class Heatmap(PlotlyTrace)
    </div>
    <div class="cell border-box-sizing code_cell rendered">
     <div class="input">
-     <div class="prompt input_prompt" id="in-[13]:">
-      <a class="prompt input_prompt" href="#in-[13]:">
+     <div class="prompt input_prompt" id="in-[13]">
+      <a class="prompt input_prompt" href="#in-[13]">
        In [13]:
       </a>
      </div>
@@ -2204,7 +2203,7 @@ class Heatmap(PlotlyTrace)
        are converted (and accompanied by a friendly warning) by the Plotly Python package before being sent to Plotly. So, statements like this one:
       </p>
       <pre><code>&gt;&gt;&gt; trace1 = Heatmap(
-        z=[[1,2,3],[3,4,5]],
+        z=[[1,2,3], [3,4,5]],
         scl='YIGnBu',
         reversescl=True
     )
@@ -2235,8 +2234,8 @@ class Heatmap(PlotlyTrace)
    </div>
    <div class="cell border-box-sizing code_cell rendered">
     <div class="input">
-     <div class="prompt input_prompt" id="in-[14]:">
-      <a class="prompt input_prompt" href="#in-[14]:">
+     <div class="prompt input_prompt" id="in-[14]">
+      <a class="prompt input_prompt" href="#in-[14]">
        In [14]:
       </a>
      </div>
@@ -2299,8 +2298,8 @@ class Heatmap(PlotlyTrace)
    </div>
    <div class="cell border-box-sizing code_cell rendered">
     <div class="input">
-     <div class="prompt input_prompt" id="in-[15]:">
-      <a class="prompt input_prompt" href="#in-[15]:">
+     <div class="prompt input_prompt" id="in-[15]">
+      <a class="prompt input_prompt" href="#in-[15]">
        In [15]:
       </a>
      </div>
@@ -2333,8 +2332,8 @@ class Heatmap(PlotlyTrace)
    </div>
    <div class="cell border-box-sizing code_cell rendered">
     <div class="input">
-     <div class="prompt input_prompt" id="in-[16]:">
-      <a class="prompt input_prompt" href="#in-[16]:">
+     <div class="prompt input_prompt" id="in-[16]">
+      <a class="prompt input_prompt" href="#in-[16]">
        In [16]:
       </a>
      </div>
@@ -2362,8 +2361,8 @@ class Heatmap(PlotlyTrace)
    </div>
    <div class="cell border-box-sizing code_cell rendered">
     <div class="input">
-     <div class="prompt input_prompt" id="in-[17]:">
-      <a class="prompt input_prompt" href="#in-[17]:">
+     <div class="prompt input_prompt" id="in-[17]">
+      <a class="prompt input_prompt" href="#in-[17]">
        In [17]:
       </a>
      </div>
@@ -2385,10 +2384,13 @@ class Heatmap(PlotlyTrace)
     <div class="output_wrapper">
      <div class="output">
       <div class="output_area">
-       <div class="prompt">
+       <div class="prompt output_prompt" id="out[17]">
+        <a class="prompt output_prompt" href="#out[17]">
+         Out[17]:
+        </a>
        </div>
-       <div class="output_html rendered_html output_subarea ">
-        <iframe height="800" id="igraph" scrolling="no" seamless="seamless" src="https://plot.ly/~etpinard/251/625/775" style="border:none;" width="650">
+       <div class="output_html rendered_html output_subarea output_pyout">
+        <iframe height="800" id="igraph" scrolling="no" seamless="seamless" src="https://plot.ly/~etpinard/251.embed?width=625&amp;height=775" style="border:none;" width="650">
         </iframe>
        </div>
       </div>
@@ -2492,8 +2494,8 @@ class Heatmap(PlotlyTrace)
    </div>
    <div class="cell border-box-sizing code_cell rendered">
     <div class="input">
-     <div class="prompt input_prompt" id="in-[18]:">
-      <a class="prompt input_prompt" href="#in-[18]:">
+     <div class="prompt input_prompt" id="in-[18]">
+      <a class="prompt input_prompt" href="#in-[18]">
        In [18]:
       </a>
      </div>
@@ -2501,8 +2503,10 @@ class Heatmap(PlotlyTrace)
       <div class="input_area">
        <div class="highlight">
         <pre><span class="c"># List of booleans corresponding to days in Apr to Aug</span>
-<span class="n">i_AprAug</span> <span class="o">=</span> <span class="p">[</span><span class="s">'/01/'</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">date</span> <span class="ow">and</span> <span class="s">'/02/'</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">date</span> <span class="ow">and</span> <span class="s">'/03/'</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">date</span>
-            <span class="k">for</span> <span class="n">date</span> <span class="ow">in</span> <span class="n">df_JanAug</span><span class="p">[</span><span class="s">'Date'</span><span class="p">]]</span>
+<span class="n">i_AprAug</span> <span class="o">=</span> <span class="p">[</span><span class="s">'/01/'</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">date</span> 
+                <span class="ow">and</span> <span class="s">'/02/'</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">date</span> 
+                <span class="ow">and</span> <span class="s">'/03/'</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">date</span>
+                    <span class="k">for</span> <span class="n">date</span> <span class="ow">in</span> <span class="n">df_JanAug</span><span class="p">[</span><span class="s">'Date'</span><span class="p">]]</span>
 
 <span class="c"># Trim the Jan, Feb and Mar days in df_JanAug</span>
 <span class="n">df</span> <span class="o">=</span> <span class="n">df_JanAug</span><span class="p">[</span><span class="n">i_AprAug</span><span class="p">]</span>
@@ -2516,8 +2520,8 @@ class Heatmap(PlotlyTrace)
     <div class="output_wrapper">
      <div class="output">
       <div class="output_area">
-       <div class="prompt output_prompt" id="out[18]:">
-        <a class="prompt output_prompt" href="#out[18]:">
+       <div class="prompt output_prompt" id="out[18]">
+        <a class="prompt output_prompt" href="#out[18]">
          Out[18]:
         </a>
        </div>
@@ -2760,8 +2764,8 @@ class Heatmap(PlotlyTrace)
    </div>
    <div class="cell border-box-sizing code_cell rendered">
     <div class="input">
-     <div class="prompt input_prompt" id="in-[19]:">
-      <a class="prompt input_prompt" href="#in-[19]:">
+     <div class="prompt input_prompt" id="in-[19]">
+      <a class="prompt input_prompt" href="#in-[19]">
        In [19]:
       </a>
      </div>
@@ -2775,7 +2779,7 @@ class Heatmap(PlotlyTrace)
 <span class="c"># while computing the row (with axis=1) sum.</span>
 
 <span class="c"># The resulting array is 1d, 1 entry per date from Apr to Aug</span>
-<span class="k">print</span> <span class="n">z</span><span class="o">.</span><span class="n">shape</span>
+<span class="n">z</span><span class="o">.</span><span class="n">shape</span>
 </pre>
        </div>
       </div>
@@ -2784,12 +2788,14 @@ class Heatmap(PlotlyTrace)
     <div class="output_wrapper">
      <div class="output">
       <div class="output_area">
-       <div class="prompt">
+       <div class="prompt output_prompt" id="out[19]">
+        <a class="prompt output_prompt" href="#out[19]">
+         Out[19]:
+        </a>
        </div>
-       <div class="output_subarea output_stream output_stdout output_text">
+       <div class="output_text output_subarea output_pyout">
         <pre>
 (153,)
-
 </pre>
        </div>
       </div>
@@ -2809,8 +2815,8 @@ class Heatmap(PlotlyTrace)
    </div>
    <div class="cell border-box-sizing code_cell rendered">
     <div class="input">
-     <div class="prompt input_prompt" id="in-[20]:">
-      <a class="prompt input_prompt" href="#in-[20]:">
+     <div class="prompt input_prompt" id="in-[20]">
+      <a class="prompt input_prompt" href="#in-[20]">
        In [20]:
       </a>
      </div>
@@ -2820,7 +2826,7 @@ class Heatmap(PlotlyTrace)
         <pre><span class="c"># (*) Here again, we use the datetime module in this code cell</span>
 
 <span class="c"># Define another convertion function</span>
-<span class="k">def</span> <span class="nf">dates_to_wdayXmonth</span><span class="p">(</span><span class="n">df_in</span><span class="p">,</span><span class="n">z_in</span><span class="p">):</span>
+<span class="k">def</span> <span class="nf">dates_to_wdayXmonth</span><span class="p">(</span><span class="n">df_in</span><span class="p">,</span> <span class="n">z_in</span><span class="p">):</span>
     
     <span class="n">dates</span> <span class="o">=</span> <span class="n">df_in</span><span class="p">[</span><span class="s">'Date'</span><span class="p">]</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>  <span class="c"># make list of dates in dataframe</span>
     
@@ -2829,8 +2835,8 @@ class Heatmap(PlotlyTrace)
                        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">dates</span><span class="p">])</span>
     
     <span class="c"># (1.2) Find indices of first day of the months</span>
-    <span class="n">_</span><span class="p">,</span><span class="n">ind_tmp</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">unique</span><span class="p">(</span><span class="n">months</span><span class="p">,</span><span class="n">return_index</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span> <span class="c"># -&gt; array([0,122,91,61,30])</span>
-    <span class="n">the_months_ind</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="n">ind_tmp</span><span class="p">)</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>      <span class="c"># -&gt; array([0,30,61,91,122])</span>
+    <span class="n">_</span><span class="p">,</span> <span class="n">ind_tmp</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">unique</span><span class="p">(</span><span class="n">months</span><span class="p">,</span><span class="n">return_index</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span> <span class="c"># -&gt; array([0,122,91,61,30])</span>
+    <span class="n">the_months_ind</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="n">ind_tmp</span><span class="p">)</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>       <span class="c"># -&gt; array([0,30,61,91,122])</span>
     
     <span class="c"># (1*) Use these indices to make list months' names</span>
     <span class="n">the_months</span> <span class="o">=</span> <span class="n">months</span><span class="p">[</span><span class="n">the_months_ind</span><span class="p">]</span>
@@ -2841,19 +2847,20 @@ class Heatmap(PlotlyTrace)
                        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">dates</span><span class="p">])</span>
     
     <span class="c"># (2*) Make list of week day names</span>
-    <span class="n">the_wdays</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="s">'Monday'</span><span class="p">,</span><span class="s">'Tuesday'</span><span class="p">,</span><span class="s">'Wednesday'</span><span class="p">,</span><span class="s">'Thursday'</span><span class="p">,</span><span class="s">'Friday'</span><span class="p">,</span>
-                          <span class="s">'Saturday'</span><span class="p">,</span><span class="s">'Sunday'</span><span class="p">])</span>
+    <span class="n">the_wdays</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="s">'Monday'</span><span class="p">,</span> <span class="s">'Tuesday'</span><span class="p">,</span> <span class="s">'Wednesday'</span><span class="p">,</span>
+                          <span class="s">'Thursday'</span><span class="p">,</span> <span class="s">'Friday'</span><span class="p">,</span>
+                          <span class="s">'Saturday'</span><span class="p">,</span> <span class="s">'Sunday'</span><span class="p">])</span>
     <span class="n">N_the_wdays</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">the_wdays</span><span class="p">)</span>  <span class="c"># 7 days in a week</span>
     
     <span class="c"># (3.1) Init. tmp array 7 days-of-week by 5 months </span>
-    <span class="n">Z_tmp</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">empty</span><span class="p">((</span><span class="n">N_the_wdays</span><span class="p">,</span><span class="n">N_the_months</span><span class="p">))</span>
+    <span class="n">Z_tmp</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">empty</span><span class="p">((</span><span class="n">N_the_wdays</span><span class="p">,</span> <span class="n">N_the_months</span><span class="p">))</span>
     
     <span class="n">i_month</span> <span class="o">=</span> <span class="mi">0</span>  <span class="c"># init. month counter</span>
 
     <span class="k">for</span> <span class="n">the_month</span> <span class="ow">in</span> <span class="n">the_months</span><span class="p">:</span>  <span class="c"># loop through the months</span>
     
         <span class="c"># (3.2) Find indices corresp. to the_month, trim wdays and z_in</span>
-        <span class="n">ind_month</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">months</span> <span class="o">==</span> <span class="n">the_month</span><span class="p">)</span>
+        <span class="n">ind_month</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">months</span><span class="o">==</span><span class="n">the_month</span><span class="p">)</span>
         <span class="n">wdays_month</span> <span class="o">=</span> <span class="n">wdays</span><span class="p">[</span><span class="n">ind_month</span><span class="p">]</span>
         <span class="n">z_month</span> <span class="o">=</span> <span class="n">z_in</span><span class="p">[</span><span class="n">ind_month</span><span class="p">]</span>
     
@@ -2863,8 +2870,8 @@ class Heatmap(PlotlyTrace)
         
             <span class="c"># (3.3) Find indices corresp. to the week day, trim z_month, </span>
             <span class="c">#       fill in Z_tmp with mean value</span>
-            <span class="n">ind_month_wday</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">wdays_month</span> <span class="o">==</span> <span class="n">the_wday</span><span class="p">)</span>    
-            <span class="n">Z_tmp</span><span class="p">[</span><span class="n">i_wday</span><span class="p">,</span><span class="n">i_month</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">z_month</span><span class="p">[</span><span class="n">ind_month_wday</span><span class="p">])</span>
+            <span class="n">ind_month_wday</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">wdays_month</span><span class="o">==</span><span class="n">the_wday</span><span class="p">)</span>    
+            <span class="n">Z_tmp</span><span class="p">[</span><span class="n">i_wday</span><span class="p">,</span> <span class="n">i_month</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">z_month</span><span class="p">[</span><span class="n">ind_month_wday</span><span class="p">])</span>
             
             <span class="n">i_wday</span> <span class="o">+=</span> <span class="mi">1</span>  <span class="c"># inc. week day counter</span>
             
@@ -2876,7 +2883,7 @@ class Heatmap(PlotlyTrace)
     <span class="k">return</span> <span class="p">(</span><span class="n">the_months</span><span class="p">,</span> <span class="n">the_wdays</span><span class="p">,</span> <span class="n">Z</span><span class="p">)</span>  <span class="c"># output coordinates for our next plot</span>
     
 <span class="c"># Call conversion function, get coordinates for our next plot</span>
-<span class="n">the_months</span><span class="p">,</span><span class="n">the_wdays</span><span class="p">,</span><span class="n">Z_dayXwday</span><span class="o">=</span><span class="n">dates_to_wdayXmonth</span><span class="p">(</span><span class="n">df</span><span class="p">,</span><span class="n">z</span><span class="p">)</span>
+<span class="n">the_months</span><span class="p">,</span> <span class="n">the_wdays</span><span class="p">,</span> <span class="n">Z_dayXwday</span> <span class="o">=</span> <span class="n">dates_to_wdayXmonth</span><span class="p">(</span><span class="n">df</span><span class="p">,</span><span class="n">z</span><span class="p">)</span>
 </pre>
        </div>
       </div>
@@ -2896,8 +2903,8 @@ class Heatmap(PlotlyTrace)
    </div>
    <div class="cell border-box-sizing code_cell rendered">
     <div class="input">
-     <div class="prompt input_prompt" id="in-[21]:">
-      <a class="prompt input_prompt" href="#in-[21]:">
+     <div class="prompt input_prompt" id="in-[21]">
+      <a class="prompt input_prompt" href="#in-[21]">
        In [21]:
       </a>
      </div>
@@ -2905,7 +2912,7 @@ class Heatmap(PlotlyTrace)
       <div class="input_area">
        <div class="highlight">
         <pre><span class="c"># Dimensions of array to be used for our next plot</span>
-<span class="k">print</span> <span class="n">Z_dayXwday</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="n">the_months</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="n">the_wdays</span><span class="o">.</span><span class="n">shape</span>
+<span class="n">Z_dayXwday</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="n">the_months</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="n">the_wdays</span><span class="o">.</span><span class="n">shape</span>
 </pre>
        </div>
       </div>
@@ -2914,12 +2921,14 @@ class Heatmap(PlotlyTrace)
     <div class="output_wrapper">
      <div class="output">
       <div class="output_area">
-       <div class="prompt">
+       <div class="prompt output_prompt" id="out[21]">
+        <a class="prompt output_prompt" href="#out[21]">
+         Out[21]:
+        </a>
        </div>
-       <div class="output_subarea output_stream output_stdout output_text">
+       <div class="output_text output_subarea output_pyout">
         <pre>
-(7, 5) (5,) (7,)
-
+((7, 5), (5,), (7,))
 </pre>
        </div>
       </div>
@@ -2939,8 +2948,8 @@ class Heatmap(PlotlyTrace)
    </div>
    <div class="cell border-box-sizing code_cell rendered">
     <div class="input">
-     <div class="prompt input_prompt" id="in-[22]:">
-      <a class="prompt input_prompt" href="#in-[22]:">
+     <div class="prompt input_prompt" id="in-[22]">
+      <a class="prompt input_prompt" href="#in-[22]">
        In [22]:
       </a>
      </div>
@@ -2948,10 +2957,10 @@ class Heatmap(PlotlyTrace)
       <div class="input_area">
        <div class="highlight">
         <pre><span class="c"># Make y-axis labels plural </span>
-<span class="n">the_wdays_pl</span> <span class="o">=</span> <span class="p">[</span><span class="n">the_wday</span><span class="o">+</span><span class="s">'s'</span> <span class="k">for</span> <span class="n">the_wday</span> <span class="ow">in</span> <span class="n">the_wdays</span><span class="p">]</span>
+<span class="n">the_wdays_pl</span> <span class="o">=</span> <span class="p">[</span><span class="n">the_wday</span> <span class="o">+</span> <span class="s">'s'</span> <span class="k">for</span> <span class="n">the_wday</span> <span class="ow">in</span> <span class="n">the_wdays</span><span class="p">]</span>
 
 <span class="c"># Normalize 2D array by max value</span>
-<span class="n">Z_dayXwday_norm</span> <span class="o">=</span> <span class="n">Z_dayXwday</span><span class="o">/</span><span class="n">Z_dayXwday</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
+<span class="n">Z_dayXwday_norm</span> <span class="o">=</span> <span class="n">Z_dayXwday</span> <span class="o">/</span> <span class="n">Z_dayXwday</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
 </pre>
        </div>
       </div>
@@ -2971,8 +2980,8 @@ class Heatmap(PlotlyTrace)
    </div>
    <div class="cell border-box-sizing code_cell rendered">
     <div class="input">
-     <div class="prompt input_prompt" id="in-[23]:">
-      <a class="prompt input_prompt" href="#in-[23]:">
+     <div class="prompt input_prompt" id="in-[23]">
+      <a class="prompt input_prompt" href="#in-[23]">
        In [23]:
       </a>
      </div>
@@ -2995,9 +3004,12 @@ class Heatmap(PlotlyTrace)
 Help on class ColorBar in module plotly.graph_objs.graph_objs:
 
 class ColorBar(PlotlyDict)
- |  A dictionary-like object for representing a color bar in plotly.
+ |  A dictionary-like object object for representing a color bar in plotly.
  |  
- |      
+ |  Parent key:
+ |  
+ |      colorbar
+ |  
  |  Quick method reference:
  |  
  |      ColorBar.update(changes)
@@ -3010,14 +3022,14 @@ class ColorBar(PlotlyDict)
  |  
  |  Valid keys:
  |  
- |      title [required=False] (value=string):
+ |      title [required=False] (value=a string):
  |          The title of the colorbar.
  |  
  |      titleside [required=False] (value='right' | 'top' | 'bottom'):
  |          Location of colorbar title with respect to the colorbar.
  |  
- |      titlefont [required=False] (value=Font object | dictionary-like):
- |          A dictionary-like object describing the font settings of the
+ |      titlefont [required=False] (value=Font object | dictionary-like object):
+ |          Links a dictionary-like object describing the font settings of the
  |          colorbar title.
  |  
  |          For more, run `help(plotly.graph_objs.Font)`
@@ -3034,26 +3046,21 @@ class ColorBar(PlotlyDict)
  |      lenmode [required=False] (value=string: 'pixels' | 'fraction' ):
  |          Sets length unit mode.
  |  
- |      x [required=False] (value=number):
- |          Sets the 'x' position of this colorbar.
- |  
- |      y [required=False] (value=number):
- |          Sets the 'y' position of this colorbar.
- |  
- |      autotick [required=False] (value=boolean: True | False):
+ |      autotick [required=False] (value=a boolean: True | False):
  |          Toggle whether or not the colorbar ticks parameters are picked
  |          automatically by Plotly. Once 'autotick' is set to False, the
  |          colorbar ticks parameters can be declared with 'ticks', 'tick0',
  |          'dtick0' and other tick-related key in this colorbar object.
  |  
  |      nticks [required=False] (value=number: x &gt; 0):
- |          Specifies the number of colorbar ticks. No need to set 'autoticks'
- |          to False for 'nticks' to apply.
+ |          Sets the number of colorbar ticks. No need to set 'autoticks' to
+ |          False for 'nticks' to apply.
  |  
  |      ticks [required=False] (value='' | 'inside' | 'outside'):
- |          Sets the format of tick visibility on this colorbar.
+ |          Sets the format of the ticks on this colorbar. For hidden ticks,
+ |          link 'ticks' to an empty string.
  |  
- |      showticklabels [required=False] (value=boolean: True | False):
+ |      showticklabels [required=False] (value=a boolean: True | False):
  |          Toggle whether or not the colorbar ticks will feature tick labels.
  |  
  |      tick0 [required=False] (value=number):
@@ -3068,18 +3075,19 @@ class ColorBar(PlotlyDict)
  |      tickwidth [required=False] (value=number: x &gt; 0):
  |          Sets the width of the tick lines on this colorbar.
  |  
- |      tickcolor [required=False] (value=string describing color):
+ |      tickcolor [required=False] (value=a string describing color):
  |          Sets the color of the tick lines on this colorbar.
  |  
  |          Examples:
- |              [u"'green'", u"'rgb(0, 255, 0)'", u"'rgba(0, 255, 0, 0.3)'",
- |              u"'hsl(120,100%,50%)'", u"'hsla(120,100%,50%,0.3)'"]
+ |              'green' | 'rgb(0, 255, 0)' | 'rgba(0, 255, 0, 0.3)' |
+ |              'hsl(120,100%,50%)' | 'hsla(120,100%,50%,0.3)' | '#434F1D'
  |  
  |      tickangle [required=False] (value=number: x in [-90, 90]):
  |          Sets the angle in degrees of the ticks on this colorbar.
  |  
- |      tickfont [required=False] (value=Font object | dictionary-like):
- |          A dictionary-like object defining the parameters of the ticks' font.
+ |      tickfont [required=False] (value=Font object | dictionary-like object):
+ |          Links a dictionary-like object defining the parameters of the ticks'
+ |          font.
  |  
  |          For more, run `help(plotly.graph_objs.Font)`
  |  
@@ -3100,28 +3108,45 @@ class ColorBar(PlotlyDict)
  |          appear--only the significands. If set to 'none', no exponents will
  |          appear, only the significands.
  |  
- |      xanchor [required=False] (value='auto' | 'bottom' | 'middle' | 'top'):
- |          Sets the horizontal location of the object referenced by the 'y'
- |          (position) key. For example, if 'y'==1, 'yref'='paper', and
- |          'yanchor'='top', the topmost portion of this object will line up
- |          with the topmost edge of the plotting area.
+ |      x [required=False] (value=number):
+ |          Sets the 'x' position of this colorbar.
  |  
- |      bgcolor [required=False] (value=string describing color):
- |          Sets the background (bg) color for this colorbar.
+ |      y [required=False] (value=number):
+ |          Sets the 'y' position of this colorbar.
+ |  
+ |      xanchor [required=False] (value='auto' | 'left' | 'center' | 'right'):
+ |          Sets the horizontal position anchor of this colorbar. That is, bind
+ |          the position set with the 'x' key to the 'left' or 'center' or
+ |          'right' of this colorbar.
+ |  
+ |      yanchor [required=False] (value='auto' | 'bottom' | 'middle' | 'top'):
+ |          Sets the vertical position anchor of this colorbar. That is, bind
+ |          the position set with the 'y' key to the 'bottom' or 'middle' or
+ |          'top' of this colorbar.
+ |  
+ |      bgcolor [required=False] (value=a string describing color):
+ |          Sets the background (bg) color of this colorbar.
  |  
  |          Examples:
- |              [u"'green'", u"'rgb(0, 255, 0)'", u"'rgba(0, 255, 0, 0.3)'",
- |              u"'hsl(120,100%,50%)'", u"'hsla(120,100%,50%,0.3)'"]
+ |              'green' | 'rgb(0, 255, 0)' | 'rgba(0, 255, 0, 0.3)' |
+ |              'hsl(120,100%,50%)' | 'hsla(120,100%,50%,0.3)' | '#434F1D'
  |  
- |      outlinecolor [required=False] (value=string describing color):
+ |      outlinecolor [required=False] (value=a string describing color):
  |          The color of the outline surrounding this colorbar.
  |  
  |          Examples:
- |              [u"'green'", u"'rgb(0, 255, 0)'", u"'rgba(0, 255, 0, 0.3)'",
- |              u"'hsl(120,100%,50%)'", u"'hsla(120,100%,50%,0.3)'"]
+ |              'green' | 'rgb(0, 255, 0)' | 'rgba(0, 255, 0, 0.3)' |
+ |              'hsl(120,100%,50%)' | 'hsla(120,100%,50%,0.3)' | '#434F1D'
  |  
  |      outlinewidth [required=False] (value=number):
  |          Sets the width of the outline surrounding this colorbar.
+ |  
+ |      bordercolor [required=False] (value=a string describing color):
+ |          Sets the color of the enclosing boarder of this colorbar.
+ |  
+ |          Examples:
+ |              'green' | 'rgb(0, 255, 0)' | 'rgba(0, 255, 0, 0.3)' |
+ |              'hsl(120,100%,50%)' | 'hsla(120,100%,50%,0.3)' | '#434F1D'
  |  
  |      borderwidth [required=False] (value=number: x &gt;= 0):
  |          Sets the width of the boarder enclosing this colorbar
@@ -3144,6 +3169,8 @@ class ColorBar(PlotlyDict)
  |  
  |  __init__(self, *args, **kwargs)
  |  
+ |  __setitem__(self, key, value)
+ |  
  |  force_clean(self, caller=True)
  |      Attempts to convert to graph_objs and call force_clean() on values.
  |      
@@ -3165,7 +3192,7 @@ class ColorBar(PlotlyDict)
  |      stripping process, though they made be left empty. This is allowable.
  |      
  |      Keys that will be stripped in this process are tagged with
- |      `'type': 'style'` in the INFO dictionary listed in graph_objs_meta.py.
+ |      `'type': 'style'` in graph_objs_meta.json.
  |      
  |      This process first attempts to convert nested collections from dicts
  |      or lists to subclasses of PlotlyList/PlotlyDict. This process forces
@@ -3186,17 +3213,16 @@ class ColorBar(PlotlyDict)
  |  to_string(self, level=0, indent=4, eol='\n', pretty=True, max_chars=80)
  |      Returns a formatted string showing graph_obj constructors.
  |      
- |              Example:
+ |      Example:
  |      
- |                  print obj.to_string()
+ |          print(obj.to_string())
  |      
- |              Keyword arguments:
- |              level (default = 0) -- set number of indentations to start with
- |              indent (default = 4) -- set indentation amount
- |              eol (default = '
- |      ') -- set end of line character(s)
- |              pretty (default = True) -- curtail long list output with a '...'
- |              max_chars (default = 80) -- set max characters per line
+ |      Keyword arguments:
+ |      level (default = 0) -- set number of indentations to start with
+ |      indent (default = 4) -- set indentation amount
+ |      eol (default = '\n') -- set end of line character(s)
+ |      pretty (default = True) -- curtail long list output with a '...'
+ |      max_chars (default = 80) -- set max characters per line
  |  
  |  update(self, dict1=None, **dict2)
  |      Update current dict with dict1 and then dict2.
@@ -3230,7 +3256,7 @@ class ColorBar(PlotlyDict)
  |      Recursively check the validity of the keys in a PlotlyDict.
  |      
  |      The valid keys constitute the entries in each object
- |      dictionary in INFO stored in graph_objs_meta.py.
+ |      dictionary in graph_objs_meta.json
  |      
  |      The validation process first requires that all nested collections be
  |      converted to the appropriate subclass of PlotlyDict/PlotlyList. Then,
@@ -3290,9 +3316,6 @@ class ColorBar(PlotlyDict)
  |  
  |  __repr__(...)
  |      x.__repr__() &lt;==&gt; repr(x)
- |  
- |  __setitem__(...)
- |      x.__setitem__(i, y) &lt;==&gt; x[i]=y
  |  
  |  __sizeof__(...)
  |      D.__sizeof__() -&gt; size of D in memory, in bytes
@@ -3368,8 +3391,8 @@ class ColorBar(PlotlyDict)
    </div>
    <div class="cell border-box-sizing code_cell rendered">
     <div class="input">
-     <div class="prompt input_prompt" id="in-[24]:">
-      <a class="prompt input_prompt" href="#in-[24]:">
+     <div class="prompt input_prompt" id="in-[24]">
+      <a class="prompt input_prompt" href="#in-[24]">
        In [24]:
       </a>
      </div>
@@ -3415,8 +3438,8 @@ class ColorBar(PlotlyDict)
    </div>
    <div class="cell border-box-sizing code_cell rendered">
     <div class="input">
-     <div class="prompt input_prompt" id="in-[25]:">
-      <a class="prompt input_prompt" href="#in-[25]:">
+     <div class="prompt input_prompt" id="in-[25]">
+      <a class="prompt input_prompt" href="#in-[25]">
        In [25]:
       </a>
      </div>
@@ -3454,8 +3477,8 @@ class ColorBar(PlotlyDict)
    </div>
    <div class="cell border-box-sizing code_cell rendered">
     <div class="input">
-     <div class="prompt input_prompt" id="in-[26]:">
-      <a class="prompt input_prompt" href="#in-[26]:">
+     <div class="prompt input_prompt" id="in-[26]">
+      <a class="prompt input_prompt" href="#in-[26]">
        In [26]:
       </a>
      </div>
@@ -3496,8 +3519,8 @@ class ColorBar(PlotlyDict)
    </div>
    <div class="cell border-box-sizing code_cell rendered">
     <div class="input">
-     <div class="prompt input_prompt" id="in-[27]:">
-      <a class="prompt input_prompt" href="#in-[27]:">
+     <div class="prompt input_prompt" id="in-[27]">
+      <a class="prompt input_prompt" href="#in-[27]">
        In [27]:
       </a>
      </div>
@@ -3517,10 +3540,13 @@ class ColorBar(PlotlyDict)
     <div class="output_wrapper">
      <div class="output">
       <div class="output_area">
-       <div class="prompt">
+       <div class="prompt output_prompt" id="out[27]">
+        <a class="prompt output_prompt" href="#out[27]">
+         Out[27]:
+        </a>
        </div>
-       <div class="output_html rendered_html output_subarea ">
-        <iframe height="525" id="igraph" scrolling="no" seamless="seamless" src="https://plot.ly/~etpinard/272" style="border:none;" width="100%">
+       <div class="output_html rendered_html output_subarea output_pyout">
+        <iframe height="525" id="igraph" scrolling="no" seamless="seamless" src="https://plot.ly/~etpinard/272.embed" style="border:none;" width="100%">
         </iframe>
        </div>
       </div>
@@ -3582,8 +3608,8 @@ class ColorBar(PlotlyDict)
    </div>
    <div class="cell border-box-sizing code_cell rendered">
     <div class="input">
-     <div class="prompt input_prompt" id="in-[28]:">
-      <a class="prompt input_prompt" href="#in-[28]:">
+     <div class="prompt input_prompt" id="in-[28]">
+      <a class="prompt input_prompt" href="#in-[28]">
        In [28]:
       </a>
      </div>
@@ -3594,7 +3620,7 @@ class ColorBar(PlotlyDict)
 <span class="n">Z_dayXsite</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">ix</span><span class="p">[:,</span><span class="mi">2</span><span class="p">:]</span><span class="o">.</span><span class="n">values</span>
 
 <span class="c"># 153 sample days (rows) at 8 sites (columns)</span>
-<span class="k">print</span> <span class="n">Z_dayXsite</span><span class="o">.</span><span class="n">shape</span>
+<span class="n">Z_dayXsite</span><span class="o">.</span><span class="n">shape</span>
 </pre>
        </div>
       </div>
@@ -3603,12 +3629,14 @@ class ColorBar(PlotlyDict)
     <div class="output_wrapper">
      <div class="output">
       <div class="output_area">
-       <div class="prompt">
+       <div class="prompt output_prompt" id="out[28]">
+        <a class="prompt output_prompt" href="#out[28]">
+         Out[28]:
+        </a>
        </div>
-       <div class="output_subarea output_stream output_stdout output_text">
+       <div class="output_text output_subarea output_pyout">
         <pre>
 (153, 8)
-
 </pre>
        </div>
       </div>
@@ -3628,8 +3656,8 @@ class ColorBar(PlotlyDict)
    </div>
    <div class="cell border-box-sizing code_cell rendered">
     <div class="input">
-     <div class="prompt input_prompt" id="in-[29]:">
-      <a class="prompt input_prompt" href="#in-[29]:">
+     <div class="prompt input_prompt" id="in-[29]">
+      <a class="prompt input_prompt" href="#in-[29]">
        In [29]:
       </a>
      </div>
@@ -3640,7 +3668,7 @@ class ColorBar(PlotlyDict)
 <span class="n">Corr_site</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">corrcoef</span><span class="p">(</span><span class="n">Z_dayXsite</span><span class="p">,</span><span class="n">rowvar</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
 
 <span class="c"># 8 sites correlated with themselves</span>
-<span class="k">print</span> <span class="n">Corr_site</span><span class="o">.</span><span class="n">shape</span>
+<span class="n">Corr_site</span><span class="o">.</span><span class="n">shape</span>
 </pre>
        </div>
       </div>
@@ -3649,12 +3677,14 @@ class ColorBar(PlotlyDict)
     <div class="output_wrapper">
      <div class="output">
       <div class="output_area">
-       <div class="prompt">
+       <div class="prompt output_prompt" id="out[29]">
+        <a class="prompt output_prompt" href="#out[29]">
+         Out[29]:
+        </a>
        </div>
-       <div class="output_subarea output_stream output_stdout output_text">
+       <div class="output_text output_subarea output_pyout">
         <pre>
 (8, 8)
-
 </pre>
        </div>
       </div>
@@ -3685,16 +3715,15 @@ class ColorBar(PlotlyDict)
    </div>
    <div class="cell border-box-sizing code_cell rendered">
     <div class="input">
-     <div class="prompt input_prompt" id="in-[30]:">
-      <a class="prompt input_prompt" href="#in-[30]:">
+     <div class="prompt input_prompt" id="in-[30]">
+      <a class="prompt input_prompt" href="#in-[30]">
        In [30]:
       </a>
      </div>
      <div class="inner_cell">
       <div class="input_area">
        <div class="highlight">
-        <pre><span class="k">print</span> <span class="n">Corr_site</span><span class="o">.</span><span class="n">min</span><span class="p">()</span>
-<span class="k">print</span> <span class="n">Corr_site</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
+        <pre><span class="n">Corr_site</span><span class="o">.</span><span class="n">min</span><span class="p">(),</span> <span class="n">Corr_site</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
 </pre>
        </div>
       </div>
@@ -3703,13 +3732,14 @@ class ColorBar(PlotlyDict)
     <div class="output_wrapper">
      <div class="output">
       <div class="output_area">
-       <div class="prompt">
+       <div class="prompt output_prompt" id="out[30]">
+        <a class="prompt output_prompt" href="#out[30]">
+         Out[30]:
+        </a>
        </div>
-       <div class="output_subarea output_stream output_stdout output_text">
+       <div class="output_text output_subarea output_pyout">
         <pre>
-0.479823435929
-1.0
-
+(0.47982343592869092, 1.0)
 </pre>
        </div>
       </div>
@@ -3737,8 +3767,8 @@ class ColorBar(PlotlyDict)
    </div>
    <div class="cell border-box-sizing code_cell rendered">
     <div class="input">
-     <div class="prompt input_prompt" id="in-[31]:">
-      <a class="prompt input_prompt" href="#in-[31]:">
+     <div class="prompt input_prompt" id="in-[31]">
+      <a class="prompt input_prompt" href="#in-[31]">
        In [31]:
       </a>
      </div>
@@ -3777,8 +3807,8 @@ class ColorBar(PlotlyDict)
    </div>
    <div class="cell border-box-sizing code_cell rendered">
     <div class="input">
-     <div class="prompt input_prompt" id="in-[32]:">
-      <a class="prompt input_prompt" href="#in-[32]:">
+     <div class="prompt input_prompt" id="in-[32]">
+      <a class="prompt input_prompt" href="#in-[32]">
        In [32]:
       </a>
      </div>
@@ -3807,8 +3837,8 @@ class ColorBar(PlotlyDict)
    </div>
    <div class="cell border-box-sizing code_cell rendered">
     <div class="input">
-     <div class="prompt input_prompt" id="in-[33]:">
-      <a class="prompt input_prompt" href="#in-[33]:">
+     <div class="prompt input_prompt" id="in-[33]">
+      <a class="prompt input_prompt" href="#in-[33]">
        In [33]:
       </a>
      </div>
@@ -3828,10 +3858,13 @@ class ColorBar(PlotlyDict)
     <div class="output_wrapper">
      <div class="output">
       <div class="output_area">
-       <div class="prompt">
+       <div class="prompt output_prompt" id="out[33]">
+        <a class="prompt output_prompt" href="#out[33]">
+         Out[33]:
+        </a>
        </div>
-       <div class="output_html rendered_html output_subarea ">
-        <iframe height="525" id="igraph" scrolling="no" seamless="seamless" src="https://plot.ly/~etpinard/145" style="border:none;" width="100%">
+       <div class="output_html rendered_html output_subarea output_pyout">
+        <iframe height="525" id="igraph" scrolling="no" seamless="seamless" src="https://plot.ly/~etpinard/145.embed" style="border:none;" width="100%">
         </iframe>
        </div>
       </div>
@@ -3901,8 +3934,8 @@ class ColorBar(PlotlyDict)
    </div>
    <div class="cell border-box-sizing code_cell rendered">
     <div class="input">
-     <div class="prompt input_prompt" id="in-[34]:">
-      <a class="prompt input_prompt" href="#in-[34]:">
+     <div class="prompt input_prompt" id="in-[34]">
+      <a class="prompt input_prompt" href="#in-[34]">
        In [34]:
       </a>
      </div>
@@ -3932,8 +3965,8 @@ class ColorBar(PlotlyDict)
    </div>
    <div class="cell border-box-sizing code_cell rendered">
     <div class="input">
-     <div class="prompt input_prompt" id="in-[35]:">
-      <a class="prompt input_prompt" href="#in-[35]:">
+     <div class="prompt input_prompt" id="in-[35]">
+      <a class="prompt input_prompt" href="#in-[35]">
        In [35]:
       </a>
      </div>
@@ -3950,8 +3983,8 @@ class ColorBar(PlotlyDict)
     <div class="output_wrapper">
      <div class="output">
       <div class="output_area">
-       <div class="prompt output_prompt" id="out[35]:">
-        <a class="prompt output_prompt" href="#out[35]:">
+       <div class="prompt output_prompt" id="out[35]">
+        <a class="prompt output_prompt" href="#out[35]">
          Out[35]:
         </a>
        </div>
@@ -4039,8 +4072,8 @@ array([[False, False, False, False, False, False, False,  True],
    </div>
    <div class="cell border-box-sizing code_cell rendered">
     <div class="input">
-     <div class="prompt input_prompt" id="in-[36]:">
-      <a class="prompt input_prompt" href="#in-[36]:">
+     <div class="prompt input_prompt" id="in-[36]">
+      <a class="prompt input_prompt" href="#in-[36]">
        In [36]:
       </a>
      </div>
@@ -4106,8 +4139,8 @@ array([[False, False, False, False, False, False, False,  True],
    </div>
    <div class="cell border-box-sizing code_cell rendered">
     <div class="input">
-     <div class="prompt input_prompt" id="in-[37]:">
-      <a class="prompt input_prompt" href="#in-[37]:">
+     <div class="prompt input_prompt" id="in-[37]">
+      <a class="prompt input_prompt" href="#in-[37]">
        In [37]:
       </a>
      </div>
@@ -4145,8 +4178,8 @@ array([[False, False, False, False, False, False, False,  True],
    </div>
    <div class="cell border-box-sizing code_cell rendered">
     <div class="input">
-     <div class="prompt input_prompt" id="in-[38]:">
-      <a class="prompt input_prompt" href="#in-[38]:">
+     <div class="prompt input_prompt" id="in-[38]">
+      <a class="prompt input_prompt" href="#in-[38]">
        In [38]:
       </a>
      </div>
@@ -4200,8 +4233,8 @@ array([[False, False, False, False, False, False, False,  True],
    </div>
    <div class="cell border-box-sizing code_cell rendered">
     <div class="input">
-     <div class="prompt input_prompt" id="in-[39]:">
-      <a class="prompt input_prompt" href="#in-[39]:">
+     <div class="prompt input_prompt" id="in-[39]">
+      <a class="prompt input_prompt" href="#in-[39]">
        In [39]:
       </a>
      </div>
@@ -4221,10 +4254,13 @@ array([[False, False, False, False, False, False, False,  True],
     <div class="output_wrapper">
      <div class="output">
       <div class="output_area">
-       <div class="prompt">
+       <div class="prompt output_prompt" id="out[39]">
+        <a class="prompt output_prompt" href="#out[39]">
+         Out[39]:
+        </a>
        </div>
-       <div class="output_html rendered_html output_subarea ">
-        <iframe height="525" id="igraph" scrolling="no" seamless="seamless" src="https://plot.ly/~etpinard/249" style="border:none;" width="100%">
+       <div class="output_html rendered_html output_subarea output_pyout">
+        <iframe height="525" id="igraph" scrolling="no" seamless="seamless" src="https://plot.ly/~etpinard/249.embed" style="border:none;" width="100%">
         </iframe>
        </div>
       </div>
@@ -4276,8 +4312,8 @@ array([[False, False, False, False, False, False, False,  True],
    </div>
    <div class="cell border-box-sizing code_cell rendered">
     <div class="input">
-     <div class="prompt input_prompt" id="in-[40]:">
-      <a class="prompt input_prompt" href="#in-[40]:">
+     <div class="prompt input_prompt" id="in-[40]">
+      <a class="prompt input_prompt" href="#in-[40]">
        In [40]:
       </a>
      </div>
@@ -4300,18 +4336,18 @@ array([[False, False, False, False, False, False, False,  True],
 Help on class Contour in module plotly.graph_objs.graph_objs:
 
 class Contour(PlotlyTrace)
- |  A dictionary-like object for representing a contour plot in plotly.
+ |  A dictionary-like object for representing a contour trace in plotly.
  |  
- |      Example:
+ |  Example:
  |  
- |          z = [[0, 1, 0, 1, 0],
- |               [1, 0, 1, 0, 1],
- |               [0, 1, 0, 1, 0],]
- |          y = ['a', 'b', 'c']
- |          x = [1, 2, 3, 4, 5]
- |          py.plot([Contour(z=z, x=x, y=y)])
+ |      &gt;&gt;&gt; z = [[0, 1, 0, 1, 0], [1, 0, 1, 0, 1], [0, 1, 0, 1, 0]]
+ |      &gt;&gt;&gt; y = ['a', 'b', 'c']
+ |      &gt;&gt;&gt; x = [1, 2, 3, 4, 5]py.plot([Contour(z=z, x=x, y=y)])
  |  
- |      
+ |  Online example:
+ |  
+ |      https://plot.ly/python/contour-plots/
+ |  
  |  Quick method reference:
  |  
  |      Contour.update(changes)
@@ -4324,41 +4360,38 @@ class Contour(PlotlyTrace)
  |  
  |  Valid keys:
  |  
- |      z [required=True] (value=matrix-like: list of lists, numpy.matrix)
+ |      z [required=True] (value=list of lists or 2d numpy array of numbers)
  |      (streamable):
- |          The data that describes the mapping. The dimensions of the 'z'
- |          matrix are (n x m) where there are 'n' ROWS defining the number of
- |          partitions along the y-axis; this is equal to the length of the 'y'
- |          array. There are 'm' COLUMNS defining the number of partitions along
- |          the x-axis; this is equal to the length of the 'x' array. Therefore,
- |          the color of the cell z[i][j] is mapped to the ith partition of the
- |          y-axis (starting from the bottom of the plot) and the jth partition
- |          of the x-axis (starting from the left of the plot). In Python, a
- |          (non-numpy) matrix is best thought of as a list of lists (of lists,
- |          of lists, etc.). Therefore, running len(z) will give you the number
- |          of ROWS and running len(z[0]) will give you the number of COLUMNS.
- |          If you ARE using numpy, then running z.shape will give you the
- |          tuple, (n, m), e.g., (3, 5).
+ |          Sets the data that describes the contour map mapping. Say the
+ |          dimensions of the list of lists or 2d numpy array linked to 'z' has
+ |          n rows and m columns then the resulting contour map will show n
+ |          partitions along the y-axis and m partitions along the x-axis.
+ |          Therefore, the i-th row/ j-th column cell in the list of lists or 2d
+ |          numpy array linked to 'z' is mapped to the i-th partition of the
+ |          y-axis (starting from the bottom of the plot) and the j-th partition
+ |          of the x-axis (starting from the left of the plot).
  |  
- |      x [required=False] (value=array-like of numbers, strings, datetimes)
- |      (streamable):
- |          This array-like value contains the horizontal coordinates referring
- |          to the columns of the 'z' matrix. if strings, the x-labels are
- |          spaced evenly. If the dimensions of z are (n x m), the length of the
- |          'x' array should be 'm'.
+ |      x [required=False] (value=list or 1d numpy array of numbers, strings,
+ |      datetimes) (streamable):
+ |          Sets the horizontal coordinates referring to the columns of the list
+ |          of lists or 2d numpy array linked to 'z'. If the 'z' is a list or 1d
+ |          numpy array of strings, then the x-labels are spaced evenly. If the
+ |          dimensions of the list of lists or 2d numpy array linked to 'z' are
+ |          (n x m), the length of the 'x' array should equal m.
  |  
- |      y [required=False] (value=array-like of numbers, strings, datetimes)
- |      (streamable):
- |          This array-like value contains the vertical coordinates referring to
- |          the rows of the 'z' matrix. If strings, the y-labels are spaced
- |          evenly. If the dimensions of z are (n x m), the length of the 'y'
- |          array should be 'n'.
+ |      y [required=False] (value=list or 1d numpy array of numbers, strings,
+ |      datetimes) (streamable):
+ |          Sets the vertical coordinates referring to the rows of the list of
+ |          lists or 2d numpy array linked to 'z'. If strings, the y-labels are
+ |          spaced evenly. If the dimensions of the list of lists or 2d numpy
+ |          array linked to 'z' are (n x m), the length of the 'y' array should
+ |          equal n.
  |  
- |      name [required=False] (value=string):
+ |      name [required=False] (value=a string):
  |          The label associated with this trace. This name will appear in the
  |          legend, on hover and in the column header in the online spreadsheet.
  |  
- |      zauto [required=False] (value=boolean: True | False):
+ |      zauto [required=False] (value=a boolean: True | False):
  |          Toggle whether or not the default values of 'zmax' and 'zmax' can be
  |          overwritten.
  |  
@@ -4374,55 +4407,59 @@ class Contour(PlotlyTrace)
  |          will be used as the maximum in the color scale normalization. For
  |          more info see 'colorscale'.
  |  
- |      autocontour [required=False] (value=boolean: True | False):
+ |      autocontour [required=False] (value=a boolean: True | False):
  |          Toggle whether or not the contour parameters are picked
  |          automatically by Plotly. If False, declare the contours parameters
- |          in the Contours object.
+ |          in 'contours'.
  |  
  |      ncontours [required=False] (value=number: x &gt; 1):
  |          Specifies the number of contours lines in the contour plot. No need
  |          to set 'autocontour' to False for 'ncontours' to apply.
  |  
- |      contours [required=False] (value=Contours object | dictionary-like):
- |          A dictionary-like object defining the parameters of the contours of
- |          this trace.
+ |      contours [required=False] (value=Contours object | dictionary-like
+ |      object):
+ |          Links a dictionary-like object defining the parameters of the
+ |          contours of this trace.
  |  
  |          For more, run `help(plotly.graph_objs.Contours)`
  |  
- |      line [required=False] (value=Line object | dictionary-like)
+ |      line [required=False] (value=Line object | dictionary-like object)
  |      (streamable):
- |          A dictionary-like object containing line style parameters for
+ |          Links a dictionary-like object containing line parameters for
  |          contour lines of this contour trace (including line width, dash,
  |          color and smoothing level). Has no an effect if 'showlines' is set
- |          to False in Contours.
+ |          to False in 'contours'.
  |  
  |          For more, run `help(plotly.graph_objs.Line)`
  |  
- |      colorscale [required=False] (value=array_like of value-color pairs |
- |      'Greys' | 'Greens' | 'Bluered' | 'Hot' | 'Picnic' | 'Portland' | 'Jet' |
- |      'RdBu' | 'Blackbody' | 'Earth' | 'Electric' | 'YIOrRd' | 'YIGnBu'):
+ |      colorscale [required=False] (value=list or 1d numpy array of value-color
+ |      pairs | 'Greys' | 'Greens' | 'Bluered' | 'Hot' | 'Picnic' | 'Portland' |
+ |      'Jet' | 'RdBu' | 'Blackbody' | 'Earth' | 'Electric' | 'YIOrRd' |
+ |      'YIGnBu'):
  |          Sets and/or defines the color scale for this trace. The string
  |          values are pre-defined color scales. For custom color scales, define
- |          a list of color-value pairs where, by default, the first element of
- |          the pair corresponds to a normalized value of z from 0-1, i.e.
- |          (z-zmin)/ (zmax-zmin), and the second element of pair corresponds to
- |          a color. Use with 'zauto', 'zmin' and 'zmax to fine-tune the map
- |          from 'z' to rendered colors.
+ |          a list or 1d numpy array of value-color pairs where, the first
+ |          element of the pair corresponds to a normalized value of z from 0-1,
+ |          i.e. (z-zmin)/ (zmax-zmin), and the second element of pair
+ |          corresponds to a color. Use with 'zauto', 'zmin' and 'zmax to fine-
+ |          tune the map from 'z' to rendered colors.
  |  
  |          Examples:
- |              [u"'Greys'", [[0, u'rgb(0,0,0)'], [0.5, u'rgb(65, 182, 196)'],
- |              [1, u'rgb(255,255,255)']]]
+ |              'Greys' | [[0, 'rgb(0,0,0)'], [0.5, 'rgb(65, 182, 196)'], [1,
+ |              'rgb(255,255,255)']]
  |  
- |      reversescale [required=False] (value=boolean: True | False):
+ |      reversescale [required=False] (value=a boolean: True | False):
  |          Toggle whether or not the color scale will be reversed.
  |  
- |      showscale [required=False] (value=boolean: True | False):
+ |      showscale [required=False] (value=a boolean: True | False):
  |          Toggle whether or not the color scale associated with this mapping
  |          will be shown alongside the figure.
  |  
- |      colorbar [required=False] (value=ColorBar object | dictionary-like):
- |          A dictionary-like object defining the parameters of the color bar
- |          associated with this trace (including its title, length and width).
+ |      colorbar [required=False] (value=ColorBar object | dictionary-like
+ |      object):
+ |          Links a dictionary-like object defining the parameters of the color
+ |          bar associated with this trace (including its title, length and
+ |          width).
  |  
  |          For more, run `help(plotly.graph_objs.ColorBar)`
  |  
@@ -4434,63 +4471,60 @@ class Contour(PlotlyTrace)
  |      xaxis [required=False] (value='x1' | 'x2' | 'x3' | etc.):
  |          This key determines which x-axis the x-coordinates of this trace
  |          will reference in the figure.  Values 'x1' and 'x' reference to
- |          layout['xaxis'], 'x2' references layout['xaxis2'], and so on. Note
- |          that 'x1' will always refer to layout['xaxis'] or layout['xaxis1'],
- |          they are the same.
+ |          'xaxis' in 'layout', 'x2' references to 'xaxis2' in 'layout', and so
+ |          on. Note that 'x1' will always refer to 'xaxis' or 'xaxis1' in
+ |          'layout', they are the same.
  |  
  |      yaxis [required=False] (value='y1' | 'y2' | 'y3' | etc.):
  |          This key determines which y-axis the y-coordinates of this trace
  |          will reference in the figure.  Values 'y1' and 'y' reference to
- |          layout['yaxis'], 'y2' references layout['yaxis2'], and so on. Note
- |          that 'y1' will always refer to layout['yaxis'] or layout['yaxis1'],
- |          they are the same.
+ |          'yaxis' in 'layout', 'y2' references to 'yaxis2' in 'layout', and so
+ |          on. Note that 'y1' will always refer to 'yaxis' or 'yaxis1' in
+ |          'layout', they are the same.
  |  
- |      showlegend [required=False] (value=boolean: True | False):
+ |      showlegend [required=False] (value=a boolean: True | False):
  |          Toggle whether or not this trace will be labeled in the legend.
  |  
- |      stream [required=False] (value=Stream object | dictionary-like):
- |          The stream dictionary-like object that initializes traces as
- |          writable-streams, for use with the real-time streaming API. Learn
- |          more here: https://plot.ly/python/streaming/
+ |      stream [required=False] (value=Stream object | dictionary-like object):
+ |          Links a dictionary-like object that initializes this trace as a
+ |          writable-stream, for use with the streaming API.
  |  
  |          For more, run `help(plotly.graph_objs.Stream)`
  |  
- |      visible [required=False] (value=boolean: True | False):
- |          Toggles whether or not this object will actually be visible in the
- |          rendered figure.
+ |      visible [required=False] (value=a boolean: True | False):
+ |          Toggles whether or not this object will be visible on the rendered
+ |          figure.
  |  
  |      x0 [required=False] (value=number):
  |          The location of the first coordinate of the x-axis. Use with 'dx' an
- |          alternative to an 'x' list/array. Has no effect if 'x' is set.
+ |          alternative to an 'x' list or 1d numpy array. Has no effect if 'x'
+ |          is set.
  |  
  |      dx [required=False] (value=number):
  |          Spacing between x-axis coordinates. Use with 'x0' an alternative to
- |          an 'x' list/array. Has no effect if 'x' is set.
+ |          an 'x' list or 1d numpy array. Has no effect if 'x' is set.
  |  
  |      y0 [required=False] (value=number):
  |          The location of the first coordinate of the y-axis. Use with 'dy' an
- |          alternative to an 'y' list/array. Has no effect if 'y' is set.
+ |          alternative to an 'y' list or 1d numpy array. Has no effect if 'y'
+ |          is set.
  |  
  |      dy [required=False] (value=number):
  |          Spacing between y-axis coordinates. Use with 'y0' an alternative to
- |          an 'y' list/array. Has no effect if 'y' is set.
+ |          an 'y' list or 1d numpy array. Has no effect if 'y' is set.
  |  
- |      xtype [required=False] (value=[u"'array' | 'scaled'"]):
- |          If set to 'scaled' and 'x' is linked to a list/array, then the
- |          horizontal labels are scaled to a list of integers of unit step
- |          starting from 0.
+ |      xtype [required=False] (value='array' | 'scaled'):
+ |          If set to 'scaled' and 'x' is linked to a list or 1d numpy array,
+ |          then the horizontal labels are scaled to a list or 1d numpy array of
+ |          integers of unit step starting from 0.
  |  
- |      ytype [required=False] (value=[u"'array' | 'scaled'"]):
- |          If set to 'scaled' and 'y' is linked to a list/array, then the
- |          vertical labels are scaled to a list of integers of unit step
- |          starting from 0.
+ |      ytype [required=False] (value='array' | 'scaled'):
+ |          If set to 'scaled' and 'y' is linked to a list or 1d numpy array,
+ |          then the vertical labels are scaled to a list or 1d numpy array of
+ |          integers of unit step starting from 0.
  |  
- |      type [required=False] (value=contour):
- |          Plotly identifier for this data's trace type.  This defines how this
- |          data dictionary will be handled.  For example, 'scatter' type
- |          expects  x and y data-arrays corresponding to (x, y) coordinates
- |          whereas a 'histogram' only requires a single x or y array  and a
- |          'heatmap' type requires a z matrix.
+ |      type [required=False] (value='contour'):
+ |          Plotly identifier for this data's trace type.
  |  
  |  Method resolution order:
  |      Contour
@@ -4506,20 +4540,21 @@ class Contour(PlotlyTrace)
  |  to_string(self, level=0, indent=4, eol='\n', pretty=True, max_chars=80)
  |      Returns a formatted string showing graph_obj constructors.
  |      
- |              Example:
+ |      Example:
  |      
- |                  print obj.to_string()
+ |          print(obj.to_string())
  |      
- |              Keyword arguments:
- |              level (default = 0) -- set number of indentations to start with
- |              indent (default = 4) -- set indentation amount
- |              eol (default = '
- |      ') -- set end of line character(s)
- |              pretty (default = True) -- curtail long list output with a '...'
- |              max_chars (default = 80) -- set max characters per line
+ |      Keyword arguments:
+ |      level (default = 0) -- set number of indentations to start with
+ |      indent (default = 4) -- set indentation amount
+ |      eol (default = '\n') -- set end of line character(s)
+ |      pretty (default = True) -- curtail long list output with a '...'
+ |      max_chars (default = 80) -- set max characters per line
  |  
  |  ----------------------------------------------------------------------
  |  Methods inherited from PlotlyDict:
+ |  
+ |  __setitem__(self, key, value)
  |  
  |  force_clean(self, caller=True)
  |      Attempts to convert to graph_objs and call force_clean() on values.
@@ -4542,7 +4577,7 @@ class Contour(PlotlyTrace)
  |      stripping process, though they made be left empty. This is allowable.
  |      
  |      Keys that will be stripped in this process are tagged with
- |      `'type': 'style'` in the INFO dictionary listed in graph_objs_meta.py.
+ |      `'type': 'style'` in graph_objs_meta.json.
  |      
  |      This process first attempts to convert nested collections from dicts
  |      or lists to subclasses of PlotlyList/PlotlyDict. This process forces
@@ -4592,7 +4627,7 @@ class Contour(PlotlyTrace)
  |      Recursively check the validity of the keys in a PlotlyDict.
  |      
  |      The valid keys constitute the entries in each object
- |      dictionary in INFO stored in graph_objs_meta.py.
+ |      dictionary in graph_objs_meta.json
  |      
  |      The validation process first requires that all nested collections be
  |      converted to the appropriate subclass of PlotlyDict/PlotlyList. Then,
@@ -4652,9 +4687,6 @@ class Contour(PlotlyTrace)
  |  
  |  __repr__(...)
  |      x.__repr__() &lt;==&gt; repr(x)
- |  
- |  __setitem__(...)
- |      x.__setitem__(i, y) &lt;==&gt; x[i]=y
  |  
  |  __sizeof__(...)
  |      D.__sizeof__() -&gt; size of D in memory, in bytes
@@ -4748,8 +4780,8 @@ class Contour(PlotlyTrace)
    </div>
    <div class="cell border-box-sizing code_cell rendered">
     <div class="input">
-     <div class="prompt input_prompt" id="in-[41]:">
-      <a class="prompt input_prompt" href="#in-[41]:">
+     <div class="prompt input_prompt" id="in-[41]">
+      <a class="prompt input_prompt" href="#in-[41]">
        In [41]:
       </a>
      </div>
@@ -4805,8 +4837,8 @@ class Contour(PlotlyTrace)
    </div>
    <div class="cell border-box-sizing code_cell rendered">
     <div class="input">
-     <div class="prompt input_prompt" id="in-[42]:">
-      <a class="prompt input_prompt" href="#in-[42]:">
+     <div class="prompt input_prompt" id="in-[42]">
+      <a class="prompt input_prompt" href="#in-[42]">
        In [42]:
       </a>
      </div>
@@ -4894,8 +4926,8 @@ class Contour(PlotlyTrace)
    </div>
    <div class="cell border-box-sizing code_cell rendered">
     <div class="input">
-     <div class="prompt input_prompt" id="in-[43]:">
-      <a class="prompt input_prompt" href="#in-[43]:">
+     <div class="prompt input_prompt" id="in-[43]">
+      <a class="prompt input_prompt" href="#in-[43]">
        In [43]:
       </a>
      </div>
@@ -4918,11 +4950,16 @@ class Contour(PlotlyTrace)
 Help on class Contours in module plotly.graph_objs.graph_objs:
 
 class Contours(PlotlyDict)
- |  A dictionary-like object for representing a contours object in plotly.
+ |  A dictionary-like object containing specifications of the contours.
  |  
- |      This object exists inside definitions for a contour plot.
+ |  Online example:
  |  
- |      
+ |      https://plot.ly/python/contour-plots/
+ |  
+ |  Parent key:
+ |  
+ |      contours
+ |  
  |  Quick method reference:
  |  
  |      Contours.update(changes)
@@ -4935,7 +4972,7 @@ class Contours(PlotlyDict)
  |  
  |  Valid keys:
  |  
- |      showlines [required=False] (value=boolean: True | False):
+ |      showlines [required=False] (value=a boolean: True | False):
  |          Toggle whether or not the contour lines appear on the plot.
  |  
  |      start [required=False] (value=number: x &gt; 0):
@@ -4966,6 +5003,8 @@ class Contours(PlotlyDict)
  |  
  |  __init__(self, *args, **kwargs)
  |  
+ |  __setitem__(self, key, value)
+ |  
  |  force_clean(self, caller=True)
  |      Attempts to convert to graph_objs and call force_clean() on values.
  |      
@@ -4987,7 +5026,7 @@ class Contours(PlotlyDict)
  |      stripping process, though they made be left empty. This is allowable.
  |      
  |      Keys that will be stripped in this process are tagged with
- |      `'type': 'style'` in the INFO dictionary listed in graph_objs_meta.py.
+ |      `'type': 'style'` in graph_objs_meta.json.
  |      
  |      This process first attempts to convert nested collections from dicts
  |      or lists to subclasses of PlotlyList/PlotlyDict. This process forces
@@ -5008,17 +5047,16 @@ class Contours(PlotlyDict)
  |  to_string(self, level=0, indent=4, eol='\n', pretty=True, max_chars=80)
  |      Returns a formatted string showing graph_obj constructors.
  |      
- |              Example:
+ |      Example:
  |      
- |                  print obj.to_string()
+ |          print(obj.to_string())
  |      
- |              Keyword arguments:
- |              level (default = 0) -- set number of indentations to start with
- |              indent (default = 4) -- set indentation amount
- |              eol (default = '
- |      ') -- set end of line character(s)
- |              pretty (default = True) -- curtail long list output with a '...'
- |              max_chars (default = 80) -- set max characters per line
+ |      Keyword arguments:
+ |      level (default = 0) -- set number of indentations to start with
+ |      indent (default = 4) -- set indentation amount
+ |      eol (default = '\n') -- set end of line character(s)
+ |      pretty (default = True) -- curtail long list output with a '...'
+ |      max_chars (default = 80) -- set max characters per line
  |  
  |  update(self, dict1=None, **dict2)
  |      Update current dict with dict1 and then dict2.
@@ -5052,7 +5090,7 @@ class Contours(PlotlyDict)
  |      Recursively check the validity of the keys in a PlotlyDict.
  |      
  |      The valid keys constitute the entries in each object
- |      dictionary in INFO stored in graph_objs_meta.py.
+ |      dictionary in graph_objs_meta.json
  |      
  |      The validation process first requires that all nested collections be
  |      converted to the appropriate subclass of PlotlyDict/PlotlyList. Then,
@@ -5112,9 +5150,6 @@ class Contours(PlotlyDict)
  |  
  |  __repr__(...)
  |      x.__repr__() &lt;==&gt; repr(x)
- |  
- |  __setitem__(...)
- |      x.__setitem__(i, y) &lt;==&gt; x[i]=y
  |  
  |  __sizeof__(...)
  |      D.__sizeof__() -&gt; size of D in memory, in bytes
@@ -5259,8 +5294,8 @@ class Contours(PlotlyDict)
    </div>
    <div class="cell border-box-sizing code_cell rendered">
     <div class="input">
-     <div class="prompt input_prompt" id="in-[44]:">
-      <a class="prompt input_prompt" href="#in-[44]:">
+     <div class="prompt input_prompt" id="in-[44]">
+      <a class="prompt input_prompt" href="#in-[44]">
        In [44]:
       </a>
      </div>
@@ -5285,9 +5320,18 @@ class Contours(PlotlyDict)
 Help on class Line in module plotly.graph_objs.graph_objs:
 
 class Line(PlotlyDict)
- |  A dictionary-like object representing the style of a line in plotly.
+ |  A dictionary-like object containing specifications of the line segments.
  |  
- |      
+ |  Online examples:
+ |  
+ |      https://plot.ly/python/line-and-scatter/
+ |      https://plot.ly/python/filled-area-plots/
+ |      https://plot.ly/python/contour-plots/
+ |  
+ |  Parent key:
+ |  
+ |      line
+ |  
  |  Quick method reference:
  |  
  |      Line.update(changes)
@@ -5300,20 +5344,20 @@ class Line(PlotlyDict)
  |  
  |  Valid keys:
  |  
- |      color [required=False] (value=string describing color) (streamable):
+ |      color [required=False] (value=a string describing color) (streamable):
  |          Sets the color of the line object. If linked within 'marker', sets
  |          the color of the marker's bordering line. If linked within,
  |          'contours', sets the color of the contour lines.
  |  
  |          Examples:
- |              [u"'green'", u"'rgb(0, 255, 0)'", u"'rgba(0, 255, 0, 0.3)'",
- |              u"'hsl(120,100%,50%)'", u"'hsla(120,100%,50%,0.3)'"]
+ |              'green' | 'rgb(0, 255, 0)' | 'rgba(0, 255, 0, 0.3)' |
+ |              'hsl(120,100%,50%)' | 'hsla(120,100%,50%,0.3)' | '#434F1D'
  |  
  |      width [required=False] (value=number: x &gt;= 0):
- |          Sets the width (in pixels) of the line object.
+ |          Sets the width (in pixels) of the line segments in question.
  |  
  |      dash [required=False] (value='dash' | 'dashdot' | 'dot' | 'solid'):
- |          Sets the drawing style of this line object.
+ |          Sets the drawing style of the lines segments in this trace.
  |  
  |      opacity [required=False] (value=number: x in [0, 1]):
  |          Sets the opacity, or transparency, of the entire object, also known
@@ -5324,35 +5368,34 @@ class Line(PlotlyDict)
  |      | 'vhv'):
  |          Choose the line shape between each coordinate pair in this trace.
  |          Applies only to scatter traces. The default value is 'linear'. If
- |          'spline', then the lines are drawn using spline interpolation
+ |          set to 'spline', then the lines are drawn using spline interpolation
  |          between the coordinate pairs. The remaining available values
- |          correspond to step-wise line shapes, see example in:
- |          https://plot.ly/~alex/315 .
+ |          correspond to step-wise line shapes.
  |  
  |      smoothing [required=False] (value=number: x &gt;= 0):
- |          Sets the amount of smoothing applied to this line object. Applies
- |          only to contour traces and scatter traces if 'shape' is set to
- |          'spline'. The default value is 1. If 'smoothing' is set to 0, then
- |          no smoothing is applied. Set 'smoothing' to a value less (greater)
- |          than 1 for a less (more) pronounced line smoothing.
+ |          Sets the amount of smoothing applied to the lines segments in this
+ |          trace. Applies only to contour traces and scatter traces if 'shape'
+ |          is set to 'spline'. The default value is 1. If 'smoothing' is set to
+ |          0, then no smoothing is applied. Set 'smoothing' to a value less
+ |          (greater) than 1 for a less (more) pronounced line smoothing.
  |  
- |      outliercolor [required=False] (value=string describing color):
+ |      outliercolor [required=False] (value=a string describing color):
  |          For box plots only. Has an effect only if 'boxpoints' is set to
  |          'suspectedoutliers'. Sets the color of the bordering line of the
  |          outlier points.
  |  
  |          Examples:
- |              [u"'green'", u"'rgb(0, 255, 0)'", u"'rgba(0, 255, 0, 0.3)'",
- |              u"'hsl(120,100%,50%)'", u"'hsla(120,100%,50%,0.3)'"]
+ |              'green' | 'rgb(0, 255, 0)' | 'rgba(0, 255, 0, 0.3)' |
+ |              'hsl(120,100%,50%)' | 'hsla(120,100%,50%,0.3)' | '#434F1D'
  |  
- |      outlierwidth [required=False] (value=string describing color):
+ |      outlierwidth [required=False] (value=a string describing color):
  |          For box plots only. Has an effect only if 'boxpoints' is set to
  |          'suspectedoutliers'. Sets the width in pixels of bordering line of
  |          the outlier points.
  |  
  |          Examples:
- |              [u"'green'", u"'rgb(0, 255, 0)'", u"'rgba(0, 255, 0, 0.3)'",
- |              u"'hsl(120,100%,50%)'", u"'hsla(120,100%,50%,0.3)'"]
+ |              'green' | 'rgb(0, 255, 0)' | 'rgba(0, 255, 0, 0.3)' |
+ |              'hsl(120,100%,50%)' | 'hsla(120,100%,50%,0.3)' | '#434F1D'
  |  
  |  Method resolution order:
  |      Line
@@ -5363,6 +5406,8 @@ class Line(PlotlyDict)
  |  Methods inherited from PlotlyDict:
  |  
  |  __init__(self, *args, **kwargs)
+ |  
+ |  __setitem__(self, key, value)
  |  
  |  force_clean(self, caller=True)
  |      Attempts to convert to graph_objs and call force_clean() on values.
@@ -5385,7 +5430,7 @@ class Line(PlotlyDict)
  |      stripping process, though they made be left empty. This is allowable.
  |      
  |      Keys that will be stripped in this process are tagged with
- |      `'type': 'style'` in the INFO dictionary listed in graph_objs_meta.py.
+ |      `'type': 'style'` in graph_objs_meta.json.
  |      
  |      This process first attempts to convert nested collections from dicts
  |      or lists to subclasses of PlotlyList/PlotlyDict. This process forces
@@ -5406,17 +5451,16 @@ class Line(PlotlyDict)
  |  to_string(self, level=0, indent=4, eol='\n', pretty=True, max_chars=80)
  |      Returns a formatted string showing graph_obj constructors.
  |      
- |              Example:
+ |      Example:
  |      
- |                  print obj.to_string()
+ |          print(obj.to_string())
  |      
- |              Keyword arguments:
- |              level (default = 0) -- set number of indentations to start with
- |              indent (default = 4) -- set indentation amount
- |              eol (default = '
- |      ') -- set end of line character(s)
- |              pretty (default = True) -- curtail long list output with a '...'
- |              max_chars (default = 80) -- set max characters per line
+ |      Keyword arguments:
+ |      level (default = 0) -- set number of indentations to start with
+ |      indent (default = 4) -- set indentation amount
+ |      eol (default = '\n') -- set end of line character(s)
+ |      pretty (default = True) -- curtail long list output with a '...'
+ |      max_chars (default = 80) -- set max characters per line
  |  
  |  update(self, dict1=None, **dict2)
  |      Update current dict with dict1 and then dict2.
@@ -5450,7 +5494,7 @@ class Line(PlotlyDict)
  |      Recursively check the validity of the keys in a PlotlyDict.
  |      
  |      The valid keys constitute the entries in each object
- |      dictionary in INFO stored in graph_objs_meta.py.
+ |      dictionary in graph_objs_meta.json
  |      
  |      The validation process first requires that all nested collections be
  |      converted to the appropriate subclass of PlotlyDict/PlotlyList. Then,
@@ -5510,9 +5554,6 @@ class Line(PlotlyDict)
  |  
  |  __repr__(...)
  |      x.__repr__() &lt;==&gt; repr(x)
- |  
- |  __setitem__(...)
- |      x.__setitem__(i, y) &lt;==&gt; x[i]=y
  |  
  |  __sizeof__(...)
  |      D.__sizeof__() -&gt; size of D in memory, in bytes
@@ -5614,8 +5655,8 @@ class Line(PlotlyDict)
    </div>
    <div class="cell border-box-sizing code_cell rendered">
     <div class="input">
-     <div class="prompt input_prompt" id="in-[45]:">
-      <a class="prompt input_prompt" href="#in-[45]:">
+     <div class="prompt input_prompt" id="in-[45]">
+      <a class="prompt input_prompt" href="#in-[45]">
        In [45]:
       </a>
      </div>
@@ -5668,8 +5709,8 @@ class Line(PlotlyDict)
    </div>
    <div class="cell border-box-sizing code_cell rendered">
     <div class="input">
-     <div class="prompt input_prompt" id="in-[46]:">
-      <a class="prompt input_prompt" href="#in-[46]:">
+     <div class="prompt input_prompt" id="in-[46]">
+      <a class="prompt input_prompt" href="#in-[46]">
        In [46]:
       </a>
      </div>
@@ -5723,8 +5764,8 @@ class Line(PlotlyDict)
    </div>
    <div class="cell border-box-sizing code_cell rendered">
     <div class="input">
-     <div class="prompt input_prompt" id="in-[47]:">
-      <a class="prompt input_prompt" href="#in-[47]:">
+     <div class="prompt input_prompt" id="in-[47]">
+      <a class="prompt input_prompt" href="#in-[47]">
        In [47]:
       </a>
      </div>
@@ -5746,10 +5787,13 @@ class Line(PlotlyDict)
     <div class="output_wrapper">
      <div class="output">
       <div class="output_area">
-       <div class="prompt">
+       <div class="prompt output_prompt" id="out[47]">
+        <a class="prompt output_prompt" href="#out[47]">
+         Out[47]:
+        </a>
        </div>
-       <div class="output_html rendered_html output_subarea ">
-        <iframe height="1000" id="igraph" scrolling="no" seamless="seamless" src="https://plot.ly/~etpinard/254/625/975" style="border:none;" width="650">
+       <div class="output_html rendered_html output_subarea output_pyout">
+        <iframe height="1000" id="igraph" scrolling="no" seamless="seamless" src="https://plot.ly/~etpinard/254.embed?width=625&amp;height=975" style="border:none;" width="650">
         </iframe>
        </div>
       </div>
@@ -5823,8 +5867,8 @@ class Line(PlotlyDict)
    </div>
    <div class="cell border-box-sizing code_cell rendered">
     <div class="input">
-     <div class="prompt input_prompt" id="in-[48]:">
-      <a class="prompt input_prompt" href="#in-[48]:">
+     <div class="prompt input_prompt" id="in-[48]">
+      <a class="prompt input_prompt" href="#in-[48]">
        In [48]:
       </a>
      </div>
@@ -5847,16 +5891,19 @@ class Line(PlotlyDict)
 Help on class Histogram2d in module plotly.graph_objs.graph_objs:
 
 class Histogram2d(PlotlyTrace)
- |  A dictionary-like object for representing a histogram2d plot in plotly.
+ |  A dictionary-like object for representing a 2D histogram trace in plotly.
  |  
- |      Example:
+ |  Example:
  |  
- |          import numpy as np
- |          x = np.random.randn(500)
- |          y = np.random.randn(500)+1
- |          py.iplot([Histogram2d(x=x, y=y)])
+ |      &gt;&gt;&gt; import numpy as np
+ |      &gt;&gt;&gt; x = np.random.randn(500)
+ |      &gt;&gt;&gt; y = np.random.randn(500)+1
+ |      &gt;&gt;&gt; py.iplot([Histogram2d(x=x, y=y)])
  |  
- |      
+ |  Online example:
+ |  
+ |      https://plot.ly/python/2D-Histograms/
+ |  
  |  Quick method reference:
  |  
  |      Histogram2d.update(changes)
@@ -5869,101 +5916,115 @@ class Histogram2d(PlotlyTrace)
  |  
  |  Valid keys:
  |  
- |      x [required=True] (value=array-like of numbers, strings, datetimes)
- |      (streamable):
- |          The data sample to be binned on the x-axis and whose distribution
- |          (computed by Plotly) will correspond to the x-coordinates of this 2D
- |          histogram trace.
+ |      x [required=True] (value=list or 1d numpy array of numbers, strings,
+ |      datetimes) (streamable):
+ |          Sets the data sample to be binned on the x-axis and whose
+ |          distribution (computed by Plotly) will correspond to the
+ |          x-coordinates of this 2D histogram trace.
  |  
- |      y [required=True] (value=array-like of numbers, strings, datetimes)
- |      (streamable):
- |          The data sample to be binned on the y-axis and whose distribution
- |          (computed by Plotly) will correspond to the y-coordinates of this 2D
- |          histogram trace.
+ |      y [required=True] (value=list or 1d numpy array of numbers, strings,
+ |      datetimes) (streamable):
+ |          Sets the data sample to be binned on the y-axis and whose
+ |          distribution (computed by Plotly) will correspond to the
+ |          y-coordinates of this 2D histogram trace.
  |  
- |      histnorm [required=False] (value='' (or 'count') | 'percent' |
- |      'probability' | 'density' | 'probability density'):
- |          If histnorm is not specified, or histnorm='' (empty string), the
- |          height of each bar displays the frequency of occurrence, i.e., the
- |          number of times this value was found in the corresponding bin. If
- |          histnorm='percent', the height of each bar displays the percentage
- |          of total occurrences found within the corresponding bin. If
- |          histnorm='probability', the height of each bar displays the
- |          probability that an event will fall into the corresponding bin. If
- |          histnorm='density', the height of each bar is equal to the number of
- |          occurrences in a bin divided by the size of the bin interval such
- |          that summing the area of all bins will yield the total number of
- |          occurrences. If histnorm='probability density', the height of each
- |          bar is equal to the number of probability that an event will fall
- |          into the corresponding bin divided by the size of the bin interval
- |          such that summing the area of all bins will yield 1, i.e. an event
- |          must fall into one of the bins.
+ |      histnorm [required=False] (value='' | 'percent' | 'probability' |
+ |      'density' | 'probability density'):
+ |          Sets the type of normalization for this histogram trace. By default
+ |          ('histnorm' set to '') the height of each bar displays the frequency
+ |          of occurrence, i.e., the number of times this value was found in the
+ |          corresponding bin. If set to 'percent', the height of each bar
+ |          displays the percentage of total occurrences found within the
+ |          corresponding bin. If set to 'probability', the height of each bar
+ |          displays the probability that an event will fall into the
+ |          corresponding bin. If set to 'density', the height of each bar is
+ |          equal to the number of occurrences in a bin divided by the size of
+ |          the bin interval such that summing the area of all bins will yield
+ |          the total number of occurrences. If set to 'probability density',
+ |          the height of each bar is equal to the number of probability that an
+ |          event will fall into the corresponding bin divided by the size of
+ |          the bin interval such that summing the area of all bins will yield
+ |          1.
  |  
- |      name [required=False] (value=string):
+ |      histfunc [required=False] (value='count' | 'sum' | 'avg' | 'min' |
+ |      'max'):
+ |          Sets the binning function used for this histogram trace. The default
+ |          value is 'count' where the histogram values are computed by counting
+ |          the number of values lying inside each bin. With 'histfunc' set to
+ |          'sum', 'avg', 'min' or 'max', the histogram values are computed
+ |          using the sum, the average, the minimum or the 'maximum' of the
+ |          values lying inside each bin respectively.
+ |  
+ |      name [required=False] (value=a string):
  |          The label associated with this trace. This name will appear in the
  |          legend, on hover and in the column header in the online spreadsheet.
  |  
- |      autobinx [required=False] (value=boolean: True | False):
+ |      autobinx [required=False] (value=a boolean: True | False):
  |          Toggle whether or not the x-axis bin parameters are picked
  |          automatically by Plotly. Once 'autobinx' is set to False, the x-axis
- |          bins parameters can be declared in the XBins object.
+ |          bins parameters can be declared in 'xbins' object.
  |  
  |      nbinsx [required=False] (value=number: x &gt; 0):
  |          Specifies the number of x-axis bins. No need to set 'autobinx' to
  |          False for 'nbinsx' to apply.
  |  
- |      xbins [required=False] (value=XBins object | dictionary-like):
- |          A dictionary-like object defining the parameters of x-axis bins of
- |          this trace, for example, the bin width and the bins' starting and
- |          ending value. Has an effect only if 'autobinx'=False.
+ |      xbins [required=False] (value=XBins object | dictionary-like object):
+ |          Links a dictionary-like object defining the parameters of x-axis
+ |          bins of this trace, for example, the bin width and the bins'
+ |          starting and  ending value. Has an effect only if 'autobinx' is set
+ |          to False.
  |  
  |          For more, run `help(plotly.graph_objs.XBins)`
  |  
- |      autobiny [required=False] (value=boolean: True | False):
+ |      autobiny [required=False] (value=a boolean: True | False):
  |          Toggle whether or not the y-axis bin parameters are picked
  |          automatically by Plotly. Once 'autobiny' is set to False, the y-axis
- |          bins parameters can be declared in the YBins object.
+ |          bins parameters can be declared in 'ybins' object.
  |  
  |      nbinsy [required=False] (value=number: x &gt; 0):
  |          Specifies the number of y-axis bins. No need to set 'autobiny' to
  |          False for 'nbinsy' to apply.
  |  
- |      ybins [required=False] (value=YBins object | dictionary-like):
- |          A dictionary-like object defining the parameters of y-axis bins of
- |          this trace, for example, the bin width and the bins' starting and
- |          ending value. Has an effect only if 'autobiny'=False.
+ |      ybins [required=False] (value=YBins object | dictionary-like object):
+ |          Links a dictionary-like object defining the parameters of y-axis
+ |          bins of this trace, for example, the bin width and the bins'
+ |          starting and  ending value. Has an effect only if 'autobiny' is set
+ |          to False.
  |  
  |          For more, run `help(plotly.graph_objs.YBins)`
  |  
- |      colorscale [required=False] (value=array_like of value-color pairs |
- |      'Greys' | 'Greens' | 'Bluered' | 'Hot' | 'Picnic' | 'Portland' | 'Jet' |
- |      'RdBu' | 'Blackbody' | 'Earth' | 'Electric' | 'YIOrRd' | 'YIGnBu'):
+ |      colorscale [required=False] (value=list or 1d numpy array of value-color
+ |      pairs | 'Greys' | 'Greens' | 'Bluered' | 'Hot' | 'Picnic' | 'Portland' |
+ |      'Jet' | 'RdBu' | 'Blackbody' | 'Earth' | 'Electric' | 'YIOrRd' |
+ |      'YIGnBu'):
  |          Sets and/or defines the color scale for this trace. The string
  |          values are pre-defined color scales. For custom color scales, define
- |          a list of color-value pairs where, by default, the first element of
- |          the pair corresponds to a normalized value of z from 0-1, i.e.
- |          (z-zmin)/ (zmax-zmin), and the second element of pair corresponds to
- |          a color. Use with 'zauto', 'zmin' and 'zmax to fine-tune the map
- |          from 'z' to rendered colors.
+ |          a list or 1d numpy array of value-color pairs where, the first
+ |          element of the pair corresponds to a normalized value of z from 0-1,
+ |          i.e. (z-zmin)/ (zmax-zmin), and the second element of pair
+ |          corresponds to a color. Use with 'zauto', 'zmin' and 'zmax to fine-
+ |          tune the map from 'z' to rendered colors.
  |  
  |          Examples:
- |              [u"'Greys'", [[0, u'rgb(0,0,0)'], [0.5, u'rgb(65, 182, 196)'],
- |              [1, u'rgb(255,255,255)']]]
+ |              'Greys' | [[0, 'rgb(0,0,0)'], [0.5, 'rgb(65, 182, 196)'], [1,
+ |              'rgb(255,255,255)']]
  |  
- |      reversescale [required=False] (value=boolean: True | False):
+ |      reversescale [required=False] (value=a boolean: True | False):
  |          Toggle whether or not the color scale will be reversed.
  |  
- |      showscale [required=False] (value=boolean: True | False):
+ |      showscale [required=False] (value=a boolean: True | False):
  |          Toggle whether or not the color scale associated with this mapping
  |          will be shown alongside the figure.
  |  
- |      colorbar [required=False] (value=ColorBar object | dictionary-like):
- |          A dictionary-like object defining the parameters of the color bar
- |          associated with this trace (including its title, length and width).
+ |      colorbar [required=False] (value=ColorBar object | dictionary-like
+ |      object):
+ |          Links a dictionary-like object defining the parameters of the color
+ |          bar associated with this trace (including its title, length and
+ |          width).
  |  
  |          For more, run `help(plotly.graph_objs.ColorBar)`
  |  
- |      zauto [required=False] (value=boolean: True | False):
+ |      zauto [required=False] (value=a boolean: True | False):
  |          Toggle whether or not the default values of 'zmax' and 'zmax' can be
  |          overwritten.
  |  
@@ -5979,7 +6040,7 @@ class Histogram2d(PlotlyTrace)
  |          will be used as the maximum in the color scale normalization. For
  |          more info see 'colorscale'.
  |  
- |      zsmooth [required=False] (value= False | 'best' | 'fast' ):
+ |      zsmooth [required=False] (value=False | 'best' | 'fast'):
  |          Choose between algorithms ('best' or 'fast') to smooth data linked
  |          to 'z'. The default value is False corresponding to no smoothing.
  |  
@@ -5991,37 +6052,44 @@ class Histogram2d(PlotlyTrace)
  |      xaxis [required=False] (value='x1' | 'x2' | 'x3' | etc.):
  |          This key determines which x-axis the x-coordinates of this trace
  |          will reference in the figure.  Values 'x1' and 'x' reference to
- |          layout['xaxis'], 'x2' references layout['xaxis2'], and so on. Note
- |          that 'x1' will always refer to layout['xaxis'] or layout['xaxis1'],
- |          they are the same.
+ |          'xaxis' in 'layout', 'x2' references to 'xaxis2' in 'layout', and so
+ |          on. Note that 'x1' will always refer to 'xaxis' or 'xaxis1' in
+ |          'layout', they are the same.
  |  
  |      yaxis [required=False] (value='y1' | 'y2' | 'y3' | etc.):
  |          This key determines which y-axis the y-coordinates of this trace
  |          will reference in the figure.  Values 'y1' and 'y' reference to
- |          layout['yaxis'], 'y2' references layout['yaxis2'], and so on. Note
- |          that 'y1' will always refer to layout['yaxis'] or layout['yaxis1'],
- |          they are the same.
+ |          'yaxis' in 'layout', 'y2' references to 'yaxis2' in 'layout', and so
+ |          on. Note that 'y1' will always refer to 'yaxis' or 'yaxis1' in
+ |          'layout', they are the same.
  |  
- |      showlegend [required=False] (value=boolean: True | False):
+ |      showlegend [required=False] (value=a boolean: True | False):
  |          Toggle whether or not this trace will be labeled in the legend.
  |  
- |      stream [required=False] (value=Stream object | dictionary-like):
- |          The stream dictionary-like object that initializes traces as
- |          writable-streams, for use with the real-time streaming API. Learn
- |          more here: https://plot.ly/python/streaming/
+ |      stream [required=False] (value=Stream object | dictionary-like object):
+ |          Links a dictionary-like object that initializes this trace as a
+ |          writable-stream, for use with the streaming API.
  |  
  |          For more, run `help(plotly.graph_objs.Stream)`
  |  
- |      visible [required=False] (value=boolean: True | False):
- |          Toggles whether or not this object will actually be visible in the
- |          rendered figure.
+ |      visible [required=False] (value=a boolean: True | False):
+ |          Toggles whether or not this object will be visible on the rendered
+ |          figure.
  |  
- |      type [required=False] (value=histogram2d):
- |          Plotly identifier for this data's trace type.  This defines how this
- |          data dictionary will be handled.  For example, 'scatter' type
- |          expects  x and y data-arrays corresponding to (x, y) coordinates
- |          whereas a 'histogram' only requires a single x or y array  and a
- |          'heatmap' type requires a z matrix.
+ |      xsrc [required=True] (value=a string equal to the unique identifier of a
+ |      plotly grid column) (streamable):
+ |          Sets the data sample to be binned on the x-axis and whose
+ |          distribution (computed by Plotly) will correspond to the
+ |          x-coordinates of this 2D histogram trace.
+ |  
+ |      ysrc [required=True] (value=a string equal to the unique identifier of a
+ |      plotly grid column) (streamable):
+ |          Sets the data sample to be binned on the y-axis and whose
+ |          distribution (computed by Plotly) will correspond to the
+ |          y-coordinates of this 2D histogram trace.
+ |  
+ |      type [required=False] (value='histogram2d'):
+ |          Plotly identifier for this data's trace type.
  |  
  |  Method resolution order:
  |      Histogram2d
@@ -6037,20 +6105,21 @@ class Histogram2d(PlotlyTrace)
  |  to_string(self, level=0, indent=4, eol='\n', pretty=True, max_chars=80)
  |      Returns a formatted string showing graph_obj constructors.
  |      
- |              Example:
+ |      Example:
  |      
- |                  print obj.to_string()
+ |          print(obj.to_string())
  |      
- |              Keyword arguments:
- |              level (default = 0) -- set number of indentations to start with
- |              indent (default = 4) -- set indentation amount
- |              eol (default = '
- |      ') -- set end of line character(s)
- |              pretty (default = True) -- curtail long list output with a '...'
- |              max_chars (default = 80) -- set max characters per line
+ |      Keyword arguments:
+ |      level (default = 0) -- set number of indentations to start with
+ |      indent (default = 4) -- set indentation amount
+ |      eol (default = '\n') -- set end of line character(s)
+ |      pretty (default = True) -- curtail long list output with a '...'
+ |      max_chars (default = 80) -- set max characters per line
  |  
  |  ----------------------------------------------------------------------
  |  Methods inherited from PlotlyDict:
+ |  
+ |  __setitem__(self, key, value)
  |  
  |  force_clean(self, caller=True)
  |      Attempts to convert to graph_objs and call force_clean() on values.
@@ -6073,7 +6142,7 @@ class Histogram2d(PlotlyTrace)
  |      stripping process, though they made be left empty. This is allowable.
  |      
  |      Keys that will be stripped in this process are tagged with
- |      `'type': 'style'` in the INFO dictionary listed in graph_objs_meta.py.
+ |      `'type': 'style'` in graph_objs_meta.json.
  |      
  |      This process first attempts to convert nested collections from dicts
  |      or lists to subclasses of PlotlyList/PlotlyDict. This process forces
@@ -6123,7 +6192,7 @@ class Histogram2d(PlotlyTrace)
  |      Recursively check the validity of the keys in a PlotlyDict.
  |      
  |      The valid keys constitute the entries in each object
- |      dictionary in INFO stored in graph_objs_meta.py.
+ |      dictionary in graph_objs_meta.json
  |      
  |      The validation process first requires that all nested collections be
  |      converted to the appropriate subclass of PlotlyDict/PlotlyList. Then,
@@ -6183,9 +6252,6 @@ class Histogram2d(PlotlyTrace)
  |  
  |  __repr__(...)
  |      x.__repr__() &lt;==&gt; repr(x)
- |  
- |  __setitem__(...)
- |      x.__setitem__(i, y) &lt;==&gt; x[i]=y
  |  
  |  __sizeof__(...)
  |      D.__sizeof__() -&gt; size of D in memory, in bytes
@@ -6291,8 +6357,8 @@ class Histogram2d(PlotlyTrace)
    </div>
    <div class="cell border-box-sizing code_cell rendered">
     <div class="input">
-     <div class="prompt input_prompt" id="in-[49]:">
-      <a class="prompt input_prompt" href="#in-[49]:">
+     <div class="prompt input_prompt" id="in-[49]">
+      <a class="prompt input_prompt" href="#in-[49]">
        In [49]:
       </a>
      </div>
@@ -6303,15 +6369,29 @@ class Histogram2d(PlotlyTrace)
 <span class="n">ind_least_corr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">unravel_index</span><span class="p">(</span><span class="n">Corr_site</span><span class="o">.</span><span class="n">argmin</span><span class="p">(),</span> <span class="n">Corr_site</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
 
 <span class="c"># Get 1st site, remove &lt;br&gt; tag from string</span>
-<span class="n">site1</span> <span class="o">=</span> <span class="n">sites</span><span class="p">[</span><span class="n">ind_least_corr</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s">'&lt;br&gt;'</span><span class="p">,</span><span class="s">''</span><span class="p">)</span>
+<span class="n">site1</span> <span class="o">=</span> <span class="n">sites</span><span class="p">[</span><span class="n">ind_least_corr</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s">'&lt;br&gt;'</span><span class="p">,</span> <span class="s">''</span><span class="p">)</span>
 <span class="n">z_day1</span> <span class="o">=</span> <span class="n">Z_dayXsite</span><span class="p">[:,</span><span class="n">ind_least_corr</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span>
 
 <span class="c"># And similarly for the 2nd site, remove &lt;br&gt; tag from string</span>
-<span class="n">site2</span> <span class="o">=</span> <span class="n">sites</span><span class="p">[</span><span class="n">ind_least_corr</span><span class="p">[</span><span class="mi">1</span><span class="p">]]</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s">'&lt;br&gt;'</span><span class="p">,</span><span class="s">' '</span><span class="p">)</span>
+<span class="n">site2</span> <span class="o">=</span> <span class="n">sites</span><span class="p">[</span><span class="n">ind_least_corr</span><span class="p">[</span><span class="mi">1</span><span class="p">]]</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s">'&lt;br&gt;'</span><span class="p">,</span> <span class="s">' '</span><span class="p">)</span>
 <span class="n">z_day2</span> <span class="o">=</span> <span class="n">Z_dayXsite</span><span class="p">[:,</span><span class="n">ind_least_corr</span><span class="p">[</span><span class="mi">1</span><span class="p">]]</span>
-
-<span class="k">print</span> <span class="n">site1</span>  <span class="c"># show 2 least-correlated sites</span>
-<span class="k">print</span> <span class="n">site2</span>
+</pre>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
+     <div class="prompt input_prompt" id="in-[50]">
+      <a class="prompt input_prompt" href="#in-[50]">
+       In [50]:
+      </a>
+     </div>
+     <div class="inner_cell">
+      <div class="input_area">
+       <div class="highlight">
+        <pre><span class="n">site1</span><span class="p">,</span> <span class="n">site2</span>  <span class="c"># show 2 least-correlated sites</span>
 </pre>
        </div>
       </div>
@@ -6320,13 +6400,14 @@ class Histogram2d(PlotlyTrace)
     <div class="output_wrapper">
      <div class="output">
       <div class="output_area">
-       <div class="prompt">
+       <div class="prompt output_prompt" id="out[50]">
+        <a class="prompt output_prompt" href="#out[50]">
+         Out[50]:
+        </a>
        </div>
-       <div class="output_subarea output_stream output_stdout output_text">
+       <div class="output_text output_subarea output_pyout">
         <pre>
-du Parc/Duluth
-Pierre-Dupuy (Habitat 67)
-
+('du Parc/Duluth', 'Pierre-Dupuy (Habitat 67)')
 </pre>
        </div>
       </div>
@@ -6349,16 +6430,15 @@ Pierre-Dupuy (Habitat 67)
    </div>
    <div class="cell border-box-sizing code_cell rendered">
     <div class="input">
-     <div class="prompt input_prompt" id="in-[50]:">
-      <a class="prompt input_prompt" href="#in-[50]:">
-       In [50]:
+     <div class="prompt input_prompt" id="in-[51]">
+      <a class="prompt input_prompt" href="#in-[51]">
+       In [51]:
       </a>
      </div>
      <div class="inner_cell">
       <div class="input_area">
        <div class="highlight">
-        <pre><span class="k">print</span> <span class="n">z_day1</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
-<span class="k">print</span> <span class="n">z_day2</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
+        <pre><span class="n">z_day1</span><span class="o">.</span><span class="n">max</span><span class="p">(),</span> <span class="n">z_day2</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
 </pre>
        </div>
       </div>
@@ -6367,13 +6447,14 @@ Pierre-Dupuy (Habitat 67)
     <div class="output_wrapper">
      <div class="output">
       <div class="output_area">
-       <div class="prompt">
+       <div class="prompt output_prompt" id="out[51]">
+        <a class="prompt output_prompt" href="#out[51]">
+         Out[51]:
+        </a>
        </div>
-       <div class="output_subarea output_stream output_stdout output_text">
+       <div class="output_text output_subarea output_pyout">
         <pre>
-4103
-4841
-
+(4103, 4841)
 </pre>
        </div>
       </div>
@@ -6412,9 +6493,9 @@ Pierre-Dupuy (Habitat 67)
    </div>
    <div class="cell border-box-sizing code_cell rendered">
     <div class="input">
-     <div class="prompt input_prompt" id="in-[51]:">
-      <a class="prompt input_prompt" href="#in-[51]:">
-       In [51]:
+     <div class="prompt input_prompt" id="in-[52]">
+      <a class="prompt input_prompt" href="#in-[52]">
+       In [52]:
       </a>
      </div>
      <div class="inner_cell">
@@ -6483,9 +6564,9 @@ Pierre-Dupuy (Habitat 67)
    </div>
    <div class="cell border-box-sizing code_cell rendered">
     <div class="input">
-     <div class="prompt input_prompt" id="in-[52]:">
-      <a class="prompt input_prompt" href="#in-[52]:">
-       In [52]:
+     <div class="prompt input_prompt" id="in-[53]">
+      <a class="prompt input_prompt" href="#in-[53]">
+       In [53]:
       </a>
      </div>
      <div class="inner_cell">
@@ -6541,44 +6622,8 @@ Pierre-Dupuy (Habitat 67)
    </div>
    <div class="cell border-box-sizing code_cell rendered">
     <div class="input">
-     <div class="prompt input_prompt" id="in-[53]:">
-      <a class="prompt input_prompt" href="#in-[53]:">
-       In [53]:
-      </a>
-     </div>
-     <div class="inner_cell">
-      <div class="input_area">
-       <div class="highlight">
-        <pre><span class="c"># Make figure object</span>
-<span class="n">fig</span> <span class="o">=</span> <span class="n">Figure</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="p">,</span> <span class="n">layout</span><span class="o">=</span><span class="n">layout</span><span class="p">)</span>
-
-<span class="c"># Define filename in relation to the sites chosen</span>
-<span class="n">filename</span> <span class="o">=</span> <span class="s">'s5_hist2d-sites-{}-{}'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="o">*</span><span class="n">ind_least_corr</span><span class="p">)</span>
-
-<span class="c"># (@) Send figure object to Plotly, show result in notebook</span>
-<span class="n">py</span><span class="o">.</span><span class="n">iplot</span><span class="p">(</span><span class="n">fig</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="n">filename</span><span class="p">)</span>
-</pre>
-       </div>
-      </div>
-     </div>
-    </div>
-    <div class="output_wrapper">
-     <div class="output">
-      <div class="output_area">
-       <div class="prompt">
-       </div>
-       <div class="output_html rendered_html output_subarea ">
-        <iframe height="525" id="igraph" scrolling="no" seamless="seamless" src="https://plot.ly/~etpinard/256" style="border:none;" width="100%">
-        </iframe>
-       </div>
-      </div>
-     </div>
-    </div>
-   </div>
-   <div class="cell border-box-sizing code_cell rendered">
-    <div class="input">
-     <div class="prompt input_prompt" id="in-[54]:">
-      <a class="prompt input_prompt" href="#in-[54]:">
+     <div class="prompt input_prompt" id="in-[54]">
+      <a class="prompt input_prompt" href="#in-[54]">
        In [54]:
       </a>
      </div>
@@ -6590,6 +6635,7 @@ Pierre-Dupuy (Habitat 67)
 
 <span class="c"># Define filename in relation to the sites chosen</span>
 <span class="n">filename</span> <span class="o">=</span> <span class="s">'s5_hist2d-sites-{}-{}'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="o">*</span><span class="n">ind_least_corr</span><span class="p">)</span>
+
 <span class="c"># (@) Send figure object to Plotly, show result in notebook</span>
 <span class="n">py</span><span class="o">.</span><span class="n">iplot</span><span class="p">(</span><span class="n">fig</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="n">filename</span><span class="p">)</span>
 </pre>
@@ -6600,10 +6646,52 @@ Pierre-Dupuy (Habitat 67)
     <div class="output_wrapper">
      <div class="output">
       <div class="output_area">
-       <div class="prompt">
+       <div class="prompt output_prompt" id="out[54]">
+        <a class="prompt output_prompt" href="#out[54]">
+         Out[54]:
+        </a>
        </div>
-       <div class="output_html rendered_html output_subarea ">
-        <iframe height="525" id="igraph" scrolling="no" seamless="seamless" src="https://plot.ly/~etpinard/256" style="border:none;" width="100%">
+       <div class="output_html rendered_html output_subarea output_pyout">
+        <iframe height="525" id="igraph" scrolling="no" seamless="seamless" src="https://plot.ly/~etpinard/256.embed" style="border:none;" width="100%">
+        </iframe>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
+     <div class="prompt input_prompt" id="in-[55]">
+      <a class="prompt input_prompt" href="#in-[55]">
+       In [55]:
+      </a>
+     </div>
+     <div class="inner_cell">
+      <div class="input_area">
+       <div class="highlight">
+        <pre><span class="c"># Make figure object</span>
+<span class="n">fig</span> <span class="o">=</span> <span class="n">Figure</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="p">,</span> <span class="n">layout</span><span class="o">=</span><span class="n">layout</span><span class="p">)</span>
+
+<span class="c"># Define filename in relation to the sites chosen</span>
+<span class="n">filename</span> <span class="o">=</span> <span class="s">'s5_hist2d-sites-{}-{}'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="o">*</span><span class="n">ind_least_corr</span><span class="p">)</span>
+
+<span class="c"># (@) Send figure object to Plotly, show result in notebook</span>
+<span class="n">py</span><span class="o">.</span><span class="n">iplot</span><span class="p">(</span><span class="n">fig</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="n">filename</span><span class="p">)</span>
+</pre>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="output_wrapper">
+     <div class="output">
+      <div class="output_area">
+       <div class="prompt output_prompt" id="out[55]">
+        <a class="prompt output_prompt" href="#out[55]">
+         Out[55]:
+        </a>
+       </div>
+       <div class="output_html rendered_html output_subarea output_pyout">
+        <iframe height="525" id="igraph" scrolling="no" seamless="seamless" src="https://plot.ly/~etpinard/256.embed" style="border:none;" width="100%">
         </iframe>
        </div>
       </div>
@@ -6637,9 +6725,9 @@ Pierre-Dupuy (Habitat 67)
    </div>
    <div class="cell border-box-sizing code_cell rendered">
     <div class="input">
-     <div class="prompt input_prompt" id="in-[55]:">
-      <a class="prompt input_prompt" href="#in-[55]:">
-       In [55]:
+     <div class="prompt input_prompt" id="in-[56]">
+      <a class="prompt input_prompt" href="#in-[56]">
+       In [56]:
       </a>
      </div>
      <div class="inner_cell">
@@ -6682,9 +6770,9 @@ Pierre-Dupuy (Habitat 67)
    </div>
    <div class="cell border-box-sizing code_cell rendered">
     <div class="input">
-     <div class="prompt input_prompt" id="in-[56]:">
-      <a class="prompt input_prompt" href="#in-[56]:">
-       In [56]:
+     <div class="prompt input_prompt" id="in-[57]">
+      <a class="prompt input_prompt" href="#in-[57]">
+       In [57]:
       </a>
      </div>
      <div class="inner_cell">
@@ -6713,7 +6801,7 @@ Pierre-Dupuy (Habitat 67)
 <span class="p">)</span>
 
 <span class="c"># Extend data object with the two 1d histogram traces</span>
-<span class="n">data</span><span class="o">.</span><span class="n">extend</span><span class="p">([</span><span class="n">trace3</span><span class="p">,</span><span class="n">trace4</span><span class="p">])</span>
+<span class="n">data</span><span class="o">.</span><span class="n">extend</span><span class="p">([</span><span class="n">trace3</span><span class="p">,</span> <span class="n">trace4</span><span class="p">])</span>
 </pre>
        </div>
       </div>
@@ -6733,9 +6821,9 @@ Pierre-Dupuy (Habitat 67)
    </div>
    <div class="cell border-box-sizing code_cell rendered">
     <div class="input">
-     <div class="prompt input_prompt" id="in-[57]:">
-      <a class="prompt input_prompt" href="#in-[57]:">
-       In [57]:
+     <div class="prompt input_prompt" id="in-[58]">
+      <a class="prompt input_prompt" href="#in-[58]">
+       In [58]:
       </a>
      </div>
      <div class="inner_cell">
@@ -6752,6 +6840,7 @@ Pierre-Dupuy (Habitat 67)
 <span class="c"># Update title</span>
 <span class="n">title</span> <span class="o">=</span> <span class="s">'Fig 5.4b: Joint frequency distribution&lt;br&gt;</span><span class="se">\</span>
 <span class="s">of daily cyclist counts at two Montreal sites in 2013'</span>
+
 <span class="n">layout</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="n">title</span><span class="p">)</span>
 </pre>
        </div>
@@ -6761,9 +6850,9 @@ Pierre-Dupuy (Habitat 67)
    </div>
    <div class="cell border-box-sizing code_cell rendered">
     <div class="input">
-     <div class="prompt input_prompt" id="in-[58]:">
-      <a class="prompt input_prompt" href="#in-[58]:">
-       In [58]:
+     <div class="prompt input_prompt" id="in-[59]">
+      <a class="prompt input_prompt" href="#in-[59]">
+       In [59]:
       </a>
      </div>
      <div class="inner_cell">
@@ -6785,10 +6874,13 @@ Pierre-Dupuy (Habitat 67)
     <div class="output_wrapper">
      <div class="output">
       <div class="output_area">
-       <div class="prompt">
+       <div class="prompt output_prompt" id="out[59]">
+        <a class="prompt output_prompt" href="#out[59]">
+         Out[59]:
+        </a>
        </div>
-       <div class="output_html rendered_html output_subarea ">
-        <iframe height="525" id="igraph" scrolling="no" seamless="seamless" src="https://plot.ly/~etpinard/294" style="border:none;" width="100%">
+       <div class="output_html rendered_html output_subarea output_pyout">
+        <iframe height="525" id="igraph" scrolling="no" seamless="seamless" src="https://plot.ly/~etpinard/294.embed" style="border:none;" width="100%">
         </iframe>
        </div>
       </div>
@@ -6827,9 +6919,9 @@ Pierre-Dupuy (Habitat 67)
    </div>
    <div class="cell border-box-sizing code_cell rendered">
     <div class="input">
-     <div class="prompt input_prompt" id="in-[59]:">
-      <a class="prompt input_prompt" href="#in-[59]:">
-       In [59]:
+     <div class="prompt input_prompt" id="in-[60]">
+      <a class="prompt input_prompt" href="#in-[60]">
+       In [60]:
       </a>
      </div>
      <div class="inner_cell">
@@ -6851,16 +6943,20 @@ Pierre-Dupuy (Habitat 67)
 Help on class Histogram2dContour in module plotly.graph_objs.graph_objs:
 
 class Histogram2dContour(PlotlyTrace)
- |  A dict-like object for representing a histogram2d-contour plot in plotly.
+ |  A dictionary-like object for representing a 2D histogram contour trace in
+ |      plotly.
  |  
- |      Example:
+ |  Example:
  |  
- |          import numpy as np
- |          x = np.random.randn(500)
- |          y = np.random.randn(500)+1
- |          py.iplot([Histogram2dcountour(x=x, y=y)])
+ |      &gt;&gt;&gt; import numpy as np
+ |      &gt;&gt;&gt; x = np.random.randn(500)
+ |      &gt;&gt;&gt; y = np.random.randn(500)+1
+ |      &gt;&gt;&gt; py.iplot([Histogram2dContour(x=x, y=y)])
  |  
- |      
+ |  Online example:
+ |  
+ |      https://plot.ly/python/2D-Histograms/
+ |  
  |  Quick method reference:
  |  
  |      Histogram2dContour.update(changes)
@@ -6873,125 +6969,140 @@ class Histogram2dContour(PlotlyTrace)
  |  
  |  Valid keys:
  |  
- |      x [required=True] (value=array-like of numbers, strings, datetimes)
- |      (streamable):
- |          The data sample to be binned on the x-axis and whose distribution
- |          (computed by Plotly) will correspond to the x-coordinates of this 2D
- |          histogram trace.
+ |      x [required=True] (value=list or 1d numpy array of numbers, strings,
+ |      datetimes) (streamable):
+ |          Sets the data sample to be binned on the x-axis and whose
+ |          distribution (computed by Plotly) will correspond to the
+ |          x-coordinates of this 2D histogram trace.
  |  
- |      y [required=True] (value=array-like of numbers, strings, datetimes)
- |      (streamable):
- |          The data sample to be binned on the y-axis and whose distribution
- |          (computed by Plotly) will correspond to the y-coordinates of this 2D
- |          histogram trace.
+ |      y [required=True] (value=list or 1d numpy array of numbers, strings,
+ |      datetimes) (streamable):
+ |          Sets the data sample to be binned on the y-axis and whose
+ |          distribution (computed by Plotly) will correspond to the
+ |          y-coordinates of this 2D histogram trace.
  |  
- |      histnorm [required=False] (value='' (or 'count') | 'percent' |
- |      'probability' | 'density' | 'probability density'):
- |          If histnorm is not specified, or histnorm='' (empty string), the
- |          height of each bar displays the frequency of occurrence, i.e., the
- |          number of times this value was found in the corresponding bin. If
- |          histnorm='percent', the height of each bar displays the percentage
- |          of total occurrences found within the corresponding bin. If
- |          histnorm='probability', the height of each bar displays the
- |          probability that an event will fall into the corresponding bin. If
- |          histnorm='density', the height of each bar is equal to the number of
- |          occurrences in a bin divided by the size of the bin interval such
- |          that summing the area of all bins will yield the total number of
- |          occurrences. If histnorm='probability density', the height of each
- |          bar is equal to the number of probability that an event will fall
- |          into the corresponding bin divided by the size of the bin interval
- |          such that summing the area of all bins will yield 1, i.e. an event
- |          must fall into one of the bins.
+ |      histnorm [required=False] (value='' | 'percent' | 'probability' |
+ |      'density' | 'probability density'):
+ |          Sets the type of normalization for this histogram trace. By default
+ |          ('histnorm' set to '') the height of each bar displays the frequency
+ |          of occurrence, i.e., the number of times this value was found in the
+ |          corresponding bin. If set to 'percent', the height of each bar
+ |          displays the percentage of total occurrences found within the
+ |          corresponding bin. If set to 'probability', the height of each bar
+ |          displays the probability that an event will fall into the
+ |          corresponding bin. If set to 'density', the height of each bar is
+ |          equal to the number of occurrences in a bin divided by the size of
+ |          the bin interval such that summing the area of all bins will yield
+ |          the total number of occurrences. If set to 'probability density',
+ |          the height of each bar is equal to the number of probability that an
+ |          event will fall into the corresponding bin divided by the size of
+ |          the bin interval such that summing the area of all bins will yield
+ |          1.
  |  
- |      name [required=False] (value=string):
+ |      histfunc [required=False] (value='count' | 'sum' | 'avg' | 'min' |
+ |      'max'):
+ |          Sets the binning function used for this histogram trace. The default
+ |          value is 'count' where the histogram values are computed by counting
+ |          the number of values lying inside each bin. With 'histfunc' set to
+ |          'sum', 'avg', 'min' or 'max', the histogram values are computed
+ |          using the sum, the average, the minimum or the 'maximum' of the
+ |          values lying inside each bin respectively.
+ |  
+ |      name [required=False] (value=a string):
  |          The label associated with this trace. This name will appear in the
  |          legend, on hover and in the column header in the online spreadsheet.
  |  
- |      autobinx [required=False] (value=boolean: True | False):
+ |      autobinx [required=False] (value=a boolean: True | False):
  |          Toggle whether or not the x-axis bin parameters are picked
  |          automatically by Plotly. Once 'autobinx' is set to False, the x-axis
- |          bins parameters can be declared in the XBins object.
+ |          bins parameters can be declared in 'xbins' object.
  |  
  |      nbinsx [required=False] (value=number: x &gt; 0):
  |          Specifies the number of x-axis bins. No need to set 'autobinx' to
  |          False for 'nbinsx' to apply.
  |  
- |      xbins [required=False] (value=XBins object | dictionary-like):
- |          A dictionary-like object defining the parameters of x-axis bins of
- |          this trace, for example, the bin width and the bins' starting and
- |          ending value. Has an effect only if 'autobinx'=False.
+ |      xbins [required=False] (value=XBins object | dictionary-like object):
+ |          Links a dictionary-like object defining the parameters of x-axis
+ |          bins of this trace, for example, the bin width and the bins'
+ |          starting and  ending value. Has an effect only if 'autobinx' is set
+ |          to False.
  |  
  |          For more, run `help(plotly.graph_objs.XBins)`
  |  
- |      autobiny [required=False] (value=boolean: True | False):
+ |      autobiny [required=False] (value=a boolean: True | False):
  |          Toggle whether or not the y-axis bin parameters are picked
  |          automatically by Plotly. Once 'autobiny' is set to False, the y-axis
- |          bins parameters can be declared in the YBins object.
+ |          bins parameters can be declared in 'ybins' object.
  |  
  |      nbinsy [required=False] (value=number: x &gt; 0):
  |          Specifies the number of y-axis bins. No need to set 'autobiny' to
  |          False for 'nbinsy' to apply.
  |  
- |      ybins [required=False] (value=YBins object | dictionary-like):
- |          A dictionary-like object defining the parameters of y-axis bins of
- |          this trace, for example, the bin width and the bins' starting and
- |          ending value. Has an effect only if 'autobiny'=False.
+ |      ybins [required=False] (value=YBins object | dictionary-like object):
+ |          Links a dictionary-like object defining the parameters of y-axis
+ |          bins of this trace, for example, the bin width and the bins'
+ |          starting and  ending value. Has an effect only if 'autobiny' is set
+ |          to False.
  |  
  |          For more, run `help(plotly.graph_objs.YBins)`
  |  
- |      autocontour [required=False] (value=boolean: True | False):
+ |      autocontour [required=False] (value=a boolean: True | False):
  |          Toggle whether or not the contour parameters are picked
  |          automatically by Plotly. If False, declare the contours parameters
- |          in the Contours object.
+ |          in 'contours'.
  |  
  |      ncontours [required=False] (value=number: x &gt; 1):
  |          Specifies the number of contours lines in the contour plot. No need
  |          to set 'autocontour' to False for 'ncontours' to apply.
  |  
- |      contours [required=False] (value=Contours object | dictionary-like):
- |          A dictionary-like object defining the parameters of the contours of
- |          this trace.
+ |      contours [required=False] (value=Contours object | dictionary-like
+ |      object):
+ |          Links a dictionary-like object defining the parameters of the
+ |          contours of this trace.
  |  
  |          For more, run `help(plotly.graph_objs.Contours)`
  |  
- |      line [required=False] (value=Line object | dictionary-like)
+ |      line [required=False] (value=Line object | dictionary-like object)
  |      (streamable):
- |          A dictionary-like object containing line style parameters for
+ |          Links a dictionary-like object containing line parameters for
  |          contour lines of this contour trace (including line width, dash,
  |          color and smoothing level). Has no an effect if 'showlines' is set
- |          to False in Contours.
+ |          to False in 'contours'.
  |  
  |          For more, run `help(plotly.graph_objs.Line)`
  |  
- |      colorscale [required=False] (value=array_like of value-color pairs |
- |      'Greys' | 'Greens' | 'Bluered' | 'Hot' | 'Picnic' | 'Portland' | 'Jet' |
- |      'RdBu' | 'Blackbody' | 'Earth' | 'Electric' | 'YIOrRd' | 'YIGnBu'):
+ |      colorscale [required=False] (value=list or 1d numpy array of value-color
+ |      pairs | 'Greys' | 'Greens' | 'Bluered' | 'Hot' | 'Picnic' | 'Portland' |
+ |      'Jet' | 'RdBu' | 'Blackbody' | 'Earth' | 'Electric' | 'YIOrRd' |
+ |      'YIGnBu'):
  |          Sets and/or defines the color scale for this trace. The string
  |          values are pre-defined color scales. For custom color scales, define
- |          a list of color-value pairs where, by default, the first element of
- |          the pair corresponds to a normalized value of z from 0-1, i.e.
- |          (z-zmin)/ (zmax-zmin), and the second element of pair corresponds to
- |          a color. Use with 'zauto', 'zmin' and 'zmax to fine-tune the map
- |          from 'z' to rendered colors.
+ |          a list or 1d numpy array of value-color pairs where, the first
+ |          element of the pair corresponds to a normalized value of z from 0-1,
+ |          i.e. (z-zmin)/ (zmax-zmin), and the second element of pair
+ |          corresponds to a color. Use with 'zauto', 'zmin' and 'zmax to fine-
+ |          tune the map from 'z' to rendered colors.
  |  
  |          Examples:
- |              [u"'Greys'", [[0, u'rgb(0,0,0)'], [0.5, u'rgb(65, 182, 196)'],
- |              [1, u'rgb(255,255,255)']]]
+ |              'Greys' | [[0, 'rgb(0,0,0)'], [0.5, 'rgb(65, 182, 196)'], [1,
+ |              'rgb(255,255,255)']]
  |  
- |      reversescale [required=False] (value=boolean: True | False):
+ |      reversescale [required=False] (value=a boolean: True | False):
  |          Toggle whether or not the color scale will be reversed.
  |  
- |      showscale [required=False] (value=boolean: True | False):
+ |      showscale [required=False] (value=a boolean: True | False):
  |          Toggle whether or not the color scale associated with this mapping
  |          will be shown alongside the figure.
  |  
- |      colorbar [required=False] (value=ColorBar object | dictionary-like):
- |          A dictionary-like object defining the parameters of the color bar
- |          associated with this trace (including its title, length and width).
+ |      colorbar [required=False] (value=ColorBar object | dictionary-like
+ |      object):
+ |          Links a dictionary-like object defining the parameters of the color
+ |          bar associated with this trace (including its title, length and
+ |          width).
  |  
  |          For more, run `help(plotly.graph_objs.ColorBar)`
  |  
- |      zauto [required=False] (value=boolean: True | False):
+ |      zauto [required=False] (value=a boolean: True | False):
  |          Toggle whether or not the default values of 'zmax' and 'zmax' can be
  |          overwritten.
  |  
@@ -7015,37 +7126,44 @@ class Histogram2dContour(PlotlyTrace)
  |      xaxis [required=False] (value='x1' | 'x2' | 'x3' | etc.):
  |          This key determines which x-axis the x-coordinates of this trace
  |          will reference in the figure.  Values 'x1' and 'x' reference to
- |          layout['xaxis'], 'x2' references layout['xaxis2'], and so on. Note
- |          that 'x1' will always refer to layout['xaxis'] or layout['xaxis1'],
- |          they are the same.
+ |          'xaxis' in 'layout', 'x2' references to 'xaxis2' in 'layout', and so
+ |          on. Note that 'x1' will always refer to 'xaxis' or 'xaxis1' in
+ |          'layout', they are the same.
  |  
  |      yaxis [required=False] (value='y1' | 'y2' | 'y3' | etc.):
  |          This key determines which y-axis the y-coordinates of this trace
  |          will reference in the figure.  Values 'y1' and 'y' reference to
- |          layout['yaxis'], 'y2' references layout['yaxis2'], and so on. Note
- |          that 'y1' will always refer to layout['yaxis'] or layout['yaxis1'],
- |          they are the same.
+ |          'yaxis' in 'layout', 'y2' references to 'yaxis2' in 'layout', and so
+ |          on. Note that 'y1' will always refer to 'yaxis' or 'yaxis1' in
+ |          'layout', they are the same.
  |  
- |      showlegend [required=False] (value=boolean: True | False):
+ |      showlegend [required=False] (value=a boolean: True | False):
  |          Toggle whether or not this trace will be labeled in the legend.
  |  
- |      stream [required=False] (value=Stream object | dictionary-like):
- |          The stream dictionary-like object that initializes traces as
- |          writable-streams, for use with the real-time streaming API. Learn
- |          more here: https://plot.ly/python/streaming/
+ |      stream [required=False] (value=Stream object | dictionary-like object):
+ |          Links a dictionary-like object that initializes this trace as a
+ |          writable-stream, for use with the streaming API.
  |  
  |          For more, run `help(plotly.graph_objs.Stream)`
  |  
- |      visible [required=False] (value=boolean: True | False):
- |          Toggles whether or not this object will actually be visible in the
- |          rendered figure.
+ |      visible [required=False] (value=a boolean: True | False):
+ |          Toggles whether or not this object will be visible on the rendered
+ |          figure.
  |  
- |      type [required=False] (value=histogram2dcontour):
- |          Plotly identifier for this data's trace type.  This defines how this
- |          data dictionary will be handled.  For example, 'scatter' type
- |          expects  x and y data-arrays corresponding to (x, y) coordinates
- |          whereas a 'histogram' only requires a single x or y array  and a
- |          'heatmap' type requires a z matrix.
+ |      xsrc [required=True] (value=a string equal to the unique identifier of a
+ |      plotly grid column) (streamable):
+ |          Sets the data sample to be binned on the x-axis and whose
+ |          distribution (computed by Plotly) will correspond to the
+ |          x-coordinates of this 2D histogram trace.
+ |  
+ |      ysrc [required=True] (value=a string equal to the unique identifier of a
+ |      plotly grid column) (streamable):
+ |          Sets the data sample to be binned on the y-axis and whose
+ |          distribution (computed by Plotly) will correspond to the
+ |          y-coordinates of this 2D histogram trace.
+ |  
+ |      type [required=False] (value='histogram2dcontour'):
+ |          Plotly identifier for this data's trace type.
  |  
  |  Method resolution order:
  |      Histogram2dContour
@@ -7061,20 +7179,21 @@ class Histogram2dContour(PlotlyTrace)
  |  to_string(self, level=0, indent=4, eol='\n', pretty=True, max_chars=80)
  |      Returns a formatted string showing graph_obj constructors.
  |      
- |              Example:
+ |      Example:
  |      
- |                  print obj.to_string()
+ |          print(obj.to_string())
  |      
- |              Keyword arguments:
- |              level (default = 0) -- set number of indentations to start with
- |              indent (default = 4) -- set indentation amount
- |              eol (default = '
- |      ') -- set end of line character(s)
- |              pretty (default = True) -- curtail long list output with a '...'
- |              max_chars (default = 80) -- set max characters per line
+ |      Keyword arguments:
+ |      level (default = 0) -- set number of indentations to start with
+ |      indent (default = 4) -- set indentation amount
+ |      eol (default = '\n') -- set end of line character(s)
+ |      pretty (default = True) -- curtail long list output with a '...'
+ |      max_chars (default = 80) -- set max characters per line
  |  
  |  ----------------------------------------------------------------------
  |  Methods inherited from PlotlyDict:
+ |  
+ |  __setitem__(self, key, value)
  |  
  |  force_clean(self, caller=True)
  |      Attempts to convert to graph_objs and call force_clean() on values.
@@ -7097,7 +7216,7 @@ class Histogram2dContour(PlotlyTrace)
  |      stripping process, though they made be left empty. This is allowable.
  |      
  |      Keys that will be stripped in this process are tagged with
- |      `'type': 'style'` in the INFO dictionary listed in graph_objs_meta.py.
+ |      `'type': 'style'` in graph_objs_meta.json.
  |      
  |      This process first attempts to convert nested collections from dicts
  |      or lists to subclasses of PlotlyList/PlotlyDict. This process forces
@@ -7147,7 +7266,7 @@ class Histogram2dContour(PlotlyTrace)
  |      Recursively check the validity of the keys in a PlotlyDict.
  |      
  |      The valid keys constitute the entries in each object
- |      dictionary in INFO stored in graph_objs_meta.py.
+ |      dictionary in graph_objs_meta.json
  |      
  |      The validation process first requires that all nested collections be
  |      converted to the appropriate subclass of PlotlyDict/PlotlyList. Then,
@@ -7207,9 +7326,6 @@ class Histogram2dContour(PlotlyTrace)
  |  
  |  __repr__(...)
  |      x.__repr__() &lt;==&gt; repr(x)
- |  
- |  __setitem__(...)
- |      x.__setitem__(i, y) &lt;==&gt; x[i]=y
  |  
  |  __sizeof__(...)
  |      D.__sizeof__() -&gt; size of D in memory, in bytes
@@ -7350,9 +7466,9 @@ class Histogram2dContour(PlotlyTrace)
    </div>
    <div class="cell border-box-sizing code_cell rendered">
     <div class="input">
-     <div class="prompt input_prompt" id="in-[60]:">
-      <a class="prompt input_prompt" href="#in-[60]:">
-       In [60]:
+     <div class="prompt input_prompt" id="in-[61]">
+      <a class="prompt input_prompt" href="#in-[61]">
+       In [61]:
       </a>
      </div>
      <div class="inner_cell">
@@ -7401,9 +7517,9 @@ class Histogram2dContour(PlotlyTrace)
    </div>
    <div class="cell border-box-sizing code_cell rendered">
     <div class="input">
-     <div class="prompt input_prompt" id="in-[61]:">
-      <a class="prompt input_prompt" href="#in-[61]:">
-       In [61]:
+     <div class="prompt input_prompt" id="in-[62]">
+      <a class="prompt input_prompt" href="#in-[62]">
+       In [62]:
       </a>
      </div>
      <div class="inner_cell">
@@ -7429,7 +7545,7 @@ class Histogram2dContour(PlotlyTrace)
        </code>
        object. For this plot, color only the contour lines by setting
        <code>
-        'coloring':'lines'
+        'coloring': 'lines'
        </code>
        in
        <code>
@@ -7442,15 +7558,15 @@ class Histogram2dContour(PlotlyTrace)
    </div>
    <div class="cell border-box-sizing code_cell rendered">
     <div class="input">
-     <div class="prompt input_prompt" id="in-[62]:">
-      <a class="prompt input_prompt" href="#in-[62]:">
-       In [62]:
+     <div class="prompt input_prompt" id="in-[70]">
+      <a class="prompt input_prompt" href="#in-[70]">
+       In [70]:
       </a>
      </div>
      <div class="inner_cell">
       <div class="input_area">
        <div class="highlight">
-        <pre><span class="n">cbar_title</span><span class="o">=</span><span class="s">'Number of occurences from Apr 1 to Aug 31'</span>  <span class="c"># colorbar title</span>
+        <pre><span class="n">cbar_title</span> <span class="o">=</span> <span class="s">'Number of occurences from Apr 1 to Aug 31'</span>  <span class="c"># colorbar title</span>
 
 <span class="c"># Make Histogram2dContour object, with no hist. normalization (default)</span>
 <span class="n">trace1</span> <span class="o">=</span> <span class="n">Histogram2dContour</span><span class="p">(</span>
@@ -7463,7 +7579,6 @@ class Histogram2dContour(PlotlyTrace)
         <span class="n">title</span><span class="o">=</span><span class="n">cbar_title</span><span class="p">,</span>   <span class="c"># set colorbar title</span>
         <span class="n">titleside</span><span class="o">=</span><span class="s">'right'</span><span class="p">,</span>  <span class="c"># place title below colorbar</span>
         <span class="n">autotick</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span>     <span class="c"># custom ticks &amp; tick labels</span>
-        <span class="n">dtick</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>            <span class="c"># 1 tick for every number of occurences</span>
         <span class="n">ticks</span><span class="o">=</span><span class="s">''</span>            <span class="c"># no colorbar ticks </span>
     <span class="p">),</span>
     <span class="n">contours</span><span class="o">=</span><span class="n">Contours</span><span class="p">(</span><span class="n">coloring</span><span class="o">=</span><span class="s">'lines'</span><span class="p">),</span>  <span class="c"># (!) color only the lines</span>
@@ -7490,9 +7605,9 @@ class Histogram2dContour(PlotlyTrace)
    </div>
    <div class="cell border-box-sizing code_cell rendered">
     <div class="input">
-     <div class="prompt input_prompt" id="in-[63]:">
-      <a class="prompt input_prompt" href="#in-[63]:">
-       In [63]:
+     <div class="prompt input_prompt" id="in-[71]">
+      <a class="prompt input_prompt" href="#in-[71]">
+       In [71]:
       </a>
      </div>
      <div class="inner_cell">
@@ -7547,9 +7662,9 @@ class Histogram2dContour(PlotlyTrace)
    </div>
    <div class="cell border-box-sizing code_cell rendered">
     <div class="input">
-     <div class="prompt input_prompt" id="in-[64]:">
-      <a class="prompt input_prompt" href="#in-[64]:">
-       In [64]:
+     <div class="prompt input_prompt" id="in-[72]">
+      <a class="prompt input_prompt" href="#in-[72]">
+       In [72]:
       </a>
      </div>
      <div class="inner_cell">
@@ -7571,10 +7686,13 @@ class Histogram2dContour(PlotlyTrace)
     <div class="output_wrapper">
      <div class="output">
       <div class="output_area">
-       <div class="prompt">
+       <div class="prompt output_prompt" id="out[72]">
+        <a class="prompt output_prompt" href="#out[72]">
+         Out[72]:
+        </a>
        </div>
-       <div class="output_html rendered_html output_subarea ">
-        <iframe height="525" id="igraph" scrolling="no" seamless="seamless" src="https://plot.ly/~etpinard/295" style="border:none;" width="100%">
+       <div class="output_html rendered_html output_subarea output_pyout">
+        <iframe height="525" id="igraph" scrolling="no" seamless="seamless" src="https://plot.ly/~etpinard/295.embed" style="border:none;" width="100%">
         </iframe>
        </div>
       </div>
@@ -7633,7 +7751,7 @@ class Histogram2dContour(PlotlyTrace)
     <div class="inner_cell">
      <div class="text_cell_render border-box-sizing rendered_html">
       <div style="float:right; \">
-       <img align="right" src="/static/api_docs/image/user_guide/python/image07.png" style="float:right; margin-left: 5px; margin-top: -10px"/>
+       <img align="right" src="/static/api_docs/image/user_guide/python/image06.png" style="float:right; margin-left: 5px; margin-top: -10px"/>
       </div>
       <h4>
        Got Questions or Feedback?

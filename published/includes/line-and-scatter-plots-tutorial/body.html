@@ -38,11 +38,6 @@
          homepage
         </a>
         <br/>
-        If unfamiliar with Plotly's Python API version 1.0 see
-        <a href="/python/overview">
-         section 0
-        </a>
-        <br/>
         The Github repository is available
         <a href="https://github.com/plotly/python-user-guide" target="_blank">
          here
@@ -108,9 +103,6 @@
     <div class="inner_cell">
      <div class="text_cell_render border-box-sizing rendered_html">
       <p>
-       The User Guide assumes version 1.0 and up of Plotly's Python API.
-      </p>
-      <p>
        Check which version is installed on your machine and please upgrade if needed.
       </p>
      </div>
@@ -118,8 +110,8 @@
    </div>
    <div class="cell border-box-sizing code_cell rendered">
     <div class="input">
-     <div class="prompt input_prompt" id="in-[1]:">
-      <a class="prompt input_prompt" href="#in-[1]:">
+     <div class="prompt input_prompt" id="in-[1]">
+      <a class="prompt input_prompt" href="#in-[1]">
        In [1]:
       </a>
      </div>
@@ -130,7 +122,7 @@
 <span class="kn">import</span> <span class="nn">plotly</span>
 
 <span class="c"># Check plolty version (if not latest, please upgrade)</span>
-<span class="k">print</span> <span class="n">plotly</span><span class="o">.</span><span class="n">__version__</span>
+<span class="n">plotly</span><span class="o">.</span><span class="n">__version__</span>
 </pre>
        </div>
       </div>
@@ -139,12 +131,14 @@
     <div class="output_wrapper">
      <div class="output">
       <div class="output_area">
-       <div class="prompt">
+       <div class="prompt output_prompt" id="out[1]">
+        <a class="prompt output_prompt" href="#out[1]">
+         Out[1]:
+        </a>
        </div>
-       <div class="output_subarea output_stream output_stdout output_text">
+       <div class="output_text output_subarea output_pyout">
         <pre>
-1.2.3
-
+'1.6.6'
 </pre>
        </div>
       </div>
@@ -217,8 +211,8 @@ Additionally, we learn about:
    </div>
    <div class="cell border-box-sizing code_cell rendered">
     <div class="input">
-     <div class="prompt input_prompt" id="in-[2]:">
-      <a class="prompt input_prompt" href="#in-[2]:">
+     <div class="prompt input_prompt" id="in-[2]">
+      <a class="prompt input_prompt" href="#in-[2]">
        In [2]:
       </a>
      </div>
@@ -299,8 +293,8 @@ Additionally, we learn about:
    </div>
    <div class="cell border-box-sizing code_cell rendered">
     <div class="input">
-     <div class="prompt input_prompt" id="in-[3]:">
-      <a class="prompt input_prompt" href="#in-[3]:">
+     <div class="prompt input_prompt" id="in-[3]">
+      <a class="prompt input_prompt" href="#in-[3]">
        In [3]:
       </a>
      </div>
@@ -310,12 +304,11 @@ Additionally, we learn about:
         <pre><span class="c"># Embed Plotly graph in notebook</span>
 <span class="c">#   Quartz is username of the graph's maker,</span>
 <span class="c">#   7 is the graph's unique id number</span>
-<span class="c">#   and adjust the frame's height in pixels (for aesthetics)</span>
-<span class="n">tls</span><span class="o">.</span><span class="n">embed</span><span class="p">(</span><span class="s">'Quartz'</span><span class="p">,</span><span class="s">'7'</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">450</span><span class="p">)</span>
+<span class="n">tls</span><span class="o">.</span><span class="n">embed</span><span class="p">(</span><span class="s">'Quartz'</span><span class="p">,</span> <span class="s">'7'</span><span class="p">)</span>
 
-<span class="c"># Or (in v1.0.30 and up) either of:</span>
-<span class="c">#tls.embed('Quartz', 7, height=450)</span>
-<span class="c">#tls.embed('https://plot.ly/~Quartz/7', height=450)</span>
+<span class="c"># Or any of:</span>
+<span class="c"># tls.embed('Quartz', 7)</span>
+<span class="c"># tls.embed('https://plot.ly/~Quartz/7')</span>
 </pre>
        </div>
       </div>
@@ -324,10 +317,13 @@ Additionally, we learn about:
     <div class="output_wrapper">
      <div class="output">
       <div class="output_area">
-       <div class="prompt">
+       <div class="prompt output_prompt" id="out[3]">
+        <a class="prompt output_prompt" href="#out[3]">
+         Out[3]:
+        </a>
        </div>
-       <div class="output_html rendered_html output_subarea ">
-        <iframe height="450" id="igraph" scrolling="no" seamless="seamless" src="https://plot.ly/~Quartz/7" style="border:none;" width="100%">
+       <div class="output_html rendered_html output_subarea output_pyout">
+        <iframe height="525" id="igraph" scrolling="no" seamless="seamless" src="https://plot.ly/~Quartz/7.embed" style="border:none;" width="100%">
         </iframe>
        </div>
       </div>
@@ -374,8 +370,8 @@ As we will see, Plotly's syntax makes converting a graph from one plot type to a
    </div>
    <div class="cell border-box-sizing code_cell rendered">
     <div class="input">
-     <div class="prompt input_prompt" id="in-[4]:">
-      <a class="prompt input_prompt" href="#in-[4]:">
+     <div class="prompt input_prompt" id="in-[4]">
+      <a class="prompt input_prompt" href="#in-[4]">
        In [4]:
       </a>
      </div>
@@ -385,9 +381,7 @@ As we will see, Plotly's syntax makes converting a graph from one plot type to a
         <pre><span class="c"># Get figure object from Plotly's servers</span>
 <span class="c">#   Quartz is username of the graph's maker,</span>
 <span class="c">#   7 is the graph's unique id number (either a string or an integer)</span>
-<span class="n">Quartz7</span> <span class="o">=</span> <span class="n">py</span><span class="o">.</span><span class="n">get_figure</span><span class="p">(</span><span class="s">'Quartz'</span><span class="p">,</span><span class="s">'7'</span><span class="p">)</span>
-
-<span class="c"># (!) In v1.0.30 and up, you can also send the figure's url, if more convenient</span>
+<span class="n">Quartz7</span> <span class="o">=</span> <span class="n">py</span><span class="o">.</span><span class="n">get_figure</span><span class="p">(</span><span class="s">'Quartz'</span><span class="p">,</span> <span class="s">'7'</span><span class="p">)</span>
 </pre>
        </div>
       </div>
@@ -396,15 +390,15 @@ As we will see, Plotly's syntax makes converting a graph from one plot type to a
    </div>
    <div class="cell border-box-sizing code_cell rendered">
     <div class="input">
-     <div class="prompt input_prompt" id="in-[5]:">
-      <a class="prompt input_prompt" href="#in-[5]:">
+     <div class="prompt input_prompt" id="in-[5]">
+      <a class="prompt input_prompt" href="#in-[5]">
        In [5]:
       </a>
      </div>
      <div class="inner_cell">
       <div class="input_area">
        <div class="highlight">
-        <pre><span class="k">print</span> <span class="n">Quartz7</span><span class="o">.</span><span class="n">to_string</span><span class="p">()</span>   <span class="c"># print in notebook</span>
+        <pre><span class="k">print</span><span class="p">(</span><span class="n">Quartz7</span><span class="o">.</span><span class="n">to_string</span><span class="p">())</span>  <span class="c"># print in notebook</span>
 </pre>
        </div>
       </div>
@@ -420,16 +414,16 @@ As we will see, Plotly's syntax makes converting a graph from one plot type to a
 Figure(
     data=Data([
         Bar(
-            x=[u'2001', u'2002', u'2003', u'2004', u'2005', u'2006', u'2007...],
-            y=[u'1.1', u'1.5', u'2.1', u'2.8', u'3.4', u'4.1', u'5.0', u'5....],
+            x=[u'2001', u'2002', u'2003', u'2004', u'2005', u'2006', u'2..', ],
+            y=[u'1.1', u'1.5', u'2.1', u'2.8', u'3.4', u'4.1', u'5.0', '..'  ],
             name=u'China',
             marker=Marker(
                 color=u'rgb(222, 113, 88)'
             )
         ),
         Bar(
-            x=[u'2001', u'2002', u'2003', u'2004', u'2005', u'2006', u'2007...],
-            y=[u'1.3', u'1.2', u'1.3', u'1.4', u'1.5', u'1.5', u'1.5', u'1....],
+            x=[u'2001', u'2002', u'2003', u'2004', u'2005', u'2006', u'2..', ],
+            y=[u'1.3', u'1.2', u'1.3', u'1.4', u'1.5', u'1.5', u'1.5', '..'  ],
             name=u'U.S.',
             marker=Marker(
                 color=u'rgb(84, 172, 234)'
@@ -459,7 +453,7 @@ Figure(
                 size=0,
                 color=u''
             ),
-            range=[2000.5, 2012.5],
+            range=[2000.5, 2014.1492895382241],
             domain=[0, 1],
             type=u'linear',
             rangemode=u'normal',
@@ -505,7 +499,7 @@ Figure(
             range=[0, 8.1],
             domain=[0, 1],
             type=u'linear',
-            rangemode=u'normal',
+            rangemode=u'nonnegative',
             autorange=False,
             showgrid=True,
             zeroline=False,
@@ -559,7 +553,7 @@ Figure(
                 y=2.4299999999999997,
                 xref=u'x',
                 yref=u'y',
-                text=u'Source: &lt;a href="http://qz.com/187350/six-charts-tha...',
+                text=u'Source: &lt;a href="http://qz.com/187350/six-charts-tha..',
                 showarrow=True,
                 font=Font(
                     family=u'',
@@ -575,6 +569,7 @@ Figure(
                 arrowcolor=u'rgba(0, 0, 0, 0)',
                 ax=446,
                 ay=114.98332977294922,
+                textangle=0,
                 bordercolor=u'',
                 borderwidth=1,
                 borderpad=1,
@@ -587,7 +582,8 @@ Figure(
             r=80,
             b=80,
             t=100,
-            pad=0
+            pad=0,
+            autoexpand=True
         ),
         paper_bgcolor=u'#fff',
         plot_bgcolor=u'#fff',
@@ -598,6 +594,8 @@ Figure(
         bargap=0.1,
         bargroupgap=0.15,
         boxmode=u'overlay',
+        boxgap=0.3,
+        boxgroupgap=0.3,
         hidesources=False
     )
 )
@@ -643,8 +641,8 @@ Figure(
    </div>
    <div class="cell border-box-sizing code_cell rendered">
     <div class="input">
-     <div class="prompt input_prompt" id="in-[6]:">
-      <a class="prompt input_prompt" href="#in-[6]:">
+     <div class="prompt input_prompt" id="in-[6]">
+      <a class="prompt input_prompt" href="#in-[6]">
        In [6]:
       </a>
      </div>
@@ -654,7 +652,7 @@ Figure(
         <pre><span class="c"># Retrieve data from figure object (get a dictionary in return)</span>
 <span class="n">Quartz7_data</span> <span class="o">=</span> <span class="n">Quartz7</span><span class="o">.</span><span class="n">get_data</span><span class="p">()</span>
 
-<span class="k">print</span> <span class="n">Quartz7_data</span>   <span class="c"># show in notebook</span>
+<span class="n">Quartz7_data</span>   <span class="c"># show in notebook</span>
 </pre>
        </div>
       </div>
@@ -663,12 +661,64 @@ Figure(
     <div class="output_wrapper">
      <div class="output">
       <div class="output_area">
-       <div class="prompt">
+       <div class="prompt output_prompt" id="out[6]">
+        <a class="prompt output_prompt" href="#out[6]">
+         Out[6]:
+        </a>
        </div>
-       <div class="output_subarea output_stream output_stdout output_text">
+       <div class="output_text output_subarea output_pyout">
         <pre>
-{'data': [{'y': [u'1.1', u'1.5', u'2.1', u'2.8', u'3.4', u'4.1', u'5.0', u'5.6', u'6.1', u'6.3', u'6.6', u'6.8'], 'name': u'China', 'x': [u'2001', u'2002', u'2003', u'2004', u'2005', u'2006', u'2007', u'2008', u'2009', u'2010', u'2011', u'2012']}, {'y': [u'1.3', u'1.2', u'1.3', u'1.4', u'1.5', u'1.5', u'1.5', u'1.6', u'1.6', u'1.7', u'1.7', u'1.8'], 'name': u'U.S.', 'x': [u'2001', u'2002', u'2003', u'2004', u'2005', u'2006', u'2007', u'2008', u'2009', u'2010', u'2011', u'2012']}], 'layout': [{}]}
-
+{'data': [{'name': u'China',
+   'x': [u'2001',
+    u'2002',
+    u'2003',
+    u'2004',
+    u'2005',
+    u'2006',
+    u'2007',
+    u'2008',
+    u'2009',
+    u'2010',
+    u'2011',
+    u'2012'],
+   'y': [u'1.1',
+    u'1.5',
+    u'2.1',
+    u'2.8',
+    u'3.4',
+    u'4.1',
+    u'5.0',
+    u'5.6',
+    u'6.1',
+    u'6.3',
+    u'6.6',
+    u'6.8']},
+  {'name': u'U.S.',
+   'x': [u'2001',
+    u'2002',
+    u'2003',
+    u'2004',
+    u'2005',
+    u'2006',
+    u'2007',
+    u'2008',
+    u'2009',
+    u'2010',
+    u'2011',
+    u'2012'],
+   'y': [u'1.3',
+    u'1.2',
+    u'1.3',
+    u'1.4',
+    u'1.5',
+    u'1.5',
+    u'1.5',
+    u'1.6',
+    u'1.6',
+    u'1.7',
+    u'1.7',
+    u'1.8']}],
+ 'layout': [{}]}
 </pre>
        </div>
       </div>
@@ -713,15 +763,15 @@ Figure(
    </div>
    <div class="cell border-box-sizing code_cell rendered">
     <div class="input">
-     <div class="prompt input_prompt" id="in-[7]:">
-      <a class="prompt input_prompt" href="#in-[7]:">
+     <div class="prompt input_prompt" id="in-[7]">
+      <a class="prompt input_prompt" href="#in-[7]">
        In [7]:
       </a>
      </div>
      <div class="inner_cell">
       <div class="input_area">
        <div class="highlight">
-        <pre><span class="n">Quartz7_data</span><span class="p">[</span><span class="s">'data'</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="c"># show dictionary associated with data for China</span>
+        <pre><span class="n">Quartz7_data</span><span class="p">[</span><span class="s">'data'</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>  <span class="c"># show dictionary associated with data for China</span>
 </pre>
        </div>
       </div>
@@ -730,8 +780,8 @@ Figure(
     <div class="output_wrapper">
      <div class="output">
       <div class="output_area">
-       <div class="prompt output_prompt" id="out[7]:">
-        <a class="prompt output_prompt" href="#out[7]:">
+       <div class="prompt output_prompt" id="out[7]">
+        <a class="prompt output_prompt" href="#out[7]">
          Out[7]:
         </a>
        </div>
@@ -770,15 +820,15 @@ Figure(
    </div>
    <div class="cell border-box-sizing code_cell rendered">
     <div class="input">
-     <div class="prompt input_prompt" id="in-[8]:">
-      <a class="prompt input_prompt" href="#in-[8]:">
+     <div class="prompt input_prompt" id="in-[8]">
+      <a class="prompt input_prompt" href="#in-[8]">
        In [8]:
       </a>
      </div>
      <div class="inner_cell">
       <div class="input_area">
        <div class="highlight">
-        <pre><span class="n">Quartz7_data</span><span class="p">[</span><span class="s">'data'</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span> <span class="c"># show dictionary associated with data for the USA</span>
+        <pre><span class="n">Quartz7_data</span><span class="p">[</span><span class="s">'data'</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span>  <span class="c"># show dictionary associated with data for the USA</span>
 </pre>
        </div>
       </div>
@@ -787,8 +837,8 @@ Figure(
     <div class="output_wrapper">
      <div class="output">
       <div class="output_area">
-       <div class="prompt output_prompt" id="out[8]:">
-        <a class="prompt output_prompt" href="#out[8]:">
+       <div class="prompt output_prompt" id="out[8]">
+        <a class="prompt output_prompt" href="#out[8]">
          Out[8]:
         </a>
        </div>
@@ -849,8 +899,8 @@ Figure(
    </div>
    <div class="cell border-box-sizing code_cell rendered">
     <div class="input">
-     <div class="prompt input_prompt" id="in-[9]:">
-      <a class="prompt input_prompt" href="#in-[9]:">
+     <div class="prompt input_prompt" id="in-[9]">
+      <a class="prompt input_prompt" href="#in-[9]">
        In [9]:
       </a>
      </div>
@@ -875,13 +925,19 @@ Figure(
 Help on class Scatter in module plotly.graph_objs.graph_objs:
 
 class Scatter(PlotlyTrace)
- |  A dictionary-like object for representing a scatter plot in plotly.
+ |  A dictionary-like object for representing a scatter trace in plotly.
  |  
- |      Example:
+ |  Example:
  |  
- |          py.plot([Scatter(name='tacters', x=[1,4,2,3], y=[1,6,2,1])])
+ |      &gt;&gt;&gt; py.plot([Scatter(name='tacters', x=[1,4,2,3], y=[1,6,2,1])])
  |  
- |      
+ |  Online examples:
+ |  
+ |      https://plot.ly/python/line-and-scatter/
+ |      https://plot.ly/python/bubble-charts/
+ |      https://plot.ly/python/filled-area-plots/
+ |      https://plot.ly/python/time-series/
+ |  
  |  Quick method reference:
  |  
  |      Scatter.update(changes)
@@ -894,100 +950,105 @@ class Scatter(PlotlyTrace)
  |  
  |  Valid keys:
  |  
- |      x [required= when 'y','r' and 't' are unset] (value=array-like of
+ |      x [required= when 'y','r' and 't' are unset] (value=list or 1d numpy
+ |      array of numbers, strings, datetimes) (streamable):
+ |          Sets the x coordinates of the points of this scatter trace. If 'x'
+ |          is linked to a list or 1d numpy array of strings, then the x
+ |          coordinates are integers, 0, 1, 2, 3, ..., labeled on the x-axis by
+ |          the list or 1d numpy array of strings linked to 'x'.
+ |  
+ |      y [required= when 'x','r' and 't' are unset] (value=list or 1d numpy
+ |      array of numbers, strings, datetimes) (streamable):
+ |          Sets the y coordinates of the points of this scatter trace. If 'y'
+ |          is linked to a list or 1d numpy array of strings, then the y
+ |          coordinates are integers, 0, 1, 2, 3, ..., labeled on the y-axis by
+ |          the list or 1d numpy array of strings linked to 'y'.
+ |  
+ |      r [required= when making a Polar Chart] (value=list or 1d numpy array of
+ |      numbers) (streamable):
+ |          For Polar charts only. Sets the radial coordinates of the points in
+ |          this polar scatter trace about the origin.
+ |  
+ |      t [required= when making a Polar Chart] (value=list or 1d numpy array of
  |      numbers, strings, datetimes) (streamable):
- |          The x coordinates of the points of this scatter trace. If 'x' is
- |          linked to an list or array of strings, then the x coordinates are
- |          integers [0,1,2,3, ...] labeled on the x-axis by the list or array
- |          of strings linked to 'x'.
- |  
- |      y [required= when 'x','r' and 't' are unset] (value=array-like of
- |      numbers, strings, datetimes) (streamable):
- |          The y coordinates of the points of this scatter trace. If 'y' is
- |          linked to an list or array of strings, then the y coordinates are
- |          integers [0,1,2,3, ...] labeled on the y-axis by the list or array
- |          of strings linked to 'y'.
- |  
- |      r [required= when making a Polar Chart] (value=array-like of numbers)
- |      (streamable):
- |          For Polar charts only. The radial coordinates of the points in this
- |          polar scatter trace about the origin.
- |  
- |      t [required= when making a Polar Chart] (value=array-like of numbers,
- |      strings, datetimes) (streamable):
- |          For Polar charts only. The angular coordinates of the points in this
- |          polar scatter trace. By default, the angular coordinates are in
+ |          For Polar charts only. Sets the angular coordinates of the points in
+ |          this polar scatter trace. By default, the angular coordinates are in
  |          degrees (0 to 360) where the angles are measured clockwise about the
  |          right-hand side of the origin. To change this behavior, modify
- |          'range' in AngularAxis or/and 'direction' in Layout. If 't' is
- |          linked to an array-like of strings, then the angular coordinates are
- |          [0, 360\N, 2*360/N, ...] where N is the number of coordinates given
- |          labeled by the array-like of strings linked to 't'.
+ |          'range' in 'angularaxis' or/and 'direction' in 'layout'. If 't' is
+ |          linked to a list or 1d numpy array of strings, then the angular
+ |          coordinates are 0, 360\N, 2*360/N, ... where N is the number of
+ |          coordinates given labeled by the list or 1d numpy array of strings
+ |          linked to 't'.
  |  
  |      mode [required=False] (value='lines' | 'markers' | 'text' |
  |      'lines+markers' | 'lines+text' | 'markers+text' | 'lines+markers+text'):
- |          Plotting mode (or style) for the scatter plot. If the mode includes
- |          'text' then the 'text' will appear at the (x,y) points, otherwise it
- |          will appear on hover.
+ |          Plotting mode for this scatter trace. If the mode includes 'text'
+ |          then the 'text' will appear at the (x,y) points, otherwise it will
+ |          appear on hover.
  |  
- |      name [required=False] (value=string):
+ |      name [required=False] (value=a string):
  |          The label associated with this trace. This name will appear in the
  |          legend, on hover and in the column header in the online spreadsheet.
  |  
- |      text [required=False] (value=array-like of strings) (streamable):
- |          The text elements associated with each (x,y) pair in this scatter
- |          trace. If the scatter 'mode' does not include 'text' then text
- |          elements will appear on hover only. In contrast, if 'text' is
- |          included in 'mode', the entries in 'text' will be rendered on the
- |          plot at the locations specified in part by their corresponding (x,y)
- |          coordinate pair and the 'textposition' key.
- |  
- |      error_y [required=False] (value=ErrorY object | dictionary-like)
+ |      text [required=False] (value=list or 1d numpy array of strings)
  |      (streamable):
- |          A dictionary-like object describing the vetical error bars (i.e.
- |          along the y-axis) that can be drawn from the (x, y) coordinates.
+ |          The text elements associated with each (x,y) pair in this scatter
+ |          trace. If the scatter 'mode' does not include 'text' then elements
+ |          linked to 'text' will appear on hover only. In contrast, if 'text'
+ |          is included in 'mode', the elements in 'text' will be rendered on
+ |          the plot at the locations specified in part by their corresponding
+ |          (x,y) coordinate pair and the 'textposition' key.
+ |  
+ |      error_y [required=False] (value=ErrorY object | dictionary-like object)
+ |      (streamable):
+ |          Links a dictionary-like object describing the vertical error bars
+ |          (i.e. along the y-axis) that can be drawn from the (x,y) coordinates
+ |          of this scatter trace.
  |  
  |          For more, run `help(plotly.graph_objs.ErrorY)`
  |  
- |      error_x [required=False] (value=ErrorX object | dictionary-like)
+ |      error_x [required=False] (value=ErrorX object | dictionary-like object)
  |      (streamable):
- |          A dictionary-like object describing the horizontal error bars (i.e.
- |          along the x-axis) that can be drawn from the (x, y) coordinates.
+ |          Links a dictionary-like object describing the horizontal error bars
+ |          (i.e. along the x-axis) that can be drawn from the (x,y) coordinates
+ |          of this scatter trace.
  |  
  |          For more, run `help(plotly.graph_objs.ErrorX)`
  |  
- |      marker [required=False] (value=Marker object | dictionary-like)
+ |      marker [required=False] (value=Marker object | dictionary-like object)
  |      (streamable):
- |          A dictionary-like object containing marker style parameters for this
- |          scatter trace. Has an effect only if 'mode' contains 'markers'.
+ |          Links a dictionary-like object containing marker style parameters
+ |          for this scatter trace. Has an effect only if 'mode' contains
+ |          'markers'.
  |  
  |          For more, run `help(plotly.graph_objs.Marker)`
  |  
- |      line [required=False] (value=Line object | dictionary-like)
+ |      line [required=False] (value=Line object | dictionary-like object)
  |      (streamable):
- |          A dictionary-like object containing line style parameters for this
+ |          Links a dictionary-like object containing line parameters for this
  |          scatter trace. Has an effect only if 'mode' contains 'lines'.
  |  
  |          For more, run `help(plotly.graph_objs.Line)`
  |  
  |      textposition [required=False] (value='top left' | 'top' (or 'top
  |      center')| 'top right' | 'left' (or 'middle left') | '' (or 'middle
- |      center') |'right' (or 'middle right') |'bottom left' | 'bottom' (or
- |      'bottom center') |'bottom right'):
+ |      center') | 'right' (or 'middle right') | 'bottom left' | 'bottom' (or
+ |      'bottom center') | 'bottom right'):
  |          Sets the position of the text elements in the 'text' key with
  |          respect to the data points. By default, the text elements are
  |          plotted directly at the (x,y) coordinates.
  |  
- |      textfont [required=False] (value=Font object | dictionary-like):
- |          A dictionary-like object describing the font style of this scatter
- |          trace's text elements. Has only an effect if 'mode' is set and
- |          includes 'text'.
+ |      textfont [required=False] (value=Font object | dictionary-like object):
+ |          Links a dictionary-like object describing the font style of this
+ |          scatter trace's text elements. Has only an effect if 'mode' is set
+ |          and includes 'text'.
  |  
  |          For more, run `help(plotly.graph_objs.Font)`
  |  
- |      connectgaps [required=False] (value=boolean: True | False):
- |          Toggle whether or not missing data points (i.e. '' or NaNs) linked
- |          to 'x' and/or 'y', are added in by Plotly using linear
+ |      connectgaps [required=False] (value=a boolean: True | False):
+ |          Toggle whether or not missing data points (i.e. '' or numpy.nan)
+ |          linked to 'x' and/or 'y', are added in by Plotly using linear
  |          interpolation.
  |  
  |      fill [required=False] (value='none' | 'tozeroy' | 'tonexty' | 'tozerox'
@@ -997,13 +1058,13 @@ class Scatter(PlotlyTrace)
  |          shape of the line color (or of the marker color if 'mode' does not
  |          contains 'lines').
  |  
- |      fillcolor [required=False] (value=string describing color):
+ |      fillcolor [required=False] (value=a string describing color):
  |          Sets the color that will appear in the specified fill area (set in
  |          'fill'). Has no effect if 'fill' is set to 'none'.
  |  
  |          Examples:
- |              [u"'green'", u"'rgb(0, 255, 0)'", u"'rgba(0, 255, 0, 0.3)'",
- |              u"'hsl(120,100%,50%)'", u"'hsla(120,100%,50%,0.3)'"]
+ |              'green' | 'rgb(0, 255, 0)' | 'rgba(0, 255, 0, 0.3)' |
+ |              'hsl(120,100%,50%)' | 'hsla(120,100%,50%,0.3)' | '#434F1D'
  |  
  |      opacity [required=False] (value=number: x in [0, 1]):
  |          Sets the opacity, or transparency, of the entire object, also known
@@ -1013,37 +1074,46 @@ class Scatter(PlotlyTrace)
  |      xaxis [required=False] (value='x1' | 'x2' | 'x3' | etc.):
  |          This key determines which x-axis the x-coordinates of this trace
  |          will reference in the figure.  Values 'x1' and 'x' reference to
- |          layout['xaxis'], 'x2' references layout['xaxis2'], and so on. Note
- |          that 'x1' will always refer to layout['xaxis'] or layout['xaxis1'],
- |          they are the same.
+ |          'xaxis' in 'layout', 'x2' references to 'xaxis2' in 'layout', and so
+ |          on. Note that 'x1' will always refer to 'xaxis' or 'xaxis1' in
+ |          'layout', they are the same.
  |  
  |      yaxis [required=False] (value='y1' | 'y2' | 'y3' | etc.):
  |          This key determines which y-axis the y-coordinates of this trace
  |          will reference in the figure.  Values 'y1' and 'y' reference to
- |          layout['yaxis'], 'y2' references layout['yaxis2'], and so on. Note
- |          that 'y1' will always refer to layout['yaxis'] or layout['yaxis1'],
- |          they are the same.
+ |          'yaxis' in 'layout', 'y2' references to 'yaxis2' in 'layout', and so
+ |          on. Note that 'y1' will always refer to 'yaxis' or 'yaxis1' in
+ |          'layout', they are the same.
  |  
- |      showlegend [required=False] (value=boolean: True | False):
+ |      showlegend [required=False] (value=a boolean: True | False):
  |          Toggle whether or not this trace will be labeled in the legend.
  |  
- |      stream [required=False] (value=Stream object | dictionary-like):
- |          The stream dictionary-like object that initializes traces as
- |          writable-streams, for use with the real-time streaming API. Learn
- |          more here: https://plot.ly/python/streaming/
+ |      stream [required=False] (value=Stream object | dictionary-like object):
+ |          Links a dictionary-like object that initializes this trace as a
+ |          writable-stream, for use with the streaming API.
  |  
  |          For more, run `help(plotly.graph_objs.Stream)`
  |  
- |      visible [required=False] (value=boolean: True | False):
- |          Toggles whether or not this object will actually be visible in the
- |          rendered figure.
+ |      visible [required=False] (value=a boolean: True | False):
+ |          Toggles whether or not this object will be visible on the rendered
+ |          figure.
  |  
- |      type [required=False] (value=scatter):
- |          Plotly identifier for this data's trace type.  This defines how this
- |          data dictionary will be handled.  For example, 'scatter' type
- |          expects  x and y data-arrays corresponding to (x, y) coordinates
- |          whereas a 'histogram' only requires a single x or y array  and a
- |          'heatmap' type requires a z matrix.
+ |      xsrc [required= when 'y','r' and 't' are unset] (value=a string equal to
+ |      the unique identifier of a plotly grid column) (streamable):
+ |          Sets the x coordinates of the points of this scatter trace. If 'x'
+ |          is linked to a list or 1d numpy array of strings, then the x
+ |          coordinates are integers, 0, 1, 2, 3, ..., labeled on the x-axis by
+ |          the list or 1d numpy array of strings linked to 'x'.
+ |  
+ |      ysrc [required= when 'x','r' and 't' are unset] (value=a string equal to
+ |      the unique identifier of a plotly grid column) (streamable):
+ |          Sets the y coordinates of the points of this scatter trace. If 'y'
+ |          is linked to a list or 1d numpy array of strings, then the y
+ |          coordinates are integers, 0, 1, 2, 3, ..., labeled on the y-axis by
+ |          the list or 1d numpy array of strings linked to 'y'.
+ |  
+ |      type [required=False] (value='scatter'):
+ |          Plotly identifier for this data's trace type.
  |  
  |  Method resolution order:
  |      Scatter
@@ -1059,20 +1129,21 @@ class Scatter(PlotlyTrace)
  |  to_string(self, level=0, indent=4, eol='\n', pretty=True, max_chars=80)
  |      Returns a formatted string showing graph_obj constructors.
  |      
- |              Example:
+ |      Example:
  |      
- |                  print obj.to_string()
+ |          print(obj.to_string())
  |      
- |              Keyword arguments:
- |              level (default = 0) -- set number of indentations to start with
- |              indent (default = 4) -- set indentation amount
- |              eol (default = '
- |      ') -- set end of line character(s)
- |              pretty (default = True) -- curtail long list output with a '...'
- |              max_chars (default = 80) -- set max characters per line
+ |      Keyword arguments:
+ |      level (default = 0) -- set number of indentations to start with
+ |      indent (default = 4) -- set indentation amount
+ |      eol (default = '\n') -- set end of line character(s)
+ |      pretty (default = True) -- curtail long list output with a '...'
+ |      max_chars (default = 80) -- set max characters per line
  |  
  |  ----------------------------------------------------------------------
  |  Methods inherited from PlotlyDict:
+ |  
+ |  __setitem__(self, key, value)
  |  
  |  force_clean(self, caller=True)
  |      Attempts to convert to graph_objs and call force_clean() on values.
@@ -1095,7 +1166,7 @@ class Scatter(PlotlyTrace)
  |      stripping process, though they made be left empty. This is allowable.
  |      
  |      Keys that will be stripped in this process are tagged with
- |      `'type': 'style'` in the INFO dictionary listed in graph_objs_meta.py.
+ |      `'type': 'style'` in graph_objs_meta.json.
  |      
  |      This process first attempts to convert nested collections from dicts
  |      or lists to subclasses of PlotlyList/PlotlyDict. This process forces
@@ -1145,7 +1216,7 @@ class Scatter(PlotlyTrace)
  |      Recursively check the validity of the keys in a PlotlyDict.
  |      
  |      The valid keys constitute the entries in each object
- |      dictionary in INFO stored in graph_objs_meta.py.
+ |      dictionary in graph_objs_meta.json
  |      
  |      The validation process first requires that all nested collections be
  |      converted to the appropriate subclass of PlotlyDict/PlotlyList. Then,
@@ -1205,9 +1276,6 @@ class Scatter(PlotlyTrace)
  |  
  |  __repr__(...)
  |      x.__repr__() &lt;==&gt; repr(x)
- |  
- |  __setitem__(...)
- |      x.__setitem__(i, y) &lt;==&gt; x[i]=y
  |  
  |  __sizeof__(...)
  |      D.__sizeof__() -&gt; size of D in memory, in bytes
@@ -1390,8 +1458,8 @@ class Scatter(PlotlyTrace)
    </div>
    <div class="cell border-box-sizing code_cell rendered">
     <div class="input">
-     <div class="prompt input_prompt" id="in-[10]:">
-      <a class="prompt input_prompt" href="#in-[10]:">
+     <div class="prompt input_prompt" id="in-[10]">
+      <a class="prompt input_prompt" href="#in-[10]">
        In [10]:
       </a>
      </div>
@@ -1411,15 +1479,15 @@ class Scatter(PlotlyTrace)
    </div>
    <div class="cell border-box-sizing code_cell rendered">
     <div class="input">
-     <div class="prompt input_prompt" id="in-[11]:">
-      <a class="prompt input_prompt" href="#in-[11]:">
+     <div class="prompt input_prompt" id="in-[11]">
+      <a class="prompt input_prompt" href="#in-[11]">
        In [11]:
       </a>
      </div>
      <div class="inner_cell">
       <div class="input_area">
        <div class="highlight">
-        <pre><span class="k">print</span> <span class="n">trace_china</span><span class="o">.</span><span class="n">to_string</span><span class="p">()</span>  <span class="c"># show scatter trace object</span>
+        <pre><span class="k">print</span><span class="p">(</span><span class="n">trace_china</span><span class="o">.</span><span class="n">to_string</span><span class="p">())</span>
 </pre>
        </div>
       </div>
@@ -1433,8 +1501,8 @@ class Scatter(PlotlyTrace)
        <div class="output_subarea output_stream output_stdout output_text">
         <pre>
 Scatter(
-    x=[u'2001', u'2002', u'2003', u'2004', u'2005', u'2006', u'2007', u'200...],
-    y=[u'1.1', u'1.5', u'2.1', u'2.8', u'3.4', u'4.1', u'5.0', u'5.6', u'6....],
+    x=[u'2001', u'2002', u'2003', u'2004', u'2005', u'2006', u'2007', u'..', ],
+    y=[u'1.1', u'1.5', u'2.1', u'2.8', u'3.4', u'4.1', u'5.0', u'5.6', '..'  ],
     mode='markers+lines',
     name=u'China'
 )
@@ -1458,8 +1526,8 @@ Scatter(
    </div>
    <div class="cell border-box-sizing code_cell rendered">
     <div class="input">
-     <div class="prompt input_prompt" id="in-[12]:">
-      <a class="prompt input_prompt" href="#in-[12]:">
+     <div class="prompt input_prompt" id="in-[12]">
+      <a class="prompt input_prompt" href="#in-[12]">
        In [12]:
       </a>
      </div>
@@ -1482,15 +1550,15 @@ Scatter(
    </div>
    <div class="cell border-box-sizing code_cell rendered">
     <div class="input">
-     <div class="prompt input_prompt" id="in-[13]:">
-      <a class="prompt input_prompt" href="#in-[13]:">
+     <div class="prompt input_prompt" id="in-[13]">
+      <a class="prompt input_prompt" href="#in-[13]">
        In [13]:
       </a>
      </div>
      <div class="inner_cell">
       <div class="input_area">
        <div class="highlight">
-        <pre><span class="k">print</span> <span class="n">trace_usa</span><span class="o">.</span><span class="n">to_string</span><span class="p">()</span>   <span class="c"># show scatter trace object</span>
+        <pre><span class="k">print</span><span class="p">(</span><span class="n">trace_usa</span><span class="o">.</span><span class="n">to_string</span><span class="p">())</span>
 </pre>
        </div>
       </div>
@@ -1504,8 +1572,8 @@ Scatter(
        <div class="output_subarea output_stream output_stdout output_text">
         <pre>
 Scatter(
-    x=[u'2001', u'2002', u'2003', u'2004', u'2005', u'2006', u'2007', u'200...],
-    y=[u'1.3', u'1.2', u'1.3', u'1.4', u'1.5', u'1.5', u'1.5', u'1.6', u'1....],
+    x=[u'2001', u'2002', u'2003', u'2004', u'2005', u'2006', u'2007', u'..', ],
+    y=[u'1.3', u'1.2', u'1.3', u'1.4', u'1.5', u'1.5', u'1.5', u'1.6', '..'  ],
     mode='markers',
     name=u'U.S.',
     marker=Marker(
@@ -1532,8 +1600,8 @@ Scatter(
    </div>
    <div class="cell border-box-sizing code_cell rendered">
     <div class="input">
-     <div class="prompt input_prompt" id="in-[14]:">
-      <a class="prompt input_prompt" href="#in-[14]:">
+     <div class="prompt input_prompt" id="in-[14]">
+      <a class="prompt input_prompt" href="#in-[14]">
        In [14]:
       </a>
      </div>
@@ -1561,8 +1629,8 @@ Scatter(
    </div>
    <div class="cell border-box-sizing code_cell rendered">
     <div class="input">
-     <div class="prompt input_prompt" id="in-[15]:">
-      <a class="prompt input_prompt" href="#in-[15]:">
+     <div class="prompt input_prompt" id="in-[15]">
+      <a class="prompt input_prompt" href="#in-[15]">
        In [15]:
       </a>
      </div>
@@ -1594,8 +1662,8 @@ Scatter(
    </div>
    <div class="cell border-box-sizing code_cell rendered">
     <div class="input">
-     <div class="prompt input_prompt" id="in-[16]:">
-      <a class="prompt input_prompt" href="#in-[16]:">
+     <div class="prompt input_prompt" id="in-[16]">
+      <a class="prompt input_prompt" href="#in-[16]">
        In [16]:
       </a>
      </div>
@@ -1631,8 +1699,8 @@ Scatter(
    </div>
    <div class="cell border-box-sizing code_cell rendered">
     <div class="input">
-     <div class="prompt input_prompt" id="in-[17]:">
-      <a class="prompt input_prompt" href="#in-[17]:">
+     <div class="prompt input_prompt" id="in-[17]">
+      <a class="prompt input_prompt" href="#in-[17]">
        In [17]:
       </a>
      </div>
@@ -1649,10 +1717,13 @@ Scatter(
     <div class="output_wrapper">
      <div class="output">
       <div class="output_area">
-       <div class="prompt">
+       <div class="prompt output_prompt" id="out[17]">
+        <a class="prompt output_prompt" href="#out[17]">
+         Out[17]:
+        </a>
        </div>
-       <div class="output_html rendered_html output_subarea ">
-        <iframe height="525" id="igraph" scrolling="no" seamless="seamless" src="https://plot.ly/~etpinard/299" style="border:none;" width="100%">
+       <div class="output_html rendered_html output_subarea output_pyout">
+        <iframe height="525" id="igraph" scrolling="no" seamless="seamless" src="https://plot.ly/~etpinard/299.embed" style="border:none;" width="100%">
         </iframe>
        </div>
       </div>
@@ -1737,18 +1808,6 @@ Scatter(
        <code>
         'extend'
        </code>
-       . We cover
-       <code>
-        'append'
-       </code>
-       and
-       <code>
-        'extend'
-       </code>
-       later in
-       <strong>
-        &lt;--&gt;
-       </strong>
        . For now, take note that by default, if
        <code>
         filename
@@ -1781,7 +1840,7 @@ Scatter(
        </code>
        . Alternatively,
       </p>
-      <pre><code>&gt;&gt;&gt; py.plot(fig,filename='s1_grad-china-usa',fileopt='new')
+      <pre><code>&gt;&gt;&gt; py.plot(fig,filename='s1_grad-china-usa', fileopt='new')
 </code></pre>
       <p>
        creates a new file named
@@ -1795,7 +1854,7 @@ Scatter(
        already exist on your Plotly account. Your workspace would look something like:
       </p>
       <p>
-       <img src="/static/api_docs/image/user_guide/python/image10.png" style="padding-bottom:1em;"/>
+       <img src="/static/api_docs/image/user_guide/python/image09.png" style="padding-bottom:1em;"/>
       </p>
       <p>
        If
@@ -1869,7 +1928,7 @@ Scatter(
        </code>
        call, for example:
       </p>
-      <pre><code>&gt;&gt;&gt; py.plot(fig,filename='private-fig',world_readable=False)
+      <pre><code>&gt;&gt;&gt; py.plot(fig, filename='private-fig', world_readable=False)
 </code></pre>
      </div>
     </div>
@@ -1909,7 +1968,7 @@ Scatter(
        </li>
       </ol>
       <p>
-       <img src="/static/api_docs/image/user_guide/python/image11.png"/>
+       <img src="/static/api_docs/image/user_guide/python/image10.png"/>
       </p>
      </div>
     </div>
@@ -1942,8 +2001,8 @@ Scatter(
    </div>
    <div class="cell border-box-sizing code_cell rendered">
     <div class="input">
-     <div class="prompt input_prompt" id="in-[18]:">
-      <a class="prompt input_prompt" href="#in-[18]:">
+     <div class="prompt input_prompt" id="in-[18]">
+      <a class="prompt input_prompt" href="#in-[18]">
        In [18]:
       </a>
      </div>
@@ -2029,8 +2088,8 @@ class image
    </div>
    <div class="cell border-box-sizing code_cell rendered">
     <div class="input">
-     <div class="prompt input_prompt" id="in-[19]:">
-      <a class="prompt input_prompt" href="#in-[19]:">
+     <div class="prompt input_prompt" id="in-[19]">
+      <a class="prompt input_prompt" href="#in-[19]">
        In [19]:
       </a>
      </div>
@@ -2047,8 +2106,8 @@ class image
     <div class="output_wrapper">
      <div class="output">
       <div class="output_area">
-       <div class="prompt output_prompt" id="out[19]:">
-        <a class="prompt output_prompt" href="#out[19]:">
+       <div class="prompt output_prompt" id="out[19]">
+        <a class="prompt output_prompt" href="#out[19]">
          Out[19]:
         </a>
        </div>
@@ -2087,15 +2146,18 @@ class image
    </div>
    <div class="cell border-box-sizing code_cell rendered">
     <div class="input">
-     <div class="prompt input_prompt" id="in-[20]:">
-      <a class="prompt input_prompt" href="#in-[20]:">
+     <div class="prompt input_prompt" id="in-[20]">
+      <a class="prompt input_prompt" href="#in-[20]">
        In [20]:
       </a>
      </div>
      <div class="inner_cell">
       <div class="input_area">
        <div class="highlight">
-        <pre><span class="n">tls</span><span class="o">.</span><span class="n">embed</span><span class="p">(</span><span class="s">'BrianVancil'</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">1110</span><span class="p">)</span>
+        <pre><span class="n">tls</span><span class="o">.</span><span class="n">embed</span><span class="p">(</span><span class="s">'BrianVancil'</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">1100</span><span class="p">)</span>
+
+<span class="c"># (-) You can adjust the width the notebook cell with</span>
+<span class="c">#     'width' keyword argument.</span>
 </pre>
        </div>
       </div>
@@ -2104,10 +2166,13 @@ class image
     <div class="output_wrapper">
      <div class="output">
       <div class="output_area">
-       <div class="prompt">
+       <div class="prompt output_prompt" id="out[20]">
+        <a class="prompt output_prompt" href="#out[20]">
+         Out[20]:
+        </a>
        </div>
-       <div class="output_html rendered_html output_subarea ">
-        <iframe height="525" id="igraph" scrolling="no" seamless="seamless" src="https://plot.ly/~BrianVancil/8/1085/500" style="border:none;" width="1110">
+       <div class="output_html rendered_html output_subarea output_pyout">
+        <iframe height="525" id="igraph" scrolling="no" seamless="seamless" src="https://plot.ly/~BrianVancil/8.embed?width=1075&amp;height=500" style="border:none;" width="1100">
         </iframe>
        </div>
       </div>
@@ -2137,8 +2202,8 @@ class image
    </div>
    <div class="cell border-box-sizing code_cell rendered">
     <div class="input">
-     <div class="prompt input_prompt" id="in-[21]:">
-      <a class="prompt input_prompt" href="#in-[21]:">
+     <div class="prompt input_prompt" id="in-[21]">
+      <a class="prompt input_prompt" href="#in-[21]">
        In [21]:
       </a>
      </div>
@@ -2155,8 +2220,8 @@ class image
     <div class="output_wrapper">
      <div class="output">
       <div class="output_area">
-       <div class="prompt output_prompt" id="out[21]:">
-        <a class="prompt output_prompt" href="#out[21]:">
+       <div class="prompt output_prompt" id="out[21]">
+        <a class="prompt output_prompt" href="#out[21]">
          Out[21]:
         </a>
        </div>
@@ -2174,6 +2239,13 @@ class image
     <div class="inner_cell">
      <div class="text_cell_render border-box-sizing rendered_html">
       <p>
+       Note that some the UI elements in the above video are out-of-date; however, the graph editing would be done the same way on the current
+       <a href="https://plot.ly/plot">
+        plot.ly/plot
+       </a>
+       .
+      </p>
+      <p>
        The resulting figure is:
       </p>
      </div>
@@ -2181,15 +2253,15 @@ class image
    </div>
    <div class="cell border-box-sizing code_cell rendered">
     <div class="input">
-     <div class="prompt input_prompt" id="in-[22]:">
-      <a class="prompt input_prompt" href="#in-[22]:">
+     <div class="prompt input_prompt" id="in-[22]">
+      <a class="prompt input_prompt" href="#in-[22]">
        In [22]:
       </a>
      </div>
      <div class="inner_cell">
       <div class="input_area">
        <div class="highlight">
-        <pre><span class="n">tls</span><span class="o">.</span><span class="n">embed</span><span class="p">(</span><span class="s">"https://plot.ly/~etpinard/329/"</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">1110</span><span class="p">)</span>
+        <pre><span class="n">tls</span><span class="o">.</span><span class="n">embed</span><span class="p">(</span><span class="s">"https://plot.ly/~etpinard/329/"</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">1100</span><span class="p">)</span>
 </pre>
        </div>
       </div>
@@ -2198,10 +2270,13 @@ class image
     <div class="output_wrapper">
      <div class="output">
       <div class="output_area">
-       <div class="prompt">
+       <div class="prompt output_prompt" id="out[22]">
+        <a class="prompt output_prompt" href="#out[22]">
+         Out[22]:
+        </a>
        </div>
-       <div class="output_html rendered_html output_subarea ">
-        <iframe height="525" id="igraph" scrolling="no" seamless="seamless" src="https://plot.ly/~etpinard/329/1085/500" style="border:none;" width="1110">
+       <div class="output_html rendered_html output_subarea output_pyout">
+        <iframe height="525" id="igraph" scrolling="no" seamless="seamless" src="https://plot.ly/~etpinard/329.embed?width=1075&amp;height=500" style="border:none;" width="1100">
         </iframe>
        </div>
       </div>
@@ -2251,8 +2326,8 @@ class image
    </div>
    <div class="cell border-box-sizing code_cell rendered">
     <div class="input">
-     <div class="prompt input_prompt" id="in-[23]:">
-      <a class="prompt input_prompt" href="#in-[23]:">
+     <div class="prompt input_prompt" id="in-[23]">
+      <a class="prompt input_prompt" href="#in-[23]">
        In [23]:
       </a>
      </div>
@@ -2298,15 +2373,15 @@ class image
    </div>
    <div class="cell border-box-sizing code_cell rendered">
     <div class="input">
-     <div class="prompt input_prompt" id="in-[24]:">
-      <a class="prompt input_prompt" href="#in-[24]:">
+     <div class="prompt input_prompt" id="in-[24]">
+      <a class="prompt input_prompt" href="#in-[24]">
        In [24]:
       </a>
      </div>
      <div class="inner_cell">
       <div class="input_area">
        <div class="highlight">
-        <pre><span class="k">print</span> <span class="n">fig</span><span class="p">[</span><span class="s">'data'</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="s">'name'</span><span class="p">]</span>
+        <pre><span class="n">fig</span><span class="p">[</span><span class="s">'data'</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="s">'name'</span><span class="p">]</span>
 </pre>
        </div>
       </div>
@@ -2315,12 +2390,14 @@ class image
     <div class="output_wrapper">
      <div class="output">
       <div class="output_area">
-       <div class="prompt">
+       <div class="prompt output_prompt" id="out[24]">
+        <a class="prompt output_prompt" href="#out[24]">
+         Out[24]:
+        </a>
        </div>
-       <div class="output_subarea output_stream output_stdout output_text">
+       <div class="output_text output_subarea output_pyout">
         <pre>
-&lt;b&gt;Data from Freedman et al.&lt;/b&gt;&lt;br&gt;&lt;em&gt;"FINAL RESULTS FROM THE HUBBLE SPACE TELESCOPE&lt;br&gt;KEY PROJECT TO MEASURE THE HUBBLE CONSTANT"&lt;/em&gt;
-
+u'&lt;b&gt;Data from Freedman et al.&lt;/b&gt;&lt;br&gt;&lt;em&gt;"FINAL RESULTS FROM THE HUBBLE SPACE TELESCOPE&lt;br&gt;KEY PROJECT TO MEASURE THE HUBBLE CONSTANT"&lt;/em&gt;'
 </pre>
        </div>
       </div>
@@ -2329,15 +2406,15 @@ class image
    </div>
    <div class="cell border-box-sizing code_cell rendered">
     <div class="input">
-     <div class="prompt input_prompt" id="in-[25]:">
-      <a class="prompt input_prompt" href="#in-[25]:">
+     <div class="prompt input_prompt" id="in-[25]">
+      <a class="prompt input_prompt" href="#in-[25]">
        In [25]:
       </a>
      </div>
      <div class="inner_cell">
       <div class="input_area">
        <div class="highlight">
-        <pre><span class="k">print</span> <span class="n">fig</span><span class="p">[</span><span class="s">'data'</span><span class="p">][</span><span class="mi">1</span><span class="p">][</span><span class="s">'name'</span><span class="p">]</span>
+        <pre><span class="n">fig</span><span class="p">[</span><span class="s">'data'</span><span class="p">][</span><span class="mi">1</span><span class="p">][</span><span class="s">'name'</span><span class="p">]</span>
 </pre>
        </div>
       </div>
@@ -2346,12 +2423,14 @@ class image
     <div class="output_wrapper">
      <div class="output">
       <div class="output_area">
-       <div class="prompt">
+       <div class="prompt output_prompt" id="out[25]">
+        <a class="prompt output_prompt" href="#out[25]">
+         Out[25]:
+        </a>
        </div>
-       <div class="output_subarea output_stream output_stdout output_text">
+       <div class="output_text output_subarea output_pyout">
         <pre>
-$\text{Linear fit:} \; v = (72.1 \text{km/s/Mpc}) r + 65.7 \text{km/s}$
-
+u'$\\text{Linear fit:} \\; v = (72.1 \\text{km/s/Mpc}) r + 65.7 \\text{km/s}$'
 </pre>
        </div>
       </div>
@@ -2428,17 +2507,15 @@ $\text{Linear fit:} \; v = (72.1 \text{km/s/Mpc}) r + 65.7 \text{km/s}$
    </div>
    <div class="cell border-box-sizing code_cell rendered">
     <div class="input">
-     <div class="prompt input_prompt" id="in-[26]:">
-      <a class="prompt input_prompt" href="#in-[26]:">
+     <div class="prompt input_prompt" id="in-[26]">
+      <a class="prompt input_prompt" href="#in-[26]">
        In [26]:
       </a>
      </div>
      <div class="inner_cell">
       <div class="input_area">
        <div class="highlight">
-        <pre><span class="k">print</span> <span class="n">fig</span><span class="p">[</span><span class="s">'data'</span><span class="p">][</span><span class="mi">1</span><span class="p">][</span><span class="s">'line'</span><span class="p">][</span><span class="s">'color'</span><span class="p">]</span>
-<span class="k">print</span> <span class="n">fig</span><span class="p">[</span><span class="s">'layout'</span><span class="p">][</span><span class="s">'plot_bgcolor'</span><span class="p">]</span>
-<span class="k">print</span> <span class="n">fig</span><span class="p">[</span><span class="s">'layout'</span><span class="p">][</span><span class="s">'xaxis'</span><span class="p">][</span><span class="s">'gridcolor'</span><span class="p">]</span>
+        <pre><span class="n">fig</span><span class="p">[</span><span class="s">'data'</span><span class="p">][</span><span class="mi">1</span><span class="p">][</span><span class="s">'line'</span><span class="p">][</span><span class="s">'color'</span><span class="p">]</span>
 </pre>
        </div>
       </div>
@@ -2447,14 +2524,80 @@ $\text{Linear fit:} \; v = (72.1 \text{km/s/Mpc}) r + 65.7 \text{km/s}$
     <div class="output_wrapper">
      <div class="output">
       <div class="output_area">
-       <div class="prompt">
+       <div class="prompt output_prompt" id="out[26]">
+        <a class="prompt output_prompt" href="#out[26]">
+         Out[26]:
+        </a>
        </div>
-       <div class="output_subarea output_stream output_stdout output_text">
+       <div class="output_text output_subarea output_pyout">
         <pre>
-rgb(204, 65, 37)
-rgb(217, 217, 217)
-rgb(255, 255, 255)
-
+u'rgb(204, 65, 37)'
+</pre>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
+     <div class="prompt input_prompt" id="in-[27]">
+      <a class="prompt input_prompt" href="#in-[27]">
+       In [27]:
+      </a>
+     </div>
+     <div class="inner_cell">
+      <div class="input_area">
+       <div class="highlight">
+        <pre><span class="n">fig</span><span class="p">[</span><span class="s">'layout'</span><span class="p">][</span><span class="s">'plot_bgcolor'</span><span class="p">]</span>
+</pre>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="output_wrapper">
+     <div class="output">
+      <div class="output_area">
+       <div class="prompt output_prompt" id="out[27]">
+        <a class="prompt output_prompt" href="#out[27]">
+         Out[27]:
+        </a>
+       </div>
+       <div class="output_text output_subarea output_pyout">
+        <pre>
+u'rgb(217, 217, 217)'
+</pre>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
+     <div class="prompt input_prompt" id="in-[28]">
+      <a class="prompt input_prompt" href="#in-[28]">
+       In [28]:
+      </a>
+     </div>
+     <div class="inner_cell">
+      <div class="input_area">
+       <div class="highlight">
+        <pre><span class="n">fig</span><span class="p">[</span><span class="s">'layout'</span><span class="p">][</span><span class="s">'xaxis'</span><span class="p">][</span><span class="s">'gridcolor'</span><span class="p">]</span>
+</pre>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="output_wrapper">
+     <div class="output">
+      <div class="output_area">
+       <div class="prompt output_prompt" id="out[28]">
+        <a class="prompt output_prompt" href="#out[28]">
+         Out[28]:
+        </a>
+       </div>
+       <div class="output_text output_subarea output_pyout">
+        <pre>
+u'rgb(255, 255, 255)'
 </pre>
        </div>
       </div>
@@ -2581,15 +2724,15 @@ rgb(255, 255, 255)
    </div>
    <div class="cell border-box-sizing code_cell rendered">
     <div class="input">
-     <div class="prompt input_prompt" id="in-[27]:">
-      <a class="prompt input_prompt" href="#in-[27]:">
-       In [27]:
+     <div class="prompt input_prompt" id="in-[29]">
+      <a class="prompt input_prompt" href="#in-[29]">
+       In [29]:
       </a>
      </div>
      <div class="inner_cell">
       <div class="input_area">
        <div class="highlight">
-        <pre><span class="k">print</span> <span class="n">fig</span><span class="p">[</span><span class="s">'layout'</span><span class="p">][</span><span class="s">'xaxis'</span><span class="p">]</span><span class="o">.</span><span class="n">to_string</span><span class="p">()</span>
+        <pre><span class="k">print</span><span class="p">(</span><span class="n">fig</span><span class="p">[</span><span class="s">'layout'</span><span class="p">][</span><span class="s">'xaxis'</span><span class="p">]</span><span class="o">.</span><span class="n">to_string</span><span class="p">())</span>
 </pre>
        </div>
       </div>
@@ -2654,15 +2797,15 @@ XAxis(
    </div>
    <div class="cell border-box-sizing code_cell rendered">
     <div class="input">
-     <div class="prompt input_prompt" id="in-[28]:">
-      <a class="prompt input_prompt" href="#in-[28]:">
-       In [28]:
+     <div class="prompt input_prompt" id="in-[30]">
+      <a class="prompt input_prompt" href="#in-[30]">
+       In [30]:
       </a>
      </div>
      <div class="inner_cell">
       <div class="input_area">
        <div class="highlight">
-        <pre><span class="k">print</span> <span class="n">fig</span><span class="p">[</span><span class="s">'layout'</span><span class="p">][</span><span class="s">'yaxis'</span><span class="p">]</span><span class="o">.</span><span class="n">to_string</span><span class="p">()</span>
+        <pre><span class="k">print</span><span class="p">(</span><span class="n">fig</span><span class="p">[</span><span class="s">'layout'</span><span class="p">][</span><span class="s">'yaxis'</span><span class="p">]</span><span class="o">.</span><span class="n">to_string</span><span class="p">())</span>
 </pre>
        </div>
       </div>
@@ -2727,15 +2870,15 @@ YAxis(
    </div>
    <div class="cell border-box-sizing code_cell rendered">
     <div class="input">
-     <div class="prompt input_prompt" id="in-[29]:">
-      <a class="prompt input_prompt" href="#in-[29]:">
-       In [29]:
+     <div class="prompt input_prompt" id="in-[31]">
+      <a class="prompt input_prompt" href="#in-[31]">
+       In [31]:
       </a>
      </div>
      <div class="inner_cell">
       <div class="input_area">
        <div class="highlight">
-        <pre><span class="k">print</span> <span class="n">fig</span><span class="p">[</span><span class="s">'layout'</span><span class="p">][</span><span class="s">'legend'</span><span class="p">]</span><span class="o">.</span><span class="n">to_string</span><span class="p">()</span>
+        <pre><span class="k">print</span><span class="p">(</span><span class="n">fig</span><span class="p">[</span><span class="s">'layout'</span><span class="p">][</span><span class="s">'legend'</span><span class="p">]</span><span class="o">.</span><span class="n">to_string</span><span class="p">())</span>
 </pre>
        </div>
       </div>
@@ -2841,17 +2984,15 @@ Legend(
    </div>
    <div class="cell border-box-sizing code_cell rendered">
     <div class="input">
-     <div class="prompt input_prompt" id="in-[30]:">
-      <a class="prompt input_prompt" href="#in-[30]:">
-       In [30]:
+     <div class="prompt input_prompt" id="in-[32]">
+      <a class="prompt input_prompt" href="#in-[32]">
+       In [32]:
       </a>
      </div>
      <div class="inner_cell">
       <div class="input_area">
        <div class="highlight">
-        <pre><span class="k">print</span> <span class="n">fig</span><span class="p">[</span><span class="s">'layout'</span><span class="p">][</span><span class="s">'autosize'</span><span class="p">]</span>
-<span class="k">print</span> <span class="n">fig</span><span class="p">[</span><span class="s">'layout'</span><span class="p">][</span><span class="s">'width'</span><span class="p">]</span>
-<span class="k">print</span> <span class="n">fig</span><span class="p">[</span><span class="s">'layout'</span><span class="p">][</span><span class="s">'height'</span><span class="p">]</span>
+        <pre><span class="n">fig</span><span class="p">[</span><span class="s">'layout'</span><span class="p">][</span><span class="s">'autosize'</span><span class="p">]</span>
 </pre>
        </div>
       </div>
@@ -2860,14 +3001,80 @@ Legend(
     <div class="output_wrapper">
      <div class="output">
       <div class="output_area">
-       <div class="prompt">
+       <div class="prompt output_prompt" id="out[32]">
+        <a class="prompt output_prompt" href="#out[32]">
+         Out[32]:
+        </a>
        </div>
-       <div class="output_subarea output_stream output_stdout output_text">
+       <div class="output_text output_subarea output_pyout">
         <pre>
 False
+</pre>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
+     <div class="prompt input_prompt" id="in-[33]">
+      <a class="prompt input_prompt" href="#in-[33]">
+       In [33]:
+      </a>
+     </div>
+     <div class="inner_cell">
+      <div class="input_area">
+       <div class="highlight">
+        <pre><span class="n">fig</span><span class="p">[</span><span class="s">'layout'</span><span class="p">][</span><span class="s">'width'</span><span class="p">]</span>
+</pre>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="output_wrapper">
+     <div class="output">
+      <div class="output_area">
+       <div class="prompt output_prompt" id="out[33]">
+        <a class="prompt output_prompt" href="#out[33]">
+         Out[33]:
+        </a>
+       </div>
+       <div class="output_text output_subarea output_pyout">
+        <pre>
 1110
+</pre>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
+     <div class="prompt input_prompt" id="in-[34]">
+      <a class="prompt input_prompt" href="#in-[34]">
+       In [34]:
+      </a>
+     </div>
+     <div class="inner_cell">
+      <div class="input_area">
+       <div class="highlight">
+        <pre><span class="n">fig</span><span class="p">[</span><span class="s">'layout'</span><span class="p">][</span><span class="s">'height'</span><span class="p">]</span>
+</pre>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="output_wrapper">
+     <div class="output">
+      <div class="output_area">
+       <div class="prompt output_prompt" id="out[34]">
+        <a class="prompt output_prompt" href="#out[34]">
+         Out[34]:
+        </a>
+       </div>
+       <div class="output_text output_subarea output_pyout">
+        <pre>
 525
-
 </pre>
        </div>
       </div>
@@ -2915,9 +3122,9 @@ Both
    </div>
    <div class="cell border-box-sizing code_cell rendered">
     <div class="input">
-     <div class="prompt input_prompt" id="in-[31]:">
-      <a class="prompt input_prompt" href="#in-[31]:">
-       In [31]:
+     <div class="prompt input_prompt" id="in-[35]">
+      <a class="prompt input_prompt" href="#in-[35]">
+       In [35]:
       </a>
      </div>
      <div class="inner_cell">
@@ -2947,9 +3154,9 @@ Both
    </div>
    <div class="cell border-box-sizing code_cell rendered">
     <div class="input">
-     <div class="prompt input_prompt" id="in-[32]:">
-      <a class="prompt input_prompt" href="#in-[32]:">
-       In [32]:
+     <div class="prompt input_prompt" id="in-[36]">
+      <a class="prompt input_prompt" href="#in-[36]">
+       In [36]:
       </a>
      </div>
      <div class="inner_cell">
@@ -2967,10 +3174,13 @@ Both
     <div class="output_wrapper">
      <div class="output">
       <div class="output_area">
-       <div class="prompt">
+       <div class="prompt output_prompt" id="out[36]">
+        <a class="prompt output_prompt" href="#out[36]">
+         Out[36]:
+        </a>
        </div>
-       <div class="output_html rendered_html output_subarea ">
-        <iframe height="307" id="igraph" scrolling="no" seamless="seamless" src="https://plot.ly/~etpinard/441" style="border:none;" width="100%">
+       <div class="output_html rendered_html output_subarea output_pyout">
+        <iframe height="307" id="igraph" scrolling="no" seamless="seamless" src="https://plot.ly/~etpinard/441.embed" style="border:none;" width="100%">
         </iframe>
        </div>
       </div>
@@ -3028,7 +3238,7 @@ Both
     <div class="inner_cell">
      <div class="text_cell_render border-box-sizing rendered_html">
       <div style="float:right; \">
-       <img align="right" src="/static/api_docs/image/user_guide/python/image07.png" style="float:right; margin-left: 5px; margin-top: -10px"/>
+       <img align="right" src="/static/api_docs/image/user_guide/python/image06.png" style="float:right; margin-left: 5px; margin-top: -10px"/>
       </div>
       <h4>
        Got Questions or Feedback?
@@ -3088,6 +3298,35 @@ Both
       <p>
        <br/>
       </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
+     <div class="prompt input_prompt" id="in-[37]">
+      <a class="prompt input_prompt" href="#in-[37]">
+       In [37]:
+      </a>
+     </div>
+     <div class="inner_cell">
+      <div class="input_area">
+       <div class="highlight">
+        <pre><span class="c"># CSS styling within IPython notebook</span>
+<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">display</span><span class="p">,</span> <span class="n">HTML</span>
+<span class="n">display</span><span class="p">(</span><span class="n">HTML</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="s">'../custom.css'</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()))</span>
+</pre>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="output_wrapper">
+     <div class="output">
+      <div class="output_area">
+       <div class="prompt">
+       </div>
+       <div class="output_html rendered_html output_subarea ">
+       </div>
+      </div>
      </div>
     </div>
    </div>

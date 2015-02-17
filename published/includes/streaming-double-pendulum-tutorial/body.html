@@ -38,11 +38,6 @@
          homepage
         </a>
         <br/>
-        If unfamiliar with Plotly's Python API version 1.0 see
-        <a href="/python/overview">
-         section 0
-        </a>
-        <br/>
         The Github repository is available
         <a href="https://github.com/plotly/python-user-guide" target="_blank">
          here
@@ -108,9 +103,6 @@
     <div class="inner_cell">
      <div class="text_cell_render border-box-sizing rendered_html">
       <p>
-       The User Guide assumes version 1.0 and up of Plotly's Python API.
-      </p>
-      <p>
        Check which version is installed on your machine and please upgrade if needed.
       </p>
      </div>
@@ -118,8 +110,8 @@
    </div>
    <div class="cell border-box-sizing code_cell rendered">
     <div class="input">
-     <div class="prompt input_prompt" id="in-[1]:">
-      <a class="prompt input_prompt" href="#in-[1]:">
+     <div class="prompt input_prompt" id="in-[1]">
+      <a class="prompt input_prompt" href="#in-[1]">
        In [1]:
       </a>
      </div>
@@ -130,7 +122,7 @@
 <span class="kn">import</span> <span class="nn">plotly</span>
 
 <span class="c"># Check plolty version (if not latest, please upgrade)</span>
-<span class="k">print</span> <span class="n">plotly</span><span class="o">.</span><span class="n">__version__</span>
+<span class="n">plotly</span><span class="o">.</span><span class="n">__version__</span>
 </pre>
        </div>
       </div>
@@ -139,12 +131,14 @@
     <div class="output_wrapper">
      <div class="output">
       <div class="output_area">
-       <div class="prompt">
+       <div class="prompt output_prompt" id="out[1]">
+        <a class="prompt output_prompt" href="#out[1]">
+         Out[1]:
+        </a>
        </div>
-       <div class="output_subarea output_stream output_stdout output_text">
+       <div class="output_text output_subarea output_pyout">
         <pre>
-1.2.3
-
+'1.6.6'
 </pre>
        </div>
       </div>
@@ -179,8 +173,8 @@
    </div>
    <div class="cell border-box-sizing code_cell rendered">
     <div class="input">
-     <div class="prompt input_prompt" id="in-[2]:">
-      <a class="prompt input_prompt" href="#in-[2]:">
+     <div class="prompt input_prompt" id="in-[2]">
+      <a class="prompt input_prompt" href="#in-[2]">
        In [2]:
       </a>
      </div>
@@ -235,8 +229,8 @@
    </div>
    <div class="cell border-box-sizing code_cell rendered">
     <div class="input">
-     <div class="prompt input_prompt" id="in-[3]:">
-      <a class="prompt input_prompt" href="#in-[3]:">
+     <div class="prompt input_prompt" id="in-[3]">
+      <a class="prompt input_prompt" href="#in-[3]">
        In [3]:
       </a>
      </div>
@@ -312,8 +306,8 @@
    </div>
    <div class="cell border-box-sizing code_cell rendered">
     <div class="input">
-     <div class="prompt input_prompt" id="in-[4]:">
-      <a class="prompt input_prompt" href="#in-[4]:">
+     <div class="prompt input_prompt" id="in-[4]">
+      <a class="prompt input_prompt" href="#in-[4]">
        In [4]:
       </a>
      </div>
@@ -341,7 +335,7 @@
 <span class="c">## Time derivatives of each state array variables </span>
 <span class="k">def</span> <span class="nf">derivs</span><span class="p">(</span><span class="n">state</span><span class="p">,</span> <span class="n">t</span><span class="p">):</span>
     <span class="n">dxdt</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros_like</span><span class="p">(</span><span class="n">state</span><span class="p">)</span>   <span class="c"># init. dervative array</span>
-    <span class="n">del_</span> <span class="o">=</span> <span class="n">state</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">-</span><span class="n">state</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>      <span class="c"># difference of angle1 and angle2</span>
+    <span class="n">del_</span> <span class="o">=</span> <span class="n">state</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">-</span> <span class="n">state</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>    <span class="c"># difference of angle1 and angle2</span>
     
     <span class="n">dxdt</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">state</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>            <span class="c"># derv. of angle1</span>
     
@@ -400,8 +394,8 @@
    </div>
    <div class="cell border-box-sizing code_cell rendered">
     <div class="input">
-     <div class="prompt input_prompt" id="in-[5]:">
-      <a class="prompt input_prompt" href="#in-[5]:">
+     <div class="prompt input_prompt" id="in-[5]">
+      <a class="prompt input_prompt" href="#in-[5]">
        In [5]:
       </a>
      </div>
@@ -442,8 +436,8 @@
    </div>
    <div class="cell border-box-sizing code_cell rendered">
     <div class="input">
-     <div class="prompt input_prompt" id="in-[6]:">
-      <a class="prompt input_prompt" href="#in-[6]:">
+     <div class="prompt input_prompt" id="in-[6]">
+      <a class="prompt input_prompt" href="#in-[6]">
        In [6]:
       </a>
      </div>
@@ -478,8 +472,8 @@
    </div>
    <div class="cell border-box-sizing code_cell rendered">
     <div class="input">
-     <div class="prompt input_prompt" id="in-[7]:">
-      <a class="prompt input_prompt" href="#in-[7]:">
+     <div class="prompt input_prompt" id="in-[7]">
+      <a class="prompt input_prompt" href="#in-[7]">
        In [7]:
       </a>
      </div>
@@ -503,10 +497,10 @@
     <div class="inner_cell">
      <div class="text_cell_render border-box-sizing rendered_html">
       <p>
-       Here's a screenshot of our plot pre-streaming:
+       Here's a screenshot of our plot pre-streaming (with our old UI):
       </p>
       <p>
-       <img src="/static/api_docs/image/user_guide/python/image16.png"/>
+       <img src="/static/api_docs/image/user_guide/python/image15.png"/>
       </p>
       <p>
        <br/>
@@ -519,8 +513,8 @@
    </div>
    <div class="cell border-box-sizing code_cell rendered">
     <div class="input">
-     <div class="prompt input_prompt" id="in-[8]:">
-      <a class="prompt input_prompt" href="#in-[8]:">
+     <div class="prompt input_prompt" id="in-[8]">
+      <a class="prompt input_prompt" href="#in-[8]">
        In [8]:
       </a>
      </div>
@@ -568,8 +562,8 @@
    </div>
    <div class="cell border-box-sizing code_cell rendered">
     <div class="input">
-     <div class="prompt input_prompt" id="in-[9]:">
-      <a class="prompt input_prompt" href="#in-[9]:">
+     <div class="prompt input_prompt" id="in-[9]">
+      <a class="prompt input_prompt" href="#in-[9]">
        In [9]:
       </a>
      </div>
@@ -580,21 +574,21 @@
 <span class="kn">import</span> <span class="nn">scipy.integrate</span> <span class="kn">as</span> <span class="nn">integrate</span>
 <span class="kn">import</span> <span class="nn">time</span>
 
-<span class="n">N</span><span class="o">=</span><span class="mi">2</span>   <span class="c"># number of time integrate.odeint() integrations </span>
-<span class="n">i</span><span class="o">=</span><span class="mi">1</span>   <span class="c"># init. counter</span>
+<span class="n">N</span> <span class="o">=</span> <span class="mi">2</span>   <span class="c"># number of time integrate.odeint() integrations </span>
+<span class="n">i</span> <span class="o">=</span> <span class="mi">1</span>   <span class="c"># init. counter</span>
 
 <span class="c"># Delay start of stream by 5 sec (time to switch tabs)</span>
 <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span> 
 
 <span class="c"># (-) Solve the system of ODEs N times</span>
-<span class="k">while</span> <span class="n">i</span><span class="o">&lt;</span><span class="n">N</span><span class="p">:</span>
+<span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">N</span><span class="p">:</span>
     
-    <span class="n">i</span><span class="o">+=</span><span class="mi">1</span>                    <span class="c"># add to counter</span>
-    <span class="n">dt</span><span class="o">=</span><span class="mf">0.05</span>                 <span class="c"># create a time array from 0..100  </span>
-    <span class="n">t</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span><span class="mi">20</span><span class="p">,</span><span class="n">dt</span><span class="p">)</span>  <span class="c"># sampled at 0.05 second steps (of 400 steps in all)</span>
+    <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>                      <span class="c"># add to counter</span>
+    <span class="n">dt</span> <span class="o">=</span> <span class="mf">0.05</span>                   <span class="c"># create a time array from 0..100  </span>
+    <span class="n">t</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="n">dt</span><span class="p">)</span>  <span class="c"># sampled at 0.05 second steps (of 400 steps in all)</span>
     
-    <span class="c"># Solve the system of  ODEs, for times in t!</span>
-    <span class="n">y</span><span class="o">=</span><span class="n">integrate</span><span class="o">.</span><span class="n">odeint</span><span class="p">(</span><span class="n">derivs</span><span class="p">,</span><span class="n">state</span><span class="p">,</span><span class="n">t</span><span class="p">)</span>  
+    <span class="c"># Solve the system of ODEs, for times in t!</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="n">integrate</span><span class="o">.</span><span class="n">odeint</span><span class="p">(</span><span class="n">derivs</span><span class="p">,</span> <span class="n">state</span><span class="p">,</span> <span class="n">t</span><span class="p">)</span>  
     
     <span class="n">x1</span> <span class="o">=</span> <span class="n">L1</span><span class="o">*</span><span class="n">sin</span><span class="p">(</span><span class="n">y</span><span class="p">[:,</span><span class="mi">0</span><span class="p">])</span>        <span class="c"># convert angles to x-y coordinates</span>
     <span class="n">y1</span> <span class="o">=</span> <span class="o">-</span><span class="n">L1</span><span class="o">*</span><span class="n">cos</span><span class="p">(</span><span class="n">y</span><span class="p">[:,</span><span class="mi">0</span><span class="p">])</span>
@@ -603,7 +597,7 @@
     
     <span class="c"># (!) Write the solutions to Plotly's servers, </span>
     <span class="c">#     1 per stream, 1 point at a time</span>
-    <span class="k">for</span> <span class="p">(</span><span class="n">x1i</span><span class="p">,</span><span class="n">y1i</span><span class="p">,</span><span class="n">x2i</span><span class="p">,</span><span class="n">y2i</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">x1</span><span class="p">,</span><span class="n">y1</span><span class="p">,</span><span class="n">x2</span><span class="p">,</span><span class="n">y2</span><span class="p">):</span>
+    <span class="k">for</span> <span class="p">(</span><span class="n">x1i</span><span class="p">,</span> <span class="n">y1i</span><span class="p">,</span> <span class="n">x2i</span><span class="p">,</span> <span class="n">y2i</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">x1</span><span class="p">,</span> <span class="n">y1</span><span class="p">,</span> <span class="n">x2</span><span class="p">,</span> <span class="n">y2</span><span class="p">):</span>
         
         <span class="c"># (@) Write list corresponding to 3 pendulum nodes,</span>
         <span class="c">#     overwriting the data on the plot</span>
@@ -659,8 +653,8 @@
    </div>
    <div class="cell border-box-sizing code_cell rendered">
     <div class="input">
-     <div class="prompt input_prompt" id="in-[10]:">
-      <a class="prompt input_prompt" href="#in-[10]:">
+     <div class="prompt input_prompt" id="in-[10]">
+      <a class="prompt input_prompt" href="#in-[10]">
        In [10]:
       </a>
      </div>
@@ -668,7 +662,7 @@
       <div class="input_area">
        <div class="highlight">
         <pre><span class="c"># Embed never-ending simulation</span>
-<span class="n">tls</span><span class="o">.</span><span class="n">embed</span><span class="p">(</span><span class="s">'streaming-demos'</span><span class="p">,</span><span class="s">'4'</span><span class="p">)</span>
+<span class="n">tls</span><span class="o">.</span><span class="n">embed</span><span class="p">(</span><span class="s">'streaming-demos'</span><span class="p">,</span> <span class="s">'4'</span><span class="p">)</span>
 </pre>
        </div>
       </div>
@@ -677,10 +671,13 @@
     <div class="output_wrapper">
      <div class="output">
       <div class="output_area">
-       <div class="prompt">
+       <div class="prompt output_prompt" id="out[10]">
+        <a class="prompt output_prompt" href="#out[10]">
+         Out[10]:
+        </a>
        </div>
-       <div class="output_html rendered_html output_subarea ">
-        <iframe height="525" id="igraph" scrolling="no" seamless="seamless" src="https://plot.ly/~streaming-demos/4" style="border:none;" width="100%">
+       <div class="output_html rendered_html output_subarea output_pyout">
+        <iframe height="525" id="igraph" scrolling="no" seamless="seamless" src="https://plot.ly/~streaming-demos/4.embed" style="border:none;" width="100%">
         </iframe>
        </div>
       </div>
@@ -786,7 +783,7 @@
     <div class="inner_cell">
      <div class="text_cell_render border-box-sizing rendered_html">
       <div style="float:right; \">
-       <img align="right" src="/static/api_docs/image/user_guide/python/image07.png" style="float:right; margin-left: 5px; margin-top: -10px"/>
+       <img align="right" src="/static/api_docs/image/user_guide/python/image06.png" style="float:right; margin-left: 5px; margin-top: -10px"/>
       </div>
       <h4>
        Got Questions or Feedback?
