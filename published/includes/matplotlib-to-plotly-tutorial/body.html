@@ -38,11 +38,6 @@
          homepage
         </a>
         <br/>
-        If unfamiliar with Plotly's Python API version 1.0 see
-        <a href="/python/overview">
-         section 0
-        </a>
-        <br/>
         The Github repository is available
         <a href="https://github.com/plotly/python-user-guide" target="_blank">
          here
@@ -128,8 +123,8 @@
    </div>
    <div class="cell border-box-sizing code_cell rendered">
     <div class="input">
-     <div class="prompt input_prompt" id="in-[1]:">
-      <a class="prompt input_prompt" href="#in-[1]:">
+     <div class="prompt input_prompt" id="in-[1]">
+      <a class="prompt input_prompt" href="#in-[1]">
        In [1]:
       </a>
      </div>
@@ -140,7 +135,7 @@
 <span class="kn">import</span> <span class="nn">plotly</span>
 
 <span class="c"># Check plolty version (if not latest, please upgrade)</span>
-<span class="k">print</span> <span class="n">plotly</span><span class="o">.</span><span class="n">__version__</span>
+<span class="n">plotly</span><span class="o">.</span><span class="n">__version__</span>
 </pre>
        </div>
       </div>
@@ -149,12 +144,14 @@
     <div class="output_wrapper">
      <div class="output">
       <div class="output_area">
-       <div class="prompt">
+       <div class="prompt output_prompt" id="out[1]">
+        <a class="prompt output_prompt" href="#out[1]">
+         Out[1]:
+        </a>
        </div>
-       <div class="output_subarea output_stream output_stdout output_text">
+       <div class="output_text output_subarea output_pyout">
         <pre>
-1.2.3
-
+'1.6.6'
 </pre>
        </div>
       </div>
@@ -239,8 +236,8 @@
    </div>
    <div class="cell border-box-sizing code_cell rendered">
     <div class="input">
-     <div class="prompt input_prompt" id="in-[2]:">
-      <a class="prompt input_prompt" href="#in-[2]:">
+     <div class="prompt input_prompt" id="in-[2]">
+      <a class="prompt input_prompt" href="#in-[2]">
        In [2]:
       </a>
      </div>
@@ -291,8 +288,8 @@
    </div>
    <div class="cell border-box-sizing code_cell rendered">
     <div class="input">
-     <div class="prompt input_prompt" id="in-[3]:">
-      <a class="prompt input_prompt" href="#in-[3]:">
+     <div class="prompt input_prompt" id="in-[3]">
+      <a class="prompt input_prompt" href="#in-[3]">
        In [3]:
       </a>
      </div>
@@ -384,8 +381,8 @@
    </div>
    <div class="cell border-box-sizing code_cell rendered">
     <div class="input">
-     <div class="prompt input_prompt" id="in-[4]:">
-      <a class="prompt input_prompt" href="#in-[4]:">
+     <div class="prompt input_prompt" id="in-[4]">
+      <a class="prompt input_prompt" href="#in-[4]">
        In [4]:
       </a>
      </div>
@@ -413,7 +410,7 @@
     <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s">'volts'</span><span class="p">)</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s">'Damped oscillation'</span><span class="p">)</span>
     
-    <span class="k">return</span> <span class="p">(</span><span class="n">l1</span><span class="p">,</span><span class="n">l2</span><span class="p">,</span><span class="n">l3</span><span class="p">,</span><span class="n">l4</span><span class="p">)</span>  <span class="c"># return line objects (for legend, later)</span>
+    <span class="k">return</span> <span class="p">(</span><span class="n">l1</span><span class="p">,</span> <span class="n">l2</span><span class="p">,</span> <span class="n">l3</span><span class="p">,</span> <span class="n">l4</span><span class="p">)</span>  <span class="c"># return line objects (for legend, later)</span>
 
 <span class="c"># Plot it!</span>
 <span class="n">plot_mpl_fig</span><span class="p">()</span>
@@ -807,8 +804,8 @@ giAIgiAIgiAIgiAIgiAIgiAIgiAIgiAIQiT/P7Yi6qmzVPkMAAAAAElFTkSuQmCC
    </div>
    <div class="cell border-box-sizing code_cell rendered">
     <div class="input">
-     <div class="prompt input_prompt" id="in-[5]:">
-      <a class="prompt input_prompt" href="#in-[5]:">
+     <div class="prompt input_prompt" id="in-[5]">
+      <a class="prompt input_prompt" href="#in-[5]">
        In [5]:
       </a>
      </div>
@@ -849,7 +846,7 @@ mpl_to_plotly(fig, resize=False, strip_style=False, verbose=False)
     render an mpl figure in plotly. If you need to trouble shoot, you can do
     this step manually by NOT running this fuction and entereing the following:
     
-    ============================================================================
+    ===========================================================================
     from mplexporter import Exporter
     from mplexporter.renderers import PlotlyRenderer
     
@@ -858,7 +855,7 @@ mpl_to_plotly(fig, resize=False, strip_style=False, verbose=False)
     renderer = PlotlyRenderer()
     exporter = Exporter(renderer)
     exporter.run(fig)
-    ============================================================================
+    ===========================================================================
     
     You can then inspect the JSON structures by accessing these:
     
@@ -875,7 +872,7 @@ mpl_to_plotly(fig, resize=False, strip_style=False, verbose=False)
     https://plot.ly/plot
     
     ** Forgot your api_key? Try signing in and looking here:
-    https://plot.ly/api/python/getting-started
+    https://plot.ly/python/getting-started
 
 
 </pre>
@@ -897,8 +894,8 @@ mpl_to_plotly(fig, resize=False, strip_style=False, verbose=False)
    </div>
    <div class="cell border-box-sizing code_cell rendered">
     <div class="input">
-     <div class="prompt input_prompt" id="in-[6]:">
-      <a class="prompt input_prompt" href="#in-[6]:">
+     <div class="prompt input_prompt" id="in-[6]">
+      <a class="prompt input_prompt" href="#in-[6]">
        In [6]:
       </a>
      </div>
@@ -962,15 +959,15 @@ Closing figure
    </div>
    <div class="cell border-box-sizing code_cell rendered">
     <div class="input">
-     <div class="prompt input_prompt" id="in-[7]:">
-      <a class="prompt input_prompt" href="#in-[7]:">
+     <div class="prompt input_prompt" id="in-[7]">
+      <a class="prompt input_prompt" href="#in-[7]">
        In [7]:
       </a>
      </div>
      <div class="inner_cell">
       <div class="input_area">
        <div class="highlight">
-        <pre><span class="k">print</span> <span class="n">py_fig1</span><span class="o">.</span><span class="n">to_string</span><span class="p">()</span>  
+        <pre><span class="k">print</span><span class="p">(</span><span class="n">py_fig1</span><span class="o">.</span><span class="n">to_string</span><span class="p">())</span>
 </pre>
        </div>
       </div>
@@ -986,8 +983,8 @@ Closing figure
 Figure(
     data=Data([
         Scatter(
-            x=[0.0, 0.01, 0.02, 0.029999999999999999, 0.040000000000000001,...],
-            y=[1.0, 0.99004983374916811, 0.98019867330675525, 0.97044553354...],
+            x=[0.0, 0.01, 0.02, 0.029999999999999999, 0.040000000000000001,  ],
+            y=[1.0, 0.99004983374916811, 0.98019867330675525, 0.970445533.., ],
             mode='lines',
             name='decaying exp.',
             line=Line(
@@ -1000,8 +997,8 @@ Figure(
             yaxis='y1'
         ),
         Scatter(
-            x=[0.0, 0.01, 0.02, 0.029999999999999999, 0.040000000000000001,...],
-            y=[0.0, 0.062790519529313374, 0.12533323356430426, 0.1873813145...],
+            x=[0.0, 0.01, 0.02, 0.029999999999999999, 0.040000000000000001,  ],
+            y=[0.0, 0.062790519529313374, 0.12533323356430426, 0.18738131.., ],
             mode='lines+markers',
             name='_line1',
             marker=Marker(
@@ -1024,8 +1021,8 @@ Figure(
             yaxis='y1'
         ),
         Scatter(
-            x=[0.0, 0.10000000000000001, 0.20000000000000001, 0.30000000000...],
-            y=[0.0, 0.095310179804324935, 0.18232155679395459, 0.2623642644...],
+            x=[0.0, 0.10000000000000001, 0.20000000000000001, 0.300000000.., ],
+            y=[0.0, 0.095310179804324935, 0.18232155679395459, 0.26236426.., ],
             mode='markers',
             name='_line2',
             marker=Marker(
@@ -1042,8 +1039,8 @@ Figure(
             yaxis='y1'
         ),
         Scatter(
-            x=[0.0, 0.01, 0.02, 0.029999999999999999, 0.040000000000000001,...],
-            y=[0.0, 0.062165743421020596, 0.12285146926097672, 0.1818433598...],
+            x=[0.0, 0.01, 0.02, 0.029999999999999999, 0.040000000000000001,  ],
+            y=[0.0, 0.062165743421020596, 0.12285146926097672, 0.18184335.., ],
             mode='lines+markers',
             name='_line3',
             marker=Marker(
@@ -1185,8 +1182,8 @@ Figure(
    </div>
    <div class="cell border-box-sizing code_cell rendered">
     <div class="input">
-     <div class="prompt input_prompt" id="in-[8]:">
-      <a class="prompt input_prompt" href="#in-[8]:">
+     <div class="prompt input_prompt" id="in-[8]">
+      <a class="prompt input_prompt" href="#in-[8]">
        In [8]:
       </a>
      </div>
@@ -1194,7 +1191,7 @@ Figure(
       <div class="input_area">
        <div class="highlight">
         <pre><span class="c"># Print key-value pairs corresponding to the figure's size</span>
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="p">[</span><span class="s">'autosize'</span><span class="p">,</span><span class="s">'width'</span><span class="p">,</span><span class="s">'height'</span><span class="p">]:</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="p">[</span><span class="s">'autosize'</span><span class="p">,</span> <span class="s">'width'</span><span class="p">,</span> <span class="s">'height'</span><span class="p">]:</span>
     <span class="k">print</span> <span class="n">i</span><span class="p">,</span> <span class="n">py_fig1</span><span class="p">[</span><span class="s">'layout'</span><span class="p">][</span><span class="n">i</span><span class="p">]</span>
 </pre>
        </div>
@@ -1291,8 +1288,8 @@ height 320
    </div>
    <div class="cell border-box-sizing code_cell rendered">
     <div class="input">
-     <div class="prompt input_prompt" id="in-[9]:">
-      <a class="prompt input_prompt" href="#in-[9]:">
+     <div class="prompt input_prompt" id="in-[9]">
+      <a class="prompt input_prompt" href="#in-[9]">
        In [9]:
       </a>
      </div>
@@ -1389,8 +1386,8 @@ iplot_mpl(fig, resize=True, strip_style=False, update=None, **plot_options)
    </div>
    <div class="cell border-box-sizing code_cell rendered">
     <div class="input">
-     <div class="prompt input_prompt" id="in-[10]:">
-      <a class="prompt input_prompt" href="#in-[10]:">
+     <div class="prompt input_prompt" id="in-[10]">
+      <a class="prompt input_prompt" href="#in-[10]">
        In [10]:
       </a>
      </div>
@@ -1406,10 +1403,13 @@ iplot_mpl(fig, resize=True, strip_style=False, update=None, **plot_options)
     <div class="output_wrapper">
      <div class="output">
       <div class="output_area">
-       <div class="prompt">
+       <div class="prompt output_prompt" id="out[10]">
+        <a class="prompt output_prompt" href="#out[10]">
+         Out[10]:
+        </a>
        </div>
-       <div class="output_html rendered_html output_subarea ">
-        <iframe height="525" id="igraph" scrolling="no" seamless="seamless" src="https://plot.ly/~etpinard/214" style="border:none;" width="100%">
+       <div class="output_html rendered_html output_subarea output_pyout">
+        <iframe height="525" id="igraph" scrolling="no" seamless="seamless" src="https://plot.ly/~etpinard/214.embed" style="border:none;" width="100%">
         </iframe>
        </div>
       </div>
@@ -1447,8 +1447,8 @@ iplot_mpl(fig, resize=True, strip_style=False, update=None, **plot_options)
    </div>
    <div class="cell border-box-sizing code_cell rendered">
     <div class="input">
-     <div class="prompt input_prompt" id="in-[11]:">
-      <a class="prompt input_prompt" href="#in-[11]:">
+     <div class="prompt input_prompt" id="in-[11]">
+      <a class="prompt input_prompt" href="#in-[11]">
        In [11]:
       </a>
      </div>
@@ -1466,10 +1466,13 @@ iplot_mpl(fig, resize=True, strip_style=False, update=None, **plot_options)
     <div class="output_wrapper">
      <div class="output">
       <div class="output_area">
-       <div class="prompt">
+       <div class="prompt output_prompt" id="out[11]">
+        <a class="prompt output_prompt" href="#out[11]">
+         Out[11]:
+        </a>
        </div>
-       <div class="output_html rendered_html output_subarea ">
-        <iframe height="525" id="igraph" scrolling="no" seamless="seamless" src="https://plot.ly/~etpinard/217" style="border:none;" width="100%">
+       <div class="output_html rendered_html output_subarea output_pyout">
+        <iframe height="525" id="igraph" scrolling="no" seamless="seamless" src="https://plot.ly/~etpinard/217.embed" style="border:none;" width="100%">
         </iframe>
        </div>
       </div>
@@ -1523,8 +1526,8 @@ iplot_mpl(fig, resize=True, strip_style=False, update=None, **plot_options)
    </div>
    <div class="cell border-box-sizing code_cell rendered">
     <div class="input">
-     <div class="prompt input_prompt" id="in-[12]:">
-      <a class="prompt input_prompt" href="#in-[12]:">
+     <div class="prompt input_prompt" id="in-[12]">
+      <a class="prompt input_prompt" href="#in-[12]">
        In [12]:
       </a>
      </div>
@@ -1544,8 +1547,8 @@ iplot_mpl(fig, resize=True, strip_style=False, update=None, **plot_options)
     <div class="output_wrapper">
      <div class="output">
       <div class="output_area">
-       <div class="prompt output_prompt" id="out[12]:">
-        <a class="prompt output_prompt" href="#out[12]:">
+       <div class="prompt output_prompt" id="out[12]">
+        <a class="prompt output_prompt" href="#out[12]">
          Out[12]:
         </a>
        </div>
@@ -1560,8 +1563,8 @@ u'https://plot.ly/~etpinard/229'
    </div>
    <div class="cell border-box-sizing code_cell rendered">
     <div class="input">
-     <div class="prompt input_prompt" id="in-[13]:">
-      <a class="prompt input_prompt" href="#in-[13]:">
+     <div class="prompt input_prompt" id="in-[13]">
+      <a class="prompt input_prompt" href="#in-[13]">
        In [13]:
       </a>
      </div>
@@ -1581,8 +1584,8 @@ u'https://plot.ly/~etpinard/229'
     <div class="output_wrapper">
      <div class="output">
       <div class="output_area">
-       <div class="prompt output_prompt" id="out[13]:">
-        <a class="prompt output_prompt" href="#out[13]:">
+       <div class="prompt output_prompt" id="out[13]">
+        <a class="prompt output_prompt" href="#out[13]">
          Out[13]:
         </a>
        </div>
@@ -1625,8 +1628,8 @@ u'https://plot.ly/~etpinard/230'
    </div>
    <div class="cell border-box-sizing code_cell rendered">
     <div class="input">
-     <div class="prompt input_prompt" id="in-[14]:">
-      <a class="prompt input_prompt" href="#in-[14]:">
+     <div class="prompt input_prompt" id="in-[14]">
+      <a class="prompt input_prompt" href="#in-[14]">
        In [14]:
       </a>
      </div>
@@ -1637,8 +1640,8 @@ u'https://plot.ly/~etpinard/230'
 <span class="n">mpl_fig2</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
 
 <span class="c"># Replot first mpl figure, add legend</span>
-<span class="p">(</span><span class="n">l1</span><span class="p">,</span><span class="n">l2</span><span class="p">,</span><span class="n">l3</span><span class="p">,</span><span class="n">l4</span><span class="p">)</span> <span class="o">=</span> <span class="n">plot_mpl_fig</span><span class="p">()</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span> <span class="p">(</span><span class="n">l2</span><span class="p">,</span> <span class="n">l4</span><span class="p">),</span> <span class="p">(</span><span class="s">'oscillatory'</span><span class="p">,</span> <span class="s">'damped'</span><span class="p">),</span> <span class="s">'upper right'</span><span class="p">)</span>
+<span class="p">(</span><span class="n">l1</span><span class="p">,</span> <span class="n">l2</span><span class="p">,</span> <span class="n">l3</span><span class="p">,</span> <span class="n">l4</span><span class="p">)</span> <span class="o">=</span> <span class="n">plot_mpl_fig</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">((</span><span class="n">l2</span><span class="p">,</span> <span class="n">l4</span><span class="p">),</span> <span class="p">(</span><span class="s">'oscillatory'</span><span class="p">,</span> <span class="s">'damped'</span><span class="p">),</span> <span class="s">'upper right'</span><span class="p">)</span>
 </pre>
        </div>
       </div>
@@ -1647,14 +1650,14 @@ u'https://plot.ly/~etpinard/230'
     <div class="output_wrapper">
      <div class="output">
       <div class="output_area">
-       <div class="prompt output_prompt" id="out[14]:">
-        <a class="prompt output_prompt" href="#out[14]:">
+       <div class="prompt output_prompt" id="out[14]">
+        <a class="prompt output_prompt" href="#out[14]">
          Out[14]:
         </a>
        </div>
        <div class="output_text output_subarea output_pyout">
         <pre>
-&lt;matplotlib.legend.Legend at 0x2b4afd7f0390&gt;
+&lt;matplotlib.legend.Legend at 0x7f18d267a8d0&gt;
 </pre>
        </div>
       </div>
@@ -2022,8 +2025,8 @@ IAiCIAiCIAiCIAiCIAiCIAiCIAiCIAiCIAiCIAiC4Mv/B80bz4LrEQi1AAAAAElFTkSuQmCC
    </div>
    <div class="cell border-box-sizing code_cell rendered">
     <div class="input">
-     <div class="prompt input_prompt" id="in-[15]:">
-      <a class="prompt input_prompt" href="#in-[15]:">
+     <div class="prompt input_prompt" id="in-[15]">
+      <a class="prompt input_prompt" href="#in-[15]">
        In [15]:
       </a>
      </div>
@@ -2044,11 +2047,11 @@ IAiCIAiCIAiCIAiCIAiCIAiCIAiCIAiCIAiCIAiC4Mv/B80bz4LrEQi1AAAAAElFTkSuQmCC
        </div>
        <div class="output_subarea output_stream output_stderr output_text">
         <pre>
-/usr/local/lib/python2.7/dist-packages/plotly/matplotlylib/renderer.py:311: UserWarning:
+/usr/local/lib/python2.7/dist-packages/plotly/matplotlylib/renderer.py:382: UserWarning:
 
 Bummer! Plotly can currently only draw Line2D objects from matplotlib that are in 'data' coordinates!
 
-/usr/local/lib/python2.7/dist-packages/plotly/matplotlylib/renderer.py:415: UserWarning:
+/usr/local/lib/python2.7/dist-packages/plotly/matplotlylib/renderer.py:479: UserWarning:
 
 I found a path object that I don't think is part of a bar chart. Ignoring.
 
@@ -2057,10 +2060,13 @@ I found a path object that I don't think is part of a bar chart. Ignoring.
        </div>
       </div>
       <div class="output_area">
-       <div class="prompt">
+       <div class="prompt output_prompt" id="out[15]">
+        <a class="prompt output_prompt" href="#out[15]">
+         Out[15]:
+        </a>
        </div>
-       <div class="output_html rendered_html output_subarea ">
-        <iframe height="525" id="igraph" scrolling="no" seamless="seamless" src="https://plot.ly/~etpinard/231" style="border:none;" width="100%">
+       <div class="output_html rendered_html output_subarea output_pyout">
+        <iframe height="525" id="igraph" scrolling="no" seamless="seamless" src="https://plot.ly/~etpinard/231.embed" style="border:none;" width="100%">
         </iframe>
        </div>
       </div>
@@ -2083,8 +2089,8 @@ I found a path object that I don't think is part of a bar chart. Ignoring.
    </div>
    <div class="cell border-box-sizing code_cell rendered">
     <div class="input">
-     <div class="prompt input_prompt" id="in-[16]:">
-      <a class="prompt input_prompt" href="#in-[16]:">
+     <div class="prompt input_prompt" id="in-[16]">
+      <a class="prompt input_prompt" href="#in-[16]">
        In [16]:
       </a>
      </div>
@@ -2095,13 +2101,13 @@ I found a path object that I don't think is part of a bar chart. Ignoring.
 <span class="n">py_fig2</span> <span class="o">=</span> <span class="n">tls</span><span class="o">.</span><span class="n">mpl_to_plotly</span><span class="p">(</span><span class="n">mpl_fig2</span><span class="p">,</span> <span class="n">resize</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
 
 <span class="c"># Delete misplaced legend annotations </span>
-<span class="n">py_fig2</span><span class="p">[</span><span class="s">'layout'</span><span class="p">]</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s">'annotations'</span><span class="p">,</span><span class="bp">None</span><span class="p">)</span>
+<span class="n">py_fig2</span><span class="p">[</span><span class="s">'layout'</span><span class="p">]</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s">'annotations'</span><span class="p">,</span> <span class="bp">None</span><span class="p">)</span>
 
 <span class="c"># Add legend, place it at the top right corner of the plot</span>
 <span class="n">py_fig2</span><span class="p">[</span><span class="s">'layout'</span><span class="p">]</span><span class="o">.</span><span class="n">update</span><span class="p">(</span>
     <span class="n">showlegend</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span>
     <span class="n">legend</span><span class="o">=</span><span class="n">Legend</span><span class="p">(</span>
-        <span class="n">x</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+        <span class="n">x</span><span class="o">=</span><span class="mf">1.05</span><span class="p">,</span>
         <span class="n">y</span><span class="o">=</span><span class="mi">1</span>
     <span class="p">)</span>
 <span class="p">)</span>
@@ -2116,10 +2122,13 @@ I found a path object that I don't think is part of a bar chart. Ignoring.
     <div class="output_wrapper">
      <div class="output">
       <div class="output_area">
-       <div class="prompt">
+       <div class="prompt output_prompt" id="out[16]">
+        <a class="prompt output_prompt" href="#out[16]">
+         Out[16]:
+        </a>
        </div>
-       <div class="output_html rendered_html output_subarea ">
-        <iframe height="525" id="igraph" scrolling="no" seamless="seamless" src="https://plot.ly/~etpinard/232" style="border:none;" width="100%">
+       <div class="output_html rendered_html output_subarea output_pyout">
+        <iframe height="525" id="igraph" scrolling="no" seamless="seamless" src="https://plot.ly/~etpinard/232.embed" style="border:none;" width="100%">
         </iframe>
        </div>
       </div>
@@ -2150,8 +2159,8 @@ I found a path object that I don't think is part of a bar chart. Ignoring.
    </div>
    <div class="cell border-box-sizing code_cell rendered">
     <div class="input">
-     <div class="prompt input_prompt" id="in-[17]:">
-      <a class="prompt input_prompt" href="#in-[17]:">
+     <div class="prompt input_prompt" id="in-[17]">
+      <a class="prompt input_prompt" href="#in-[17]">
        In [17]:
       </a>
      </div>
@@ -2176,10 +2185,13 @@ I found a path object that I don't think is part of a bar chart. Ignoring.
     <div class="output_wrapper">
      <div class="output">
       <div class="output_area">
-       <div class="prompt">
+       <div class="prompt output_prompt" id="out[17]">
+        <a class="prompt output_prompt" href="#out[17]">
+         Out[17]:
+        </a>
        </div>
-       <div class="output_html rendered_html output_subarea ">
-        <iframe height="525" id="igraph" scrolling="no" seamless="seamless" src="https://plot.ly/~etpinard/235" style="border:none;" width="100%">
+       <div class="output_html rendered_html output_subarea output_pyout">
+        <iframe height="525" id="igraph" scrolling="no" seamless="seamless" src="https://plot.ly/~etpinard/235.embed" style="border:none;" width="100%">
         </iframe>
        </div>
       </div>
@@ -2195,7 +2207,7 @@ I found a path object that I don't think is part of a bar chart. Ignoring.
        This is much better than the orginal matplotlib figure, right?
       </p>
       <p>
-       And now, in version 1.0.28 and up of Plotly's Python API, the previous updates can be made by passing a single keyword argument to
+       The previous updates can be made by passing a single keyword argument to
        <code>
         py.iplot_mpl
        </code>
@@ -2206,8 +2218,8 @@ I found a path object that I don't think is part of a bar chart. Ignoring.
    </div>
    <div class="cell border-box-sizing code_cell rendered">
     <div class="input">
-     <div class="prompt input_prompt" id="in-[18]:">
-      <a class="prompt input_prompt" href="#in-[18]:">
+     <div class="prompt input_prompt" id="in-[18]">
+      <a class="prompt input_prompt" href="#in-[18]">
        In [18]:
       </a>
      </div>
@@ -2220,7 +2232,7 @@ I found a path object that I don't think is part of a bar chart. Ignoring.
         <span class="n">annotations</span><span class="o">=</span><span class="p">[</span><span class="nb">dict</span><span class="p">(</span><span class="n">text</span><span class="o">=</span><span class="s">' '</span><span class="p">)],</span>  <span class="c"># blank text in legend 'annotation'</span>
         <span class="n">showlegend</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span>               <span class="c"># show legend </span>
         <span class="n">legend</span><span class="o">=</span><span class="n">Legend</span><span class="p">(</span>
-            <span class="n">x</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>     <span class="c"># legend position</span>
+            <span class="n">x</span><span class="o">=</span><span class="mf">1.05</span><span class="p">,</span>     <span class="c"># legend position</span>
             <span class="n">y</span><span class="o">=</span><span class="mi">1</span>
         <span class="p">)</span>
     <span class="p">),</span>
@@ -2243,10 +2255,13 @@ I found a path object that I don't think is part of a bar chart. Ignoring.
     <div class="output_wrapper">
      <div class="output">
       <div class="output_area">
-       <div class="prompt">
+       <div class="prompt output_prompt" id="out[18]">
+        <a class="prompt output_prompt" href="#out[18]">
+         Out[18]:
+        </a>
        </div>
-       <div class="output_html rendered_html output_subarea ">
-        <iframe height="525" id="igraph" scrolling="no" seamless="seamless" src="https://plot.ly/~etpinard/315" style="border:none;" width="100%">
+       <div class="output_html rendered_html output_subarea output_pyout">
+        <iframe height="525" id="igraph" scrolling="no" seamless="seamless" src="https://plot.ly/~etpinard/315.embed" style="border:none;" width="100%">
         </iframe>
        </div>
       </div>
@@ -2340,8 +2355,8 @@ I found a path object that I don't think is part of a bar chart. Ignoring.
    </div>
    <div class="cell border-box-sizing code_cell rendered">
     <div class="input">
-     <div class="prompt input_prompt" id="in-[19]:">
-      <a class="prompt input_prompt" href="#in-[19]:">
+     <div class="prompt input_prompt" id="in-[19]">
+      <a class="prompt input_prompt" href="#in-[19]">
        In [19]:
       </a>
      </div>
@@ -2366,8 +2381,8 @@ I found a path object that I don't think is part of a bar chart. Ignoring.
     <div class="output_wrapper">
      <div class="output">
       <div class="output_area">
-       <div class="prompt output_prompt" id="out[19]:">
-        <a class="prompt output_prompt" href="#out[19]:">
+       <div class="prompt output_prompt" id="out[19]">
+        <a class="prompt output_prompt" href="#out[19]">
          Out[19]:
         </a>
        </div>
@@ -2452,8 +2467,8 @@ RK5CYII=
    </div>
    <div class="cell border-box-sizing code_cell rendered">
     <div class="input">
-     <div class="prompt input_prompt" id="in-[20]:">
-      <a class="prompt input_prompt" href="#in-[20]:">
+     <div class="prompt input_prompt" id="in-[20]">
+      <a class="prompt input_prompt" href="#in-[20]">
        In [20]:
       </a>
      </div>
@@ -2470,10 +2485,13 @@ RK5CYII=
     <div class="output_wrapper">
      <div class="output">
       <div class="output_area">
-       <div class="prompt">
+       <div class="prompt output_prompt" id="out[20]">
+        <a class="prompt output_prompt" href="#out[20]">
+         Out[20]:
+        </a>
        </div>
-       <div class="output_html rendered_html output_subarea ">
-        <iframe height="525" id="igraph" scrolling="no" seamless="seamless" src="https://plot.ly/~etpinard/218" style="border:none;" width="100%">
+       <div class="output_html rendered_html output_subarea output_pyout">
+        <iframe height="525" id="igraph" scrolling="no" seamless="seamless" src="https://plot.ly/~etpinard/218.embed" style="border:none;" width="100%">
         </iframe>
        </div>
       </div>
@@ -2515,8 +2533,8 @@ RK5CYII=
    </div>
    <div class="cell border-box-sizing code_cell rendered">
     <div class="input">
-     <div class="prompt input_prompt" id="in-[21]:">
-      <a class="prompt input_prompt" href="#in-[21]:">
+     <div class="prompt input_prompt" id="in-[21]">
+      <a class="prompt input_prompt" href="#in-[21]">
        In [21]:
       </a>
      </div>
@@ -2535,7 +2553,7 @@ RK5CYII=
 <span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s">r"$\mathcal{P}(X)$"</span><span class="p">)</span>     <span class="c">#  using LaTeX symbols</span>
 
 <span class="c"># Add an on-plot annotation</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="s">'Sample size: '</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">N</span><span class="p">),</span> 
+<span class="n">ax</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="s">'Sample size: '</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">N</span><span class="p">),</span> 
             <span class="n">textcoords</span><span class="o">=</span><span class="s">'axes fraction'</span><span class="p">,</span> 
             <span class="n">xy</span><span class="o">=</span><span class="p">(</span><span class="mf">0.7</span><span class="p">,</span><span class="mf">0.9</span><span class="p">),</span> <span class="n">xytext</span><span class="o">=</span><span class="p">(</span><span class="mf">0.7</span><span class="p">,</span><span class="mf">0.9</span><span class="p">))</span>
 
@@ -2552,149 +2570,143 @@ RK5CYII=
        <div class="prompt">
        </div>
        <div class="output_png output_subarea ">
-        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAYoAAAERCAYAAABl3+CQAAAABHNCSVQICAgIfAhkiAAAAAlwSFlz
-AAALEgAACxIB0t1+/AAAH1ZJREFUeJzt3XuUVOW5oPGnscErDSIGscEgsdEQBNFwUZOxjCNqchRN
-oqDHDFHHY9Sos5zEaByHjh4inrPicbnGy8qJxjZR4yWJQY2KUWppTACDoGiHgIyEmzJL5dIYVJCa
-P77d3dVNdXU13V17V9XzW6tW7dqXqre6q+rd32V/H0iSJEmSJEmSJEmSJEmSJEnqhr2ABcASoBG4
-OVpfD6wFFke307KOuQ5YASwDphQrUElSfPaJ7quB+cCXgJnA1Tn2HU1IKn2BEcBbQJ/eD1GSBPH9
-4P4juu8H7AFsjB5X5dh3KvAQsB1YRUgUE3s5PklSJK5E0YdQStgAzAPejNZfAbwG3AMMjNYdTKiS
-arYWqC1OmJKkuBLFTuAoYBjwX4AUcBdwaLT+HeAneY7P9HJ8kqRIdcyvvxl4CvgikM5a/zPgiWh5
-HTA8a9uwaF0bn/vc5zIrV67snSglqXytBA7Lt0McJYrBtFYr7Q2cTOjldFDWPmcBS6PlOcB0QnvG
-oUAdsLD9k65cuZJMJpOo28yZM2OPwZjKKy5jMqaevgGf6+xHO44SxVCggZCk+gC/AJ4H7idUO2WA
-t4FLov0bgUei+x3AZVj1JElFE0eiWAocnWP9f8tzzI+jmySpyLweoRelUqm4Q9iFMRUuiXEZU2GM
-qWflum6hVGWi+jZJUoGqqqqgk1xgiUKSlJeJQpKUl4lCkpSXiUKSlJeJQsqhpmYQVVVVVFVVUVMz
-KO5wpFjZ60nKIfQEaf48VeFnS+XKXk+SpG4zUagiWJUk7T6rnlQRulqVZNWTKoVVT5ISZ9asWYwZ
-M4Zx48Yxfvx4Fi7cZTDoHpVKpVi0aFG3nuOJJ57glltu6aGIguuvv55DDjmE/v37t1n/8ccfM23a
-NOrq6pg8eTJ///vfW7Y1NDQwatQoRo0axf3339+y/u2332bSpEnU1dUxffp0tm/f3rLtyiuvpK6u
-jnHjxrF48eIefQ+lKCN1BMhAJrp1/lnp6v4qzJ/+9KfMsccem/nkk08ymUwm8/7772fWr1/fq6+Z
-SqUyixYt6tXX2B0LFizIvPPOO5n99tuvzfo77rgjc+mll2YymUzmV7/6VWbatGmZTCb8rUaOHJnZ
-uHFjZuPGjZmRI0dmNm3alMlkMpmzzz478/DDD2cymUzmO9/5Tuauu+7KZDKZzFNPPZU57bTTMplM
-JjN//vzMpEmTdomDAkbjtkQhqWjeffddBg8eTN++fQEYNGgQQ4cOBeCmm25i4sSJHHnkkVxyySUt
-x6RSKa6++momTJjA5z//eV555RXOOussRo0axQ033ADAqlWrOOKIIzj//PMZPXo0Z599Ntu2bdvl
-9efOnctxxx3HMcccwznnnMOHH364yz633347X/jCFxg3bhznnXceAPfddx9XXHEFAEcddRTjx49n
-/Pjx7LPPPrz00kt8+OGHXHjhhUyaNImjjz6aOXPmdPq3mDhxIgcddNAu6+fMmcOMGTMA+MY3vsHz
-zz8PwLPPPsuUKVMYOHAgAwcO5OSTT+bpp58mk8kwb948vvnNbwIwY8YMHn/8cQB+97vftTzXpEmT
-2LRpExs2bOg0tvZMFFKnqm0I7yFTpkxhzZo1HH744Vx++eW8+OKLLdu++93vsnDhQpYuXcq2bdt4
-8skngVCHvueee/LKK69w6aWXMnXqVO6++27eeOMN7rvvPjZu3AjA8uXLufzyy2lsbKSmpoY777yz
-zWu/9957zJo1i+eff55FixZxzDHHcOutt+4S4y233MKSJUt47bXXuPvuu1tiaLZkyRIWL17MjTfe
-yIQJEzj22GOZNWsWJ510EgsWLOCFF17g+9//Ptu2bWP9+vV87Wtf69LfaN26dQwfHib1rK6uZsCA
-Abz//vusX7+eYcOGtew3bNgw1q1bxwcffMDAgQPp0yf8nNfW1rJuXZgEdP369S3P1XzM2rVruxQP
-mCikAuwglM4zNDVtjDuYkrbvvvuyaNEifvrTn3LggQcybdo0GhoaAHjhhReYPHkyY8eO5YUXXqCx
-sbHluDPOOAOAMWPGMGbMGIYMGUK/fv0YOXIka9asAWD48OEce+yxAJx//vn88Y9/bDk+k8kwf/58
-GhsbOe644xg/fjz3338/q1ev3iXGsWPHct555/HAAw+wxx575HwfK1as4JprruGRRx6hurqauXPn
-Mnv2bMaPH8+JJ57Ixx9/zOrVqzn44IN56qmneuaPl0N2AutIpl1HjEKOaS/uObMlVZg+ffpwwgkn
-cMIJJ3DkkUfS0NDA9OnTueyyy3j11Vepra3lRz/6ER999FHLMXvuuWfLsc3LzY937NgBtP0BzGQy
-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
-/j/mP3W1op/0PwAAAABJRU5ErkJggg==
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAYcAAAERCAYAAACQIWsgAAAABHNCSVQICAgIfAhkiAAAAAlwSFlz
+AAALEgAACxIB0t1+/AAAHgRJREFUeJzt3XuUVNW94PFvY4NPGkQTxBaDrDQagiAaHmoylnFETW4E
+V6Kg1wyJjteoUWc5N0av49DRS4J3VkyWMz5WbvTaJmLEPAxqohi1lsYENAgEbVHMgIAos6KNgkED
+UvPHPtVV3VX9oqvrnKr6ftbqVafOOVW1q7rq/M7ev332BkmSJEmSJEmSJEmSJEmSJKlm7AMsA1YC
+rcD3ovXNwCZgRfR3Rt5jrgXWAmuAGeUqqCSpvPaLbuuBpcBngXnAVUX2HU8IJIOBMcBrwKCBL6Ik
+1a64DrJ/i26HAHsBbdH9uiL7zgTuA3YC6wnBYeoAl0+SalpcwWEQoTawBXgKeClafzmwCrgTGB6t
+O5TQ3JS1CWgsTzElqTbFFRx2A8cAhwH/CUgBtwNHROvfBL7fzeMzA1w+Sapp9TG//rvAI8BngHTe
++h8DD0XLbwCj87YdFq3rYNKkSZlVq1YNTCklqXqtIpyUdxBHzeFgck1G+wKnEnonHZK3z1nA6mh5
+MTCHkJ84AmgCnuv8pKtWrSKTycT6N2/evNjLkJS/Wvoshg49sP17OHTogTX9Wfi9qLzPAphU7EAd
+R81hFNBCCEyDgJ8ATwD3EKJXBlgHXBzt3wosim53AZdis5ISZNu2NrJfyW3bivWpkCpPHMFhNXBs
+kfX/pZvHfDf6kySVgdcLlFAqlYq7CInhZ5HjZ5HjZ5GT9M+imurAmaj9TCqruro6ci2ddfg9VCUJ
+39/CWGDNQZJUwOAgSSpgcJAkFTA4SDFpaBhBXV0ddXV1NDSMiLs4UgcmpKV+2tOEtIlsJYEJaUlS
+rxkcpAFis5Eqmc1KUj911TzUU7ORzUpKApuVJEm9ZnCQVFbz589nwoQJTJo0icmTJ/PccwWDLJdU
+KpVi+fLl/XqOhx56iJtuuqlEJQquu+46Dj/8cIYOHdph/Ycffsjs2bNpampi+vTpvP766+3bWlpa
+GDduHOPGjeOee+5pX79u3TqmTZtGU1MTc+bMYefOne3brrjiCpqampg0aRIrVqwo6XuoFBkpDkAG
+MtEfPa7v7fZq9Ic//CFz/PHHZ/7+979nMplM5u23385s3rx5QF8zlUplli9fPqCvsSeWLVuWefPN
+NzMHHHBAh/W33npr5pJLLslkMpnMz372s8zs2bMzmUz4rMaOHZtpa2vLtLW1ZcaOHZvZunVrJpPJ
+ZM4+++zM/fffn8lkMplvfOMbmdtvvz2TyWQyjzzySOaMM87IZDKZzNKlSzPTpk0rKAddjHJtzUFS
+2bz11lscfPDBDB48GIARI0YwatQoAG688UamTp3K0UcfzcUXX9z+mFQqxVVXXcWUKVP41Kc+xfPP
+P89ZZ53FuHHjuP766wFYv349Rx11FOeffz7jx4/n7LPPZseOHQWvv2TJEk444QSOO+44zjnnHN5/
+//2CfW655RY+/elPM2nSJM477zwA7r77bi6//HIAjjnmGCZPnszkyZPZb7/9eOaZZ3j//fe54IIL
+mDZtGsceeyyLFy/u8bOYOnUqhxxySMH6xYsXM3fuXAC+/OUv88QTTwDw2GOPMWPGDIYPH87w4cM5
+9dRT+e1vf0smk+Gpp57iK1/5CgBz587lwQcfBODXv/51+3NNmzaNrVu3smXLlh7LBgYHqcTq23so
+qdCMGTPYuHEjRx55JJdddhlPP/10+7ZvfvObPPfcc6xevZodO3bw8MMPAyFhuvfee/P8889zySWX
+MHPmTO644w5efPFF7r77btra2gB49dVXueyyy2htbaWhoYHbbrutw2v/9a9/Zf78+TzxxBMsX76c
+4447jptvvrmgjDfddBMrV65k1apV3HHHHe1lyFq5ciUrVqzghhtuYMqUKRx//PHMnz+fU045hWXL
+lvHkk0/yrW99ix07drB582a++MUv9ukzeuONNxg9Okx+WV9fz7Bhw3j77bfZvHkzhx12WPt+hx12
+GG+88QbvvPMOw4cPZ9CgcDhvbGzkjTfCZJmbN29uf67sYzZt2tSrchgcpJLaRail2/OomP3335/l
+y5fzox/9iI997GPMnj2blpYWAJ588kmmT5/OxIkTefLJJ2ltbW1/3JlnngnAhAkTmDBhAiNHjmTI
+kCGMHTuWjRs3AjB69GiOP/54AM4//3x+//vftz8+k8mwdOlSWltbOeGEE5g8eTL33HMPGzZsKCjj
+xIkTOe+887j33nvZa6+9ir6PtWvXcvXVV7No0SLq6+tZsmQJCxYsYPLkyZx88sl8+OGHbNiwgUMP
+PZRHHnmkNB9eEb05CckU7SXXs7jnkJZUYwYNGsRJJ53ESSedxNFHH01LSwtz5szh0ksv5YUXXqCx
+sZHvfOc7fPDBB+2P2Xvvvdsfm13O3t+1axfQ8aCXyWSKHgRPPfVUFi5c2G35HnnkEZ5++mkeeugh
+5s+fz+rVqzscYLdv387s2bP58Y9/zMiRI9vX//KXv6SpqamPn0ahxsbG9sCya9cu3n33XQ466CAa
+GxtJp9Pt+23cuJHPf/7zjBgxgq1bt7J7924GDRrEpk2baGxsbH+ubPAEOmzriTUHSWXz6quvsnbt
+2vb7K1asYMyYMXzwwQfU1dVx0EEHsX37dh544IE+P/eGDRtYunQpAAsXLuRzn/tc+7a6ujqmT5/O
+s88+y1/+8hcA3n///Q5lgRBUNmzYQCqVYsGCBbz77rts3769wz4XXHABX//61znxxBPb15122mnc
+csstHd7XnjrzzDPba1M///nPOeWUU4DQJLdkyRK2bt1KW1sbjz/+OKeddhp1dXWcfPLJ7Z9ZS0sL
+s2bNan+ubK+mpUuXMnz48A4BrTsGB0lls337dr72ta+1J3zXrFlDc3Mzw4YN46KLLmLChAmcfvrp
+TJs2rejju8vnHHnkkdx6662MHz+ed999l0suuaTD9oMPPpi7776bc889l0mTJnHCCSfwyiuvdNjn
+o48+4qtf/SoTJ07k2GOP5corr2TYsGHtr7thwwZ+8YtfcNddd7UnpV944QWuv/56du7cycSJE5kw
+YQLz5s0D6DbncPXVVzN69Gh27NjB6NGjueGGGwC48MILefvtt2lqauKHP/whCxYsAELy/vrrr2fK
+lClMnTqVefPmMXz4cCDkSW6++Waamppoa2vjwgsvBOALX/gCY8eO5ZOf/CQXX3xxQR6mO9WUNct0
+bluTBlJDwwi2bWuL7uWudO5quXjbr1dIl8L69ev50pe+xOrVq+MuSsXxCmmpxEJgKNUBvd5xmPrJ
+HmKlVU2fpjUHlVXuzL/r2kLnmkHH2gbd7iuVQ1c1B4ODtIf2JDh0bkoyOChuSWpW2gdYBqwEWoHv
+RetHAI8DrwJLgOF5j7kWWAusAWaUraSSVKPiqjnsB/yNcJ3F74F/Bs4E/gr8G/Bt4EDgGmA8sBCY
+AjQCvwPGAbs7Pac1B5VV32oOgwkXyNGLfa05qHySVHOAEBgAhgB7AW2E4NASrW8BZkXLM4H7gJ3A
+euA1YGq5CiqVRvbKaakyxBUcBhGalbYATwEvASOj+0S32Ss1DgXyBwPZRKhBSJIGSFzDZ+wGjgGG
+AY8BJ3fa3tPgNEW3NTc3ty+nUilSqVR/yihJVSedTncYhqMrSeitdD2wA/ivQAp4CxhFqFEcRcg7
+ACyIbh8F5hGS2vnMOais+tpbqa89m6RySFLO4WByPZH2BU4FVgCLgbnR+rnAg9HyYmAOIT9xBNAE
+DOzUUZJU4+JoVhpFSDgPiv5+AjxBCBCLgAsJiedzov1bo/WthKzepZjZk6QBlYRmpVKxWUllZbOS
+qkGSmpWkitXQMMKZ3lQTqukbbs1BA6748BfWHFS5rDlIe8jagmpRNX3brTloQPQ8WJ41B1Uuaw6S
+pF4zOEhF2JSkWldN33yblVQyvZ13wWYlVTqblSRJvWZwkCQVMDhIkgoYHCRJBQwOqnn5PZMaGkbE
+XRwpEeytpJrXuWdSJpOxt5Jqhr2VpCqRrelYy9FAsuagmldpNYf8ocL9zqu/rDlIvVLvVdESBgep
+k1040aBkcJAkFWFwkBLKLraKUzU1rpqQ1h4p1+xufU1IF0uUdyyvCWn1nwlpKY9DckvdMzioJm3b
+1kY4+/bMWyrG4CAljt1pFb84gsNo4CngJeBF4IpofTOwCVgR/Z2R95hrgbXAGmBGuQoqxcPutIpf
+HKcnh0R/K4EDgOXALOAcYBtwc6f9xwMLgSlAI/A7YBywu9N+JqTVaz1fAR1vQrrYvoUJ6cGEQAJD
+hx7Ie++90+v3L2UlKSH9FiEwAGwHXiYc9KF4sJoJ3AfsBNYDrwFTB7aIUiXI1jAyUQ5FKp24cw5j
+gMnA0uj+5cAq4E5geLTuUEJzU9YmcsFEkjQA6mN87QOAnwNXEmoQtwM3RNtuBL4PXNjFY4u2HzU3
+N7cvp1IpUqlUaUoqSVUinU6TTqd73C+uLhGDgYeB3wI/LLJ9DPAQcDRwTbRuQXT7KDAPWNbpMeYc
+1GvVkXNwDgj1X5JyDnWEZqNWOgaGUXnLZwGro+XFwBxgCHAE0AQ8N/DFlKTaFUez0onA+cCfCV1W
+Af4FOBc4hnAqtA64ONrWCiyKbncBl2I/P0kaUNV0pY3NSuo1m5WkoKtmpTgT0pJ6zaumVV5xd2WV
+1Cu5axqkcjA4SFXGeSBUCtVUTzXnoF6rxJxD33MSHddLxSSpK6skKeEMDpKkAgYHSVIBg4NqSjZZ
+W33qnfZUJWVwUE3JTQ9abezqqtIyOEiSChgcJEkFDA6SpAIGB0lSAYODJKmAwUGSVMDgIEkqYHCQ
+JBUwOEiSChgcJEkFDA6SpAIGB0lSAYODJKmAwUGqavXOJa09EkdwGA08BbwEvAhcEa0fATwOvAos
+AYbnPeZaYC2wBphRtpKqYmXnbfDAGIbyDkOVS70Xx8wgh0R/K4EDgOXALODrwF+BfwO+DRwIXAOM
+BxYCU4BG4HfAOGB3p+fNOJG6ssKkN9nvQx3Z70Zufcfthcs9bU/Cvn17Ln8fKiaaIKogFsRRc3iL
+EBgAtgMvEw76ZwIt0foWQsAAmAncB+wE1gOvAVPLVFZVkPzagqT+iTvnMAaYDCwDRgJbovVbovsA
+hwKb8h6ziRBMpA5ys7x5hiz1V32Mr30A8AvgSmBbp209/cKLbmtubm5fTqVSpFKpfhVQkqpNOp0m
+nU73uF9c9e/BwMPAb4EfRuvWAClCs9MoQtL6KELeAWBBdPsoMI9Q28hnzqHGdc4zmHPouK+/DxWT
+pJxDHXAn0EouMAAsBuZGy3OBB/PWzwGGAEcATcBzZSmpqkS9uYi8z6C2e2+pt+L4tXwWeBr4M7nT
+m2sJB/xFwOGExPM5wNZo+78AFxD65V0JPFbkea051Ljuag4DfVZeCTWHYjUpqauaQzWdShkcapzB
+weCgvktSs5IkKeEMDpKkAn3pyro/8I/ABGAvYB/CVcrbgaXAAxRetSxJqkC9zTmcShjG4mHgL0We
+YxLwnwlDW6wkHuYcapw5B3MO6rv+JKT3AQ4jDFvRk6OB1X0qWekYHGqcwcHgoL7rT0L6A2BYL18n
+rsAgSSqh3iakr+tmm+McSVKV6W1w2AZcRGECexjw3ZKWSJIUu972VpoL7EcIEL8BPkPouXQcodlJ
+klRFehsczgfeIEy48z3CDG7/Sm7iHUlSFelts9JdwD8TpvFsJIxvtC9hrKPWgSmapIHhIHzqWW+v
+c7gCuKXTuo8TZmmrA35UykLtIbuy1ji7su7JvoMJ53gwdOiBvPfeO6i2DNTAe/sAzxCam+JmcKhR
+DQ0jolngIFkH3koIDl7/UOsGauC9Dwi5Byk2uelBJZVKb4LD3sDB3Wz/dd7y4f0rjiQpCXoTHD4E
+pgPnEbqzFnMg8E/AJ0pULklSjPqScziEMBvbJ4G/EzJZHwF/AzYB/w68W+oC9oE5hxrV+3mh85eT
+mkeIt4z+hmpPVzmHvgzZ/R1gJOF6h8cIcztLkqpQX4LDJOB4wmnG6YSaxFsDUShJUrz60lvpRXL1
+z0eBL5W+OJKkJOhLzeE44EZgFfAssGNASiRJil1fgsMS4E/ApwmD7jUQurj+BHi79EWTJMWlL72V
+ZhFqDeui+3sDM4AzgG8S//zR9laqUfZWKt3r+huqPaW4Qvph4Ky8+x8CDwGX0vfAcBewhY4zxzUT
+usSuiP7OyNt2LbAWWEMISJKkAdTfsZX21OeA7cA9hHmnAeYRJhW6udO+44GFhPGbGskNE945IFlz
+qFHWHEr3uv6Gas9Aja20p54B2oqsLxasZgL3ATuB9cBrwNQBK5kSq6FhhENNS2USV3DoyuWEvMad
+wPBo3aGE5qasTThvdU3KDbCXyRuFVdJA6EtvpYF2O3BDtHwj8H3gwi72LVr3bW5ubl9OpVKkUqnS
+lU6SqkA6nSadTve4X1w5B4AxhIT20T1suyZatyC6fZSQn1jW6THmHKpc58l8sv9vcw6le11/Q7Un
+aTmHYkblLZ9FrifTYmAOMAQ4AmgCnitv0aRaUG8+R+3iala6DziJcBHdRkJNIAUcQziNWQdcHO3b
+CiyKbncRus56elPz6rNnPCqZXYR8jp+r4m1WKjWblapcz3NEJ7vJppLK6G+pdlRCs5IkKSEMDpKk
+AgYHSVIBg4MkqYDBQZJUwOAgSSpgcJAkFTA4SJIKGBwkSQUMDpKkAgYHSVIBg4OkXnEmvtqSpMl+
+JCVYbiY+HLm1BlhzkCQVMDhI6qTe5iPZrCSpszDpD8C2bYOdVKlGWXNQouUnQRWHbKBw8p9aY3BQ
+ouWSoB6cpHIyOEiSChgcJEkFDA6SpAIGB0lSAYODJKlAXMHhLmALsDpv3QjgceBVYAkwPG/btcBa
+YA0wo0xllKSaFVdw+A/g9E7rriEEh3HAE9F9gPHA7Oj2dOA2rPFI0oCK6yD7DNDWad2ZQEu03ALM
+ipZnAvcBO4H1wGvA1IEvoiTVriSdgY8kNDUR3Y6Mlg8FNuXttwloLGO5JKnmJHVspZ4uiS26rbm5
+uX05lUqRSqVKWiiVT0PDiOjqaEmllE6nSafTPe4X54A1Y4CHgKOj+2uAFPAWMAp4CjiKXO5hQXT7
+KDAPWNbp+TKZjEMsVIswllKG8BXN/l97Wi7lvnG9buWU0d9bdYjGLSuIBUlqVloMzI2W5wIP5q2f
+AwwBjgCagOfKXjpJqiFxNSvdB5wEHAxsBP4noWawCLiQkHg+J9q3NVrfShgi8lIcha0q2ZQkJUc1
+jYNss1KFyzUlQfxNJzYr9bSvv7fqUAnNSpKkhDA4KFZO5iMlk8FBsXIyHymZDA6S9kA9dXV1NDSM
+iLsgGiBJvQhOUqKFuaW3bbM5sFpZc5AkFTA4SJIKGBwk9UN9e28z8w/VxZyDpH4IuQfA/EOVseYg
+SSpgcJAkFTA4SJIKGBxUNtmhMkxcSslnQlplkx0qw8SllHzWHCRJBaw5KAb1jsIqJZw1B8Ug2zfe
+kVilpDI4SJIKGBwkSQUMDpKkAgYHSSXiIHzVxN5KkkrEQfiqiTUHDajsVdF2XZUqSxJrDuuB94CP
+gJ3AVGAEcD/wiWj7OcDWeIqnvsheFR0YIKRKkcSaQwZIAZMJgQHgGuBxYBzwRHRfkjRAkhgcoPAU
+80ygJVpuAWaVtziSVFuSGBwywO+APwEXRetGAlui5S3RfUnSAElizuFE4E3gY4SmpDWdtnc57kJz
+c3P7ciqVIpVKDUgBJalSpdNp0ul0j/slPUM4D9hOqEGkgLeAUcBTwFGd9s1kMo7VkzShl1J+QjqT
+d0svluPa1zL2d19/j5Uh6klYEAuS1qy0HzA0Wt4fmAGsBhYDc6P1c4EHy180Sb1X78VwFS5pzUoj
+gV9Fy/XAvcASQv5hEXAhua6skhIrXBDnxXCVq5r+czYrJURDw4jo+oas+Js4qq3JppLK6O8y2Sql
+WUlVIHfhmwcFqVIZHCRJBQwOkqQCBgdJZZc/IKM9mpLJ4CCpLPIDQn5eatu2bQaJBEpaV1ZJVaW+
+03DtxUbotdtrEllzUMlkzwylnOwEQL3pueZMcklizUElk2sqMEBoTziTXJJYc5AkFTA4qF+cBlSq
+TjYrqc+6Hx5DUjWw5qA+c3gMqfoZHNQrNh9JtcXgoF6xtqC4eDV1PMw5SEq03ImJXVzLyeAgKYE6
+X1mtcrNZSVIC9eXKag0Eg4OkCuLc1OVis5KkCuIgfeVizUFA1z1CHExPqk0GhxqRf/CvqxtSEASK
+ja/fcdx9KZmKfbdteuo/m5VqRMeDfB0hCAzuolawC4fEUKUo9t0O6/3u9kcl1RxOB9YAa4Fvx1yW
+KmGPEFWqeq/YH2CVEhz2Av4PIUCMB84FPhVriYpIp9NxFyFB0nEXIEHScRcgQdIlep7en9j0lE+L
+q/kp6ceLSgkOU4HXgPXATuBnwMw4C1RMEv7ZXbW/ll86htdMqnTcBUiQdNlfsad8WscRhssnCceL
+7lRKzqER2Jh3fxMwLaaydPD666+zbNkyAF5++WV27dpFfX18H2tX7a/mDiQonk/LXY09dOiBvPfe
+O3EULHEqpeaQ2EbxH/zgfzN79mxmz57NokWLeOWVVwr26WngsJ6qvR1rAUOK1gyyy5KyejsER66J
+Kr9mUcqeT0lt2upOpRxNpgPNhJwDwLXAbuCmvH1WApPKWyxJqnirgGPiLsSeqgf+AowBhhACQeIS
+0pKk8jsDeIWQmL425rJIkiRJUmn8d0JeJHmZpvL5X8DLhDbNXwLD4i1OLLx4MxgNPAW8BLwIXBFv
+cRJhL2AF8FDcBVH5jAYeBdZR28HhVHI94hZEf7VkL0Iz6BhgMLWdKzuEXNLzAEITca1+FllXAfcC
+i+MuSDGV0pW10twMXB13IRLgcULtCWAZcFiMZYlDRVy8WSZvEYIjwHZCjfLQ+IoTu8OALwA/JqG9
+Rg0OpTeTcJHen+MuSMJcAPwm7kKUWbGLNxtjKkuSjAEmE04YatUPgG+RO3lKnEq5QjppHidUkzu7
+jtCTakbeukSeFZRQV5/Fv5BrS70O+DuwsFyFSojEXrwZowOAnwNXEmoQtegfgP9HyDek4i2KymUC
+sIWQa1hHaEpYD3w8xjLF7WvAs8A+MZcjDtMJuaesa6ntpPRg4DHgv8VdkJh9l1CjXAe8CbwP3BNr
+iVR2tZ6QPp3QO+XguAsSEy/ezKkjHAB/EHdBEuYk7K1Uk/4vtR0c1gKvE6rPK4Db4i1OLLx4M/gs
+oX19Jbnvw+ndPqI2nERCeytJkiRJkiRJkiRJkiRJkiRJkiRJkiQpYZoJEzIl0bM9bB8DrO5i254M
+ZncFYWDE86P7LYTJmY7bg+dSlXBUVlWi7Ei3/Rn1NIkjpmbf14n9eI49eV+3AKcBbwD7Ab8H/r0f
+ZVAVcD4HVYoxhDGKWghnzaOBXwF/Ikw7eVHefi8DP4rWP0ZuRNjroud4Bjgy77mvip5zNWEo6fzX
+XAP8R/S4ewnDsT8LvApM6VTG7wGX5t1vJlc7KVbWzu/rz9H7yp79P9jFYyCc2P0UaAUeAPal0PmE
+ORNWAHfQ/e/9p8BXgbnR+5WkijAG+Igwu1rWgdHtvoQD+4HRfjuBidG2+4F/JDSR/JkQKIYSBgW8
+Km/9vsD+hANxdjrL7HN9mnBW/yfgzmjbmYQDfr5jgHTe/ZfITe7TuazZARmLva9tvXjMbuD46P6d
+5IJQ9rGfIgzotld0/zbCwb8r+wNbgU90s49qiDUHVZLXgefy7l9JGOXzj4Qz7qZo/TpyM/EtJxxM
+P0toR/+AcABdTDjgnxit30EYV/+XwOfyXmMd4SCfiW5/F61/MXrefCsJc3eMAiYBbYSmmu7KWux9
+9fT+IMwH8Mdo+afR+8t3CiHw/YlQc/g8cESR18g6KnpPn+lmH9UQcw6qJO/nLacIB8DphAP+U+Sa
+jz7M2+8jck0u+bPydbec326f/1y7CYnb7HKx388DwFcIs+P9rJuy7t3F+8o6qYfH5JexjuLTTbYQ
+ZuTryceBw4F/Bf4J+EUvHqMqZ81BlaqBcGb+AeGsd3oP+z8NzCLXrPQPhAPsM9H6bLPSrGjdnrof
+OJcQIB7Yw7ICDOvhMYfnrTuPkETO92RUho9F90dEj+lsH8K8578i1IqOi15bNc7goEqSf7b8KOHM
+vZWQCP5j3j6de+xkCE0r9wOrgN+Qa8ZZAdwd3V9K6KWzqovX7Hy/WM+gVsI8yZsIU8Z2V9buXqOn
+x7wCXBZtHwbc3um5WoH/ASyJ3s8SCuf6nkkIhNma0zhCMLqFXK5EkiRJkiRJkiRJkiRJkiRJkiRJ
+kiQpWf4/op4gnQWM6XIAAAAASUVORK5CYII=
 "/>
        </div>
       </div>
@@ -2703,8 +2715,8 @@ P2ft077nT4ZQ/fIw8Brwe1qrehYD90WP5xN6+7zWwWu2f5yrh1EjYQ7ptYTpefPFmu81Ojvmb8Dl
    </div>
    <div class="cell border-box-sizing code_cell rendered">
     <div class="input">
-     <div class="prompt input_prompt" id="in-[22]:">
-      <a class="prompt input_prompt" href="#in-[22]:">
+     <div class="prompt input_prompt" id="in-[22]">
+      <a class="prompt input_prompt" href="#in-[22]">
        In [22]:
       </a>
      </div>
@@ -2721,10 +2733,13 @@ P2ft077nT4ZQ/fIw8Brwe1qrehYD90WP5xN6+7zWwWu2f5yrh1EjYQ7ptYTpefPFmu81Ojvmb8Dl
     <div class="output_wrapper">
      <div class="output">
       <div class="output_area">
-       <div class="prompt">
+       <div class="prompt output_prompt" id="out[22]">
+        <a class="prompt output_prompt" href="#out[22]">
+         Out[22]:
+        </a>
        </div>
-       <div class="output_html rendered_html output_subarea ">
-        <iframe height="525" id="igraph" scrolling="no" seamless="seamless" src="https://plot.ly/~etpinard/236" style="border:none;" width="100%">
+       <div class="output_html rendered_html output_subarea output_pyout">
+        <iframe height="525" id="igraph" scrolling="no" seamless="seamless" src="https://plot.ly/~etpinard/236.embed" style="border:none;" width="100%">
         </iframe>
        </div>
       </div>
@@ -2766,8 +2781,8 @@ P2ft077nT4ZQ/fIw8Brwe1qrehYD90WP5xN6+7zWwWu2f5yrh1EjYQ7ptYTpefPFmu81Ojvmb8Dl
    </div>
    <div class="cell border-box-sizing code_cell rendered">
     <div class="input">
-     <div class="prompt input_prompt" id="in-[23]:">
-      <a class="prompt input_prompt" href="#in-[23]:">
+     <div class="prompt input_prompt" id="in-[23]">
+      <a class="prompt input_prompt" href="#in-[23]">
        In [23]:
       </a>
      </div>
@@ -2778,7 +2793,7 @@ P2ft077nT4ZQ/fIw8Brwe1qrehYD90WP5xN6+7zWwWu2f5yrh1EjYQ7ptYTpefPFmu81Ojvmb8Dl
 <span class="n">py_fig_hist</span> <span class="o">=</span> <span class="n">tls</span><span class="o">.</span><span class="n">mpl_to_plotly</span><span class="p">(</span><span class="n">mpl_fig_hist</span><span class="p">)</span>
 
 <span class="c"># Print the yielded plotly figure object</span>
-<span class="k">print</span> <span class="n">py_fig_hist</span><span class="o">.</span><span class="n">to_string</span><span class="p">()</span>
+<span class="k">print</span><span class="p">(</span><span class="n">py_fig_hist</span><span class="o">.</span><span class="n">to_string</span><span class="p">())</span>
 </pre>
        </div>
       </div>
@@ -2794,8 +2809,8 @@ P2ft077nT4ZQ/fIw8Brwe1qrehYD90WP5xN6+7zWwWu2f5yrh1EjYQ7ptYTpefPFmu81Ojvmb8Dl
 Figure(
     data=Data([
         Bar(
-            x=[-3.7481938100115633, -3.6696312242492404, -3.591068638486917...],
-            y=[1.0, 0.0, 0.0, 1.0, 0.0, 1.0, 1.0, 2.0, 1.0, 4.0, 1.0, 5.0, ...],
+            x=[-4.0300728711721483, -3.9484305111402387, -3.8667881511083.., ],
+            y=[1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 2.0, 0.0, 2.0, 1.0, 1.0, 2.0,   ],
             orientation='v',
             marker=Marker(
                 color='#0000FF',
@@ -2846,13 +2861,13 @@ Figure(
                 size=10.0,
                 color='#000000'
             ),
-            range=[-4.0, 5.0],
+            range=[-5.0, 5.0],
             domain=[0.0, 1.0],
             type='linear',
             showgrid=False,
             zeroline=False,
             showline=True,
-            nticks=10,
+            nticks=7,
             ticks='inside',
             tickfont=Font(
                 size=10.0
@@ -2933,8 +2948,8 @@ Figure(
    </div>
    <div class="cell border-box-sizing code_cell rendered">
     <div class="input">
-     <div class="prompt input_prompt" id="in-[24]:">
-      <a class="prompt input_prompt" href="#in-[24]:">
+     <div class="prompt input_prompt" id="in-[24]">
+      <a class="prompt input_prompt" href="#in-[24]">
        In [24]:
       </a>
      </div>
@@ -3127,8 +3142,8 @@ eMbSr8k2AAAAAElFTkSuQmCC
    </div>
    <div class="cell border-box-sizing code_cell rendered">
     <div class="input">
-     <div class="prompt input_prompt" id="in-[25]:">
-      <a class="prompt input_prompt" href="#in-[25]:">
+     <div class="prompt input_prompt" id="in-[25]">
+      <a class="prompt input_prompt" href="#in-[25]">
        In [25]:
       </a>
      </div>
@@ -3145,10 +3160,13 @@ eMbSr8k2AAAAAElFTkSuQmCC
     <div class="output_wrapper">
      <div class="output">
       <div class="output_area">
-       <div class="prompt">
+       <div class="prompt output_prompt" id="out[25]">
+        <a class="prompt output_prompt" href="#out[25]">
+         Out[25]:
+        </a>
        </div>
-       <div class="output_html rendered_html output_subarea ">
-        <iframe height="525" id="igraph" scrolling="no" seamless="seamless" src="https://plot.ly/~etpinard/259" style="border:none;" width="100%">
+       <div class="output_html rendered_html output_subarea output_pyout">
+        <iframe height="525" id="igraph" scrolling="no" seamless="seamless" src="https://plot.ly/~etpinard/259.embed" style="border:none;" width="100%">
         </iframe>
        </div>
       </div>
@@ -3197,8 +3215,8 @@ eMbSr8k2AAAAAElFTkSuQmCC
    </div>
    <div class="cell border-box-sizing code_cell rendered">
     <div class="input">
-     <div class="prompt input_prompt" id="in-[26]:">
-      <a class="prompt input_prompt" href="#in-[26]:">
+     <div class="prompt input_prompt" id="in-[26]">
+      <a class="prompt input_prompt" href="#in-[26]">
        In [26]:
       </a>
      </div>
@@ -4476,8 +4494,8 @@ SUVORK5CYII=
    </div>
    <div class="cell border-box-sizing code_cell rendered">
     <div class="input">
-     <div class="prompt input_prompt" id="in-[27]:">
-      <a class="prompt input_prompt" href="#in-[27]:">
+     <div class="prompt input_prompt" id="in-[27]">
+      <a class="prompt input_prompt" href="#in-[27]">
        In [27]:
       </a>
      </div>
@@ -4494,10 +4512,13 @@ SUVORK5CYII=
     <div class="output_wrapper">
      <div class="output">
       <div class="output_area">
-       <div class="prompt">
+       <div class="prompt output_prompt" id="out[27]">
+        <a class="prompt output_prompt" href="#out[27]">
+         Out[27]:
+        </a>
        </div>
-       <div class="output_html rendered_html output_subarea ">
-        <iframe height="525" id="igraph" scrolling="no" seamless="seamless" src="https://plot.ly/~etpinard/440" style="border:none;" width="100%">
+       <div class="output_html rendered_html output_subarea output_pyout">
+        <iframe height="525" id="igraph" scrolling="no" seamless="seamless" src="https://plot.ly/~etpinard/440.embed" style="border:none;" width="100%">
         </iframe>
        </div>
       </div>
@@ -4549,8 +4570,8 @@ SUVORK5CYII=
    </div>
    <div class="cell border-box-sizing code_cell rendered">
     <div class="input">
-     <div class="prompt input_prompt" id="in-[28]:">
-      <a class="prompt input_prompt" href="#in-[28]:">
+     <div class="prompt input_prompt" id="in-[28]">
+      <a class="prompt input_prompt" href="#in-[28]">
        In [28]:
       </a>
      </div>
@@ -4565,13 +4586,13 @@ SUVORK5CYII=
 <span class="n">ax1</span> <span class="o">=</span> <span class="n">mpl_fig_splt1</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">211</span><span class="p">)</span>
 <span class="n">ax1</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">*</span><span class="n">t</span><span class="p">),</span> <span class="n">label</span><span class="o">=</span><span class="s">'1 Hz'</span><span class="p">)</span>    <span class="c"># add data, with label</span>
 <span class="n">ax1</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="bp">True</span><span class="p">)</span>                                  <span class="c"># put grid</span>
-<span class="n">ax1</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span> <span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span> <span class="p">)</span>                          <span class="c"># y-axis limit</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">((</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">))</span>                            <span class="c"># y-axis limit</span>
 
 <span class="c"># Similarly for bottom subplot</span>
 <span class="n">ax2</span> <span class="o">=</span> <span class="n">mpl_fig_splt1</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">212</span><span class="p">)</span>
 <span class="n">ax2</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="mi">2</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">*</span><span class="n">t</span><span class="p">),</span> <span class="n">label</span><span class="o">=</span><span class="s">'2 Hz'</span><span class="p">)</span>
 <span class="n">ax2</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="bp">True</span><span class="p">)</span>
-<span class="n">ax2</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span> <span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span> <span class="p">)</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">((</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">))</span>
 
 <span class="c"># Set plot title and x-axis title</span>
 <span class="n">ax1</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s">'Two sine waves'</span><span class="p">)</span>  
@@ -4849,8 +4870,8 @@ PtoAAAAASUVORK5CYII=
    </div>
    <div class="cell border-box-sizing code_cell rendered">
     <div class="input">
-     <div class="prompt input_prompt" id="in-[29]:">
-      <a class="prompt input_prompt" href="#in-[29]:">
+     <div class="prompt input_prompt" id="in-[29]">
+      <a class="prompt input_prompt" href="#in-[29]">
        In [29]:
       </a>
      </div>
@@ -4866,10 +4887,13 @@ PtoAAAAASUVORK5CYII=
     <div class="output_wrapper">
      <div class="output">
       <div class="output_area">
-       <div class="prompt">
+       <div class="prompt output_prompt" id="out[29]">
+        <a class="prompt output_prompt" href="#out[29]">
+         Out[29]:
+        </a>
        </div>
-       <div class="output_html rendered_html output_subarea ">
-        <iframe height="525" id="igraph" scrolling="no" seamless="seamless" src="https://plot.ly/~etpinard/248" style="border:none;" width="100%">
+       <div class="output_html rendered_html output_subarea output_pyout">
+        <iframe height="525" id="igraph" scrolling="no" seamless="seamless" src="https://plot.ly/~etpinard/248.embed" style="border:none;" width="100%">
         </iframe>
        </div>
       </div>
@@ -4892,8 +4916,8 @@ PtoAAAAASUVORK5CYII=
    </div>
    <div class="cell border-box-sizing code_cell rendered">
     <div class="input">
-     <div class="prompt input_prompt" id="in-[30]:">
-      <a class="prompt input_prompt" href="#in-[30]:">
+     <div class="prompt input_prompt" id="in-[30]">
+      <a class="prompt input_prompt" href="#in-[30]">
        In [30]:
       </a>
      </div>
@@ -4904,8 +4928,8 @@ PtoAAAAASUVORK5CYII=
 <span class="n">py_fig_splt1</span> <span class="o">=</span> <span class="n">tls</span><span class="o">.</span><span class="n">mpl_to_plotly</span><span class="p">(</span><span class="n">mpl_fig_splt1</span><span class="p">,</span> <span class="n">strip_style</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">resize</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
 
 <span class="c"># Print the axes' domains</span>
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="p">[</span><span class="s">'xaxis1'</span><span class="p">,</span><span class="s">'yaxis1'</span><span class="p">,</span><span class="s">'xaxis2'</span><span class="p">,</span><span class="s">'yaxis2'</span><span class="p">]:</span>
-    <span class="k">print</span> <span class="n">i</span><span class="p">,</span> <span class="n">py_fig_splt1</span><span class="p">[</span><span class="s">'layout'</span><span class="p">][</span><span class="n">i</span><span class="p">][</span><span class="s">'domain'</span><span class="p">]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="p">[</span><span class="s">'xaxis1'</span><span class="p">,</span> <span class="s">'yaxis1'</span><span class="p">,</span> <span class="s">'xaxis2'</span><span class="p">,</span> <span class="s">'yaxis2'</span><span class="p">]:</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">py_fig_splt1</span><span class="p">[</span><span class="s">'layout'</span><span class="p">][</span><span class="n">i</span><span class="p">][</span><span class="s">'domain'</span><span class="p">])</span>
 </pre>
        </div>
       </div>
@@ -4965,8 +4989,8 @@ yaxis2 [0.0, 0.45454545454545453]
    </div>
    <div class="cell border-box-sizing code_cell rendered">
     <div class="input">
-     <div class="prompt input_prompt" id="in-[31]:">
-      <a class="prompt input_prompt" href="#in-[31]:">
+     <div class="prompt input_prompt" id="in-[31]">
+      <a class="prompt input_prompt" href="#in-[31]">
        In [31]:
       </a>
      </div>
@@ -4974,11 +4998,11 @@ yaxis2 [0.0, 0.45454545454545453]
       <div class="input_area">
        <div class="highlight">
         <pre><span class="c"># Delete 'xaxis2' key</span>
-<span class="n">py_fig_splt1</span><span class="p">[</span><span class="s">'layout'</span><span class="p">]</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s">'xaxis2'</span><span class="p">,</span><span class="bp">None</span><span class="p">)</span>
+<span class="n">py_fig_splt1</span><span class="p">[</span><span class="s">'layout'</span><span class="p">]</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s">'xaxis2'</span><span class="p">,</span> <span class="bp">None</span><span class="p">)</span>
 
 <span class="c"># Delete 'anchor' keys, they have no effet with 'xaxis2'</span>
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="p">[</span><span class="s">'yaxis1'</span><span class="p">,</span><span class="s">'yaxis2'</span><span class="p">]:</span>
-    <span class="n">py_fig_splt1</span><span class="p">[</span><span class="s">'layout'</span><span class="p">][</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s">'anchor'</span><span class="p">,</span><span class="bp">None</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="p">[</span><span class="s">'yaxis1'</span><span class="p">,</span> <span class="s">'yaxis2'</span><span class="p">]:</span>
+    <span class="n">py_fig_splt1</span><span class="p">[</span><span class="s">'layout'</span><span class="p">][</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s">'anchor'</span><span class="p">,</span> <span class="bp">None</span><span class="p">)</span>
 
 <span class="c"># Link both traces to 'xaxis1'</span>
 <span class="n">py_fig_splt1</span><span class="p">[</span><span class="s">'data'</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">xaxis</span><span class="o">=</span><span class="s">'x1'</span><span class="p">)</span>
@@ -4999,10 +5023,13 @@ yaxis2 [0.0, 0.45454545454545453]
     <div class="output_wrapper">
      <div class="output">
       <div class="output_area">
-       <div class="prompt">
+       <div class="prompt output_prompt" id="out[31]">
+        <a class="prompt output_prompt" href="#out[31]">
+         Out[31]:
+        </a>
        </div>
-       <div class="output_html rendered_html output_subarea ">
-        <iframe height="525" id="igraph" scrolling="no" seamless="seamless" src="https://plot.ly/~etpinard/247" style="border:none;" width="100%">
+       <div class="output_html rendered_html output_subarea output_pyout">
+        <iframe height="525" id="igraph" scrolling="no" seamless="seamless" src="https://plot.ly/~etpinard/247.embed" style="border:none;" width="100%">
         </iframe>
        </div>
       </div>
@@ -5022,8 +5049,8 @@ yaxis2 [0.0, 0.45454545454545453]
    </div>
    <div class="cell border-box-sizing code_cell rendered">
     <div class="input">
-     <div class="prompt input_prompt" id="in-[32]:">
-      <a class="prompt input_prompt" href="#in-[32]:">
+     <div class="prompt input_prompt" id="in-[32]">
+      <a class="prompt input_prompt" href="#in-[32]">
        In [32]:
       </a>
      </div>
@@ -5041,23 +5068,23 @@ yaxis2 [0.0, 0.45454545454545453]
 
 <span class="c"># Subplot 1, top over all columns</span>
 <span class="n">ax1</span> <span class="o">=</span> <span class="n">mpl_fig_splt2</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="n">gs</span><span class="p">[</span><span class="mi">0</span><span class="p">,:])</span>
-<span class="n">ax1</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">],</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">10</span><span class="p">],</span> <span class="s">'r-'</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s">'sbplt 1'</span><span class="p">)</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">10</span><span class="p">],</span> <span class="s">'r-'</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s">'sbplt 1'</span><span class="p">)</span>
 
 <span class="c"># Subplot 2, middle height over 2 left-most columns</span>
 <span class="n">ax2</span> <span class="o">=</span> <span class="n">mpl_fig_splt2</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="n">gs</span><span class="p">[</span><span class="mi">1</span><span class="p">,:</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
-<span class="n">ax2</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">16</span><span class="p">],</span> <span class="s">'k-'</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s">'sbplt 2'</span><span class="p">)</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">16</span><span class="p">],</span> <span class="s">'k-'</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s">'sbplt 2'</span><span class="p">)</span>
 
 <span class="c"># Subplot 3, left over 2 bottom-most rows</span>
-<span class="n">ax3</span> <span class="o">=</span> <span class="n">mpl_fig_splt2</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="n">gs</span><span class="p">[</span><span class="mi">1</span><span class="p">:,</span> <span class="mi">2</span><span class="p">])</span>
-<span class="n">ax3</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">100</span><span class="p">,</span><span class="mi">1000</span><span class="p">],</span> <span class="s">'b-'</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s">'sbplt 3'</span><span class="p">)</span>
+<span class="n">ax3</span> <span class="o">=</span> <span class="n">mpl_fig_splt2</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="n">gs</span><span class="p">[</span><span class="mi">1</span><span class="p">:,</span><span class="mi">2</span><span class="p">])</span>
+<span class="n">ax3</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">1000</span><span class="p">],</span> <span class="s">'b-'</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s">'sbplt 3'</span><span class="p">)</span>
 
 <span class="c"># Subplot 4, bottom-left</span>
 <span class="n">ax4</span> <span class="o">=</span> <span class="n">mpl_fig_splt2</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="n">gs</span><span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">0</span><span class="p">])</span>
-<span class="n">ax4</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">],</span> <span class="s">'g-'</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s">'sbplt 4'</span><span class="p">)</span>
+<span class="n">ax4</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="s">'g-'</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s">'sbplt 4'</span><span class="p">)</span>
 
 <span class="c"># Subplot 5, bottom-center</span>
 <span class="n">ax5</span> <span class="o">=</span> <span class="n">mpl_fig_splt2</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="n">gs</span><span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">])</span>
-<span class="n">ax5</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">],</span> <span class="s">'c-'</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s">'sbplt 5'</span><span class="p">)</span>
+<span class="n">ax5</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="s">'c-'</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s">'sbplt 5'</span><span class="p">)</span>
 </pre>
        </div>
       </div>
@@ -5066,14 +5093,14 @@ yaxis2 [0.0, 0.45454545454545453]
     <div class="output_wrapper">
      <div class="output">
       <div class="output_area">
-       <div class="prompt output_prompt" id="out[32]:">
-        <a class="prompt output_prompt" href="#out[32]:">
+       <div class="prompt output_prompt" id="out[32]">
+        <a class="prompt output_prompt" href="#out[32]">
          Out[32]:
         </a>
        </div>
        <div class="output_text output_subarea output_pyout">
         <pre>
-[&lt;matplotlib.lines.Line2D at 0x2b4b02f64050&gt;]
+[&lt;matplotlib.lines.Line2D at 0x7f18d0153a10&gt;]
 </pre>
        </div>
       </div>
@@ -5299,8 +5326,8 @@ FEVRFEVRFEVRFEVRFEVRFEVRFEVRFEVRFEVRFEVRFEVRlE7+P7+eKiEC4Is6AAAAAElFTkSuQmCC
    </div>
    <div class="cell border-box-sizing code_cell rendered">
     <div class="input">
-     <div class="prompt input_prompt" id="in-[33]:">
-      <a class="prompt input_prompt" href="#in-[33]:">
+     <div class="prompt input_prompt" id="in-[33]">
+      <a class="prompt input_prompt" href="#in-[33]">
        In [33]:
       </a>
      </div>
@@ -5317,10 +5344,13 @@ FEVRFEVRFEVRFEVRFEVRFEVRFEVRFEVRFEVRFEVRFEVRlE7+P7+eKiEC4Is6AAAAAElFTkSuQmCC
     <div class="output_wrapper">
      <div class="output">
       <div class="output_area">
-       <div class="prompt">
+       <div class="prompt output_prompt" id="out[33]">
+        <a class="prompt output_prompt" href="#out[33]">
+         Out[33]:
+        </a>
        </div>
-       <div class="output_html rendered_html output_subarea ">
-        <iframe height="525" id="igraph" scrolling="no" seamless="seamless" src="https://plot.ly/~etpinard/243" style="border:none;" width="100%">
+       <div class="output_html rendered_html output_subarea output_pyout">
+        <iframe height="525" id="igraph" scrolling="no" seamless="seamless" src="https://plot.ly/~etpinard/243.embed" style="border:none;" width="100%">
         </iframe>
        </div>
       </div>
@@ -5329,8 +5359,8 @@ FEVRFEVRFEVRFEVRFEVRFEVRFEVRFEVRFEVRFEVRFEVRlE7+P7+eKiEC4Is6AAAAAElFTkSuQmCC
    </div>
    <div class="cell border-box-sizing code_cell rendered">
     <div class="input">
-     <div class="prompt input_prompt" id="in-[34]:">
-      <a class="prompt input_prompt" href="#in-[34]:">
+     <div class="prompt input_prompt" id="in-[34]">
+      <a class="prompt input_prompt" href="#in-[34]">
        In [34]:
       </a>
      </div>
@@ -5347,10 +5377,13 @@ FEVRFEVRFEVRFEVRFEVRFEVRFEVRFEVRFEVRFEVRFEVRlE7+P7+eKiEC4Is6AAAAAElFTkSuQmCC
     <div class="output_wrapper">
      <div class="output">
       <div class="output_area">
-       <div class="prompt">
+       <div class="prompt output_prompt" id="out[34]">
+        <a class="prompt output_prompt" href="#out[34]">
+         Out[34]:
+        </a>
        </div>
-       <div class="output_html rendered_html output_subarea ">
-        <iframe height="525" id="igraph" scrolling="no" seamless="seamless" src="https://plot.ly/~etpinard/245" style="border:none;" width="100%">
+       <div class="output_html rendered_html output_subarea output_pyout">
+        <iframe height="525" id="igraph" scrolling="no" seamless="seamless" src="https://plot.ly/~etpinard/245.embed" style="border:none;" width="100%">
         </iframe>
        </div>
       </div>
@@ -5409,8 +5442,8 @@ FEVRFEVRFEVRFEVRFEVRFEVRFEVRFEVRFEVRFEVRFEVRlE7+P7+eKiEC4Is6AAAAAElFTkSuQmCC
    </div>
    <div class="cell border-box-sizing code_cell rendered">
     <div class="input">
-     <div class="prompt input_prompt" id="in-[35]:">
-      <a class="prompt input_prompt" href="#in-[35]:">
+     <div class="prompt input_prompt" id="in-[35]">
+      <a class="prompt input_prompt" href="#in-[35]">
        In [35]:
       </a>
      </div>
@@ -5420,7 +5453,7 @@ FEVRFEVRFEVRFEVRFEVRFEVRFEVRFEVRFEVRFEVRFEVRlE7+P7+eKiEC4Is6AAAAAElFTkSuQmCC
         <pre><span class="n">mpl_fig_ng</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>         <span class="c"># set new mpl figure obj.</span>
 <span class="n">ax</span> <span class="o">=</span> <span class="n">mpl_fig_ng</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">111</span><span class="p">)</span>  <span class="c"># add axis</span>
 
-<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="mi">10</span><span class="p">,</span><span class="mi">20</span><span class="p">,</span><span class="mi">30</span><span class="p">],[</span><span class="mi">100</span><span class="p">,</span><span class="mi">200</span><span class="p">,</span><span class="mi">300</span><span class="p">],</span> <span class="s">'bo'</span><span class="p">)</span>  <span class="c"># add a few pts too plot</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">],</span> <span class="p">[</span><span class="mi">100</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="mi">300</span><span class="p">],</span> <span class="s">'bo'</span><span class="p">)</span>  <span class="c"># add a few pts too plot</span>
 
 <span class="n">ax</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">35</span><span class="p">)</span>    <span class="c"># set axes limits</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="mi">90</span><span class="p">,</span> <span class="mi">310</span><span class="p">)</span>
@@ -5432,8 +5465,8 @@ FEVRFEVRFEVRFEVRFEVRFEVRFEVRFEVRFEVRFEVRFEVRlE7+P7+eKiEC4Is6AAAAAElFTkSuQmCC
     <div class="output_wrapper">
      <div class="output">
       <div class="output_area">
-       <div class="prompt output_prompt" id="out[35]:">
-        <a class="prompt output_prompt" href="#out[35]:">
+       <div class="prompt output_prompt" id="out[35]">
+        <a class="prompt output_prompt" href="#out[35]">
          Out[35]:
         </a>
        </div>
@@ -5532,8 +5565,8 @@ lP6TJEmSJEmSJEmSJEmSJEmSJEmStFL8H3Iz1zLA7uDpAAAAAElFTkSuQmCC
    </div>
    <div class="cell border-box-sizing code_cell rendered">
     <div class="input">
-     <div class="prompt input_prompt" id="in-[36]:">
-      <a class="prompt input_prompt" href="#in-[36]:">
+     <div class="prompt input_prompt" id="in-[36]">
+      <a class="prompt input_prompt" href="#in-[36]">
        In [36]:
       </a>
      </div>
@@ -5563,8 +5596,8 @@ lP6TJEmSJEmSJEmSJEmSJEmSJEmStFL8H3Iz1zLA7uDpAAAAAElFTkSuQmCC
    </div>
    <div class="cell border-box-sizing code_cell rendered">
     <div class="input">
-     <div class="prompt input_prompt" id="in-[37]:">
-      <a class="prompt input_prompt" href="#in-[37]:">
+     <div class="prompt input_prompt" id="in-[37]">
+      <a class="prompt input_prompt" href="#in-[37]">
        In [37]:
       </a>
      </div>
@@ -5581,8 +5614,8 @@ lP6TJEmSJEmSJEmSJEmSJEmSJEmStFL8H3Iz1zLA7uDpAAAAAElFTkSuQmCC
    </div>
    <div class="cell border-box-sizing code_cell rendered">
     <div class="input">
-     <div class="prompt input_prompt" id="in-[38]:">
-      <a class="prompt input_prompt" href="#in-[38]:">
+     <div class="prompt input_prompt" id="in-[38]">
+      <a class="prompt input_prompt" href="#in-[38]">
        In [38]:
       </a>
      </div>
@@ -5599,8 +5632,8 @@ lP6TJEmSJEmSJEmSJEmSJEmSJEmStFL8H3Iz1zLA7uDpAAAAAElFTkSuQmCC
     <div class="output_wrapper">
      <div class="output">
       <div class="output_area">
-       <div class="prompt output_prompt" id="out[38]:">
-        <a class="prompt output_prompt" href="#out[38]:">
+       <div class="prompt output_prompt" id="out[38]">
+        <a class="prompt output_prompt" href="#out[38]">
          Out[38]:
         </a>
        </div>
@@ -5613,7 +5646,7 @@ lP6TJEmSJEmSJEmSJEmSJEmSJEmStFL8H3Iz1zLA7uDpAAAAAElFTkSuQmCC
     'symbol': 'dot'},
    'mode': 'markers',
    'name': '_line0',
-   'type': 'scatter',
+   'type': u'scatter',
    'x': [10.0, 20.0, 30.0],
    'xaxis': 'x1',
    'y': [100.0, 200.0, 300.0],
@@ -5674,8 +5707,8 @@ lP6TJEmSJEmSJEmSJEmSJEmSJEmStFL8H3Iz1zLA7uDpAAAAAElFTkSuQmCC
    </div>
    <div class="cell border-box-sizing code_cell rendered">
     <div class="input">
-     <div class="prompt input_prompt" id="in-[39]:">
-      <a class="prompt input_prompt" href="#in-[39]:">
+     <div class="prompt input_prompt" id="in-[39]">
+      <a class="prompt input_prompt" href="#in-[39]">
        In [39]:
       </a>
      </div>
@@ -5691,10 +5724,13 @@ lP6TJEmSJEmSJEmSJEmSJEmSJEmStFL8H3Iz1zLA7uDpAAAAAElFTkSuQmCC
     <div class="output_wrapper">
      <div class="output">
       <div class="output_area">
-       <div class="prompt">
+       <div class="prompt output_prompt" id="out[39]">
+        <a class="prompt output_prompt" href="#out[39]">
+         Out[39]:
+        </a>
        </div>
-       <div class="output_html rendered_html output_subarea ">
-        <iframe height="525" id="igraph" scrolling="no" seamless="seamless" src="https://plot.ly/~etpinard/226" style="border:none;" width="100%">
+       <div class="output_html rendered_html output_subarea output_pyout">
+        <iframe height="525" id="igraph" scrolling="no" seamless="seamless" src="https://plot.ly/~etpinard/226.embed" style="border:none;" width="100%">
         </iframe>
        </div>
       </div>
@@ -5714,8 +5750,8 @@ lP6TJEmSJEmSJEmSJEmSJEmSJEmStFL8H3Iz1zLA7uDpAAAAAElFTkSuQmCC
    </div>
    <div class="cell border-box-sizing code_cell rendered">
     <div class="input">
-     <div class="prompt input_prompt" id="in-[40]:">
-      <a class="prompt input_prompt" href="#in-[40]:">
+     <div class="prompt input_prompt" id="in-[40]">
+      <a class="prompt input_prompt" href="#in-[40]">
        In [40]:
       </a>
      </div>
@@ -5739,10 +5775,13 @@ lP6TJEmSJEmSJEmSJEmSJEmSJEmStFL8H3Iz1zLA7uDpAAAAAElFTkSuQmCC
     <div class="output_wrapper">
      <div class="output">
       <div class="output_area">
-       <div class="prompt">
+       <div class="prompt output_prompt" id="out[40]">
+        <a class="prompt output_prompt" href="#out[40]">
+         Out[40]:
+        </a>
        </div>
-       <div class="output_html rendered_html output_subarea ">
-        <iframe height="525" id="igraph" scrolling="no" seamless="seamless" src="https://plot.ly/~etpinard/227" style="border:none;" width="100%">
+       <div class="output_html rendered_html output_subarea output_pyout">
+        <iframe height="525" id="igraph" scrolling="no" seamless="seamless" src="https://plot.ly/~etpinard/227.embed" style="border:none;" width="100%">
         </iframe>
        </div>
       </div>
@@ -5789,7 +5828,7 @@ lP6TJEmSJEmSJEmSJEmSJEmSJEmStFL8H3Iz1zLA7uDpAAAAAElFTkSuQmCC
     <div class="inner_cell">
      <div class="text_cell_render border-box-sizing rendered_html">
       <div style="float:right; \">
-       <img align="right" src="/static/api_docs/image/user_guide/python/image07.png" style="float:right; margin-left: 5px; margin-top: -10px"/>
+       <img align="right" src="/static/api_docs/image/user_guide/python/image06.png" style="float:right; margin-left: 5px; margin-top: -10px"/>
       </div>
       <h4>
        Got Questions or Feedback?

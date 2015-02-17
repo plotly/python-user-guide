@@ -38,11 +38,6 @@
          homepage
         </a>
         <br/>
-        If unfamiliar with Plotly's Python API version 1.0 see
-        <a href="/python/overview">
-         section 0
-        </a>
-        <br/>
         The Github repository is available
         <a href="https://github.com/plotly/python-user-guide" target="_blank">
          here
@@ -108,9 +103,6 @@
     <div class="inner_cell">
      <div class="text_cell_render border-box-sizing rendered_html">
       <p>
-       The User Guide assumes version 1.0 and up of Plotly's Python API.
-      </p>
-      <p>
        Check which version is installed on your machine and please upgrade if needed.
       </p>
      </div>
@@ -118,8 +110,8 @@
    </div>
    <div class="cell border-box-sizing code_cell rendered">
     <div class="input">
-     <div class="prompt input_prompt" id="in-[1]:">
-      <a class="prompt input_prompt" href="#in-[1]:">
+     <div class="prompt input_prompt" id="in-[1]">
+      <a class="prompt input_prompt" href="#in-[1]">
        In [1]:
       </a>
      </div>
@@ -130,7 +122,7 @@
 <span class="kn">import</span> <span class="nn">plotly</span>
  
 <span class="c"># Check plolty version (if not latest, please upgrade)</span>
-<span class="k">print</span> <span class="n">plotly</span><span class="o">.</span><span class="n">__version__</span>
+<span class="n">plotly</span><span class="o">.</span><span class="n">__version__</span>
 </pre>
        </div>
       </div>
@@ -139,12 +131,14 @@
     <div class="output_wrapper">
      <div class="output">
       <div class="output_area">
-       <div class="prompt">
+       <div class="prompt output_prompt" id="out[1]">
+        <a class="prompt output_prompt" href="#out[1]">
+         Out[1]:
+        </a>
        </div>
-       <div class="output_subarea output_stream output_stdout output_text">
+       <div class="output_text output_subarea output_pyout">
         <pre>
-1.2.3
-
+'1.6.6'
 </pre>
        </div>
       </div>
@@ -165,8 +159,8 @@
    </div>
    <div class="cell border-box-sizing code_cell rendered">
     <div class="input">
-     <div class="prompt input_prompt" id="in-[2]:">
-      <a class="prompt input_prompt" href="#in-[2]:">
+     <div class="prompt input_prompt" id="in-[2]">
+      <a class="prompt input_prompt" href="#in-[2]">
        In [2]:
       </a>
      </div>
@@ -221,8 +215,8 @@
    </div>
    <div class="cell border-box-sizing code_cell rendered">
     <div class="input">
-     <div class="prompt input_prompt" id="in-[3]:">
-      <a class="prompt input_prompt" href="#in-[3]:">
+     <div class="prompt input_prompt" id="in-[3]">
+      <a class="prompt input_prompt" href="#in-[3]">
        In [3]:
       </a>
      </div>
@@ -327,8 +321,8 @@
    </div>
    <div class="cell border-box-sizing code_cell rendered">
     <div class="input">
-     <div class="prompt input_prompt" id="in-[4]:">
-      <a class="prompt input_prompt" href="#in-[4]:">
+     <div class="prompt input_prompt" id="in-[4]">
+      <a class="prompt input_prompt" href="#in-[4]">
        In [4]:
       </a>
      </div>
@@ -351,9 +345,16 @@
 Help on class Stream in module plotly.graph_objs.graph_objs:
 
 class Stream(PlotlyDict)
- |  A dictionary-like object representing a data stream.
+ |  A dictionary-like object containing specifications of the data stream.
  |  
- |      
+ |  Online example:
+ |  
+ |      https://plot.ly/python/streaming/
+ |  
+ |  Parent key:
+ |  
+ |      stream
+ |  
  |  Quick method reference:
  |  
  |      Stream.update(changes)
@@ -368,10 +369,10 @@ class Stream(PlotlyDict)
  |  
  |      token [required=True] (value=A stream id number, see
  |      https://plot.ly/settings):
- |          This number links a data object on a plot with a stream. In other
- |          words, any data object you create can reference a 'stream'. If you
- |          stream data to Plotly with the same stream id (token), Plotly knows
- |          update this data object with the incoming data stream.
+ |          The stream id number links a data trace on a plot with a stream. In
+ |          other words, any data trace you create can reference a 'stream'. If
+ |          you stream data to Plotly with the same stream id (token), Plotly
+ |          knows update this data object with the incoming data stream.
  |  
  |      maxpoints [required=False] (value=number: x &gt; 0):
  |          Sets the maximum number of points to keep on the plots from an
@@ -387,6 +388,8 @@ class Stream(PlotlyDict)
  |  Methods inherited from PlotlyDict:
  |  
  |  __init__(self, *args, **kwargs)
+ |  
+ |  __setitem__(self, key, value)
  |  
  |  force_clean(self, caller=True)
  |      Attempts to convert to graph_objs and call force_clean() on values.
@@ -409,7 +412,7 @@ class Stream(PlotlyDict)
  |      stripping process, though they made be left empty. This is allowable.
  |      
  |      Keys that will be stripped in this process are tagged with
- |      `'type': 'style'` in the INFO dictionary listed in graph_objs_meta.py.
+ |      `'type': 'style'` in graph_objs_meta.json.
  |      
  |      This process first attempts to convert nested collections from dicts
  |      or lists to subclasses of PlotlyList/PlotlyDict. This process forces
@@ -430,17 +433,16 @@ class Stream(PlotlyDict)
  |  to_string(self, level=0, indent=4, eol='\n', pretty=True, max_chars=80)
  |      Returns a formatted string showing graph_obj constructors.
  |      
- |              Example:
+ |      Example:
  |      
- |                  print obj.to_string()
+ |          print(obj.to_string())
  |      
- |              Keyword arguments:
- |              level (default = 0) -- set number of indentations to start with
- |              indent (default = 4) -- set indentation amount
- |              eol (default = '
- |      ') -- set end of line character(s)
- |              pretty (default = True) -- curtail long list output with a '...'
- |              max_chars (default = 80) -- set max characters per line
+ |      Keyword arguments:
+ |      level (default = 0) -- set number of indentations to start with
+ |      indent (default = 4) -- set indentation amount
+ |      eol (default = '\n') -- set end of line character(s)
+ |      pretty (default = True) -- curtail long list output with a '...'
+ |      max_chars (default = 80) -- set max characters per line
  |  
  |  update(self, dict1=None, **dict2)
  |      Update current dict with dict1 and then dict2.
@@ -474,7 +476,7 @@ class Stream(PlotlyDict)
  |      Recursively check the validity of the keys in a PlotlyDict.
  |      
  |      The valid keys constitute the entries in each object
- |      dictionary in INFO stored in graph_objs_meta.py.
+ |      dictionary in graph_objs_meta.json
  |      
  |      The validation process first requires that all nested collections be
  |      converted to the appropriate subclass of PlotlyDict/PlotlyList. Then,
@@ -534,9 +536,6 @@ class Stream(PlotlyDict)
  |  
  |  __repr__(...)
  |      x.__repr__() &lt;==&gt; repr(x)
- |  
- |  __setitem__(...)
- |      x.__setitem__(i, y) &lt;==&gt; x[i]=y
  |  
  |  __sizeof__(...)
  |      D.__sizeof__() -&gt; size of D in memory, in bytes
@@ -612,8 +611,8 @@ class Stream(PlotlyDict)
    </div>
    <div class="cell border-box-sizing code_cell rendered">
     <div class="input">
-     <div class="prompt input_prompt" id="in-[5]:">
-      <a class="prompt input_prompt" href="#in-[5]:">
+     <div class="prompt input_prompt" id="in-[5]">
+      <a class="prompt input_prompt" href="#in-[5]">
        In [5]:
       </a>
      </div>
@@ -696,8 +695,8 @@ class Stream(PlotlyDict)
    </div>
    <div class="cell border-box-sizing code_cell rendered">
     <div class="input">
-     <div class="prompt input_prompt" id="in-[6]:">
-      <a class="prompt input_prompt" href="#in-[6]:">
+     <div class="prompt input_prompt" id="in-[6]">
+      <a class="prompt input_prompt" href="#in-[6]">
        In [6]:
       </a>
      </div>
@@ -732,8 +731,8 @@ class Stream(PlotlyDict)
    </div>
    <div class="cell border-box-sizing code_cell rendered">
     <div class="input">
-     <div class="prompt input_prompt" id="in-[7]:">
-      <a class="prompt input_prompt" href="#in-[7]:">
+     <div class="prompt input_prompt" id="in-[7]">
+      <a class="prompt input_prompt" href="#in-[7]">
        In [7]:
       </a>
      </div>
@@ -763,7 +762,7 @@ class Stream(PlotlyDict)
        Great! Your Plotly streaming plot is intialized. Here's a screenshot:
       </p>
       <p>
-       <img src="/static/api_docs/image/user_guide/python/image15.png"/>
+       <img src="/static/api_docs/image/user_guide/python/image14.png"/>
       </p>
       <p>
        <br/>
@@ -783,8 +782,8 @@ class Stream(PlotlyDict)
    </div>
    <div class="cell border-box-sizing code_cell rendered">
     <div class="input">
-     <div class="prompt input_prompt" id="in-[8]:">
-      <a class="prompt input_prompt" href="#in-[8]:">
+     <div class="prompt input_prompt" id="in-[8]">
+      <a class="prompt input_prompt" href="#in-[8]">
        In [8]:
       </a>
      </div>
@@ -818,19 +817,20 @@ class Stream
  |  Every viewer of the graph sees the same data at the same time.
  |  
  |  View examples and tutorials here:
- |  http://nbviewer.ipython.org/github/plotly/python-user-guide/blob/master/s7_streaming/s7_streaming.ipynb
+ |  https://plot.ly/python/streaming/
  |  
  |  Stream example:
  |  # Initialize a streaming graph
  |  # by embedding stream_id's in the graph's traces
- |  &gt;&gt;&gt; stream_id = "your_stream_id" # See https://plot.ly/settings
- |  &gt;&gt;&gt; py.plot(Data([Scatter(x=[],
- |                            y=[],
- |                            stream=dict(token=stream_id, maxpoints=100))])
+ |  import plotly.plotly as py
+ |  from plotly.graph_objs import Data, Scatter, Stream
+ |  stream_id = "your_stream_id" # See https://plot.ly/settings
+ |  py.plot(Data([Scatter(x=[], y=[],
+ |                        stream=Stream(token=stream_id, maxpoints=100))]))
  |  # Stream data to the import trace
- |  &gt;&gt;&gt; stream = Stream(stream_id) # Initialize a stream object
- |  &gt;&gt;&gt; stream.open() # Open the stream
- |  &gt;&gt;&gt; stream.write(dict(x=1, y=1)) # Plot (1, 1) in your graph
+ |  stream = Stream(stream_id) # Initialize a stream object
+ |  stream.open() # Open the stream
+ |  stream.write(dict(x=1, y=1)) # Plot (1, 1) in your graph
  |  
  |  Methods defined here:
  |  
@@ -840,21 +840,28 @@ class Stream
  |      
  |      For more help, see: `help(plotly.plotly.Stream)`
  |      or see examples and tutorials here:
- |      http://nbviewer.ipython.org/github/plotly/python-user-guide/blob/master/s7_streaming/s7_streaming.ipynb
+ |      https://plot.ly/python/streaming/
  |  
  |  close(self)
  |      Close the stream connection to plotly's streaming servers.
  |      
  |      For more help, see: `help(plotly.plotly.Stream)`
  |      or see examples and tutorials here:
- |      http://nbviewer.ipython.org/github/plotly/python-user-guide/blob/master/s7_streaming/s7_streaming.ipynb
+ |      https://plot.ly/python/streaming/
+ |  
+ |  heartbeat(self, reconnect_on=(200, '', 408))
+ |      Keep stream alive. Streams will close after ~1 min of inactivity.
+ |      
+ |      If the interval between stream writes is &gt; 30 seconds, you should
+ |      consider adding a heartbeat between your stream.write() calls like so:
+ |      &gt;&gt;&gt; stream.heartbeat()
  |  
  |  open(self)
  |      Open streaming connection to plotly.
  |      
  |      For more help, see: `help(plotly.plotly.Stream)`
  |      or see examples and tutorials here:
- |      http://nbviewer.ipython.org/github/plotly/python-user-guide/blob/master/s7_streaming/s7_streaming.ipynb
+ |      https://plot.ly/python/streaming/
  |  
  |  write(self, trace, layout=None, validate=True, reconnect_on=(200, '', 408))
  |      Write to an open stream.
@@ -902,8 +909,8 @@ class Stream
    </div>
    <div class="cell border-box-sizing code_cell rendered">
     <div class="input">
-     <div class="prompt input_prompt" id="in-[9]:">
-      <a class="prompt input_prompt" href="#in-[9]:">
+     <div class="prompt input_prompt" id="in-[9]">
+      <a class="prompt input_prompt" href="#in-[9]">
        In [9]:
       </a>
      </div>
@@ -938,8 +945,8 @@ class Stream
    </div>
    <div class="cell border-box-sizing code_cell rendered">
     <div class="input">
-     <div class="prompt input_prompt" id="in-[10]:">
-      <a class="prompt input_prompt" href="#in-[10]:">
+     <div class="prompt input_prompt" id="in-[10]">
+      <a class="prompt input_prompt" href="#in-[10]">
        In [10]:
       </a>
      </div>
@@ -961,13 +968,13 @@ class Stream
     <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>   <span class="c"># add to counter</span>
     
     <span class="c"># Current time on x-axis, random numbers on y-axis</span>
-    <span class="n">x</span><span class="o">=</span><span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s">'%Y-%m-</span><span class="si">%d</span><span class="s"> %H:%M:%S.</span><span class="si">%f</span><span class="s">'</span><span class="p">)</span>
-    <span class="n">y</span><span class="o">=</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">k</span><span class="o">*</span><span class="n">i</span><span class="o">/</span><span class="mf">50.</span><span class="p">)</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">i</span><span class="o">/</span><span class="mf">50.</span><span class="p">)</span><span class="o">+</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">1</span><span class="p">))[</span><span class="mi">0</span><span class="p">]</span> 
+    <span class="n">x</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s">'%Y-%m-</span><span class="si">%d</span><span class="s"> %H:%M:%S.</span><span class="si">%f</span><span class="s">'</span><span class="p">)</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">k</span><span class="o">*</span><span class="n">i</span><span class="o">/</span><span class="mf">50.</span><span class="p">)</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">i</span><span class="o">/</span><span class="mf">50.</span><span class="p">)</span><span class="o">+</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">1</span><span class="p">))[</span><span class="mi">0</span><span class="p">]</span> 
     
     <span class="c"># (-) Both x and y are numbers (i.e. not lists nor arrays)</span>
     
     <span class="c"># (@) write to Plotly stream!</span>
-    <span class="n">s</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="nb">dict</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="o">=</span><span class="n">y</span><span class="p">))</span>  
+    <span class="n">s</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="nb">dict</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">y</span><span class="p">))</span>  
     
     <span class="c"># (!) Write numbers to stream to append current data on plot,</span>
     <span class="c">#     write lists to overwrite existing data on plot (more in 7.2).</span>
@@ -991,15 +998,15 @@ class Stream
        A stream of data totalling 200 points is sent to Plotly's servers in real-time.
       </p>
       <p>
-       Whatching this unfold in an opened plot.ly tab looks something like:
+       Whatching this unfold in an opened plot.ly tab looks something like (in the old UI):
       </p>
      </div>
     </div>
    </div>
    <div class="cell border-box-sizing code_cell rendered">
     <div class="input">
-     <div class="prompt input_prompt" id="in-[11]:">
-      <a class="prompt input_prompt" href="#in-[11]:">
+     <div class="prompt input_prompt" id="in-[11]">
+      <a class="prompt input_prompt" href="#in-[11]">
        In [11]:
       </a>
      </div>
@@ -1016,8 +1023,8 @@ class Stream
     <div class="output_wrapper">
      <div class="output">
       <div class="output_area">
-       <div class="prompt output_prompt" id="out[11]:">
-        <a class="prompt output_prompt" href="#out[11]:">
+       <div class="prompt output_prompt" id="out[11]">
+        <a class="prompt output_prompt" href="#out[11]">
          Out[11]:
         </a>
        </div>
@@ -1056,8 +1063,8 @@ class Stream
    </div>
    <div class="cell border-box-sizing code_cell rendered">
     <div class="input">
-     <div class="prompt input_prompt" id="in-[12]:">
-      <a class="prompt input_prompt" href="#in-[12]:">
+     <div class="prompt input_prompt" id="in-[12]">
+      <a class="prompt input_prompt" href="#in-[12]">
        In [12]:
       </a>
      </div>
@@ -1077,10 +1084,13 @@ class Stream
     <div class="output_wrapper">
      <div class="output">
       <div class="output_area">
-       <div class="prompt">
+       <div class="prompt output_prompt" id="out[12]">
+        <a class="prompt output_prompt" href="#out[12]">
+         Out[12]:
+        </a>
        </div>
-       <div class="output_html rendered_html output_subarea ">
-        <iframe height="525" id="igraph" scrolling="no" seamless="seamless" src="https://plot.ly/~streaming-demos/12" style="border:none;" width="100%">
+       <div class="output_html rendered_html output_subarea output_pyout">
+        <iframe height="525" id="igraph" scrolling="no" seamless="seamless" src="https://plot.ly/~streaming-demos/12.embed" style="border:none;" width="100%">
         </iframe>
        </div>
       </div>
@@ -1236,7 +1246,7 @@ that the graphs are plotting identical data!).
     <div class="inner_cell">
      <div class="text_cell_render border-box-sizing rendered_html">
       <div style="float:right; \">
-       <img align="right" src="/static/api_docs/image/user_guide/python/image07.png" style="float:right; margin-left: 5px; margin-top: -10px"/>
+       <img align="right" src="/static/api_docs/image/user_guide/python/image06.png" style="float:right; margin-left: 5px; margin-top: -10px"/>
       </div>
       <h4>
        Got Questions or Feedback?

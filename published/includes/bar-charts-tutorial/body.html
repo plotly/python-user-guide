@@ -38,11 +38,6 @@
          homepage
         </a>
         <br/>
-        If unfamiliar with Plotly's Python API version 1.0 see
-        <a href="/python/overview">
-         section 0
-        </a>
-        <br/>
         The Github repository is available
         <a href="https://github.com/plotly/python-user-guide" target="_blank">
          here
@@ -105,8 +100,8 @@
 &gt;&gt;&gt; from plotly.graph_objs import *
 &gt;&gt;&gt; # auto sign-in with credentials or use py.sign_in()
 &gt;&gt;&gt; trace1 = Bar(
-        x=['cats','dogs','monkeys'],
-        y=[20,14,23]
+        x=['cats', 'dogs', 'monkeys'],
+        y=[20, 14, 23]
     )
 &gt;&gt;&gt; data = Data([trace1])
 &gt;&gt;&gt; py.plot(data)
@@ -121,9 +116,6 @@
     <div class="inner_cell">
      <div class="text_cell_render border-box-sizing rendered_html">
       <p>
-       The User Guide assumes version 1.0 and up of Plotly's Python API.
-      </p>
-      <p>
        Check which version is installed on your machine and please upgrade if needed.
       </p>
      </div>
@@ -131,8 +123,8 @@
    </div>
    <div class="cell border-box-sizing code_cell rendered">
     <div class="input">
-     <div class="prompt input_prompt" id="in-[1]:">
-      <a class="prompt input_prompt" href="#in-[1]:">
+     <div class="prompt input_prompt" id="in-[1]">
+      <a class="prompt input_prompt" href="#in-[1]">
        In [1]:
       </a>
      </div>
@@ -143,7 +135,7 @@
 <span class="kn">import</span> <span class="nn">plotly</span>
 
 <span class="c"># Check plolty version (if not latest, please upgrade)</span>
-<span class="k">print</span> <span class="n">plotly</span><span class="o">.</span><span class="n">__version__</span>
+<span class="n">plotly</span><span class="o">.</span><span class="n">__version__</span>
 </pre>
        </div>
       </div>
@@ -152,12 +144,14 @@
     <div class="output_wrapper">
      <div class="output">
       <div class="output_area">
-       <div class="prompt">
+       <div class="prompt output_prompt" id="out[1]">
+        <a class="prompt output_prompt" href="#out[1]">
+         Out[1]:
+        </a>
        </div>
-       <div class="output_subarea output_stream output_stdout output_text">
+       <div class="output_text output_subarea output_pyout">
         <pre>
-1.2.3
-
+'1.6.6'
 </pre>
        </div>
       </div>
@@ -228,8 +222,8 @@ We also explore
    </div>
    <div class="cell border-box-sizing code_cell rendered">
     <div class="input">
-     <div class="prompt input_prompt" id="in-[2]:">
-      <a class="prompt input_prompt" href="#in-[2]:">
+     <div class="prompt input_prompt" id="in-[2]">
+      <a class="prompt input_prompt" href="#in-[2]">
        In [2]:
       </a>
      </div>
@@ -315,8 +309,8 @@ For readers looking to run this notebook, these files are in this section's Gith
    </div>
    <div class="cell border-box-sizing code_cell rendered">
     <div class="input">
-     <div class="prompt input_prompt" id="in-[3]:">
-      <a class="prompt input_prompt" href="#in-[3]:">
+     <div class="prompt input_prompt" id="in-[3]">
+      <a class="prompt input_prompt" href="#in-[3]">
        In [3]:
       </a>
      </div>
@@ -334,7 +328,7 @@ For readers looking to run this notebook, these files are in this section's Gith
 <span class="sd">    pos. arg (1) filepath: relative path to csv file </span>
 <span class="sd">    pos. arg (2) row_id: id of row requested, found in first column (a string)</span>
 <span class="sd">    '''</span>
-    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">filepath</span><span class="p">,</span><span class="s">'r'</span><span class="p">)</span> <span class="k">as</span> <span class="n">data_file</span><span class="p">:</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">filepath</span><span class="p">,</span> <span class="s">'r'</span><span class="p">)</span> <span class="k">as</span> <span class="n">data_file</span><span class="p">:</span>
         <span class="n">reader</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">reader</span><span class="p">(</span><span class="n">data_file</span><span class="p">)</span>        <span class="c"># define reader object</span>
         <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">reader</span><span class="p">:</span>                    <span class="c"># loop through rows in csv file</span>
             <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">row</span><span class="p">)</span> <span class="ow">and</span> <span class="n">row_id</span> <span class="ow">in</span> <span class="n">row</span><span class="p">[</span><span class="mi">0</span><span class="p">]:</span> <span class="c"># test for empty lines and row id</span>
@@ -414,8 +408,8 @@ they are added on to the bars with the
    </div>
    <div class="cell border-box-sizing code_cell rendered">
     <div class="input">
-     <div class="prompt input_prompt" id="in-[4]:">
-      <a class="prompt input_prompt" href="#in-[4]:">
+     <div class="prompt input_prompt" id="in-[4]">
+      <a class="prompt input_prompt" href="#in-[4]">
        In [4]:
       </a>
      </div>
@@ -423,15 +417,15 @@ they are added on to the bars with the
       <div class="input_area">
        <div class="highlight">
         <pre><span class="c"># Make a list of month names</span>
-<span class="n">months</span> <span class="o">=</span> <span class="p">[</span><span class="s">'Jan'</span><span class="p">,</span><span class="s">'Feb'</span><span class="p">,</span><span class="s">'Mar'</span><span class="p">,</span><span class="s">'Apr'</span><span class="p">,</span><span class="s">'May'</span><span class="p">,</span><span class="s">'Jun'</span><span class="p">,</span>
-          <span class="s">'Jul'</span><span class="p">,</span><span class="s">'Aug'</span><span class="p">,</span><span class="s">'Sep'</span><span class="p">,</span><span class="s">'Oct'</span><span class="p">,</span><span class="s">'Nov'</span><span class="p">,</span><span class="s">'Dec'</span><span class="p">]</span>
+<span class="n">months</span> <span class="o">=</span> <span class="p">[</span><span class="s">'Jan'</span><span class="p">,</span> <span class="s">'Feb'</span><span class="p">,</span> <span class="s">'Mar'</span><span class="p">,</span> <span class="s">'Apr'</span><span class="p">,</span> <span class="s">'May'</span><span class="p">,</span> <span class="s">'Jun'</span><span class="p">,</span>
+          <span class="s">'Jul'</span><span class="p">,</span> <span class="s">'Aug'</span><span class="p">,</span> <span class="s">'Sep'</span><span class="p">,</span> <span class="s">'Oct'</span><span class="p">,</span> <span class="s">'Nov'</span><span class="p">,</span> <span class="s">'Dec'</span><span class="p">]</span>
 
 <span class="c"># Get a 1d-array of daily average temperatures, </span>
 <span class="c">#  1 entry per month using get_csv_data()</span>
-<span class="n">T_avg</span> <span class="o">=</span> <span class="n">get_csv_data</span><span class="p">(</span><span class="s">'montreal.csv'</span><span class="p">,</span><span class="s">'Daily Average'</span><span class="p">)</span>
+<span class="n">T_avg</span> <span class="o">=</span> <span class="n">get_csv_data</span><span class="p">(</span><span class="s">'montreal.csv'</span><span class="p">,</span> <span class="s">'Daily Average'</span><span class="p">)</span>
 
 <span class="c"># Similarly, get a 1d-array of daily temperature standard deviations</span>
-<span class="n">T_std</span> <span class="o">=</span> <span class="n">get_csv_data</span><span class="p">(</span><span class="s">'montreal.csv'</span><span class="p">,</span><span class="s">'Standard Deviation'</span><span class="p">)</span>
+<span class="n">T_std</span> <span class="o">=</span> <span class="n">get_csv_data</span><span class="p">(</span><span class="s">'montreal.csv'</span><span class="p">,</span> <span class="s">'Standard Deviation'</span><span class="p">)</span>
 </pre>
        </div>
       </div>
@@ -455,8 +449,8 @@ they are added on to the bars with the
    </div>
    <div class="cell border-box-sizing code_cell rendered">
     <div class="input">
-     <div class="prompt input_prompt" id="in-[5]:">
-      <a class="prompt input_prompt" href="#in-[5]:">
+     <div class="prompt input_prompt" id="in-[5]">
+      <a class="prompt input_prompt" href="#in-[5]">
        In [5]:
       </a>
      </div>
@@ -479,13 +473,16 @@ they are added on to the bars with the
 Help on class Bar in module plotly.graph_objs.graph_objs:
 
 class Bar(PlotlyTrace)
- |  A dictionary-like object for representing a bar chart in plotly.
+ |  A dictionary-like object for representing a bar trace in plotly.
  |  
- |      Example:
+ |  Example:
  |  
- |      py.plot([Bar(x=['yesterday', 'today', 'tomorrow'], y=[5, 4, 10])])
+ |      &gt;&gt;&gt; py.plot([Bar(x=['yesterday', 'today', 'tomorrow'], y=[5, 4, 10])])
  |  
- |      
+ |  Online example:
+ |  
+ |      https://plot.ly/python/bar-charts/
+ |  
  |  Quick method reference:
  |  
  |      Bar.update(changes)
@@ -498,55 +495,58 @@ class Bar(PlotlyTrace)
  |  
  |  Valid keys:
  |  
- |      x [required= when 'y' is unset] (value=array-like of numbers, strings,
- |      datetimes) (streamable):
- |          The x coordinates of the bars. If 'x' is linked to an list or array
- |          of strings, then the x coordinates are integers [0,1,2,3, ...]
- |          labeled on the x-axis by the list or array of strings linked to 'x'.
- |          If 'y' is not set, the bars are plotted horizontally, with their
- |          length determined by the list or array linked to 'x'.
+ |      x [required= when 'y' is unset] (value=list or 1d numpy array of
+ |      numbers, strings, datetimes) (streamable):
+ |          Sets the x coordinates of the bars. If 'x' is linked to a list or 1d
+ |          numpy array of strings, then the x coordinates are integers, 0, 1,
+ |          2, 3, ..., labeled on the x-axis by the list or 1d numpy array of
+ |          strings linked to 'x'. If 'y' is not set, the bars are plotted
+ |          horizontally, with their length determined by the list or 1d numpy
+ |          array linked to 'x'.
  |  
- |      y [required= when 'x' is unset] (value=array-like of numbers, strings,
- |      datetimes) (streamable):
- |          The y coordinates of the bars. If 'y' is linked to an list or array
- |          of strings, then the y coordinates are integers [0,1,2,3, ...]
- |          labeled on the y-axis by the list or array of strings linked to 'y'.
- |          If 'x' is not set, the bars are plotted vertically, with their
- |          length determined by the list or array linked to 'y'.
+ |      y [required= when 'x' is unset] (value=list or 1d numpy array of
+ |      numbers, strings, datetimes) (streamable):
+ |          Sets the y coordinates of the bars. If 'y' is linked to a list or 1d
+ |          numpy array of strings, then the y coordinates are integers, 0, 1,
+ |          2, 3, ..., labeled on the y-axis by the list or 1d numpy array of
+ |          strings linked to 'y'. If 'x' is not set, the bars are plotted
+ |          vertically, with their length determined by the list or 1d numpy
+ |          array linked to 'y'.
  |  
- |      name [required=False] (value=string):
+ |      name [required=False] (value=a string):
  |          The label associated with this trace. This name will appear in the
  |          legend, on hover and in the column header in the online spreadsheet.
  |  
  |      orientation [required=False] (value='v' | 'h'):
- |          This defines the direction of the bars. If set to 'v', the length of
- |          each bar will run vertically. If set to 'h', the length of each bar
- |          will run horizontally
+ |          Sets the orientation of the bars. If set to 'v', the length of each
+ |          bar will run vertically. If set to 'h', the length of each bar will
+ |          run horizontally
  |  
- |      text [required=False] (value=array-like of strings) (streamable):
+ |      text [required=False] (value=list or 1d numpy array of strings)
+ |      (streamable):
  |          The text elements associated with each bar in this trace. The
  |          entries in 'text' will appear on hover only, in a text box located
  |          at the top of each bar.
  |  
- |      error_y [required=False] (value=ErrorY object | dictionary-like)
+ |      error_y [required=False] (value=ErrorY object | dictionary-like object)
  |      (streamable):
- |          A dictionary-like object describing the vetical error bars (i.e.
- |          along the y-axis) that can be drawn from bar tops.
+ |          Links a dictionary-like object describing the vertical error bars
+ |          (i.e. along the y-axis) that can be drawn from bar tops.
  |  
  |          For more, run `help(plotly.graph_objs.ErrorY)`
  |  
- |      error_x [required=False] (value=ErrorX object | dictionary-like)
+ |      error_x [required=False] (value=ErrorX object | dictionary-like object)
  |      (streamable):
- |          A dictionary-like object describing the horizontal error bars (i.e.
- |          along the x-axis) that can be drawn from bar tops.
+ |          Links a dictionary-like object describing the horizontal error bars
+ |          (i.e. along the x-axis) that can be drawn from bar tops.
  |  
  |          For more, run `help(plotly.graph_objs.ErrorX)`
  |  
- |      marker [required=False] (value=Marker object | dictionary-like)
+ |      marker [required=False] (value=Marker object | dictionary-like object)
  |      (streamable):
- |          A dictionary-like object containing marker style parameters for this
- |          bar trace, for example, the bars' fill color, border width and
- |          border color.
+ |          Links a dictionary-like object containing marker style parameters
+ |          for this bar trace, for example, the bars' fill color, border width
+ |          and border color.
  |  
  |          For more, run `help(plotly.graph_objs.Marker)`
  |  
@@ -558,65 +558,68 @@ class Bar(PlotlyTrace)
  |      xaxis [required=False] (value='x1' | 'x2' | 'x3' | etc.):
  |          This key determines which x-axis the x-coordinates of this trace
  |          will reference in the figure.  Values 'x1' and 'x' reference to
- |          layout['xaxis'], 'x2' references layout['xaxis2'], and so on. Note
- |          that 'x1' will always refer to layout['xaxis'] or layout['xaxis1'],
- |          they are the same.
+ |          'xaxis' in 'layout', 'x2' references to 'xaxis2' in 'layout', and so
+ |          on. Note that 'x1' will always refer to 'xaxis' or 'xaxis1' in
+ |          'layout', they are the same.
  |  
  |      yaxis [required=False] (value='y1' | 'y2' | 'y3' | etc.):
  |          This key determines which y-axis the y-coordinates of this trace
  |          will reference in the figure.  Values 'y1' and 'y' reference to
- |          layout['yaxis'], 'y2' references layout['yaxis2'], and so on. Note
- |          that 'y1' will always refer to layout['yaxis'] or layout['yaxis1'],
- |          they are the same.
+ |          'yaxis' in 'layout', 'y2' references to 'yaxis2' in 'layout', and so
+ |          on. Note that 'y1' will always refer to 'yaxis' or 'yaxis1' in
+ |          'layout', they are the same.
  |  
- |      showlegend [required=False] (value=boolean: True | False):
+ |      showlegend [required=False] (value=a boolean: True | False):
  |          Toggle whether or not this trace will be labeled in the legend.
  |  
- |      stream [required=False] (value=Stream object | dictionary-like):
- |          The stream dictionary-like object that initializes traces as
- |          writable-streams, for use with the real-time streaming API. Learn
- |          more here: https://plot.ly/python/streaming/
+ |      stream [required=False] (value=Stream object | dictionary-like object):
+ |          Links a dictionary-like object that initializes this trace as a
+ |          writable-stream, for use with the streaming API.
  |  
  |          For more, run `help(plotly.graph_objs.Stream)`
  |  
- |      visible [required=False] (value=boolean: True | False):
- |          Toggles whether or not this object will actually be visible in the
- |          rendered figure.
+ |      visible [required=False] (value=a boolean: True | False):
+ |          Toggles whether or not this object will be visible on the rendered
+ |          figure.
  |  
- |      type [required=False] (value=bar):
- |          Plotly identifier for this data's trace type.  This defines how this
- |          data dictionary will be handled.  For example, 'scatter' type
- |          expects  x and y data-arrays corresponding to (x, y) coordinates
- |          whereas a 'histogram' only requires a single x or y array  and a
- |          'heatmap' type requires a z matrix.
+ |      xsrc [required= when 'y' is unset] (value=a string equal to the unique
+ |      identifier of a plotly grid column) (streamable):
+ |          Sets the x coordinates of the bars. If 'x' is linked to a list or 1d
+ |          numpy array of strings, then the x coordinates are integers, 0, 1,
+ |          2, 3, ..., labeled on the x-axis by the list or 1d numpy array of
+ |          strings linked to 'x'. If 'y' is not set, the bars are plotted
+ |          horizontally, with their length determined by the list or 1d numpy
+ |          array linked to 'x'.
  |  
- |      r [required= when making a Polar Chart] (value=array-like of numbers)
- |      (streamable):
- |          For Polar charts only. The radial coordinates of the bars in this
- |          polar bar trace about the original; that is, the radial extent of
- |          each bar.
+ |      ysrc [required= when 'x' is unset] (value=a string equal to the unique
+ |      identifier of a plotly grid column) (streamable):
+ |          Sets the y coordinates of the bars. If 'y' is linked to a list or 1d
+ |          numpy array of strings, then the y coordinates are integers, 0, 1,
+ |          2, 3, ..., labeled on the y-axis by the list or 1d numpy array of
+ |          strings linked to 'y'. If 'x' is not set, the bars are plotted
+ |          vertically, with their length determined by the list or 1d numpy
+ |          array linked to 'y'.
  |  
- |      t [required= when making a Polar Chart] (value=array-like of numbers,
- |      strings, datetimes) (streamable):
- |          For Polar charts only. The angular coordinates of the bars in this
- |          polar bar trace. By default, the angular coordinates are in degrees
- |          (0 to 360) where the angles are measured clockwise about the right-
- |          hand side of the origin. To change this behavior, modify 'range' in
- |          AngularAxis or/and 'direction' in Layout. If 't' is linked to an
- |          array-like of strings, then the angular coordinates are [0, 360\N,
- |          2*360/N, ...] where N is the number of coordinates given labeled by
- |          the array-like of strings linked to 't'.
+ |      r [required= when making a Polar Chart] (value=list or 1d numpy array of
+ |      numbers) (streamable):
+ |          For Polar charts only. Sets the radial coordinates of the bars in
+ |          this polar bar trace about the original; that is, the radial extent
+ |          of each bar.
  |  
- |      line [required=False] (value=Line object | dictionary-like)
- |      (streamable):
- |          Artifact. Has no effect.
+ |      t [required= when making a Polar Chart] (value=list or 1d numpy array of
+ |      numbers, strings, datetimes) (streamable):
+ |          For Polar charts only. Sets the angular coordinates of the bars in
+ |          this polar bar trace. By default, the angular coordinates are in
+ |          degrees (0 to 360) where the angles are measured clockwise about the
+ |          right-hand side of the origin. To change this behavior, modify
+ |          'range' in 'angularaxis' or/and 'direction' in 'layout'. If 't' is
+ |          linked to a list or 1d numpy array of strings, then the angular
+ |          coordinates are 0, 360\N, 2*360/N, ... where N is the number of
+ |          coordinates given labeled by the list or 1d numpy array of strings
+ |          linked to 't'.
  |  
- |          For more, run `help(plotly.graph_objs.Line)`
- |  
- |      textfont [required=False] (value=Font object | dictionary-like):
- |          Not currently supported, has no effect.
- |  
- |          For more, run `help(plotly.graph_objs.Font)`
+ |      type [required=False] (value='bar'):
+ |          Plotly identifier for this data's trace type.
  |  
  |  Method resolution order:
  |      Bar
@@ -632,20 +635,21 @@ class Bar(PlotlyTrace)
  |  to_string(self, level=0, indent=4, eol='\n', pretty=True, max_chars=80)
  |      Returns a formatted string showing graph_obj constructors.
  |      
- |              Example:
+ |      Example:
  |      
- |                  print obj.to_string()
+ |          print(obj.to_string())
  |      
- |              Keyword arguments:
- |              level (default = 0) -- set number of indentations to start with
- |              indent (default = 4) -- set indentation amount
- |              eol (default = '
- |      ') -- set end of line character(s)
- |              pretty (default = True) -- curtail long list output with a '...'
- |              max_chars (default = 80) -- set max characters per line
+ |      Keyword arguments:
+ |      level (default = 0) -- set number of indentations to start with
+ |      indent (default = 4) -- set indentation amount
+ |      eol (default = '\n') -- set end of line character(s)
+ |      pretty (default = True) -- curtail long list output with a '...'
+ |      max_chars (default = 80) -- set max characters per line
  |  
  |  ----------------------------------------------------------------------
  |  Methods inherited from PlotlyDict:
+ |  
+ |  __setitem__(self, key, value)
  |  
  |  force_clean(self, caller=True)
  |      Attempts to convert to graph_objs and call force_clean() on values.
@@ -668,7 +672,7 @@ class Bar(PlotlyTrace)
  |      stripping process, though they made be left empty. This is allowable.
  |      
  |      Keys that will be stripped in this process are tagged with
- |      `'type': 'style'` in the INFO dictionary listed in graph_objs_meta.py.
+ |      `'type': 'style'` in graph_objs_meta.json.
  |      
  |      This process first attempts to convert nested collections from dicts
  |      or lists to subclasses of PlotlyList/PlotlyDict. This process forces
@@ -718,7 +722,7 @@ class Bar(PlotlyTrace)
  |      Recursively check the validity of the keys in a PlotlyDict.
  |      
  |      The valid keys constitute the entries in each object
- |      dictionary in INFO stored in graph_objs_meta.py.
+ |      dictionary in graph_objs_meta.json
  |      
  |      The validation process first requires that all nested collections be
  |      converted to the appropriate subclass of PlotlyDict/PlotlyList. Then,
@@ -778,9 +782,6 @@ class Bar(PlotlyTrace)
  |  
  |  __repr__(...)
  |      x.__repr__() &lt;==&gt; repr(x)
- |  
- |  __setitem__(...)
- |      x.__setitem__(i, y) &lt;==&gt; x[i]=y
  |  
  |  __sizeof__(...)
  |      D.__sizeof__() -&gt; size of D in memory, in bytes
@@ -867,8 +868,8 @@ class Bar(PlotlyTrace)
    </div>
    <div class="cell border-box-sizing code_cell rendered">
     <div class="input">
-     <div class="prompt input_prompt" id="in-[6]:">
-      <a class="prompt input_prompt" href="#in-[6]:">
+     <div class="prompt input_prompt" id="in-[6]">
+      <a class="prompt input_prompt" href="#in-[6]">
        In [6]:
       </a>
      </div>
@@ -921,10 +922,13 @@ class Bar(PlotlyTrace)
     <div class="output_wrapper">
      <div class="output">
       <div class="output_area">
-       <div class="prompt">
+       <div class="prompt output_prompt" id="out[6]">
+        <a class="prompt output_prompt" href="#out[6]">
+         Out[6]:
+        </a>
        </div>
-       <div class="output_html rendered_html output_subarea ">
-        <iframe height="525" id="igraph" scrolling="no" seamless="seamless" src="https://plot.ly/~etpinard/76" style="border:none;" width="100%">
+       <div class="output_html rendered_html output_subarea output_pyout">
+        <iframe height="525" id="igraph" scrolling="no" seamless="seamless" src="https://plot.ly/~etpinard/76.embed" style="border:none;" width="100%">
         </iframe>
        </div>
       </div>
@@ -978,21 +982,6 @@ class Bar(PlotlyTrace)
     <div class="inner_cell">
      <div class="text_cell_render border-box-sizing rendered_html">
       <p>
-       The
-       <code>
-        'visible'
-       </code>
-       key in the
-       <code>
-        ErrorY
-       </code>
-       graph object must be set to
-       <code>
-        True
-       </code>
-       in order to see the error bars on the plot.
-      </p>
-      <p>
        Plotly error bars come in four types:
       </p>
       <ul>
@@ -1013,7 +1002,7 @@ class Bar(PlotlyTrace)
         <p>
          For error bars in percent (with respect to the bar height), set
          <code>
-          'type':'percent'
+          'type': 'percent'
          </code>
          . This is the default type. Set the percentage value to be used with the
          <code>
@@ -1026,7 +1015,7 @@ class Bar(PlotlyTrace)
         <p>
          For error bars of constant height, set
          <code>
-          'type':'constant'
+          'type': 'constant'
          </code>
          and enter the value in the
          <code>
@@ -1039,7 +1028,7 @@ class Bar(PlotlyTrace)
         <p>
          Finally, for error bars given by the square root of number of entries in a particular bar, set
          <code>
-          'type':'sqrt'
+          'type': 'sqrt'
          </code>
          . This error bar type is useful when plotting histograms.
         </p>
@@ -1065,8 +1054,8 @@ Does `'error_x'` exist? (it doesn't appear to work)
    </div>
    <div class="cell border-box-sizing code_cell rendered">
     <div class="input">
-     <div class="prompt input_prompt" id="in-[7]:">
-      <a class="prompt input_prompt" href="#in-[7]:">
+     <div class="prompt input_prompt" id="in-[7]">
+      <a class="prompt input_prompt" href="#in-[7]">
        In [7]:
       </a>
      </div>
@@ -1089,9 +1078,17 @@ Does `'error_x'` exist? (it doesn't appear to work)
 Help on class ErrorY in module plotly.graph_objs.graph_objs:
 
 class ErrorY(PlotlyDict)
- |  A dictionary-like object for representing a set of errory bars in plotly.
+ |  A dictionary-like object object representing a set of error bar spanning
+ |      along the y-axis.
  |  
- |      
+ |  Online example:
+ |  
+ |      https://plot.ly/python/error-bars/
+ |  
+ |  Parent key:
+ |  
+ |      error_y
+ |  
  |  Quick method reference:
  |  
  |      ErrorY.update(changes)
@@ -1114,19 +1111,19 @@ class ErrorY(PlotlyDict)
  |          the square root of the x data at each point ('value' and 'array' do
  |          not apply).
  |  
- |      symmetric [required=False] (value=boolean: True | False):
+ |      symmetric [required=False] (value=a boolean: True | False):
  |          Toggle whether or not error bars are the same length in both
  |          directions (up and down). If not specified, the error bars will be
  |          symmetric.
  |  
- |      array [required=False] (value=array-like of numbers, strings,
- |      datetimes):
- |          The array of corresponding to error bars' span to be drawn. Has only
- |          an effect if 'type' is set to 'data'. Values in the array are
- |          plotted relative to the 'y' coordinates. For example, with 'y'=[1,2]
- |          and 'array'=[1,2], the error bars will span vertically from y= 0 to
- |          2 and y= 0 to 4 if 'symmetric'=True; and from y= 1 to 2 and y= 2 to
- |          4 if 'symmetric' is set to False and 'arrayminus' is empty.
+ |      array [required=False] (value=list or 1d numpy array of numbers,
+ |      strings, datetimes):
+ |          The array corresponding to the span of the error bars. Has only an
+ |          effect if 'type' is set to 'data'. Values in the array are plotted
+ |          relative to the 'y' coordinates. For example, with 'y'=[1,2] and
+ |          'array'=[1,2], the error bars will span from y= 0 to 2 and y= 0 to 4
+ |          if 'symmetric' is set to True; and from y= 1 to 2 and y= 2 to 4 if
+ |          'symmetric' is set to False and 'arrayminus' is empty.
  |  
  |      value [required=False] (value=number: x &gt;= 0):
  |          The value or percentage determining the error bars' span, at all
@@ -1136,22 +1133,23 @@ class ErrorY(PlotlyDict)
  |          bar lengths, you should set 'type' to 'data' and use the 'array' key
  |          instead.
  |  
- |      arrayminus [required=False] (value=number: x &gt;= 0):
- |          Only functional when 'symmetric' is set to False. Same as 'array'
+ |      arrayminus [required=False] (value=list or 1d numpy array of numbers,
+ |      strings, datetimes):
+ |          Has an effect only when 'symmetric' is set to False. Same as 'array'
  |          but corresponding to the span of the error bars below the trace
  |          coordinates
  |  
  |      valueminus [required=False] (value=number: x &gt;= 0):
- |          Only functional when 'symmetric' is set to False. Same as 'value'
+ |          Has an effect only when 'symmetric' is set to False. Same as 'value'
  |          but corresponding to the span of the error bars below the trace
  |          coordinates
  |  
- |      color [required=False] (value=string describing color) (streamable):
+ |      color [required=False] (value=a string describing color) (streamable):
  |          Sets the color of the error bars.
  |  
  |          Examples:
- |              [u"'green'", u"'rgb(0, 255, 0)'", u"'rgba(0, 255, 0, 0.3)'",
- |              u"'hsl(120,100%,50%)'", u"'hsla(120,100%,50%,0.3)'"]
+ |              'green' | 'rgb(0, 255, 0)' | 'rgba(0, 255, 0, 0.3)' |
+ |              'hsl(120,100%,50%)' | 'hsla(120,100%,50%,0.3)' | '#434F1D'
  |  
  |      thickness [required=False] (value=number: x &gt;= 0):
  |          Sets the line thickness of the y error bars.
@@ -1165,9 +1163,9 @@ class ErrorY(PlotlyDict)
  |          as the alpha channel of colors. If the object's color is given in
  |          terms of 'rgba' color model, 'opacity' is redundant.
  |  
- |      visible [required=False] (value=boolean: True | False):
- |          Toggles whether or not this object will actually be visible in the
- |          rendered figure.
+ |      visible [required=False] (value=a boolean: True | False):
+ |          Toggles whether or not this object will be visible on the rendered
+ |          figure.
  |  
  |  Method resolution order:
  |      ErrorY
@@ -1178,6 +1176,8 @@ class ErrorY(PlotlyDict)
  |  Methods inherited from PlotlyDict:
  |  
  |  __init__(self, *args, **kwargs)
+ |  
+ |  __setitem__(self, key, value)
  |  
  |  force_clean(self, caller=True)
  |      Attempts to convert to graph_objs and call force_clean() on values.
@@ -1200,7 +1200,7 @@ class ErrorY(PlotlyDict)
  |      stripping process, though they made be left empty. This is allowable.
  |      
  |      Keys that will be stripped in this process are tagged with
- |      `'type': 'style'` in the INFO dictionary listed in graph_objs_meta.py.
+ |      `'type': 'style'` in graph_objs_meta.json.
  |      
  |      This process first attempts to convert nested collections from dicts
  |      or lists to subclasses of PlotlyList/PlotlyDict. This process forces
@@ -1221,17 +1221,16 @@ class ErrorY(PlotlyDict)
  |  to_string(self, level=0, indent=4, eol='\n', pretty=True, max_chars=80)
  |      Returns a formatted string showing graph_obj constructors.
  |      
- |              Example:
+ |      Example:
  |      
- |                  print obj.to_string()
+ |          print(obj.to_string())
  |      
- |              Keyword arguments:
- |              level (default = 0) -- set number of indentations to start with
- |              indent (default = 4) -- set indentation amount
- |              eol (default = '
- |      ') -- set end of line character(s)
- |              pretty (default = True) -- curtail long list output with a '...'
- |              max_chars (default = 80) -- set max characters per line
+ |      Keyword arguments:
+ |      level (default = 0) -- set number of indentations to start with
+ |      indent (default = 4) -- set indentation amount
+ |      eol (default = '\n') -- set end of line character(s)
+ |      pretty (default = True) -- curtail long list output with a '...'
+ |      max_chars (default = 80) -- set max characters per line
  |  
  |  update(self, dict1=None, **dict2)
  |      Update current dict with dict1 and then dict2.
@@ -1265,7 +1264,7 @@ class ErrorY(PlotlyDict)
  |      Recursively check the validity of the keys in a PlotlyDict.
  |      
  |      The valid keys constitute the entries in each object
- |      dictionary in INFO stored in graph_objs_meta.py.
+ |      dictionary in graph_objs_meta.json
  |      
  |      The validation process first requires that all nested collections be
  |      converted to the appropriate subclass of PlotlyDict/PlotlyList. Then,
@@ -1325,9 +1324,6 @@ class ErrorY(PlotlyDict)
  |  
  |  __repr__(...)
  |      x.__repr__() &lt;==&gt; repr(x)
- |  
- |  __setitem__(...)
- |      x.__setitem__(i, y) &lt;==&gt; x[i]=y
  |  
  |  __sizeof__(...)
  |      D.__sizeof__() -&gt; size of D in memory, in bytes
@@ -1504,8 +1500,8 @@ class ErrorY(PlotlyDict)
    </div>
    <div class="cell border-box-sizing code_cell rendered">
     <div class="input">
-     <div class="prompt input_prompt" id="in-[8]:">
-      <a class="prompt input_prompt" href="#in-[8]:">
+     <div class="prompt input_prompt" id="in-[8]">
+      <a class="prompt input_prompt" href="#in-[8]">
        In [8]:
       </a>
      </div>
@@ -1513,8 +1509,8 @@ class ErrorY(PlotlyDict)
       <div class="input_area">
        <div class="highlight">
         <pre><span class="c"># (0) Get average daily minima and average daily maxima from 'montreal.csv' </span>
-<span class="n">T_min</span> <span class="o">=</span> <span class="n">get_csv_data</span><span class="p">(</span><span class="s">'montreal.csv'</span><span class="p">,</span><span class="s">'Daily Minimum'</span><span class="p">)</span>
-<span class="n">T_max</span> <span class="o">=</span> <span class="n">get_csv_data</span><span class="p">(</span><span class="s">'montreal.csv'</span><span class="p">,</span><span class="s">'Daily Maximum'</span><span class="p">)</span>
+<span class="n">T_min</span> <span class="o">=</span> <span class="n">get_csv_data</span><span class="p">(</span><span class="s">'montreal.csv'</span><span class="p">,</span> <span class="s">'Daily Minimum'</span><span class="p">)</span>
+<span class="n">T_max</span> <span class="o">=</span> <span class="n">get_csv_data</span><span class="p">(</span><span class="s">'montreal.csv'</span><span class="p">,</span> <span class="s">'Daily Maximum'</span><span class="p">)</span>
 
 <span class="c"># Truncate T_* to summer only, convert to list</span>
 <span class="n">T_min_s</span> <span class="o">=</span> <span class="n">T_min</span><span class="p">[</span><span class="mi">5</span><span class="p">:</span><span class="mi">8</span><span class="p">]</span>
@@ -1539,15 +1535,15 @@ class ErrorY(PlotlyDict)
    </div>
    <div class="cell border-box-sizing code_cell rendered">
     <div class="input">
-     <div class="prompt input_prompt" id="in-[9]:">
-      <a class="prompt input_prompt" href="#in-[9]:">
+     <div class="prompt input_prompt" id="in-[9]">
+      <a class="prompt input_prompt" href="#in-[9]">
        In [9]:
       </a>
      </div>
      <div class="inner_cell">
       <div class="input_area">
        <div class="highlight">
-        <pre><span class="n">summer</span> <span class="o">=</span> <span class="p">[</span><span class="s">'June'</span><span class="p">,</span><span class="s">'July'</span><span class="p">,</span><span class="s">'August'</span><span class="p">]</span>  <span class="c"># list of summer month names</span>
+        <pre><span class="n">summer</span> <span class="o">=</span> <span class="p">[</span><span class="s">'June'</span><span class="p">,</span> <span class="s">'July'</span><span class="p">,</span> <span class="s">'August'</span><span class="p">]</span>  <span class="c"># list of summer month names</span>
 
 <span class="c"># Define a trace-generating function (returns a Bar object)</span>
 <span class="k">def</span> <span class="nf">make_trace</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">color</span><span class="p">):</span>
@@ -1598,8 +1594,8 @@ class ErrorY(PlotlyDict)
    </div>
    <div class="cell border-box-sizing code_cell rendered">
     <div class="input">
-     <div class="prompt input_prompt" id="in-[10]:">
-      <a class="prompt input_prompt" href="#in-[10]:">
+     <div class="prompt input_prompt" id="in-[10]">
+      <a class="prompt input_prompt" href="#in-[10]">
        In [10]:
       </a>
      </div>
@@ -1608,9 +1604,9 @@ class ErrorY(PlotlyDict)
        <div class="highlight">
         <pre><span class="c"># (1) Make Data object using make_trace()</span>
 <span class="n">data</span> <span class="o">=</span> <span class="n">Data</span><span class="p">([</span>
-    <span class="n">make_trace</span><span class="p">(</span><span class="n">T_max_s</span><span class="p">,</span><span class="s">'Daily Maximum'</span><span class="p">,</span><span class="s">'#BD8F22'</span><span class="p">),</span>
-    <span class="n">make_trace</span><span class="p">(</span><span class="n">T_avg_s</span><span class="p">,</span><span class="s">'Daily Average'</span><span class="p">,</span><span class="s">'#E3BA22'</span><span class="p">),</span>
-    <span class="n">make_trace</span><span class="p">(</span><span class="n">T_min_s</span><span class="p">,</span><span class="s">'Daily Minimum'</span><span class="p">,</span><span class="s">'#F2DA57'</span><span class="p">)</span>
+    <span class="n">make_trace</span><span class="p">(</span><span class="n">T_max_s</span><span class="p">,</span> <span class="s">'Daily Maximum'</span><span class="p">,</span> <span class="s">'#BD8F22'</span><span class="p">),</span>
+    <span class="n">make_trace</span><span class="p">(</span><span class="n">T_avg_s</span><span class="p">,</span> <span class="s">'Daily Average'</span><span class="p">,</span> <span class="s">'#E3BA22'</span><span class="p">),</span>
+    <span class="n">make_trace</span><span class="p">(</span><span class="n">T_min_s</span><span class="p">,</span> <span class="s">'Daily Minimum'</span><span class="p">,</span> <span class="s">'#F2DA57'</span><span class="p">)</span>
 <span class="p">])</span>
 </pre>
        </div>
@@ -1665,8 +1661,8 @@ They are defined individually with
    </div>
    <div class="cell border-box-sizing code_cell rendered">
     <div class="input">
-     <div class="prompt input_prompt" id="in-[11]:">
-      <a class="prompt input_prompt" href="#in-[11]:">
+     <div class="prompt input_prompt" id="in-[11]">
+      <a class="prompt input_prompt" href="#in-[11]">
        In [11]:
       </a>
      </div>
@@ -1690,28 +1686,26 @@ Help on class Annotation in module plotly.graph_objs.graph_objs:
 
 class Annotation(PlotlyDict)
  |  A dictionary-like object for representing an annotation in plotly.
- |  
  |      Annotations appear as notes on the final figure. You can set all the
  |      features of the annotation text, background color, and location.
  |      Additionally, these notes can be anchored to actual data or the page for
  |      help with location after pan-and-zoom actions.
  |  
- |      This object is validated upon instantiation, therefore, you may see
- |      exceptions getting thrown. These are intended to help users find the
- |      origin of errors faster. The errors will usually contain information that
- |      can be used to remedy the problem.
+ |  Example:
  |  
- |      Example:
+ |      &gt;&gt;&gt; annotation = Annotation(
+ |       text='what i want this to say is:&lt;br&gt;THIS!',
+ |       x=0,
+ |       y=0,
+ |       xref='paper',
+ |       yref='paper,
+ |       yanchor='bottom',
+ |       xanchor='left')
  |  
- |          note = Annotation(text='what i want this to say is:&lt;br&gt;THIS!',
- |                            x=0,
- |                            y=0,
- |                            xref='paper',
- |                            yref='paper,
- |                            yanchor='bottom',
- |                            xanchor='left')
+ |  Online example:
  |  
- |      
+ |      https://plot.ly/python/text-and-annotations/
+ |  
  |  Quick method reference:
  |  
  |      Annotation.update(changes)
@@ -1733,61 +1727,63 @@ class Annotation(PlotlyDict)
  |          'yref' and 'yanchor' to fine-tune the location of this annotation.
  |  
  |      xref [required=False] (value='paper' | 'x1' | 'x2' | etc):
- |          Sets the x coordinate for this object refers to. If you reference an
- |          axis, e.g., 'x2', the object will move with pan-and-zoom to stay
- |          fixed to this point. If you reference the 'paper', it remains fixed
- |          regardless of pan-and-zoom. In other words, if set to 'paper', the
- |          'x' location refers to the distance from the left side of the
- |          plotting area in normalized coordinates where 0=='left' and
- |          1=='right'. If set to refer to an xaxis' object, e.g., 'x1', 'x2',
- |          'x3', etc., the 'x' location will refer to the location in terms of
- |          this axis.
+ |          Sets the x coordinate system which this object refers to. If you
+ |          reference an axis, e.g., 'x2', the object will move with pan-and-
+ |          zoom to stay fixed to this point. If you reference the 'paper', it
+ |          remains fixed regardless of pan-and-zoom. In other words, if set to
+ |          'paper', the 'x' location refers to the distance from the left side
+ |          of the plotting area in normalized coordinates where 0 is 'left' and
+ |          1 is 'right'. If set to refer to an xaxis' , e.g., 'x1', 'x2', 'x3',
+ |          etc., the 'x' location will refer to the location in terms of this
+ |          axis.
  |  
  |      yref [required=False] (value='paper' | 'y1' | 'y2' | etc):
- |          Sets the y coordinate for this object refers to. If you reference an
- |          axis, e.g., 'y2', the object will move with pan-and-zoom to stay
- |          fixed to this point. If you reference the 'paper', it remains fixed
- |          regardless of pan-and-zoom. In other words, if set to 'paper', the
- |          'y' location refers to the distance from the left side of the
- |          plotting area in normalized coordinates where 0=='bottom' and
- |          1=='top'. If set to refer to an yaxis' object, e.g., 'y1', 'y2',
+ |          Sets the y coordinate system which this object refers to. If you
+ |          reference an axis, e.g., 'y2', the object will move with pan-and-
+ |          zoom to stay fixed to this point. If you reference the 'paper', it
+ |          remains fixed regardless of pan-and-zoom. In other words, if set to
+ |          'paper', the 'y' location refers to the distance from the left side
+ |          of the plotting area in normalized coordinates where 0 is 'bottom'
+ |          and 1 is 'top'. If set to refer to an yaxis' , e.g., 'y1', 'y2',
  |          'y3', etc., the 'y' location will refer to the location in terms of
  |          this axis.
  |  
- |      text [required=False] (value=string):
+ |      text [required=False] (value=a string):
  |          The text associated with this annotation. Plotly uses a subset of
  |          HTML tags to do things like newline (&lt;br&gt;), bold (&lt;b&gt;&lt;/b&gt;), italics
  |          (&lt;i&gt;&lt;/i&gt;), hyperlinks (&lt;a href='...'&gt;&lt;/a&gt;). Tags &lt;em&gt;, &lt;sup&gt;, &lt;sub&gt;,
  |          &lt;span&gt; are also supported.
  |  
  |          Examples:
- |              [u'regular text', u'an annotation&lt;br&gt;spanning two lines',
- |              u'&lt;b&gt;bold text&lt;/b&gt;', u"&lt;a href='https://plot.ly/'&gt;a link to
- |              plot.ly&lt;/a&gt;"]
+ |              'regular text' | 'an annotation&lt;br&gt;spanning two lines' |
+ |              '&lt;b&gt;bold text&lt;/b&gt;' | "&lt;a href='https://plot.ly/'&gt;a link to
+ |              plot.ly&lt;/a&gt;"
  |  
- |      showarrow [required=False] (value=boolean: True | False):
+ |      showarrow [required=False] (value=a boolean: True | False):
  |          Toggle whether or not the arrow associated with this annotation with
  |          be shown. If False, then the text linked to 'text' lines up with the
  |          'x', 'y' coordinates'. If True (the default), then 'text' is placed
  |          near the arrow's tail.
  |  
- |      font [required=False] (value=Font object | dictionary-like):
- |          A dictionary-like object describing the font settings within this
- |          annotation.
+ |      font [required=False] (value=Font object | dictionary-like object):
+ |          Links a dictionary-like object describing the font settings within
+ |          this annotation.
  |  
  |          For more, run `help(plotly.graph_objs.Font)`
  |  
  |      xanchor [required=False] (value='auto' | 'left' | 'center' | 'right'):
- |          Sets the horizontal location of the object referenced by the 'x'
- |          (position) key. For example, if 'x'==1, 'xref'='paper', and
- |          'xanchor'='right', the rightmost portion of this object will line up
- |          with the rightmost edge of the plotting area.
+ |          Sets the horizontal position anchor of this annotation. That is,
+ |          bind the position set with the 'x' key to the 'left' or 'center' or
+ |          'right' of this annotation. For example, if 'x' is set to 1, 'xref'
+ |          to 'paper', and 'xanchor' to 'right', the right-most portion of this
+ |          object will line up with the right-most edge of the plotting area.
  |  
  |      yanchor [required=False] (value='auto' | 'bottom' | 'middle' | 'top'):
- |          Sets the horizontal location of the object referenced by the 'y'
- |          (position) key. For example, if 'y'==1, 'yref'='paper', and
- |          'yanchor'='top', the topmost portion of this object will line up
- |          with the topmost edge of the plotting area.
+ |          Sets the vertical position anchor of this annotation. That is, bind
+ |          the position set with the 'y' key to the 'bottom' or 'middle' or
+ |          'top' of this annotation. For example, if 'y' is set to 1, 'yref' to
+ |          'paper', and 'yanchor' to 'top', the top-most portion of this object
+ |          will line up with the top-most edge of the plotting area.
  |  
  |      align [required=False] (value='left' | 'center' | 'right'):
  |          Sets the vertical alignment of the text in the annotation with
@@ -1807,13 +1803,13 @@ class Annotation(PlotlyDict)
  |          Sets the arrowhead's width (in pixels). Has an effect only if
  |          'showarrow' is set to True.
  |  
- |      arrowcolor [required=False] (value=string describing color):
+ |      arrowcolor [required=False] (value=a string describing color):
  |          Sets the color of the arrowhead. Has an effect only if 'showarrow'
  |          is set to True.
  |  
  |          Examples:
- |              [u"'green'", u"'rgb(0, 255, 0)'", u"'rgba(0, 255, 0, 0.3)'",
- |              u"'hsl(120,100%,50%)'", u"'hsla(120,100%,50%,0.3)'"]
+ |              'green' | 'rgb(0, 255, 0)' | 'rgba(0, 255, 0, 0.3)' |
+ |              'hsl(120,100%,50%)' | 'hsla(120,100%,50%,0.3)' | '#434F1D'
  |  
  |      ax [required=False] (value=number):
  |          Position of the annotation text relative to the arrowhead about the
@@ -1827,12 +1823,12 @@ class Annotation(PlotlyDict)
  |          Sets the angle of the text linked to 'text' with respect to the
  |          horizontal.
  |  
- |      bordercolor [required=False] (value=string describing color):
+ |      bordercolor [required=False] (value=a string describing color):
  |          The color of the enclosing boarder of this annotation.
  |  
  |          Examples:
- |              [u"'green'", u"'rgb(0, 255, 0)'", u"'rgba(0, 255, 0, 0.3)'",
- |              u"'hsl(120,100%,50%)'", u"'hsla(120,100%,50%,0.3)'"]
+ |              'green' | 'rgb(0, 255, 0)' | 'rgba(0, 255, 0, 0.3)' |
+ |              'hsl(120,100%,50%)' | 'hsla(120,100%,50%,0.3)' | '#434F1D'
  |  
  |      borderwidth [required=False] (value=number: x &gt;= 0):
  |          Sets the width of the boarder enclosing this annotation
@@ -1841,12 +1837,12 @@ class Annotation(PlotlyDict)
  |          The amount of space (padding) between the text and the enclosing
  |          boarder.
  |  
- |      bgcolor [required=False] (value=string describing color):
- |          Sets the background (bg) color for this annotation.
+ |      bgcolor [required=False] (value=a string describing color):
+ |          Sets the background (bg) color of this annotation.
  |  
  |          Examples:
- |              [u"'green'", u"'rgb(0, 255, 0)'", u"'rgba(0, 255, 0, 0.3)'",
- |              u"'hsl(120,100%,50%)'", u"'hsla(120,100%,50%,0.3)'"]
+ |              'green' | 'rgb(0, 255, 0)' | 'rgba(0, 255, 0, 0.3)' |
+ |              'hsl(120,100%,50%)' | 'hsla(120,100%,50%,0.3)' | '#434F1D'
  |  
  |      opacity [required=False] (value=number: x in [0, 1]):
  |          Sets the opacity, or transparency, of the entire object, also known
@@ -1862,6 +1858,8 @@ class Annotation(PlotlyDict)
  |  Methods inherited from PlotlyDict:
  |  
  |  __init__(self, *args, **kwargs)
+ |  
+ |  __setitem__(self, key, value)
  |  
  |  force_clean(self, caller=True)
  |      Attempts to convert to graph_objs and call force_clean() on values.
@@ -1884,7 +1882,7 @@ class Annotation(PlotlyDict)
  |      stripping process, though they made be left empty. This is allowable.
  |      
  |      Keys that will be stripped in this process are tagged with
- |      `'type': 'style'` in the INFO dictionary listed in graph_objs_meta.py.
+ |      `'type': 'style'` in graph_objs_meta.json.
  |      
  |      This process first attempts to convert nested collections from dicts
  |      or lists to subclasses of PlotlyList/PlotlyDict. This process forces
@@ -1905,17 +1903,16 @@ class Annotation(PlotlyDict)
  |  to_string(self, level=0, indent=4, eol='\n', pretty=True, max_chars=80)
  |      Returns a formatted string showing graph_obj constructors.
  |      
- |              Example:
+ |      Example:
  |      
- |                  print obj.to_string()
+ |          print(obj.to_string())
  |      
- |              Keyword arguments:
- |              level (default = 0) -- set number of indentations to start with
- |              indent (default = 4) -- set indentation amount
- |              eol (default = '
- |      ') -- set end of line character(s)
- |              pretty (default = True) -- curtail long list output with a '...'
- |              max_chars (default = 80) -- set max characters per line
+ |      Keyword arguments:
+ |      level (default = 0) -- set number of indentations to start with
+ |      indent (default = 4) -- set indentation amount
+ |      eol (default = '\n') -- set end of line character(s)
+ |      pretty (default = True) -- curtail long list output with a '...'
+ |      max_chars (default = 80) -- set max characters per line
  |  
  |  update(self, dict1=None, **dict2)
  |      Update current dict with dict1 and then dict2.
@@ -1949,7 +1946,7 @@ class Annotation(PlotlyDict)
  |      Recursively check the validity of the keys in a PlotlyDict.
  |      
  |      The valid keys constitute the entries in each object
- |      dictionary in INFO stored in graph_objs_meta.py.
+ |      dictionary in graph_objs_meta.json
  |      
  |      The validation process first requires that all nested collections be
  |      converted to the appropriate subclass of PlotlyDict/PlotlyList. Then,
@@ -2009,9 +2006,6 @@ class Annotation(PlotlyDict)
  |  
  |  __repr__(...)
  |      x.__repr__() &lt;==&gt; repr(x)
- |  
- |  __setitem__(...)
- |      x.__setitem__(i, y) &lt;==&gt; x[i]=y
  |  
  |  __sizeof__(...)
  |      D.__sizeof__() -&gt; size of D in memory, in bytes
@@ -2087,8 +2081,8 @@ class Annotation(PlotlyDict)
    </div>
    <div class="cell border-box-sizing code_cell rendered">
     <div class="input">
-     <div class="prompt input_prompt" id="in-[12]:">
-      <a class="prompt input_prompt" href="#in-[12]:">
+     <div class="prompt input_prompt" id="in-[12]">
+      <a class="prompt input_prompt" href="#in-[12]">
        In [12]:
       </a>
      </div>
@@ -2146,8 +2140,8 @@ class Annotation(PlotlyDict)
    </div>
    <div class="cell border-box-sizing code_cell rendered">
     <div class="input">
-     <div class="prompt input_prompt" id="in-[13]:">
-      <a class="prompt input_prompt" href="#in-[13]:">
+     <div class="prompt input_prompt" id="in-[13]">
+      <a class="prompt input_prompt" href="#in-[13]">
        In [13]:
       </a>
      </div>
@@ -2156,9 +2150,9 @@ class Annotation(PlotlyDict)
        <div class="highlight">
         <pre><span class="c"># Make Annotations object (list-like) with make_annotation()</span>
 <span class="n">annotations</span> <span class="o">=</span> <span class="n">Annotations</span><span class="p">(</span>
-    <span class="p">[</span><span class="n">make_annotation</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span><span class="p">,</span><span class="n">y</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">),</span><span class="n">T_max_s</span><span class="p">)]</span> <span class="o">+</span>
-    <span class="p">[</span><span class="n">make_annotation</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span><span class="p">,</span><span class="n">y</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">),</span><span class="n">T_avg_s</span><span class="p">)]</span> <span class="o">+</span> 
-    <span class="p">[</span><span class="n">make_annotation</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span><span class="p">,</span><span class="n">y</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">),</span><span class="n">T_min_s</span><span class="p">)]</span>
+    <span class="p">[</span><span class="n">make_annotation</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">),</span> <span class="n">T_max_s</span><span class="p">)]</span> <span class="o">+</span>
+    <span class="p">[</span><span class="n">make_annotation</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">),</span> <span class="n">T_avg_s</span><span class="p">)]</span> <span class="o">+</span> 
+    <span class="p">[</span><span class="n">make_annotation</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">),</span> <span class="n">T_min_s</span><span class="p">)]</span>
 <span class="p">)</span>
 </pre>
        </div>
@@ -2194,8 +2188,8 @@ class Annotation(PlotlyDict)
    </div>
    <div class="cell border-box-sizing code_cell rendered">
     <div class="input">
-     <div class="prompt input_prompt" id="in-[14]:">
-      <a class="prompt input_prompt" href="#in-[14]:">
+     <div class="prompt input_prompt" id="in-[14]">
+      <a class="prompt input_prompt" href="#in-[14]">
        In [14]:
       </a>
      </div>
@@ -2240,8 +2234,8 @@ class Annotation(PlotlyDict)
    </div>
    <div class="cell border-box-sizing code_cell rendered">
     <div class="input">
-     <div class="prompt input_prompt" id="in-[15]:">
-      <a class="prompt input_prompt" href="#in-[15]:">
+     <div class="prompt input_prompt" id="in-[15]">
+      <a class="prompt input_prompt" href="#in-[15]">
        In [15]:
       </a>
      </div>
@@ -2261,10 +2255,13 @@ class Annotation(PlotlyDict)
     <div class="output_wrapper">
      <div class="output">
       <div class="output_area">
-       <div class="prompt">
+       <div class="prompt output_prompt" id="out[15]">
+        <a class="prompt output_prompt" href="#out[15]">
+         Out[15]:
+        </a>
        </div>
-       <div class="output_html rendered_html output_subarea ">
-        <iframe height="525" id="igraph" scrolling="no" seamless="seamless" src="https://plot.ly/~etpinard/78" style="border:none;" width="100%">
+       <div class="output_html rendered_html output_subarea output_pyout">
+        <iframe height="525" id="igraph" scrolling="no" seamless="seamless" src="https://plot.ly/~etpinard/78.embed" style="border:none;" width="100%">
         </iframe>
        </div>
       </div>
@@ -2361,8 +2358,8 @@ class Annotation(PlotlyDict)
    </div>
    <div class="cell border-box-sizing code_cell rendered">
     <div class="input">
-     <div class="prompt input_prompt" id="in-[16]:">
-      <a class="prompt input_prompt" href="#in-[16]:">
+     <div class="prompt input_prompt" id="in-[16]">
+      <a class="prompt input_prompt" href="#in-[16]">
        In [16]:
       </a>
      </div>
@@ -2370,8 +2367,8 @@ class Annotation(PlotlyDict)
       <div class="input_area">
        <div class="highlight">
         <pre><span class="c"># (0) Get precipitation data from csv files</span>
-<span class="n">mtl_P</span> <span class="o">=</span> <span class="n">get_csv_data</span><span class="p">(</span><span class="s">'montreal.csv'</span><span class="p">,</span><span class="s">'Precipitation (mm)'</span><span class="p">)</span>
-<span class="n">van_P</span> <span class="o">=</span> <span class="n">get_csv_data</span><span class="p">(</span><span class="s">'vancouver.csv'</span><span class="p">,</span><span class="s">'Precipitation (mm)'</span><span class="p">)</span>
+<span class="n">mtl_P</span> <span class="o">=</span> <span class="n">get_csv_data</span><span class="p">(</span><span class="s">'montreal.csv'</span><span class="p">,</span> <span class="s">'Precipitation (mm)'</span><span class="p">)</span>
+<span class="n">van_P</span> <span class="o">=</span> <span class="n">get_csv_data</span><span class="p">(</span><span class="s">'vancouver.csv'</span><span class="p">,</span> <span class="s">'Precipitation (mm)'</span><span class="p">)</span>
 </pre>
        </div>
       </div>
@@ -2391,8 +2388,8 @@ class Annotation(PlotlyDict)
    </div>
    <div class="cell border-box-sizing code_cell rendered">
     <div class="input">
-     <div class="prompt input_prompt" id="in-[17]:">
-      <a class="prompt input_prompt" href="#in-[17]:">
+     <div class="prompt input_prompt" id="in-[17]">
+      <a class="prompt input_prompt" href="#in-[17]">
        In [17]:
       </a>
      </div>
@@ -2400,11 +2397,11 @@ class Annotation(PlotlyDict)
       <div class="input_area">
        <div class="highlight">
         <pre><span class="c"># Use full month names to label each bar</span>
-<span class="n">months_full</span> <span class="o">=</span> <span class="p">[</span><span class="s">'January'</span><span class="p">,</span><span class="s">'February'</span><span class="p">,</span><span class="s">'March'</span><span class="p">,</span><span class="s">'April'</span><span class="p">,</span><span class="s">'May'</span><span class="p">,</span><span class="s">'June'</span><span class="p">,</span>
-               <span class="s">'July'</span><span class="p">,</span><span class="s">'August'</span><span class="p">,</span><span class="s">'September'</span><span class="p">,</span><span class="s">'October'</span><span class="p">,</span><span class="s">'November'</span><span class="p">,</span><span class="s">'December'</span><span class="p">]</span>
+<span class="n">months_full</span> <span class="o">=</span> <span class="p">[</span><span class="s">'January'</span><span class="p">,</span> <span class="s">'February'</span><span class="p">,</span> <span class="s">'March'</span><span class="p">,</span> <span class="s">'April'</span><span class="p">,</span> <span class="s">'May'</span><span class="p">,</span> <span class="s">'June'</span><span class="p">,</span>
+               <span class="s">'July'</span><span class="p">,</span> <span class="s">'August'</span><span class="p">,</span> <span class="s">'September'</span><span class="p">,</span> <span class="s">'October'</span><span class="p">,</span> <span class="s">'November'</span><span class="p">,</span> <span class="s">'December'</span><span class="p">]</span>
 
 <span class="c"># Define colors for each set of 3 months starting in January</span>
-<span class="n">colors</span> <span class="o">=</span> <span class="p">[</span><span class="s">'#42A5B3'</span><span class="p">]</span><span class="o">*</span><span class="mi">3</span><span class="o">+</span><span class="p">[</span><span class="s">'#D15A86'</span><span class="p">]</span><span class="o">*</span><span class="mi">3</span><span class="o">+</span><span class="p">[</span><span class="s">'#5C8100'</span><span class="p">]</span><span class="o">*</span><span class="mi">3</span><span class="o">+</span><span class="p">[</span><span class="s">'#E58429'</span><span class="p">]</span><span class="o">*</span><span class="mi">3</span>
+<span class="n">colors</span> <span class="o">=</span> <span class="p">[</span><span class="s">'#42A5B3'</span><span class="p">]</span><span class="o">*</span><span class="mi">3</span> <span class="o">+</span> <span class="p">[</span><span class="s">'#D15A86'</span><span class="p">]</span><span class="o">*</span><span class="mi">3</span> <span class="o">+</span> <span class="p">[</span><span class="s">'#5C8100'</span><span class="p">]</span><span class="o">*</span><span class="mi">3</span> <span class="o">+</span> <span class="p">[</span><span class="s">'#E58429'</span><span class="p">]</span><span class="o">*</span><span class="mi">3</span>
 
 <span class="c"># City names</span>
 <span class="n">cities</span> <span class="o">=</span> <span class="p">[</span><span class="s">'Montreal'</span><span class="p">,</span> <span class="s">'Vancouver'</span><span class="p">]</span>  
@@ -2427,8 +2424,8 @@ class Annotation(PlotlyDict)
    </div>
    <div class="cell border-box-sizing code_cell rendered">
     <div class="input">
-     <div class="prompt input_prompt" id="in-[18]:">
-      <a class="prompt input_prompt" href="#in-[18]:">
+     <div class="prompt input_prompt" id="in-[18]">
+      <a class="prompt input_prompt" href="#in-[18]">
        In [18]:
       </a>
      </div>
@@ -2469,8 +2466,8 @@ class Annotation(PlotlyDict)
    </div>
    <div class="cell border-box-sizing code_cell rendered">
     <div class="input">
-     <div class="prompt input_prompt" id="in-[19]:">
-      <a class="prompt input_prompt" href="#in-[19]:">
+     <div class="prompt input_prompt" id="in-[19]">
+      <a class="prompt input_prompt" href="#in-[19]">
        In [19]:
       </a>
      </div>
@@ -2517,8 +2514,8 @@ class Annotation(PlotlyDict)
    </div>
    <div class="cell border-box-sizing code_cell rendered">
     <div class="input">
-     <div class="prompt input_prompt" id="in-[20]:">
-      <a class="prompt input_prompt" href="#in-[20]:">
+     <div class="prompt input_prompt" id="in-[20]">
+      <a class="prompt input_prompt" href="#in-[20]">
        In [20]:
       </a>
      </div>
@@ -2567,8 +2564,8 @@ class Annotation(PlotlyDict)
    </div>
    <div class="cell border-box-sizing code_cell rendered">
     <div class="input">
-     <div class="prompt input_prompt" id="in-[21]:">
-      <a class="prompt input_prompt" href="#in-[21]:">
+     <div class="prompt input_prompt" id="in-[21]">
+      <a class="prompt input_prompt" href="#in-[21]">
        In [21]:
       </a>
      </div>
@@ -2588,10 +2585,13 @@ class Annotation(PlotlyDict)
     <div class="output_wrapper">
      <div class="output">
       <div class="output_area">
-       <div class="prompt">
+       <div class="prompt output_prompt" id="out[21]">
+        <a class="prompt output_prompt" href="#out[21]">
+         Out[21]:
+        </a>
        </div>
-       <div class="output_html rendered_html output_subarea ">
-        <iframe height="525" id="igraph" scrolling="no" seamless="seamless" src="https://plot.ly/~etpinard/120" style="border:none;" width="100%">
+       <div class="output_html rendered_html output_subarea output_pyout">
+        <iframe height="525" id="igraph" scrolling="no" seamless="seamless" src="https://plot.ly/~etpinard/120.embed" style="border:none;" width="100%">
         </iframe>
        </div>
       </div>
@@ -2606,27 +2606,10 @@ class Annotation(PlotlyDict)
       <h5>
        Important!
       </h5>
-      <blockquote>
-       <p>
-        In the Plotly's Python API version 1.0 and up, the
-        <code>
-         'x'
-        </code>
-        key in the
-        <code>
-         Bar
-        </code>
-        object is linked to the x-axis variable and
-        <code>
-         'y'
-        </code>
-        key is linked to the y-axis variable, always (unlike in previous versions).
-       </p>
-      </blockquote>
       <p>
        Loosely-speaking, the key-value pair
        <code>
-        'orientation':'h'
+        'orientation': 'h'
        </code>
        , tells Plotly to take the values linked to the
        <code>
@@ -2646,7 +2629,7 @@ class Annotation(PlotlyDict)
        </code>
        and/or omitting
        <code>
-        'orientation':'h'
+        'orientation': 'h'
        </code>
        would not yield the same result (try it!). Moreover, the
        <code>
@@ -2703,7 +2686,7 @@ class Annotation(PlotlyDict)
        </code>
        Plotly draws ticks inside the axes. To control the distance between ticks, one must first (N.B.) set
        <code>
-        'autotick
+        'autotick'
        </code>
        to
        <code>
@@ -2735,8 +2718,8 @@ class Annotation(PlotlyDict)
    </div>
    <div class="cell border-box-sizing code_cell rendered">
     <div class="input">
-     <div class="prompt input_prompt" id="in-[22]:">
-      <a class="prompt input_prompt" href="#in-[22]:">
+     <div class="prompt input_prompt" id="in-[22]">
+      <a class="prompt input_prompt" href="#in-[22]">
        In [22]:
       </a>
      </div>
@@ -2759,9 +2742,19 @@ class Annotation(PlotlyDict)
 Help on class XAxis in module plotly.graph_objs.graph_objs:
 
 class XAxis(PlotlyDict)
- |  A dictionary-like object representing an xaxis in plotly.
+ |  A dictionary-like object for representing an x-axis in plotly.
  |  
- |      
+ |  Online examples:
+ |  
+ |      https://plot.ly/python/axes/
+ |      https://plot.ly/python/multiple-axes/
+ |      https://plot.ly/python/subplots/
+ |      https://plot.ly/python/insets/
+ |  
+ |  Parent key:
+ |  
+ |      xaxis
+ |  
  |  Quick method reference:
  |  
  |      XAxis.update(changes)
@@ -2774,28 +2767,28 @@ class XAxis(PlotlyDict)
  |  
  |  Valid keys:
  |  
- |      title [required=False] (value=string):
+ |      title [required=False] (value=a string):
  |          The x-axis title.
  |  
- |      titlefont [required=False] (value=Font object | dictionary-like):
- |          A dictionary-like object describing the font settings of the x-axis
- |          title.
+ |      titlefont [required=False] (value=Font object | dictionary-like object):
+ |          Links a dictionary-like object describing the font settings of the
+ |          x-axis title.
  |  
  |          For more, run `help(plotly.graph_objs.Font)`
  |  
  |      range [required=False] (value=number array of length 2):
- |          Defines the start and end point of this x axis.
+ |          Defines the start and end point of this x-axis.
  |  
  |          Examples:
- |              [[-13, 20], [0, 1]]
+ |              [-13, 20] | [0, 1]
  |  
  |      domain [required=False] (value=number array of length 2):
- |          Sets the domain of this x axis; that is, the available space for
- |          this x axis to live in. Domain coordinates are given in normalized
+ |          Sets the domain of this x-axis; that is, the available space for
+ |          this x-axis to live in. Domain coordinates are given in normalized
  |          coordinates with respect to the paper.
  |  
  |          Examples:
- |              [[0, 0.4], [0.6, 1]]
+ |              [0, 0.4] | [0.6, 1]
  |  
  |      type [required=False] (value='linear' | 'log' | 'date' | 'category'):
  |          Sets the format of this axis.
@@ -2813,34 +2806,36 @@ class XAxis(PlotlyDict)
  |          False automatically. Otherwise, if 'autorange' is set to True (the
  |          default behavior), the range of this x-axis can respond to
  |          adjustments made in the web GUI automatically. If 'autorange' is set
- |          to 'reversed', then this x-axis is drawn in reverse i.e. from right
- |          to left instead of from left to right (the default behavior).
+ |          to 'reversed', then this x-axis is drawn in reverse, e.g. in a 2D
+ |          plot, from right to left instead of from left to right (the default
+ |          behavior).
  |  
- |      showgrid [required=False] (value=boolean: True | False):
+ |      showgrid [required=False] (value=a boolean: True | False):
  |          Toggle whether or not this axis features grid lines.
  |  
- |      zeroline [required=False] (value=boolean: True | False):
+ |      zeroline [required=False] (value=a boolean: True | False):
  |          Toggle whether or not an additional grid line (thicker than the
  |          other grid lines, by default) will appear on this axis along x=0.
  |  
- |      showline [required=False] (value=boolean: True | False):
- |          Toggle whether or not the line bounding this x axis will be shown on
+ |      showline [required=False] (value=a boolean: True | False):
+ |          Toggle whether or not the line bounding this x-axis will be shown on
  |          the figure.
  |  
- |      autotick [required=False] (value=boolean: True | False):
+ |      autotick [required=False] (value=a boolean: True | False):
  |          Toggle whether or not the axis ticks parameters are picked
  |          automatically by Plotly. Once 'autotick' is set to False, the axis
  |          ticks parameters can be declared with 'ticks', 'tick0', 'dtick0' and
  |          other tick-related key in this axis object.
  |  
  |      nticks [required=False] (value=number: x &gt; 0):
- |          Specifies the number of axis ticks. No need to set 'autoticks' to
- |          False for 'nticks' to apply.
+ |          Sets the number of axis ticks. No need to set 'autoticks' to False
+ |          for 'nticks' to apply.
  |  
  |      ticks [required=False] (value='' | 'inside' | 'outside'):
- |          Sets the format of tick visibility on this axis.
+ |          Sets the format of the ticks on this axis. For hidden ticks, link
+ |          'ticks' to an empty string.
  |  
- |      showticklabels [required=False] (value=boolean: True | False):
+ |      showticklabels [required=False] (value=a boolean: True | False):
  |          Toggle whether or not the axis ticks will feature tick labels.
  |  
  |      tick0 [required=False] (value=number):
@@ -2855,18 +2850,19 @@ class XAxis(PlotlyDict)
  |      tickwidth [required=False] (value=number: x &gt; 0):
  |          Sets the width of the tick lines on this axis.
  |  
- |      tickcolor [required=False] (value=string describing color):
+ |      tickcolor [required=False] (value=a string describing color):
  |          Sets the color of the tick lines on this axis.
  |  
  |          Examples:
- |              [u"'green'", u"'rgb(0, 255, 0)'", u"'rgba(0, 255, 0, 0.3)'",
- |              u"'hsl(120,100%,50%)'", u"'hsla(120,100%,50%,0.3)'"]
+ |              'green' | 'rgb(0, 255, 0)' | 'rgba(0, 255, 0, 0.3)' |
+ |              'hsl(120,100%,50%)' | 'hsla(120,100%,50%,0.3)' | '#434F1D'
  |  
  |      tickangle [required=False] (value=number: x in [-90, 90]):
  |          Sets the angle in degrees of the ticks on this axis.
  |  
- |      tickfont [required=False] (value=Font object | dictionary-like):
- |          A dictionary-like object defining the parameters of the ticks' font.
+ |      tickfont [required=False] (value=Font object | dictionary-like object):
+ |          Links a dictionary-like object defining the parameters of the ticks'
+ |          font.
  |  
  |          For more, run `help(plotly.graph_objs.Font)`
  |  
@@ -2887,58 +2883,85 @@ class XAxis(PlotlyDict)
  |          appear--only the significands. If set to 'none', no exponents will
  |          appear, only the significands.
  |  
- |      mirror [required=False] (value=boolean: True | False):
- |          Toggle whether to mirror the axis line to the opposite side of the
- |          plot.
+ |      mirror [required=False] (value=True | False | 'ticks' | 'all' |
+ |      'allticks'):
+ |          Toggle the axis line and/or ticks across the plots or subplots. If
+ |          True, mirror the axis line across the primary subplot (i.e. the axis
+ |          that this axis is anchored to). If 'ticks', mirror the axis line and
+ |          the ticks. If 'all', mirror the axis line to all subplots containing
+ |          this axis. If 'allticks', mirror the line and ticks to all subplots
+ |          containing this axis. If False, don't mirror the axis or the ticks.
  |  
- |      gridcolor [required=False] (value=string describing color):
+ |      gridcolor [required=False] (value=a string describing color):
  |          Sets the axis grid color.
  |  
  |          Examples:
- |              [u"'green'", u"'rgb(0, 255, 0)'", u"'rgba(0, 255, 0, 0.3)'",
- |              u"'hsl(120,100%,50%)'", u"'hsla(120,100%,50%,0.3)'"]
+ |              'green' | 'rgb(0, 255, 0)' | 'rgba(0, 255, 0, 0.3)' |
+ |              'hsl(120,100%,50%)' | 'hsla(120,100%,50%,0.3)' | '#434F1D'
  |  
  |      gridwidth [required=False] (value=number: x &gt; 0):
  |          Sets the grid width (in pixels).
  |  
- |      zerolinecolor [required=False] (value=string describing color):
+ |      zerolinecolor [required=False] (value=a string describing color):
  |          Sets the color of this axis' zeroline.
  |  
  |          Examples:
- |              [u"'green'", u"'rgb(0, 255, 0)'", u"'rgba(0, 255, 0, 0.3)'",
- |              u"'hsl(120,100%,50%)'", u"'hsla(120,100%,50%,0.3)'"]
+ |              'green' | 'rgb(0, 255, 0)' | 'rgba(0, 255, 0, 0.3)' |
+ |              'hsl(120,100%,50%)' | 'hsla(120,100%,50%,0.3)' | '#434F1D'
  |  
  |      zerolinewidth [required=False] (value=number: x &gt; 0):
  |          Sets the width of this axis' zeroline (in pixels).
  |  
- |      linecolor [required=False] (value=string describing color):
+ |      linecolor [required=False] (value=a string describing color):
  |          Sets the axis line color.
  |  
  |          Examples:
- |              [u"'green'", u"'rgb(0, 255, 0)'", u"'rgba(0, 255, 0, 0.3)'",
- |              u"'hsl(120,100%,50%)'", u"'hsla(120,100%,50%,0.3)'"]
+ |              'green' | 'rgb(0, 255, 0)' | 'rgba(0, 255, 0, 0.3)' |
+ |              'hsl(120,100%,50%)' | 'hsla(120,100%,50%,0.3)' | '#434F1D'
  |  
  |      linewidth [required=False] (value=number: x &gt; 0):
  |          Sets the width of the axis line (in pixels).
  |  
- |      anchor [required=False] (value='y' | 'y1' | 'y2' | ... | 'free'):
+ |      anchor [required=False] (value='y' | 'y1' | 'y2' | ... | 'free' ):
  |          Choose whether the position of this x-axis will be anchored to a
  |          corresponding y-axis or will be 'free' to appear anywhere in the
- |          vertical space of this figure.
+ |          vertical space of this figure. Has no effect in 3D plots.
  |  
  |      overlaying [required=False] (value='x' | 'x1' | 'x2' | ... | False):
  |          Choose to overlay the data bound to this x-axis on the same plotting
  |          area as a corresponding y-axis or choose not overlay other x-the
- |          other axis/axes of this figure.
+ |          other axis/axes of this figure.Has no effect in 3D plots.
  |  
  |      side [required=False] (value='bottom' | 'top'):
  |          Sets whether this x-axis sits at the 'bottom' of the plot or at the
- |          'top' of the plot.
+ |          'top' of the plot.Has no effect in 3D plots.
  |  
  |      position [required=False] (value=number: x in [0, 1]):
  |          Sets where this x-axis is positioned in the plotting space. For
- |          example 'position'=0.5 will place this axis in the exact center of
- |          the plotting space. Has an effect only if 'anchor' is set to 'free'.
+ |          example if 'position' is set to 0.5, then this axis is placed at the
+ |          exact center of the plotting space. Has an effect only if 'anchor'
+ |          is set to 'free'.Has no effect in 3D plots.
+ |  
+ |      showbackground [required=False] (value=a boolean: True | False):
+ |          Toggle whether or not this x-axis will have a background color. Has
+ |          an effect only in 3D plots.
+ |  
+ |      backgroundcolor [required=False] (value=a string describing color):
+ |          Sets the background color of this x-axis. Has an effect only in 3D
+ |          plots and if 'showbackground' is set to True.
+ |  
+ |      showspikes [required=False] (value=a boolean: True | False):
+ |          Toggle whether or not spikes will link up to this x-axis when
+ |          hovering over data points. Has an effect only in 3D plots.
+ |  
+ |      spikesides [required=False] (value=a boolean: True | False):
+ |          Toggle whether or not the spikes will expand out to the x-axis
+ |          bounds when hovering over data points. Has an effect only in 3D
+ |          plots and if 'showspikes' is set to True.
+ |  
+ |      spikethickness [required=False] (value=number: x &gt; 0):
+ |          Sets the thickness (in pixels) of the x-axis spikes.Has an effect
+ |          only in 3D plots and if 'showspikes' is set to True.
  |  
  |  Method resolution order:
  |      XAxis
@@ -2949,6 +2972,8 @@ class XAxis(PlotlyDict)
  |  Methods inherited from PlotlyDict:
  |  
  |  __init__(self, *args, **kwargs)
+ |  
+ |  __setitem__(self, key, value)
  |  
  |  force_clean(self, caller=True)
  |      Attempts to convert to graph_objs and call force_clean() on values.
@@ -2971,7 +2996,7 @@ class XAxis(PlotlyDict)
  |      stripping process, though they made be left empty. This is allowable.
  |      
  |      Keys that will be stripped in this process are tagged with
- |      `'type': 'style'` in the INFO dictionary listed in graph_objs_meta.py.
+ |      `'type': 'style'` in graph_objs_meta.json.
  |      
  |      This process first attempts to convert nested collections from dicts
  |      or lists to subclasses of PlotlyList/PlotlyDict. This process forces
@@ -2992,17 +3017,16 @@ class XAxis(PlotlyDict)
  |  to_string(self, level=0, indent=4, eol='\n', pretty=True, max_chars=80)
  |      Returns a formatted string showing graph_obj constructors.
  |      
- |              Example:
+ |      Example:
  |      
- |                  print obj.to_string()
+ |          print(obj.to_string())
  |      
- |              Keyword arguments:
- |              level (default = 0) -- set number of indentations to start with
- |              indent (default = 4) -- set indentation amount
- |              eol (default = '
- |      ') -- set end of line character(s)
- |              pretty (default = True) -- curtail long list output with a '...'
- |              max_chars (default = 80) -- set max characters per line
+ |      Keyword arguments:
+ |      level (default = 0) -- set number of indentations to start with
+ |      indent (default = 4) -- set indentation amount
+ |      eol (default = '\n') -- set end of line character(s)
+ |      pretty (default = True) -- curtail long list output with a '...'
+ |      max_chars (default = 80) -- set max characters per line
  |  
  |  update(self, dict1=None, **dict2)
  |      Update current dict with dict1 and then dict2.
@@ -3036,7 +3060,7 @@ class XAxis(PlotlyDict)
  |      Recursively check the validity of the keys in a PlotlyDict.
  |      
  |      The valid keys constitute the entries in each object
- |      dictionary in INFO stored in graph_objs_meta.py.
+ |      dictionary in graph_objs_meta.json
  |      
  |      The validation process first requires that all nested collections be
  |      converted to the appropriate subclass of PlotlyDict/PlotlyList. Then,
@@ -3096,9 +3120,6 @@ class XAxis(PlotlyDict)
  |  
  |  __repr__(...)
  |      x.__repr__() &lt;==&gt; repr(x)
- |  
- |  __setitem__(...)
- |      x.__setitem__(i, y) &lt;==&gt; x[i]=y
  |  
  |  __sizeof__(...)
  |      D.__sizeof__() -&gt; size of D in memory, in bytes
@@ -3207,38 +3228,233 @@ class XAxis(PlotlyDict)
        <code>
         YAxis
        </code>
-       graph objects). For more information on Plotly subplots, see
-       <a href="/python/overview#0.7-Subplots-and-version-1.0-other-additions">
-        section 0
-       </a>
-       (Getting started with Plotly).
+       graph objects).
       </p>
       <p>
-       In version 1.0 and up, Plotly's Python API subplot axes can be easily generated with the
+       For most purposes, our
        <code>
-        get_subplot()
+        tls.make_subplots
        </code>
-       function. So, let's generate a Figure object with 2 axes on 2 rows:
+       function should satisfy your subplot needs:
       </p>
      </div>
     </div>
    </div>
    <div class="cell border-box-sizing code_cell rendered">
     <div class="input">
-     <div class="prompt input_prompt" id="in-[23]:">
-      <a class="prompt input_prompt" href="#in-[23]:">
+     <div class="prompt input_prompt" id="in-[23]">
+      <a class="prompt input_prompt" href="#in-[23]">
        In [23]:
       </a>
      </div>
      <div class="inner_cell">
       <div class="input_area">
        <div class="highlight">
+        <pre><span class="n">help</span><span class="p">(</span><span class="n">tls</span><span class="o">.</span><span class="n">make_subplots</span><span class="p">)</span>
+</pre>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="output_wrapper">
+     <div class="output">
+      <div class="output_area">
+       <div class="prompt">
+       </div>
+       <div class="output_subarea output_stream output_stdout output_text">
+        <pre>
+Help on function make_subplots in module plotly.tools:
+
+make_subplots(rows=1, cols=1, shared_xaxes=False, shared_yaxes=False, start_cell='top-left', print_grid=True, **kwargs)
+    Return an instance of plotly.graph_objs.Figure
+    with the subplots domain set in 'layout'.
+    
+    Example 1:
+    # stack two subplots vertically
+    fig = tools.make_subplots(rows=2)
+    
+    This is the format of your plot grid:
+    [ (1,1) x1,y1 ]
+    [ (2,1) x2,y2 ]
+    
+    fig['data'] += [Scatter(x=[1,2,3], y=[2,1,2])]
+    fig['data'] += [Scatter(x=[1,2,3], y=[2,1,2], xaxis='x2', yaxis='y2')]
+    
+    # or see Figure.append_trace
+    
+    Example 2:
+    # subplots with shared x axes
+    fig = tools.make_subplots(rows=2, shared_xaxes=True)
+    
+    This is the format of your plot grid:
+    [ (1,1) x1,y1 ]
+    [ (2,1) x1,y2 ]
+    
+    
+    fig['data'] += [Scatter(x=[1,2,3], y=[2,1,2])]
+    fig['data'] += [Scatter(x=[1,2,3], y=[2,1,2], yaxis='y2')]
+    
+    Example 3:
+    # irregular subplot layout (more examples below under 'specs')
+    fig = tools.make_subplots(rows=2, cols=2,
+                              specs=[[{}, {}],
+                                     [{'colspan': 2}, None]])
+    
+    This is the format of your plot grid!
+    [ (1,1) x1,y1 ]  [ (1,2) x2,y2 ]
+    [ (2,1) x3,y3           -      ]
+    
+    fig['data'] += [Scatter(x=[1,2,3], y=[2,1,2])]
+    fig['data'] += [Scatter(x=[1,2,3], y=[2,1,2], xaxis='x2', yaxis='y2')]
+    fig['data'] += [Scatter(x=[1,2,3], y=[2,1,2], xaxis='x3', yaxis='y3')]
+    
+    Example 4:
+    # insets
+    fig = tools.make_subplots(insets=[{'cell': (1,1), 'l': 0.7, 'b': 0.3}])
+    
+    This is the format of your plot grid!
+    [ (1,1) x1,y1 ]
+    
+    With insets:
+    [ x2,y2 ] over [ (1,1) x1,y1 ]
+    
+    fig['data'] += [Scatter(x=[1,2,3], y=[2,1,2])]
+    fig['data'] += [Scatter(x=[1,2,3], y=[2,1,2], xaxis='x2', yaxis='y2')]
+    
+    Keywords arguments with constant defaults:
+    
+    rows (kwarg, int greater than 0, default=1):
+        Number of rows in the subplot grid.
+    
+    cols (kwarg, int greater than 0, default=1):
+        Number of columns in the subplot grid.
+    
+    shared_xaxes (kwarg, boolean or list, default=False)
+        Assign shared x axes.
+        If True, subplots in the same grid column have one common
+        shared x-axis at the bottom of the gird.
+    
+        To assign shared x axes per subplot grid cell (see 'specs'),
+        send list (or list of lists, one list per shared x axis)
+        of cell index tuples.
+    
+    shared_yaxes (kwarg, boolean or list, default=False)
+        Assign shared y axes.
+        If True, subplots in the same grid row have one common
+        shared y-axis on the left-hand side of the gird.
+    
+        To assign shared y axes per subplot grid cell (see 'specs'),
+        send list (or list of lists, one list per shared y axis)
+        of cell index tuples.
+    
+    start_cell (kwarg, 'bottom-left' or 'top-left', default='top-left')
+        Choose the starting cell in the subplot grid used to set the
+        domains of the subplots.
+    
+    print_grid (kwarg, boolean, default=True):
+        If True, prints a tab-delimited string representation of
+        your plot grid.
+    
+    Keyword arguments with variable defaults:
+    
+    horizontal_spacing (kwarg, float in [0,1], default=0.2 / cols):
+        Space between subplot columns.
+        Applies to all columns (use 'specs' subplot-dependents spacing)
+    
+    vertical_spacing (kwarg, float in [0,1], default=0.3 / rows):
+        Space between subplot rows.
+        Applies to all rows (use 'specs' subplot-dependents spacing)
+    
+    specs (kwarg, list of lists of dictionaries):
+        Subplot specifications.
+    
+        ex1: specs=[[{}, {}], [{'colspan': 2}, None]]
+    
+        ex2: specs=[[{'rowspan': 2}, {}], [None, {}]]
+    
+        - Indices of the outer list correspond to subplot grid rows
+          starting from the bottom. The number of rows in 'specs'
+          must be equal to 'rows'.
+    
+        - Indices of the inner lists correspond to subplot grid columns
+          starting from the left. The number of columns in 'specs'
+          must be equal to 'cols'.
+    
+        - Each item in the 'specs' list corresponds to one subplot
+          in a subplot grid. (N.B. The subplot grid has exactly 'rows'
+          times 'cols' cells.)
+    
+        - Use None for blank a subplot cell (or to move pass a col/row span).
+    
+        - Note that specs[0][0] has the specs of the 'start_cell' subplot.
+    
+        - Each item in 'specs' is a dictionary.
+            The available keys are:
+    
+            * is_3d (boolean, default=False): flag for 3d scenes
+            * colspan (int, default=1): number of subplot columns
+                for this subplot to span.
+            * rowspan (int, default=1): number of subplot rows
+                for this subplot to span.
+            * l (float, default=0.0): padding left of cell
+            * r (float, default=0.0): padding right of cell
+            * t (float, default=0.0): padding right of cell
+            * b (float, default=0.0): padding bottom of cell
+    
+        - Use 'horizontal_spacing' and 'vertical_spacing' to adjust
+          the spacing in between the subplots.
+    
+    insets (kwarg, list of dictionaries):
+        Inset specifications.
+    
+        - Each item in 'insets' is a dictionary.
+            The available keys are:
+    
+            * cell (tuple, default=(1,1)): (row, col) index of the
+                subplot cell to overlay inset axes onto.
+            * is_3d (boolean, default=False): flag for 3d scenes
+            * l (float, default=0.0): padding left of inset
+                  in fraction of cell width
+            * w (float or 'to_end', default='to_end') inset width
+                  in fraction of cell width ('to_end': to cell right edge)
+            * b (float, default=0.0): padding bottom of inset
+                  in fraction of cell height
+            * h (float or 'to_end', default='to_end') inset height
+                  in fraction of cell height ('to_end': to cell top edge)
+
+
+</pre>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       Our subplots will share an x-axis (corresponding the months of the year):
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
+     <div class="prompt input_prompt" id="in-[24]">
+      <a class="prompt input_prompt" href="#in-[24]">
+       In [24]:
+      </a>
+     </div>
+     <div class="inner_cell">
+      <div class="input_area">
+       <div class="highlight">
         <pre><span class="c"># Generate Figure object with 2 axes on 2 rows, print axis grid to stdout</span>
-<span class="n">fig</span> <span class="o">=</span> <span class="n">tls</span><span class="o">.</span><span class="n">get_subplots</span><span class="p">(</span>
+<span class="n">fig</span> <span class="o">=</span> <span class="n">tls</span><span class="o">.</span><span class="n">make_subplots</span><span class="p">(</span>
     <span class="n">rows</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> 
-    <span class="n">columns</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> 
-    <span class="n">vertical_spacing</span><span class="o">=</span><span class="mf">0.05</span><span class="p">,</span>  <span class="c"># norm. vertical spacing bt. axes</span>
-    <span class="n">print_grid</span><span class="o">=</span><span class="bp">True</span>         <span class="c"># print subplot grid to stdout</span>
+    <span class="n">cols</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">shared_xaxes</span><span class="o">=</span><span class="bp">True</span>
 <span class="p">)</span>
 </pre>
        </div>
@@ -3252,9 +3468,9 @@ class XAxis(PlotlyDict)
        </div>
        <div class="output_subarea output_stream output_stdout output_text">
         <pre>
-This is the format of your plot grid!
-[2]	
-[1]	
+This is the format of your plot grid:
+[ (1,1) x1,y1 ]
+[ (2,1) x1,y2 ]
 
 
 </pre>
@@ -3263,18 +3479,32 @@ This is the format of your plot grid!
      </div>
     </div>
    </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       <code>
+        tls.make_subplots
+       </code>
+       generates the appropriate axis positions and anchor points:
+      </p>
+     </div>
+    </div>
+   </div>
    <div class="cell border-box-sizing code_cell rendered">
     <div class="input">
-     <div class="prompt input_prompt" id="in-[24]:">
-      <a class="prompt input_prompt" href="#in-[24]:">
-       In [24]:
+     <div class="prompt input_prompt" id="in-[25]">
+      <a class="prompt input_prompt" href="#in-[25]">
+       In [25]:
       </a>
      </div>
      <div class="inner_cell">
       <div class="input_area">
        <div class="highlight">
         <pre><span class="c"># Print Figure object to stdout</span>
-<span class="k">print</span> <span class="n">fig</span><span class="o">.</span><span class="n">to_string</span><span class="p">()</span>
+<span class="k">print</span><span class="p">(</span><span class="n">fig</span><span class="o">.</span><span class="n">to_string</span><span class="p">())</span>
 </pre>
        </div>
       </div>
@@ -3292,19 +3522,16 @@ Figure(
     layout=Layout(
         xaxis1=XAxis(
             domain=[0.0, 1.0],
-            anchor='y1'
-        ),
-        xaxis2=XAxis(
-            domain=[0.0, 1.0],
             anchor='y2'
         ),
         yaxis1=YAxis(
-            domain=[0.0, 0.475],
-            anchor='x1'
+            domain=[0.575, 1.0],
+            anchor='free',
+            position=0.0
         ),
         yaxis2=YAxis(
-            domain=[0.525, 1.0],
-            anchor='x2'
+            domain=[0.0, 0.425],
+            anchor='x1'
         )
     )
 )
@@ -3323,77 +3550,6 @@ Figure(
       <p>
        Nice.
       </p>
-      <p>
-       But, for our following plot, we would like to make both subplots have the same x-axis corresponding to months of the year. So, delete
-       <code>
-        'xaxis2'
-       </code>
-       as well as all
-       <code>
-        'anchor'
-       </code>
-       keys which have no effect here:
-      </p>
-     </div>
-    </div>
-   </div>
-   <div class="cell border-box-sizing code_cell rendered">
-    <div class="input">
-     <div class="prompt input_prompt" id="in-[25]:">
-      <a class="prompt input_prompt" href="#in-[25]:">
-       In [25]:
-      </a>
-     </div>
-     <div class="inner_cell">
-      <div class="input_area">
-       <div class="highlight">
-        <pre><span class="c"># Delete 'xaxis2' key using the pop() method</span>
-<span class="n">fig</span><span class="p">[</span><span class="s">'layout'</span><span class="p">]</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s">'xaxis2'</span><span class="p">,</span><span class="bp">None</span><span class="p">)</span>
-
-<span class="c"># Delete 'anchor' keys</span>
-<span class="k">for</span> <span class="n">ax</span> <span class="ow">in</span> <span class="p">[</span><span class="s">'xaxis1'</span><span class="p">,</span><span class="s">'yaxis1'</span><span class="p">,</span><span class="s">'yaxis2'</span><span class="p">]:</span>
-   <span class="n">fig</span><span class="p">[</span><span class="s">'layout'</span><span class="p">][</span><span class="n">ax</span><span class="p">]</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s">'anchor'</span><span class="p">,</span><span class="bp">None</span><span class="p">)</span>
-  
-<span class="c"># Print resulting Figure object to screen </span>
-<span class="k">print</span> <span class="n">fig</span><span class="o">.</span><span class="n">to_string</span><span class="p">()</span>
-</pre>
-       </div>
-      </div>
-     </div>
-    </div>
-    <div class="output_wrapper">
-     <div class="output">
-      <div class="output_area">
-       <div class="prompt">
-       </div>
-       <div class="output_subarea output_stream output_stdout output_text">
-        <pre>
-Figure(
-    data=Data(),
-    layout=Layout(
-        xaxis1=XAxis(
-            domain=[0.0, 1.0]
-        ),
-        yaxis1=YAxis(
-            domain=[0.0, 0.475]
-        ),
-        yaxis2=YAxis(
-            domain=[0.525, 1.0]
-        )
-    )
-)
-
-</pre>
-       </div>
-      </div>
-     </div>
-    </div>
-   </div>
-   <div class="cell border-box-sizing text_cell rendered">
-    <div class="prompt input_prompt">
-    </div>
-    <div class="inner_cell">
-     <div class="text_cell_render border-box-sizing rendered_html">
       <p>
        In the following plot, we also explore advanced annotation style options: annotations are used for plot's title and legend as well as on-plot annotations.
       </p>
@@ -3442,8 +3598,8 @@ Figure(
    </div>
    <div class="cell border-box-sizing code_cell rendered">
     <div class="input">
-     <div class="prompt input_prompt" id="in-[26]:">
-      <a class="prompt input_prompt" href="#in-[26]:">
+     <div class="prompt input_prompt" id="in-[26]">
+      <a class="prompt input_prompt" href="#in-[26]">
        In [26]:
       </a>
      </div>
@@ -3452,7 +3608,7 @@ Figure(
        <div class="highlight">
         <pre><span class="c"># (0.1) Relabel 'T_avg' and get missing data array</span>
 <span class="n">mtl_T_avg</span> <span class="o">=</span> <span class="n">T_avg</span>
-<span class="n">van_T_avg</span> <span class="o">=</span> <span class="n">get_csv_data</span><span class="p">(</span><span class="s">'vancouver.csv'</span><span class="p">,</span><span class="s">'Daily Average'</span><span class="p">)</span>
+<span class="n">van_T_avg</span> <span class="o">=</span> <span class="n">get_csv_data</span><span class="p">(</span><span class="s">'vancouver.csv'</span><span class="p">,</span> <span class="s">'Daily Average'</span><span class="p">)</span>
 
 <span class="c"># (0.2) Define color for both cities (ref. Sunlight Foundation)</span>
 <span class="n">col_mtl</span> <span class="o">=</span> <span class="s">'#0F8C79'</span>
@@ -3495,8 +3651,8 @@ Figure(
    </div>
    <div class="cell border-box-sizing code_cell rendered">
     <div class="input">
-     <div class="prompt input_prompt" id="in-[27]:">
-      <a class="prompt input_prompt" href="#in-[27]:">
+     <div class="prompt input_prompt" id="in-[27]">
+      <a class="prompt input_prompt" href="#in-[27]">
        In [27]:
       </a>
      </div>
@@ -3532,8 +3688,8 @@ Figure(
    </div>
    <div class="cell border-box-sizing code_cell rendered">
     <div class="input">
-     <div class="prompt input_prompt" id="in-[28]:">
-      <a class="prompt input_prompt" href="#in-[28]:">
+     <div class="prompt input_prompt" id="in-[28]">
+      <a class="prompt input_prompt" href="#in-[28]">
        In [28]:
       </a>
      </div>
@@ -3541,16 +3697,16 @@ Figure(
       <div class="input_area">
        <div class="highlight">
         <pre><span class="c"># (1.1a) Assign temperature traces to 'xaxis2' and 'yaxis2' (top axis)</span>
-<span class="n">traces_T</span> <span class="o">=</span> <span class="p">[</span><span class="n">make_trace</span><span class="p">(</span><span class="n">mtl_T_avg</span><span class="p">,</span><span class="n">col_mtl</span><span class="p">,</span><span class="s">'Montreal'</span><span class="p">,</span><span class="mi">2</span><span class="p">),</span>
-            <span class="n">make_trace</span><span class="p">(</span><span class="n">van_T_avg</span><span class="p">,</span><span class="n">col_van</span><span class="p">,</span><span class="s">'Vancouver'</span><span class="p">,</span><span class="mi">2</span><span class="p">)]</span>
+<span class="n">traces_T</span> <span class="o">=</span> <span class="p">[</span><span class="n">make_trace</span><span class="p">(</span><span class="n">mtl_T_avg</span><span class="p">,</span> <span class="n">col_mtl</span><span class="p">,</span> <span class="s">'Montreal'</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span>
+            <span class="n">make_trace</span><span class="p">(</span><span class="n">van_T_avg</span><span class="p">,</span> <span class="n">col_van</span><span class="p">,</span> <span class="s">'Vancouver'</span><span class="p">,</span> <span class="mi">2</span><span class="p">)]</span>
 
 <span class="c"># (1.1b) Assign precipitation traces to 'xaxis' and 'yaxis' (bottom axis)</span>
-<span class="n">traces_P</span> <span class="o">=</span> <span class="p">[</span><span class="n">make_trace</span><span class="p">(</span><span class="n">mtl_P</span><span class="p">,</span><span class="n">col_mtl</span><span class="p">,</span><span class="s">'Montreal'</span><span class="p">,</span><span class="mi">1</span><span class="p">),</span>
-            <span class="n">make_trace</span><span class="p">(</span><span class="n">van_P</span><span class="p">,</span><span class="n">col_van</span><span class="p">,</span><span class="s">'Vancouver'</span><span class="p">,</span><span class="mi">1</span><span class="p">)]</span>
+<span class="n">traces_P</span> <span class="o">=</span> <span class="p">[</span><span class="n">make_trace</span><span class="p">(</span><span class="n">mtl_P</span><span class="p">,</span> <span class="n">col_mtl</span><span class="p">,</span> <span class="s">'Montreal'</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>
+            <span class="n">make_trace</span><span class="p">(</span><span class="n">van_P</span><span class="p">,</span> <span class="n">col_van</span><span class="p">,</span> <span class="s">'Vancouver'</span><span class="p">,</span> <span class="mi">1</span><span class="p">)]</span>
 
 <span class="c"># (1.2) Concatenate the four traces </span>
 <span class="c">#       and set the 'data' key in the Figure object</span>
-<span class="n">fig</span><span class="p">[</span><span class="s">'data'</span><span class="p">]</span> <span class="o">=</span> <span class="n">Data</span><span class="p">(</span><span class="n">traces_T</span><span class="o">+</span><span class="n">traces_P</span><span class="p">)</span>
+<span class="n">fig</span><span class="p">[</span><span class="s">'data'</span><span class="p">]</span> <span class="o">=</span> <span class="n">Data</span><span class="p">(</span><span class="n">traces_T</span> <span class="o">+</span> <span class="n">traces_P</span><span class="p">)</span>
 </pre>
        </div>
       </div>
@@ -3584,8 +3740,8 @@ Figure(
    </div>
    <div class="cell border-box-sizing code_cell rendered">
     <div class="input">
-     <div class="prompt input_prompt" id="in-[29]:">
-      <a class="prompt input_prompt" href="#in-[29]:">
+     <div class="prompt input_prompt" id="in-[29]">
+      <a class="prompt input_prompt" href="#in-[29]">
        In [29]:
       </a>
      </div>
@@ -3641,8 +3797,8 @@ Figure(
    </div>
    <div class="cell border-box-sizing code_cell rendered">
     <div class="input">
-     <div class="prompt input_prompt" id="in-[30]:">
-      <a class="prompt input_prompt" href="#in-[30]:">
+     <div class="prompt input_prompt" id="in-[30]">
+      <a class="prompt input_prompt" href="#in-[30]">
        In [30]:
       </a>
      </div>
@@ -3666,7 +3822,7 @@ Figure(
 
 <span class="c"># (2.4b) Update top axis options in Layout options</span>
 <span class="n">fig</span><span class="p">[</span><span class="s">'layout'</span><span class="p">][</span><span class="s">'yaxis2'</span><span class="p">]</span><span class="o">.</span><span class="n">update</span><span class="p">(</span>
-    <span class="n">update_axis</span><span class="p">(</span><span class="s">'&lt;b&gt;Temperature&lt;/b&gt; ['</span><span class="o">+</span><span class="n">degC</span><span class="o">+</span><span class="s">']'</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+    <span class="n">update_axis</span><span class="p">(</span><span class="s">'&lt;b&gt;Temperature&lt;/b&gt; ['</span> <span class="o">+</span> <span class="n">degC</span> <span class="o">+</span> <span class="s">']'</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
 <span class="p">)</span> 
 
 <span class="c"># (2.4c) Update bottom axis options in Layout object</span>
@@ -3692,8 +3848,8 @@ Figure(
    </div>
    <div class="cell border-box-sizing code_cell rendered">
     <div class="input">
-     <div class="prompt input_prompt" id="in-[31]:">
-      <a class="prompt input_prompt" href="#in-[31]:">
+     <div class="prompt input_prompt" id="in-[31]">
+      <a class="prompt input_prompt" href="#in-[31]">
        In [31]:
       </a>
      </div>
@@ -3718,18 +3874,19 @@ Figure(
 
 <span class="c"># (2.5a) Create annotation list with title and data source</span>
 <span class="n">annotations</span> <span class="o">=</span> <span class="n">Annotations</span><span class="p">([</span>
-    <span class="n">make_anno1</span><span class="p">(</span><span class="s">'Fig. 2.4a: &lt;b&gt;Climate of 1981-2010&lt;/b&gt;'</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mf">0.04</span><span class="p">,</span> <span class="mf">1.2</span><span class="p">),</span>
-    <span class="n">make_anno1</span><span class="p">(</span><span class="s">'&lt;b&gt;Source:&lt;/b&gt; Environment Canada'</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mf">0.04</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.28</span><span class="p">)</span>
+    <span class="n">make_anno1</span><span class="p">(</span><span class="s">'Fig. 2.4a: &lt;b&gt;Climate of 1981-2010&lt;/b&gt;'</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">1.3</span><span class="p">),</span>
+    <span class="n">make_anno1</span><span class="p">(</span><span class="s">'&lt;b&gt;Source:&lt;/b&gt; Environment Canada'</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.3</span><span class="p">)</span>
 <span class="p">])</span>
 
 <span class="c"># Define a 2nd annotation-generating function (for the legend)</span>
 <span class="k">def</span> <span class="nf">make_anno2</span><span class="p">(</span><span class="n">text</span><span class="p">,</span> <span class="n">fontcolor</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
     <span class="k">return</span> <span class="n">Annotation</span><span class="p">(</span>
         <span class="n">text</span><span class="o">=</span><span class="n">text</span><span class="p">,</span>  <span class="c"># annotation text</span>
-        <span class="n">xref</span><span class="o">=</span><span class="s">'paper'</span><span class="p">,</span>  <span class="c"># use paper coordinates</span>
-        <span class="n">yref</span><span class="o">=</span><span class="s">'paper'</span><span class="p">,</span>  <span class="c">#   for both x and y coords</span>
-        <span class="n">x</span><span class="o">=</span><span class="n">x</span><span class="p">,</span>           <span class="c"># x and y position</span>
-        <span class="n">y</span><span class="o">=</span><span class="mf">1.1</span><span class="p">,</span>         <span class="c">#   in norm. coord.</span>
+        <span class="n">xref</span><span class="o">=</span><span class="s">'paper'</span><span class="p">,</span>     <span class="c"># use paper coordinates</span>
+        <span class="n">yref</span><span class="o">=</span><span class="s">'paper'</span><span class="p">,</span>     <span class="c">#   for both x and y coords</span>
+        <span class="n">x</span><span class="o">=</span><span class="n">x</span><span class="p">,</span>              <span class="c"># x and y position</span>
+        <span class="n">y</span><span class="o">=</span><span class="mf">1.2</span><span class="p">,</span>            <span class="c">#   in norm. coord.</span>
+        <span class="n">xanchor</span><span class="o">=</span><span class="s">'right'</span><span class="p">,</span>  <span class="c"># 'x' at right border of annotation</span>
         <span class="n">font</span><span class="o">=</span><span class="n">Font</span><span class="p">(</span>
             <span class="n">size</span><span class="o">=</span><span class="mi">12</span><span class="p">,</span>           <span class="c"># set text font size </span>
             <span class="n">color</span><span class="o">=</span><span class="n">fontcolor</span>    <span class="c">#   and color</span>
@@ -3740,8 +3897,8 @@ Figure(
     <span class="p">)</span>
 <span class="c"># (2.5b) Append annotation list with the two legend items</span>
 <span class="n">annotations</span> <span class="o">+=</span> <span class="p">[</span>
-    <span class="n">make_anno2</span><span class="p">(</span><span class="s">'&lt;b&gt;Montreal&lt;/b&gt;'</span><span class="p">,</span> <span class="n">col_mtl</span><span class="p">,</span> <span class="mf">0.79</span><span class="p">),</span>
-    <span class="n">make_anno2</span><span class="p">(</span><span class="s">'&lt;b&gt;Vancouver&lt;/b&gt;'</span><span class="p">,</span> <span class="n">col_van</span><span class="p">,</span> <span class="mf">0.97</span><span class="p">)</span>
+    <span class="n">make_anno2</span><span class="p">(</span><span class="s">'&lt;b&gt;Montreal&lt;/b&gt;'</span><span class="p">,</span> <span class="n">col_mtl</span><span class="p">,</span> <span class="mf">0.8</span><span class="p">),</span>
+    <span class="n">make_anno2</span><span class="p">(</span><span class="s">'&lt;b&gt;Vancouver&lt;/b&gt;'</span><span class="p">,</span> <span class="n">col_van</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
 <span class="p">]</span>
 
 <span class="c"># (2.5c) Add annotation list to 'layout' key in the Figure object</span>
@@ -3775,8 +3932,8 @@ Figure(
    </div>
    <div class="cell border-box-sizing code_cell rendered">
     <div class="input">
-     <div class="prompt input_prompt" id="in-[32]:">
-      <a class="prompt input_prompt" href="#in-[32]:">
+     <div class="prompt input_prompt" id="in-[32]">
+      <a class="prompt input_prompt" href="#in-[32]">
        In [32]:
       </a>
      </div>
@@ -3810,8 +3967,8 @@ Figure(
    </div>
    <div class="cell border-box-sizing code_cell rendered">
     <div class="input">
-     <div class="prompt input_prompt" id="in-[33]:">
-      <a class="prompt input_prompt" href="#in-[33]:">
+     <div class="prompt input_prompt" id="in-[33]">
+      <a class="prompt input_prompt" href="#in-[33]">
        In [33]:
       </a>
      </div>
@@ -3828,10 +3985,13 @@ Figure(
     <div class="output_wrapper">
      <div class="output">
       <div class="output_area">
-       <div class="prompt">
+       <div class="prompt output_prompt" id="out[33]">
+        <a class="prompt output_prompt" href="#out[33]">
+         Out[33]:
+        </a>
        </div>
-       <div class="output_html rendered_html output_subarea ">
-        <iframe height="525" id="igraph" scrolling="no" seamless="seamless" src="https://plot.ly/~etpinard/79" style="border:none;" width="100%">
+       <div class="output_html rendered_html output_subarea output_pyout">
+        <iframe height="525" id="igraph" scrolling="no" seamless="seamless" src="https://plot.ly/~etpinard/79.embed" style="border:none;" width="100%">
         </iframe>
        </div>
       </div>
@@ -3878,8 +4038,8 @@ Figure(
    </div>
    <div class="cell border-box-sizing code_cell rendered">
     <div class="input">
-     <div class="prompt input_prompt" id="in-[34]:">
-      <a class="prompt input_prompt" href="#in-[34]:">
+     <div class="prompt input_prompt" id="in-[34]">
+      <a class="prompt input_prompt" href="#in-[34]">
        In [34]:
       </a>
      </div>
@@ -3913,8 +4073,8 @@ Figure(
    </div>
    <div class="cell border-box-sizing code_cell rendered">
     <div class="input">
-     <div class="prompt input_prompt" id="in-[35]:">
-      <a class="prompt input_prompt" href="#in-[35]:">
+     <div class="prompt input_prompt" id="in-[35]">
+      <a class="prompt input_prompt" href="#in-[35]">
        In [35]:
       </a>
      </div>
@@ -3935,9 +4095,9 @@ Figure(
 
 <span class="c"># (4.1c) Append annotation list with 2 on-plot annotations</span>
 <span class="n">fig</span><span class="p">[</span><span class="s">'layout'</span><span class="p">][</span><span class="s">'annotations'</span><span class="p">]</span> <span class="o">+=</span> <span class="n">Annotations</span><span class="p">([</span>
-    <span class="n">make_anno3</span><span class="p">(</span><span class="s">'&lt;em&gt;Coldest month&lt;/em&gt;&lt;br&gt;{}'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">cold</span><span class="p">)</span><span class="o">+</span><span class="n">degC</span><span class="p">,</span>
+    <span class="n">make_anno3</span><span class="p">(</span><span class="s">'&lt;em&gt;Coldest month&lt;/em&gt;&lt;br&gt;{}'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">cold</span><span class="p">)</span> <span class="o">+</span> <span class="n">degC</span><span class="p">,</span>
                <span class="s">'y2'</span><span class="p">,</span> <span class="n">i_cold</span><span class="p">,</span> <span class="n">cold</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">15</span><span class="p">),</span>
-    <span class="n">make_anno3</span><span class="p">(</span><span class="s">'&lt;em&gt;Wettest month&lt;/em&gt;&lt;br&gt;{}'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">wet</span><span class="p">)</span><span class="o">+</span><span class="s">' mm'</span><span class="p">,</span>
+    <span class="n">make_anno3</span><span class="p">(</span><span class="s">'&lt;em&gt;Wettest month&lt;/em&gt;&lt;br&gt;{}'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">wet</span><span class="p">)</span> <span class="o">+</span> <span class="s">' mm'</span><span class="p">,</span>
                <span class="s">'y1'</span><span class="p">,</span> <span class="n">i_wet</span><span class="p">,</span> <span class="n">wet</span><span class="p">,</span> <span class="o">-</span><span class="mi">100</span><span class="p">,</span> <span class="mi">15</span><span class="p">)</span>
 <span class="p">])</span>
 </pre>
@@ -3963,8 +4123,8 @@ Figure(
    </div>
    <div class="cell border-box-sizing code_cell rendered">
     <div class="input">
-     <div class="prompt input_prompt" id="in-[36]:">
-      <a class="prompt input_prompt" href="#in-[36]:">
+     <div class="prompt input_prompt" id="in-[36]">
+      <a class="prompt input_prompt" href="#in-[36]">
        In [36]:
       </a>
      </div>
@@ -3992,8 +4152,8 @@ Figure(
    </div>
    <div class="cell border-box-sizing code_cell rendered">
     <div class="input">
-     <div class="prompt input_prompt" id="in-[37]:">
-      <a class="prompt input_prompt" href="#in-[37]:">
+     <div class="prompt input_prompt" id="in-[37]">
+      <a class="prompt input_prompt" href="#in-[37]">
        In [37]:
       </a>
      </div>
@@ -4010,10 +4170,13 @@ Figure(
     <div class="output_wrapper">
      <div class="output">
       <div class="output_area">
-       <div class="prompt">
+       <div class="prompt output_prompt" id="out[37]">
+        <a class="prompt output_prompt" href="#out[37]">
+         Out[37]:
+        </a>
        </div>
-       <div class="output_html rendered_html output_subarea ">
-        <iframe height="525" id="igraph" scrolling="no" seamless="seamless" src="https://plot.ly/~etpinard/195" style="border:none;" width="100%">
+       <div class="output_html rendered_html output_subarea output_pyout">
+        <iframe height="525" id="igraph" scrolling="no" seamless="seamless" src="https://plot.ly/~etpinard/195.embed" style="border:none;" width="100%">
         </iframe>
        </div>
       </div>
@@ -4063,7 +4226,7 @@ Figure(
     <div class="inner_cell">
      <div class="text_cell_render border-box-sizing rendered_html">
       <div style="float:right; \">
-       <img align="right" src="/static/api_docs/image/user_guide/python/image07.png" style="float:right; margin-left: 5px; margin-top: -10px"/>
+       <img align="right" src="/static/api_docs/image/user_guide/python/image06.png" style="float:right; margin-left: 5px; margin-top: -10px"/>
       </div>
       <h4>
        Got Questions or Feedback?
@@ -4123,6 +4286,35 @@ Figure(
       <p>
        <br/>
       </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
+     <div class="prompt input_prompt" id="in-[38]">
+      <a class="prompt input_prompt" href="#in-[38]">
+       In [38]:
+      </a>
+     </div>
+     <div class="inner_cell">
+      <div class="input_area">
+       <div class="highlight">
+        <pre><span class="c"># CSS styling within IPython notebook</span>
+<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">display</span><span class="p">,</span> <span class="n">HTML</span>
+<span class="n">display</span><span class="p">(</span><span class="n">HTML</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="s">'../custom.css'</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()))</span>
+</pre>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="output_wrapper">
+     <div class="output">
+      <div class="output_area">
+       <div class="prompt">
+       </div>
+       <div class="output_html rendered_html output_subarea ">
+       </div>
+      </div>
      </div>
     </div>
    </div>
