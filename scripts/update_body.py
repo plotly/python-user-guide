@@ -124,7 +124,7 @@ def add_anchors(body):
         if not text:
             continue
         # Add id attr to <div>
-        _id = text.replace(" ", "-").replace(u"\xa0", "-").lower()
+        _id = text[:-1].replace(" ", "-").replace(u"\xa0", "-").lower()
         div['id'] = _id
         # Add <a href= > around text
         a_href = '#' + _id
