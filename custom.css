@@ -1,203 +1,226 @@
 <style>
-    h1 {
-        font-family: "Open sans",verdana,arial,sans-serif;
-    }
-    .text_cell_render h1 {
-        font-weight: 200;
-        font-size: 40pt;
-        line-height: 100%;
-        color:#447adb;
-        margin-bottom: 0em;
-        margin-top: 0em;
-        display: block;
-        white-space: nowrap;
-    } 
-    h2 {
-        font-family: "Open sans",verdana,arial,sans-serif;
-    }
-    .text_cell_render h2 {
-        font-weight: 200;
-        font-size: 20pt;
-        font-style: italic;
-        line-height: 100%;
-        color:#447adb;
-        margin-bottom: 1.5em;
-        margin-top: 0.5em;
-        display: block;
-        white-space: nowrap;
-    } 
-    h3 {
-        font-family: "Open sans",verdana,arial,sans-serif;
-    }
-    .text_cell_render h3 {
-        font-weight: 300;
-        font-size: 18pt;
-        line-height: 100%;
-        color:#447adb;
-        margin-bottom: 0.5em;
-        margin-top: 2em;
-        display: block;
-        white-space: nowrap;
-    }
-    h4 {
-        font-family: "Open sans",verdana,arial,sans-serif;
-    }
-    .text_cell_render h4 {
-        font-weight: 300;
-        font-size: 16pt;
-        color:#447adb;
-        margin-bottom: 0.5em;
-        margin-top: 0.5em;
-        display: block;
-        white-space: nowrap;
-    }
-    h5 {
-        font-family: "Open sans",verdana,arial,sans-serif;
-    }
-    .text_cell_render h5 {
-        font-weight: 300;
-        font-style: normal;
-        color: #1d3b84;
-        font-size: 16pt;
-        margin-bottom: 0em;
-        margin-top: 1.5em;
-        display: block;
-        white-space: nowrap;
-    }
-    div.text_cell_render{
-        font-family: "Open sans",verdana,arial,sans-serif;
-        line-height: 135%;
-        font-size: 125%;
-        text-align:justify;
-        text-justify:inter-word;
-    }
-    div.output_subarea.output_text.output_pyout {
-        overflow-x: auto;
-        overflow-y: scroll;
-        max-height: 300px;
-    }
-    div.output_subarea.output_stream.output_stdout.output_text {
-        overflow-x: auto;
-        overflow-y: scroll;
-        max-height: 300px;
-    }
-    div.output_subarea.output_html.rendered_html {
-        overflow-x: scroll;
-        max-width: 100%;
-      /*  overflow-y: scroll; */
-      /*  max-height: 300px;   */
-    }
-    code{
-      font-size: 78%;
-    }
-    .rendered_html code{
-        background-color: transparent;
-        white-space: inherit;   
-    }
-    ul{
-        /* color:#447adb; */  
-        margin: 2em;
-    }
-    ul li{
-        padding-left: 0.5em; 
-        margin-bottom: 0.5em; 
-        margin-top: 0.5em; 
-    }
-    ul li li{
-        padding-left: 0.2em; 
-        margin-bottom: 0.2em; 
-        margin-top: 0.2em; 
-    }
-    ol{
-        /* color:#447adb; */  
-        margin: 2em;
-    }
-    ol li{
-        padding-left: 0.5em; 
-        margin-bottom: 0.5em; 
-        margin-top: 0.5em; 
-    }
-    /*.prompt{
-        display: None;
-    } */
-    ul li{
-        padding-left: 0.5em; 
-        margin-bottom: 0.5em; 
-        margin-top: 0.2em; 
-    }
-    a:link{
-       font-weight: bold;
-       color:#447adb;
-    }
-    a:visited{
-       font-weight: bold;
-       color: #1d3b84;
-    }
-    a:hover{
-       font-weight: bold;
-       color: #1d3b84;
-    }
-    a:focus{
-       font-weight: bold;
-       color:#447adb;
-    }
-    a:active{
-       font-weight: bold;
-       color:#447adb;
-    }
-    .rendered_html :link {
-       text-decoration: none; 
-    }
-    .rendered_html :hover {
-       text-decoration: none; 
-    }
-    .rendered_html :visited {
-      text-decoration: none;
-    }
-    .rendered_html :focus {
-      text-decoration: none;
-    }
-    .rendered_html :active {
-      text-decoration: none;
-    }
-    .warning{
-        color: rgb( 240, 20, 20 )
-    } 
-    hr {
-      color: #f3f3f3;
-      background-color: #f3f3f3;
-      height: 1px;
-    }
-    blockquote{
-      display:block;
-      background: #f3f3f3;
-      font-family: "Open sans",verdana,arial,sans-serif;
-      width:610px;
-      padding: 15px 15px 15px 15px;
-      text-align:justify;
-      text-justify:inter-word;
-      }
-      blockquote p {
-        margin-bottom: 0;
-        line-height: 125%;
-        font-size: 100%;
-        text-align: center;
-      }
-   /* element.style {
-    } */  
-</style>
-<script>
-    MathJax.Hub.Config({
-                        TeX: {
-                           extensions: ["AMSmath.js"]
-                           },
-                tex2jax: {
-                    inlineMath: [ ["$","$"], ["\\(","\\)"] ],
-                    displayMath: [ ["$$","$$"], ["\\[","\\]"] ]
-                },
-                displayAlign: "center", // Change this to "center" to center equations.
-                "HTML-CSS": {
-                    styles: {".MathJax_Display": {"margin": 4}}
-                }
-        });
+/*
+Placeholder for custom user CSS
+
+mainly to be overridden in profile/static/custom/custom.css
+
+This will always be an empty file in IPython
+*/
+
+
+div.input_area {
+    border: 0;
+    background: rgb(244, 244, 248);
+}
+
+.cm-s-ipython span.cm-keyword {
+    color: #447bdc;
+}
+
+h1 {
+    font-family: "Open sans",verdana,arial,sans-serif;
+}
+.text_cell_render h1 {
+    font-weight: 300;
+    font-size: 65px;
+    line-height: 66px;
+    letter-spacing: -0.25px;
+    color: #0089fe;
+    margin-bottom: 0em;
+    margin-top: 0em;
+    display: block;
+    white-space: nowrap;
+    margin: 0;
+}
+h2 {
+    font-family: "Open sans",verdana,arial,sans-serif;
+}
+.text_cell_render h2 {
+    font-weight: 300;
+    font-size: 48px;
+    line-height: 49px;
+    color:#0089fe;
+    display: block;
+    white-space: nowrap;
+    margin: 0;
+}
+h3 {
+    font-family: "Open sans",verdana,arial,sans-serif;
+}
+.text_cell_render h3 {
+    font-weight: 300;
+    font-size: 36px;
+    line-height: 37px;
+    color:#0089fe;
+    display: block;
+    white-space: nowrap;
+    margin: 0;
+}
+h4 {
+    font-family: "Open sans",verdana,arial,sans-serif;
+}
+.text_cell_render h4 {
+    font-weight: 300;
+    font-size: 21px;
+    line-height: 22px;
+    color:#0089fe;
+    display: block;
+    white-space: nowrap;
+    margin: 0;
+}
+
+h5 {
+    font-family: "Open sans",verdana,arial,sans-serif;
+}
+.text_cell_render h5 {
+    font-weight: 300;
+    font-size: 28px;
+    line-height: 35px;
+    color:#1e3a7b;
+    display: block;
+    white-space: nowrap;
+    font-style: normal;
+    margin: 0;
+}
+
+h6 {
+    font-family: "Open sans",verdana,arial,sans-serif;
+}
+.text_cell_render h6 {
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 25px;
+    color:#1e3a7b;
+    display: block;
+    white-space: nowrap;
+    font-style: normal;
+}
+
+div.text_cell_render{
+    font-family: "Open sans",verdana,arial,sans-serif;
+    line-height: 110%;
+    text-align:justify;
+    text-justify:inter-word;
+    color: #1e4a7b;
+}
+div.text_cell_render p{
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 25px;
+    color: #1e3a7b;
+}
+div.output_subarea.output_text.output_pyout {
+    overflow-x: auto;
+    overflow-y: scroll;
+    max-height: 300px;
+}
+div.output_subarea.output_stream.output_stdout.output_text {
+    overflow-x: auto;
+    overflow-y: scroll;
+    max-height: 300px;
+}
+div.output_subarea.output_html.rendered_html {
+    overflow-x: scroll;
+    max-width: 100%;
+  /*  overflow-y: scroll; */
+  /*  max-height: 300px;   */
+}
+code{
+  font-size: 78%;
+}
+.rendered_html code{
+    background-color: transparent;
+    white-space: inherit;
+}
+ul{
+    /* color:#265cc3; */
+    margin: 2em;
+}
+ul li{
+    padding-left: 0.5em;
+    margin-bottom: 0.5em;
+    margin-top: 0.5em;
+}
+ul li li{
+    padding-left: 0.2em;
+    margin-bottom: 0.2em;
+    margin-top: 0.2em;
+}
+ol{
+    /* color:#265cc3; */
+    margin: 2em;
+}
+ol li{
+    padding-left: 0.5em;
+    margin-bottom: 0.5em;
+    margin-top: 0.5em;
+}
+/*.prompt{
+    display: None;
+} */
+ul li{
+    padding-left: 0.5em;
+    margin-bottom: 0.5em;
+    margin-top: 0.2em;
+}
+a:link{
+   font-weight: bold;
+   color:#265cc3;
+}
+a:visited{
+   font-weight: bold;
+   color: #1d3b84;
+}
+a:hover{
+   font-weight: bold;
+   color: #1d3b84;
+}
+a:focus{
+   font-weight: bold;
+   color:#265cc3;
+}
+a:active{
+   font-weight: bold;
+   color:#265cc3;
+}
+.rendered_html :link {
+   text-decoration: none;
+}
+.rendered_html :hover {
+   text-decoration: none;
+}
+.rendered_html :visited {
+  text-decoration: none;
+}
+.rendered_html :focus {
+  text-decoration: none;
+}
+.rendered_html :active {
+  text-decoration: none;
+}
+.warning{
+    color: rgb( 240, 20, 20 )
+}
+hr {
+  color: #f3f3f3;
+  background-color: #f3f3f3;
+  height: 1px;
+}
+blockquote{
+  display:block;
+  background: #f3f3f3;
+  font-family: "Open sans",verdana,arial,sans-serif;
+  width:610px;
+  padding: 15px 15px 15px 15px;
+  text-align:justify;
+  text-justify:inter-word;
+  }
+  blockquote p {
+    margin-bottom: 0;
+    line-height: 125%;
+    font-size: 100%;
+    text-align: center;
+  }
+/* element.style {
+} */
 </script>
