@@ -1,8 +1,5 @@
-Plotly's Python API User Guide
-===============================
+### This repo is deprecated
 
-**This repo is deprecated**
+The Plotly.py documentation is available at https://plot.ly/python
 
-We moved all our docs to https://github.com/plotly/documentation/tree/source 
-
-See our [contributing guidelines](https://github.com/plotly/documentation/blob/source/Contributing.md) for more details.
+The source for that documentation is available at https://github.com/plotly/documentation
